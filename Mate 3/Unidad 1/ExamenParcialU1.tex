@@ -1,0 +1,146 @@
+\documentclass[11pt,addpoints]{exam}
+\include{Functional/Packages} % Imports all the required packages. See Functional/%Packages.tex for more detailS
+\include{Functional/Preamble}
+\begin{document}
+\include*{Functional/TitlePage_ExamenParcialU1}
+\begin{questions}
+
+    \question[10] Selecciona 10 n\'umeros primos del siguiente conjunto de n\'umeros enteros.
+    \begin{multicols}{6}
+        \begin{checkboxes}
+            \CorrectChoice 7
+            \choice 57
+            \choice 1
+            \CorrectChoice 31
+            \choice 49
+            \CorrectChoice 5
+            \choice 27
+            \choice 77
+            \CorrectChoice 43
+            \CorrectChoice 59
+            \CorrectChoice 61
+            \choice 39
+            \choice 0
+            \CorrectChoice 23
+            \choice 94
+            \choice 87
+            \CorrectChoice 89
+            \CorrectChoice 79
+            \choice 63
+            \CorrectChoice 97
+        \end{checkboxes}
+    \end{multicols}
+
+    \question Analiza cada una de las siguientes situaciones y responde a las preguntas.
+   
+        ``Dos luces del estadio local están parpadeando. Ambas acaban de parpadear al mismo tiempo.
+        Una de las luces parpadea cada 12 segundos y la otra parpadea cada 18 segundos.''
+        \begin{parts}
+        \part[10]¿Cuánto tiempo pasará antes de que ambas luces vuelvan a parpadear al mismo tiempo?
+        \begin{solutionbox}{5cm}
+            \begin{minipage}[c]{0.2\linewidth}
+                \begin{tabular}{ cc|c }
+                    12 & 18 & \circled{2} \\
+                    6  & 9  & \circled{3} \\
+                    2  & 3  & 2           \\
+                    1  & 3  & 3           \\
+                    1  & 1  &
+                \end{tabular}
+            \end{minipage}%
+            \begin{minipage}[c]{0.7\linewidth}
+                El momento en que las dos luces coincidir\'an ser\'a el n\'umero m\'as pequeño que sea m\'ultiplo de 12 y 18; es decir, el m\'inimo com\'un m\'ultiplo (MCM) de 12 y 18.
+                $\Rightarrow$\\ El MCM(12,18)$=2\times3\times2\times3=36 \therefore$ el intervalo de tiempo m\'as pr\'oximo a coincidir es de 36 segundos.
+            \end{minipage}
+        \end{solutionbox}
+        \newpage
+        ``Hay 76 niños y 92 niñas en el equipo de matemáticas de Cirilo.
+        Para la siguiente competencia de matemáticas, Cirilo quiere acomodar a los estudiantes en filas iguales con solo niñas o solo niños en cada fila.''
+
+
+
+        \part[10] ¿Cuál es el mayor número de estudiantes que puede haber en cada fila?
+
+        \begin{solutionbox}{5cm}
+            \begin{minipage}[c]{0.2\linewidth}
+                \begin{tabular}{ cc|c }
+                    76 & 92 & \circled{2} \\
+                    38 & 46 & \circled{2} \\
+                    19 & 23 & 19          \\
+                    1  & 23 & 23          \\
+                       & 1  &
+                \end{tabular}
+            \end{minipage}%
+            \begin{minipage}[c]{0.7\linewidth}
+                El mayor número de estudiantes que puede haber en cada fila es el n\'umero m\'as grande que puede dividir de forma entera a 76 y a 92; es decir, el m\'aximo com\'un divisor (MCD) de 76 y 92.
+                $\Rightarrow$\\ El MCD(76,92)$=2^2=4 \therefore$ el mayor número de estudiantes que puede haber en cada fila es 4.
+            \end{minipage}
+        \end{solutionbox}
+        \part[5] ¿Cuántas filas estar\'an ocupadas por niñas?
+        \begin{solutionbox}{4cm}
+            \begin{minipage}[c]{\linewidth}
+                Ya que hay 92 ni\~nas repartidas en filas de 4 estudiantes, la cantidad de filas ocupadas por ni\~nas es:
+                \begin{align*}
+                    \dfrac{92}{4} & = 23
+                \end{align*}
+                Las filas ocupadas por ni\~nas son 23.
+            \end{minipage}
+
+        \end{solutionbox}
+
+        \part[5] ¿Cuántas filas estar\'an ocupadas por niños?
+        \begin{solutionbox}{4cm}
+            \begin{minipage}[c]{\linewidth}
+                Ya que hay 76 ni\~nos repartidos en filas de 4 estudiantes, la cantidad de filas ocupadas por ni\~nos es:
+                \begin{align*}
+                    \dfrac{76}{4} & = 19
+                \end{align*}
+                Las filas ocupadas por ni\~nos son 19.
+            \end{minipage}
+
+        \end{solutionbox}
+    \end{parts}
+    \newpage
+    \question Realiza los siguientes productos de expresiones algebraicas.
+    \begin{parts}
+        \part[20] $\left(a+b-c\right)\cdot\left(a-b+c\right)=$
+
+        \begin{minipage}[c]{0.8\linewidth}
+            \begin{solutionbox}{6cm}
+                \begin{minipage}[c]{0.5\linewidth}
+                    \[ \begin{array}{*{16}{@{}>{{}}r<{{}}@{}}}
+                                &  &   &     &  & \multirow{2.5}{*}{$ {}\times{} $} & a   &  & - & b   &  & + & c  &  &   &    \\
+                                &  &   &     &  &                                   & a   &  & + & b   &  & - & c  &  &   &    \\
+                            \cmidrule[0.6pt](l{-1pt}r{-1pt}){1-16}
+                                &  &   &     &  & -                                 & c^2 &  & + & bc  &  &   &    &  & - & ac \\
+                                &  & - & b^2 &  &                                   &     &  & + & bc  &  & + & ab &  &   &    \\
+                            a^2 &  &   &     &  &                                   &     &  &   &     &  & - & ab &  & + & ac \\
+                            \cmidrule[0.6pt](l{-1pt}r{-1pt}){1-16}
+                            a^2 &  & - & b^2 &  & -                                 & c^2 &  & + & 2bc &  &   &    &  &   &
+                        \end{array}
+                    \]
+                \end{minipage}
+            \end{solutionbox}
+        \end{minipage}
+
+        \part[20] $(x^2+4)\cdot(x^2-4)=$
+
+        \begin{minipage}[c]{0.8\linewidth}
+            \begin{solutionbox}{6cm}
+                \begin{minipage}[c]{0.5\linewidth}
+                    \[ \begin{array}{*{12}{@{}>{{}}r<{{}}@{}}}
+                                                                   &  &  &     &  & \multirow{2.5}{*}{$ {}\times{} $} &   & x^2  &  & + & 4  & \\
+                                                                   &  &  &     &  &                                   &   & x^2  &  & - & 4  & \\
+                            \cmidrule[0.6pt](l{-1pt}r{-1pt}){1-12}
+                                                                   &  &  &     &  &                                   & - & 4x^2 &  & - & 16 & \\
+                                                                   &  &  & x^4 &  &                                   & + & 4x^2 &  &   &    & \\
+                            \cmidrule[0.6pt](l{-1pt}r{-1pt}){1-12} &  &  & x^4 &  &                                   &   &      &  & - & 16 &
+                        \end{array}
+                    \]
+                \end{minipage}
+            \end{solutionbox}
+        \end{minipage}
+    \end{parts}
+
+    \question[20] Realiza los ejercicios de preparaci\'on para esta evaluaci\'on en tiempo y forma para acceder a esta puntuaci\'on. 
+\end{questions}
+\end{document}
