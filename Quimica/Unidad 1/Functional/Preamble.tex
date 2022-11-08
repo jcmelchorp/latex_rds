@@ -10,7 +10,25 @@
   \fi
 }
 \makeatother
+% define new colors
+\definecolor{LightRed}{RGB}{252,160,140}
+\definecolor{LightBlue}{RGB}{140,186,252}
+% use the colortbl package to define a new column
+\newcolumntype{a}{>{\columncolor{LightRed}}c}
 \pgfplotsset{compat=newest}
+%\pgfplotsset{compat=1.17}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+% \setbeamertemplate{background canvas}[vertical shading]%
+%   [top=blue!1,bottom=blue!30]
+% \setbeamertemplate{navigation symbols}{}
+% \newcommand*\up{\textcolor{green}{%
+%   \ensuremath{\blacktriangle}}}
+% \newcommand*\down{\textcolor{red}{%
+%   \ensuremath{\blacktriangledown}}}
+% \newcommand*\const{\textcolor{darkgray}%
+%   {\textbf{--}}}
 \usepgfplotslibrary{groupplots}
 \usetikzlibrary{
   arrows,
@@ -132,7 +150,6 @@
 
 
 \geometry{letterpaper,total={175mm,220mm},left=15mm,top=15mm,} % Custom margins
-\pgfplotsset{compat=1.17}
 \footer{}{\thepage}{}
 %\captionsetup{width=.45\textwidth}
 \setlength{\parindent}{0pt}

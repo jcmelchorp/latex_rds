@@ -68,30 +68,30 @@
 \newenvironment{knitrout}{}{}
 \tikzset{
   abstractbox/.style={
-    draw=black, fill=white, rectangle, 
-    inner sep=12pt, style=rounded corners,
-    drop shadow={fill=black, opacity=1}
-  },
+      draw=black, fill=white, rectangle,
+      inner sep=12pt, style=rounded corners,
+      drop shadow={fill=black, opacity=1}
+    },
   abstracttitle/.style={fill=white}
 }
 \usepackage{framed}
 \makeatletter
 \newenvironment{kframe}{%
-  \def\at@end@of@kframe{}%
-  \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-\begin{minipage}{\columnwidth}%
+\def\at@end@of@kframe{}%
+\ifinner\ifhmode%
+    \def\at@end@of@kframe{\end{minipage}}%
+    \begin{minipage}{\columnwidth}%
   \fi\fi%
-  \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
-    % \colorbox{shadecolor}{##1}\hskip-\fboxsep
-    ##1 \hskip-\fboxsep
-    % There is no \\@totalrightmargin, so:
-    \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
-  \MakeFramed {\advance\hsize-\width
-    \@totalleftmargin\z@ \linewidth\hsize
-    \@setminipage}}%
+\def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+% \colorbox{shadecolor}{##1}\hskip-\fboxsep
+##1 \hskip-\fboxsep
+% There is no \\@totalrightmargin, so:
+\hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+\MakeFramed {\advance\hsize-\width
+  \@totalleftmargin\z@ \linewidth\hsize
+  \@setminipage}}%
 {\par\unskip\endMakeFramed%
-  \at@end@of@kframe}
+\at@end@of@kframe}
 \makeatother
 \newcommand{\boxabstract}[2][fill=white]{
   \begin{tikzpicture}
@@ -106,7 +106,22 @@
 }
 \renewcommand{\solutiontitle}{\textbf{Soluci\'on:}\par\noindent}
 \newcommand{\tf}[1][{}]{%
-\fillin[#1][1cm]%
+  \fillin[#1][1cm]%
+}
+\newcommand{\answerAngleBox}[2][]{
+\definecolor{#2}{HTML}{0DBE80}
+
+  \begin{center}
+    {
+    \color{pasto}
+    \textbf{$\angle #1 ^\circ =$}
+    }
+    \fbox{
+      \begin{minipage}{2cm}
+        \hfill\vspace{0.5cm}
+      \end{minipage}
+    }
+  \end{center}
 }
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
     \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, label={center:#1}, thick] (char) {#1};}}
@@ -124,11 +139,11 @@
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{oneparchoices}{\vspace{0.8\baselineskip}} 
+\AtEndEnvironment{oneparchoices}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}} 
+\AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
 
 
 \geometry{letterpaper,total={175mm,220mm},left=15mm,top=15mm,} % Custom margins
@@ -152,15 +167,15 @@
     \def\myboxname{#3}%
     % good options: minimum height, minimum width
     \node [draw, inner sep=0ex,  align=justify, draw=none]
-      (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
-  }{%
+    (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
+    }{%
     \egroup;
-    \node [right, inner sep=3pt, fill=colorrds!75, outer sep=0pt, 
-      text height=2ex, text depth=.5ex] (BOXNAME) 
-      at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
+    \node [right, inner sep=3pt, fill=colorrds!75, outer sep=0pt,
+      text height=2ex, text depth=.5ex] (BOXNAME)
+    at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
     \fill[colorrds] (BOXNAME.north east) -- +(-1em,1em)
-      -- +(-1em,0) -- cycle;
+    -- +(-1em,0) -- cycle;
     \fill[colorrds] (BOXNAME.south west) -- +(1em,-1em)
-      -- +(1em,0) -- cycle;
+    -- +(1em,0) -- cycle;
   \end{tikzpicture}
 }
