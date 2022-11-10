@@ -1,11 +1,26 @@
-Anita es maestra y tiene 48 niñas y 35 niños en su grupo. Ella quiere dividir al grupo en equipos del mismo tamaño,
+Anita es maestra y tiene 160 niñas y 120 niños en su grupo. Ella quiere dividir al grupo en equipos del mismo tamaño,
 en donde cada equipo tenga el mismo número de niñas y el mismo número de niños. Si Anita crea el mayor número de
 equipos posible.
 
 \part ¿cuántos niños habrá en cada equipo?
 
-\begin{minipage}[c]{0.9\textwidth}
-    \begin{solutionorbox}[4cm]
-        \PrimeTree{180}{350}
-    \end{solutionorbox}
-\end{minipage}
+\begin{solutionbox}{5cm}
+    \begin{minipage}[c]{0.2\linewidth}
+        \begin{tabular}{ cc|c }
+            160 & 120 & \circled{2} \\
+            80  & 60  & \circled{2} \\
+            40  & 30  & \circled{2} \\
+            20  & 15  & \circled{5} \\
+            4   & 3   & 2           \\
+            2   & 3   & 2           \\
+            1   & 3   & 3           \\
+            1   & 1   &             \\
+        \end{tabular}
+    \end{minipage}%
+    \begin{minipage}[c]{0.7\linewidth}
+        El mayor número de estudiantes que puede haber en cada fila es el n\'umero m\'as grande que puede
+        dividir de forma entera a 160 y a 120; es decir, el m\'aximo com\'un divisor (MCD) de 160 y 120.
+        $\Rightarrow$\\ MCD(160,120)$=2^3\times5=40 \therefore$ el mayor número de estudiantes que puede haber en cada fila es:
+
+    \end{minipage}
+\end{solutionbox}

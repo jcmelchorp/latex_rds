@@ -1,5 +1,7 @@
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{shapes.geometric}
+\setrandomizerseed{999}
+
 \decimalpoint
 \makeatletter
 \def\maxwidth{%
@@ -109,12 +111,12 @@
   \fillin[#1][1cm]%
 }
 \newcommand{\answerAngleBox}[2][]{
-\definecolor{#2}{HTML}{0DBE80}
+  \definecolor{#2}{HTML}{0DBE80}
 
   \begin{center}
     {
-    \color{pasto}
-    \textbf{$\angle #1 ^\circ =$}
+      \color{pasto}
+      \textbf{$\angle #1 ^\circ =$}
     }
     \fbox{
       \begin{minipage}{2cm}
