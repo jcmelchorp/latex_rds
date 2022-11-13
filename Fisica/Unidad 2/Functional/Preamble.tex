@@ -1,0 +1,166 @@
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.geometric}
+\decimalpoint
+\makeatletter
+\def\maxwidth{%
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{
+  arrows,
+  positioning,
+  matrix,
+  calc,
+  decorations.pathreplacing,
+  decorations.pathmorphing,
+  decorations.markings,
+  decorations.text,
+  shapes,
+  backgrounds,
+  shadows,
+  trees,
+  fit,
+  snakes,
+  patterns,
+  mindmap,
+  intersections,
+  calendar,
+  plotmarks,
+  spy}
+
+\pagestyle{empty}
+
+% Deve vir depois de pagestyle{}.
+\definecolor{darkgreen}{rgb}{0.13,0.53,0.53}
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+% \definecolor{fgcolor}{rgb}{0.5, 0.5, 0.5}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\definecolor{cielo}{HTML}{00ACD1}
+\definecolor{colorrds}{HTML}{0060A0} % Custom colour
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{SolutionBoxColor}{gray}{0.8}
+\definecolor{purplePoint}{HTML}{7A52E1}
+\def\LOGO{%
+  \begin{picture}(0,0)\unitlength=1cm
+    \put (3,-1.5) {\includegraphics[width=2.5cm]{./Images/LOGO_RDS.jpg}}
+  \end{picture}
+}
+\def\arraystretch{1.5}
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{}
+\tikzset{
+  abstractbox/.style={
+    draw=black, fill=white, rectangle, 
+    inner sep=12pt, style=rounded corners,
+    drop shadow={fill=black, opacity=1}
+  },
+  abstracttitle/.style={fill=white}
+}
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+  \def\at@end@of@kframe{}%
+  \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+\begin{minipage}{\columnwidth}%
+  \fi\fi%
+  \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+    % \colorbox{shadecolor}{##1}\hskip-\fboxsep
+    ##1 \hskip-\fboxsep
+    % There is no \\@totalrightmargin, so:
+    \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+  \MakeFramed {\advance\hsize-\width
+    \@totalleftmargin\z@ \linewidth\hsize
+    \@setminipage}}%
+{\par\unskip\endMakeFramed%
+  \at@end@of@kframe}
+\makeatother
+\newcommand{\boxabstract}[2][fill=white]{
+  \begin{tikzpicture}
+    \node [abstractbox, #1] (box)
+    {\begin{minipage}{0.9\linewidth}
+        \setlength{\parindent}{2mm} % Indentar.
+        \normalfont #2
+      \end{minipage}};
+    \node[abstracttitle, right=10pt] at (box.north west) {Instrucciones};
+    \node[draw=none, fit=(box)] {};
+  \end{tikzpicture}
+}
+\renewcommand{\solutiontitle}{\textbf{Soluci\'on:}\par\noindent}
+\newcommand{\tf}[1][{}]{%
+\fillin[#1][1cm]%
+}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+    \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, label={center:#1}, thick] (char) {#1};}}
+\renewcommand\choicelabel{%
+  \circled{\thechoice}}
+\longdivisionkeys{style=standard}
+
+\usepackage{alltt}
+
+% Tamanho de fonte e distância entre linhas.
+\renewenvironment{knitrout}{
+  \footnotesize\renewcommand{\baselinestretch}{0.75}
+}{}
+
+\AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
+\AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{oneparchoices}{\vspace{0.8\baselineskip}} 
+\AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
+\AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}} 
+
+
+\geometry{letterpaper,total={175mm,220mm},left=15mm,top=15mm,} % Custom margins
+\pgfplotsset{compat=1.17}
+\footer{}{\thepage}{}
+%\captionsetup{width=.45\textwidth}
+\setlength{\parindent}{0pt}
+\graphicspath{{../Images}} %Setting the graphicspath
+\checkboxchar{$\Box$}
+\bracketedpoints
+\pointpoints{punto}{puntos}
+\hqword{Pregunta}
+\hpgword{P\'gina}
+\hpword{Puntos}
+%\chbpword{Puntos extra}
+\hsword{Puntos obtenidos}
+\htword{Total}
+
+\newenvironment{mybox}[3][]{%
+  \begin{tikzpicture}[#1]%
+    \def\myboxname{#3}%
+    % good options: minimum height, minimum width
+    \node [draw, inner sep=0ex,  align=justify, draw=none]
+      (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
+  }{%
+    \egroup;
+    \node [right, inner sep=3pt, fill=colorrds!75, outer sep=0pt, 
+      text height=2ex, text depth=.5ex] (BOXNAME) 
+      at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
+    \fill[colorrds] (BOXNAME.north east) -- +(-1em,1em)
+      -- +(-1em,0) -- cycle;
+    \fill[colorrds] (BOXNAME.south west) -- +(1em,-1em)
+      -- +(1em,0) -- cycle;
+  \end{tikzpicture}
+}
