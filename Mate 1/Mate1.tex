@@ -13,9 +13,52 @@
 \usepackage{wrapfig}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
-\usetikzlibrary{tikzmark,matrix}
-\decimalpoint
+\usetikzlibrary{
+  arrows,
+  positioning,
+  matrix,
+  calc,
+  decorations.pathreplacing,
+  decorations.pathmorphing,
+  decorations.markings,
+  decorations.text,
+  shapes,
+  backgrounds,
+  shadows,
+  trees,
+  fit,
+  snakes,
+  patterns,
+  mindmap,
+  intersections,
+  calendar,
+  plotmarks,
+  spy,
+  tikzmark}
+  
+  \decimalpoint
 
+%%%% APRENDISAJES TEXTBOX
+\tikzset{
+  abstractbox/.style={
+    draw=black, fill=white, rectangle, 
+    inner sep=12pt, style=rounded corners,
+    drop shadow={fill=black, opacity=1}
+  },
+  abstracttitle/.style={fill=white}
+}
+\newcommand{\boxabstract}[2][fill=white]{
+  \begin{tikzpicture}
+    \node [abstractbox, #1] (box)
+    {\begin{minipage}{0.9\linewidth}
+        \setlength{\parindent}{2mm} % Indentar.
+        \normalfont #2
+      \end{minipage}};
+    \node[abstracttitle, right=10pt] at (box.north west) {Aprendizajes esperados:};
+    \node[draw=none, fit=(box)] {};
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%
 
 \makeatletter
   \@removefromreset{section}{chapter}
@@ -92,6 +135,13 @@
 \chapter{}
 
 \section{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
+\boxabstract{
+  Lee con atenci\'on cada pregunta y realiza lo que se te pide.
+  De ser necesario, desarrolla tus respuestas en el espacio
+  determinado para cada pregunta o
+  en una hoja en blanco por separado, anotando en ella tu nombre
+  completo, el n\'umero del problema y la soluci\'on propuesta.
+}
 \subsection{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
 Dentro de las operaciones básicas de la aritmética existe una \textbf{jerarquía de operaciones}, es decir un \textbf{orden}.
 
