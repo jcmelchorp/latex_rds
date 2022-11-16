@@ -2,10 +2,20 @@
 \usepackage[colorlinks = true,linkcolor = blue]{hyperref}
 \usepackage[letterpaper]{geometry} % Custom margins
 \usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{float}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{remreset}
+\usepackage{enumitem}
+\usepackage{xparse}
+\usepackage{wrapfig}
+\usepackage{amssymb,amsmath}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark,matrix}
+\decimalpoint
+
 
 \makeatletter
   \@removefromreset{section}{chapter}
@@ -81,7 +91,158 @@
 
 \chapter{}
 
-\section{S8 Jerarqu\'ia de operaciones y signos de agrupaci\'on}
-\subsection{L1 Jerarqu\'ia de operaciones y signos de agrupaci\'on}
-\subsection{Introduction}
+\section{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
+\subsection{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
+Dentro de las operaciones básicas de la aritmética existe una \textbf{jerarquía de operaciones}, es decir un \textbf{orden}.
+
+Recuerda cuando estabas en primaria y empezabas a leer, ¿qué aprendiste primero?. Seguro fueron las vocales, después fueron sílabas, después palabras completas hasta poder llegar a los enunciados y dentro de los enunciados vienen los signos de puntuación, las comas, los dos puntos, el punto y seguido, el punto aparte, etc. Y entendiste la importancia de los signos de puntuación.
+
+En el siguiente enunciados podemos observar ejemplos:
+
+Perdón imposible, castigarlo.\\
+Perdón, imposible castigarlo.
+
+Como podemos ver el significado de ambas expresiones son diferentes, bueno de eso se trata, en las matemáticas existen reglas que si no se siguen el resultado de la operación sería incorrecto.
+
+La operación de suma, resta, multiplicación y división tienen el siguiente orden:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{./Unidad 2/Images/jerarquia.jpg}
+\end{figure}
+
+\subsubsection{Ejemplo 1: En este ejercicio aremos el uso del paréntesis}
+
+\[( 10 + 2 ) / 3 - 2\]
+
+Observemos en este primer ejemplo se tiene un paréntesis y tiene mayor jerarquía, por lo que primero se realiza esta operación.
+
+\[12 / 3 - 2\]
+
+Seguimos con el operador que tiene la jerarquía mas alta que es la división, y vamos de izquierda a derecha y realizamos la operación.
+
+\[4 - 2\]
+
+Y por último, al resultado se le restan 2. Por lo que la operación nos queda:
+
+\[( 10 + 2 ) / 3 - 2 = 2\]
+
+
+
+\subsubsection{Ejemplo 2: En este ejercicio no utilizaremos el paréntesis}
+
+
+Ahora vamos a ver el mismo problema pero sin el paréntesis.
+
+\[5 + 6 / 2 - 2\]
+
+Observemos que ahora la jerarquía mas alta la tiene primero la división, ya que no existe ningún paréntesis.
+
+\[8 + 2 - 2 = 8\]
+
+Vamos de izquierda a derecha, hacemos primero la suma y luego la resta y tenemos el resultado, como podemos apreciar la gran importancia de respetar el orden de las operaciones para poder encontrar el resultado correcto.
+
+
+\subsubsection{Ejemplo 3: En este ejercicio explicaremos un poco más detallado}
+
+\[4 - 6 / 2 + 5 \times 2\]
+
+Vamos de izquierda a derecha y hacemos la división por que en este ejemplo es el operador con mas jerarquía.
+
+\[4 - 3 + 5 \times 2\]
+
+Luego vamos de izquierda a derecha buscando el operador que tiene la mayor jerarquía para hacer la operacion. el cual es la multiplicaciónn.
+
+\[4 - 3 + 10\]
+
+Seguimos con la resta por izquierda y luego por la derecha
+
+\[1 + 10\]
+
+Por ultimo el resultado es el número 11.
+
+\[4 - 6 / 2 + 5 \times 2 = 11\]
+
+\section{Resolución de problemas con valores faltantes}
+
+\subsection{Proporcionalidad directa y valor faltante}
+\subsection{Proporcionalidad y valor unitario}
+\subsection{Resolución de problemas de proporcionalidad directa}
+
+
+\section{Porcentajes}
+\subsection{Tanto por ciento}
+\subsection{Cálculo del porcentaje}
+\subsection{Porcentajes y aplicaciones}
+
+\section{Perímetros y áreas}
+\subsection{Perímetro de polígonos}
+\subsection{Perímetro del círculo}
+\subsection{Áreas de triángulos y cuadriláteros}
+
+\section{Ecuaciones lineales}
+\subsection{Formulación de ecuaciones}
+\subsection{Solución de una ecuación}
+
+\section{Resolución de ecuaciones lineales}
+\subsection{Propiedades de la igualdad}
+\subsection{Más sobre ecuaciones lineales}
+
+\section{Medidas de tendencia central}
+\subsection{Media aritmética o promedio}
+\subsection{La media aritmética y el rango}
+
+\section{Moda, media aritmética y mediana}
+\subsection{Media aritmética y mediana}
+\subsection{Moda}
+\subsection{Representantes de un grupo de datos}
+
+\chapter{}
+
+\section{Situaciones de variación proporcional}
+\subsection{Comparación de situaciones de variación proporcional con tablas}
+\subsection{Comparación de situaciones de variación proporcional con gráficas}
+\subsection{Comparación de situaciones de variación proporcional con expresiones algebraicas}
+
+\section{Pendiente de una recta y razón de cambio}
+\subsection{Variación proporcional y pendiente}
+\subsection{Razón de cambio y variación}
+\subsection{Efectos en la recta al cambiar la pendiente}
+
+\section{Análisis y comparación de situaciones de variación lineal}
+\subsection{Efectos de la recta al cambiar la ordenada al origen}
+\subsection{Situaciones de variación lineal asociadas a la física, la biología y la economía}
+
+\section{Sucesiones y expresiones algebraicas}
+\subsection{Sucesiones numéricas}
+\subsection{Sucesiones con progresión aritmética}
+
+\section{Congruencia de triángulos y aplicaciones}
+\subsection{Aplicaciones de congruencia de triángulos}
+\subsection{Aplicaciones a cuadriláteros}
+
+\section{Vol\'umenes de prismas rectos}
+\subsection{Volumen de prismas rectos rectangulares}
+\subsection{Fórmula del volumen de prismas rectos}
+
+\section{Gráficas circulares}
+\subsection{Recolecta y registra datos}
+\subsection{Registra datos en gráficas circulares}
+\subsection{Leer e interpretar datos en gráficas circulares}
+
+\section{El azar y la probabilidad frecuencial}
+\subsection{Tipos, recolección y organización de datos}
+\subsection{Experimentos aleatorios y deterministas}
+\subsection{Espacio muestral de un experimento aleatorio}
+\subsection{Cálculo de la probabilidad frecuencial}
+
+
+
+
+
+
 \end{document}
+
+
+
+
+

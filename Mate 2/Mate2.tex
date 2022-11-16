@@ -2,11 +2,30 @@
 \usepackage[colorlinks = true,linkcolor = blue]{hyperref}
 \usepackage[letterpaper]{geometry} % Custom margins
 \usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{float}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{remreset}
-
+\usepackage{enumitem}
+\usepackage{xparse}
+\usepackage{wrapfig}
+\usepackage{amssymb,amsmath}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark,matrix}
+\decimalpoint
+%%%%%%%%%%%%% START questions env
+%Idea from https://tex.stackexchange.com/a/236668/1952
+\DeclareDocumentCommand\question{o}{%
+    \item\IfNoValueTF{#1}{}{(#1 puntos)}}
+\newenvironment{questions}[1][]{\enumerate[,#1]}{\endenumerate}
+\newlist{oneparchoices}{enumerate*}{1}
+\setlist[oneparchoices,1]{label=\quad\alph*), itemjoin={{\quad}}}
+\newlist{choices}{enumerate*}{1}
+\setlist[choices,1]{label=\quad$\square$, itemjoin={{\\}},leftmargin = 1cm}
+\newcommand{\choice}{\item}
+%%%%%%%%%%%%% END questions env
 \makeatletter
   \@removefromreset{section}{chapter}
 \makeatother
@@ -87,7 +106,251 @@
 
 \section{Proporcionalidad directa e inversa}
 \subsection{Proporcionalidad directa e inversa}
+Dos magnitudes son directamente proporcionales si al multiplicar (o dividir) una de ellas por un número, la otra queda multiplicada (o dividida) por el mismo número. El cociente entre la segunda y la primera magnitud es constante y se denomina constante de proporcionalidad directa.
+
+Dos cantidades son inversamente proporcionales si al multiplicar (o dividir) una de ellas por un número la otra queda dividida (o multiplicada) por el mismo número. El producto de la segunda y la primera magnitud es constante y se llama constante de proporcionalidad inversa.
+
+\begin{questions}
+
+  \question[10] Señala si las relaciones son directamente proporcionales o inversamente proporcionales.
+  \renewcommand{\labelenumi}{\Alph{enumii}}
+  \begin{enumerate}
+    \item La población mundial y el consumo de agua.\\
+          \begin{choices}
+            \choice Directamente proporcional
+            \choice Inversamente proporcional
+          \end{choices}
+    \item  La población mundial y la cantidad de agua disponible por persona.\\
+          \begin{choices}
+            \choice Directamente proporcional
+            \choice Inversamente proporcional
+          \end{choices}
+    \item La distancia al sol y la temperatura.\\
+          \begin{choices}
+            \choice Directamente proporcional
+            \choice Inversamente proporcional
+          \end{choices}
+    \item  El tamaño de un planeta y su fuerza de gravedad.\\
+          \begin{choices}
+            \choice Directamente proporcional
+            \choice Inversamente proporcional
+          \end{choices}
+    \item  La velocidad de un móvil y la distancia recorrida.\\
+          \begin{choices}
+            \choice Directamente proporcional
+            \choice Inversamente proporcional
+          \end{choices}
+    \item La cantidad de imágenes guardadas en el celular y la cantidad de espacio libre.\\
+          \begin{choices}
+            \choice Directamente proporcional
+            \choice Inversamente proporcional
+          \end{choices}
+    \item  El tamaño de un archivo y el tiempo de descarga.\\
+          \begin{choices}
+            \choice Directamente proporcional
+            \choice Inversamente proporcional
+          \end{choices}
+    \item La velocidad de conexión a Internet y el tiempo de descarga de archivos.\\
+          \begin{choices}
+            \choice Directamente proporcional
+            \choice Inversamente proporcional
+          \end{choices}
+  \end{enumerate}
+\end{questions}
+\subsubsection{Proporcionalidad con tablas de variación}
 \subsection{Problemas sobre proporcionalidad directa e inversa}
+
+Presentamos diversas situaciones que involucran la interpretación de relaciones directas e inversas.
+Intenta resolver por tu cuenta cada situación. Luego, una vez que agotes todas tus estrategias, analiza con detenimiento las propuesta de resolución de cada situación.
+
+\subsubsection{Situación 1}
+
+Marcos sale diariamente con su bicicleta y recorre todo el contorno del parque de su barrio. Él sabe que tarda aproximadamente 6 minutos en dar 3 vueltas al parque.
+Si Marcos quiere dar 12 vueltas al parque,
+\textbf{¿cuánto tiempo tardará?}\\
+
+Asignemos $x$ a la cantidad de vueltas e $y$ el tiempo necesario para dar las $x$ vueltas.
+
+$x$ = n\'umero de vueltas.\\
+$y$ = tiempo para dar las vueltas.\\
+
+Planteamos la relación directa entre $x$ e $y$.
+\[y=kx\]
+Reemplazamos los valores que nos dan en la situación; 6 minutos para dar 3 vueltas. Es decir, $x=3$ e $y=6$.
+\[6=k(3) \Rightarrow k=2\]
+Por tanto, la relación proporcional es $y=2x$.
+Como nos piden calcular la cantidad de minutos que necesita Marcos para dar 12 vueltas, sabemos que $x=12$.
+Reemplazamos:
+\[y=2(12) \Rightarrow y=24\]
+Por tanto, Marcos tardará 24 minutos en dar 12 vueltas alrededor del parque de su barrio.
+\subsubsection{Situación 2}
+Cinthia va a la escuela en bicicleta desde su casa. Ella calcula que llega al colegio en 45 minutos cuando va a una velocidad promedio de 0.75 kilómetros por minuto.
+\textbf{¿Cuánto tiempo tardará si cambia la velocidad a 0.5 kilómetros por minuto?}
+
+Asignemos $t$ al tiempo que demora en ir de su casa a la escuela y $v$ a la velocidad promedio de su bicicleta.
+
+$t$ = tiempo.\\
+$v$ = velocidad.\\
+
+Observa que la relación entre el tiempo y la velocidad es una relación inversa. Planteamos esa relación inversa entre $x$ e $y$.
+\[v=k \times \frac{1}{t}\]
+Reemplazamos los valores que nos dan en la situación, 45 minutos a una velocidad de 0.75 kilómetros por minuto . Es decir $x=45$ e $y=0.75$.
+\[0.75=k\times \frac{1}{45} \Rightarrow k=33.75\]
+Por tanto, la relación proporcional es:
+\[v=33.75 \times \frac{1}{t}\]
+Como nos piden calcular la cantidad de minutos que tarda en llegar a la escuela a una velocidad de 0.5 kilómetros por minuto, sabemos que \[0.5=33.75 \times \frac{1}{t} \Rightarrow t=67.5 \text{ minutos}\]
+Por tanto, Cinthia tardará 67.5 minutos en llegar a la escuela a una velocidad de 0.5 kilómetros por minuto.
+
+\subsubsection{Situación 3}
+
+En una tienda se venden rollos de papel higiénico. Cada rollo cuesta 2 dólares, pero hay la siguiente oferta:
+Lleva 3 rollos de papel higiénico y paga solo 2.
+Carlos compra 20 rollos del papel higiénico en oferta en esa tienda.\\
+\textbf{¿Es correcto afirmar que pagó 40 dólares?}\\
+
+Para resolver este problema utilizaremos una tabla de valores como la siguiente:
+
+
+% \begin{tikzpicture}
+%   \matrix[matrix of math nodes,draw, column sep=1em,row sep=.5mm] (mx) {
+%     3 & 2 & $2\times2=4 $ \\
+%     4 & 3 & $2\times3=6 $ \\
+%     5 & 4 & $2\times4=8 $ \\
+%     6 & 4 & $2\times4=8 $ \\
+%     7 & 5 & $2\times5=10$ \\
+%     8 & 6 & $2\times6=12$ \\
+%     9 & 6 & $2\times6=12$ \\
+%   };
+%   \path[->,shorten >=2pt]
+%   \foreach \from/\to in {1/9} {
+%       ([yshift=2mm]mx-1-\from.north) edge[bend left]
+%       node[above] {$\scriptstyle+1$} ([yshift=2mm]mx-1-\to.north)
+%       ([yshift=-2.5mm]mx-2-\from.south) edge[bend right]
+%       node[below] {$\scriptstyle+2$} ([yshift=-2.5mm]mx-2-\to.south)
+%     };
+%   \foreach \x in {2,...,6}{
+%       \draw ([xshift=-0.5em]mx.north west -| mx-1-\x.west) -- ([xshift=-0.5em]mx.south west -| mx-1-\x.west);
+%     };
+%   \draw (mx.west) -- (mx.east);
+% \end{tikzpicture}
+% % \end{table}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{./Unidad 2/Images/tableS8L102.png}
+\end{figure}
+
+Observamos que, si la cantidad de rollos es un múltiplo de 3, se cumple una relación proporcional directa entre dicha cantidad y los rollos que deberá pagar.\\
+
+Como Carlos compra 20 rollos, podemos observar que el múltiplo de 3 más cercano a 20 es 18. Así obtendremos la cantidad de rollos a pagar luego de aplicar la oferta.\\
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{./Unidad 2/Images/tableS8L101.png}
+\end{figure}
+
+Gracias a la tabla, podemos observar que, llevando 18 rollos en oferta, solo pagará 12 rollos, es decir, 24 dólares. Para comprar los 20 rollos, Carlos deberá pagar 2 rollos adicionales a un monto de 4 dólares.\\
+
+Finalmente, por toda la compra pagará 24 dólares más 4 dólares adicionales, es decir, un total de 28 dólares.\\
+
+Por tanto, la afirmación no es correcta. Carlos no pagó 40 dólares, sino 28.
+
+\subsubsection{Situación 4}
+Un grupo de 64 obreros puede terminar una obra en 15 días. Al cabo de 5 días de trabajo, se les unen obreros de otro grupo, de modo que tardan 5 días menos en terminar la obra.\\
+\textbf{¿Cuántos obreros había en el segundo grupo?}\\
+
+Sabemos que 64 obreros terminarían la obra en 15 días. Como luego de los primeros 5 días de trabajo llegaron más obreros, hacemos el siguiente gráfico para representar la situación:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{./Unidad 2/Images/tableS8L103.png}
+\end{figure}
+Observamos que, en esta situación, a mayor cantidad de obreros, menos días se necesitarán para terminar la obra.\\
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|c|l|}
+    \hline
+    Cantidad de obreros         & 64 & 64+x \\
+    \hline
+    Cantidad de días de trabajo & 10 & 5    \\
+    \hline
+  \end{tabular}
+\end{table}
+
+Como es una relación inversamente proporcional, planteamos la siguiente relación:
+\begin{align*}
+  64 \times 10 & = 5 \times (64+x) \\
+  640          & = 320 +5x         \\
+  5x           & = 320             \\
+  x            & = 64
+\end{align*}
+
+En el segundo grupo, había 64 obreros más, es decir, un total de 128 obreros.
+
+
+
+
+
+
+\subsection*{Ejercicios}
+
+\begin{questions}[start=1]%<--- start option fixes number for first question
+  \question[10]  Un grupo de 20 obreros puede terminar una
+  construcción en 40 días. Al cabo de 10 días de trabajo,
+  se les unen obreros de otro grupo, de modo que en 15 días
+  más terminan la obra.\\
+  \textbf{¿Cuántos obreros había en el segundo grupo?}\\
+  \begin{oneparchoices}
+    \choice 20 obreros
+    \choice 5 obreros
+    \choice 10 obreros
+    \choice 15 obreros
+  \end{oneparchoices}
+
+  \question[10] En el mercado, 2 kilogramos de papa cuestan \$3.5 dólares.
+  Sofía tiene \$25 dólares para comprar 14 kilogramos de papa.\\
+  \textbf{¿Cuáles de las siguientes afirmaciones son correctas?}\\
+  \emph{Elige todas las respuestas adecuadas:}\\
+  \begin{choices}
+    \choice Deberá pagar \$7.5 dólares por 6 kilogramos de papa.
+    \choice Pagará \$14 dólares por 8 kilogramos de papa.
+    \choice Sofía recibirá \$0.50 dólares de vuelto.
+    \choice Sofía necesitará más dinero para realizar la compra.
+  \end{choices}
+
+  \question[10] Mateo va en auto de su casa a la universidad. Si va a una velocidad promedio de 60 kilómetros por hora, tarda 1 hora.\\
+  \textbf{¿Cuánto tiempo tardaría si fuera a 40 kilómetros por hora?}\\
+  \emph{Escoge 1 respuesta:}\\
+  \begin{oneparchoices}
+    \choice 1 hora y 30 minutos
+    \choice 30 minutos
+    \choice 1 hora y 20 minutos
+    \choice 2 horas
+  \end{oneparchoices}
+
+  \question[10] En una tienda, se venden rollos de papel higiénico. Cada rollo cuesta 2 dólares, pero hay la siguiente oferta:
+  Lleva 3 rollos de papel higiénico y paga s\'olo 2.
+  María va a la tienda a comprar 20 rollos de papel higiénico en oferta.\\
+  \textbf{¿Cuánto pagará por la compra?}\\
+  \emph{Escoge 1 respuesta:}\\
+  \begin{oneparchoices}
+    \choice 28 dólares
+    \choice 17 dólares
+    \choice 30 dólares
+    \choice 14 dólares
+  \end{oneparchoices}
+
+  \question[10] Un grupo de 32 tejedores puede terminar un pedido de ponchos en 15 días. Al cabo de 5 días de trabajo, se les unen tejedores de otro grupo, de modo que en 8 días más terminan el pedido.\\
+  \textbf{¿Cuántos tejedores había en el segundo grupo?}\\
+  \emph{Escoge 1 respuesta:}\\
+  \begin{oneparchoices}
+    \choice 8 tejedores
+    \choice 16 tejedores
+    \choice 32 tejedores
+    \choice 10 tejedores
+  \end{oneparchoices}
+\end{questions}
 
 \section{Reparto Proporcional}
 \subsection{Situaciones de reparto proporcional}
@@ -111,8 +374,57 @@
 \subsection{Per\'imetro y \'area de pol\'igonos}
 
 \section{\'Area del c\'irculo}
-\subsection{Deducción de la f\'ormula del \'area del c\'irculo}
 
+
+\subsection{Area del c\'irculo}
+El área de un círculo es la cantidad de espacio que abarca. También podemos pensarla como la cantidad total de espacio dentro del círculo.
+Para encontrar el área de un círculo podemos utilizar la siguiente fórmula:
+\[A=\pi r^2\]
+
+\subsubsection{Ejemplo 1: encontrar el área, dado el radio}
+Encuentra el área de un círculo de radio 5.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{./Unidad 2/Images/figS10_001.png}
+\end{figure}
+La ecuación para el área de un círculo es:
+\begin{align*}
+  A & = \pi r^2    \\
+  A & = \pi 5^2    \\
+  A & = \pi r^{25}
+\end{align*}
+
+Podemos detenernos aquí y escribir la respuesta como $25\pi$. O bien, podemos sustituir 3.14 por $\pi$ y multiplicar.\\
+$A = 3.14 \cdot 25$\\
+$A = 78.5$ unidades cuadradas\\
+El área del círculo es $25\pi$ unidades cuadradas, o sea 78.5 unidades cuadradas.
+\subsubsection{Ejemplo 2: encontrar el área, dado el diámetro}
+Encuentra el área de un círculo de diámetro 16.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{./Unidad 2/Images/figS10_002.png}
+\end{figure}
+Primero encontremos el radio:
+
+\begin{align*}
+  r & = \dfrac d2     \\
+  r & = \dfrac{16}{2} \\
+  r & = 8
+\end{align*}
+
+Ahora podemos encontrar el área.\\
+
+La ecuación para el área de un círculo es:
+\begin{align*}
+  A & = \pi r^2      \\
+  A & = \pi \cdot 8  \\
+  A & = \pi \cdot 64 \\
+\end{align*}
+Podemos detenernos aquí y escribir la respuesta como $64\pi$. O bien, podemos sustituir 3.14 por $\pi$ y multiplicar.\\
+$A = 3.14 \cdot 64$\\
+$A = 200.96$ unidades cuadradas\\
+
+El área del círculo es $64\pi$ unidades cuadradas, o sea 200.96 unidades cuadradas.
 
 \section{Medidas de tendencia central, rango y desviación media}
 \subsection{Medidas de tendencia central}
