@@ -1,20 +1,104 @@
 \documentclass[11pt]{book}
-\usepackage[colorlinks = true,linkcolor = blue]{hyperref}
-\usepackage[letterpaper]{geometry} % Custom margins
-\usepackage{graphicx}
-\usepackage{tabularx}
-\usepackage{float}
 \usepackage[spanish]{babel}
+\usepackage{comfortaa}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[letterpaper]{geometry} % Custom margins
+\usepackage[colorlinks = true,linkcolor = blue]{hyperref}
+\usepackage[dvipsnames,table]{xcolor} % Required for custom color
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol,multirow}
+\usepackage{float}
 \usepackage{remreset}
 \usepackage{enumitem}
 \usepackage{xparse}
 \usepackage{wrapfig}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
-\usetikzlibrary{tikzmark,matrix}
-\decimalpoint
+\usepackage{subfiles}
+\input{insbox}
+\usepackage{etoolbox}
+%\captionsetup{width=.45\textwidth}
+\setlength{\parindent}{0pt}
+\graphicspath{{../Images}} %Setting the graphicspath
+\definecolor{colorrds}{HTML}{0060A0} % Custom colour
+
+\usetikzlibrary{
+  arrows,
+  positioning,
+  matrix,
+  calc,
+  decorations.pathreplacing,
+  decorations.pathmorphing,
+  decorations.markings,
+  decorations.text,
+  shapes,
+  backgrounds,
+  shadows,
+  trees,
+  fit,
+  snakes,
+  patterns,
+  mindmap,
+  intersections,
+  calendar,
+  plotmarks,
+  spy,
+  tikzmark}
+
+  \tikzset{
+  abstractbox/.style={
+    draw=black, fill=white, rectangle, 
+    inner sep=12pt, style=rounded corners,
+    drop shadow={fill=black, opacity=1}
+  },
+  abstracttitle/.style={fill=white}
+}
+
+  \decimalpoint
+  \makeatletter
+  \def\maxwidth{%
+    \ifdim\Gin@nat@width>\linewidth
+      \linewidth
+    \else
+      \Gin@nat@width
+    \fi
+  }
+  \makeatother
+%%%% APRENDISAJES TEXTBOX
+\tikzset{
+  abstractbox/.style={
+    draw=black, fill=white, rectangle, 
+    inner sep=12pt, style=rounded corners,
+    drop shadow={fill=black, opacity=1}
+  },
+  abstracttitle/.style={fill=white}
+}
+\newcommand{\boxabstract}[2][fill=white]{
+  \begin{tikzpicture}
+    \node [abstractbox, #1] (box)
+    {\begin{minipage}{0.9\linewidth}
+        \setlength{\parindent}{2mm} % Indentar.
+        \normalfont #2
+      \end{minipage}};
+    \node[abstracttitle, right=10pt] at (box.north west) {Aprendizajes esperados:};
+    \node[draw=none, fit=(box)] {};
+  \end{tikzpicture}
+}%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+  \@removefromreset{section}{chapter}
+\makeatother
+\addto\captionsspanish{\renewcommand{\chaptername}{}}
+\renewcommand{\thechapter}{Unidad \arabic{chapter}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{L\arabic{subsection}}
+\setlength{\parindent}{0pt}
+
 %%%%%%%%%%%%% START questions env
 %Idea from https://tex.stackexchange.com/a/236668/1952
 \DeclareDocumentCommand\question{o}{%
@@ -26,37 +110,26 @@
 \setlist[choices,1]{label=\quad$\square$, itemjoin={{\\}},leftmargin = 1cm}
 \newcommand{\choice}{\item}
 %%%%%%%%%%%%% END questions env
-\makeatletter
-  \@removefromreset{section}{chapter}
-\makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{}}
-\renewcommand{\thechapter}{Unidad \arabic{chapter}}
-\renewcommand{\thesection}{S\arabic{section}}
-\renewcommand{\thesubsection}{L\arabic{subsection}}
-\setlength{\parindent}{0pt}
-
+\newenvironment{mybox}[3][]{%
+  \begin{tikzpicture}[#1]%
+    \def\myboxname{#3}%
+    % good options: minimum height, minimum width
+    \node [draw, inner sep=2ex,  align=justify]
+      (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
+  }{%
+    \egroup;
+    \node [right, inner sep=3pt, fill=colorrds!75, outer sep=0pt, 
+      text height=2ex, text depth=.5ex] (BOXNAME) 
+      at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
+    \fill[colorrds] (BOXNAME.north east) -- +(-1em,1em)
+      -- +(-1em,0) -- cycle;
+    \fill[colorrds] (BOXNAME.south west) -- +(1em,-1em)
+      -- +(1em,0) -- cycle;
+  \end{tikzpicture}
+}
 \begin{document}
 \pagestyle{empty}
-\newgeometry{letterpaper,left=15mm,top=50mm,bottom=0mm} % Custom margins
-\begin{center}
-  {\Huge Matem\'aticas 2}\\
-  \vspace{2cm}
-  \normalsize
-  \textbf{\large Cuaderno de trabajo}\\
-  para los alumnos de 2$^\circ$ de  Secundaria\\
-  en el curso durante el ciclo escolar\\
-  \textbf{2022-2023}\\
-  \vspace{2.5cm}
-  \small POR\\
-  \Large J. C. Melchor Pinto\\[0.5em]
-  \normalsize Profesor de asignatura en\\
-  \vspace{1cm}
-  \includegraphics[width=4cm]{./Unidad 2/Images/LOGO_RDS_nobg}
-\end{center}
-\vspace{2cm}
-%\include*{Functional/TitlePage}
-\hspace{-16mm}
-\includegraphics[width=\paperwidth]{./Unidad 2/Images/cover_bg}
+\subfile{cover}
 \restoregeometry
 \tableofcontents
 \chapter{}
@@ -105,10 +178,32 @@
 \chapter{}
 
 \section{Proporcionalidad directa e inversa}
+\boxabstract{Resuelve problemas de proporcionalidad directa e inversa y de reparto proporcional.}
 \subsection{Proporcionalidad directa e inversa}
-Dos magnitudes son directamente proporcionales si al multiplicar (o dividir) una de ellas por un número, la otra queda multiplicada (o dividida) por el mismo número. El cociente entre la segunda y la primera magnitud es constante y se denomina constante de proporcionalidad directa.
-
-Dos cantidades son inversamente proporcionales si al multiplicar (o dividir) una de ellas por un número la otra queda dividida (o multiplicada) por el mismo número. El producto de la segunda y la primera magnitud es constante y se llama constante de proporcionalidad inversa.
+\begin{minipage}{0.45\textwidth}
+  \begin{mybox}{0.45\linewidth}{
+      \begin{comfortaa}
+        \color{white}Proporcionalidad directa
+      \end{comfortaa}}
+    \begin{minipage}{0.90\linewidth}
+      Dos magnitudes son directamente proporcionales si al multiplicar (o dividir) una de ellas por un número, la otra queda
+      multiplicada (o dividida) por el mismo número. El cociente entre la segunda y la primera magnitud es constante y se
+      denomina constante de proporcionalidad directa.
+    \end{minipage}%
+  \end{mybox}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+  \begin{mybox}{0.45\linewidth}{
+      \begin{comfortaa}
+        \color{white}Proporcionalidad directa
+      \end{comfortaa}}
+    \begin{minipage}{0.90\linewidth}
+      Dos cantidades son inversamente proporcionales si al multiplicar (o dividir) una de ellas por un número la otra
+      queda dividida (o multiplicada) por el mismo número. El producto de la segunda y la primera magnitud es constante
+      y se llama constante de proporcionalidad inversa.
+    \end{minipage}%
+  \end{mybox}
+\end{minipage}%
 
 \begin{questions}
 

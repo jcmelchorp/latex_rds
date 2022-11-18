@@ -2,10 +2,63 @@
 \usepackage[colorlinks = true,linkcolor = blue]{hyperref}
 \usepackage[letterpaper]{geometry} % Custom margins
 \usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{float}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{remreset}
+\usepackage{enumitem}
+\usepackage{xparse}
+\usepackage{wrapfig}
+\usepackage{amssymb,amsmath}
+\usepackage{tikz}
+\usetikzlibrary{
+  arrows,
+  positioning,
+  matrix,
+  calc,
+  decorations.pathreplacing,
+  decorations.pathmorphing,
+  decorations.markings,
+  decorations.text,
+  shapes,
+  backgrounds,
+  shadows,
+  trees,
+  fit,
+  snakes,
+  patterns,
+  mindmap,
+  intersections,
+  calendar,
+  plotmarks,
+  spy,
+  tikzmark}
+  
+  \decimalpoint
+
+%%%% APRENDISAJES TEXTBOX
+\tikzset{
+  abstractbox/.style={
+    draw=black, fill=white, rectangle, 
+    inner sep=12pt, style=rounded corners,
+    drop shadow={fill=black, opacity=1}
+  },
+  abstracttitle/.style={fill=white}
+}
+\newcommand{\boxabstract}[2][fill=white]{
+  \begin{tikzpicture}
+    \node [abstractbox, #1] (box)
+    {\begin{minipage}{0.9\linewidth}
+        \setlength{\parindent}{2mm} % Indentar.
+        \normalfont #2
+      \end{minipage}};
+    \node[abstracttitle, right=10pt] at (box.north west) {Aprendizajes esperados:};
+    \node[draw=none, fit=(box)] {};
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%
 
 \makeatletter
   \@removefromreset{section}{chapter}
@@ -15,6 +68,21 @@
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\thesubsection}{L\arabic{subsection}}
 \setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%% START questions env
+%Idea from https://tex.stackexchange.com/a/236668/1952
+\DeclareDocumentCommand\question{o}{%
+    \item\IfNoValueTF{#1}{}{(#1 puntos)}}
+\newenvironment{questions}[1][]{\enumerate[,#1]}{\endenumerate}
+\newlist{oneparchoices}{enumerate*}{1}
+\setlist[oneparchoices,1]{label=\quad\alph*), itemjoin={{\quad}}}
+\newlist{choices}{enumerate*}{1}
+\setlist[choices,1]{label=\quad$\square$, itemjoin={{\\}},leftmargin = 1cm}
+\newcommand{\choice}{\item}
+%%%%%%%%%%%%% END questions env
+\makeatletter
+  \@removefromreset{section}{chapter}
+\makeatother
 
 \begin{document}
 \pagestyle{empty}
