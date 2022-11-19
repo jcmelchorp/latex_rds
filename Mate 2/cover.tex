@@ -1,32 +1,35 @@
-\documentclass{book}
-\usepackage[spanish]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[letterpaper,total={175mm,220mm},left=15mm,top=50mm,bottom=0mm]{geometry}
-\usepackage{graphicx} % Custom margins
-\title{Actividades}
-\author{Julio C. Melchor P.\thanks{{\tt julio.melchor@rafaeldiazserdan.net}}}
-\date{v1.0, \today}
+\documentclass[./Mate2.tex]{subfiles}
+%\usepackage[letterpaper]{geometry}% Custom margins
+%\usepackage{graphicx}
+%\graphicspath{{\subfix{./Images/}}}
+%\setlength{\parindent}{0pt}
+% \title{Portada}
+% \author{Julio C. Melchor P.\thanks{{\tt julio.melchor@rafaeldiazserdan.net}}}
+% \date{v1.0, \today}
 %\include{Functional/Packages} % Imports all the required packages. See Functional/%Packages.tex for more detailS
-
+%\newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
 \begin{document}
+\pagestyle{empty}
 \begin{center}
     \vspace{4cm}
-    \includegraphics[width=4cm]{./Images/LOGO_RDS_nobg}\\
-    \vspace{2cm}
     {\Huge Matem\'aticas 2}\\
-    \vspace{2cm}
+    \vspace{1cm}
     \normalsize
     \textbf{\large Cuaderno de trabajo}\\
     para los alumnos de 2$^\circ$ de  Secundaria\\
     en el curso durante el ciclo escolar\\
     \textbf{2022-2023}\\
-    \vspace{2.8cm}
+    \vspace{2cm}
     \small POR\\
     \Large J. C. Melchor Pinto\\[0.5em]
     \normalsize Profesor de asignatura en\\
+    \vspace{2cm}
+    \includegraphics[width=4cm]{./Images/LOGO_RDS_nobg}\\
+    \vspace{1cm}
 \end{center}
-\vspace{2.5cm}
+%\vspace{1cm}
 %\include*{Functional/TitlePage}
-\hspace{-16mm}
-\includegraphics[width=\paperwidth]{./Images/cover_bg}
+%\hspace{-16mm}
+\includegraphics[width=1.1\textwidth]{./Images/cover_bg}
+%\restoregeometry
 \end{document}
