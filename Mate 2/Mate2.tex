@@ -6,15 +6,25 @@
 \renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[letterpaper,marg]{geometry} % Custom margins
-\usepackage[colorlinks = true,linkcolor = colorrds]{hyperref}
+\usepackage[
+letterpaper,
+left=1in, 
+right=1in, 
+top=1in,
+bottom=1in,
+headheight=10mm,% Set \headheight to 10mm
+]{geometry} % Custom margins
+\usepackage{float}
+\usepackage[colorlinks = true, linkcolor = blue]{hyperref}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage{color, colortbl}
 \usepackage[dvipsnames,table]{xcolor} % Required for custom color
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{multicol,multirow}
 \usepackage{newclude}
 \usepackage{tabto}
-\usepackage{float}
 \usepackage{remreset}
 \usepackage[inline]{enumitem}
 \usepackage{xparse}
@@ -22,16 +32,20 @@
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
 \usepackage{subfiles}
-\input{insbox}
 \usepackage{etoolbox}
-% \usepackage{exsheets}
-% \usepackage{paralist}
 \usepackage{subfiles} % Best loaded last in the preamble
+\input{insbox}
+\decimalpoint
 %\captionsetup{width=.45\textwidth}
 \setlength{\parindent}{0pt}
 \graphicspath{{./Images}} %Setting the graphicspath
 \definecolor{colorrds}{HTML}{0060A0} % Custom colour
-
+%%% Headings and footer
+\renewcommand\spanishtablename{Tabla}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+%%%
 \usetikzlibrary{
   arrows,
   positioning,
@@ -63,22 +77,11 @@
   },
   abstracttitle/.style={fill=white}
 }
-
-  \decimalpoint
-  \makeatletter
-  \def\maxwidth{%
-    \ifdim\Gin@nat@width>\linewidth
-      \linewidth
-    \else
-      \Gin@nat@width
-    \fi
-  }
-  \makeatother
 %%%% APRENDISAJES TEXTBOX
 \tikzset{
   abstractbox/.style={
     draw=black, fill=white, rectangle, 
-    inner sep=12pt, style=rounded corners,
+    inner sep=15pt, style=rounded corners,
     drop shadow={fill=black, opacity=1}
   },
   abstracttitle/.style={fill=white}
@@ -87,10 +90,10 @@
   \begin{tikzpicture}
     \node [abstractbox, #1] (box)
     {\begin{minipage}{0.9\linewidth}
-        \setlength{\parindent}{2mm} % Indentar.
+        \setlength{\parindent}{0mm} % Indentar.
         \normalfont #2
       \end{minipage}};
-    \node[abstracttitle, right=10pt] at (box.north west) {Aprendizajes esperados:};
+    \node[abstracttitle, right=5pt] at (box.north west) {\textbf{Aprendizajes esperados:}};
     \node[draw=none, fit=(box)] {};
   \end{tikzpicture}
 }%
@@ -103,6 +106,8 @@
 \renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\thesubsection}{L\arabic{subsection}}
+\renewcommand{\labelenumi}{\mbox{\arabic{enumi}}}
+\renewcommand{\labelitemi}{$\square$}
 
 %%%%%%%%%%%%% START questions env
 %Idea from https://tex.stackexchange.com/a/236668/1952
@@ -118,9 +123,12 @@
 % \setlist[parts,1]{label=(\alph*), itemjoin={{\quad}},leftmargin = 1cm}
 % \newlist{oneparchoices}{enumerate*}{1}
 % \setlist[oneparchoices,1]{label=\quad\alph*), itemjoin={{\quad}},leftmargin = 1cm}
-% \newlist{choices}{itemize*}{1}
+% \newlist{choices}{itemize}{1}
 % \setlist[choices,1]{label=\quad$\square$, itemjoin={{\\}},leftmargin = 1cm}
-
+\newlist{hoptboxes}{itemize*}{1}
+\setlist[hoptboxes,1]{label=\Large$\square$, font=\color{colorrds},itemjoin={{\quad}},leftmargin = 1cm}
+\newlist{hoptions}{enumerate*}{1}
+\setlist[hoptions,1]{label=(\alph*), font=\color{colorrds},itemjoin={{\quad}},leftmargin = 1cm}
 %%%%%%%%%%%%% END questions env
 \newenvironment{mybox}[3][]{%
   \begin{tikzpicture}[#1]%
@@ -139,59 +147,59 @@
       -- +(1em,0) -- cycle;
   \end{tikzpicture}
 }
-%\newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
 \begin{document}
 \pagestyle{empty}
-\subfile{cover}
+\newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
+\include{./Functional/cover}
 \restoregeometry
 \tableofcontents
 \chapter{}
+\pagestyle{fancy}
+\section{Multiplicación de fracciones y decimales positivos}
+\subsection{Multiplicación de fracciones y decimales}
 
-\section{Multiplicación de fracciones y decimales positivos.}
-\subsection{Multiplicación de fracciones y decimales.}
+\section{Multiplicación y división con fracciones y decimales positivos}
+\subsection{División con números fraccionarios}
+\subsection{Problemas de multiplicación y división de fracciones}
 
-\section{Multiplicación y división con fracciones y decimales positivos.}
-\subsection{División con números fraccionarios.}
-\subsection{Problemas de multiplicación y división de fracciones.}
-
-\section{Multiplicación y división de números positivos y negativos.}
-\subsection{Multiplicación de números positivos y negativos.}
+\section{Multiplicación y división de números positivos y negativos}
+\subsection{Multiplicación de números positivos y negativos}
 \subsection{División de números positivos y negativos}
-\subsection{Multiplicación y división de números con signo.}
+\subsection{Multiplicación y división de números con signo}
 
-\section{Potencia con exponente entero.}
-\subsection{Productos de potencias enteras de la misma base.}
-\subsection{Potencia de una potencia entera.}
-\subsection{Cociente de potencias enteras de la misma base.}
-\subsection{Potencias con exponente negativo y notación científica.}
+\section{Potencia con exponente entero}
+\subsection{Productos de potencias enteras de la misma base}
+\subsection{Potencia de una potencia entera}
+\subsection{Cociente de potencias enteras de la misma base}
+\subsection{Potencias con exponente negativo y notación científica}
 
-\section{Raíces cuadradas.}
-\subsection{Significado de la raíz cuadrada.}
-\subsection{Aproximación de raíces cuadradas.}
-\subsection{Cuadrados y raíces cuadradas.}
+\section{Raíces cuadradas}
+\subsection{Significado de la raíz cuadrada}
+\subsection{Aproximación de raíces cuadradas}
+\subsection{Cuadrados y raíces cuadradas}
 
-\section{Propiedades de polígonos.}
-\subsection{Diagonales de un polígono.}
-\subsection{Ángulos de un polígono.}
+\section{Propiedades de polígonos}
+\subsection{Diagonales de un polígono}
+\subsection{Ángulos de un polígono}
 
-\section{Construcción de polígonos regulares.}
-\subsection{Algunas construcciones de polígonos.}
+\section{Construcción de polígonos regulares}
+\subsection{Algunas construcciones de polígonos}
 
-\section{Conversión de unidades del SI y del sistema inglés.}
-\subsection{Conversión entre unidades del SI.}
-\subsection{Conversión entre unidades del sistema inglés.}
-\subsection{Conversión de unidades del SI al sistema inglés y viceversa.}
+\section{Conversión de unidades del SI y del sistema inglés}
+\subsection{Conversión entre unidades del SI}
+\subsection{Conversión entre unidades del sistema inglés}
+\subsection{Conversión de unidades del SI al sistema inglés y viceversa}
 
-\section{Histogramas, polígonos de frecuencias y gráficas de línea.}
+\section{Histogramas, polígonos de frecuencias y gráficas de línea}
 \subsection{Histogramas}
 \subsection{Polígonos de frecuencias}
 \subsection{Gráficas de línea}
-\subsection{Elección de la representación gráfica más adecuada.}
+\subsection{Elección de la representación gráfica más adecuada}
 
 \chapter{}
 
 \section{Proporcionalidad directa e inversa}
-\boxabstract{Resuelve problemas de proporcionalidad directa e inversa y de reparto proporcional.}
+\boxabstract{Resuelve problemas de proporcionalidad directa e inversa y de reparto proporcional}
 \subsection{Proporcionalidad directa e inversa}
 \begin{minipage}{0.45\textwidth}
   \begin{mybox}{0.45\linewidth}{
@@ -214,128 +222,134 @@
   \end{mybox}
 \end{minipage}%
 
-Dos magnitudes son directamente proporcionales si al multiplicar (o dividir) una de ellas por un número, la otra queda
-multiplicada (o dividida) por el mismo número. El cociente entre la segunda y la primera magnitud es constante y se
-denomina constante de proporcionalidad directa.
+% Dos magnitudes son directamente proporcionales si al multiplicar (o dividir) una de ellas por un número, la otra queda
+% multiplicada (o dividida) por el mismo número. El cociente entre la segunda y la primera magnitud es constante y se
+% denomina constante de proporcionalidad directa.
 
-Dos cantidades son inversamente proporcionales si al multiplicar (o dividir) una de ellas por un número la otra
-queda dividida (o multiplicada) por el mismo número. El producto de la segunda y la primera magnitud es constante
-y se llama constante de proporcionalidad inversa.
+% Dos cantidades son inversamente proporcionales si al multiplicar (o dividir) una de ellas por un número la otra
+% queda dividida (o multiplicada) por el mismo número. El producto de la segunda y la primera magnitud es constante
+% y se llama constante de proporcionalidad inversa.
 
 \begin{enumerate}
   \item Señala si las relaciones son directamente proporcionales o inversamente proporcionales.
-        \renewcommand{\labelenumi}{\Alph{enumii}}
         %   \begin{multicols}{2}
         %\NumTabs{2}
         \begin{enumerate}
           \item La población mundial y el consumo de agua.\\
-                \begin{itemize*}[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
                   \item Directamente proporcional
                   \item Inversamente proporcional
-                \end{itemize*}
+                \end{hoptboxes}
           \item  La población mundial y la cantidad de agua disponible por persona.\\
-                \begin{itemize*}[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
                   \item Directamente proporcional
                   \item Inversamente proporcional
-                \end{itemize*}
+                \end{hoptboxes}
           \item La distancia al sol y la temperatura.\\
-                \begin{itemize*}[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
                   \item Directamente proporcional
                   \item Inversamente proporcional
-                \end{itemize*}
+                \end{hoptboxes}
           \item  El tamaño de un planeta y su fuerza de gravedad.\\
-                \begin{itemize*}[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
                   \item Directamente proporcional
                   \item Inversamente proporcional
-                \end{itemize*}
+                \end{hoptboxes}
           \item  La velocidad de un móvil y la distancia recorrida.\\
-                \begin{itemize*}[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
                   \item Directamente proporcional
                   \item Inversamente proporcional
-                \end{itemize*}
+                \end{hoptboxes}
           \item La cantidad de imágenes guardadas en el celular y la cantidad de espacio libre.\\
-                \begin{itemize*}[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
                   \item Directamente proporcional
                   \item Inversamente proporcional
-                \end{itemize*}
+                \end{hoptboxes}
           \item  El tamaño de un archivo y el tiempo de descarga.\\
-                \begin{itemize*}[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
                   \item Directamente proporcional
                   \item Inversamente proporcional
-                \end{itemize*}
+                \end{hoptboxes}
           \item La velocidad de conexión a Internet y el tiempo de descarga de archivos.\\
-                \begin{itemize*}[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
                   \item Directamente proporcional
                   \item Inversamente proporcional
-                \end{itemize*}
+                \end{hoptboxes}
         \end{enumerate}
         %  \end{multicols}
 
 \end{enumerate}
 \subsubsection{Proporcionalidad con tablas de variación}
 Para identificar las características de los tipos de relaciones, en
-especial las que se refieren a proporcionalidad inversa, analicemos
-distintas tablas de variación.
+especial las que se refieren a proporcionalidad inversa, Analiza las siguientes situaciones, completa las tablas
+de variaci\'on y responde a cada una de las preguntas.
+
 \begin{enumerate}
-  \item Analiza las siguientes situaciones y responde a cada una de las preguntas.
+  \item La autopista 10 en Haradh, Arabia Saudita, tiene más de 200
+        km en línea recta. Un automóvil viaja por esta carretera con
+        velocidad constante de 120 km/h durante 200 km.
+        \begin{table}[!h]
+          \centering
+          \begin{tabular}{|c|c|}
+            \hline
+            Distancia [km] & Tiempo [h] \\
+            \hline\rowcolor{colorrds!20}
+            50             &            \\
+            \hline
+            75             &            \\
+            \hline\rowcolor{colorrds!20}
+            100            &            \\
+            \hline
+            125            &            \\
+            \hline\rowcolor{colorrds!20}
+            150            &            \\
+            \hline
+            175            &            \\
+            \hline\rowcolor{colorrds!20}
+            200            &            \\
+            \hline
+          \end{tabular}
+          \caption{}
+          \label{table:arabia}
+        \end{table}
         \begin{enumerate}
-          \item La autopista 10 en Haradh, Arabia Saudita, tiene más de 200
-                km en línea recta. Un automóvil viaja por esta carretera con
-                velocidad constante de 120 km/h durante 200 km.
-                \begin{table}[!h]
-                  \label{tab:arabia}
-                  \centering
-                  \begin{tabular}{|c|c|}
-                    \hline
-                    Distancia [km] & Tiempo [h] \\
-                    \hline
-                    50             &            \\
-                    75             &            \\
-                    100            &            \\
-                    125            &            \\
-                    150            &            \\
-                    175            &            \\
-                    200            &            \\
-                    \hline
-                  \end{tabular}
-                  \caption{}
-                \end{table}
-                \begin{enumerate}
-                  \item Completen la tabla \ref{tab:arabia} que registra la velocidad del automóvil.
-                  \item ¿Cómo es la variación de los datos de la tabla? ¿Por qué?
-                  \item ¿En cuántos minutos recorre 1 km? Explica tu procedimiento.
-                  \item ¿En cuánto tiempo se recorrieron 120 km? ¿Y en cuánto tiempo se recorrerán 230 km?
-                \end{enumerate}
+          \item Completen la Tabla \ref{table:arabia} que registra la velocidad del automóvil.
+          \item ¿Cómo es la variación de los datos de la tabla? ¿Por qué?
+          \item ¿En cuántos minutos recorre 1 km? Explica tu procedimiento.
+          \item ¿En cuánto tiempo se recorrieron 120 km? ¿Y en cuánto tiempo se recorrerán 230 km?
+        \end{enumerate}
 
-          \item Analicen los rectángulos de la figura 2.1. La tabla \ref{tab:rectangulos} muestra las medidas de los lados de cada uno. Complétenla.
-                \begin{table}[!h]
-                  \label{tab:rectangulos}
-                  \centering
-                  \begin{tabular}{|l|c|c|c|}
-                    \hline
-                                 & Lado 1 (u) & Lado 2 (u) & Área (u$^2$) \\
-                    \hline
-                    Rectángulo 1 & 2          & 24         & 48           \\
-                    Rectángulo 2 & 3          &            &              \\
-                    Rectángulo 3 & 5          &            &              \\
-                    Rectángulo 4 & 6          &            &              \\
-                    \hline
-                  \end{tabular}
-                  \caption{}
-                \end{table}
-                \begin{enumerate}
-                  \item Completa la tabla \ref{tab:rectangulos} que muestra la medida de los lados de un conjunto de rect\'angulos.
-                  \item ¿Cómo es la variación de los datos de la tabla? ¿Por qué?
-                  \item Si se añade el rectángulo cuyo lado 1 mide 4 u, ¿cuál es la medida del otro lado? ¿Cuál es su área? Expliquen su procedimiento.
-                  \item ¿Cómo es el área de los rectángulos?
-                \end{enumerate}
+  \item Analicen los rectángulos de la figura 2.1. La tabla \ref{table:rectangulos} muestra las medidas de los lados de cada uno. Complétenla.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.7\textwidth]{ejem10.2}
+        \end{figure}
 
-          \item Un carpintero fabrica sillas, las cuales le cuestan \$250.00 elaborar
-                cada una. Además, tiene costos fijos por la renta del local y equi-
-                po que es de \$3 500.00 al mes. ¿Cuántas sillas hacen que el precio
-                por producirlas sea igual a los costos fijos?
+        \begin{table}[!h]
+          \centering
+          \begin{tabular}{|l|c|c|c|}
+            \hline
+                         & Lado 1 (u) & Lado 2 (u) & Área (u$^2$) \\
+            \hline
+            Rectángulo 1 & 2          & 24         & 48           \\
+            Rectángulo 2 & 3          &            &              \\
+            Rectángulo 3 & 5          &            &              \\
+            Rectángulo 4 & 6          &            &              \\
+            \hline
+          \end{tabular}
+          \caption{}
+          \label{table:rectangulos}
+        \end{table}
+        \begin{enumerate}
+          \item Completa la Tabla \ref{table:rectangulos} que muestra la medida de los lados de un conjunto de rect\'angulos.
+          \item ¿Cómo es la variación de los datos de la tabla? ¿Por qué?
+          \item Si se añade el rectángulo cuyo lado 1 mide 4 u, ¿cuál es la medida del otro lado? ¿Cuál es su área? Expliquen su procedimiento.
+          \item ¿Cómo es el área de los rectángulos?
         \end{enumerate}
 \end{enumerate}
+
+
+
 \subsection{Problemas sobre proporcionalidad directa e inversa}
 
 Presentamos diversas situaciones que involucran la interpretación de relaciones directas e inversas.
@@ -349,9 +363,9 @@ Si Marcos quiere dar 12 vueltas al parque,
 
 Asignemos $x$ a la cantidad de vueltas e $y$ el tiempo necesario para dar las $x$ vueltas.
 
-$x$ = n\'umero de vueltas.\\
-$y$ = tiempo para dar las vueltas.\\
-
+\begin{center}
+  $x$ = n\'umero de vueltas. \quad $y$ = tiempo para dar las vueltas.
+\end{center}
 Planteamos la relación directa entre $x$ e $y$.
 \[y=kx\]
 Reemplazamos los valores que nos dan en la situación; 6 minutos para dar 3 vueltas. Es decir, $x=3$ e $y=6$.
@@ -366,10 +380,9 @@ Cinthia va a la escuela en bicicleta desde su casa. Ella calcula que llega al co
 \textbf{¿Cuánto tiempo tardará si cambia la velocidad a 0.5 kilómetros por minuto?}
 
 Asignemos $t$ al tiempo que demora en ir de su casa a la escuela y $v$ a la velocidad promedio de su bicicleta.
-
-$t$ = tiempo.\\
-$v$ = velocidad.\\
-
+\begin{center}
+  $t$ = tiempo. \quad $v$ = velocidad.
+\end{center}
 Observa que la relación entre el tiempo y la velocidad es una relación inversa. Planteamos esa relación inversa entre $x$ e $y$.
 \[v=k \times \frac{1}{t}\]
 Reemplazamos los valores que nos dan en la situación, 45 minutos a una velocidad de 0.75 kilómetros por minuto. Es decir $x=45$ e $y=0.75$.
@@ -467,87 +480,87 @@ Como es una relación inversamente proporcional, planteamos la siguiente relaci�
 En el segundo grupo, había 64 obreros más, es decir, un total de 128 obreros.
 
 
-
-
-
 \newpage
 \subsubsection{Ejercicios}
-
-\begin{enumerate}[start=1]%<--- start option fixes number for first item
+Copia en tu libreta los siguientes problemas. Realiza para cada uno de ellos todas las operaciones y
+procedimientos necesarios para obtener la respuesta a cada una de las preguntas. Al terminar, señala la
+opción que contenga la respuesta correcta.
+\begin{enumerate}%[start=1]%<--- start option fixes number for first item
   \item Un grupo de 20 obreros puede terminar una
         construcción en 40 días. Al cabo de 10 días de trabajo,
         se les unen obreros de otro grupo, de modo que en 15 días
         más terminan la obra.\\
         \textbf{¿Cuántos obreros había en el segundo grupo?}\\
-        \begin{enumerate}
+        \emph{Escoge 1 respuesta:}\\
+        \begin{hoptions}
           \item 20 obreros
           \item 5 obreros
           \item 10 obreros
           \item 15 obreros
-        \end{enumerate}
-
-  \item En el mercado, 2 kilogramos de papa cuestan \$3.5 dólares.
-        Sofía tiene \$25 dólares para comprar 14 kilogramos de papa.\\
-        \textbf{¿Cuáles de las siguientes afirmaciones son correctas?}\\
-        \emph{Elige todas las respuestas adecuadas:}\\
-        \begin{enumerate}
-          \item Deberá pagar \$7.5 dólares por 6 kilogramos de papa.
-          \item Pagará \$14 dólares por 8 kilogramos de papa.
-          \item Sofía recibirá \$0.50 dólares de vuelto.
-          \item Sofía necesitará más dinero para realizar la compra.
-        \end{enumerate}
+        \end{hoptions}
 
   \item Mateo va en auto de su casa a la universidad. Si va a una velocidad promedio de 60 kilómetros por hora, tarda 1 hora.\\
         \textbf{¿Cuánto tiempo tardaría si fuera a 40 kilómetros por hora?}\\
         \emph{Escoge 1 respuesta:}\\
-        \begin{enumerate}
+        \begin{hoptions}
           \item 1 hora y 30 minutos
           \item 30 minutos
           \item 1 hora y 20 minutos
           \item 2 horas
-        \end{enumerate}
+        \end{hoptions}
 
   \item En una tienda, se venden rollos de papel higiénico. Cada rollo cuesta 2 dólares, pero hay la siguiente oferta:
         Lleva 3 rollos de papel higiénico y paga s\'olo 2.
         María va a la tienda a comprar 20 rollos de papel higiénico en oferta.\\
         \textbf{¿Cuánto pagará por la compra?}\\
         \emph{Escoge 1 respuesta:}\\
-        \begin{enumerate}
+        \begin{hoptions}
           \item 28 dólares
           \item 17 dólares
           \item 30 dólares
           \item 14 dólares
-        \end{enumerate}
+        \end{hoptions}
 
   \item Un grupo de 32 tejedores puede terminar un pedido de ponchos en 15 días. Al cabo de 5 días de trabajo, se les unen tejedores de otro grupo, de modo que en 8 días más terminan el pedido.\\
         \textbf{¿Cuántos tejedores había en el segundo grupo?}\\
         \emph{Escoge 1 respuesta:}\\
-        \begin{enumerate}
+        \begin{hoptions}
           \item 8 tejedores
           \item 16 tejedores
           \item 32 tejedores
           \item 10 tejedores
-        \end{enumerate}
+        \end{hoptions}
 
   \item \textbf{¿Cuál ecuación muestra variación directa?}\\
         \emph{Escoge 1 respuesta:}\\
-        \begin{enumerate}
+        \begin{hoptions}
           \item $\dfrac{1}{5}\cdot a=\dfrac{1}{b}$
           \item $a\cdot b=\dfrac{1}{5}$
           \item $a=5\cdot \dfrac{1}{b}$
           \item $\dfrac{a}{b}=5$
           \item $a\cdot b=5$
-        \end{enumerate}
+        \end{hoptions}
 
   \item \textbf{¿Cuál ecuación muestra variación inversa?}\\
         \emph{Escoge 1 respuesta:}\\
-        \begin{enumerate}
+        \begin{hoptions}
           \item $2\cdot \dfrac{1}{a}=\dfrac{1}{b}$
           \item $\dfrac{1}{2}\cdot \dfrac{1}{a}=\dfrac{1}{b}$
           \item $2\cdot a=b$
           \item $\dfrac{a}{b}=\dfrac{1}{2}$
           \item $a\cdot b=2$
-        \end{enumerate}
+        \end{hoptions}
+
+  \item En el mercado, 2 kilogramos de papa cuestan \$3.5 dólares.
+        Sofía tiene \$25 dólares para comprar 14 kilogramos de papa.\\
+        \textbf{¿Cuáles de las siguientes afirmaciones son correctas?}\\
+        \emph{Elige todas las respuestas adecuadas:}\\
+        \begin{hoptboxes}
+          \item Deberá pagar \$7.5 dólares por 6 kilogramos de papa.\\
+          \item Pagará \$14 dólares por 8 kilogramos de papa.\\
+          \item Sofía recibirá \$0.50 dólares de vuelto.\\
+          \item Sofía necesitará más dinero para realizar la compra.\\
+        \end{hoptboxes}
 
 \end{enumerate}
 
@@ -556,9 +569,8 @@ En el segundo grupo, había 64 obreros más, es decir, un total de 128 obreros.
 
 \begin{enumerate}
   \item Estás preparando limonada. La cantidad de azúcar que necesitas depende de la cantidad de limones que uses,
-        como se muestra en el Cuadro \ref{tab:azucar_limon}.
+        como se muestra en la tabla \ref{table:azucar_limon}.
         \begin{table}[!h]
-          \label{tab:azucar_limon}
           \centering
           \begin{tabular}{|l|c|c|c|}
             \hline
@@ -568,9 +580,78 @@ En el segundo grupo, había 64 obreros más, es decir, un total de 128 obreros.
             \hline
           \end{tabular}
           \caption{}
-        \end{table}
-
+          \label{table:azucar_limon}
+        \end{table}\\
         \textbf{¿Cuál es la constante de proporcionalidad entre las tazas de azúcar y los limones?}
+
+  \item Un carpintero fabrica sillas, las cuales le cuestan \$250.00 elaborar
+        cada una. Además, tiene costos fijos por la renta del local y equi-
+        po que es de \$3 500.00 al mes. \\
+        \textbf{¿Cuántas sillas hacen que el precio por producirlas sea igual a los costos fijos?}\\
+
+  \item El equipo conformado por Cristina, Javier y Claudia tardó 8 días en responder 120 preguntas que su profesor de Historia de México les dejó de tarea.
+        \begin{enumerate}
+          \item ¿Cuántas preguntas resolvieron Cristina, Javier y Claudia cada día?
+                \begin{hoptions}
+                  \item 3 preguntas \item 5 preguntas \item 8 preguntas \item 15 preguntas
+                \end{hoptions}
+          \item ¿Cuántas preguntas respondió cada uno de los integrantes del equipo por día?
+                \begin{hoptions}
+                  \item 3 preguntas \item 5 preguntas \item 8 preguntas \item 15 preguntas
+                \end{hoptions}
+          \item Si el equipo estuviera formado por 5 personas, ¿cuántas preguntas respondería cada una en un solo día, suponiendo que trabajan al mismo ritmo?
+                \begin{hoptions}
+                  \item 3 preguntas \item 5 preguntas \item 8 preguntas \item 15 preguntas
+                \end{hoptions}
+          \item ¿En cuántos días responderían las 120 preguntas si el equipo estuviera formado por 8 personas, suponiendo que trabajan al mismo ritmo que el equipo original?
+                \begin{hoptions}
+                  \item 3 días \item 5 días \item 8 días \item 15 días
+                \end{hoptions}
+          \item Si sólo hubieran sido 45 preguntas y el equipo estuviera formado por 5 personas que trabajan al mismo ritmo, ¿en cuantos días terminarían la tarea?
+                \begin{hoptions}
+                  \item 2 días \item 5 días \item 8 días \item 15 días
+                \end{hoptions}
+        \end{enumerate}
+
+  \item Tania tiene 5 parejas de canarios y necesita 15 paquetes de comida para alimentarlos durante 30 días.
+        \begin{enumerate}
+          \item ¿Cuántos días podría alimentar a los canarios con un paquete de comida?\\
+                \begin{hoptions}
+                  \item  5 días
+                  \item 10 días
+                  \item 30 días
+                  \item 90 días
+                \end{hoptions}
+          \item ¿Cuántos días podría alimentar a los canarios con el triple de alimento?\\
+                \begin{hoptions}
+                  \item 1 día
+                  \item 2 días
+                  \item 3 días
+                  \item 5 días
+                \end{hoptions}
+          \item ¿Cuántos días le durarían los 15 paquetes de comida para alimentar al triple de canarios?\\
+                \begin{hoptions}
+                  \item 15 días
+                  \item 30 días
+                  \item 60 días
+                  \item 90 días
+                \end{hoptions}
+          \item Si Tania tuviera un total de 10 parejas de canarios, ¿cuántos días podría alimentarlos con un
+                solo paquete de comida?\\
+                \begin{hoptions}
+                  \item 5 días
+                  \item 10 días
+                  \item 30 días
+                  \item 90 días
+                \end{hoptions}
+          \item Si Tania tuviera 30 canarios, ¿cuántos días le durarían 5 paquetes de comida?\\
+                \begin{hoptions}
+                  \item  1 día
+                  \item 2 días
+                  \item 3 días
+                  \item 5 días
+                \end{hoptions}
+        \end{enumerate}
 \end{enumerate}
 \section{Reparto Proporcional}
 \subsection{Situaciones de reparto proporcional}
