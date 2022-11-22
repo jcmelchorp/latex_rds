@@ -1,18 +1,51 @@
 \documentclass[11pt]{book}
-\usepackage[colorlinks = true,linkcolor = blue]{hyperref}
-\usepackage[letterpaper]{geometry} % Custom margins
-\usepackage{graphicx}
-\usepackage{tabularx}
-\usepackage{float}
+\usepackage[subpreambles=true]{standalone}
 \usepackage[spanish]{babel}
+\usepackage{comfortaa}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[
+letterpaper,
+left=1in, 
+right=1in, 
+top=1in,
+bottom=1in,
+headheight=10mm,% Set \headheight to 10mm
+]{geometry} % Custom margins
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{color, colortbl}
+\usepackage[dvipsnames,table]{xcolor} % Required for custom color
+\usepackage[colorlinks = true, linkcolor = colorrds]{hyperref}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol,multirow}
+\usepackage{newclude}
+%\usepackage{tabto}
 \usepackage{remreset}
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \usepackage{xparse}
 \usepackage{wrapfig}
+\usepackage{caption}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage{pdflscape}
+\usepackage{subfiles} % Best loaded last in the preamble
+\input{insbox}
+\include{./Functional/def_tcolorbox}
+\decimalpoint
+%\captionsetup{width=.45\textwidth}
+%\setlength{\parindent}{0pt}
+\graphicspath{{./Images}} %Setting the graphicspath
+\definecolor{colorrds}{HTML}{0060A0} % Custom colour
+%%% Headings and footer
+\renewcommand\spanishtablename{Tabla}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+%%%
 \usetikzlibrary{
   arrows,
   positioning,
@@ -35,14 +68,20 @@
   plotmarks,
   spy,
   tikzmark}
-  
-  \decimalpoint
 
+  \tikzset{
+  abstractbox/.style={
+    draw=black, fill=white, rectangle, 
+    inner sep=12pt, style=rounded corners,
+    drop shadow={fill=black, opacity=1}
+  },
+  abstracttitle/.style={fill=white}
+}
 %%%% APRENDISAJES TEXTBOX
 \tikzset{
   abstractbox/.style={
     draw=black, fill=white, rectangle, 
-    inner sep=12pt, style=rounded corners,
+    inner sep=15pt, style=rounded corners,
     drop shadow={fill=black, opacity=1}
   },
   abstracttitle/.style={fill=white}
@@ -51,54 +90,78 @@
   \begin{tikzpicture}
     \node [abstractbox, #1] (box)
     {\begin{minipage}{0.9\linewidth}
-        \setlength{\parindent}{2mm} % Indentar.
+        \setlength{\parindent}{0mm} % Indentar.
         \normalfont #2
       \end{minipage}};
-    \node[abstracttitle, right=10pt] at (box.north west) {Aprendizajes esperados:};
+    \node[abstracttitle, right=5pt] at (box.north west) {\textbf{Aprendizajes esperados:}};
     \node[draw=none, fit=(box)] {};
   \end{tikzpicture}
-}
+}%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \makeatletter
   \@removefromreset{section}{chapter}
 \makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{}}
-\renewcommand{\thechapter}{Unidad \arabic{chapter}}
+\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
+\renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\thesubsection}{L\arabic{subsection}}
-\setlength{\parindent}{0pt}
+%\renewcommand{\labelenumi}{\mbox{\arabic{enumi}}}
+%\%renewcommand{\labelitemi}{$\square$}
 
+%%%%%%%%%%%%% START questions env
+%Idea from https://tex.stackexchange.com/a/236668/1952
+% \DeclareDocumentCommand\question{o}{%
+%     \item\IfNoValueTF{#1}{}{(#1 puntos)}}
+% \newenvironment{questions}[1][]{\enumerate[,#1]}{\endenumerate}
+%\DeclareDocumentCommand\part{o}{%
+% \item\IfNoValueTF{#1}{}{(#1 puntos)}}
+% \newenvironment{parts}[1][]{\enumerate[,#1]}{\endenumerate}
+% \newcommand{\part}{\item}
+%%\newcommand{\item}{\item}
+% \newlist{parts}{enumerate*}{1}
+% \setlist[parts,1]{label=(\alph*), itemjoin={{\quad}},leftmargin = 1cm}
+% \newlist{oneparchoices}{enumerate*}{1}
+% \setlist[oneparchoices,1]{label=\quad\alph*), itemjoin={{\quad}},leftmargin = 1cm}
+% \newlist{choices}{itemize}{1}
+% \setlist[choices,1]{label=\quad$\square$, itemjoin={{\\}},leftmargin = 1cm}
+\newlist{hoptboxes}{itemize*}{1}
+\setlist[hoptboxes,1]{label=\Large$\square$, font=\color{colorrds},itemjoin={{\quad}},leftmargin = 1cm}
+\newlist{hoptions}{enumerate*}{1}
+\setlist[hoptions,1]{label=(\alph*), font=\color{colorrds},itemjoin={{\quad}},leftmargin = 1cm}
+%%%%%%%%%%%%% END questions env
+\newenvironment{mybox}[3][]{%
+  \begin{tikzpicture}[#1]%
+    \def\myboxname{#3}%
+    % good options: minimum height, minimum width
+    \node [draw, inner sep=2ex,  align=justify]
+      (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
+  }{%
+    \egroup;
+    \node [right, inner sep=3pt, fill=colorrds!75, outer sep=0pt, 
+      text height=2ex, text depth=.5ex] (BOXNAME) 
+      at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
+    \fill[colorrds] (BOXNAME.north east) -- +(-1em,1em)
+      -- +(-1em,0) -- cycle;
+    \fill[colorrds] (BOXNAME.south west) -- +(1em,-1em)
+      -- +(1em,0) -- cycle;
+  \end{tikzpicture}
+}
 \begin{document}
 \pagestyle{empty}
-\newgeometry{letterpaper,left=15mm,top=50mm,bottom=0mm} % Custom margins
-\begin{center}
-  {\Huge Matem\'aticas 1}\\
-  \vspace{2cm}
-  \normalsize
-  \textbf{\large Cuaderno de trabajo}\\
-  para los alumnos de 1$^\circ$ de  Secundaria\\
-  en el curso durante el ciclo escolar\\
-  \textbf{2022-2023}\\
-  \vspace{2.5cm}
-  \small POR\\
-  \Large J. C. Melchor Pinto\\[0.5em]
-  \normalsize Profesor de asignatura en\\
-  \vspace{1cm}
-  \includegraphics[width=4cm]{./Unidad 2/Images/LOGO_RDS_nobg}
-\end{center}
-\vspace{2cm}
-%\include*{Functional/TitlePage}
-\hspace{-16mm}
-\includegraphics[width=\paperwidth]{./Unidad 2/Images/cover_bg_short}
+\newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
+\include{./Functional/cover}
 \restoregeometry
+\addtocontents{toc}{\setcounter{tocdepth}{3}}
 \tableofcontents
 \chapter{}
+\pagestyle{fancy}
 \section{Fracciones y decimales}
 \subsection{Equivalencias de fracciones y decimales}
 \subsection{Decimales peri\'odicos}
 \subsubsection{Redondeo y truncamiento}
 
+\newpage
 \section{Recta Num\'erica, Densidad y Orden}
 \subsection{Fracciones en la Recta Num\'erica, Densidad y Orden}
 \subsection{Decimales en la Recta Num\'erica, Densidad y Orden}
@@ -106,53 +169,52 @@
 \subsubsection{Orden en los n\'umeros fraccionarios}
 \subsubsection{Orden en los n\'umeros decimales}
 
+\newpage
 \section{Problemas con sumas y restas}
 \subsection{N\'umeros con signo, recta y orden}
 \subsection{Suma y resta de n\'umeros con signo}
 \subsubsection{Suma de numeros con signo}
 \subsubsection{Conmutatividad aditiva}
 \subsubsection{Resta de n\'umeros con signo}
-
+\newpage
 \section{Multiplicaci\'on con n\'umeros fraccionarios y decimales}
 \subsection{Multiplicaci\'on con n\'umeros fraccionarios}
 \subsection{Multiplicaci\'on con n\'umeros decimales}
-
+\newpage
 \section{Divisi\'on con n\'umeros fraccionarios y decimales}
-
+\newpage
 \section{\'Angulos, tri\'angulos y cuadril\'ateros}
 \subsection{\'Angulos y rectas paralelas}
 \subsection{Suma de los \'angulos interiores de un tri\'angulo y de un cuadril\'atero}
 \subsubsection{\'Angulos de un tri\'angulo}
 \subsubsection{\'Angulos de un cuadril\'atero}
-
+\newpage
 \section{Tri\'angulos, cuadril\'ateros y congruencia}
 \subsection{Criterios de congruencia}
-
-
-
 
 
 \chapter{}
 
 \section{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
 \boxabstract{
-  Lee con atenci\'on cada pregunta y realiza lo que se te pide.
-  De ser necesario, desarrolla tus respuestas en el espacio
-  determinado para cada pregunta o
-  en una hoja en blanco por separado, anotando en ella tu nombre
-  completo, el n\'umero del problema y la soluci\'on propuesta.
+  Determina y usa la jerarquía de operaciones y los paréntesis en operaciones con números naturales, enteros y
+  decimales (para multiplicación y división, sólo números positivos).
 }
-\subsection{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
-Dentro de las operaciones básicas de la aritmética existe una \textbf{jerarquía de operaciones}, es decir un \textbf{orden}.
 
-Recuerda cuando estabas en primaria y empezabas a leer, ¿qué aprendiste primero?. Seguro fueron las vocales, después fueron sílabas, después palabras completas hasta poder llegar a los enunciados y dentro de los enunciados vienen los signos de puntuación, las comas, los dos puntos, el punto y seguido, el punto aparte, etc. Y entendiste la importancia de los signos de puntuación.
+\subsection{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
+Dentro de las operaciones básicas de la aritmética existe una \textbf{jerarquía de operaciones}, es decir un
+\textbf{orden}.
+
+Recuerda cuando estabas en primaria y empezabas a leer, ¿qué aprendiste primero?. Seguro fueron las vocales,
+después fueron sílabas, después palabras completas hasta poder llegar a los enunciados y dentro de los enunciados vienen los signos de puntuación, las comas, los dos puntos, el punto y seguido, el punto aparte, etc. Y entendiste la importancia de los signos de puntuación.
 
 En el siguiente enunciados podemos observar ejemplos:
 
 Perdón imposible, castigarlo.\\
 Perdón, imposible castigarlo.
 
-Como podemos ver el significado de ambas expresiones son diferentes, bueno de eso se trata, en las matemáticas existen reglas que si no se siguen el resultado de la operación sería incorrecto.
+Como podemos ver el significado de ambas expresiones son diferentes, bueno de eso se trata, en las matemáticas
+existen reglas que si no se siguen el resultado de la operación sería incorrecto.
 
 La operación de suma, resta, multiplicación y división tienen el siguiente orden:
 \begin{figure}[H]
@@ -164,11 +226,13 @@ La operación de suma, resta, multiplicación y división tienen el siguiente or
 
 \[( 10 + 2 ) / 3 - 2\]
 
-Observemos en este primer ejemplo se tiene un paréntesis y tiene mayor jerarquía, por lo que primero se realiza esta operación.
+Observemos en este primer ejemplo se tiene un paréntesis y tiene mayor jerarquía, por lo que primero se realiza
+esta operación.
 
 \[12 / 3 - 2\]
 
-Seguimos con el operador que tiene la jerarquía mas alta que es la división, y vamos de izquierda a derecha y realizamos la operación.
+Seguimos con el operador que tiene la jerarquía mas alta que es la división, y vamos de izquierda a derecha y
+realizamos la operación.
 
 \[4 - 2\]
 
@@ -189,7 +253,8 @@ Observemos que ahora la jerarquía mas alta la tiene primero la división, ya qu
 
 \[8 + 2 - 2 = 8\]
 
-Vamos de izquierda a derecha, hacemos primero la suma y luego la resta y tenemos el resultado, como podemos apreciar la gran importancia de respetar el orden de las operaciones para poder encontrar el resultado correcto.
+Vamos de izquierda a derecha, hacemos primero la suma y luego la resta y tenemos el resultado, como podemos apreciar
+la gran importancia de respetar el orden de las operaciones para poder encontrar el resultado correcto.
 
 
 \subsubsection{Ejemplo 3: En este ejercicio explicaremos un poco más detallado}
@@ -200,7 +265,8 @@ Vamos de izquierda a derecha y hacemos la división por que en este ejemplo es e
 
 \[4 - 3 + 5 \times 2\]
 
-Luego vamos de izquierda a derecha buscando el operador que tiene la mayor jerarquía para hacer la operacion. el cual es la multiplicaciónn.
+Luego vamos de izquierda a derecha buscando el operador que tiene la mayor jerarquía para hacer la operaci\'on.
+El cual es la multiplicaciónn.
 
 \[4 - 3 + 10\]
 
@@ -212,36 +278,202 @@ Por ultimo el resultado es el número 11.
 
 \[4 - 6 / 2 + 5 \times 2 = 11\]
 
+\newpage
 \section{Resolución de problemas con valores faltantes}
+\boxabstract{Calcula valores faltantes en problemas de proporcionalidad directa,
+  con constante natural, fracción o decimal (incluyendo tablas de variación).}
 
 \subsection{Proporcionalidad directa y valor faltante}
+\begin{boxF}
+  \begin{center}\color{colorrds}Inicio\end{center}
+  Menhir el arquitecto hizo un obelisco para conmemorar los setenta y seis años de su padre.
+  Ahora hace un obelisco de menor tamaño, pero con la misma forma y del mismo material
+  que el de su padre, para celebrar el decimonoveno cumpleaños de su hijo.
+  \begin{enumerate}
+    \item Las medidas de los obeliscos de Menhir están en la misma proporción que hay entre las
+          edades de su padre y de su hijo. Si la altura del obelisco hecho en honor al padre es de
+          12.2 m, ¿qué altura tiene el obelisco dedicado al hijo?
+
+    \item Los obeliscos tienen base cuadrada. Si la base del obelisco dedicado al hijo tiene una
+          longitud de 0.80 m por lado, ¿cuánto mide el lado de la base del obelisco más grande?
+    \item Compartan sus respuestas y procedimientos con sus compañeros y escriban en su cua-
+          derno el procedimiento que les parezca más acertado.
+  \end{enumerate}
+\end{boxF}
+
+\begin{enumerate}
+  \item En el local de jugos de Ana para preparar dos litros de agua de frutas se agregan,
+        además de las frutas, cinco cucharadas de azúcar. Contesta lo siguiente
+        \begin{enumerate}
+          \item Si se mantiene la misma proporción, ¿cuántas cucharadas se necesitan para preparar ocho litros?
+          \item Si agregó 33 cucharadas, ¿cuántos litros preparó?
+          \item Si Ana utilizó 15 cucharadas, ¿cuántos litros prepararó?
+          \item ¿Cuántas cucharadas se requieren para preparar un litro de agua?
+        \end{enumerate}
+  \item  Para llenar un vitrolero se necesitan cuatro litros de agua. Completa la tabla para
+        saber cuántas cucharadas necesita Ana.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.8\linewidth]{tabla_vitrolero.png}
+          \captionof{table}{}
+          \label{tab:tabla_vitrolero}
+        \end{figure}
+        \begin{enumerate}
+          \item ¿Cuántas cucharadas se necesitan para preparar un vitrolero?
+          \item Si el número de vitroleros aumenta al doble, ¿cómo se incrementa el número de
+                cucharadas? ¿Y si aumenta al triple?
+          \item Explica en tu cuaderno, cómo determinarías el número de cucharadas a partir del
+                número de vitroleros.
+        \end{enumerate}
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.5\linewidth]{Hombre-de-Vitruvio.jpg}
+          \captionof{table}{}
+          \label{fig:Hombre-de-Vitruvio}
+        \end{figure}
+        \begin{boxH}
+          Dos magnitudes tienen una relación de proporcionalidad directa si al aumentar o
+          disminuir una la otra aumenta o disminuye, respectivamente, en la misma proporción.
+          En este caso, al calcular la razón entre un valor de la primera magnitud y su correspondiente
+          de la otra magnitud, siempre obtendremos un número constante.
+          Si en una relación de proporcionalidad directa se desconoce un valor, se dice que
+          se trata de un problema de valor faltante.
+        \end{boxH}
+
+  \item Durante el Renacimiento, el estudio de la anatomía humana tuvo gran auge. Uno
+        de los trabajos más conocidos es El hombre de Vitrubio (ver figura \ref{fig:Hombre-de-Vitruvio}) de Leonardo
+        da Vinci. Una de las proporciones más interesantes en esta obra es la relación entre
+        la estatura de la figura y la distancia entre el ombligo y la base de los pies.
+        \begin{enumerate}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{tabla_hombre.png}
+          \end{figure}
+          \item Completa la tabla que relaciona la estatura de cuatro personas y la distancia de
+                su ombligo a sus pies.
+          \item ¿Qué observas en la última columna?
+
+        \end{enumerate}
+        En El hombre de Vitrubio se dice que la razón de su estatura respecto a la distancia
+        del ombligo a los pies es perfecta y su valor es un número decimal no periódico e
+        infinito: 1.61803\dots llamado \emph{proporción aúrea} (que redondeamos a 1.62).
+\end{enumerate}
+
+\begin{boxF}
+  \begin{center}\color{colorrds}Cierre\end{center}
+  Regresa al problema inicial, identifica una relación de proporcionalidad directa y calcula
+  la constante de proporcionalidad.
+  Revisa tus respuestas a los incisos $a$ y $b$ y valida el procedimiento del inciso $c$.
+\end{boxF}
+
 \subsection{Proporcionalidad y valor unitario}
+\begin{boxF}
+  \begin{center}\color{colorrds}Inicio\end{center}
+  Manolo y Sebastián compraron una bolsa con 100 canicas como la que se muestra en la
+  figura, por \$80.00. Manolo aportó \$32.00 y Sebastián completó el pago.
+  \begin{enumerate}
+    \item ¿Cuánto pagó Sebastián?
+    \item ¿Te parece justo que, al repartirlas, cada uno tenga 50 canicas? ¿Por qué?
+    \item ¿Cuántas canicas debería recibir cada uno de acuerdo con lo que aportaron?
+    \item Explica cómo decidiste repartir las canicas entre Manolo y Sebastián, y por qué
+          consideras que de esa manera el reparto es justo.
+  \end{enumerate}
+\end{boxF}
+
+\begin{minipage}[t]{0.2\textwidth}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1.4\linewidth]{fig_sombras.png}
+    \captionof{figure}{}
+    \label{fig:fig_sombras}
+  \end{figure}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.75\textwidth}
+  \begin{enumerate}
+    \item En un día soleado los objetos forman sombras y, a la misma hora, la altura y la
+          sombra de diferentes objetos es proporcional.
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\linewidth]{tabla_sombras.png}
+            \captionof{table}{}
+            \label{tab:tabla_sombras}
+          \end{figure}
+
+          \begin{enumerate}
+            \item Con la información de la figura completa la tabla \ref{tab:tabla_sombras}.
+            \item ¿Cómo son los números de la última columna?
+            \item Si la sombra de un árbol mide 7.5 m, ¿cómo calcularías su altura? Explica.
+            \item  En primaria aprendiste a ubicar puntos en el plano cartesiano por medio de
+                  coordenadas. Ubica los puntos cuyas coordenadas corresponden a la altura y sombra de los árboles
+                  \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=\linewidth]{plano_sombras.png}
+                  \end{figure}
+
+          \end{enumerate}
+  \end{enumerate}
+\end{minipage}
+
+
+
+
+
+
+
 \subsection{Resolución de problemas de proporcionalidad directa}
 
-
+\newpage
 \section{Porcentajes}
+\boxabstract{Resuelve problemas de cálculo de porcentajes, de tanto por ciento y de la cantidad base.}
+
 \subsection{Tanto por ciento}
 \subsection{Cálculo del porcentaje}
 \subsection{Porcentajes y aplicaciones}
 
+\newpage
 \section{Perímetros y áreas}
+\boxabstract{Calcula el perímetro de polígonos y del círculo, y áreas de triángulos y cuadriláteros desarrollando
+  y aplicando fórmulas.}
 \subsection{Perímetro de polígonos}
 \subsection{Perímetro del círculo}
 \subsection{Áreas de triángulos y cuadriláteros}
-
+\newpage
 \section{Ecuaciones lineales}
+\boxabstract{Resuelve problemas mediante la formulación y solución algebraica de ecuaciones lineales.}
 \subsection{Formulación de ecuaciones}
 \subsection{Solución de una ecuación}
 
+
+
+
+\newpage
 \section{Resolución de ecuaciones lineales}
+\boxabstract{Resuelve problemas mediante la formulación y solución algebraica de ecuaciones lineales.}
 \subsection{Propiedades de la igualdad}
 \subsection{Más sobre ecuaciones lineales}
 
+
+
+
+
+
+\newpage
 \section{Medidas de tendencia central}
+\boxabstract{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana) y el
+  rango de un conjunto de datos, y decide cuál de ellas conviene más en el análisis de los datos en cuestión.}
 \subsection{Media aritmética o promedio}
 \subsection{La media aritmética y el rango}
 
+
+
+
+
+\newpage
 \section{Moda, media aritmética y mediana}
+\boxabstract{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana) y
+  el rango de un conjunto de datos, y decide cuál de ellas conviene más en el análisis de los datos en cuestión.
+}
 \subsection{Media aritmética y mediana}
 \subsection{Moda}
 \subsection{Representantes de un grupo de datos}
@@ -253,41 +485,47 @@ Por ultimo el resultado es el número 11.
 \subsection{Comparación de situaciones de variación proporcional con gráficas}
 \subsection{Comparación de situaciones de variación proporcional con expresiones algebraicas}
 
+
+
+
+\newpage
 \section{Pendiente de una recta y razón de cambio}
 \subsection{Variación proporcional y pendiente}
 \subsection{Razón de cambio y variación}
 \subsection{Efectos en la recta al cambiar la pendiente}
 
+\newpage
 \section{Análisis y comparación de situaciones de variación lineal}
 \subsection{Efectos de la recta al cambiar la ordenada al origen}
 \subsection{Situaciones de variación lineal asociadas a la física, la biología y la economía}
 
+\newpage
 \section{Sucesiones y expresiones algebraicas}
 \subsection{Sucesiones numéricas}
 \subsection{Sucesiones con progresión aritmética}
 
+\newpage
 \section{Congruencia de triángulos y aplicaciones}
 \subsection{Aplicaciones de congruencia de triángulos}
 \subsection{Aplicaciones a cuadriláteros}
 
+\newpage
 \section{Vol\'umenes de prismas rectos}
 \subsection{Volumen de prismas rectos rectangulares}
 \subsection{Fórmula del volumen de prismas rectos}
 
+\newpage
 \section{Gráficas circulares}
 \subsection{Recolecta y registra datos}
 \subsection{Registra datos en gráficas circulares}
 \subsection{Leer e interpretar datos en gráficas circulares}
 
+\newpage
 \section{El azar y la probabilidad frecuencial}
 \subsection{Tipos, recolección y organización de datos}
 \subsection{Experimentos aleatorios y deterministas}
 \subsection{Espacio muestral de un experimento aleatorio}
 \subsection{Cálculo de la probabilidad frecuencial}
-
-
-
-
 
 
 \end{document}
