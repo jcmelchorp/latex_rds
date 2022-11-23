@@ -19,7 +19,7 @@ __ http://texblog.net/latex-archive/layout/fancy-chapter-tikz/
 {\gdef\chapterlabel{}
     \comfortaa\huge\bfseries
 }
-{\gdef\chapterlabel{\thechapter\ }}{0pt}
+{\gdef\chapterlabel{}}{0pt}
 {\begin{tikzpicture}[remember picture,overlay]
         \node[yshift=-3cm] at (current page.north west)
         {\begin{tikzpicture}[remember picture, overlay]
@@ -45,12 +45,12 @@ __ http://texblog.net/latex-archive/layout/fancy-chapter-tikz/
 {\begin{tikzpicture}[remember picture,overlay]
         \node[yshift=-2cm] at (current page.north west)
         {\begin{tikzpicture}[remember picture, overlay]
-                \draw[fill=blue] (0,0) rectangle
+                \draw[fill=white] (0,0) rectangle
                 (\paperwidth,2cm);
-                \node[anchor=east,xshift=.9\paperwidth,rectangle,
+                \node[anchor=east,xshift=0.9\paperwidth,rectangle,
                     rounded corners=10pt,inner sep=11pt,
-                    fill=blue!35]
-                {\color{white}\sectionlabel};
+                    fill=colorrds,line width=1pt]
+                {\color{white}\sectionlabel#1};
                 % \node[anchor=east,xshift=.9\paperwidth,rectangle,
                 %     rounded corners=10pt,inner sep=11pt,
                 %     fill=blue!35]
@@ -66,9 +66,9 @@ __ http://texblog.net/latex-archive/layout/fancy-chapter-tikz/
 % %\normalfont%\sffamily\Huge\bfseries\scshape
 % \comfortaa\bfseries
 % }
-{\gdef\sectionlabel{}
-    %\normalfont%\sffamily\Huge\bfseries\scshape
-    \comfortaa\Large\bfseries
-}
+% {\gdef\sectionlabel{}
+%     %\normalfont%\sffamily\Huge\bfseries\scshape
+%     \comfortaa\Large\bfseries
+% }
 %{\gdef\subsectionlabel{\thesubsection\ }}{0pt}
 
