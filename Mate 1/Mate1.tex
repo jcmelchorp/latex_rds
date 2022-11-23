@@ -31,10 +31,13 @@ headheight=10mm,% Set \headheight to 10mm
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
 \usepackage{etoolbox}
+\usepackage{ragged2e}
 \usepackage{pdflscape}
 \usepackage{subfiles} % Best loaded last in the preamble
 \input{insbox}
-\include{./Functional/def_tcolorbox}
+\include{Functional/def_tcolorbox}
+%\include{Functional/fancyHeader}
+%\include*{Functional/tornpaper}
 \decimalpoint
 %\captionsetup{width=.45\textwidth}
 %\setlength{\parindent}{0pt}
@@ -58,6 +61,8 @@ headheight=10mm,% Set \headheight to 10mm
   shapes,
   backgrounds,
   shadows,
+  shadows.blur,
+  shadings,
   trees,
   fit,
   snakes,
@@ -155,7 +160,7 @@ headheight=10mm,% Set \headheight to 10mm
 \addtocontents{toc}{\setcounter{tocdepth}{3}}
 \tableofcontents
 \chapter{}
-\pagestyle{fancy}
+%\pagestyle{fancy}
 \section{Fracciones y decimales}
 \subsection{Equivalencias de fracciones y decimales}
 \subsection{Decimales peri\'odicos}
@@ -205,14 +210,15 @@ headheight=10mm,% Set \headheight to 10mm
 Dentro de las operaciones básicas de la aritmética existe una \textbf{jerarquía de operaciones}, es decir un
 \textbf{orden}.
 
-Recuerda cuando estabas en primaria y empezabas a leer, ¿qué aprendiste primero?. Seguro fueron las vocales,
-después fueron sílabas, después palabras completas hasta poder llegar a los enunciados y dentro de los enunciados vienen los signos de puntuación, las comas, los dos puntos, el punto y seguido, el punto aparte, etc. Y entendiste la importancia de los signos de puntuación.
+Recuerda cuando estabas en primaria y empezabas a leer, ¿qué aprendiste primero? Seguro fueron las vocales,
+después fueron sílabas, después palabras completas hasta poder llegar a los enunciados y dentro de los enunciados
+vienen los signos de puntuación, las comas, los dos puntos, el punto y seguido, el punto aparte, etc. Y entendiste la importancia de los signos de puntuación.
 
-En el siguiente enunciados podemos observar ejemplos:
-
-Perdón imposible, castigarlo.\\
-Perdón, imposible castigarlo.
-
+En los siguientes enunciados podemos observar ejemplos:
+\begin{bA}
+  Perdón imposible, castigarlo.\\
+  Perdón, imposible castigarlo.
+\end{bA}
 Como podemos ver el significado de ambas expresiones son diferentes, bueno de eso se trata, en las matemáticas
 existen reglas que si no se siguen el resultado de la operación sería incorrecto.
 
@@ -222,7 +228,7 @@ La operación de suma, resta, multiplicación y división tienen el siguiente or
   \includegraphics[width=0.5\textwidth]{./Unidad 2/Images/jerarquia.jpg}
 \end{figure}
 
-\subsubsection{Ejemplo 1: En este ejercicio aremos el uso del paréntesis}
+\subsubsection{Ejemplo 1: En este ejercicio haremos uso del paréntesis}
 
 \[( 10 + 2 ) / 3 - 2\]
 
@@ -326,38 +332,47 @@ Por ultimo el resultado es el número 11.
                 número de vitroleros.
         \end{enumerate}
 
-        \begin{figure}[H]
-          \centering
-          \includegraphics[width=0.5\linewidth]{Hombre-de-Vitruvio.jpg}
-          \captionof{table}{}
-          \label{fig:Hombre-de-Vitruvio}
-        \end{figure}
-        \begin{boxH}
-          Dos magnitudes tienen una relación de proporcionalidad directa si al aumentar o
-          disminuir una la otra aumenta o disminuye, respectivamente, en la misma proporción.
-          En este caso, al calcular la razón entre un valor de la primera magnitud y su correspondiente
-          de la otra magnitud, siempre obtendremos un número constante.
-          Si en una relación de proporcionalidad directa se desconoce un valor, se dice que
-          se trata de un problema de valor faltante.
-        \end{boxH}
-
   \item Durante el Renacimiento, el estudio de la anatomía humana tuvo gran auge. Uno
-        de los trabajos más conocidos es El hombre de Vitrubio (ver figura \ref{fig:Hombre-de-Vitruvio}) de Leonardo
+        de los trabajos más conocidos es \emph{El hombre de Vitrubio} (ver figura \ref{fig:Hombre-de-Vitruvio}) de Leonardo
         da Vinci. Una de las proporciones más interesantes en esta obra es la relación entre
         la estatura de la figura y la distancia entre el ombligo y la base de los pies.
+
+        \begin{minipage}{0.45\textwidth}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{Hombre-de-Vitruvio.jpg}
+            \captionof{figure}{Obra de Leonardo Da Vinci, titulada \emph{El hombre de Vitrubio}}
+            \label{fig:Hombre-de-Vitruvio}
+          \end{figure}
+        \end{minipage}\hfill
+        \begin{minipage}{0.45\textwidth}
+          \begin{boxH}
+            Dos magnitudes tienen una relación de proporcionalidad directa si al aumentar o
+            disminuir una la otra aumenta o disminuye, respectivamente, en la misma proporción.
+            En este caso, al calcular la razón entre un valor de la primera magnitud y su correspondiente
+            de la otra magnitud, siempre obtendremos un número constante.
+            Si en una relación de proporcionalidad directa se desconoce un valor, se dice que
+            se trata de un problema de valor faltante.
+          \end{boxH}
+
+        \end{minipage}
+        \begin{boxE}
+          En \emph{El hombre de Vitrubio} se dice que la razón de su estatura respecto a la distancia
+          del ombligo a los pies es perfecta y su valor es un número decimal no periódico e
+          infinito: 1.61803\dots llamado \emph{proporción aúrea} (que redondeamos a 1.62).
+        \end{boxE}
+
         \begin{enumerate}
           \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{tabla_hombre.png}
+            \includegraphics[width=0.6\linewidth]{tabla_hombre.png}
           \end{figure}
           \item Completa la tabla que relaciona la estatura de cuatro personas y la distancia de
                 su ombligo a sus pies.
           \item ¿Qué observas en la última columna?
 
         \end{enumerate}
-        En El hombre de Vitrubio se dice que la razón de su estatura respecto a la distancia
-        del ombligo a los pies es perfecta y su valor es un número decimal no periódico e
-        infinito: 1.61803\dots llamado \emph{proporción aúrea} (que redondeamos a 1.62).
+
 \end{enumerate}
 
 \begin{boxF}
@@ -394,8 +409,8 @@ Por ultimo el resultado es el número 11.
     \item En un día soleado los objetos forman sombras y, a la misma hora, la altura y la
           sombra de diferentes objetos es proporcional.
           \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.8\linewidth]{tabla_sombras.png}
+            \raggedright
+            \includegraphics[width=0.9\linewidth]{tabla_sombras.png}
             \captionof{table}{}
             \label{tab:tabla_sombras}
           \end{figure}

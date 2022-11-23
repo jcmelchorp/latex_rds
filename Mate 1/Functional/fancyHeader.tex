@@ -1,0 +1,36 @@
+%\usepackage{verbatim}
+
+\begin{comment}
+:Title: Fancy section headings
+:Grid: 2x2
+
+An example of how you can use TikZ and absolute positioning to create fancy section headings.
+
+:Source: `TeXblog: Fancy section headings with TikZ`__
+
+__ http://texblog.net/latex-archive/layout/fancy-section-tikz/
+
+\end{comment}
+
+%\usepackage{kpfonts}
+\usepackage[explicit]{titlesec}
+\newcommand*\sectionlabel{}
+\titleformat{\section}
+{\gdef\sectionlabel{}
+    %\normalfont\sffamily\Large\bfseries\scshape
+}
+{\gdef\sectionlabel{\thesection\ }}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+        \node[yshift=-3cm] at (current page.north west)
+        {\begin{tikzpicture}[remember picture, overlay]
+                \draw[fill=colorrds] (0,0) rectangle
+                (\paperwidth,3cm);
+                \node[anchor=east,xshift=.9\paperwidth,rectangle,
+                    rounded corners=10pt,inner sep=11pt,
+                    fill=colorrds!35]
+                {\color{red}\sectionlabel#1};
+            \end{tikzpicture}
+        };
+    \end{tikzpicture}
+}
+\titlespacing*{\section}{0pt}{50pt}{-60pt}

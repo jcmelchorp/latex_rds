@@ -1,18 +1,53 @@
 \documentclass[11pt]{book}
-\usepackage[colorlinks = true,linkcolor = blue]{hyperref}
-\usepackage[letterpaper]{geometry} % Custom margins
-\usepackage{graphicx}
-\usepackage{tabularx}
-\usepackage{float}
+\usepackage[subpreambles=true]{standalone}
 \usepackage[spanish]{babel}
+\usepackage{comfortaa}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[
+letterpaper,
+left=1in, 
+right=1in, 
+top=1in,
+bottom=1in,
+headheight=10mm,% Set \headheight to 10mm
+]{geometry} % Custom margins
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{color, colortbl}
+\usepackage[dvipsnames,table]{xcolor} % Required for custom color
+\usepackage[colorlinks = true, linkcolor = colorrds]{hyperref}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol,multirow}
+\usepackage{newclude}
+%\usepackage{tabto}
 \usepackage{remreset}
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \usepackage{xparse}
 \usepackage{wrapfig}
+\usepackage{caption}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage{ragged2e}
+\usepackage{pdflscape}
+\usepackage{subfiles} % Best loaded last in the preamble
+\input{insbox}
+\include{Functional/def_tcolorbox}
+\include{Functional/fancyHeader}
+\decimalpoint
+%\captionsetup{width=.45\textwidth}
+%\setlength{\parindent}{0pt}
+\graphicspath{{./Images}} %Setting the graphicspath
+\definecolor{colorrds}{HTML}{0060A0} % Custom colour
+%%% Headings and footer
+\renewcommand\spanishtablename{Tabla}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+%%%
 \usetikzlibrary{
   arrows,
   positioning,
@@ -25,6 +60,8 @@
   shapes,
   backgrounds,
   shadows,
+  shadows.blur,
+  shadings,
   trees,
   fit,
   snakes,
@@ -35,126 +72,147 @@
   plotmarks,
   spy,
   tikzmark}
-  
-  \decimalpoint
 
+  
 %%%% APRENDISAJES TEXTBOX
 \tikzset{
   abstractbox/.style={
     draw=black, fill=white, rectangle, 
-    inner sep=12pt, style=rounded corners,
+    inner sep=15pt, style=rounded corners,
     drop shadow={fill=black, opacity=1}
   },
   abstracttitle/.style={fill=white}
 }
-\newcommand{\boxabstract}[2][fill=white]{
+\newcommand{\boxabstract}[3][fill=white]{
   \begin{tikzpicture}
     \node [abstractbox, #1] (box)
     {\begin{minipage}{0.9\linewidth}
-        \setlength{\parindent}{2mm} % Indentar.
+        \setlength{\parindent}{0mm} % Indentar.
         \normalfont #2
       \end{minipage}};
-    \node[abstracttitle, right=10pt] at (box.north west) {Aprendizajes esperados:};
+    \node[abstracttitle, right=5pt] at (box.north west) {\textbf{Aprendizajes esperados:}};
     \node[draw=none, fit=(box)] {};
   \end{tikzpicture}
-}
+}%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \makeatletter
   \@removefromreset{section}{chapter}
 \makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{}}
-\renewcommand{\thechapter}{Unidad \arabic{chapter}}
+\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
+\renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\thesubsection}{L\arabic{subsection}}
-\setlength{\parindent}{0pt}
+%\renewcommand{\labelenumi}{\mbox{\arabic{enumi}}}
+%\%renewcommand{\labelitemi}{$\square$}
 
 %%%%%%%%%%%%% START questions env
 %Idea from https://tex.stackexchange.com/a/236668/1952
-\DeclareDocumentCommand\question{o}{%
-    \item\IfNoValueTF{#1}{}{(#1 puntos)}}
-\newenvironment{questions}[1][]{\enumerate[,#1]}{\endenumerate}
-\newlist{oneparchoices}{enumerate*}{1}
-\setlist[oneparchoices,1]{label=\quad\alph*), itemjoin={{\quad}}}
-\newlist{choices}{enumerate*}{1}
-\setlist[choices,1]{label=\quad$\square$, itemjoin={{\\}},leftmargin = 1cm}
-\newcommand{\choice}{\item}
+% \DeclareDocumentCommand\question{o}{%
+%     \item\IfNoValueTF{#1}{}{(#1 puntos)}}
+% \newenvironment{questions}[1][]{\enumerate[,#1]}{\endenumerate}
+%\DeclareDocumentCommand\part{o}{%
+% \item\IfNoValueTF{#1}{}{(#1 puntos)}}
+% \newenvironment{parts}[1][]{\enumerate[,#1]}{\endenumerate}
+% \newcommand{\part}{\item}
+%%\newcommand{\item}{\item}
+% \newlist{parts}{enumerate*}{1}
+% \setlist[parts,1]{label=(\alph*), itemjoin={{\quad}},leftmargin = 1cm}
+% \newlist{oneparchoices}{enumerate*}{1}
+% \setlist[oneparchoices,1]{label=\quad\alph*), itemjoin={{\quad}},leftmargin = 1cm}
+% \newlist{choices}{itemize}{1}
+% \setlist[choices,1]{label=\quad$\square$, itemjoin={{\\}},leftmargin = 1cm}
+\newlist{hoptboxes}{itemize*}{1}
+\setlist[hoptboxes,1]{label=\Large$\square$, font=\color{colorrds},itemjoin={{\quad}},leftmargin = 1cm}
+\newlist{hoptions}{enumerate*}{1}
+\setlist[hoptions,1]{label=(\alph*), font=\color{colorrds},itemjoin={{\quad}},leftmargin = 1cm}
 %%%%%%%%%%%%% END questions env
-\makeatletter
-  \@removefromreset{section}{chapter}
-\makeatother
-
+\newenvironment{mybox}[3][]{%
+  \begin{tikzpicture}[#1]%
+    \def\myboxname{#3}%
+    % good options: minimum height, minimum width
+    \node [draw, inner sep=2ex,  align=justify]
+      (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
+  }{%
+    \egroup;
+    \node [right, inner sep=3pt, fill=colorrds!75, outer sep=0pt, 
+      text height=2ex, text depth=.5ex] (BOXNAME) 
+      at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
+    \fill[colorrds] (BOXNAME.north east) -- +(-1em,1em)
+      -- +(-1em,0) -- cycle;
+    \fill[colorrds] (BOXNAME.south west) -- +(1em,-1em)
+      -- +(1em,0) -- cycle;
+  \end{tikzpicture}
+}
 \begin{document}
-\pagestyle{empty}
-\newgeometry{letterpaper,left=15mm,top=50mm,bottom=0mm} % Custom margins
-\begin{center}
-  {\Huge Qu\'imica}\\
-  \vspace{2cm}
-  \normalsize
-  \textbf{\large Cuaderno de trabajo}\\
-  para los alumnos de 3$^\circ$ de  Secundaria\\
-  en el curso durante el ciclo escolar\\
-  \textbf{2022-2023}\\
-  \vspace{2cm}
-  \small POR\\
-  \Large J. C. Melchor Pinto\\[0.5em]
-  \normalsize Profesor de asignatura en\\
-  \vspace{1cm}
-  \includegraphics[width=4cm]{./Unidad 2/Images/LOGO_RDS_nobg}
-\end{center}
-\vspace{1cm}
-%\include*{Functional/TitlePage}
-\hspace{-16mm}
-\includegraphics[width=\paperwidth]{./Unidad 2/Images/cover_bg}
+%\pagestyle{empty}
+\newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
+\include{./Functional/cover}
 \restoregeometry
+\addtocontents{toc}{\setcounter{tocdepth}{3}}
 \tableofcontents
 \chapter{}
+%\pagestyle{fancy}
+\newpage
 \section{Nuestro mundo químico}
 \subsection{La química en tu vida y el medio ambiente }
 
+\newpage
 \section{Los materiales, las sustancias y sus propiedades}
+This is a sample of a section
 \subsection{¿Cómo sabemos que un material es distinto de otro?}
 \subsection{¿Cómo podemos medir las propiedades de los materiales?}
+\newpage
 \section{Relación entre propiedades de las sustancias e intercambios de energía}
 \subsection{¿Cómo utilizamos energía para analizar sustancias?}
 
+\newpage
 \section{Mezclas: propiedades y métodos de separación}
 
 \subsection{Propiedades y clasificación de las mezclas}
 
+\newpage
 \section{Mezclas y sustancias contaminantes}
 \subsection{¿Cómo detectamos y prevenimos la presencia de sustancias nocivas en el medio ambiente?}
 
 \subsection{Métodos de separación de mezclas}
 
+\newpage
 \section{Sustancias elementales y sus propiedades}
 \subsection{¿Hay sustancias más simples que otras?}
 \subsection{Regularidades en las propiedades de las sustancias elementales}
 
 \chapter{}
 
+\newpage
 \section{La estructura de la materia y sus modelos}
 \subsection{¿Cómo los átomos y las moléculas hacen distintas a las sustancias?}
 \subsection{¿Qué hace a un átomo diferente de otro?}
 \subsection{¿Cómo estudiamos a los átomos de manera experimental?}
 
+\newpage
 \section{Composición y estructura de distintos tipos de sustancias}
 \subsection{¿Qué tipos de partículas se forman al combinar los átomos?}
 
+\newpage
 \section{Moléculas de importancia para la vida}
 \subsection{¿Qué moléculas nos constituyen?}
 
+\newpage
 \section{Relaciones entre la estructura y las propiedades de las sustancias}
 \subsection{¿Cómo interaccionan las moléculas?}
 \subsection{¿Cómo se explican y predicen las propiedades de las sustancias?}
 
+\newpage
 \section{Reacciones químicas en nuestro mundo}
 \subsection{¿Cuál es la evidencia de que las sustancias reaccionan unas con otras?}
 
+\newpage
 \section{Recombinaciones atómicas}
 \subsection{¿Cómo representamos las reacciones químicas?}
 \subsection{¿Qué cambia y qué se conserva durante las reacciones químicas?}
 
+\newpage
 \section{Cantidad de las sustancias}
 \subsection{¿Cómo determinamos la cantidad de las sustancias?}
 \subsection{Cantidad de las sustancias en reacciones químicas}
@@ -162,33 +220,34 @@
 
 \chapter{}
 
+\newpage
 \section{Un mundo de reacciones químicas}
 \subsection{¿Cómo nos afectan las reacciones químicas?}
 \subsection{¿Cómo aprovechamos las reacciones químicas?}
 
+\newpage
 \section{Energía y reacción química}
 \subsection{¿Cómo se transfiere energía durante las reacciones químicas?}
 \subsection{¿Por qué se transfiere energía durante las reacciones químicas?}
 
+\newpage
 \section{La energía química en nuestras vidas}
 \subsection{¿Cuáles son los beneficios, costos y riesgos de usar energía química?}
 
+\newpage
 \section{Aporte calórico de los alimentos}
 \subsection{¿De dónde proviene la energía que necesitamos para vivir?}
 
+\newpage
 \section{Rapidez de reacción}
 \subsection{¿Qué factores afectan la rapidez de las reacciones químicas?}
 
+\newpage
 \section{La rapidez de reacción y el modelo cinético de partículas}
 \subsection{¿Cómo explicamos diferencias en la velocidad de reacción?}
 
+\newpage
 \section{Utilidad de controlar la rapidez de las reacciones}
 \subsection{¿Cómo controlamos y aprovechamos la velocidad de reacción?}
 
 \end{document}
-
-
-
-
-
-

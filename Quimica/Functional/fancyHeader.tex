@@ -1,0 +1,74 @@
+\usepackage{verbatim}
+
+\begin{comment}
+:Title: Fancy chapter headings
+:Grid: 2x2
+
+An example of how you can use TikZ and absolute positioning to create fancy chapter headings.
+
+:Source: `TeXblog: Fancy chapter headings with TikZ`__
+
+__ http://texblog.net/latex-archive/layout/fancy-chapter-tikz/
+
+\end{comment}
+
+%\usepackage{kpfonts}
+\usepackage[explicit]{titlesec}
+\newcommand*\chapterlabel{}
+\titleformat{\chapter}
+{\gdef\chapterlabel{}
+    \comfortaa\huge\bfseries
+}
+{\gdef\chapterlabel{\thechapter\ }}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+        \node[yshift=-3cm] at (current page.north west)
+        {\begin{tikzpicture}[remember picture, overlay]
+                \draw[fill=colorrds!20] (0,0) rectangle
+                (\paperwidth,3cm);
+                \node[anchor=east,xshift=.9\paperwidth,rectangle,
+                    rounded corners=10pt,inner sep=11pt,
+                    fill=colorrds]
+                {\color{white}\textbf{\chapterlabel#1}};
+            \end{tikzpicture}
+        };
+    \end{tikzpicture}
+}
+\titlespacing*{\chapter}{0pt}{50pt}{-60pt}
+
+
+\newcommand*\sectionlabel{}
+\titleformat{\section}
+{\gdef\sectionlabel{}
+    \comfortaa\Large\bfseries
+}
+{\gdef\sectionlabel{\thesection\ }}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+        \node[yshift=-2cm] at (current page.north west)
+        {\begin{tikzpicture}[remember picture, overlay]
+                \draw[fill=blue] (0,0) rectangle
+                (\paperwidth,2cm);
+                \node[anchor=east,xshift=.9\paperwidth,rectangle,
+                    rounded corners=10pt,inner sep=11pt,
+                    fill=blue!35]
+                {\color{white}\sectionlabel};
+                % \node[anchor=east,xshift=.9\paperwidth,rectangle,
+                %     rounded corners=10pt,inner sep=11pt,
+                %     fill=blue!35]
+                % {\color{green}\sectionlabel};
+            \end{tikzpicture}
+        };
+    \end{tikzpicture}
+}
+\titlespacing*{\section}{0pt}{50pt}{0pt}
+% \newcommand*\subsectionlabel{}
+% \titleformat{\subsection}
+% {\gdef\subsectionlabel{}
+% %\normalfont%\sffamily\Huge\bfseries\scshape
+% \comfortaa\bfseries
+% }
+{\gdef\sectionlabel{}
+    %\normalfont%\sffamily\Huge\bfseries\scshape
+    \comfortaa\Large\bfseries
+}
+%{\gdef\subsectionlabel{\thesubsection\ }}{0pt}
+
