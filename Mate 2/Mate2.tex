@@ -30,10 +30,14 @@ headheight=10mm,% Set \headheight to 10mm
 \usepackage{caption,capt-of}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
-\usepackage{subfiles}
+\usepackage{pdflscape}
 \usepackage{etoolbox}
+\usepackage[explicit]{titlesec}
 \usepackage{subfiles} % Best loaded last in the preamble
 \input{insbox}
+\include{Functional/fancychapter}
+\include{Functional/fancysection}
+\include{Functional/def_tcolorbox}
 \decimalpoint
 %\captionsetup{width=.45\textwidth}
 \setlength{\parindent}{0pt}
@@ -54,9 +58,9 @@ headheight=10mm,% Set \headheight to 10mm
   decorations.pathmorphing,
   decorations.markings,
   decorations.text,
-  shapes,
+  shapes.symbols,
   backgrounds,
-  shadows,
+  shadows.blur,
   trees,
   fit,
   snakes,
@@ -68,14 +72,6 @@ headheight=10mm,% Set \headheight to 10mm
   spy,
   tikzmark}
 
-  \tikzset{
-  abstractbox/.style={
-    draw=black, fill=white, rectangle, 
-    inner sep=12pt, style=rounded corners,
-    drop shadow={fill=black, opacity=1}
-  },
-  abstracttitle/.style={fill=white}
-}
 %%%% APRENDISAJES TEXTBOX
 \tikzset{
   abstractbox/.style={
@@ -97,14 +93,6 @@ headheight=10mm,% Set \headheight to 10mm
   \end{tikzpicture}
 }%
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-\makeatletter
-  \@removefromreset{section}{chapter}
-\makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
-\renewcommand{\thechapter}{\arabic{chapter}}
-\renewcommand{\thesection}{S\arabic{section}}
-\renewcommand{\thesubsection}{L\arabic{subsection}}
 %\renewcommand{\labelenumi}{\mbox{\arabic{enumi}}}
 %\%renewcommand{\labelitemi}{$\square$}
 
@@ -155,210 +143,256 @@ headheight=10mm,% Set \headheight to 10mm
 \tableofcontents
 \chapter{}
 \pagestyle{fancy}
+\newpage
+\thispagestyle{plain}
 \section{Multiplicación de fracciones y decimales positivos}
 \subsection{Multiplicación de fracciones y decimales}
 
+\newpage
+\thispagestyle{plain}
 \section{Multiplicación y división con fracciones y decimales positivos}
 \subsection{División con números fraccionarios}
 \subsection{Problemas de multiplicación y división de fracciones}
 
+\newpage \thispagestyle{plain}
 \section{Multiplicación y división de números positivos y negativos}
 \subsection{Multiplicación de números positivos y negativos}
 \subsection{División de números positivos y negativos}
 \subsection{Multiplicación y división de números con signo}
 
+\newpage \thispagestyle{plain}
 \section{Potencia con exponente entero}
 \subsection{Productos de potencias enteras de la misma base}
 \subsection{Potencia de una potencia entera}
 \subsection{Cociente de potencias enteras de la misma base}
 \subsection{Potencias con exponente negativo y notación científica}
 
+\newpage \thispagestyle{plain}
 \section{Raíces cuadradas}
 \subsection{Significado de la raíz cuadrada}
 \subsection{Aproximación de raíces cuadradas}
 \subsection{Cuadrados y raíces cuadradas}
 
+\newpage \thispagestyle{plain}
 \section{Propiedades de polígonos}
 \subsection{Diagonales de un polígono}
 \subsection{Ángulos de un polígono}
 
+\newpage \thispagestyle{plain}
 \section{Construcción de polígonos regulares}
 \subsection{Algunas construcciones de polígonos}
 
+\newpage \thispagestyle{plain}
 \section{Conversión de unidades del SI y del sistema inglés}
 \subsection{Conversión entre unidades del SI}
 \subsection{Conversión entre unidades del sistema inglés}
 \subsection{Conversión de unidades del SI al sistema inglés y viceversa}
 
+\newpage \thispagestyle{plain}
 \section{Histogramas, polígonos de frecuencias y gráficas de línea}
 \subsection{Histogramas}
 \subsection{Polígonos de frecuencias}
 \subsection{Gráficas de línea}
 \subsection{Elección de la representación gráfica más adecuada}
-
+\newpage \thispagestyle{plain}
 \chapter{}
+
+\newpage \thispagestyle{plain}
 \section{Proporcionalidad directa e inversa}
 \boxabstract{Resuelve problemas de proporcionalidad directa e inversa y de reparto proporcional}
 \subsection{Proporcionalidad directa e inversa}
-\begin{minipage}{0.45\textwidth}
-  \begin{mybox}{0.45\linewidth}{
-      \begin{comfortaa}
-        \color{white}Definici\'on
-      \end{comfortaa}}
-    \begin{minipage}{0.90\linewidth}
-      \textbf{Proporcionalidad Directa:}\\ Relaci\'on entre dos cantidades que cambian en el mismo sentido.
-    \end{minipage}%
-  \end{mybox}
+% \begin{minipage}{0.45\textwidth}
+%   \begin{mybox}{0.45\linewidth}{
+%       \begin{comfortaa}
+%         \color{white}Definici\'on
+%       \end{comfortaa}}
+%     \begin{minipage}{0.90\linewidth}
+%       \textbf{Proporcionalidad Directa:}\\ Relaci\'on entre dos cantidades que cambian en el mismo sentido.
+%     \end{minipage}%
+%   \end{mybox}
+% \end{minipage}\hfill
+% \begin{minipage}{0.45\textwidth}
+%   \begin{mybox}{0.45\linewidth}{
+%       \begin{comfortaa}
+%         \color{white}Definici\'on
+%       \end{comfortaa}}
+%     \begin{minipage}{0.90\linewidth}
+%       \textbf{Proporcionalidad Inversa:}\\ Relaci\'on entre dos cantidades que cambian en sentidos opuestos.
+%     \end{minipage}%
+%   \end{mybox}
+% \end{minipage}%
+
+\begin{minipage}{0.42\textwidth}
+  \begin{boxH}
+    \textbf{Proporcionalidad Directa:}\\ Relaci\'on entre dos cantidades que cambian en el mismo sentido.
+  \end{boxH}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}
-  \begin{mybox}{0.45\linewidth}{
-      \begin{comfortaa}
-        \color{white}Definici\'on
-      \end{comfortaa}}
-    \begin{minipage}{0.90\linewidth}
-      \textbf{Proporcionalidad Inversa:}\\ Relaci\'on entre dos cantidades que cambian en sentidos opuestos.
-    \end{minipage}%
-  \end{mybox}
-\end{minipage}%
+\begin{minipage}{0.55\textwidth}
+  Dos magnitudes son directamente proporcionales si al multiplicar (o dividir) una de ellas por un número, la otra queda
+  multiplicada (o dividida) por el mismo número. El cociente entre la segunda y la primera magnitud es constante y se
+  denomina constante de proporcionalidad directa.
+\end{minipage}
 
-% Dos magnitudes son directamente proporcionales si al multiplicar (o dividir) una de ellas por un número, la otra queda
-% multiplicada (o dividida) por el mismo número. El cociente entre la segunda y la primera magnitud es constante y se
-% denomina constante de proporcionalidad directa.
+\vspace{10pt}
 
-% Dos cantidades son inversamente proporcionales si al multiplicar (o dividir) una de ellas por un número la otra
-% queda dividida (o multiplicada) por el mismo número. El producto de la segunda y la primera magnitud es constante
-% y se llama constante de proporcionalidad inversa.
+\begin{minipage}{0.55\textwidth}
+  Dos cantidades son inversamente proporcionales si al multiplicar (o dividir) una de ellas por un número la otra
+  queda dividida (o multiplicada) por el mismo número. El producto de la segunda y la primera magnitud es constante
+  y se llama constante de proporcionalidad inversa.
+\end{minipage}\hfill
+\begin{minipage}{0.42\textwidth}
+  \begin{boxH}
+    \textbf{Proporcionalidad Inversa:}\\ Relaci\'on entre dos cantidades que cambian en sentidos opuestos.
+  \end{boxH}
+\end{minipage}
 
-\begin{enumerate}
-  \item Señala si las relaciones son directamente proporcionales o inversamente proporcionales.
-        %   \begin{multicols}{2}
-        %\NumTabs{2}
-        \begin{enumerate}
-          \item La población mundial y el consumo de agua.\\
-                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
-                  \item Directamente proporcional
-                  \item Inversamente proporcional
-                \end{hoptboxes}
-          \item  La población mundial y la cantidad de agua disponible por persona.\\
-                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
-                  \item Directamente proporcional
-                  \item Inversamente proporcional
-                \end{hoptboxes}
-          \item La distancia al sol y la temperatura.\\
-                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
-                  \item Directamente proporcional
-                  \item Inversamente proporcional
-                \end{hoptboxes}
-          \item  El tamaño de un planeta y su fuerza de gravedad.\\
-                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
-                  \item Directamente proporcional
-                  \item Inversamente proporcional
-                \end{hoptboxes}
-          \item  La velocidad de un móvil y la distancia recorrida.\\
-                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
-                  \item Directamente proporcional
-                  \item Inversamente proporcional
-                \end{hoptboxes}
-          \item La cantidad de imágenes guardadas en el celular y la cantidad de espacio libre.\\
-                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
-                  \item Directamente proporcional
-                  \item Inversamente proporcional
-                \end{hoptboxes}
-          \item  El tamaño de un archivo y el tiempo de descarga.\\
-                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
-                  \item Directamente proporcional
-                  \item Inversamente proporcional
-                \end{hoptboxes}
-          \item La velocidad de conexión a Internet y el tiempo de descarga de archivos.\\
-                \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
-                  \item Directamente proporcional
-                  \item Inversamente proporcional
-                \end{hoptboxes}
-        \end{enumerate}
-        %  \end{multicols}
+\begin{boxK}
+  \begin{enumerate}
+    \item Señala si las relaciones son directamente proporcionales o inversamente proporcionales.
+          %   \begin{multicols}{2}
+          %\NumTabs{2}
+          \begin{enumerate}
+            \item La población mundial y el consumo de agua.\\
+                  \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                    \item Directamente proporcional
+                    \item Inversamente proporcional
+                  \end{hoptboxes}
+            \item  La población mundial y la cantidad de agua disponible por persona.\\
+                  \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                    \item Directamente proporcional
+                    \item Inversamente proporcional
+                  \end{hoptboxes}
+            \item La distancia al sol y la temperatura.\\
+                  \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                    \item Directamente proporcional
+                    \item Inversamente proporcional
+                  \end{hoptboxes}
+            \item  El tamaño de un planeta y su fuerza de gravedad.\\
+                  \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                    \item Directamente proporcional
+                    \item Inversamente proporcional
+                  \end{hoptboxes}
+            \item  La velocidad de un móvil y la distancia recorrida.\\
+                  \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                    \item Directamente proporcional
+                    \item Inversamente proporcional
+                  \end{hoptboxes}
+            \item La cantidad de imágenes guardadas en el celular y la cantidad de espacio libre.\\
+                  \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                    \item Directamente proporcional
+                    \item Inversamente proporcional
+                  \end{hoptboxes}
+            \item  El tamaño de un archivo y el tiempo de descarga.\\
+                  \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                    \item Directamente proporcional
+                    \item Inversamente proporcional
+                  \end{hoptboxes}
+            \item La velocidad de conexión a Internet y el tiempo de descarga de archivos.\\
+                  \begin{hoptboxes}%[label=$\square$,font=\color{colorrds},itemjoin={\qquad}]
+                    \item Directamente proporcional
+                    \item Inversamente proporcional
+                  \end{hoptboxes}
+          \end{enumerate}
+          %  \end{multicols}
+          \newpage
+  \end{enumerate}
+\end{boxK}
 
-\end{enumerate}
 \subsubsection{Proporcionalidad con tablas de variación}
 Para identificar las características de los tipos de relaciones, en
 especial las que se refieren a proporcionalidad inversa, Analiza las siguientes situaciones, completa las tablas
 de variaci\'on y responde a cada una de las preguntas.
+\begin{boxK}
+  \begin{enumerate}
+    \item La autopista 10 en Haradh, Arabia Saudita, tiene más de 250
+          km en línea recta. Un automóvil viaja por esta carretera con
+          velocidad constante de 120 km/h durante 250 km.
+          \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|}
+              \hline
+              Distancia [km] & Tiempo [h] \\
+              \hline\rowcolor{colorrds!10}
+              50             &            \\
+              \hline
+              75             &            \\
+              \hline\rowcolor{colorrds!10}
+              100            &            \\
+              \hline
+              125            &            \\
+              \hline\rowcolor{colorrds!10}
+              150            &            \\
+              \hline
+              175            &            \\
+              \hline\rowcolor{colorrds!10}
+              200            &            \\
+              \hline
+              225            &            \\
+              \hline\rowcolor{colorrds!10}
+              250            &            \\
+              \hline
+            \end{tabular}
+            \caption{Registro de la distancia y el tiempo de recorrido}
+            \label{tab:arabia}
+          \end{table}
+          \begin{enumerate}
+            \item Completen la Tabla \ref{tab:arabia} que registra la velocidad del automóvil.
+            \item ¿Cómo es la variación de los datos de la tabla? ¿Por qué?
+            \item ¿En cuántos minutos recorre 1 km? Explica tu procedimiento.
+            \item ¿En cuánto tiempo se recorrieron 120 km?
+            \item ¿Y en cuánto tiempo se recorrerán 230 km?
+          \end{enumerate}
 
-\begin{enumerate}
-  \item La autopista 10 en Haradh, Arabia Saudita, tiene más de 200
-        km en línea recta. Un automóvil viaja por esta carretera con
-        velocidad constante de 120 km/h durante 200 km.
-        \begin{table}[!h]
-          \centering
-          \begin{tabular}{|c|c|}
-            \hline
-            Distancia [km] & Tiempo [h] \\
-            \hline\rowcolor{colorrds!20}
-            50             &            \\
-            \hline
-            75             &            \\
-            \hline\rowcolor{colorrds!20}
-            100            &            \\
-            \hline
-            125            &            \\
-            \hline\rowcolor{colorrds!20}
-            150            &            \\
-            \hline
-            175            &            \\
-            \hline\rowcolor{colorrds!20}
-            200            &            \\
-            \hline
-          \end{tabular}
-          \caption{Registro de la distancia y el tiempo de recorrido}
-          \label{tab:arabia}
-        \end{table}
-        \begin{enumerate}
-          \item Completen la Tabla \ref{tab:arabia} que registra la velocidad del automóvil.
-          \item ¿Cómo es la variación de los datos de la tabla? ¿Por qué?
-          \item ¿En cuántos minutos recorre 1 km? Explica tu procedimiento.
-          \item ¿En cuánto tiempo se recorrieron 120 km? ¿Y en cuánto tiempo se recorrerán 230 km?
-        \end{enumerate}
+    \item Analicen los rectángulos de la figura \ref{fig:rectangulos}.
 
-  \item Analicen los rectángulos de la figura \ref{fig:rectangulos}.
-        \begin{figure}[H]
-          \centering
-          \includegraphics[width=0.9\textwidth]{ejem10.2}
-          \caption{Grupo de rect\'angulos con medidas de largo y ancho para cada uno.}
-          \label{fig:rectangulos}
-        \end{figure}
+          \begin{minipage}[t]{.45\textwidth}
+            \begin{table}[H]
+              \centering
+              \begin{tabular}{|c|c|c|}
+                \hline
+                Lado 1 (u) & Lado 2 (u) & Área (u$^2$) \\
+                \hline\rowcolor{colorrds!10}
+                2          & 24         & 48           \\
+                \hline
+                3          &            &              \\
+                \hline\rowcolor{colorrds!10}
+                5          &            &              \\
+                \hline
+                6          &            &              \\
+                \hline
+              \end{tabular}
+              \caption{}
+              \label{tab:rectangulos}
+            \end{table}
+          \end{minipage}%
+          \begin{minipage}[t]{.45\textwidth}
+            \begin{figure}[H]
+              \centering
+              \includegraphics[width=\linewidth]{ejem10.2}
+              \caption{Grupo de rect\'angulos con medidas de largo y ancho para cada uno.}
+              \label{fig:rectangulos}
+            \end{figure}
+          \end{minipage}
 
-        \begin{table}[!h]
-          \centering
-          \begin{tabular}{|l|c|c|c|}
-            \hline
-                         & Lado 1 (u) & Lado 2 (u) & Área (u$^2$) \\
-            \hline
-            Rectángulo 1 & 2          & 24         & 48           \\
-            Rectángulo 2 & 3          &            &              \\
-            Rectángulo 3 & 5          &            &              \\
-            Rectángulo 4 & 6          &            &              \\
-            \hline
-          \end{tabular}
-          \caption{}
-          \label{tab:rectangulos}
-        \end{table}
-        \begin{enumerate}
-          \item Completa la Tabla \ref{tab:rectangulos} que muestra la medida de los lados de un conjunto de rect\'angulos.
-          \item ¿Cómo es la variación de los datos de la tabla? ¿Por qué?
-          \item Si se añade el rectángulo cuyo lado 1 mide 4 u, ¿cuál es la medida del otro lado? ¿Cuál es su área? Expliquen su procedimiento.
-          \item ¿Cómo es el área de los rectángulos?
-        \end{enumerate}
-\end{enumerate}
-
-
+          \begin{enumerate}
+            \item Completa la Tabla \ref{tab:rectangulos} que muestra la medida de los lados de un conjunto de rect\'angulos.
+            \item ¿Cómo es la variación de los datos de la tabla? ¿Por qué?
+            \item Si se añade el rectángulo cuyo lado 1 mide 4 u, ¿cuál es la medida del otro lado? ¿Cuál es su área? Expliquen su procedimiento.
+            \item ¿Cómo es el área de los rectángulos?
+          \end{enumerate}
+  \end{enumerate}
+\end{boxK}
 
 \subsection{Problemas sobre proporcionalidad directa e inversa}
-
 Presentamos diversas situaciones que involucran la interpretación de relaciones directas e inversas.
-Intenta resolver por tu cuenta cada situación. Luego, una vez que agotes todas tus estrategias, analiza con detenimiento las propuesta de resolución de cada situación.
+Intenta resolver por tu cuenta cada situación. Luego, una vez que agotes todas tus estrategias,
+analiza con detenimiento las propuesta de resolución de cada situación.\\
 
-\subsubsection{Ejemplos}
+% \subsubsection{Ejemplos}
+%\begin{multicols}{2}
 \include*{Ejemplos/ejemplo2.1.1}
 \include*{Ejemplos/ejemplo2.1.2}
+%\end{multicols}
 \include*{Ejemplos/ejemplo2.1.3}
 \include*{Ejemplos/ejemplo2.1.4}
 \newpage
@@ -366,76 +400,84 @@ Intenta resolver por tu cuenta cada situación. Luego, una vez que agotes todas 
 Copia en tu libreta las siguientes situaciones. Realiza, para cada uno de ellas, todas las operaciones y
 procedimientos necesarios para obtener la respuesta a cada una de las preguntas. Al terminar, señala la
 opción que contenga la respuesta correcta.
+
 \begin{enumerate}%[start=1]%<--- start option fixes number for first item
   \item Un grupo de 20 obreros puede terminar una
         construcción en 40 días. Al cabo de 10 días de trabajo,
         se les unen obreros de otro grupo, de modo que en 15 días
         más terminan la obra.\\
         \textbf{¿Cuántos obreros había en el segundo grupo?}\\
-        \emph{Escoge 1 respuesta:}\\
-        \begin{hoptions}
+        \emph{Escoge 1 respuesta:}
+
+        \begin{hoptboxes}
           \item 20 obreros
           \item 5 obreros
           \item 10 obreros
           \item 15 obreros
-        \end{hoptions}
+        \end{hoptboxes}
 
   \item Mateo va en auto de su casa a la universidad. Si va a una velocidad promedio de 60 kilómetros por hora, tarda 1 hora.\\
         \textbf{¿Cuánto tiempo tardaría si fuera a 40 kilómetros por hora?}\\
-        \emph{Escoge 1 respuesta:}\\
-        \begin{hoptions}
+        \emph{Escoge 1 respuesta:}
+
+        \begin{hoptboxes}
           \item 1 hora y 30 minutos
           \item 30 minutos
           \item 1 hora y 20 minutos
           \item 2 horas
-        \end{hoptions}
+        \end{hoptboxes}
 
   \item En una tienda, se venden rollos de papel higiénico. Cada rollo cuesta 2 dólares, pero hay la siguiente oferta:
         Lleva 3 rollos de papel higiénico y paga s\'olo 2.
         María va a la tienda a comprar 20 rollos de papel higiénico en oferta.\\
         \textbf{¿Cuánto pagará por la compra?}\\
-        \emph{Escoge 1 respuesta:}\\
-        \begin{hoptions}
+        \emph{Escoge 1 respuesta:}
+
+        \begin{hoptboxes}
           \item 28 dólares
           \item 17 dólares
           \item 30 dólares
           \item 14 dólares
-        \end{hoptions}
+        \end{hoptboxes}
 
   \item Un grupo de 32 tejedores puede terminar un pedido de ponchos en 15 días. Al cabo de 5 días de trabajo, se les unen tejedores de otro grupo, de modo que en 8 días más terminan el pedido.\\
         \textbf{¿Cuántos tejedores había en el segundo grupo?}\\
-        \emph{Escoge 1 respuesta:}\\
-        \begin{hoptions}
+        \emph{Escoge 1 respuesta:}
+
+        \begin{hoptboxes}
           \item 8 tejedores
           \item 16 tejedores
           \item 32 tejedores
           \item 10 tejedores
-        \end{hoptions}
+        \end{hoptboxes}
 
   \item \textbf{¿Cuál ecuación muestra variación directa?}\\
-        \emph{Escoge 1 respuesta:}\\
-        \begin{hoptions}
+        \emph{Escoge 1 respuesta:}
+
+        \begin{hoptboxes}
           \item $\dfrac{1}{5}\cdot a=\dfrac{1}{b}$
           \item $a\cdot b=\dfrac{1}{5}$
           \item $a=5\cdot \dfrac{1}{b}$
           \item $\dfrac{a}{b}=5$
           \item $a\cdot b=5$
-        \end{hoptions}
+        \end{hoptboxes}
 
   \item \textbf{¿Cuál ecuación muestra variación inversa?}\\
-        \emph{Escoge 1 respuesta:}\\
-        \begin{hoptions}
+        \emph{Escoge 1 respuesta:}
+
+        \begin{hoptboxes}
           \item $2\cdot \dfrac{1}{a}=\dfrac{1}{b}$
           \item $\dfrac{1}{2}\cdot \dfrac{1}{a}=\dfrac{1}{b}$
           \item $2\cdot a=b$
           \item $\dfrac{a}{b}=\dfrac{1}{2}$
           \item $a\cdot b=2$
-        \end{hoptions}
+        \end{hoptboxes}
 
   \item En el mercado, 2 kilogramos de papa cuestan \$3.5 dólares.
         Sofía tiene \$25 dólares para comprar 14 kilogramos de papa.\\
         \textbf{¿Cuáles de las siguientes afirmaciones son correctas?}\\
-        \emph{Elige todas las respuestas adecuadas:}\\
+        \emph{Elige todas las respuestas adecuadas:}
+
         \begin{hoptboxes}
           \item Deberá pagar \$7.5 dólares por 6 kilogramos de papa.\\
           \item Pagará \$14 dólares por 8 kilogramos de papa.\\
@@ -443,12 +485,6 @@ opción que contenga la respuesta correcta.
           \item Sofía necesitará más dinero para realizar la compra.\\
         \end{hoptboxes}
 
-\end{enumerate}
-
-\newpage
-\subsubsection{Problemas}
-
-\begin{enumerate}
   \item Estás preparando limonada. La cantidad de azúcar que necesitas depende de la cantidad de limones que uses,
         como se muestra en la tabla \ref{tab:azucar_limon}.
         \begin{table}[!h]
@@ -465,95 +501,135 @@ opción que contenga la respuesta correcta.
         \end{table}
 
         \textbf{¿Cuál es la constante de proporcionalidad entre las tazas de azúcar y los limones?}
-
+        \vspace{2cm}
   \item Un carpintero fabrica sillas, las cuales le cuestan \$250.00 elaborar cada una. Además, tiene costos fijos por la renta del local y equipo que es de \$3 500.00 al mes. \\
         \textbf{¿Cuántas sillas hacen que el precio por producirlas sea igual a los costos fijos?}\\
-
+        \vspace{2cm}
   \item El equipo conformado por Cristina, Javier y Claudia tardó 8 días en responder 120 preguntas que su profesor de Historia de México les dejó de tarea.
+
         \begin{enumerate}
-          \item ¿Cuántas preguntas resolvieron Cristina, Javier y Claudia cada día?
-                \begin{hoptions}
+          \item \textbf{¿Cuántas preguntas resolvieron Cristina, Javier y Claudia cada día?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item 3 preguntas \item 5 preguntas \item 8 preguntas \item 15 preguntas
-                \end{hoptions}
-          \item ¿Cuántas preguntas respondió cada uno de los integrantes del equipo por día?
-                \begin{hoptions}
+                \end{hoptboxes}
+
+          \item \textbf{¿Cuántas preguntas respondió cada uno de los integrantes del equipo por día?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item 3 preguntas \item 5 preguntas \item 8 preguntas \item 15 preguntas
-                \end{hoptions}
-          \item Si el equipo estuviera formado por 5 personas, ¿cuántas preguntas respondería cada una en un solo día, suponiendo que trabajan al mismo ritmo?
-                \begin{hoptions}
+                \end{hoptboxes}
+
+          \item Si el equipo estuviera formado por 5 personas, \\
+                \textbf{¿Cuántas preguntas respondería cada una en un solo día, suponiendo que trabajan al mismo ritmo?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item 3 preguntas \item 5 preguntas \item 8 preguntas \item 15 preguntas
-                \end{hoptions}
-          \item ¿En cuántos días responderían las 120 preguntas si el equipo estuviera formado por 8 personas, suponiendo que trabajan al mismo ritmo que el equipo original?
-                \begin{hoptions}
+                \end{hoptboxes}
+
+          \item \textbf{¿En cuántos días responderían las 120 preguntas si el equipo estuviera formado por 8 personas, suponiendo que trabajan al mismo ritmo que el equipo original?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item 3 días \item 5 días \item 8 días \item 15 días
-                \end{hoptions}
-          \item Si sólo hubieran sido 45 preguntas y el equipo estuviera formado por 5 personas que trabajan al mismo ritmo, ¿en cuantos días terminarían la tarea?
-                \begin{hoptions}
+                \end{hoptboxes}
+
+          \item Si sólo hubieran sido 45 preguntas y el equipo estuviera formado por 5 personas que trabajan al mismo ritmo, \\
+                \textbf{¿En cuántos días terminarían la tarea?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item 2 días \item 5 días \item 8 días \item 15 días
-                \end{hoptions}
+                \end{hoptboxes}
         \end{enumerate}
 
   \item Tania tiene 5 parejas de canarios y necesita 15 paquetes de comida para alimentarlos durante 30 días.
+
         \begin{enumerate}
-          \item ¿Cuántos días podría alimentar a los canarios con un paquete de comida?\\
-                \begin{hoptions}
+          \item \textbf{¿Cuántos días podría alimentar a los canarios con un paquete de comida?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item  5 días
                   \item 10 días
                   \item 30 días
                   \item 90 días
-                \end{hoptions}
-          \item ¿Cuántos días podría alimentar a los canarios con el triple de alimento?\\
-                \begin{hoptions}
+                \end{hoptboxes}
+          \item \textbf{¿Cuántos días podría alimentar a los canarios con el triple de alimento?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item 1 día
                   \item 2 días
                   \item 3 días
                   \item 5 días
-                \end{hoptions}
-          \item ¿Cuántos días le durarían los 15 paquetes de comida para alimentar al triple de canarios?\\
-                \begin{hoptions}
+                \end{hoptboxes}
+          \item \textbf{¿Cuántos días le durarían los 15 paquetes de comida para alimentar al triple de canarios?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item 15 días
                   \item 30 días
                   \item 60 días
                   \item 90 días
-                \end{hoptions}
-          \item Si Tania tuviera un total de 10 parejas de canarios, ¿cuántos días podría alimentarlos con un
-                solo paquete de comida?\\
-                \begin{hoptions}
+                \end{hoptboxes}
+          \item Si Tania tuviera un total de 10 parejas de canarios, \\
+                \textbf{¿Cuántos días podría alimentarlos con un
+                  solo paquete de comida?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
                   \item 5 días
                   \item 10 días
                   \item 30 días
                   \item 90 días
-                \end{hoptions}
-          \item Si Tania tuviera 30 canarios, ¿cuántos días le durarían 5 paquetes de comida?\\
-                \begin{hoptions}
-                  \item  1 día
+                \end{hoptboxes}
+          \item Si Tania tuviera 30 canarios, \\
+                \textbf{¿Cuántos días le durarían 5 paquetes de comida?}\\
+                \emph{Escoge 1 respuesta:}
+
+                \begin{hoptboxes}
+                  \item 1 día
                   \item 2 días
                   \item 3 días
                   \item 5 días
-                \end{hoptions}
+                \end{hoptboxes}
         \end{enumerate}
 \end{enumerate}
+\newpage \thispagestyle{plain}
 \section{Reparto Proporcional}
+\boxabstract{Resuelve problemas de proporcionalidad directa e inversa y de reparto proporcional}
+
 Con lo que hemos aprendido sobre las proporciones directas e inversas, ahora trabajaremos en dividir cantidades de tal
-manera que se usen estas variaciones.
+manera que se usen estas variaciones.\\
 
 \subsection{Situaciones de reparto proporcional}
-\begin{mybox}{0.45\linewidth}{
-    \begin{comfortaa}
-      \color{white}Definici\'on
-    \end{comfortaa}}
-  \begin{minipage}{0.90\linewidth}
-    Resolver un problema de reparto proporcional consiste en dividir una cantidad en partes que guarden entre sí
-    ciertas razones. Para realizar el reparto, se encuentran los valores faltantes en una relación proporcional directa.
-  \end{minipage}%
-\end{mybox}
+% \begin{mybox}{0.45\linewidth}{
+%     \begin{comfortaa}
+%       \color{white}Definici\'on
+%     \end{comfortaa}}
+%   \begin{minipage}{0.90\linewidth}
+%     Resolver un problema de reparto proporcional consiste en dividir una cantidad en partes que guarden entre sí
+%     ciertas razones. Para realizar el reparto, se encuentran los valores faltantes en una relación proporcional directa.
+%   \end{minipage}%
+% \end{mybox}
+
+\begin{boxH}
+  Resolver un problema de reparto proporcional consiste en dividir una cantidad en partes que guarden entre sí
+  ciertas razones. Para realizar el reparto, se encuentran los valores faltantes en una relación proporcional directa.
+\end{boxH}
 \subsubsection{Reparto proporcional directo}
 \emph{A una mayor cantidad corresponde mayor proporción}
 
 \begin{enumerate}
   \item Antonio y Laura vieron un anuncio para limpiar un jardín de 40 m$^2$ por una paga de \$800.
         \begin{enumerate}
-          \item \textbf{¿Cuáles son las variables que se deben considerar para realizar el trabajo?}
+          \item \textbf{¿Cuáles son las variables que se deben considerar para realizar el trabajo?}\\
+                \emph{Escoge 1 respuesta:}
+
                 \begin{enumerate}
                   \item[\color{colorrds}\Large$\square$] Cantidad a pagar por el trabajo
                   \item[\color{colorrds}\Large$\square$] Cantidad de trabajadores
@@ -562,7 +638,10 @@ manera que se usen estas variaciones.
                   \item[\color{colorrds}\Large$\square$] Tipo de trabajo
                 \end{enumerate}
 
-          \item Si Antonio y Laura trabajaron el lunes y limpiaron la cuarta parte del jardín, \textbf{¿Qué cantidad les faltó por limpiar?}\\
+          \item Si Antonio y Laura trabajaron el lunes y limpiaron la cuarta parte del jardín, \\
+                \textbf{¿Qué cantidad les faltó por limpiar?}\\
+                \emph{Escoge 1 respuesta:}
+
                 \begin{hoptboxes}
                   \item  5 m$^2$
                   \item 10 m$^2$
@@ -571,7 +650,10 @@ manera que se usen estas variaciones.
                   \item 50 m$^2$
                 \end{hoptboxes}
 
-          \item El martes fueron ayudados por sus dos primos. Manteniendo el mismo ritmo de trabajo que el lunes, \textbf{¿qué cantidad limpiaron el segundo día?}\\
+          \item El martes fueron ayudados por sus dos primos. Manteniendo el mismo ritmo de trabajo que el lunes,\\
+                \textbf{¿Qué cantidad limpiaron el segundo día?}\\
+                \emph{Escoge 1 respuesta:}
+
                 \begin{hoptboxes}
                   \item 10 m$^2$
                   \item 20 m$^2$
@@ -579,7 +661,12 @@ manera que se usen estas variaciones.
                   \item 40 m$^2$
                   \item 50 m$^2$
                 \end{hoptboxes}
-          \item Laura y sus dos primos salieron de vacaciones por lo que Antonio terminará el trabajo. Toño está desanimado así que decide dividir el trabajo que resta en 4 días. \textbf{¿Qué superficie limpiará cada día?}\\
+
+          \item Laura y sus dos primos salieron de vacaciones por lo que Antonio terminará el trabajo.
+                Toño está desanimado así que decide dividir el trabajo que resta en 4 días.\\
+                \textbf{¿Qué superficie limpiará cada día?}\\
+                \emph{Escoge 1 respuesta:}
+
                 \begin{hoptboxes}
                   \item 1 m$^2$
                   \item 2 m$^2$
@@ -587,7 +674,11 @@ manera que se usen estas variaciones.
                   \item 3 m$^2$
                   \item 3.5 m$^2$
                 \end{hoptboxes}
-          \item De haber mantenido el ritmo de trabajo, \textbf{¿cuántos días le habría tomado a Antonio terminar el trabajo?}
+
+          \item De haber mantenido el ritmo de trabajo,\\
+                \textbf{¿Cuántos días le habría tomado a Antonio terminar el trabajo?}\\
+                \emph{Escoge 1 respuesta:}
+
                 \begin{hoptboxes}
                   \item 1 d\'a
                   \item 2 d\'as
@@ -601,15 +692,16 @@ manera que se usen estas variaciones.
         comprar el lote entre los dos y luego repartirse las canicas. Pedro coopera con \$449 y Juan completa el resto.
 
         \begin{enumerate}
-          \item ¿Qué parte del total del precio puso Pedro?
-          \item Si se considera que el reparto se haga de la misma manera, ¿qué parte del total de las canicas le corresponden a Pedro?
-          \item ¿Cuántas canicas le corresponden a Pedro y cuántas a Juan?
-          \item ¿Piensas que este reparto ha sido justo? ¿Por qué?
-          \item ¿En qué sentido el reparto fue proporcional?
-          \item ¿En qué tipo de proporción se basa esta manera de repartir? Explica.
+          \item \textbf{¿Qué parte del total del precio puso Pedro?}\\[1cm]
+          \item Si se considera que el reparto se haga de la misma manera,\\
+                \textbf{¿qué parte del total de las canicas le corresponden a Pedro?}\\[1cm]
+          \item \textbf{¿Cuántas canicas le corresponden a Pedro y cuántas a Juan?}\\[1cm]
+          \item \textbf{¿Piensas que este reparto ha sido justo? ¿Por qué?}\\[1cm]
+          \item \textbf{¿En qué sentido el reparto fue proporcional?}\\[1cm]
+          \item \textbf{¿En qué tipo de proporción se basa esta manera de repartir?} Explica.\\[1cm]
         \end{enumerate}
 
-
+        \newpage
 
   \item Para el Sorteo Gordo de Navidad de la Lotería Nacional, el cual repartirá un premio de \$397,952,000.00, tres amigos
         cooperan para comprar una serie completa de billetes de lotería (20 cachitos), como los de la figura \ref{fig:cachito}, que cuesta
@@ -617,42 +709,49 @@ manera que se usen estas variaciones.
         con \$800.00. Los tres amigos siguen la plática acerca de lo qué harán al ganarse el premio.
         \begin{figure}[H]
           \centering
-          \includegraphics[width=0.4\textwidth]{cachito}
+          \includegraphics[width=0.6\textwidth]{cachito}
           \captionof{table}{Ilustración de una serie de la Loter\'ia Nacional.}
           \label{fig:cachito}
         \end{figure}
         \begin{enumerate}
-          \item Carlos propone dividir el premio entre tres. Sin embargo, los otros dos amigos protestan diciendo que eso no es justo. ¿Cuánto dinero le tocaría a cada uno? Expliquen si es justo o no.
-          \item Beatriz propone que cada quien tome el número de billetes de lotería que representa el dinero que invirtió y que cada quien cobre su premio. ¿Este reparto es proporcional? ¿Por qué? Usen trocitos de papel para comprobarlo.
-          \item Completa la tabla \ref{tab:reparto_billetes} para calcular el reparto de billetes de lotería. ¿Se puede repartir de esta manera? ¿Por qué?
+          \item Carlos propone dividir el premio entre tres. Sin embargo, los otros dos amigos protestan diciendo que eso no es justo. \\
+                \textbf{¿Cuánto dinero le tocaría a cada uno?} Expliquen si es justo o no.\\[0.5cm]
+          \item Beatriz propone que cada quien tome el número de billetes de lotería que representa el dinero que invirtió y que cada quien cobre su premio. \\
+                \textbf{¿Este reparto es proporcional? ¿Por qué?} Usa trocitos de papel para comprobarlo.\\[0.5cm]
+          \item Completa la tabla \ref{tab:reparto_billetes} para calcular el reparto de billetes de lotería.\\
+                \textbf{¿Se puede repartir de esta manera? ¿Por qué?}\\[0.5cm]
                 \begin{figure}[H]
                   \centering
-                  \includegraphics[width=0.7\textwidth]{tabla2.17.png}
+                  \includegraphics[width=0.8\textwidth]{tabla2.17.png}
                   \captionof{table}{Reparto de billetes de loter\'ia}
                   \label{tab:reparto_billetes}
                 \end{figure}
-          \item Antonio propone repartir el dinero del premio de manera proporcional a lo que cada uno invirtió. Completa la tabla \ref{tab:reparto_dinero} para calcular la cantidad de dinero que le corresponde a cada amigo.
+          \item Antonio propone repartir el dinero del premio de manera proporcional a lo que cada uno invirtió.
+                Completa la tabla \ref{tab:reparto_dinero} para calcular la cantidad de dinero que le corresponde a cada amigo.
                 \begin{figure}[H]
                   \centering
-                  \includegraphics[width=0.7\textwidth]{tabla2.18.png}
+                  \includegraphics[width=0.8\textwidth]{tabla2.18.png}
                   \captionof{table}{Reparto de dinero del premio}
                   \label{tab:reparto_dinero}
                 \end{figure}
-          \item ¿Este reparto es proporcional? ¿Por qué?
-          \item ¿Consideran justo este reparto? Explica.
-          \item ¿Cómo se relaciona este reparto con una situación de proporcionalidad?
-          \item ¿Hay una constante de proporcionalidad? Si es así, ¿cuál es?
-          \item Propongan un procedimiento para hacer un reparto de manera proporcional.
-          \item En grupo, planteen situaciones en las que un reparto proporcional resuelve satisfactoriamente un problema.
+          \item \textbf{¿Este reparto es proporcional? ¿Por qué?}\\[0.5cm]
+          \item \textbf{¿Consideran justo este reparto?} Explica.\\[0.5cm]
+          \item \textbf{¿Cómo se relaciona este reparto con una situación de proporcionalidad?}\\[0.5cm]
+          \item \textbf{¿Hay una constante de proporcionalidad?} Si es así, ¿cuál es?\\[0.5cm]
+          \item Escribe un procedimiento para hacer un reparto de manera proporcional.\\[0.5cm]
         \end{enumerate}
 \end{enumerate}
 \subsubsection{Reparto proporcional inverso}
-En un problema de reparto proporcional inverso, se busca convertirlo en una proporción directa. Por ello, se utiliza el inverso multiplicativo o recíproco.
-De manera adicional, en algunos casos se reparten las cantidades de tal manera que al menor le toque la mayor parte y viceversa.
+\begin{boxH}
+  Para resolver un problema de reparto proporcional inverso, debemos convertirlo en una proporción directa. Por ello, se utiliza el inverso multiplicativo o recíproco.
+  De manera adicional, en algunos casos se reparten las cantidades de tal manera que al menor le toque la mayor parte y viceversa.
+\end{boxH}
 \begin{enumerate}
   \item Un padre de familia tiene 3 hijos: Lucía, de 8 años; Julio, de 12, y Liliana, de 5 años. Repartirá entre ellos \$2 000.00 que ha ahorrado, de manera proporcional a sus edades, de tal manera que al hijo menor le toque la mayor parte del dinero.
         \begin{enumerate}
-          \item Si aplican los procedimientos realizados en las actividades anteriores, ¿se cumple la condición que desea el padre? Expliquen.
+          \item Si aplican los procedimientos realizados en las actividades anteriores,\\
+                \textbf{¿se cumple la condición que desea el padre?} Expliquen.\\[0.5cm]
+
           \item Completen la tabla \ref{tab:reparto_hijos} para calcular cuánto recibirá cada hijo.
                 \begin{figure}[H]
                   \centering
@@ -660,12 +759,12 @@ De manera adicional, en algunos casos se reparten las cantidades de tal manera q
                   \captionof{table}{Reparto de un padre de familia a sus tres hijos}
                   \label{tab:reparto_hijos}
                 \end{figure}
-          \item ¿Se cumple de esta manera el objetivo del padre de familia? ¿Por qué?
+          \item \textbf{¿Se cumple de esta manera el objetivo del padre de familia? ¿Por qué?}\\[0.5cm]
         \end{enumerate}
 
   \item Se repartirán \$2 200.00 en premios a los tres primeros lugares de una carrera de automóviles, de tal manera que el primer lugar reciba la mayor parte del monto.
         \begin{enumerate}
-          \item ¿Qué tipo de reparto proporcional deben realizar? ¿Por qué?
+          \item \textbf{¿Qué tipo de reparto proporcional deben realizar? ¿Por qué?}\\[0.5cm]
           \item  Completen la tabla \ref{tab:reparto_carrera} para calcular los montos.
                 \begin{figure}[H]
                   \centering
@@ -673,23 +772,26 @@ De manera adicional, en algunos casos se reparten las cantidades de tal manera q
                   \captionof{table}{Premio a los primeros 3 lugares}
                   \label{tab:reparto_carrera}
                 \end{figure}
-          \item ¿Se cumple el objetivo de la repartición de los premios? ¿Por qué?
-          \item ¿Qué distingue a un problema de reparto proporcional inverso de uno directo?
+          \item \textbf{¿Se cumple el objetivo de la repartición de los premios? ¿Por qué?}\\[0.5cm]
+          \item \textbf{¿Qué distingue a un problema de reparto proporcional inverso de uno directo?}\\[0.5cm]
           \item Describe un procedimiento para resolver un problema de reparto proporcional inverso.
         \end{enumerate}
 
 \end{enumerate}
 
 
-% \section{Sistemas de ecuaciones lineales con dos inc\'ognitas}
+\newpage \thispagestyle{plain}
+\section{Sistemas de ecuaciones lineales con dos inc\'ognitas}
 % \subsection{Ecuaciones lineales}
 % \subsection{Sistemas de ecuaciones lineales con dos inc\'ognitas}
 
-% \section{M\'etodos algebraicos de soluci\'on de sistemas de ecuaciones}
+\newpage \thispagestyle{plain}
+\section{M\'etodos algebraicos de soluci\'on de sistemas de ecuaciones}
 % \subsection{Soluci\'on de sistemas de ecuaciones}
 % \subsection{Problemas sobre sistemas de ecuaciones lineales}
-\newpage
+\newpage \thispagestyle{plain}
 \section{Variabilidad lineal y proporcionalidad inversa}
+\boxabstract{Analiza y compara situaciones de variación línea y proporcionalidad inversa, a partir de sus representaciones tabular, gráfica y algebraica, interpreta y resuelve problema que se modelan con este tipo de variación, incluyendo fenómenos de la física y otros contextos.}
 \subsection{Situiaciones de variación lineal}
 Repasaremos las \textbf{características} principales de las variaciones lineales, a fin de tenerlas presentes al
 compararlas con otras, como las de proporcionalidad inversa. Lee la situación, observa la imagen y responde lo que se pide.
@@ -708,11 +810,12 @@ compararlas con otras, como las de proporcionalidad inversa. Lee la situación, 
         \end{minipage}%
         \begin{minipage}[t]{0.85\linewidth}
           \begin{enumerate}
-            \item ¿Cuánto se estira el resorte con un peso de 14 kg? Si éste se estiró 3 cm, ¿cuánto peso se colocó en él?
-            \item ¿Qué tipo de variación se da entre el peso colocado al resorte y su estiramiento?
-            \item ¿Cuál es la constante de proporcionalidad en esta relación?
-            \item ¿Qué maneras tienes para representar esta variación? Realiza dichas representaciones.
-            \item ¿Qué información es relevante para responder y cuál no?
+            \item Si éste se estiró 3 cm, \textbf{¿cuánto peso se colocó en él?}\\[0.5cm]
+            \item \textbf{¿Cuánto se estira el resorte con un peso de 14 kg?}\\[0.5cm]
+            \item \textbf{¿Qué tipo de variación se da entre el peso colocado al resorte y su estiramiento?}\\[0.5cm]
+            \item \textbf{¿Cuál es la constante de proporcionalidad en esta relación?}\\[0.5cm]
+            \item \textbf{¿Qué maneras tienes para representar esta variación?} Realiza dichas representaciones.\\[0.5cm]
+            \item \textbf{¿Qué información es relevante para responder y cuál no?}\\[0.5cm]
             \item Describe los procedimientos desarrollados para identificar y representar la variación.
           \end{enumerate}
 
@@ -994,63 +1097,85 @@ Lee la situación y responde lo que se pide.\\
         \end{enumerate}
 \end{enumerate}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Modelos de variación lineal y proporcionalidad inversa}
+
+\boxabstract{Analiza y compara situaciones de variación línea y proporcionalidad inversa, a partir de sus representaciones tabular, gráfica y algebraica, interpreta y resuelve problema que se modelan con este tipo de variación, incluyendo fenómenos de la física y otros contextos.}
+
 Otras situaciones se pueden describir por medio de las variaciones proporcionales inversas. Veamos algunos casos y recordemos las propiedades de este tipo de variaciones.
 \subsection{Modelos de variación lineal y proporcionalidad inversa}
-\begin{enumerate}
 
+
+\begin{enumerate}
   \item Lee la situación, observa la imagen de la figura \ref{fig:mapa} y responde lo que se pide.\\
-        La familia Gómez se fue de día de vacaciones a Oaxtepec, que se encuentra a 100 km de distancia de donde viven. Cuando se dirigían al lugar, viajaron a una velocidad promedio de 80 km/h.
-        De regreso había un poco de tránsito, por lo que recorrieron los 100 km de distancia en dos horas.
-        \begin{figure}[H]
-          \centering
-          \includegraphics[width=0.75\linewidth]{mapa}
-          \captionof{figure}{Ruta Ciudad de México - Oaxtepec.
-            Fuente: http://edutics.mx/w7k. (Consulta: 20 de septiembre de 2018).}
-          \label{fig:mapa}
-        \end{figure}%
-        \begin{enumerate}
-          \item ¿Cuánto tiempo tardaron en el recorrido de ida?
-          \item ¿A qué velocidad viajaron de regreso?
-          \item ¿Qué tipo de variación se da entre la velocidad y el tiempo que tardaron en el viaje?
-          \item ¿Cuál es la constante de proporcionalidad en esta relación?
-          \item ¿Qué información es relevante para responder y cual no?
-          \item Describe los procedimientos realizados para calcular los datos faltantes, así como para representar la variación.
+        %\begin{boxK}
+        \begin{minipage}[c][5cm][t]{.3\textwidth}
+          La familia Gómez se fue de día de vacaciones a Oaxtepec, que se encuentra a 100 km de distancia de donde viven. Cuando se dirigían al lugar, viajaron a una velocidad promedio de 80 km/h.
+          De regreso había un poco de tránsito, por lo que recorrieron los 100 km de distancia en dos horas.
+          \begin{enumerate}
+            \item ¿Cuánto tiempo tardaron en el recorrido de ida?\\[0.2cm]
+          \end{enumerate}
+        \end{minipage}\hfill
+        \begin{minipage}[c][5cm][t]{.6\textwidth}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{mapa}
+            \captionof{figure}{Ruta Ciudad de México - Oaxtepec.
+              Fuente: http://edutics.mx/w7k. (Consulta: 20 de septiembre de 2018).}
+            \label{fig:mapa}
+          \end{figure}
+        \end{minipage}
+
+        \vspace{2cm}
+        \begin{enumerate}[start=2]
+          \item ¿A qué velocidad viajaron de regreso?\\[0.25cm]
+          \item ¿Qué tipo de variación se da entre la velocidad y el tiempo que tardaron en el viaje?\\[0.2cm]
+          \item ¿Cuál es la constante de proporcionalidad en esta relación?\\[0.2cm]
+          \item ¿Qué información es relevante para responder y cual no?\\[0.2cm]
+          \item Describe los procedimientos realizados para calcular los datos faltantes, así como para representar la variación.\\[0.2cm]
         \end{enumerate}
 
         En situaciones que suceden en diferentes disciplinas, nos encontramos con que podemos modelarlas mediante una variación lineal.\\
+        %\end{boxK}
         \newpage
-  \item Analiza la situación y responde lo que se pide.\\
 
-        Jaime estudia Medicina. En una clase ha aprendido que hay una nueva generación de fármacos en los que la cantidad de
-        sustancia activa decae poco a poco hasta que el cuerpo la elimina completamente. Por ejemplo, un enfermo toma una
-        medicina con 5 mg de sustancia activa, la cual decae 0.5 mg por día. Por lo que su profesor les solicita que describan
-        la relación entre cantidad de sustancia activa y los días que dura dentro del cuerpo.
 
-        \begin{figure}[H]
-          \centering
-          \includegraphics[width=0.75\linewidth]{farmacos}
-          \captionof{table}{Tabla que relaciona la cantidad de sustancia activa de acuerdo con los d\'ias.}
-          \label{tab:farmacos}
-        \end{figure}%
-        \begin{enumerate}
-          \item Completa la tabla \ref{tab:farmacos} en la que se calcula diariamente la cantidad de sustancia activa dentro del enfermo.
-          \item ¿Cómo cambia la cantidad de sustancia activa conforme pasan los días? ¿Puedes identificar un patrón en la disminución de la sustancia activa? ¿Cuál es?
-          \item ¿Cómo se relaciona ese patrón con la constante de proporcionalidad?
-          \item ¿Cuál es la razón de cambio? ¿Cómo se relaciona ésta con la constante de proporcionalidad? ¿Cuál es? Explica su obtención.
-          \item Escribe una expresión algebraica que describa la situación.
-          \item ¿En cuántos días la sustancia activa queda totalmente eliminada del organismo del enfermo? Explica.
-          \item Traza la gráfica en la figura \ref{fig:farmacos_tabla} que describe la relación de la sustancia activa con los días que pasan.
-                \begin{figure}[H]
-                  \centering
-                  \includegraphics[width=0.75\linewidth]{farmacos_tabla}
-                  \captionof{table}{Tabla que relaciona la cantidad de sustancia activa de acuerdo con los d\'ias.}
-                  \label{fig:farmacos_tabla}
-                \end{figure}%
-          \item ¿La gráfica es ascendente o descendente? ¿Cómo se ve esto reflejado en la pendiente?
-          \item ¿Cuál es el valor de la pendiente y de la ordenada al origen? Describe su obtención:
-        \end{enumerate}
+  \item Analiza la situación y responde lo que se pide.
+
+        \begin{minipage}[t]{.55\textwidth}
+          Jaime estudia Medicina. En una clase ha aprendido que hay una nueva generación de fármacos en los que la cantidad de
+          sustancia activa decae poco a poco hasta que el cuerpo la elimina completamente. Por ejemplo, un enfermo toma una
+          medicina con 5 mg de sustancia activa, la cual decae 0.5 mg por día. Por lo que su profesor les solicita que describan
+          la relación entre cantidad de sustancia activa y los días que dura dentro del cuerpo.
+          \begin{enumerate}
+            \item Completa la tabla \ref{tab:farmacos} en la que se calcula diariamente la cantidad de sustancia activa dentro del enfermo.\\[0.1cm]
+            \item ¿Cómo cambia la cantidad de sustancia activa conforme pasan los días? ¿Puedes identificar un patrón en la disminución de la sustancia activa? ¿Cuál es?
+            \item ¿Cómo se relaciona ese patrón con la constante de proporcionalidad?
+            \item ¿Cuál es la razón de cambio? ¿Cómo se relaciona ésta con la constante de proporcionalidad? ¿Cuál es? Explica su obtención.
+            \item Escribe una expresión algebraica que describa la situación.
+            \item ¿En cuántos días la sustancia activa queda totalmente eliminada del organismo del enfermo? Explica.
+            \item Traza la gráfica en la figura \ref{fig:farmacos_tabla} que describe la relación de la sustancia activa con los días que pasan.
+            \item ¿La gráfica es ascendente o descendente? ¿Cómo se ve esto reflejado en la pendiente?
+            \item ¿Cuál es el valor de la pendiente y de la ordenada al origen? Describe su obtención:
+          \end{enumerate}
+        \end{minipage}\hfill%%%%%%%%%%
+        \begin{minipage}[t]{.38\textwidth}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{farmacos}
+            \captionof{table}{Tabla que relaciona la cantidad de sustancia activa de acuerdo con los d\'ias.}
+            \label{tab:farmacos}
+          \end{figure}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{farmacos_tabla}
+            \captionof{table}{Tabla que relaciona la cantidad de sustancia activa de acuerdo con los d\'ias.}
+            \label{fig:farmacos_tabla}
+          \end{figure}%
+        \end{minipage}
+
+
+
 
         \newpage
   \item Define la estrategia y procedimientos para responder a la siguiente situación.\\
@@ -1103,11 +1228,14 @@ Otras situaciones se pueden describir por medio de las variaciones proporcionale
           \item Con otros equipos, analicen las características de la gráfica y la expresión algebraica de una variación proporcional inversa. Argumenten sus respuestas y corrijan si es necesario.
         \end{enumerate}
 
-        \boxabstract{Retoma la situación de la actividad de inicio y responde, completa o corrige tus respuestas. Reflexiona acerca de los conocimientos o habilidades que necesitabas al inicio y que ahora has adquirido. Escribe en tu cuaderno una conclusión.
+        \begin{boxF}
+
+          Retoma la situación de la actividad de inicio y responde, completa o corrige tus respuestas. Reflexiona acerca de los conocimientos o habilidades que necesitabas al inicio y que ahora has adquirido. Escribe en tu cuaderno una conclusión.
           La masa de un material se puede obtener multiplicando la densidad de ese material por el volumen que ocupa. Un cuerpo de 3 kg/m3 de densidad ocupa un volumen de 0.8 m3, otro cuerpo con densidad de 5 kg/m3 tiene la misma masa que el anterior.
           Escribe la relación entre la densidad y el volumen para el segundo cuerpo.
           ¿Qué volumen tiene el segundo cuerpo?
-          Realiza en tu cuaderno las representaciones tabular, gráfica y algebraica de esta situación.}
+          Realiza en tu cuaderno las representaciones tabular, gráfica y algebraica de esta situación.
+        \end{boxF}
 \end{enumerate}
 \newpage
 \subsubsection{Ejercicios}
@@ -1116,44 +1244,49 @@ Otras situaciones se pueden describir por medio de las variaciones proporcionale
         \begin{enumerate}
           \item ¿Cómo es el tiempo que permanece en el cuerpo de un paciente, una sustancia activa
                 de 5 mg que decae 0.5 mg cada dos días con relación al tiempo que permanece la sustancia activa inicial?\\
-                \begin{hoptions}
+                \emph{Escoge 1 respuesta:}\\
+                \begin{hoptboxes}
                   \item Es la mitad
                   \item Es el mismo
                   \item Es el doble
                   \item No hay relación
-                \end{hoptions}
+                \end{hoptboxes}
           \item¿Cómo es el tiempo que permanece en el cuerpo de un paciente, una sustancia activa de 10 mg que decae
                 1 mg diario con relación al tiempo que permanece la sustancia activa inicial?\\
-                \begin{hoptions}
+                \emph{Escoge 1 respuesta:}\\
+                \begin{hoptboxes}
                   \item Es la mitad
                   \item Es el mismo
                   \item Es el doble
                   \item No hay relación
-                \end{hoptions}
+                \end{hoptboxes}
           \item ¿Cómo es el tiempo que permanece en el cuerpo de un paciente, una sustancia activa de 5 mg que decae 1 mg
                 cada dos días con relación al tiempo que permanece la sustancia activa del inciso anterior?\\
-                \begin{hoptions}
+                \emph{Escoge 1 respuesta:}\\
+                \begin{hoptboxes}
                   \item Es la mitad
                   \item Es el mismo
                   \item Es el doble
                   \item No hay relación
-                \end{hoptions}
+                \end{hoptboxes}
           \item ¿Cómo es la razón de cambio de una sustancia activa de 4 mg en el cuerpo humano que decae 1 mg diario con
                 relación a la razón de cambio de la sustancia del inciso anterior?\\
-                \begin{hoptions}
+                \emph{Escoge 1 respuesta:}\\
+                \begin{hoptboxes}
                   \item Es igual
                   \item Es mayor
                   \item Es menor
                   \item No hay relación
-                \end{hoptions}
+                \end{hoptboxes}
           \item ¿Cómo es la razón de cambio de una sustancia activa de 8 mg en el cuerpo humano que decae 1 mg cada dos
                 días con relación a la razón de cambio de la sustancia del inciso anterior?\\
-                \begin{hoptions}
+                \emph{Escoge 1 respuesta:}\\
+                \begin{hoptboxes}
                   \item Es igual
                   \item Es mayor
                   \item Es menor
                   \item No hay relación
-                \end{hoptions}
+                \end{hoptboxes}
         \end{enumerate}
 
   \item Ordena las sustancias de mayor a menor según el tiempo que permanecen en el cuerpo humano.
@@ -1171,12 +1304,14 @@ Otras situaciones se pueden describir por medio de las variaciones proporcionale
         \end{hoptboxes}
 \end{enumerate}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Per\'imetro y \'area de pol\'igonos regulares}
+\boxabstract{Calcula el perímetro y el área de polígonos regulares y del círculo a partir de diferentes datos.}
 \subsection{Per\'imetro y \'area de pol\'igonos}
 
+\newpage \thispagestyle{plain}
 \section{\'Area del c\'irculo}
-
+\boxabstract{Calcula el perímetro y el área de polígonos regulares y del círculo a partir de diferentes datos.}
 
 \subsection{Area del c\'irculo}
 El área de un círculo es la cantidad de espacio que abarca. También podemos pensarla como la cantidad total de espacio dentro del círculo.
@@ -1228,8 +1363,9 @@ $A = 200.96$ unidades cuadradas\\
 
 El área del círculo es $64\pi$ unidades cuadradas, o sea 200.96 unidades cuadradas.
 
+\newpage \thispagestyle{plain}
 \section{Medidas de tendencia central, rango y desviación media}
-\subsection{Medidas de tendencia central}
+\boxabstract{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana), el rango y la desviación media de un conjunto de datos, y decide cuál de ellas conviene más en el análisis de los datos en cuestión.}\subsection{Medidas de tendencia central}
 \subsection{Rango y dispersi\'on de datos}
 \subsection{Desviaci\'on media}
 
@@ -1237,24 +1373,30 @@ El área del círculo es $64\pi$ unidades cuadradas, o sea 200.96 unidades cuadr
 %%% U3
 \chapter{}
 
+\newpage \thispagestyle{plain}
 \section{Sucesiones y equivalencia de expresiones}
 \subsection{Reglas aritméticas y equivalencias}
 
+\newpage \thispagestyle{plain}
 \section{Figuras geométricas y equivalencia de expresiones}
 \subsection{Equivalencia de expresiones algebraicas}
 \subsection{Expresiones de perímetros y áreas}
 
+\newpage \thispagestyle{plain}
 \section{Volumen de prismas rectos}
 \subsection{Volumen de primas rectos con base en forma de polígono regular}
 \subsection{Problemas de volumen de prismas rectos}
 
+\newpage \thispagestyle{plain}
 \section{Volumen de cilindros rectos}
 \subsection{Volumen de cilindros rectos}
 \subsection{Problemas de cilindros rectos}
 
+\newpage \thispagestyle{plain}
 \section{Desarrollos planos de prismas y cilindros rectos}
 \subsection{Desarrollos planos}
 
+\newpage \thispagestyle{plain}
 \section{Probabilidad teórica}
 \subsection{Definición de probabilidad teórica}
 \subsection{Probabilidad teórica y frecuencial}

@@ -1,5 +1,5 @@
 \documentclass[11pt]{book}
-\usepackage[subpreambles=true]{standalone}
+%\usepackage[subpreambles=true]{standalone}
 \usepackage[spanish]{babel}
 \usepackage{comfortaa}
 \usepackage[T1]{fontenc}
@@ -13,31 +13,36 @@ bottom=1in,
 headheight=10mm,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 \usepackage{float}
+\usepackage[colorlinks = true, linkcolor = colorrds]{hyperref}
+\usepackage{bookmark}
 \usepackage{fancyhdr}
 \usepackage{color, colortbl}
 \usepackage[dvipsnames,table]{xcolor} % Required for custom color
-\usepackage[colorlinks = true, linkcolor = colorrds]{hyperref}
-\usepackage{bookmark}
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{multicol,multirow}
 \usepackage{newclude}
-%\usepackage{tabto}
+\usepackage{tabto}
 \usepackage{remreset}
 \usepackage[inline]{enumitem}
 \usepackage{xparse}
 \usepackage{wrapfig}
-\usepackage{caption}
+\usepackage{caption,capt-of}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
+\usepackage{lscape}
+\usepackage{subfiles}
 \usepackage{etoolbox}
 \usepackage{pdflscape}
+\usepackage[explicit]{titlesec}
 \usepackage{subfiles} % Best loaded last in the preamble
 \input{insbox}
-\include{./Functional/def_tcolorbox}
+\include{Functional/fancychapter}
+\include{Functional/fancysection}
+\include{Functional/def_tcolorbox}
 \decimalpoint
 %\captionsetup{width=.45\textwidth}
-%\setlength{\parindent}{0pt}
+\setlength{\parindent}{0pt}
 \graphicspath{{./Images}} %Setting the graphicspath
 \definecolor{colorrds}{HTML}{0060A0} % Custom colour
 %%% Headings and footer
@@ -55,9 +60,9 @@ headheight=10mm,% Set \headheight to 10mm
   decorations.pathmorphing,
   decorations.markings,
   decorations.text,
-  shapes,
+  shapes.symbols,
   backgrounds,
-  shadows,
+  shadows.blur,
   trees,
   fit,
   snakes,
@@ -69,14 +74,6 @@ headheight=10mm,% Set \headheight to 10mm
   spy,
   tikzmark}
 
-  \tikzset{
-  abstractbox/.style={
-    draw=black, fill=white, rectangle, 
-    inner sep=12pt, style=rounded corners,
-    drop shadow={fill=black, opacity=1}
-  },
-  abstracttitle/.style={fill=white}
-}
 %%%% APRENDISAJES TEXTBOX
 \tikzset{
   abstractbox/.style={
@@ -98,14 +95,6 @@ headheight=10mm,% Set \headheight to 10mm
   \end{tikzpicture}
 }%
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-\makeatletter
-  \@removefromreset{section}{chapter}
-\makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
-\renewcommand{\thechapter}{\arabic{chapter}}
-\renewcommand{\thesection}{S\arabic{section}}
-\renewcommand{\thesubsection}{L\arabic{subsection}}
 %\renewcommand{\labelenumi}{\mbox{\arabic{enumi}}}
 %\%renewcommand{\labelitemi}{$\square$}
 
@@ -118,7 +107,7 @@ headheight=10mm,% Set \headheight to 10mm
 % \item\IfNoValueTF{#1}{}{(#1 puntos)}}
 % \newenvironment{parts}[1][]{\enumerate[,#1]}{\endenumerate}
 % \newcommand{\part}{\item}
-%%\newcommand{\item}{\item}
+%%\newcommand{\choice}{\item}
 % \newlist{parts}{enumerate*}{1}
 % \setlist[parts,1]{label=(\alph*), itemjoin={{\quad}},leftmargin = 1cm}
 % \newlist{oneparchoices}{enumerate*}{1}
@@ -154,8 +143,17 @@ headheight=10mm,% Set \headheight to 10mm
 \restoregeometry
 \addtocontents{toc}{\setcounter{tocdepth}{3}}
 \tableofcontents
+\newpage
 \chapter{}
 \pagestyle{fancy}
+\newpage
+\thispagestyle{plain}
+\section{Fracciones y decimales}
+\subsection{Equivalencias de fracciones y decimales}
+\subsection{Decimales peri\'odicos}
+\subsubsection{Redondeo y truncamiento}
+
+\newpage \thispagestyle{plain}
 
 \section{Tecnolog\'ia y transformaci\'on de la sociedad}
 \boxabstract{
@@ -436,8 +434,8 @@ Contesta lo siguiente:
         \end{itemize}
 \end{enumerate}
 
-\newpage
-\section{Velocidad y aceleraci\'on}
+\newpage \thispagestyle{plain}
+\section{ Velocidad y aceleraci\'on}
 \boxabstract{Comprende los conceptos de velocidad y aceleración.}
 \subsection{El movimiento de los objetos}
 Para describir el movimiento de un objeto, primero tenemos que describir su posición;
@@ -857,10 +855,11 @@ Considera la siguiente situación. Un objeto se mueve en línea recta como se in
 
 \subsection{La aceleraci\'on como cambio de la velocidad}
 
-\section{Movimiento ondulatorio}
+\newpage \thispagestyle{plain}
+\section{ Movimiento ondulatorio}
 \subsection{Ondas para ver}
-\newpage
-\section{Concepto de fuerza}
+\newpage \thispagestyle{plain}
+\section{ Concepto de fuerza}
 \boxabstract{Describe, representa y experimenta
   la fuerza como la interacción entre
   objetos y reconoce distintos tipos de
@@ -1444,6 +1443,7 @@ En el cuerpo humano también se presentan los tres tipos de palancas, en particu
 \end{boxK}
 
 \newpage
+
 \begin{landscape}
   \thispagestyle{empty}
   \begin{figure}[H]
@@ -1453,6 +1453,7 @@ En el cuerpo humano también se presentan los tres tipos de palancas, en particu
     \captionof{figure}{M\'aquinas simples.}
   \end{figure}
 \end{landscape}
+
 \newpage
 
 \subsubsection{La rueda y el torno}
@@ -1559,8 +1560,8 @@ donde $F$ es la fuerza aplicada; $R$, la resistencia, y $L$, la longitud de la c
 \end{boxK}
 
 
-\newpage
-\section{Leyes de Newton}
+\newpage \thispagestyle{plain}
+\section{ Leyes de Newton}
 \boxabstract{Describe, representa y experimenta
   la fuerza como la interacción entre
   objetos y reconoce distintos tipos de
@@ -1914,7 +1915,7 @@ o siempre que las fuerzas que actúan sobre él se anulen mutuamente.
 \newpage
 
 \begin{boxF}
-  \begin{center}\color{colorrds}\large Cierre\end{center}
+  \begin{center}\textbf{\large Cierre}\end{center}
   Retoma la pregunta de la situación de Inicio y responde.\\
   \begin{enumerate}
     \item ¿Por qué las naves Voyager I y II mantienen su movimiento?
@@ -1975,8 +1976,8 @@ de acción sobre la pelota, por lo tanto, la fuerza de reacción la ejercerá la
 Claramente, por su menor masa, es la pelota la que acelera hacia la Tierra, de acuerdo a lo que
 establece la segunda ley de Newton. La Tierra también se mueve hacia la pelota pero, por su gran masa,
 la aceleración de ésta es despreciable.
-\newpage
-\section{La aportaci\'on de Newton}
+\newpage \thispagestyle{plain}
+\section{ La aportaci\'on de Newton}
 \boxabstract{Analiza la gravitación y su papel en
   la explicación del movimiento de los
   planetas y en la caída de los cuerpos
@@ -1984,10 +1985,11 @@ la aceleración de ésta es despreciable.
 \subsection{Ley de Gravitaci\'on Universal}
 \subsection{Newton, vida y obra, sus aportaciones para la ciencia}
 \subsection{El movimiento regular de los cuerpos del Sistema Solar: las leyes de Kepler}
-
+\newpage \thispagestyle{plain}
 \chapter{}
 
-\section{La energ\'ia y sus manifestaciones}
+\newpage \thispagestyle{plain}
+\section{ La energ\'ia y sus manifestaciones}
 \subsection{Tipos de energ\'ia}
 
 \begin{center}
@@ -2312,13 +2314,13 @@ cuando algo sucede. No es la descripci\'on de un
 mecanismo ni algo concreto. Es tan s\'olo un hecho extraño el que seamos capaces
 de calcular un n\'umero, y que al volver a calcularlo despu\'es de observar las
 piruetas de la naturaleza, \'este sea el mismo.
-\newpage
-\section{Los modelos en la ciencia}
+\newpage \thispagestyle{plain}
+\section{ Los modelos en la ciencia}
 \subsection{Explicaci\'on de los fen\'omenos de la naturaleza a partir de modelos}
 \subsection{Ideas en la historia entorno a la estructura de la materia}
 \subsection{Aspectos b\'asicos del modelo cin\'etico de part\'iculas}
-\newpage
-\section{Cambios de estado de la materia y el modelo cin\'etico}
+\newpage \thispagestyle{plain}
+\section{ Cambios de estado de la materia y el modelo cin\'etico}
 \subsection{Propiedades de la materia: forma, volumen, estados de agregaci\'on, compresibilidad, etc\'etera}
 \subsection{Cambios de estado de agregaci\'on}
 
@@ -2326,49 +2328,54 @@ piruetas de la naturaleza, \'este sea el mismo.
 \subsection{Temperatura}
 \subsection{Calor y temperatura}
 
-\section{Calor como energ\'ia}
+\newpage \thispagestyle{plain}
+\section{ Calor como energ\'ia}
 \subsection{Energ\'ia t\'ermica}
 \subsection{Calor y otras formas de energ\'ia}
 \subsection{Energ\'ia el\'ectrica y medio ambiente}
 
-\section{Interacciones el\'ectricas}
+\newpage \thispagestyle{plain}
+\section{ Interacciones el\'ectricas}
 \subsection{Fen\'omenos electrost\'aticos}
-\newpage
-\section{El modelo at\'omico de la materia}
+\newpage \thispagestyle{plain}
+\section{ El modelo at\'omico de la materia}
 \subsection{Descripci\'on macrosc\'opica y microsc\'opica del Universo}
 \subsection{Desarrollo hist\'orico del modelo at\'omico}
 \subsection{Caracter\'isticas del \'atomo}
-
+\newpage \thispagestyle{plain}
 \chapter{}
 
-\section{Corriente el\'ectrica y magnetismo}
+\newpage \thispagestyle{plain}
+\section{ Corriente el\'ectrica y magnetismo}
 \subsection{Corriente el\'ectrica y magnetismo}
 \subsection{Electromagnetismo}
 
-\newpage
-\section{Electricidad y magnetismo: ondas electromagn\'eticas}
+\newpage \thispagestyle{plain}
+\section{ Electricidad y magnetismo: ondas electromagn\'eticas}
 \subsection{Relaci\'on entre electricidad y magnetismo}
 \subsection{Inducci\'on electromagn\'etica}
 \subsection{Generaci\'on de ondas electromagn\'eticas}
 \subsection{La luz visible}
-\newpage
-\section{Electricidad y temperatura en sistemas biol\'ogicos}
+\newpage \thispagestyle{plain}
+\section{ Electricidad y temperatura en sistemas biol\'ogicos}
 \subsection{La f\'isica del cuerpo humano}
-\newpage
-\section{Ciencia, tecnolog\'ia y sociedad}
+\newpage \thispagestyle{plain}
+\section{ Ciencia, tecnolog\'ia y sociedad}
 \subsection{Ciencia y tecnolog\'ia aplicada a la salud}
 \subsection{Ciencia y tecnolog\'ia en el mundo actual}
-\newpage
-\section{F\'isica y conocimiento del Universo}
+\newpage \thispagestyle{plain}
+\section{ F\'isica y conocimiento del Universo}
 \subsection{La estructura del Universo}
 \subsection{?`C\'omo se estudia el Universo?}
 \subsection{Los mecanismos de las estrellas}
 
-\section{El Sistema Solar}
+\newpage \thispagestyle{plain}
+\section{ El Sistema Solar}
 \subsection{Caracter\'isticas y exploraci\'on del Sistema Solar}
 \subsection{Origen del Sistema Solar}
 
-\section{Origen y evoluci\'on del Universo}
+\newpage \thispagestyle{plain}
+\section{ Origen y evoluci\'on del Universo}
 \subsection{Teor\'ia de la Gran Explosi\'on}
 
 \end{document}

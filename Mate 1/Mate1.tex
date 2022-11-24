@@ -1,5 +1,5 @@
 \documentclass[11pt]{book}
-\usepackage[subpreambles=true]{standalone}
+%\usepackage[subpreambles=true]{standalone}
 \usepackage[spanish]{babel}
 \usepackage{comfortaa}
 \usepackage[T1]{fontenc}
@@ -13,34 +13,35 @@ bottom=1in,
 headheight=10mm,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 \usepackage{float}
+\usepackage[colorlinks = true, linkcolor = colorrds]{hyperref}
+\usepackage{bookmark}
 \usepackage{fancyhdr}
 \usepackage{color, colortbl}
 \usepackage[dvipsnames,table]{xcolor} % Required for custom color
-\usepackage[colorlinks = true, linkcolor = colorrds]{hyperref}
-\usepackage{bookmark}
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{multicol,multirow}
 \usepackage{newclude}
-%\usepackage{tabto}
+\usepackage{tabto}
 \usepackage{remreset}
 \usepackage[inline]{enumitem}
 \usepackage{xparse}
 \usepackage{wrapfig}
-\usepackage{caption}
+\usepackage{caption,capt-of}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
+\usepackage{subfiles}
 \usepackage{etoolbox}
-\usepackage{ragged2e}
 \usepackage{pdflscape}
+\usepackage[explicit]{titlesec}
 \usepackage{subfiles} % Best loaded last in the preamble
 \input{insbox}
+\include{Functional/fancychapter}
+\include{Functional/fancysection}
 \include{Functional/def_tcolorbox}
-%\include{Functional/fancyHeader}
-%\include*{Functional/tornpaper}
 \decimalpoint
 %\captionsetup{width=.45\textwidth}
-%\setlength{\parindent}{0pt}
+\setlength{\parindent}{0pt}
 \graphicspath{{./Images}} %Setting the graphicspath
 \definecolor{colorrds}{HTML}{0060A0} % Custom colour
 %%% Headings and footer
@@ -58,11 +59,9 @@ headheight=10mm,% Set \headheight to 10mm
   decorations.pathmorphing,
   decorations.markings,
   decorations.text,
-  shapes,
+  shapes.symbols,
   backgrounds,
-  shadows,
   shadows.blur,
-  shadings,
   trees,
   fit,
   snakes,
@@ -74,14 +73,6 @@ headheight=10mm,% Set \headheight to 10mm
   spy,
   tikzmark}
 
-  \tikzset{
-  abstractbox/.style={
-    draw=black, fill=white, rectangle, 
-    inner sep=12pt, style=rounded corners,
-    drop shadow={fill=black, opacity=1}
-  },
-  abstracttitle/.style={fill=white}
-}
 %%%% APRENDISAJES TEXTBOX
 \tikzset{
   abstractbox/.style={
@@ -103,14 +94,6 @@ headheight=10mm,% Set \headheight to 10mm
   \end{tikzpicture}
 }%
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-\makeatletter
-  \@removefromreset{section}{chapter}
-\makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
-\renewcommand{\thechapter}{\arabic{chapter}}
-\renewcommand{\thesection}{S\arabic{section}}
-\renewcommand{\thesubsection}{L\arabic{subsection}}
 %\renewcommand{\labelenumi}{\mbox{\arabic{enumi}}}
 %\%renewcommand{\labelitemi}{$\square$}
 
@@ -123,7 +106,7 @@ headheight=10mm,% Set \headheight to 10mm
 % \item\IfNoValueTF{#1}{}{(#1 puntos)}}
 % \newenvironment{parts}[1][]{\enumerate[,#1]}{\endenumerate}
 % \newcommand{\part}{\item}
-%%\newcommand{\item}{\item}
+%%\newcommand{\choice}{\item}
 % \newlist{parts}{enumerate*}{1}
 % \setlist[parts,1]{label=(\alph*), itemjoin={{\quad}},leftmargin = 1cm}
 % \newlist{oneparchoices}{enumerate*}{1}
@@ -159,14 +142,18 @@ headheight=10mm,% Set \headheight to 10mm
 \restoregeometry
 \addtocontents{toc}{\setcounter{tocdepth}{3}}
 \tableofcontents
+\newpage
 \chapter{}
-%\pagestyle{fancy}
+\pagestyle{fancy}
+\newpage
+\thispagestyle{empty}
 \section{Fracciones y decimales}
 \subsection{Equivalencias de fracciones y decimales}
 \subsection{Decimales peri\'odicos}
 \subsubsection{Redondeo y truncamiento}
 
-\newpage
+\newpage \thispagestyle{plain}
+
 \section{Recta Num\'erica, Densidad y Orden}
 \subsection{Fracciones en la Recta Num\'erica, Densidad y Orden}
 \subsection{Decimales en la Recta Num\'erica, Densidad y Orden}
@@ -174,32 +161,33 @@ headheight=10mm,% Set \headheight to 10mm
 \subsubsection{Orden en los n\'umeros fraccionarios}
 \subsubsection{Orden en los n\'umeros decimales}
 
-\newpage
+
+\newpage \thispagestyle{plain}
 \section{Problemas con sumas y restas}
 \subsection{N\'umeros con signo, recta y orden}
 \subsection{Suma y resta de n\'umeros con signo}
 \subsubsection{Suma de numeros con signo}
 \subsubsection{Conmutatividad aditiva}
 \subsubsection{Resta de n\'umeros con signo}
-\newpage
+\newpage \thispagestyle{plain}
 \section{Multiplicaci\'on con n\'umeros fraccionarios y decimales}
 \subsection{Multiplicaci\'on con n\'umeros fraccionarios}
 \subsection{Multiplicaci\'on con n\'umeros decimales}
-\newpage
+\newpage \thispagestyle{plain}
 \section{Divisi\'on con n\'umeros fraccionarios y decimales}
-\newpage
+\newpage \thispagestyle{plain}
 \section{\'Angulos, tri\'angulos y cuadril\'ateros}
 \subsection{\'Angulos y rectas paralelas}
 \subsection{Suma de los \'angulos interiores de un tri\'angulo y de un cuadril\'atero}
 \subsubsection{\'Angulos de un tri\'angulo}
 \subsubsection{\'Angulos de un cuadril\'atero}
-\newpage
+\newpage \thispagestyle{plain}
 \section{Tri\'angulos, cuadril\'ateros y congruencia}
 \subsection{Criterios de congruencia}
 
-
+\newpage \thispagestyle{plain}
 \chapter{}
-
+\newpage \thispagestyle{plain}
 \section{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
 \boxabstract{
   Determina y usa la jerarquía de operaciones y los paréntesis en operaciones con números naturales, enteros y
@@ -215,10 +203,15 @@ después fueron sílabas, después palabras completas hasta poder llegar a los e
 vienen los signos de puntuación, las comas, los dos puntos, el punto y seguido, el punto aparte, etc. Y entendiste la importancia de los signos de puntuación.
 
 En los siguientes enunciados podemos observar ejemplos:
-\begin{bA}
-  Perdón imposible, castigarlo.\\
-  Perdón, imposible castigarlo.
-\end{bA}
+\begin{center}
+  \begin{minipage}{0.4\textwidth}
+    \begin{bA}
+      Perdón imposible, castigarlo.\\
+      Perdón, imposible castigarlo.
+    \end{bA}
+  \end{minipage}
+\end{center}
+
 Como podemos ver el significado de ambas expresiones son diferentes, bueno de eso se trata, en las matemáticas
 existen reglas que si no se siguen el resultado de la operación sería incorrecto.
 
@@ -284,14 +277,14 @@ Por ultimo el resultado es el número 11.
 
 \[4 - 6 / 2 + 5 \times 2 = 11\]
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Resolución de problemas con valores faltantes}
 \boxabstract{Calcula valores faltantes en problemas de proporcionalidad directa,
   con constante natural, fracción o decimal (incluyendo tablas de variación).}
 
 \subsection{Proporcionalidad directa y valor faltante}
-\begin{boxF}
-  \begin{center}\color{colorrds}Inicio\end{center}
+\begin{boxK}
+  \begin{center}\textbf{Inicio}\end{center}
   Menhir el arquitecto hizo un obelisco para conmemorar los setenta y seis años de su padre.
   Ahora hace un obelisco de menor tamaño, pero con la misma forma y del mismo material
   que el de su padre, para celebrar el decimonoveno cumpleaños de su hijo.
@@ -305,7 +298,7 @@ Por ultimo el resultado es el número 11.
     \item Compartan sus respuestas y procedimientos con sus compañeros y escriban en su cua-
           derno el procedimiento que les parezca más acertado.
   \end{enumerate}
-\end{boxF}
+\end{boxK}
 
 \begin{enumerate}
   \item En el local de jugos de Ana para preparar dos litros de agua de frutas se agregan,
@@ -320,7 +313,7 @@ Por ultimo el resultado es el número 11.
         saber cuántas cucharadas necesita Ana.
         \begin{figure}[H]
           \centering
-          \includegraphics[width=0.8\linewidth]{tabla_vitrolero.png}
+          \includegraphics[width=0.6\linewidth]{tabla_vitrolero.png}
           \captionof{table}{}
           \label{tab:tabla_vitrolero}
         \end{figure}
@@ -375,16 +368,17 @@ Por ultimo el resultado es el número 11.
 
 \end{enumerate}
 
-\begin{boxF}
-  \begin{center}\color{colorrds}Cierre\end{center}
+\begin{boxK}
+  \begin{center}\textbf{Cierre}\end{center}
   Regresa al problema inicial, identifica una relación de proporcionalidad directa y calcula
   la constante de proporcionalidad.
   Revisa tus respuestas a los incisos $a$ y $b$ y valida el procedimiento del inciso $c$.
-\end{boxF}
+\end{boxK}
 
 \subsection{Proporcionalidad y valor unitario}
-\begin{boxF}
-  \begin{center}\color{colorrds}Inicio\end{center}
+
+\begin{boxK}
+  \begin{center}\textbf{Inicio}\end{center}
   Manolo y Sebastián compraron una bolsa con 100 canicas como la que se muestra en la
   figura, por \$80.00. Manolo aportó \$32.00 y Sebastián completó el pago.
   \begin{enumerate}
@@ -394,7 +388,7 @@ Por ultimo el resultado es el número 11.
     \item Explica cómo decidiste repartir las canicas entre Manolo y Sebastián, y por qué
           consideras que de esa manera el reparto es justo.
   \end{enumerate}
-\end{boxF}
+\end{boxK}
 
 \begin{minipage}[t]{0.2\textwidth}
   \begin{figure}[H]
@@ -408,37 +402,34 @@ Por ultimo el resultado es el número 11.
   \begin{enumerate}
     \item En un día soleado los objetos forman sombras y, a la misma hora, la altura y la
           sombra de diferentes objetos es proporcional.
-          \begin{figure}[H]
-            \raggedright
-            \includegraphics[width=0.9\linewidth]{tabla_sombras.png}
-            \captionof{table}{}
-            \label{tab:tabla_sombras}
-          \end{figure}
-
+          \begin{flushright}
+            \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.85\linewidth]{tabla_sombras.png}
+              \captionof{table}{}
+              \label{tab:tabla_sombras}
+            \end{figure}
+          \end{flushright}
           \begin{enumerate}
             \item Con la información de la figura completa la tabla \ref{tab:tabla_sombras}.
             \item ¿Cómo son los números de la última columna?
             \item Si la sombra de un árbol mide 7.5 m, ¿cómo calcularías su altura? Explica.
             \item  En primaria aprendiste a ubicar puntos en el plano cartesiano por medio de
                   coordenadas. Ubica los puntos cuyas coordenadas corresponden a la altura y sombra de los árboles
-                  \begin{figure}[H]
-                    \centering
-                    \includegraphics[width=\linewidth]{plano_sombras.png}
-                  \end{figure}
-
           \end{enumerate}
   \end{enumerate}
 \end{minipage}
+\newpage
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.75\linewidth]{plano_sombras.png}
+\end{figure}
 
-
-
-
-
-
+\newpage
 
 \subsection{Resolución de problemas de proporcionalidad directa}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Porcentajes}
 \boxabstract{Resuelve problemas de cálculo de porcentajes, de tanto por ciento y de la cantidad base.}
 
@@ -446,14 +437,14 @@ Por ultimo el resultado es el número 11.
 \subsection{Cálculo del porcentaje}
 \subsection{Porcentajes y aplicaciones}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Perímetros y áreas}
 \boxabstract{Calcula el perímetro de polígonos y del círculo, y áreas de triángulos y cuadriláteros desarrollando
   y aplicando fórmulas.}
 \subsection{Perímetro de polígonos}
 \subsection{Perímetro del círculo}
 \subsection{Áreas de triángulos y cuadriláteros}
-\newpage
+\newpage \thispagestyle{plain}
 \section{Ecuaciones lineales}
 \boxabstract{Resuelve problemas mediante la formulación y solución algebraica de ecuaciones lineales.}
 \subsection{Formulación de ecuaciones}
@@ -462,7 +453,7 @@ Por ultimo el resultado es el número 11.
 
 
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Resolución de ecuaciones lineales}
 \boxabstract{Resuelve problemas mediante la formulación y solución algebraica de ecuaciones lineales.}
 \subsection{Propiedades de la igualdad}
@@ -473,7 +464,7 @@ Por ultimo el resultado es el número 11.
 
 
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Medidas de tendencia central}
 \boxabstract{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana) y el
   rango de un conjunto de datos, y decide cuál de ellas conviene más en el análisis de los datos en cuestión.}
@@ -484,7 +475,7 @@ Por ultimo el resultado es el número 11.
 
 
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Moda, media aritmética y mediana}
 \boxabstract{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana) y
   el rango de un conjunto de datos, y decide cuál de ellas conviene más en el análisis de los datos en cuestión.
@@ -503,39 +494,39 @@ Por ultimo el resultado es el número 11.
 
 
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Pendiente de una recta y razón de cambio}
 \subsection{Variación proporcional y pendiente}
 \subsection{Razón de cambio y variación}
 \subsection{Efectos en la recta al cambiar la pendiente}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Análisis y comparación de situaciones de variación lineal}
 \subsection{Efectos de la recta al cambiar la ordenada al origen}
 \subsection{Situaciones de variación lineal asociadas a la física, la biología y la economía}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Sucesiones y expresiones algebraicas}
 \subsection{Sucesiones numéricas}
 \subsection{Sucesiones con progresión aritmética}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Congruencia de triángulos y aplicaciones}
 \subsection{Aplicaciones de congruencia de triángulos}
 \subsection{Aplicaciones a cuadriláteros}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Vol\'umenes de prismas rectos}
 \subsection{Volumen de prismas rectos rectangulares}
 \subsection{Fórmula del volumen de prismas rectos}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{Gráficas circulares}
 \subsection{Recolecta y registra datos}
 \subsection{Registra datos en gráficas circulares}
 \subsection{Leer e interpretar datos en gráficas circulares}
 
-\newpage
+\newpage \thispagestyle{plain}
 \section{El azar y la probabilidad frecuencial}
 \subsection{Tipos, recolección y organización de datos}
 \subsection{Experimentos aleatorios y deterministas}

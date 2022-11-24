@@ -1,5 +1,5 @@
 \documentclass[11pt]{book}
-\usepackage[subpreambles=true]{standalone}
+%\usepackage[subpreambles=true]{standalone}
 \usepackage[spanish]{babel}
 \usepackage{comfortaa}
 \usepackage[T1]{fontenc}
@@ -13,33 +13,35 @@ bottom=1in,
 headheight=10mm,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 \usepackage{float}
+\usepackage[colorlinks = true, linkcolor = colorrds]{hyperref}
+\usepackage{bookmark}
 \usepackage{fancyhdr}
 \usepackage{color, colortbl}
 \usepackage[dvipsnames,table]{xcolor} % Required for custom color
-\usepackage[colorlinks = true, linkcolor = colorrds]{hyperref}
-\usepackage{bookmark}
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{multicol,multirow}
 \usepackage{newclude}
-%\usepackage{tabto}
+\usepackage{tabto}
 \usepackage{remreset}
 \usepackage[inline]{enumitem}
 \usepackage{xparse}
 \usepackage{wrapfig}
-\usepackage{caption}
+\usepackage{caption,capt-of}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
+\usepackage{subfiles}
 \usepackage{etoolbox}
-\usepackage{ragged2e}
 \usepackage{pdflscape}
+\usepackage[explicit]{titlesec}
 \usepackage{subfiles} % Best loaded last in the preamble
 \input{insbox}
+\include{Functional/fancychapter}
+\include{Functional/fancysection}
 \include{Functional/def_tcolorbox}
-\include{Functional/fancyHeader}
 \decimalpoint
 %\captionsetup{width=.45\textwidth}
-%\setlength{\parindent}{0pt}
+\setlength{\parindent}{0pt}
 \graphicspath{{./Images}} %Setting the graphicspath
 \definecolor{colorrds}{HTML}{0060A0} % Custom colour
 %%% Headings and footer
@@ -57,11 +59,9 @@ headheight=10mm,% Set \headheight to 10mm
   decorations.pathmorphing,
   decorations.markings,
   decorations.text,
-  shapes,
+  shapes.symbols,
   backgrounds,
-  shadows,
   shadows.blur,
-  shadings,
   trees,
   fit,
   snakes,
@@ -73,7 +73,6 @@ headheight=10mm,% Set \headheight to 10mm
   spy,
   tikzmark}
 
-  
 %%%% APRENDISAJES TEXTBOX
 \tikzset{
   abstractbox/.style={
@@ -83,7 +82,7 @@ headheight=10mm,% Set \headheight to 10mm
   },
   abstracttitle/.style={fill=white}
 }
-\newcommand{\boxabstract}[3][fill=white]{
+\newcommand{\boxabstract}[2][fill=white]{
   \begin{tikzpicture}
     \node [abstractbox, #1] (box)
     {\begin{minipage}{0.9\linewidth}
@@ -95,14 +94,6 @@ headheight=10mm,% Set \headheight to 10mm
   \end{tikzpicture}
 }%
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-\makeatletter
-  \@removefromreset{section}{chapter}
-\makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
-\renewcommand{\thechapter}{\arabic{chapter}}
-\renewcommand{\thesection}{S\arabic{section}}
-\renewcommand{\thesubsection}{L\arabic{subsection}}
 %\renewcommand{\labelenumi}{\mbox{\arabic{enumi}}}
 %\%renewcommand{\labelitemi}{$\square$}
 
@@ -115,7 +106,7 @@ headheight=10mm,% Set \headheight to 10mm
 % \item\IfNoValueTF{#1}{}{(#1 puntos)}}
 % \newenvironment{parts}[1][]{\enumerate[,#1]}{\endenumerate}
 % \newcommand{\part}{\item}
-%%\newcommand{\item}{\item}
+%%\newcommand{\choice}{\item}
 % \newlist{parts}{enumerate*}{1}
 % \setlist[parts,1]{label=(\alph*), itemjoin={{\quad}},leftmargin = 1cm}
 % \newlist{oneparchoices}{enumerate*}{1}
@@ -145,15 +136,17 @@ headheight=10mm,% Set \headheight to 10mm
   \end{tikzpicture}
 }
 \begin{document}
-%\pagestyle{empty}
+\pagestyle{empty}
 \newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
 \include{./Functional/cover}
 \restoregeometry
 \addtocontents{toc}{\setcounter{tocdepth}{3}}
 \tableofcontents
-\chapter{Unidad 1}
-%\pagestyle{fancy}
 \newpage
+\chapter{}
+\pagestyle{fancy}
+\newpage
+\newpage \thispagestyle{plain}
 \section{Nuestro mundo químico}
 \subsection{La química en tu vida y el medio ambiente }
 

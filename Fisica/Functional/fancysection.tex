@@ -1,0 +1,43 @@
+\makeatletter
+\@removefromreset{section}{chapter}
+\makeatother
+\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{L\arabic{subsection}}
+\newcommand*\sectionlabel{}
+\titleformat{\section}
+{\gdef\sectionlabel{}
+    \comfortaa\Large\bfseries
+}
+{\gdef\sectionlabel{\thesection \ }}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+        \node[yshift=-1.5cm] at (current page.north west)
+        {\begin{tikzpicture}[remember picture, overlay]
+                \draw[draw=none,fill=Tan,
+                    %shade,
+                    rounded corners=5pt,
+                    blur shadow={shadow blur steps=10,shadow blur extra rounding=10pt},
+                    xshift=5mm,
+                ] (0,0) rectangle
+                (\paperwidth-10mm,2cm);
+                \node[
+                    anchor=west,
+                    xshift=0.1\paperwidth,
+                    rectangle,
+                    %shade,
+                    rounded corners=5pt,
+                    inner sep=8pt,
+                    fill=CadetBlue,
+                    %drop shadow={fill=black, opacity=1},
+                ]
+                {\color{white}\sectionlabel#1};
+                % \node[anchor=east,xshift=.9\paperwidth,rectangle,
+                %     rounded corners=10pt,inner sep=11pt,
+                %     fill=blue!35]
+                % {\color{green}\sectionlabel};
+            \end{tikzpicture}
+        };
+    \end{tikzpicture}
+}
+\titlespacing*{\section}{0pt}{50pt}{0pt}
