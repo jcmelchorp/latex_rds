@@ -3,7 +3,7 @@
 \usepackage[spanish]{babel}
 \usepackage{comfortaa}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage[
 letterpaper,
 left=1in, 
@@ -58,6 +58,7 @@ headheight=10mm,% Set \headheight to 10mm
   decorations.pathmorphing,
   decorations.markings,
   decorations.text,
+  shapes,
   shapes.symbols,
   backgrounds,
   shadows.blur,
@@ -145,7 +146,7 @@ headheight=10mm,% Set \headheight to 10mm
 \chapter{}
 \pagestyle{fancy}
 \newpage
-\thispagestyle{empty}
+\thispagestyle{plain}
 \section{Fracciones y decimales}
 \subsection{Equivalencias de fracciones y decimales}
 \subsection{Decimales peri\'odicos}
@@ -365,7 +366,28 @@ Por ultimo el resultado es el número 11.
 
         \end{enumerate}
 
+  \item Contesta lo siguiente.
+        \begin{enumerate}
+          \item ¿Cuál es la estatura de Carlos si la distancia de su ombligo al piso es de 1.10 m?
+          \item Si la estatura de María es 1.49 m, ¿Cuál es la distancia de su ombligo al piso?
+          \item ¿Qué operaciones hicieron para resolver estos problemas?
+        \end{enumerate}
 \end{enumerate}
+
+\begin{boxH}
+  Si la razón entre dos datos correpondientes de dos conjuntos es siempre la misma,
+  se dice que ese valor es una \textbf{constante de proporcionalidad}. En una relación de pro-
+  porcionalidad directa al multiplicar los datos del segundo conjunto por la constante
+  de proporcionalidad se obtienen los datos correspondientes del primer conjunto, y
+  viceversa, multiplicando por el \textbf{\color{cyan}inverso multiplicativo} de esa constante.
+\end{boxH}
+
+\begin{boxH}
+  \textbf{\color{cyan}Inverso multiplicativo.}
+  El inverso multiplicativo de un número es aquel que al
+  multiplicarlo por el primero da como resultado 1.
+  Así, el inverso de 5 es $\dfrac{1}{5}$, porque $5\cdot \dfrac{1}{5}=1$
+\end{boxH}
 
 \begin{boxK}
   \begin{center}\textbf{Cierre}\end{center}
@@ -373,7 +395,7 @@ Por ultimo el resultado es el número 11.
   la constante de proporcionalidad.
   Revisa tus respuestas a los incisos $a$ y $b$ y valida el procedimiento del inciso $c$.
 \end{boxK}
-
+\newpage
 \subsection{Proporcionalidad y valor unitario}
 
 \begin{boxK}
@@ -389,52 +411,614 @@ Por ultimo el resultado es el número 11.
   \end{enumerate}
 \end{boxK}
 
-\begin{minipage}[t]{0.2\textwidth}
+\begin{enumerate}
+
+  \begin{minipage}[t]{0.2\textwidth}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1.4\linewidth]{fig_sombras.png}
+      \captionof{figure}{}
+      \label{fig:fig_sombras}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.75\textwidth}
+    \item En un día soleado los objetos forman sombras y, a la misma hora, la altura y la
+    sombra de diferentes objetos es proporcional.
+    \begin{flushright}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.85\linewidth]{tabla_sombras.png}
+        \captionof{table}{}
+        \label{tab:tabla_sombras}
+      \end{figure}
+    \end{flushright}
+    \begin{enumerate}
+      \item Con la información de la figura completa la tabla \ref{tab:tabla_sombras}.
+      \item ¿Cómo son los números de la última columna?
+      \item Si la sombra de un árbol mide 7.5 m, ¿cómo calcularías su altura? Explica.
+      \item En primaria aprendiste a ubicar puntos en el plano cartesiano por medio de
+            coordenadas. Ubica los puntos cuyas coordenadas corresponden a la altura y sombra de los árboles
+      \item La gráfica representa la relación entre la sombra y la altura de un árbol. Unan los
+            puntos que marcaron. ¿Qué observan?
+    \end{enumerate}
+  \end{minipage}
+
   \begin{figure}[H]
     \centering
-    \includegraphics[width=1.4\linewidth]{fig_sombras.png}
-    \captionof{figure}{}
-    \label{fig:fig_sombras}
+    \includegraphics[width=.7\linewidth]{plano_sombras.png}
   \end{figure}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.75\textwidth}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{graficas_sombras.png}
+    \captionof{figure}{}
+    \label{fig:graficas_sombras}
+  \end{figure}
+
+  \item La gráfica representa la relación entre la estatura de
+        Sofía, Isabel y Julio y sus correspondientes sombras
+        a las cuatro de la tarde de un día soleado. Obsérvenla y contesten.
+        \begin{enumerate}
+          \item Sofía mide 1.20 m y su sombra, 0.60 m. Si la estatura
+                de Isabel es 1.50 m, ¿cuánto mide la longitud de su sombra?
+          \item La sombra de Julio tiene una longitud de 0.85 m. ¿Cuál es su estatura?
+          \item Si Efrén, un amigo de Sofía, mide 1.84 m, ¿cuánto mediría su sombra?
+          \item ¿Cuánto vale la constante de proporcionalidad entre la estatura de las personas y la longitud de su sombra?
+          \item ¿Cuánto mide la sombra de un objeto cuya altura es de 1 m?
+          \item Compara los resultados con los de tus compañeros y juntos describan cómo usar
+                la gráfica para obtener uno de los datos a partir del otro.
+        \end{enumerate}
+
+        \begin{boxH}
+          Si dos o más razones tienen el mismo valor, entonces son \textbf{proporcionales}. El valor
+          de esa razón corresponde a la \textbf{constante de proporcionalidad}.
+        \end{boxH}
+
+  \item Marca en la casilla las razones que forman una proporción.\\
+
+        \begin{hoptboxes}
+          \item $\dfrac{3}{4}   \text{ y } \dfrac{21}{28}$
+          \item $\dfrac{32}{5}  \text{ y } \dfrac{96}{15}$
+          \item $\dfrac{33}{42} \text{ y } \dfrac{17}{21}$
+          \item $\dfrac{4}{5}   \text{ y } \dfrac{9}{12}$
+          \item $\dfrac{1}{11}  \text{ y } \dfrac{3}{30}$
+        \end{hoptboxes}
+
+  \item La distancia que recorre un automóvil es proporcional al consumo de gasolina.
+        Un automóvil recorre 180 km y gasta 12 L de gasolina.
+        \begin{enumerate}
+          \item ¿Cuántos kilómetros recorre con un litro?
+          \item ¿Cuántos litros necesita para recorrer 480 km?
+          \item ¿Cuál es el valor, en kilómetros, de la constante de proporcionalidad de la distancia recorrida, por cada litro de gasolina consumido?
+        \end{enumerate}
+        \begin{boxH}
+          En una relación de proporcionalidad el valor unitario es el valor de una de las magnitudes cuando el de la magnitud correspondiente es igual a 1; por ejemplo, los
+          kilómetros que recorre un automóvil con 1 L de gasolina o el precio de un libro. El
+          valor unitario es numéricamente igual a la constante de proporcionalidad.
+        \end{boxH}
+\end{enumerate}
+
+\begin{boxK}
+  \begin{center}\textbf{Cierre}\end{center}
+
   \begin{enumerate}
-    \item En un día soleado los objetos forman sombras y, a la misma hora, la altura y la
-          sombra de diferentes objetos es proporcional.
-          \begin{flushright}
-            \begin{figure}[H]
-              \centering
-              \includegraphics[width=0.85\linewidth]{tabla_sombras.png}
-              \captionof{table}{}
-              \label{tab:tabla_sombras}
-            \end{figure}
-          \end{flushright}
-          \begin{enumerate}
-            \item Con la información de la figura completa la tabla \ref{tab:tabla_sombras}.
-            \item ¿Cómo son los números de la última columna?
-            \item Si la sombra de un árbol mide 7.5 m, ¿cómo calcularías su altura? Explica.
-            \item  En primaria aprendiste a ubicar puntos en el plano cartesiano por medio de
-                  coordenadas. Ubica los puntos cuyas coordenadas corresponden a la altura y sombra de los árboles
-          \end{enumerate}
+    \item A partir de lo que aprendiste en esta lección resuelve nuevamente el problema
+          inicial. Verifica tus respuestas previas y compara tus procedimientos anterio-
+          res con los que aprendiste. ¿Ambos fueron correctos? ¿Cuál te parece más
+          adecuado? ¿Por qué?
+    \item Un tubo de 2 m de longitud pesa 16 kg. ¿Cuál será el peso de un tubo del mismo
+          tipo, pero con 3 m de longitud?
   \end{enumerate}
-\end{minipage}
-\newpage
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=.75\linewidth]{plano_sombras.png}
-\end{figure}
+\end{boxK}
 
 \newpage
 
 \subsection{Resolución de problemas de proporcionalidad directa}
+\begin{boxK}
+  \begin{center}\textbf{Inicio}\end{center}
+  A Sofía y Pablo les tomaron una fotografía al lado de un árbol. Sofía sabe que su estatu-
+  ra es de 1.20 m y al medir con una regla su altura en la foto obtuvo 4 cm.
+  \begin{enumerate}
+    \item ¿Cómo obtendrías la estatura real de Pablo y la altura del árbol con base en la
+          foto?
+    \item Si en la fotografía el árbol mide 10 cm, ¿cuál es su altura?
+    \item Si la altura real de Pablo es de 1.50 m, ¿cuánto mide su imagen en la fotografía?
+    \item Escribe en tu cuaderno el procedimiento que seguiste.
+    \item Compara tus resultados y procedimientos con los de tus compañeros. Argumen-
+          ten la validez de los mis
+  \end{enumerate}
+
+\end{boxK}
+
+\begin{enumerate}
+  \item Las medidas de una plaqueta electrónica para teclado son de 32 cm por 24 cm. Si
+        en una computadora se instalara una plaqueta, sin reducirla, el teclado mediría
+        112 cm por 336 cm en vez de 14 cm por 42 cm que es lo usual.
+        \begin{enumerate}
+          \item ¿De qué tamaño deberán ser las plaquetas electrónicas para un teclado de tamaño común?
+          \item ¿Cuánto se debe reducir la plaqueta grande para que sea del tamaño de una usual?
+          \item Explica cómo obtuviste la respuesta, compara tu método con el de un compañero
+                y expongan al resto del grupo el método que les parezca más adecuado.
+        \end{enumerate}
+
+  \item La junta directiva de la secundaria Lázaro Cárdenas decidió que en las bibliotecas
+        de aula haya 3 libros por cada cuatro alumnos.
+        \begin{enumerate}
+          \item Si en el salón de Edna hay 44 alumnos, ¿cuántos libros debe haber?
+          \item Explica cómo determinaste el número de libros.
+          \item Completa la siguiente tabla.
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.6\linewidth]{tablaLibrosAlumnos.png}
+                  \captionof{figure}{}
+                  \label{fig:tablaLibrosAlumnos}
+                \end{figure}
+          \item Escribe la constante de proporcionalidad que relacione el número de libros y el
+                número de alumnos.
+        \end{enumerate}
+  \item  Una tortuga avanza 48 cm en 12 segundos.
+        \begin{enumerate}
+          \item ¿Qué distancia recorrerá en un minuto si camina con la misma rapidez?
+          \item Completa la siguiente tabla que Eduardo hizo para resolver el problem
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.6\linewidth]{tablaDistanciaTiempo.png}
+                  \captionof{figure}{}
+                  \label{fig:tablaDistanciaTiempo}
+                \end{figure}
+          \item Eduardo escribió 4 en la casilla vacía, pero considera que está mal porque no es
+                posible que la tortuga en 1 min recorra menos distancia que en 12 s. ¿En qué
+                consiste su error?
+          \item En tu cuaderno elabora una tabla como la de Eduardo, en el reglón de tiempo
+                incluye: una hora, un día y una semana. Escribe las distancias correspondientes
+                y comparte tus respuestas con el resto del grupo. Retoma la pregunta anterior y
+                explica en qué consistió el error de Eduardo.
+        \end{enumerate}
+
+
+  \item Si 4 toronjas se venden en 25 pesos, ¿cuánto cuestan 6 toronjas?
+        \begin{enumerate}
+          \item Completa la tabla con el valor que falta (valor faltante).
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.6\linewidth]{tabla_toronjas.png}
+                  \captionof{table}{}
+                  \label{tab:tabla_toronjas}
+                \end{figure}
+          \item Explica cómo obtuviste la respuesta.
+          \item Completa la proporción a partir de los datos del problema y calcula el valor faltante.
+                \[\dfrac{25}{4} = \dfrac{}{6}\]
+          \item ¿El valor faltante que propusiste en la tabla valida la igualdad anterior? Explica.
+        \end{enumerate}
+  \item Sofía leyó 25 páginas de un libro en 40 min. ¿Cuántas páginas leerá en 80 min si continua leyendo al mismo ritmo?
+        \begin{enumerate}
+          \item Escribe una proporción con un valor faltante para determinar cuántas páginas leerá en 65 minutos.
+                \[\dfrac{\text{ }}{\text{ }} = \dfrac{\text{ }}{\text{ }}\]
+          \item Encuentra el valor faltante de la proporción anterior y verifica que se conserva la
+                igualdad de las razones.
+          \item ¿Cuánto se consume la vela cada minuto?
+          \item ¿En cuánto tiempo se consume 1 cm de vela?
+          \item Completa la tabla.
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.6\linewidth]{tabla_longitud.png}
+                  \captionof{table}{}
+                  \label{tab:tabla_longitud}
+                \end{figure}
+        \end{enumerate}
+
+  \item Un avión Boeing 747 mide 77 m de largo por 63 de ancho (esta medida
+        indica la longitud de las alas de un extremo al otro). Un modelo a escala
+        mide 44 cm de largo.
+        \begin{enumerate}
+          \item ¿Cuál es el ancho del modelo a escala?
+          \item Explica tu procedimiento para resolver el problema.
+          \item ¿Cuánto debe medir la altura de una ventana en el modelo a escala si en el avión
+                real es de 0.7 m?
+          \item ¿Cuál es la constante de proporcionalidad del modelo real al modelo a escala?
+                En este caso la constante recibe el nombre de \emph{escala del modelo}.
+        \end{enumerate}
+
+  \item Una receta para hacer dulce de membrillo indica que la cantidad de fruta debe
+        ser una vez y media la cantidad de azúcar. Contesta.
+        \begin{enumerate}
+          \item Si se usan 2 kg de membrillo, ¿cuántos kilogramos de azúcar se necesitan?
+          \item ¿Y si se usan 5 kg de membrillo?
+          \item Completa la tabla e indica la constante de proporcionalidad que relaciona la can-
+                tidad de membrillo y la cantidad de azúcar.
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.6\linewidth]{tabla_azucar.png}
+                  \captionof{table}{}
+                  \label{tab:tabla_azucar}
+                \end{figure}
+          \item Si la cantidad de membrillo aumenta ocho veces, ¿cuánto aumentará la cantidad
+                de azúcar?
+          \item Si la cantidad de membrillo disminuye a la mitad, ¿cómo cambiará la cantidad de
+                azúcar?
+        \end{enumerate}
+  \item Un tren tarda 40 min en recorrer 130 km. ¿Cuánto tardará en recorrer 195 km si
+        mantiene la misma rapidez? Explica tu procedimiento.
+  \item Al medir el ritmo cardiaco de un paciente, durante 5 s el médico le dijo: \emph{su
+          pulso está bien, usted tiene 72 pulsaciones por minuto}.
+        \begin{enumerate}
+          \item ¿Qué cálculo piensas que hizo el médico para saber el número de pulsaciones por minuto si sólo tomó el pulso por 5 segundos?
+        \end{enumerate}
+  \item Para hacer mermelada de fresa se necesitan 3 kg de fresas frescas por cada 2 kg
+        de azúcar. Karol sólo tiene 2.5 kg de fresas. Contesta.
+        \begin{enumerate}
+          \item ¿Cuánta azúcar debe utilizar para que el sabor de la mermelada sea el mismo que
+                el de la receta original?
+          \item Explica el procedimiento que seguiste para resolver el problema.
+          \item Si Antonio tiene 3.6 kg de azúcar, ¿cuántos kilogramos de fresas necesita si quiere emplear toda la azúcar?
+          \item Explica tu procedimiento para resolver el problema.
+          \item Alejandro cuenta con $\dfrac{3}{4}$ kg de fresas. ¿Cuántos kilogramos de azúcar debe emplear?
+        \end{enumerate}
+  \item Una bomba mueve 300 L de agua por hora. ¿Cuánto tardará en llenar un depósito de 3 200 litros?
+  \item Una compañía envasadora necesita comprar una máquina que lave al menos 900
+        botellas en 1 hora.
+        \begin{enumerate}
+          \item El vendedor les muestra una máquina que lava 60 botellas en 5 min. ¿Esta máquina cumple con los requerimientos de la compañía? ¿Por qué?
+          \item El instructivo de otra máquina muestra la gráfica de
+                la figura \ref{fig:tabla_instructivo}. ¿Esta máquina cumple las necesidades de la compañía? ¿Por qué?
+
+          \item ¿Cuál de las dos máquinas lava más botellas por unidad de tiempo?
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.5\linewidth]{tabla_instructivo.png}
+                  \captionof{figure}{}
+                  \label{fig:tabla_instructivo}
+                \end{figure}
+
+        \end{enumerate}
+\end{enumerate}
+
+\begin{boxK}
+  \begin{center}\textbf{Cierre}\end{center}
+
+  \begin{enumerate}
+    \item Retoma el problema de la sección Inicio y verifica tus respuestas.
+          \begin{enumerate}
+            \item ¿Cuál es la constante de proporcionalidad que relaciona las medidas de los
+                  objetos reales con los de la fotografía?
+          \end{enumerate}
+    \item ¿Cómo verificarías sin dividir la proporción $\dfrac{7.5}{1.5} = \dfrac{15}{3}$?
+    \item Encuentra el valor faltante en las siguientes proporciones.\\
+
+          \begin{hoptions}
+            \item $\dfrac{}{25} = \dfrac{32}{8} $
+            \item $\dfrac{25}{25} = \dfrac{}{10}$
+            \item $\dfrac{30}{} = \dfrac{54}{9} $
+          \end{hoptions}
+  \end{enumerate}
+\end{boxK}
+
+\begin{boxH}
+  ¿El perímetro de un cuadrado es proporcional a las medidas de sus lados?
+  Explica.\\
+  Si las medidas de un rectángulo se duplican, ¿el área del nuevo rectángulo
+  también se duplica respecto al inicial? Justifica tu respuesta.
+\end{boxH}
 
 \newpage \thispagestyle{plain}
 \section{Porcentajes}
+
 \boxabstract{Resuelve problemas de cálculo de porcentajes, de tanto por ciento y de la cantidad base.}
 
 \subsection{Tanto por ciento}
+
+\begin{boxK}
+  \begin{center}\textbf{Inicio}\end{center}
+  \begin{enumerate}
+    \item El grupo 1º C ha organizado una competencia para elegir al equipo que los
+          representará en el torneo de tiros libres de basquetbol de la escuela. Cada
+          equipo está formado por cuatro alumnos y cada uno debe realizar un número distinto de lanzamientos a la canasta: uno debe hacer 20, otro 10, otro 5 y
+          otro 4. Ganará el equipo que enceste más veces.
+          En un equipo están Pablo, Sofía, Alfonso y Nayhelli, quienes en los entrena-
+          mientos tuvieron el desempeño que muestra la tabla.
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.4\linewidth]{tabla_lanzamientos.png}
+            \captionof{figure}{}
+            \label{fig:tabla_lanzamientos}
+          \end{figure}
+          \begin{enumerate}
+            \item ¿Quién es el mejor encestador? ¿Cómo lo sabes?
+            \item ¿Cuántos lanzamientos le asignarías a cada uno para obtener el mejor resultado en la competencia?
+            \item Compara tus respuestas con las de tus compañeros. Respecto a
+                  esos cuatro alumnos, ¿cómo decidieron quién es el mejor y el
+                  peor encestador? ¿Con qué criterios asignaron el número de
+                  lanzamientos a cada uno? Argumenten sus respuestas.
+          \end{enumerate}
+
+  \end{enumerate}
+\end{boxK}
+
+\begin{enumerate}
+  \item En la Academia de Policía evaluaron la condición física de los cadetes.
+        \begin{enumerate}
+          \item Marca las afirmaciones equivalentes.\\
+                \begin{hoptboxes}
+                  \item Tres quintas partes tuvo excelentes resultados.\\
+                  \item Veinte de cada veinticinco cadetes tuvieron excelentes resultados.\\
+                  \item De cada cinco alumnos, cuatro lograron excelentes resultados.\\
+                  \item De cien cadetes, ochenta tuvieron excelentes resultados.\\
+                  \item Ocho de cada diez lograron excelentes resultados.\\
+                \end{hoptboxes}
+          \item Compara tus respuestas con las de tus compañeros y explíquenlas.
+          \item Expresa en cada caso el número de cadetes con buenos resultados como una fracción con denominador 100. ¿Qué observas?
+        \end{enumerate}
+
+        \begin{boxH}
+          Por ciento significa \emph{por cada cien} y se refiere a la razón entre una cantidad dada
+          y un total de 100 elementos; también se llama tanto por ciento, esto es, \emph{una cantidad por cada cien}. Se usa el símbolo \% para indicar un tanto por ciento: 27 de
+          cada 100 se expresa como 27 o 27\%.
+        \end{boxH}
+
+  \item Completa la tabla \ref{fig:tabla_tantoporciento}.
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.7\linewidth]{tabla_tantoporciento.png}
+          \captionof{figure}{}
+          \label{fig:tabla_tantoporciento}
+        \end{figure}
+
+        \begin{enumerate}
+          \item En su cuaderno escriban qué relación hay entre la expansión decimal y el tanto por
+                ciento.
+        \end{enumerate}
+  \item Escribe el tanto por ciento que representa la parte sombreada de las
+        figuras o coloreen el porcentaje que corresponde.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.8\linewidth]{tabla_figuras.png}
+          \captionof{figure}{}
+          \label{fig:tabla_figuras}
+        \end{figure}
+        \begin{boxH}
+          Para convertir un decimal en tanto por ciento, se multiplica el decimal por 100 y
+          se agrega el signo \%.
+        \end{boxH}
+\end{enumerate}
+
+\begin{boxK}
+  \begin{center}\textbf{Cierre}\end{center}
+
+  \begin{enumerate}
+    \item Retoma la actividad de la situación inicial y determina el porcentaje de ences-
+          tes con respecto a los lanzamientos de cada alumno.
+          \begin{enumerate}
+            \item Resuelve nuevamente el inciso b. Explica cómo llegaste a esa conclusión.
+            \item ¿Tus resultados iniciales fueron correctos? Justifica tus respuestas.
+          \end{enumerate}
+    \item El promedio de bateo se determina como la razón del número de hits que logra
+          un jugador de beisbol entre la cantidad de turnos al bat.\\
+          \begin{enumerate}
+            \item  El legendario jugador de beisbol Babe Ruth de los Yanquis de Nueva York tuvo
+                  un promedio de bateo de 0.34. ¿Qué significa ese número en porcentaje?
+            \item Adrián \emph{el titán} González, bateador mexicano de los Dodgers de Los Ángeles,
+                  tiene promedio de bateo de 0.29. ¿Quién es mejor bateador? Explica.
+          \end{enumerate}
+  \end{enumerate}
+\end{boxK}
+\newpage
 \subsection{Cálculo del porcentaje}
+
+\begin{boxK}
+  \begin{center}\textbf{Inicio}\end{center}
+
+  \begin{enumerate}
+    \item Observa los anuncios.
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{llantas.png}
+            % \captionof{figure}{}
+            % \label{fig:llantas}
+          \end{figure}
+          \begin{enumerate}
+            \item Cuál es la mejor oferta si todas las llantas son del mismo tipo y marca?
+            \item Compara tu respuesta con la de tus compañeros y argumenten por qué su elección es la mejor.
+          \end{enumerate}
+  \end{enumerate}
+\end{boxK}
+\begin{enumerate}
+  \item Observa la nota del consumo del restaurante de la figura \ref{fig:nota_consumo} y
+        contesten.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.2\linewidth]{nota_consumo.png}
+          \captionof{figure}{}
+          \label{fig:nota_consumo}
+        \end{figure}
+        \begin{enumerate}
+          \item Como propina, los comensales quieren dejar 10\% del precio de su consumo. ¿Qué cantidad deben anotar en la nota?
+          \item Y si la cuenta fuera de \$534.00, ¿cuánto sería de propina?
+          \item Escriban un procedimiento para obtener el 10\% de una cantidad.
+          \item Comparen sus procedimientos con los del grupo. ¿Son iguales o diferentes? ¿Todos son correctos? Argumenten sus respuestas y valídenlas en grupo.
+        \end{enumerate}
+        \begin{boxH}
+          Cuando a una cantidad se aplica el tanto por ciento se involucran tres
+          datos: el tanto por ciento o \textbf{tasa}, la cantidad a la que se le aplica esa tasa
+          (\textbf{cantidad base}) y el resultado (\textbf{porcentaje}).
+        \end{boxH}
+  \item Calcula los porcentajes.
+        \begin{enumerate}
+          \item Obtengan el 10\% de las siguientes cantidades.\\
+                \begin{hoptions}
+                  \item 25
+                  \item 36.8
+                  \item 2445.9
+                  \item 66
+                \end{hoptions}
+          \item Obtengan el 5\%.\\
+                \begin{hoptions}
+                  \item 25
+                  \item 36.8
+                  \item 2445.9
+                  \item 66
+                \end{hoptions}
+          \item Calculen el 20\%.\\
+                \begin{hoptions}
+                  \item 25
+                  \item 36.8
+                  \item 2445.9
+                  \item 66
+                \end{hoptions}
+          \item ¿Qué procedimiento siguieron para obtener los resultados? Explíquenlo al resto del grupo y valídenlos.
+          \item Explica cómo calcular mentalmente el 1\% de cualquier cantidad.
+        \end{enumerate}
+  \item Calcula el 1\% de las siguientes cantidades.\\
+        \begin{hoptions}
+          \item 115.1
+          \item 780
+          \item 300
+          \item 66.6
+        \end{hoptions}
+  \item Calcula los porcentajes de las cantidades de la tabla \ref{fig:tabla_porciento}.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.8\linewidth]{tabla_porciento.png}
+          \captionof{figure}{}
+          \label{fig:tabla_porciento}
+        \end{figure}
+  \item Realiza los siguientes ejercicios.
+        \begin{enumerate}
+          \item Calculen el 35\% de 240 pesos.
+          \item Escriban 35\% como una fracción con denominador 100.
+          \item Completen la siguiente proporción.
+                \[\dfrac{35}{100} = \dfrac{}{240}\]
+          \item Comparen su resultado con el inciso a. ¿Qué observan?
+          \item Expliquen cómo calcular el porcentaje de una cantidad dada la tasa. Compartan
+                sus propuestas en grupo y propongan ejercicios para aplicarlas. Verifiquen los re-
+                sultados y utilícenlos como validación de sus procedimientos.
+        \end{enumerate}
+  \item Analiza la afirmación del recuadro.
+        \begin{boxH}
+          Para calcular el porcentaje de una cantidad basta multiplicar la cantidad base por
+          la tasa y dividir entre 100.
+        \end{boxH}
+        \begin{enumerate}
+          \item ¿Es correcta? ¿Por qué?
+        \end{enumerate}
+\end{enumerate}
+
+\begin{boxK}
+  \begin{center}\textbf{Cierre}\end{center}
+
+  \begin{enumerate}
+    \item Retoma la actividad de la situación inicial y según lo que aprendiste en la lec-
+          ción determina cuál es la oferta más económica. Observa que el hecho de
+          anunciar un gran descuento no significa forzosamente un precio más barato.
+    \item En una tienda anuncian un 20\% de descuento en todos sus productos. Observa
+          la computadora.
+          \begin{enumerate}
+            \item \item ¿Cuál es su precio después de la rebaja? ¿Cómo obtuviste ese resultado?
+            \item Calcula el 80\% del precio de la computadora y compara tu resultado con el del inciso a. ¿Qué observas?
+            \item ¿Cómo calcularías el precio con descuento de una televisión que cuesta \$2 340.00? Indica su precio final.
+            \item Compara tus resultados y procedimientos con los de tus compañeros y valídenlos con ayuda de su profesor.
+          \end{enumerate}
+  \end{enumerate}
+\end{boxK}
+\newpage
 \subsection{Porcentajes y aplicaciones}
+\begin{boxK}
+  \begin{center}\textbf{Inicio}\end{center}
+
+  \begin{enumerate}
+    \item El entrenador de un equipo de beisbol debe comprar guantes y bates para todo el equipo.
+          Revisa las ofertas de las tiendas El guante de oro y El bateador.
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=.5\linewidth]{tiendas.png}
+            \captionof{figure}{}
+            \label{fig:tiendas}
+          \end{figure}
+          \begin{enumerate}
+            \item ¿En qué tienda el guante tiene mayor descuento en pesos?
+            \item ¿En cuál tiene mayor tasa de descuento?
+            \item ¿En cuál tienda son más baratos los bates?
+            \item ¿Cuáles bates tienen mayor tasa de descuento?
+            \item ¿Dónde comprarías tres bates y nueve guantes?
+            \item ¿Cuánto pagarías y cuánto ahorrarías?
+            \item Compara tus resultados y tus procedimientos con los de tus
+                  compañeros y argumenten por qué piensan que su elección
+                  es correcta.
+          \end{enumerate}
+  \end{enumerate}
+\end{boxK}
+
+\begin{enumerate}
+  \item La gráfica muestra la composición de una escuela de 2 400 personas.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.5\linewidth]{escuela_pie.png}
+          \captionof{figure}{}
+          \label{fig:escuela_pie}
+        \end{figure}
+        \begin{enumerate}
+          \item ¿Cuántas personas trabajan en la administración?
+          \item ¿Cuántos profesores hay en esa escuela?
+          \item ¿Cuántas personas son auxiliares?
+          \item ¿Cuál es el porcentaje de alumnos?
+          \item ¿Cuántos alumnos tiene la escuela?
+        \end{enumerate}
+  \item Don Lupe es carpintero y comenta que el precio de la madera aumentó 8\%, por lo
+        que piensa cobrar 8\% más en todos los muebles y objetos que fabrique.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.3\linewidth]{donLupe.png}
+          \captionof{figure}{}
+          \label{fig:donLupe}
+        \end{figure}
+        \begin{enumerate}
+          \item Él considera que cobrando el 108\% del precio original de sus productos estaría cobrando el incremento que pretende. ¿Su razonamiento es correcto? Explica.
+          \item ¿Cuál sería el nuevo precio de una silla que costaba 250 pesos?
+        \end{enumerate}
+  \item En una tienda departamental Constanza compró el juego de sartenes que muestra
+        el anuncio. El precio original era de \$348.00 y la cajera le comentó que sobre el
+        precio final debía pagar el 16\% de IVA . Constanza sugirió pagar primero el iva y
+        después aplicar el descuento para, de esa manera, pagar menos.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.3\linewidth]{sartenes.png}
+          \captionof{figure}{}
+          \label{fig:sartenes}
+        \end{figure}
+        \begin{enumerate}
+          \item ¿El razonamiento de Constanza es correcto? Explica.
+          \item Compartan sus respuestas en grupo. ¿Creen que es mejor primero cobrar el IVA y
+                luego hacer el descuento o al revés? ¿Por qué?
+        \end{enumerate}
+  \item Resuelve los siguientes problemas.
+        \begin{enumerate}
+          \item En la papelería La goma todos los precios incluyen IVA. Si el impuesto
+                (16\%) que se paga por los colores es de \$4.00, ¿cuál es su precio sin IVA?
+          \item En la misma papelería el papel para dibujo está en oferta. Si al precio,
+                \$165.00, se le descuentan \$24.75, ¿de cuánto es la tasa de descuento?
+
+          \item ¿Cómo obtuvieron el resultado de cada uno de los incisos anteriores? Expliquen
+                sus procedimientos ante el grupo y entre todos propongan procedimientos para
+                calcular la cantidad base dadas la tasa y el porcentaje, y para obtener la tasa,
+                dadas la cantidad base y el porcentaje.
+        \end{enumerate}
+\end{enumerate}
+
+\begin{boxK}
+  \begin{center}\textbf{Cierre}\end{center}
+
+  Retoma la actividad de la situación inicial y determina dónde es más conve-
+  niente comprar cada artículo deportivo. ¿Cuánto se ahorraría? ¿Coinciden tus
+  respuestas con las que obtuviste al inicio? Valídalas con el resto del grupo
+\end{boxK}
+
+\begin{boxH}
+  Como en la mercería El resguardo están reetiquetando toda la mercancía, el ge-
+  rente indica que el precio en la etiqueta debe incluir un descuento de 5\% y el 16\%
+  del IVA . Una empleada piensa que basta con aumentar los precios un 11\%. ¿Su razonamiento es correcto? Justifica tu respuesta con ejemplos.
+\end{boxH}
+
+
 
 \newpage \thispagestyle{plain}
 \section{Perímetros y áreas}
