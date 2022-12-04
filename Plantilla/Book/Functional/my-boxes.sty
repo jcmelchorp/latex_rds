@@ -1,0 +1,155 @@
+\ProvidesPackage{my-boxes}
+
+% \usepackage{mathspec} 			    % for FONTS
+% \usepackage{setspace}               % for LINE SPACING
+% \setmainfont{Noto Sans}[
+%     Kerning = On,
+%     Mapping = tex-text,
+%     Numbers = Uppercase,
+%     BoldFont = Noto Sans SemiBold
+% ]                           % setting the font as Noto Sans
+% \setlength\parindent{0pt}   % killing indentation for all the text
+% \setstretch{1.3}            % setting line spacing to 1.3
+% \setlength\columnsep{0.25in} % setting length of column separator
+% \pagestyle{empty}           % setting pagestyle to be empty
+
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0.2cm,    % add extra space before the box
+    after skip = 0.5cm      % add extra space after the box
+}                           % setting global options for tcolorbox
+
+\newtcolorbox{practicabox}{
+    colback = colorrds!10,
+    enhanced,
+    boxrule = 1.5pt,
+    colframe = white, % making the base for dash line
+    borderline = {1.5pt}{0pt}{rdsdark, dashed} % add "dashed" for dashed line
+}
+
+\newtcolorbox{openbox}{
+    enhanced,    
+    sharpish corners, % better drop shadow
+    boxrule = 0pt,
+    toprule = 4.5pt, % top rule weight
+    colframe = rdsdark,
+    fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
+}
+\newtcolorbox{closebox}{
+    enhanced,    
+    sharpish corners, % better drop shadow
+    boxrule = 0pt,
+    bottomrule = 4.5pt, % top rule weight
+    colframe = rdsdark,
+    fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
+}
+
+\newtcolorbox{bA}{
+    %sharpish corners, % b
+    enhanced,
+    %colback = colorrds!30, % background color
+    boxrule = 0.2pt,  % no borders
+    %borderline = {1pt}{1pt}{black!35}, % add "dashed" for dashed line
+    %fontupper = \bf\color{black}, % font color
+    %colframe = rdsdark % frame color
+    rounded corners,
+    %arc = 5pt,   % corners roundness
+    fuzzy shadow = {2pt}{-4pt}{-1pt}{1pt}{black!35}, % {xshift}{yshift}{offset}{step}{options} 
+    %toprule = 3pt, % top rule weight
+    %bottomrule = 3pt % bottom rule weight
+}
+% You can copy any following box you like to your code.
+\newtcolorbox{boxA}{
+    fontupper = \bf,
+    boxrule = 1.5pt,
+    colframe = black % frame color
+}
+
+\newtcolorbox{boxB}{
+    fontupper = \bf\color{rdsdark}, % font color
+    boxrule = 1.5pt,
+    colframe = rdsdark,
+    rounded corners,
+    arc = 5pt   % corners roundness
+}
+
+\newtcolorbox{boxC}{
+    colback = colorrds!30, % background color
+    boxrule = 0pt  % no borders
+}
+
+\newtcolorbox{boxD}{
+    colback = colorrds!30,
+    colframe = rdsdark,
+    boxrule = 0pt,
+    toprule = 3pt, % top rule weight
+    bottomrule = 3pt % bottom rule weight
+}
+
+\newtcolorbox{boxE}{
+    enhanced, % for a fancier setting,
+    boxrule = 0pt, % clearing the default rule
+    borderline = {0.75pt}{0pt}{rdsdark}, % outer line
+    borderline = {0.75pt}{2pt}{colorrds!30} % inner line
+}
+
+
+
+\newtcolorbox{boxG}{
+    enhanced,
+    boxrule = 0pt,
+    colback = colorrds!30,
+    borderline west = {1pt}{0pt}{rdsdark},
+    borderline west = {0.75pt}{2pt}{rdsdark},
+    borderline east = {1pt}{0pt}{rdsdark},
+    borderline east = {0.75pt}{2pt}{rdsdark}
+}
+
+\newtcolorbox{boxH}{
+    colback = colorrds!10,
+    colframe = colorrds,
+    boxrule = 0pt,
+    leftrule = 6pt % left rule weight
+}
+
+\newtcolorbox{boxI}{
+    colback = colorrds!30,
+    colframe = rdsdark,
+    boxrule = 0pt,
+    toprule = 6pt % top rule weight
+}
+
+\newtcolorbox{boxJ}{
+    sharpish corners, % better drop shadow
+    colback = colorrds!30,
+    colframe = rdsdark,
+    boxrule = 0pt,
+    toprule = 4.5pt, % top rule weight
+    enhanced,
+    fuzzy shadow = {0pt}{-2pt}{-0.5pt}{0.5pt}{black!35} % {xshift}{yshift}{offset}{step}{options} 
+}
+
+
+
+\newtcolorbox{boxL}{
+    fontupper = \color{rdsdark},
+    rounded corners,
+    arc = 6pt,
+    colback = colorrds!30,
+    colframe = rdsdark!50,
+    boxrule = 0pt,
+    bottomrule = 4.5pt
+}
+
+\newtcolorbox{boxM}{
+    fontupper = \color{white},
+    rounded corners,
+    arc = 6pt,
+    colback = rdsdark!80,
+    colframe = rdsdark,
+    boxrule = 0pt,
+    bottomrule = 4.5pt,
+    enhanced,
+    fuzzy shadow = {0pt}{-3pt}{-0.5pt}{0.5pt}{black!35}
+}

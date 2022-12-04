@@ -1,0 +1,39 @@
+\documentclass[11pt]{book}
+\usepackage{Functional/my-package}
+\usepackage{Functional/fancychaptersection}
+\usepackage{Functional/my-boxes}
+\usepackage{Functional/my-preamble}
+\begin{document}
+\pagestyle{empty}
+\newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
+\include{Functional/cover}
+\restoregeometry
+\addtocontents{toc}{\setcounter{tocdepth}{3}}
+\tableofcontents
+\newpage
+\chapter{}
+\pagestyle{fancy}
+
+\newpage \thispagestyle{plain}
+
+\include{Sections/s1}
+
+\newpage \thispagestyle{plain}
+
+\include{Sections/s2}
+
+\newpage \thispagestyle{plain}
+
+\chapter{}
+
+\newpage \thispagestyle{plain}
+
+\include{Sections/s1}
+
+\newpage \thispagestyle{plain}
+
+\include{Sections/s2}
+
+\newpage \thispagestyle{plain}
+\section{Secci\'on 2}
+\end{document}
