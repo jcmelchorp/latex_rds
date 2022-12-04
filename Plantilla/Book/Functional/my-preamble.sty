@@ -71,6 +71,18 @@
 }{ \end{closebox}}
 \newenvironment{problemas}[1]{
     \begin{practicabox}
-        \begin{center}\color{rdsdark}\textbf{Problemas}\end{center}
+        \begin{center}\color{OliveDrab}\textbf{Problemas}\end{center}
         #1
 }{ \end{practicabox}}
+\newenvironment{important}[3][\textwidth]{
+    \begin{minipage}[t]{#1}
+    \begin{importantbox}
+        \begin{minipage}{.8cm}
+            \includegraphics[width=.8cm]{Images/keys.png}
+        \end{minipage}
+        \color{rdsdark}\textbf{\Large #2}\\
+        #3
+}{ 
+    \end{importantbox}% 
+\end{minipage}%
+}

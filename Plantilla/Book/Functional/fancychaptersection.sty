@@ -90,3 +90,19 @@
             \end{tikzpicture}
         }
 \titlespacing*{\subsection}{0pt}{10pt}{35pt}
+
+%%%%%%%%%%%%%%%%% SUBSUBSECTION
+\newcommand*\subsubsectionlabel{}
+\titleformat{\subsubsection}
+{\gdef\subsubsectionlabel{}
+\fontsize{12}{15}\selectfont\comfortaa\bfseries
+}
+{\gdef\subsubsectionlabel{}}{0pt}
+{
+    \begin{minipage}{0.6\textwidth}
+        \begin{subsubsectionBox}
+            #1
+        \end{subsubsectionBox}
+    \end{minipage}
+        }
+\titlespacing*{\subsubsection}{0pt}{10pt}{1ex}

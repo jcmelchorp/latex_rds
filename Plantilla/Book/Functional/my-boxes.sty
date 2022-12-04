@@ -20,12 +20,32 @@
     after skip = 0.5cm      % add extra space after the box
 }                           % setting global options for tcolorbox
 
-\newtcolorbox{practicabox}{
+\newtcolorbox{subsubsectionBox}{
+    rounded corners,
+    arc = 5pt,
+    colback = DarkGoldenrod!50,
+    colframe = rdsdark!40,
+    boxrule = 0pt,
+    toprule = 2pt,
+    leftrule = 2pt,
+    enhanced,
+    fuzzy shadow = {1mm}{-2pt}{-2pt}{-1pt}{black!50!white}
+}
+
+\newtcolorbox{importantbox}{
+    enhanced,
     colback = colorrds!10,
+    colframe = rdsdark,
+    boxrule = 0pt,
+    leftrule = 6pt % left rule weight
+}
+
+\newtcolorbox{practicabox}{
+    colback = DarkGoldenrod!10,
     enhanced,
     boxrule = 1.5pt,
     colframe = white, % making the base for dash line
-    borderline = {1.5pt}{0pt}{rdsdark, dashed} % add "dashed" for dashed line
+    borderline = {1.5pt}{0pt}{OliveDrab, dashed} % add "dashed" for dashed line
 }
 
 \newtcolorbox{openbox}{
@@ -106,12 +126,7 @@
     borderline east = {0.75pt}{2pt}{rdsdark}
 }
 
-\newtcolorbox{boxH}{
-    colback = colorrds!10,
-    colframe = colorrds,
-    boxrule = 0pt,
-    leftrule = 6pt % left rule weight
-}
+
 
 \newtcolorbox{boxI}{
     colback = colorrds!30,
@@ -142,14 +157,3 @@
     bottomrule = 4.5pt
 }
 
-\newtcolorbox{boxM}{
-    fontupper = \color{white},
-    rounded corners,
-    arc = 6pt,
-    colback = rdsdark!80,
-    colframe = rdsdark,
-    boxrule = 0pt,
-    bottomrule = 4.5pt,
-    enhanced,
-    fuzzy shadow = {0pt}{-3pt}{-0.5pt}{0.5pt}{black!35}
-}
