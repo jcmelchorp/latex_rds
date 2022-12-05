@@ -3,8 +3,12 @@
 \definecolor{rdsdark}{HTML}{003050} 
 \decimalpoint
 %\captionsetup{width=.45\textwidth}
-\setlength{\parindent}{0pt}
-\graphicspath{{./Images}} %Setting the graphicspath
+%\setlength{\parindent}{0pt}
+\addtocontents{toc}{\setcounter{tocdepth}{4}}
+\setcounter{minitocdepth}{3}
+\nomtcrule         % removes rules = horizontal lines from minitocs
+\mtcsettitle{minitoc}{}
+\nomtcpagenumbers  % remove page numbers from minitocs
 %%% Headings and footer
 \cfoot{\thepage}
 \newlist{hoptboxes}{itemize*}{1}
@@ -15,7 +19,7 @@
 \renewcommand\spanishtablename{Tabla}
 \renewcommand{\headrulewidth}{0.2pt}
 \renewcommand{\footrulewidth}{0.2pt}
-
+\newenvironment{keyfont}{\fontfamily{es}\selectfont}{\par}
 \newenvironment{mybox}[3][]{%
     \begin{tikzpicture}[#1]%
         \def\myboxname{#3}%
@@ -75,12 +79,12 @@
         #1
 }{ \end{practicabox}}
 \newenvironment{important}[3][\textwidth]{
-    \begin{minipage}[t]{#1}
+    \noindent\begin{minipage}{#1}
     \begin{importantbox}
-        \begin{minipage}{.8cm}
-            \includegraphics[width=.8cm]{Images/keys.png}
-        \end{minipage}
-        \color{rdsdark}\textbf{\Large #2}\\
+        \parbox{7mm}{\raisebox{2mm}{
+            \includegraphics[width=7mm]{Images/keys.png}
+        }}
+        {\fontsize{16}{18}\selectfont\initfamily\bfseries\color{rdsdark} #2}\\
         #3
 }{ 
     \end{importantbox}% 

@@ -1,4 +1,4 @@
-\documentclass[11pt]{book}
+\documentclass[11pt,twoside]{book}
 \usepackage{Functional/my-package}
 \usepackage{Functional/fancychaptersection}
 \usepackage{Functional/my-boxes}
@@ -6,14 +6,15 @@
 \begin{document}
 \pagestyle{empty}
 \newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
-\include{Functional/cover}
+\include{Sections/cover}
 \restoregeometry
-\addtocontents{toc}{\setcounter{tocdepth}{3}}
+\dominitoc[n]
 \tableofcontents
-\newpage
-\chapter{}
 \pagestyle{fancy}
-
+\newpage \thispagestyle{plain}
+\chapter{Unidad 1}
+ {\Large \comfortaa En esta unidad estudiaremos \dots}
+\minitoc
 \newpage \thispagestyle{plain}
 
 \include{Sections/s1}
@@ -24,7 +25,7 @@
 
 \newpage \thispagestyle{plain}
 
-\chapter{}
+\chapter{Unidad 2}
 
 \newpage \thispagestyle{plain}
 
@@ -34,6 +35,4 @@
 
 \include{Sections/s2}
 
-\newpage \thispagestyle{plain}
-\section{Secci\'on 2}
 \end{document}

@@ -16,20 +16,20 @@
 \tcbset{
     sharp corners,
     colback = white,
-    before skip = 0.2cm,    % add extra space before the box
+    before skip = 0.1cm,    % add extra space before the box
     after skip = 0.5cm      % add extra space after the box
 }                           % setting global options for tcolorbox
 
 \newtcolorbox{subsubsectionBox}{
+    enhanced,
     rounded corners,
-    arc = 5pt,
+    arc = 3pt,
     colback = DarkGoldenrod!50,
     colframe = rdsdark!40,
     boxrule = 0pt,
     toprule = 2pt,
     leftrule = 2pt,
-    enhanced,
-    fuzzy shadow = {1mm}{-2pt}{-2pt}{-1pt}{black!50!white}
+    fuzzy shadow = {1mm}{-1pt}{-1pt}{-1pt}{black!50!white}
 }
 
 \newtcolorbox{importantbox}{

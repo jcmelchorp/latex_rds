@@ -20,7 +20,7 @@
                         shadow blur extra rounding=2pt
                         },
                     fill=DimGray!60]
-                {\color{DarkGray!10}\textbf{\chapterlabel#1}};
+                {\color{DarkGray!10}\textbf{#1}};
             \end{tikzpicture}
         };
     \end{tikzpicture}
@@ -99,7 +99,7 @@
 }
 {\gdef\subsubsectionlabel{}}{0pt}
 {
-    \begin{minipage}{0.6\textwidth}
+    \begin{minipage}{\textwidth}
         \begin{subsubsectionBox}
             #1
         \end{subsubsectionBox}

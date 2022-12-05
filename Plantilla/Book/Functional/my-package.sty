@@ -1,7 +1,11 @@
 \ProvidesPackage{my-package}
 \usepackage[spanish]{babel}
+%\usepackage{electrum} %% lf option gives lining figures as default; remove option to get oldstyle figures as default
 \usepackage{comfortaa}
 \usepackage[T1]{fontenc}
+%\newfontfamily{\electrum}{Electrum}
+%\input Typocaps.fd
+\newcommand*\initfamily{\usefont{U}{Oswald}{xl}{n}}
 \usepackage[utf8x]{inputenc}
 \usepackage[
     letterpaper,
@@ -37,6 +41,8 @@
 \usepackage[explicit]{titlesec}
 \usepackage[many]{tcolorbox}
 \usepackage{blindtext}
+\usepackage{import}
+\usepackage[undotted]{minitoc}
 \usepackage{subfiles} % Best loaded last in the preamble
 \usetikzlibrary{
     arrows,
@@ -62,10 +68,14 @@
     plotmarks,
     spy,
     tikzmark}
-    \makeatletter
+\graphicspath{{./Images}} %Setting the graphicspath
+\makeatletter
 \@removefromreset{section}{chapter}
 \makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
+\addto\captionsspanish{%
+    \renewcommand{\chaptername}{Unidad}
+    \renewcommand{\contentsname}{Contenido} 
+}
 \renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\thesubsection}{L\arabic{subsection}}
