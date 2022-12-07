@@ -1,11 +1,14 @@
 \ProvidesPackage{my-package}
 \usepackage[spanish]{babel}
 %\usepackage{electrum} %% lf option gives lining figures as default; remove option to get oldstyle figures as default
+\usepackage{addfont}
+\usepackage{bbold}
 \usepackage{comfortaa}
+\usepackage{emerald}
 \usepackage[T1]{fontenc}
 %\newfontfamily{\electrum}{Electrum}
-%\input Typocaps.fd
-\newcommand*\initfamily{\usefont{U}{Oswald}{xl}{n}}
+\addfont{OT1}{cmgray}{\cmgray}
+\input{GotIn.fd}
 \usepackage[utf8x]{inputenc}
 \usepackage[
     letterpaper,
@@ -34,6 +37,7 @@
 \usepackage{caption,capt-of}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
+\usepackage{tikzpagenodes}
 \usepackage{etoolbox}
 \usepackage{pdflscape}
 \usepackage{anyfontsize}

@@ -4,6 +4,7 @@
 \decimalpoint
 %\captionsetup{width=.45\textwidth}
 %\setlength{\parindent}{0pt}
+
 \addtocontents{toc}{\setcounter{tocdepth}{4}}
 \setcounter{minitocdepth}{3}
 \nomtcrule         % removes rules = horizontal lines from minitocs
@@ -11,6 +12,7 @@
 \nomtcpagenumbers  % remove page numbers from minitocs
 %%% Headings and footer
 \cfoot{\thepage}
+
 \newlist{hoptboxes}{itemize*}{1}
 \setlist[hoptboxes,1]{label=\Large$\square$, font=\color{colorrds},itemjoin={{\quad}},leftmargin = 1cm}
 \newlist{hoptions}{enumerate*}{1}
@@ -51,6 +53,8 @@
         % drop shadow,
                }
 }
+\newcommand*\alterfont{\fontfamily{lmtt}\selectfont}
+
 \newcommand{\boxabstract}[3][fill=white]{
   \begin{tikzpicture}
     \node [abstractbox, #1] (box)
@@ -75,16 +79,21 @@
 }{ \end{closebox}}
 \newenvironment{problemas}[1]{
     \begin{practicabox}
-        \begin{center}\color{OliveDrab}\textbf{Problemas}\end{center}
+        \begin{center}\color{OliveDrab}\bbfamily\textbf{Problemas}\end{center}
         #1
 }{ \end{practicabox}}
+\newenvironment{critico}[1]{
+    \begin{criticobox}
+        \begin{center}\color{OliveDrab}\textbf{Piensa y se cr\'itico}\end{center}
+        #1
+}{ \end{criticobox}}
 \newenvironment{important}[3][\textwidth]{
     \noindent\begin{minipage}{#1}
     \begin{importantbox}
         \parbox{7mm}{\raisebox{2mm}{
             \includegraphics[width=7mm]{Images/keys.png}
         }}
-        {\fontsize{16}{18}\selectfont\initfamily\bfseries\color{rdsdark} #2}\\
+        {\fontsize{16}{18}\selectfont\alterfont\bfseries\color{rdsdark} #2}\\
         #3
 }{ 
     \end{importantbox}% 

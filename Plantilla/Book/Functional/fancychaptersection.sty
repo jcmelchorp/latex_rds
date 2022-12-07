@@ -9,10 +9,14 @@
 {\begin{tikzpicture}[remember picture,overlay]
         \node[yshift=-3cm] at (current page.north west)
         {\begin{tikzpicture}[remember picture, overlay]
+                 \fill[OliveDrab,even odd rule] (current page.south west)
+                rectangle (current page.north east)
+                ([xshift=-1.5cm,yshift=-1.5cm]current page text area.south west) 
+                rectangle ([xshift=1.5cm,yshift=1cm]current page text area.north east);
                 \draw[draw=none,fill=SaddleBrown] (0,0) rectangle
                 (\paperwidth,3cm);
                 \node[anchor=east,xshift=.9\paperwidth,rectangle,
-                    rounded corners=2pt,inner xsep=50pt,inner ysep=20pt,
+                    rounded corners=8pt,inner xsep=50pt,inner ysep=20pt,
                     blur shadow={
                         shadow opacity=30, 
                         shadow yshift=-2mm,
@@ -53,7 +57,7 @@
                     fill=DarkGoldenrod,
                     %drop shadow={fill=black, opacity=1},
                 ]
-                {\color{DarkGray!10}\sectionlabel#1};
+                {\color{DarkGray!10} \ECFDecadenceInTheDarkCondensedMarquee \sectionlabel#1};
                 \node[anchor=west,xshift=0.1\paperwidth, rectangle, rounded corners=5pt, inner sep=8pt,fill=colorrds]
                 {  \color{DarkGray!05}\textbf{\Huge\thesection} };
             \end{tikzpicture}
