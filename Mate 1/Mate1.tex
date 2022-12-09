@@ -1,9 +1,17 @@
 \documentclass[11pt]{book}
 %\usepackage[subpreambles=true]{standalone}
 \usepackage[spanish]{babel}
+%\usepackage{electrum} %% lf option gives lining figures as default; remove option to get oldstyle figures as default
+\usepackage{addfont}
+\usepackage{bbold}
 \usepackage{comfortaa}
+% \usepackage{emerald}
 \usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
+\newenvironment{keyfont}{\fontfamily{es}\selectfont}{\par}
+\newcommand*\alterfont{\fontfamily{lmtt}\selectfont}
+\addfont{OT1}{cmgray}{\cmgray}
+\input{GotIn.fd}
 \usepackage[
 letterpaper,
 left=1in, 
@@ -17,7 +25,7 @@ headheight=10mm,% Set \headheight to 10mm
 \usepackage{bookmark}
 \usepackage{fancyhdr}
 \usepackage{color, colortbl}
-\usepackage[dvipsnames,table]{xcolor} % Required for custom color
+\usepackage[svgnames,x11names,usenames,dvipsnames,table]{xcolor} % Required for custom color
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{multicol,multirow}
@@ -26,10 +34,11 @@ headheight=10mm,% Set \headheight to 10mm
 \usepackage{remreset}
 \usepackage[inline]{enumitem}
 \usepackage{xparse}
+\usepackage{tikz}
 \usepackage{wrapfig}
 \usepackage{caption,capt-of}
 \usepackage{amssymb,amsmath}
-\usepackage{tikz}
+\usepackage{Functional/my-boxes}
 \usepackage{etoolbox}
 \usepackage{pdflscape}
 \usepackage[explicit]{titlesec}
@@ -38,61 +47,41 @@ headheight=10mm,% Set \headheight to 10mm
 \include{Functional/fancychapter}
 \include{Functional/fancysection}
 \include{Functional/def_tcolorbox}
+\usetikzlibrary{
+    arrows,
+    positioning,
+    matrix,
+    calc,
+    decorations.pathreplacing,
+    decorations.pathmorphing,
+    decorations.markings,
+    decorations.text,
+    shapes,
+    shapes.symbols,
+    backgrounds,
+    shadows,
+    shadows.blur,
+    trees,
+    fit,
+    snakes,
+    patterns,
+    mindmap,
+    intersections,
+    calendar,
+    plotmarks,
+    spy,
+    tikzmark}
 \decimalpoint
 %\captionsetup{width=.45\textwidth}
 \setlength{\parindent}{0pt}
 \graphicspath{{./Images}} %Setting the graphicspath
 \definecolor{colorrds}{HTML}{0060A0} % Custom colour
+\definecolor{rdsdark}{HTML}{003050} 
 %%% Headings and footer
 \renewcommand\spanishtablename{Tabla}
 \cfoot{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 \renewcommand{\footrulewidth}{0.2pt}
-%%%
-\usetikzlibrary{
-  arrows,
-  positioning,
-  matrix,
-  calc,
-  decorations.pathreplacing,
-  decorations.pathmorphing,
-  decorations.markings,
-  decorations.text,
-  shapes,
-  shapes.symbols,
-  backgrounds,
-  shadows.blur,
-  trees,
-  fit,
-  snakes,
-  patterns,
-  mindmap,
-  intersections,
-  calendar,
-  plotmarks,
-  spy,
-  tikzmark}
-
-%%%% APRENDISAJES TEXTBOX
-\tikzset{
-  abstractbox/.style={
-    draw=black, fill=white, rectangle, 
-    inner sep=15pt, style=rounded corners,
-    drop shadow={fill=black, opacity=1}
-  },
-  abstracttitle/.style={fill=white}
-}
-\newcommand{\boxabstract}[2][fill=white]{
-  \begin{tikzpicture}
-    \node [abstractbox, #1] (box)
-    {\begin{minipage}{0.9\linewidth}
-        \setlength{\parindent}{0mm} % Indentar.
-        \normalfont #2
-      \end{minipage}};
-    \node[abstracttitle, right=5pt] at (box.north west) {\textbf{Aprendizajes esperados:}};
-    \node[draw=none, fit=(box)] {};
-  \end{tikzpicture}
-}%
 %%%%%%%%%%%%%%%%%%%%%%%%
 %\renewcommand{\labelenumi}{\mbox{\arabic{enumi}}}
 %\%renewcommand{\labelitemi}{$\square$}
@@ -118,23 +107,6 @@ headheight=10mm,% Set \headheight to 10mm
 \newlist{hoptions}{enumerate*}{1}
 \setlist[hoptions,1]{label=(\alph*), font=\color{colorrds},itemjoin={{\quad}},leftmargin = 1cm}
 %%%%%%%%%%%%% END questions env
-\newenvironment{mybox}[3][]{%
-  \begin{tikzpicture}[#1]%
-    \def\myboxname{#3}%
-    % good options: minimum height, minimum width
-    \node [draw, inner sep=2ex,  align=justify]
-      (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
-  }{%
-    \egroup;
-    \node [right, inner sep=3pt, fill=colorrds!75, outer sep=0pt, 
-      text height=2ex, text depth=.5ex] (BOXNAME) 
-      at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
-    \fill[colorrds] (BOXNAME.north east) -- +(-1em,1em)
-      -- +(-1em,0) -- cycle;
-    \fill[colorrds] (BOXNAME.south west) -- +(1em,-1em)
-      -- +(1em,0) -- cycle;
-  \end{tikzpicture}
-}
 \begin{document}
 \pagestyle{empty}
 \newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
@@ -189,7 +161,7 @@ headheight=10mm,% Set \headheight to 10mm
 \chapter{}
 \newpage \thispagestyle{plain}
 \section{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
-\boxabstract{
+\boxabstract{Aprendizajes esperados}{
   Determina y usa la jerarquía de operaciones y los paréntesis en operaciones con números naturales, enteros y
   decimales (para multiplicación y división, sólo números positivos).
 }
@@ -278,9 +250,16 @@ Por ultimo el resultado es el número 11.
 
 \[4 - 6 / 2 + 5 \times 2 = 11\]
 
+\newpage
+
+
+\begin{problemas}
+
+\end{problemas}
+
 \newpage \thispagestyle{plain}
 \section{Resolución de problemas con valores faltantes}
-\boxabstract{Calcula valores faltantes en problemas de proporcionalidad directa,
+\boxabstract{Aprendizajes esperados}{Calcula valores faltantes en problemas de proporcionalidad directa,
   con constante natural, fracción o decimal (incluyendo tablas de variación).}
 
 \subsection{Proporcionalidad directa y valor faltante}
@@ -705,7 +684,7 @@ Por ultimo el resultado es el número 11.
 \newpage \thispagestyle{plain}
 \section{Porcentajes}
 
-\boxabstract{Resuelve problemas de cálculo de porcentajes, de tanto por ciento y de la cantidad base.}
+\boxabstract{Aprendizajes esperados}{Resuelve problemas de cálculo de porcentajes, de tanto por ciento y de la cantidad base.}
 
 \subsection{Tanto por ciento}
 
@@ -1040,9 +1019,11 @@ Por ultimo el resultado es el número 11.
 
 \newpage \thispagestyle{plain}
 \section{Perímetros y áreas}
-\boxabstract{Calcula el perímetro de polígonos y del círculo, y áreas de triángulos y cuadriláteros desarrollando
+\boxabstract{Aprendizajes esperados}{Calcula el perímetro de polígonos y del círculo, y áreas de triángulos y cuadriláteros desarrollando
   y aplicando fórmulas.}
+
 \subsection{Perímetro de polígonos}
+
 \begin{boxK}
   \begin{center}\textbf{Inicio}\end{center}
 
@@ -1649,8 +1630,11 @@ Por ultimo el resultado es el número 11.
 
 \newpage \thispagestyle{plain}
 \section{Ecuaciones lineales}
-\boxabstract{Resuelve problemas mediante la formulación y solución algebraica de ecuaciones lineales.}
+
+\boxabstract{Aprendizajes esperados}{Resuelve problemas mediante la formulación y solución algebraica de ecuaciones lineales.}
+
 \subsection{Formulación de ecuaciones}
+
 \subsection{Solución de una ecuación}
 
 
@@ -1658,8 +1642,13 @@ Por ultimo el resultado es el número 11.
 
 \newpage \thispagestyle{plain}
 \section{Resolución de ecuaciones lineales}
-\boxabstract{Resuelve problemas mediante la formulación y solución algebraica de ecuaciones lineales.}
+
+\boxabstract{Aprendizajes esperados}{Resuelve problemas mediante la formulación y solución algebraica de ecuaciones lineales.}
+
+
 \subsection{Propiedades de la igualdad}
+
+
 \subsection{Más sobre ecuaciones lineales}
 
 
@@ -1668,10 +1657,14 @@ Por ultimo el resultado es el número 11.
 
 
 \newpage \thispagestyle{plain}
+
 \section{Medidas de tendencia central}
-\boxabstract{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana) y el
+
+\boxabstract{Aprendizajes esperados}{Aprendizajes esperados}{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana) y el
   rango de un conjunto de datos, y decide cuál de ellas conviene más en el análisis de los datos en cuestión.}
+
 \subsection{Media aritm\'etica o promedio}
+
 \subsection{La media aritmética y el rango}
 
 
@@ -1680,9 +1673,11 @@ Por ultimo el resultado es el número 11.
 
 \newpage \thispagestyle{plain}
 \section{Moda, media aritmética y mediana}
-\boxabstract{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana) y
+
+\boxabstract{Aprendizajes esperados}{Aprendizajes esperados}{Usa e interpreta las medidas de tendencia central (moda, media aritmética y mediana) y
   el rango de un conjunto de datos, y decide cuál de ellas conviene más en el análisis de los datos en cuestión.
 }
+
 \subsection{Media aritm\'etica y mediana}
 
 \subsection{Moda}
@@ -1691,50 +1686,80 @@ Por ultimo el resultado es el número 11.
 \chapter{}
 
 \section{Situaciones de variación proporcional}
+
 \subsection{Comparación de situaciones de variación proporcional con tablas}
+
 \subsection{Comparación de situaciones de variación proporcional con gráficas}
+
 \subsection{Comparación de situaciones de variación proporcional con expresiones algebraicas}
 
 
 
 
 \newpage \thispagestyle{plain}
+
 \section{Pendiente de una recta y razón de cambio}
+
 \subsection{Variación proporcional y pendiente}
+
 \subsection{Razón de cambio y variación}
+
 \subsection{Efectos en la recta al cambiar la pendiente}
 
 \newpage \thispagestyle{plain}
+
 \section{Análisis y comparación de situaciones de variación lineal}
+
 \subsection{Efectos de la recta al cambiar la ordenada al origen}
+
 \subsection{Situaciones de variación lineal asociadas a la física, la biología y la economía}
 
 \newpage \thispagestyle{plain}
+
 \section{Sucesiones y expresiones algebraicas}
+
 \subsection{Sucesiones numéricas}
+
 \subsection{Sucesiones con progresión aritmética}
 
+
 \newpage \thispagestyle{plain}
+
 \section{Congruencia de triángulos y aplicaciones}
+
 \subsection{Aplicaciones de congruencia de triángulos}
+
 \subsection{Aplicaciones a cuadriláteros}
 
 \newpage \thispagestyle{plain}
+
 \section{Vol\'umenes de prismas rectos}
+
 \subsection{Volumen de prismas rectos rectangulares}
+
 \subsection{Fórmula del volumen de prismas rectos}
 
+
 \newpage \thispagestyle{plain}
+
 \section{Gráficas circulares}
+
 \subsection{Recolecta y registra datos}
+
 \subsection{Registra datos en gráficas circulares}
+
 \subsection{Leer e interpretar datos en gráficas circulares}
 
 \newpage \thispagestyle{plain}
+
 \section{El azar y la probabilidad frecuencial}
+
 \subsection{Tipos, recolección y organización de datos}
+
 \subsection{Experimentos aleatorios y deterministas}
+
 \subsection{Espacio muestral de un experimento aleatorio}
+
 \subsection{Cálculo de la probabilidad frecuencial}
 
 

@@ -1,30 +1,5 @@
 \ProvidesPackage{my-boxes}
 \usepackage[many]{tcolorbox}
-\usepackage{tikz}
-\usetikzlibrary{
-    arrows,
-    positioning,
-    matrix,
-    calc,
-    decorations.pathreplacing,
-    decorations.pathmorphing,
-    decorations.markings,
-    decorations.text,
-    shapes,
-    shapes.symbols,
-    backgrounds,
-    shadows,
-    shadows.blur,
-    trees,
-    fit,
-    snakes,
-    patterns,
-    mindmap,
-    intersections,
-    calendar,
-    plotmarks,
-    spy,
-    tikzmark}
 % \usepackage{mathspec} 			    % for FONTS
 % \usepackage{setspace}               % for LINE SPACING
 % \setmainfont{Noto Sans}[
@@ -236,7 +211,7 @@
 }{ \end{closebox}}
 \newenvironment{problemas}[1]{
     \begin{practicabox}
-        \begin{center}\color{OliveDrab}\bbfamily\textbf{Problemas}\end{center}
+        \begin{center}\color{DarkOliveGreen}\fontsize{18}{18}\selectfont\bbfamily Problemas\end{center}
         #1
 }{ \end{practicabox}}
 \newenvironment{critico}[1]{
