@@ -23,8 +23,9 @@
 \newtcolorbox{subsubsectionBox}{
     enhanced,
     rounded corners,
+    fontupper = \color{white}, % font color
     arc = 3pt,
-    colback = DarkGoldenrod!50,
+    colback = SubsubsectionMainColor,
     colframe = rdsdark!40,
     boxrule = 0pt,
     toprule = 2pt,
@@ -155,6 +156,53 @@
     fuzzy shadow = {0pt}{-2pt}{-0.5pt}{0.5pt}{black!35} % {xshift}{yshift}{offset}{step}{options} 
 }
 
+\newtcolorbox{boxF}{
+    colback = sub,
+    enhanced,
+    boxrule = 1.5pt,
+    colframe = white, % making the base for dash line
+    borderline = {1.5pt}{0pt}{main, dashed} % add "dashed" for dashed line
+}
+
+
+
+\newtcolorbox{boxH}{
+    colback = colorrds!10,
+    colframe = colorrds,
+    boxrule = 0pt,
+    leftrule = 6pt % left rule weight
+}
+
+
+\newtcolorbox{boxK}{
+    sharpish corners, % better drop shadow
+    boxrule = 0pt,
+    toprule = 4.5pt, % top rule weight
+    enhanced,
+    fuzzy shadow = {0pt}{-4pt}{-1pt}{1pt}{black!35} % {xshift}{yshift}{offset}{step}{options} 
+}
+
+\newtcolorbox{boxL}{
+    fontupper = \color{main},
+    rounded corners,
+    arc = 6pt,
+    colback = sub,
+    colframe = main!50,
+    boxrule = 0pt,
+    bottomrule = 4.5pt
+}
+
+\newtcolorbox{boxM}{
+    fontupper = \color{white},
+    rounded corners,
+    arc = 6pt,
+    colback = main!80,
+    colframe = main,
+    boxrule = 0pt,
+    bottomrule = 4.5pt,
+    enhanced,
+    fuzzy shadow = {0pt}{-3pt}{-0.5pt}{0.5pt}{black!35}
+}
 \newenvironment{mybox}[3][]{%
     \begin{tikzpicture}[#1]%
         \def\myboxname{#3}%

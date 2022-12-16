@@ -1,10 +1,6 @@
-\makeatletter
-\@removefromreset{section}{chapter}
-\makeatother
+\ProvidesPackage{my-chapter}
 \addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
 \renewcommand{\thechapter}{\arabic{chapter}}
-\renewcommand{\thesection}{S\arabic{section}}
-\renewcommand{\thesubsection}{L\arabic{subsection}}
 \newcommand*\chapterlabel{}
 \titleformat{\chapter}
 {\gdef\chapterlabel{}
@@ -14,7 +10,7 @@
 {\begin{tikzpicture}[remember picture,overlay]
         \node[yshift=-2cm] at (current page.north west)
         {\begin{tikzpicture}[remember picture, overlay]
-                \draw[draw=none,fill=RawSienna] (0,0) rectangle
+                \draw[draw=none,fill=ChapterMainColor] (0,0) rectangle
                 (\paperwidth,2cm);
                 \node[anchor=east,xshift=.9\paperwidth,rectangle,
                     rounded corners=5pt,inner xsep=20pt,inner ysep=5pt,

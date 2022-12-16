@@ -1,10 +1,5 @@
-\makeatletter
-\@removefromreset{section}{chapter}
-\makeatother
-\addto\captionsspanish{\renewcommand{\chaptername}{Unidad}}
-\renewcommand{\thechapter}{\arabic{chapter}}
+\ProvidesPackage{my-section}
 \renewcommand{\thesection}{S\arabic{section}}
-\renewcommand{\thesubsection}{L\arabic{subsection}}
 \newcommand*\sectionlabel{}
 \titleformat{\section}
 {\gdef\sectionlabel{}
@@ -14,8 +9,7 @@
 {\begin{tikzpicture}[remember picture,overlay]
         \node[yshift=-1.5cm] at (current page.north west)
         {\begin{tikzpicture}[remember picture, overlay]
-                \draw[draw=none,fill=SpringGreen,
-                    %shade,
+                \draw[draw=none,fill=SectionMainColor,
                     rounded corners=5pt,
                     blur shadow={shadow blur steps=10,shadow blur extra rounding=10pt},
                     xshift=5mm,
@@ -28,10 +22,10 @@
                     %shade,
                     rounded corners=5pt,
                     inner sep=8pt,
-                    fill=olive!50,
+                    fill=SectionSecColor,
                     %drop shadow={fill=black, opacity=1},
                 ]
-                {\color{colorrds}\sectionlabel#1};
+                {\color{white}\sectionlabel#1};
                 % \node[anchor=east,xshift=.9\paperwidth,rectangle,
                 %     rounded corners=10pt,inner sep=11pt,
                 %     fill=blue!35]
