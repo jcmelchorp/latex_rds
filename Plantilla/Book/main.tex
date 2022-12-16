@@ -1,8 +1,5 @@
 \documentclass[11pt,twoside]{book}
-\usepackage{Functional/my-package}
-\usepackage{Functional/fancychaptersection}
-\usepackage{Functional/my-boxes}
-\usepackage{Functional/my-preamble}
+\usepackage{Functional/preamble}
 \begin{document}
 \pagestyle{empty}
 \newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
@@ -11,27 +8,33 @@
 \dominitoc[n]
 \tableofcontents
 \pagestyle{fancy}
-\newpage \thispagestyle{empty}
-\chapter{Unidad 1}
- {\Large \alterfont \scshape En esta unidad estudiaremos \dots}
-\minitoc
-\newpage \thispagestyle{empty} \mbox{} \newpage \thispagestyle{plain}
+\newpage
+\mychapter{Unidad 1}
+{\Large \alterfont \scshape En esta unidad estudiaremos \dots}
+\minitoc\newpage
+
+\thispagestyle{empty} \mbox{}
+
+\newpage
 
 \include{Sections/s1}
 
-\newpage \thispagestyle{plain}
+\newpage
 
 \include{Sections/s2}
 
-\newpage \thispagestyle{plain}
+\newpage
+\mychapter{Unidad 2}
+{\Large \alterfont \scshape En esta unidad estudiaremos \dots}
+\minitoc\newpage
 
-\chapter{Unidad 2}
+\thispagestyle{empty} \mbox{}
 
-\newpage \thispagestyle{plain}
+\newpage
 
 \include{Sections/s1}
 
-\newpage \thispagestyle{plain}
+\newpage
 
 \include{Sections/s2}
 
