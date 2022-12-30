@@ -1,0 +1,47 @@
+\ProvidesPackage{my-subsection}
+
+\renewcommand{\thesubsection}{L\arabic{subsection}}
+\newcommand*\subsectionlabel{}
+\titleformat{\subsection}
+{\gdef\subsectionlabel{}
+    \fontsize{12}{15}\selectfont\comfortaa\bfseries
+}
+{\gdef\subsectionlabel{}}{0pt}
+{\begin{tikzpicture}[remember picture, overlay]
+        \draw[draw=none,fill=colorrds,rounded corners=5pt,] (0,0) rectangle
+        (\textwidth,1cm);
+        \node[anchor=center,xshift=.5\textwidth, rectangle,
+            rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
+            blur shadow={
+                    shadow opacity=30,
+                    shadow yshift=-2mm,
+                    shadow blur steps=30,
+                    shadow blur extra rounding=2pt
+                },
+            fill=SubsectionMainColor]
+        {
+            \parbox{0.6\textwidth}{\centering
+                \color{white}\textbf{\subsectionlabel#1}
+            }%
+        };
+        \node[anchor=west,xshift=.12\textwidth ,yshift=2mm,circle,inner xsep=5pt,inner ysep=5pt,fill=SubsectionSecColor]
+        {  \color{white}\textbf{\fontsize{15}{18}\selectfont\thesubsection} };
+    \end{tikzpicture}
+}
+\titlespacing*{\subsection}{0pt}{10pt}{35pt}
+
+%%%%%%%%%%%%%%%%% SUBSUBSECTION
+\newcommand*\subsubsectionlabel{}
+\titleformat{\subsubsection}
+{\gdef\subsubsectionlabel{}
+    \fontsize{12}{15}\selectfont\comfortaa\bfseries
+}
+{\gdef\subsubsectionlabel{}}{0pt}
+{
+    \begin{minipage}{\textwidth}
+        \begin{subsubsectionBox}
+            #1
+        \end{subsubsectionBox}
+    \end{minipage}
+}
+\titlespacing*{\subsubsection}{0pt}{10pt}{1ex}
