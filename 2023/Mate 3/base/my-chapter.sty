@@ -1,0 +1,42 @@
+\ProvidesPackage{my-chapter}
+\addto\captionsspanish{%
+    \renewcommand{\chaptername}{Unidad}
+    \renewcommand{\contentsname}{Contenido} 
+}
+%\renewcommand{\thechapter}{\arabic{chapter}}
+\newcommand*\chapterlabel{}
+\newcommand{\mychapter}[1][\chaptername \ \thechapter]{
+    \thispagestyle{empty}
+    \chapter{#1}
+    %\stepcounter{chapter}
+   %\addcontentsline{toc}{chapter}{#1}
+    \mtcaddchapter{}
+    \mtcsettitle{minitoc}{}
+    {\Large \alterfont \scshape En esta unidad estudiaremos \dots}
+    \minitoc
+    \newpage
+    \thispagestyle{empty} \mbox{}
+    \newpage
+}
+
+
+\titleformat{\chapter}
+{\gdef\chapterlabel{}
+    \comfortaa\Huge\bfseries
+}
+{\gdef\chapterlabel{\chaptername \ \thechapter}}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+        \node[yshift=-2cm] at (current page.north west)
+        {\begin{tikzpicture}[remember picture, overlay]
+                \draw[draw=none,fill=ChapterMainColor] (0,0) rectangle
+                (\paperwidth,2cm);
+                \node[anchor=east,xshift=.9\paperwidth,rectangle,
+                    rounded corners=5pt,inner xsep=20pt,inner ysep=5pt,
+                    blur shadow={shadow blur steps=50,shadow blur extra rounding=5pt},
+                    fill=ChapterSecColor]
+                {\color{white}\textbf{#1}};
+            \end{tikzpicture}
+        };
+    \end{tikzpicture}
+}
+\titlespacing*{\chapter}{0pt}{50pt}{-60pt}
