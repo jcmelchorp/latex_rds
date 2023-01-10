@@ -5,7 +5,7 @@
 {\gdef\sectionlabel{}
     \comfortaa\large\bfseries
 }
-{\gdef\sectionlabel{\thesection \ }}{0pt}
+{\gdef\sectionlabel{\thesection \ #1}}{0pt}
 {\begin{tikzpicture}[remember picture,overlay]
         \node[yshift=-1.5cm] at (current page.north west)
         {\begin{tikzpicture}[remember picture, overlay]
@@ -25,7 +25,7 @@
                     fill=SectionSecColor,
                     %drop shadow={fill=black, opacity=1},
                 ]
-                {\color{white}\sectionlabel#1};
+                {\color{white}\sectionlabel};
                 % \node[anchor=east,xshift=.9\paperwidth,rectangle,
                 %     rounded corners=10pt,inner sep=11pt,
                 %     fill=blue!35]

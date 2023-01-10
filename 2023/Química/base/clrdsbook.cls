@@ -56,6 +56,9 @@ headheight=10mm,% Set \headheight to 10mm
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \cfoot{\thepage}
+\fancyhead{}
+\fancyhead[RO,LE]{\sectionlabel }
+\fancyhead[RE,LO]{\chaptername \ \thechapter }
 \AtBeginDocument{
     \renewcommand{\headrulewidth}{0.2pt}
     \renewcommand{\footrulewidth}{0.2pt}

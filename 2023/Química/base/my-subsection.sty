@@ -8,7 +8,7 @@
 }
 {\gdef\subsectionlabel{}}{0pt}
 {\begin{tikzpicture}[remember picture, overlay]
-        \draw[draw=none,fill=colorrds,rounded corners=5pt,] (0,0) rectangle
+        \draw[draw=none,fill=SubsectionSecColor!10,rounded corners=5pt,yshift=-1mm] (0,0) rectangle
         (\textwidth,1cm);
         \node[anchor=center,xshift=.5\textwidth, rectangle,
             rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
@@ -40,6 +40,7 @@
 {
     \begin{minipage}{\textwidth}
         \begin{subsubsectionBox}
+            \centering
             #1
         \end{subsubsectionBox}
     \end{minipage}

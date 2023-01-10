@@ -1,8 +1,15 @@
 \ProvidesPackage{my-chapter}
-\newcommand{\mychapter}[1]{
+\addto\captionsspanish{%
+    \renewcommand{\chaptername}{Unidad}
+    \renewcommand{\contentsname}{Contenido} 
+}
+%\renewcommand{\thechapter}{\arabic{chapter}}
+\newcommand*\chapterlabel{}
+\newcommand{\mychapter}[1][\chaptername \ \thechapter]{
     \thispagestyle{empty}
-    \chapter*{#1}
-    \addcontentsline{toc}{chapter}{#1}
+    \chapter{#1}
+    %\stepcounter{chapter}
+   %\addcontentsline{toc}{chapter}{#1}
     \mtcaddchapter{}
     \mtcsettitle{minitoc}{}
     {\Large \alterfont \scshape En esta unidad estudiaremos \dots}
@@ -11,12 +18,8 @@
     \thispagestyle{empty} \mbox{}
     \newpage
 }
-\addto\captionsspanish{%
-    \renewcommand{\chaptername}{Unidad}
-    \renewcommand{\contentsname}{Contenido} 
-}
-\renewcommand{\thechapter}{\arabic{chapter}}
-\newcommand*\chapterlabel{}
+
+
 \titleformat{\chapter}
 {\gdef\chapterlabel{}
     \comfortaa\Huge\bfseries
@@ -30,7 +33,7 @@
                 \node[anchor=east,xshift=.9\paperwidth,rectangle,
                     rounded corners=5pt,inner xsep=20pt,inner ysep=5pt,
                     blur shadow={shadow blur steps=50,shadow blur extra rounding=5pt},
-                    fill=colorrds]
+                    fill=ChapterSecColor]
                 {\color{white}\textbf{#1}};
             \end{tikzpicture}
         };
