@@ -4,11 +4,10 @@
 \LoadClass{exam}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{exam}}
 \ProcessOptions\relax
-
 \RequirePackage{rdscolors}
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
-\renewcommand{\solutiontitle}{\textbf{Soluci\'on:}\par\noindent}
+\renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
 \newcommand{\tf}[1][{}]{%
   \fillin[#1][1cm]%
 }
@@ -92,7 +91,7 @@
   left=15mm,
   right=15mm,
   top=15mm,
-  bottom=20mm,
+  bottom=25mm,
   headheight=20pt,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 \RequirePackage{anyfontsize}
@@ -304,6 +303,7 @@
 \RequirePackage{bookmark}
 \RequirePackage{xparse}
 \RequirePackage{wrapfig}
+\RequirePackage{multicol}
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
 \decimalpoint
