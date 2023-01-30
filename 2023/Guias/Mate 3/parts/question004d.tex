@@ -1,15 +1,53 @@
-\part[20] El producto de dos enteros pares positivos consecutivos es 80.\\
+\part[15] El producto de dos enteros pares positivos consecutivos es 80.\\
 Sea $n$ el menor entero.
 
 \textbf{¿Cuál de las siguientes ecuaciones cuadráticas satisface $n$?}
-\begin{choices}
+
+\begin{oneparchoices}
     \choice $n^2+2n+80=0$
     \choice $n^2-2n-80=0$
     \choice $n^2-2n+80=0$
     \CorrectChoice $n^2+2n-80=0$
-\end{choices}
-
-
+\end{oneparchoices}
+\fullwidth{
+    \begin{solutionbox}{3cm}
+        Sea $n$ el menor entero par positivo, y su consecutivo par $n+2$. Entonces, el producto es:
+        \[
+            \begin{array}{rl}
+                n(n+2)     & =80 \\
+                n^2+2n     & =80 \\
+                n^2+2n -80 & =0
+            \end{array}
+        \]
+    \end{solutionbox}
+}
 \textbf{Encuentra el número $n$.}
-\begin{solutionbox}{5cm}
-\end{solutionbox}
+\fullwidth{
+    \begin{solutionbox}{5cm}
+        \begin{multicols}{3}
+            \[
+                \begin{array}{rl}
+                    n^2+2n -80 & =0   \\
+                    a          & =1   \\
+                    b          & =2   \\
+                    c          & =-80 \\
+                \end{array}
+            \]
+            \vspace{1cm}
+            \[
+                \begin{array}{rl}
+                    x_{1,2} & = \dfrac{-b\pm\sqrt{b^2-4ac}}{2a}            \\[1.5em]
+                    x_{1,2} & = \dfrac{-2\pm\sqrt{(-2)^2-4(1)(-80)}}{2(1)} \\[1.5em]
+                    x_{1,2} & = \dfrac{-2\pm\sqrt{324}}{2}                 \\[1.5em]
+                \end{array}
+            \]
+            \[
+                \begin{array}{rl}
+                    x_{1,2}        & = \dfrac{-2\pm 18}{2}                            \\[1.5em]
+                    \therefore x_1 & = \dfrac{-2-18}{2}=\dfrac{-20}{2}=-10 \text{ y } \\[1.5em]
+                    x_2            & = \dfrac{-2+18}{2}=\dfrac{16}{2}=8               \\[1.5em]
+                \end{array}
+            \]
+        \end{multicols}
+    \end{solutionbox}
+}

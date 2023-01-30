@@ -1,14 +1,54 @@
-\part[20] Pedro es 10 años más joven que Ana. El producto de sus edades hace 2 años era 39.\\
+\part[15] Pedro es 10 años más joven que Ana. El producto de sus edades hace 2 años era 39.\\
 Sea $a$ la edad de Ana.
 
 \textbf{¿Cuál de las siguientes ecuaciones cuadráticas satisface $a$?}
-\begin{choices}
+
+\begin{oneparchoices}
     \choice $a^2+14a+15=0$
     \choice $a^2-14a+15=0$
     \CorrectChoice $a^2-14a-15=0$
     \choice $a^2+14a-15=0$
-\end{choices}
-
+\end{oneparchoices}
+\fullwidth{
+    \begin{solutionbox}{3.5cm}
+        Sea $a$ la edad de Ana, entonces Pedro tiene $a-10$. Hace 2 años, Ana tenía $a-2$ y Pedro $a-10-2=a-12$. El producto es:
+        \[
+            \begin{array}{rl}
+                (a-2)(a-12)   & =39  \\
+                a^2-14a+24    & = 39 \\
+                a^2-14a+24-39 & = 0  \\
+                a^2-14a-15    & = 0
+            \end{array}
+        \]
+    \end{solutionbox}
+}
 \textbf{Calcula la edad actual de Ana.}
-\begin{solutionbox}{4cm}
-\end{solutionbox}
+\fullwidth{
+    \begin{solutionbox}{4.5cm}
+        \begin{multicols}{3}
+            \[
+                \begin{array}{rl}
+                    a^2-14a-15 & =0   \\
+                    a          & =1   \\
+                    b          & =-14 \\
+                    c          & =-15 \\
+                \end{array}
+            \]
+            \vspace{1cm}
+            \[
+                \begin{array}{rl}
+                    x_{1,2} & = \dfrac{-b\pm\sqrt{b^2-4ac}}{2a}                 \\[1.5em]
+                    x_{1,2} & = \dfrac{-(-14)\pm\sqrt{(-14)^2-4(1)(-15)}}{2(1)} \\[1.5em]
+                    x_{1,2} & = \dfrac{14\pm\sqrt{256}}{2}                      \\[1.5em]
+                \end{array}
+            \]
+            \[
+                \begin{array}{rl}
+                    x_{1,2}        & = \dfrac{14\pm 16}{2}                          \\[1.5em]
+                    \therefore x_1 & = \dfrac{14-16}{2}=\dfrac{-2}{2}=-1 \text{ y } \\[1.5em]
+                    x_2            & = \dfrac{14+16}{2}=\dfrac{30}{2}=15            \\[1.5em]
+                \end{array}
+            \]
+        \end{multicols}
+    \end{solutionbox}
+}

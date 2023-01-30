@@ -59,12 +59,11 @@
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{oneparchoices}{\vspace{0.8\baselineskip}}
+\AtEndEnvironment{oneparchoices}{\vspace{-0.5\baselineskip}}
 \AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
-
 \RequirePackage{addfont}
 \usepackage{fetamont}
 \RequirePackage{bbold}% se usa como \bbfamily [outlined]
@@ -87,20 +86,20 @@
 %\def\tfont{\usefont{T1}{fve}{m}{n}\selectfont}
 \RequirePackage[
   letterpaper,
-  %includehead,
+  includehead,
   left=15mm,
   right=15mm,
-  top=15mm,
+  top=5mm,
   bottom=25mm,
-  headheight=20pt,% Set \headheight to 10mm
+  headheight=10mm,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 \RequirePackage{anyfontsize}
 \newcommand{\HUGE}{\fontsize{50}{60}}
 \RequirePackage{graphicx}
 \graphicspath{{./Images}} %Setting the graphicspath
 
+\RequirePackage{xparse,booktabs,xpatch}
 \checkboxchar{$\Box$}
-\bracketedpoints
 \pointpoints{punto}{puntos}
 \hqword{Pregunta}
 \hpgword{P\'gina}
@@ -108,6 +107,40 @@
 %\chbpword{Puntos extra}
 \hsword{Puntos obtenidos}
 \htword{Total}
+% redefine \part command to be \mypart
+\appto\parts{\let\exampart\part\let\part\mypart}
+\makeatletter
+\ExplSyntaxOn
+\tl_new:N \g_grade_table_tl% this will; become the new grade table
+
+\int_new:N \g_score_int% this will be the exam score
+\NewDocumentCommand\mypart{o}{
+  \IfNoValueTF{#1}{\exampart}{
+    % don't do anything special inside solutions
+    \if@insolution\exampart[#1]
+    \else\exampart[#1]
+      \int_compare:nNnT {\arabic{partno}} = {1} {
+        \tl_gput_right:Nn \g_grade_table_tl { \midrule }
+      }
+      \tl_gput_right:Nx \g_grade_table_tl {
+        \arabic{question}\alph{partno}
+      }
+      \tl_gput_right:No \g_grade_table_tl  {& #1  }
+      \int_gadd:Nn \g_score_int {#1}
+    \fi
+  }
+}
+\NewDocumentCommand\GradeTable{}{% the new grade table
+  \begin{tabular}{ccc}
+    \toprule
+     \@hqword &  {\tl_use:N \g_grade_table_tl} & Total \\
+     \@hpword & {\int_use:N \g_score_int} & \\
+     \@hsword & &\\
+  \bottomrule
+  \end{tabular}
+}
+\ExplSyntaxOff
+\makeatother
 %%%% INFO
 \makeatletter
 \setlength{\parindent}{0pt}
@@ -130,13 +163,31 @@
 \newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{#1}}
 \newcommand{\therequisitos}{1}
 \newcommand{\requisitos}[1]{\renewcommand{\therequisitos}{#1}}
+% These commands set up the running header on the top of the exam pages
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\firstpagefooter{}{\fontsize{14}{14}\selectfont \ffmwfamily \color{colorrds}\thepage}{}
+\runningheader{\thesubject}{Guía \# \theguide}{\hfill\thegrade \ (\thecycle)}
+\runningfooter{}{\fontsize{14}{14}\selectfont \ffmwfamily \color{colorrds}\thepage}{}
+\runningheadrule
+%\bracketedpoints
+\pointformat{\textcolor{Brown}{[\thepoints]}}
+% \renewcommand{\questionlabel}{\colorbox{red} {\huge{\textbf{\color{white}~\thequestion.}}}}
+% \renewcommand{\partlabel}{\colorbox{red} {\large{\textbf{\color{white}(\thepartno)}}}}
+\renewenvironment{TheSolution}{\begin{mdframed}[skipabove=\baselineskip,innertopmargin=\baselineskip,innerbottommargin=\baselineskip, linewidth=3pt,
+  linecolor=ao(english),  topline=false,
+  rightline=false,
+  bottomline=false]
+ \textbf{\color{red}Solution:}\enspace\ignorespaces}{\end{mdframed}}
 \newcommand{\puntuacion}{
   \centering
   \begin{mybox}{0.80\linewidth}{
     \fontsize{24}{32}\selectfont \ffmwfamily \color{colorrds} Calificación}
 \cellwidth{0.2em}
+\gradetablestretch{2}
 %\multirowgradetable{2}[questions]
 \gradetable[h][questions]
+%\GradeTable
 \end{mybox}
 }
 %%%% STYLES
@@ -155,7 +206,7 @@
   requisitobox/.style={xshift=-.45\textwidth,
       yshift=-2.5cm,
       draw=OliveGreen,dashed, fill=white, rectangle,
-      inner sep=15pt, style=rounded corners,
+      inner xsep=1pt,inner ysep=2pt, style=rounded corners,
       %drop  shadow={fill=lightgray, opacity=0.7}
       },
   requisitotitle/.style={
@@ -212,12 +263,22 @@
       \end{minipage}};
     \node[aprendizajetitle,right=5pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
     \node[draw=none, fit=(box)] {};
-    %%%% REQUISITOS
+    % %%%% REQUISITOS
+    % \node[requisitobox] (box)
+    % { \begin{minipage}{.42\textwidth}
+    %     \normalfont \therequisitos
+    %   \end{minipage}};
+    % \node[requisitotitle,right=5pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Requisitos   };
+    % \node[draw=none, fit=(box)] {};
+    %%%% GRADESTABLE
     \node[requisitobox] (box)
     { \begin{minipage}{.42\textwidth}
-        \normalfont \therequisitos
+        \normalfont \cellwidth{0.2em}
+        \gradetablestretch{1.5}
+        %\multirowgradetable{2}[questions]
+        \gradetable[h]%[questions]
       \end{minipage}};
-    \node[requisitotitle,right=5pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Requisitos   };
+    \node[requisitotitle,right=5pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Puntuación   };
     \node[draw=none, fit=(box)] {};
     %%%% INSTRUCCIONES
     \node[instructionbox] (box)

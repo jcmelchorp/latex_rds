@@ -1,11 +1,52 @@
-\part[20] El área de un rectángulo es 20cm$^2$. Su altura es 4 cm más que el triple del ancho.
-Sea $a$ el ancho del rectángulo.\\
+\part[15] El área de un rectángulo es 20cm$^2$. Su altura es 4 cm más que el triple del ancho.
+Sea $A$ el ancho del rectángulo.\\
 \textbf{¿Cuál de las siguientes ecuaciones cuadráticas satisface $a$?}
-\begin{choices}
-    \choice $3a^2+4a+20=0$
-    \choice $3a^2-4a-20=0$
-    \choice $3a^2-4a+20=0$
-    \choice $3a^2+4a-20=0$
-\end{choices}
 
+\begin{oneparchoices}
+    \choice $3A^2+4A+20=0$
+    \choice $3A^2-4A-20=0$
+    \CorrectChoice $3A^2+4A-20=0$
+    \choice $3A^2-4A+20=0$
+\end{oneparchoices}
+\fullwidth{
+    \begin{solutionbox}{3cm}
+        Sea $A$ el ancho del rectángulo, entonces su altura es $3A+4$. Y el producto es:
+        \[
+            \begin{array}{rl}
+                A(3A+4)     & =20 \\
+                3A^2+4A     & =20 \\
+                3A^2+4A -20 & =0
+            \end{array}
+        \]
+    \end{solutionbox}
+}
 \textbf{Determina el ancho del rectángulo $a$.}
+\fullwidth{
+    \begin{solutionbox}{5cm}
+        \begin{multicols}{3}
+            \[
+                \begin{array}{rl}
+                    3A^2+4A -20 & =0   \\
+                    a           & =3   \\
+                    b           & =4   \\
+                    c           & =-20 \\
+                \end{array}
+            \]
+            \vspace{1cm}
+            \[
+                \begin{array}{rl}
+                    A_{1,2} & = \dfrac{-4\pm\sqrt{b^2-4ac}}{2a}         \\[1.5em]
+                    A_{1,2} & = \dfrac{-4\pm\sqrt{4^2-4(3)(-20)}}{2(3)} \\[1.5em]
+                    A_{1,2} & = \dfrac{-4\pm\sqrt{256}}{6}              \\[1.5em]
+                \end{array}
+            \]
+            \[
+                \begin{array}{rl}
+                    A_{1,2}        & = \dfrac{-4\pm 16}{6}                                       \\[1.5em]
+                    \therefore A_1 & = \dfrac{-4-16}{6}=\dfrac{-20}{6}=\dfrac{-10}{3} \text{ y } \\[1.5em]
+                    A_2            & = \dfrac{-4+16}{6}=\dfrac{12}{6}= 2                         \\[1.5em]
+                \end{array}
+            \]
+        \end{multicols}
+    \end{solutionbox}
+}

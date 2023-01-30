@@ -1,15 +1,55 @@
-\part[20] Aditi y Kavita tenían 40 monedas entre las dos. Aditi le dio 10 monedas a Kavita.
+\part[15] Aditi y Kavita tenían 40 monedas entre las dos. Aditi le dio 10 monedas a Kavita.
 El producto de las monedas que tienen ahora es 375.
 Sea $a$ la cantidad de monedas que tenía Aditi al principio.
 
 \textbf{¿Cuál de las siguientes ecuaciones cuadráticas satisface $a$?}
-\begin{choices}
+
+\begin{oneparchoices}
     \choice $-a^2+60a+875=0$
     \choice $-a^2-60a+875=0$
     \choice $-a^2-60a-875=0$
     \CorrectChoice $-a^2+60a-875=0$
-\end{choices}
+\end{oneparchoices}
+\fullwidth{
+    \begin{solutionbox}{3.5cm}
+        Sea $a$ la cantidad de monedas que tenía Aditi al principio, entonces Kavita tiene $40-a$. Si Aditi le da 10 monedas a Kavita, entonces Aditi tiene $a-10$ y Kavita tiene $40-a+10=50-a$. Con estas variables, su producto es:
+        \[
+            \begin{array}{rl}
+                (a-10)(-a+50)        & =375 \\
+                -a^2+50a+10a-500-375 & = 0  \\
+                -a^2+60a-875         & = 0
+            \end{array}
+        \]
+    \end{solutionbox}
+}
 Si Aditi tenía menos de 30 monedas al principio.\\
 \textbf{¿Con cuántas monedas empezó Aditi?}
-\begin{solutionbox}{4cm}
-\end{solutionbox}
+\fullwidth{
+    \begin{solutionbox}{4.5cm}
+        \begin{multicols}{3}
+            \[
+                \begin{array}{rl}
+                    -a^2+60a-875 & =0    \\
+                    a            & =-1   \\
+                    b            & =60   \\
+                    c            & =-875 \\
+                \end{array}
+            \]
+            \vspace{1cm}
+            \[
+                \begin{array}{rl}
+                    x_{1,2} & = \dfrac{-b\pm\sqrt{b^2-4ac}}{2a}              \\[1.5em]
+                    x_{1,2} & = \dfrac{-60\pm\sqrt{60^2-4(-1)(-875)}}{2(-1)} \\[1.5em]
+                    x_{1,2} & = \dfrac{-60\pm\sqrt{3600-3500}}{-2}           \\[1.5em]
+                \end{array}
+            \]
+            \[
+                \begin{array}{rl}
+                    x_{1,2}        & = \dfrac{-60\pm 10}{-2}                            \\[1.5em]
+                    \therefore x_1 & = \dfrac{-60+10}{-2}=\dfrac{-50}{-2}=25 \text{ y } \\[1.5em]
+                    x_2            & = \dfrac{-60-10}{-2}=\dfrac{-70}{-2}=35            \\[1.5em]
+                \end{array}
+            \]
+        \end{multicols}
+    \end{solutionbox}
+}
