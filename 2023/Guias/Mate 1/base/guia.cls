@@ -272,7 +272,7 @@
           %shadow blur steps=30,
           %shadow blur extra rounding=5pt
         },  
-    fill=Olive!35]
+    fill=DarkOliveGreen!35]
     {
       \begin{minipage}{1cm}
         \centering
@@ -322,7 +322,7 @@
     {
     \parbox{0.8\textwidth}{%
     {\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa  \textbf{Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
-    { \fontsize{16}{20}\selectfont \textbf{\color{OliveGreen}\thesubject} \hfill {\color{Brown}\thegrade} }\\
+    { \fontsize{16}{20}\selectfont \textbf{\color{Goldenrod}\thesubject} \hfill {\color{DarkOliveGreen}\thegrade} }\\
     { \@author \hfill \thecycle}\\
     }%
     };
