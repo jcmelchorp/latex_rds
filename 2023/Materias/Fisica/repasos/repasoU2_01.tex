@@ -36,8 +36,7 @@
 %\thispagestyle{plain}
 \addpoints
 \INFO
-%\printanswers}
-% {\small
+%\printanswers
 \begin{multicols}{2}
     \include*{../blocks/block001}
     \include*{../blocks/block003}
@@ -46,10 +45,16 @@
 \end{multicols}
 \newpage
 \include*{../blocks/block004}
-% }
 \begin{questions}
-    \include*{../questions/question029}
-    \include*{../questions/question030}
+    {
+        \printanswers
+        \include*{../questions/question029}
+
+    }
+    {
+        \printanswers
+        \include*{../questions/question030}
+    }
     \include*{../questions/question032}
     \newpage
     \include*{../questions/question031}
@@ -59,5 +64,18 @@
     \end{multicols}
     \newpage
     \include*{../questions/question035}
+    \newpage
+    {
+        \printanswers
+        \include*{../questions/question009}
+    }
+    \newpage
+    \include*{../questions/question008}
+    \question Observa las imagenes y responde a las preguntas:
+
+    \begin{parts}
+        \include*{../parts/question028a}
+        \include*{../parts/question028b}
+    \end{parts}
 \end{questions}
 \end{document}
