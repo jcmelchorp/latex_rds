@@ -1,4 +1,5 @@
 \ProvidesPackage{myboxes}
+\RequirePackage[framemethod=tikz]{mdframed}
 \RequirePackage[many]{tcolorbox}
 % \usepackage{mathspec} 			    % for FONTS
 % \usepackage{setspace}               % for LINE SPACING
@@ -274,3 +275,24 @@
 \tikz[baseline]\node[anchor=base, draw=gray, dash pattern=on 2pt off 1pt, outer sep=0pt, inner sep=3pt] {#1};%
 }
 
+\usepackage[framemethod=tikz]{mdframed}
+
+\definecolor{mybrown}{RGB}{128,64,0}
+
+\mdfdefinestyle{mystyle}{%
+linecolor=colorrds,outerlinewidth=1pt,%
+frametitlerule=true,frametitlefont=\sffamily\bfseries\color{white},%
+frametitlerulewidth=1pt,frametitlerulecolor=colorrds,%
+frametitlebackgroundcolor=colorrds,
+backgroundcolor=colorrds!05,
+innertopmargin=\topskip,
+roundcorner=5pt
+}
+\mdtheorem[style=mystyle]{multipletcolorbox}{Multipletcolorbox}
+
+\gdef\Sepline{%
+  \par\noindent\makebox[\linewidth][l]{%
+  \hspace*{-\mdflength{innerleftmargin}}%
+   \tikz\draw[thick,dashed,gray!60] (0,0) --%
+        (\textwidth+\the\mdflength{innerleftmargin}+\the\mdflength{innerrightmargin},0);
+  }\par\nobreak}

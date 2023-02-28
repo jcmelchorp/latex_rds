@@ -96,8 +96,8 @@
 \setlength\linefillheight{.2in}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
-\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
-\AtEndEnvironment{oneparchoices}{\vspace{-0.8\baselineskip}}
+%\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
+%\AtEndEnvironment{oneparchoices}{\vspace{-0.8\baselineskip}}
 \AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
@@ -201,7 +201,7 @@
 % }
 %%%% STYLES
 \tikzset{
-  aprendizajebox/.style={anchor=north,xshift=-.96\textwidth,
+  aprendizajebox/.style={anchor=north,xshift=-.86\textwidth,
       yshift=-1.3cm,
       draw=colorrds, dashed,fill=white, rectangle,
       inner sep=15pt, style=rounded corners,
@@ -212,7 +212,7 @@
       style=rounded corners,
       % drop shadow,
     },
-  requisitobox/.style={anchor=north,xshift=-.45\textwidth,
+  requisitobox/.style={anchor=north,xshift=-.25\textwidth,
       yshift=-1.2cm,
       draw=none, fill=white, rectangle,
       inner xsep=1pt,inner ysep=2pt, style=rounded corners,
@@ -283,7 +283,7 @@
     %%%% APRENDIZAJES
     \node[aprendizajebox] (box)
     { 
-      \begin{minipage}{.42\textwidth}
+      \begin{minipage}{.62\textwidth}
         \normalfont  \theaprendizajes
       \end{minipage}
       };
@@ -291,21 +291,21 @@
     %%%% GRADESTABLE
     \node[requisitobox] (box)
     { 
-      \begin{minipage}[t][][t]{.52\textwidth}
+      \begin{minipage}[t][][t]{.42\textwidth}
     %\begin{minipage}[t][][b]{.22\textwidth}
      % \makebox[.22\textwidth]{
         \footnotesize 
         \cellwidth{0.8em}
         \gradetablestretch{1.5}
-        \hqword{Pregunta}
-        \hpgword{P\'gina}
-        \hpword{Puntos}
-        \hsword{Obtenidos}
-        \htword{Total}
+        \vqword{Pregunta}
+        \vpgword{P\'gina}
+        \vpword{Puntos}
+        \vsword{Obtenidos}
+        \vtword{Total}
         \ifnum\numquestions > 9
         \multirowgradetable{2}[questions]
         \else
-        \gradetable[h][questions]
+        \gradetable[v][questions]
         \fi
       \end{minipage}%
     };
