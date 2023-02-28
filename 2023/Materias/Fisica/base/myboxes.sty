@@ -296,3 +296,14 @@ roundcorner=5pt
    \tikz\draw[thick,dashed,gray!60] (0,0) --%
         (\textwidth+\the\mdflength{innerleftmargin}+\the\mdflength{innerrightmargin},0);
   }\par\nobreak}
+
+  \makeatletter
+\newcommand{\DrawLine}{%
+  \begin{tikzpicture}
+  \path[use as bounding box] (0,0) -- (\linewidth,0);
+  \draw[color=colorrds!35!white,dashed,dash phase=2pt]
+        (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
+        (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
+  \end{tikzpicture}%
+  }
+\makeatother
