@@ -1,31 +1,31 @@
 \hypertarget{colorscheme}{There are three} ways to make a new color scheme:
 \begin{itemize}
-\item[--]with the command \pgfPTMmacro{pgfPTnewColorScheme}[]
-\item[--]using the \textit{script} in the file \mbox{\href{run:pgfPTcolorSchemes.html}{pgfPTcolorSchemes.html}}
-\item[--]with the commands provided by the \hyperlink{lib:colorschemes}{colorschemes library} (see the \hyperlink{sec:lib}{libraries section}).
+    \item[--]with the command \pgfPTMmacro{pgfPTnewColorScheme}[]
+    \item[--]using the \textit{script} in the file \mbox{\href{run:pgfPTcolorSchemes.html}{pgfPTcolorSchemes.html}}
+    \item[--]with the commands provided by the \hyperlink{lib:colorschemes}{colorschemes library} (see the \hyperlink{sec:lib}{libraries section}).
 \end{itemize}\ %
 \\ [-44pt]\ %
 \def\tmpSection{\textcolor{blue!50!black}{\textbackslash pgfPTnewColorScheme}}%
-\subsection*{}{{\normalfont\large\bfseries\raisebox{1.25pt}{$\maltese$\ Designing a color scheme with \tmpSection}}%
+\subsection*{}{\normalfont\large\bfseries\raisebox{1.25pt}{$\maltese$\ Designing a color scheme with \tmpSection}}%
 \label{design:CSscheme}\addcontentsline{toc}{subsection}{\texorpdfstring{$\maltese$\ Designing a color scheme with \tmpSection}{\textbackslash pgfPTnewColorScheme}}%
 \\ [4pt]This command provides a way to set the cell background color of each of the 118 elements of the Periodic Table. \textit{If the intention is to set the background color for all of them, it is highly recommended to use the file pgfPTcolorSchemes.html}, unless the trailing color begin at a small atomic number.
 \\ [4pt]Despite that, this command can always be used taking into account:
 \begin{enumerate}
-\item It has the form \pgfPTMmacro{pgfPTnewColorScheme}[trailing color]\blue{\{}\red{name}\blue{\}\{}\red{color list}\blue{\}} where:
-\begin{itemize}
-\item[--] the first argument (enclosed by square brackets) is optional. If provided, the specified trailing color will be used, otherwise the default color (white) will be used as trailing color.%The trailing color will be used after the last color given in the color list.
-\item[--] the second and third arguments are mandatory and specify, respectively, the color scheme name and the color list.
-\end{itemize}
-\item The \red{name} is any name made up of letters (only the characters a,\myldots,z and A,\myldots,Z).
-\item The \red{color list} is a comma-separated list where each entry has the format \red{r/g/b}, representing the red, blue and green values, between 0 and 1, of the color: the first entry of the list will be the background color used in the cell of the element with atomic number 1, the second entry, the background color of the cell of the element with atomic number 2, and so on.
-\\ [8pt]\tikz{\node[text width=\linewidth-.6666em,fill=green!5!white,draw=green!50!black,rounded corners=2pt] {%
-\textit{If the color list has ten entries, these entries will set the background colors of the elements with atomic numbers from 1 to 10.  For the following atomic numbers, greater than or equal to 11, the \red{trailing color} will be used in the color background}.
-};}
+    \item It has the form \pgfPTMmacro{pgfPTnewColorScheme}[trailing color]\blue{\{}\red{name}\blue{\}\{}\red{color list}\blue{\}} where:
+          \begin{itemize}
+              \item[--] the first argument (enclosed by square brackets) is optional. If provided, the specified trailing color will be used, otherwise the default color (white) will be used as trailing color.%The trailing color will be used after the last color given in the color list.
+              \item[--] the second and third arguments are mandatory and specify, respectively, the color scheme name and the color list.
+          \end{itemize}
+    \item The \red{name} is any name made up of letters (only the characters a,\myldots,z and A,\myldots,Z).
+    \item The \red{color list} is a comma-separated list where each entry has the format \red{r/g/b}, representing the red, blue and green values, between 0 and 1, of the color: the first entry of the list will be the background color used in the cell of the element with atomic number 1, the second entry, the background color of the cell of the element with atomic number 2, and so on.
+          \\ [8pt]\tikz{\node[text width=\linewidth-.6666em,fill=green!5!white,draw=green!50!black,rounded corners=2pt] {%
+                  \textit{If the color list has ten entries, these entries will set the background colors of the elements with atomic numbers from 1 to 10.  For the following atomic numbers, greater than or equal to 11, the \red{trailing color} will be used in the color background}.
+              };}
 \end{enumerate}
 \ %
 \\ [-44pt]\ %
 \def\tmpSection{\textcolor{cyan}{pgfPTcolorSchemes.html}}%
-\subsection*{}{{\normalfont\large\bfseries\raisebox{1.25pt}{$\maltese$\ Designing a color scheme with \tmpSection}}%
+\subsection*{}{\normalfont\large\bfseries\raisebox{1.25pt}{$\maltese$\ Designing a color scheme with \tmpSection}}%
 \label{design:CSscheme}\addcontentsline{toc}{subsection}{\texorpdfstring{$\maltese$\ Designing a color scheme with \tmpSection}{pgfPTcolorSchemes.html}}%
 \vfill\makebox[\linewidth][c]{\includegraphics[width=.5\linewidth]{manualfiles/pgfPTcolorSchemes_html_general.pdf}}
 \vfill The \href{run:pgfPTcolorSchemes.html}{pgfPTcolorSchemes.html} \textit{designer} is an \textit{html} file with a little \textit{javascript} code to perform the task of building a color scheme to use with the \red{back color scheme} key associated with the \blue{\textbackslash pgfPT} command.
@@ -38,8 +38,8 @@
 \\ [4pt]\makebox[\linewidth][c]{\includegraphics[width=.7\linewidth]{manualfiles/pgfPTcolorSchemes_html_save.pdf}}
 \\ [8pt]To use a color scheme saved in a file there are two possible ways:
 \begin{itemize}
-\item[--]loading the file in the working document via the {\large\textsf{\textbackslash input}} \LaTeX{} command, for instance, {\large\textsf{\textbackslash input\{myCSname.tex\}}}.
-\item[--]or by opening the file and copying and pasting its contents into the working document.
+    \item[--]loading the file in the working document via the {\large\textsf{\textbackslash input}} \LaTeX{} command, for instance, {\large\textsf{\textbackslash input\{myCSname.tex\}}}.
+    \item[--]or by opening the file and copying and pasting its contents into the working document.
 \end{itemize}
 In either case, the operation can be performed at any location in the document, but before the named color scheme is used.
 \\ [4pt]Note that in the previous example there is only one color that has been defined (for hydrogen). In that case, it is useful to set the trailing color in helium by clicking in \pgfPTMbtn{Set trailing color} (which automatically changes to \pgfPTMbtn{Remove trailing color}). After that only the hydrogen and helium are clickable, all the other elements are locked to click:

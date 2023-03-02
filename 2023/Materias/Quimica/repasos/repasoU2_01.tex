@@ -60,6 +60,8 @@
     \include*{../questions/question013}
     \include*{../questions/question014}
     \include*{../questions/question015}
+    \include*{../questions/question016}
+
 
     \setbohr{
         shell-options-add = dashed,
@@ -69,38 +71,38 @@
 
     \bohr{0}{H+} \bohr{10}{F-}
 
-    \newcommand{\Bond}[6]%
-    % start, end, thickness, incolor, outcolor, iterations
-    { \begin{pgfonlayer}{background}
-            \colorlet{InColor}{#4}
-            \colorlet{OutColor}{#5}
-            \foreach \I in {#6,...,1}
-                {   \pgfmathsetlengthmacro{\r}{#3/#6*\I}
-                    \pgfmathsetmacro{\C}{sqrt(1-\r*\r/#3/#3)*100}
-                    \draw[InColor!\C!OutColor, line width=\r] (#1.center) -- (#2.center);
-                }
-        \end{pgfonlayer}
-    }
+    % \newcommand{\Bond}[6]%
+    % % start, end, thickness, incolor, outcolor, iterations
+    % { \begin{pgfonlayer}{background}
+    %         \colorlet{InColor}{#4}
+    %         \colorlet{OutColor}{#5}
+    %         \foreach \I in {#6,...,1}
+    %             {   \pgfmathsetlengthmacro{\r}{#3/#6*\I}
+    %                 \pgfmathsetmacro{\C}{sqrt(1-\r*\r/#3/#3)*100}
+    %                 \draw[InColor!\C!OutColor, line width=\r] (#1.center) -- (#2.center);
+    %             }
+    %     \end{pgfonlayer}
+    % }
 
-    \newcommand{\SingleBond}[2]%
-    % start, end
-    {   \Bond{#1}{#2}{1mm}{white}{gray!50}{10}
-    }
+    % \newcommand{\SingleBond}[2]%
+    % % start, end
+    % {   \Bond{#1}{#2}{1mm}{white}{gray!50}{10}
+    % }
 
-    \newcommand{\RedBond}[2]%
-    % start, end
-    {   \Bond{#1}{#2}{1mm}{orange!70}{red!75!black}{10}
-    }
+    % \newcommand{\RedBond}[2]%
+    % % start, end
+    % {   \Bond{#1}{#2}{1mm}{orange!70}{red!75!black}{10}
+    % }
 
-    \newcommand{\BlueBond}[2]%
-    % start, end
-    {   \Bond{#1}{#2}{2mm}{cyan}{blue!50!black}{10}
-    }
+    % \newcommand{\BlueBond}[2]%
+    % % start, end
+    % {   \Bond{#1}{#2}{2mm}{cyan}{blue!50!black}{10}
+    % }
 
-    \newcommand{\GreenBond}[2]%
-    % start, end
-    {   \Bond{#1}{#2}{0.7071mm}{green!25}{green!25!black}{10}
-    }
+    % \newcommand{\GreenBond}[2]%
+    % % start, end
+    % {   \Bond{#1}{#2}{0.7071mm}{green!25}{green!25!black}{10}
+    % }
 
     % \begin{tikzpicture}
     %     [   oxygen/.style={circle, ball color=red, minimum size=6mm, inner sep=0},
@@ -130,8 +132,8 @@
     % Ethyne:    \chemfig{H-C~C-H}
 
 
-    \pgfPT[Z exercise list={1,2,3,4,9,12,17,18,19,20,25,27,32,34,35,49,54,74,86,87},
-        cell size=3em,Z list={1,...,36},exColor=red!50!black]
+    % \pgfPT[Z exercise list={1,2,3,4,9,12,17,18,19,20,25,27,32,34,35,49,54,74,86,87},
+    %     cell size=3em,Z list={1,...,36},exColor=red!50!black]
     % }
     % \end{parts}
 \end{questions}
