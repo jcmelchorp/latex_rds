@@ -8,7 +8,9 @@
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
 \arrayrulecolor{rdsdark!50}
-
+\RequirePackage{bohr}
+\RequirePackage{chemfig}
+ \RequirePackage{pgf-periodictable/pgf-PeriodicTable}
 % \newcommand{\answerAngleBox}[2][]{
 %   \definecolor{#2}{HTML}{0DBE80}
 %   \begin{center}
