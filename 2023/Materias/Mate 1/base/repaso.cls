@@ -8,7 +8,6 @@
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
 \arrayrulecolor{rdsdark!50}
-
 % \newcommand{\answerAngleBox}[2][]{
 %   \definecolor{#2}{HTML}{0DBE80}
 %   \begin{center}
@@ -24,8 +23,8 @@
 %   \end{center}
 % }
 \RequirePackage{enumitem}
-
 \RequirePackage{tikz}
+\RequirePackage{pgfplots}
 \input{insbox}
 \usetikzlibrary{
   arrows,
@@ -92,12 +91,12 @@
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
     \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
-\renewcommand\choicelabel{\circled{\thechoice}}
+\renewcommand\choicelabel{\thechoice.}
 \setlength\linefillheight{.2in}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
-\AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{oneparchoices}{\vspace{-0.5\baselineskip}}
+% \AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
+% \AtEndEnvironment{oneparchoices}{\vspace{-0.5\baselineskip}}
 \AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
@@ -110,7 +109,7 @@
 % Custom formatting for problem parts.
 \newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{Sepia!50}\bfseries\sffamily\comfortaa\fbox{{\thequestion\small\thepartno}}}
+\renewcommand{\partlabel}{\color{Sepia!60}\bfseries\sffamily\comfortaa\fbox{{\thequestion\small\thepartno}}}
 \newcommand{\tf}[1][{}]{%
   \fillin[#1][1cm]%
 }
@@ -176,7 +175,7 @@
 \pagestyle{headandfoot}
 \firstpageheader{}{}{}
 \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
-\runningheader{\thesubject}{Guía \# \theguide}{\hfill\thegrade \ (\thecycle)}
+\runningheader{\thesubject}{Repaso de la Unidad \theguide}{\hfill\thegrade \ (\thecycle)}
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
 
@@ -201,7 +200,7 @@
 % }
 %%%% STYLES
 \tikzset{
-  aprendizajebox/.style={anchor=north,xshift=-.96\textwidth,
+  aprendizajebox/.style={anchor=north,xshift=-.86\textwidth,
       yshift=-1.3cm,
       draw=colorrds, dashed,fill=white, rectangle,
       inner sep=15pt, style=rounded corners,
@@ -212,7 +211,7 @@
       style=rounded corners,
       % drop shadow,
     },
-  requisitobox/.style={anchor=north,xshift=-.45\textwidth,
+  requisitobox/.style={anchor=north,xshift=-.25\textwidth,
       yshift=-1.2cm,
       draw=none, fill=white, rectangle,
       inner xsep=1pt,inner ysep=2pt, style=rounded corners,
@@ -261,53 +260,52 @@
     {
       \parbox{0.65\textwidth}{
         \centering \bfseries \comfortaa
-        \color{white} \fontsize{14}{21}\selectfont\@title
+        \color{white} \fontsize{14}{1}\selectfont\@title \hspace{0.2em} {\fontsize{18}{1}\selectfont \color{brown} \bfseries \foekfamily \theguide}
       }%
     };
-    %%%% BOLA
-    \node[xshift=-.27\textwidth ,circle,inner xsep=5pt,inner ysep=5pt,
-    blur shadow={
-          shadow opacity=40,
-          shadow yshift=-1mm,
-          %shadow blur steps=30,
-          %shadow blur extra rounding=5pt
-        },  
-    fill=DarkOliveGreen!35]
-    {
-      \begin{minipage}{1cm}
-        \centering
-        {\fontsize{9}{12}\selectfont \color{Sepia} \alterfont Unidad}\\
-        {\fontsize{28}{1}\selectfont \color{white} \bfseries \foekfamily \theguide}
-      \end{minipage}
-    };
+    % %%%% BOLA
+    % \node[xshift=-.27\textwidth ,circle,inner xsep=5pt,inner ysep=5pt,
+    % blur shadow={
+    %       shadow opacity=40,
+    %       shadow yshift=-1mm,
+    %       %shadow blur steps=30,
+    %       %shadow blur extra rounding=5pt
+    %     },  
+    % fill=DarkOliveGreen!35]
+    % {
+    %   \begin{minipage}{1cm}
+    %     \centering
+    %     {\fontsize{9}{12}\selectfont \color{Sepia} \alterfont Unidad}\\
+    %     {\fontsize{28}{1}\selectfont \color{white} \bfseries \foekfamily \theguide}
+    %   \end{minipage}
+    % };
     %%%% APRENDIZAJES
     \node[aprendizajebox] (box)
     { 
-      \begin{minipage}[t][][t]{.42\textwidth}
+      \begin{minipage}{.62\textwidth}
         \normalfont  \theaprendizajes
       \end{minipage}
       };
-    \node[aprendizajetitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
-    \node[draw=none, fit=(box)] {};
+    \node[aprendizajetitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes a evaluar};
     %%%% GRADESTABLE
     \node[requisitobox] (box)
     { 
-      \begin{minipage}[t][][t]{.52\textwidth}
+      \begin{minipage}[t][][t]{.42\textwidth}
     %\begin{minipage}[t][][b]{.22\textwidth}
      % \makebox[.22\textwidth]{
-        \footnotesize 
-        \cellwidth{0.8em}
+        \scriptsize
+        \cellwidth{0.5em}
         \gradetablestretch{1.5}
-        \hqword{Pregunta}
-        \hpgword{P\'gina}
-        \hpword{Puntos}
-        \hsword{Obtenidos}
-        \htword{Total}
-        \ifnum\numquestions > 9
-        \multirowgradetable{2}[questions]
-        \else
-        \gradetable[h][questions]
-        \fi
+        \vqword{Pregunta}
+        \vpgword{P\'gina}
+        \vpword{Puntos}
+        \vsword{Obtenidos}
+        \vtword{Total}
+        % \ifnum\numquestions > 9
+        % \multirowgradetable{2}[questions]
+        % \else
+        \gradetable[v][questions]
+        % \fi
       \end{minipage}%
     };
     \node[requisitotitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Puntuación   };
@@ -344,19 +342,21 @@
 }
 \makeatother
 %%%% CAPTIONS
-\RequirePackage{caption,capt-of}
+\RequirePackage[font=scriptsize]{caption}
+\RequirePackage{capt-of}
 %%%% LINKS
 \RequirePackage{float}
 \RequirePackage{bookmark}
 \RequirePackage{xparse}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol,multirow,booktabs}
+
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
 \decimalpoint
 \RequirePackage{adjustbox}
+%\RequirePackage{dashbox}
 \RequirePackage{myboxes}
-
 %%%% EXTERNAL SOURCES
 \RequirePackage{newclude}
 \RequirePackage{import}

@@ -94,8 +94,8 @@
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
     \node[shape=circle, draw, fill=Goldenrod!5, minimum size=1.8em, inner sep=0pt, thick] (char) {#1};}}
-\renewcommand\choicelabel{\circled{\thechoice}}
-\setlength\linefillheight{.2in}
+    \renewcommand\choicelabel{\thechoice.}
+    \setlength\linefillheight{.2in}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
 %\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
@@ -112,7 +112,7 @@
 % Custom formatting for problem parts.
 \newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
+\renewcommand{\partlabel}{\color{Sepia!60}\bfseries\sffamily\comfortaa\fbox{{\thequestion\small\thepartno}}}
 \newcommand{\tf}[1][{}]{%
   \fillin[#1][1cm]%
 }
