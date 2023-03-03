@@ -112,7 +112,7 @@
 % Custom formatting for problem parts.
 \newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{Sepia!60}\bfseries\sffamily\comfortaa\fbox{{\thequestion\small\thepartno}}}
+\renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
 \newcommand{\tf}[1][{}]{%
   \fillin[#1][1cm]%
 }
