@@ -1,43 +1,35 @@
-\question[20] Construye una tabla en la que se enlisten el
-número de átomos por molécula y su geometría.
+\question[10] Un grupo de 64 obreros puede terminar una obra en 15 días. Al cabo de 5 días de trabajo, se les unen obreros de otro grupo, de modo que tardan 5 días menos en terminar la obra.
+\textbf{¿Cuántos obreros había en el segundo grupo?}
 
-\renewcommand{\arraystretch}{1.5}
-\ifprintanswers
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{c|c|c|c|c|c}
-            \rowcolor[HTML]{F8A102}
-            Molécula   & Número de átomos & Geometría                     \\ \hline
-            HCl        & 2                & Lineal         & SiO$_2$ &  & \\
-            N$_2$O     & 3                & Lineal         & H$_2$S  &  & \\
-            CHCl$_3$   & 5                & Tridimensional & BBr$_3$ &  & \\
-            C$_2$H$_2$ & 4                & Plana          & SiH$_4$ &  & \\
-            CH$_4$     & 5                & Tridimensional & PCl$_3$ &  & \\
-            CH$_2$O    & 4                & Plana          & CS$_2$  &  & \\
-            SO$_2$     & 3                & Plana          & PH$_3$  &  & \\
-            NH$_3$     & 4                & Tridimensional & NF$_3$  &  & \\
-            CO         & 2                & Lineal         & HCN     &  & \\
-            CCl$_4$    &                  &                & H$_2$O  &  & \\
-            AsH$_3$    &                  &                &         &  & \\
-        \end{tabular}
-    \end{table}
-\else
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{c|c|c|c|c|c}
-            \rowcolor[HTML]{F8A102}
-            Molécula   & Número de átomos & Geometría & Molécula & Número de átomos & Geometría \\ \hline
-            HCl        &                  &           & SiO$_2$  &                  &           \\ \hline
-            N$_2$O     &                  &           & H$_2$S   &                  &           \\ \hline
-            CHCl$_3$   &                  &           & BBr$_3$  &                  &           \\ \hline
-            C$_2$H$_2$ &                  &           & SiH$_4$  &                  &           \\ \hline
-            CH$_4$     &                  &           & PCl$_3$  &                  &           \\ \hline
-            CH$_2$O    &                  &           & CS$_2$   &                  &           \\ \hline
-            SO$_2$     &                  &           & PH$_3$   &                  &           \\ \hline
-            NH$_3$     &                  &           & NF$_3$   &                  &           \\ \hline
-            CO         &                  &           & HCN      &                  &           \\ \hline
-            CCl$_4$    &                  &           & H$_2$O   &                  &           \\ \hline
-            AsH$_3$    &                  &           &          &                  &           \\ \hline
-        \end{tabular}
-    \end{table}
-\fi
+\begin{solutionbox}{9cm}
+    Sabemos que 64 obreros terminarían la obra en 15 días. Como luego de los primeros 5 días de trabajo llegaron más obreros, hacemos el siguiente gráfico para representar la situación:
+
+    \begin{minipage}{.35\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{../images/tableS8L103}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{.55\textwidth}
+        Observamos que, en esta situación, a mayor cantidad de obreros, menos días se necesitarán para terminar la obra.
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|l|c|l|}
+                \hline
+                Cantidad de obreros         & 64 & 64+x \\
+                \hline
+                Cantidad de días de trabajo & 10 & 5    \\
+                \hline
+            \end{tabular}
+        \end{table}
+        Como es una relación inversamente proporcional, planteamos la siguiente relación:
+        \begin{align*}
+            64 \times 10 & = 5 \times (64+x) \\
+            640          & = 320 +5x         \\
+            5x           & = 320             \\
+            x            & = 64
+        \end{align*}
+    \end{minipage}
+
+    En el segundo grupo, había 64 obreros más, es decir, un total de 128 obreros.
+\end{solutionbox}
