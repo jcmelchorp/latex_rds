@@ -90,30 +90,31 @@
 \RequirePackage{xparse,xpatch}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
-    \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
-    \renewcommand\choicelabel{\circled{\thechoice}}
+    \node[shape=circle, draw, minimum size=1.8em, inner sep=0pt, thick] (char) {#1};}}
+    \renewcommand\choicelabel{\thechoice.}
     \setlength\linefillheight{.2in}
-    \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
-    \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
-    %\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
-    %\AtEndEnvironment{oneparchoices}{\vspace{-0.8\baselineskip}}
-    \AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
-    \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
-    \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
-    \AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
-    \renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
-    \renewcommand\questionlabel{\color{Sepia}\circled{\thequestion}}
-    %\bracketedpoints
-    \pointformat{\textcolor{DarkOliveGreen}{[\thepoints]}}
-    \pointpoints{punto}{puntos}
-    % Custom formatting for problem parts.
-    \newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
-    \renewcommand{\thepartno}{\alph{partno}}
-    \renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
-    \newcommand{\tf}[1][{}]{%
-      \fillin[#1][1cm]%
-    }
-    \checkboxchar{$\Box$}
+\AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
+%\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
+%\AtEndEnvironment{oneparchoices}{\vspace{-0.8\baselineskip}}
+\AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
+\AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
+\renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
+\renewcommand\questionlabel{\color{Sepia}\circled{\thequestion}}
+%\bracketedpoints
+\pointformat{\textcolor{DarkOliveGreen}{[\thepoints]}}
+\pointpoints{punto}{puntos}
+% Custom formatting for problem parts.
+\newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
+\renewcommand{\thepartno}{\alph{partno}}
+\renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
+\newcommand{\tf}[1][{}]{%
+  \fillin[#1][1cm]%
+}
+\checkboxchar{$\Box$}
+
 
 % % redefine \part command to be \mypart
 % \appto\parts{\let\exampart\part\let\part\mypart}
@@ -211,7 +212,7 @@
       style=rounded corners,
       % drop shadow,
     },
-  requisitobox/.style={anchor=north,xshift=-.25\textwidth,
+  requisitobox/.style={anchor=north,xshift=-.325\textwidth,
       yshift=-1.2cm,
       draw=none, fill=white, rectangle,
       inner xsep=1pt,inner ysep=2pt, style=rounded corners,
@@ -290,7 +291,7 @@
     %%%% GRADESTABLE
     \node[requisitobox] (box)
     { 
-      \begin{minipage}[t][][t]{.42\textwidth}
+      \begin{minipage}[t][][t]{.24\textwidth}
     %\begin{minipage}[t][][b]{.22\textwidth}
      % \makebox[.22\textwidth]{
         \scriptsize
@@ -342,7 +343,7 @@
 }
 \makeatother
 %%%% CAPTIONS
-\RequirePackage[font=scriptsize]{caption}
+\RequirePackage[font=footnotesize]{caption}
 \RequirePackage{capt-of}
 %%%% LINKS
 \RequirePackage{float}
