@@ -1,0 +1,33 @@
+\documentclass[12pt]{repaso}
+\grado{3$^\circ$ de Secundaria}
+\cicloescolar{2022-2023}
+\materia{Química 3}
+\guide{2}
+\title{\lipsum[1][5]}
+\aprendizajes{
+    \begin{itemize}[leftmargin=*,label=\small\color{colorrds}\faIcon{user-graduate}]
+        \item \lipsum[1][1-3]
+        \item \lipsum[1][1-2]
+        \item \lipsum[1][1-2]
+        \item \lipsum[1][1-3]
+    \end{itemize}
+}
+
+\author{J. C. Melchor Pinto}
+
+\begin{document}
+\pagestyle{headandfoot}
+%\thispagestyle{plain}
+\addpoints
+\INFO
+% \printanswers
+\begin{multicols}{2}
+    \include*{../blocks/vocabulario}
+    \include*{../blocks/block000}
+    \include*{../blocks/block000}
+\end{multicols}
+\newpage
+\begin{questions}
+    \include*{../questions/question000}
+\end{questions}
+\end{document}

@@ -283,7 +283,7 @@
     %%%% APRENDIZAJES
     \node[aprendizajebox] (box)
     { 
-      \begin{minipage}{.42\textwidth}
+      \begin{minipage}{.62\textwidth}
         \normalfont  \theaprendizajes
       \end{minipage}
       };

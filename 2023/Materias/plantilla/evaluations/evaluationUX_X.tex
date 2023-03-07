@@ -1,0 +1,43 @@
+\documentclass[12pt]{evaluation}
+\grado{3$^\circ$ de Secundaria}
+\cicloescolar{2022-2023}
+\materia{Química 3}
+\guide{2}
+\title{Examen de la Unidad}
+\aprendizajes{
+    \begin{itemize}[leftmargin=*,label=\small\color{colorrds}\faIcon{user-graduate}]
+        \item \lipsum[1][1-3]
+        \item \lipsum[1][1-2]
+        \item \lipsum[1][1-2]
+        \item \lipsum[1][1-3]
+    \end{itemize}
+}
+
+\author{Prof.: Julio César Melchor Pinto}
+\include{../blocks/periodic_table}
+\begin{document}
+%\pagestyle{headandfoot}
+%\thispagestyle{plain}
+% \INFO
+% \printanswers
+\begin{multicols}{2}
+    \include*{../blocks/vocabulario}
+    \include*{../blocks/block000}
+\end{multicols}
+\newpage
+\begin{questions}
+    \include*{../questions/question000}
+\end{questions}
+\pagestyle{empty}
+\newgeometry{left=30mm,top=0mm,bottom=15mm}
+\begin{landscape}
+    \vspace{30mm}\hspace{-20mm}
+    \begin{table}[H]
+        \caption{Tabla Peri\'odica de los Elementos.}
+        \TablaPeriodica[0.50]
+        \label{tab:periodic_table}
+    \end{table}
+\end{landscape}
+% \restoregeometry
+
+\end{document}
