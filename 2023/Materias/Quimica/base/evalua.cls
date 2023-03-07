@@ -73,9 +73,9 @@
     \fillin[#1][1cm]%
 }
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
-        \node[shape=circle, draw, fill=Goldenrod!5, minimum size=1.8em, inner sep=0pt, thick] (char) {#1};}}
+        \node[shape=circle, draw, fill=Goldenrod!10, minimum size=1.8em, inner sep=0pt, thick] (char) {#1};}}
 
-\renewcommand\choicelabel{\thechoice.}
+\renewcommand\choicelabel{\color{DarkOliveGreen}\bfseries\thechoice.}
 \renewcommand\questionlabel{\color{Sepia}\circled{\thequestion}}
 \renewcommand{\thepartno}{\alph{partno}}
 \renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
@@ -164,7 +164,7 @@
 \firstpagefooter{}{
     \color{colorrds}\thepage \ de \numpages
 }{}
-\runningheader{\thesubject}{\@title \theguide}{\hfill\thegrade \ (\thecycle)}
+\runningheader{\thesubject}{\@title \ \theguide}{\hfill\thegrade \ (\thecycle)}
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
 \makebox[0.7\textwidth]{Nombre del alumno:\enspace\hrulefill}
