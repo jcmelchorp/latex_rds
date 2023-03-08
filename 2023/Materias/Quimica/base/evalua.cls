@@ -19,7 +19,7 @@
 \@ifpackageloaded{tikz}{}{\RequirePackage{tikz}}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=newest}
-\RequirePackage{pdflscape}
+\RequirePackage{lscape}
 \input{insbox}
 \usetikzlibrary{fit,shadows,shadows.blur,shapes,calc}
 \RequirePackage{fontawesome5}
@@ -100,7 +100,8 @@
 
 \tikzset{
     instructionbox/.style={
-            draw=black, fill=white, rectangle,
+
+            draw=colorrds, dashed,fill=white, rectangle,
             inner sep=12pt, style=rounded corners,
             %drop shadow={fill=black, opacity=1}
             blur shadow={
@@ -111,7 +112,9 @@
                     %shadow blur extra rounding=5pt
                 }
         },
-    instructiontitle/.style={fill=white},
+    instructiontitle/.style={
+            fill=white,
+            style=rounded corners},
     gradesbox/.style={
             draw=none,
             fill=white,
@@ -121,35 +124,67 @@
             style=rounded corners
         },
     gradestitle/.style={fill=white,
-            style=rounded corners}
+            style=rounded corners},
+    objetivobox/.style={
+            anchor=north,
+            xshift=-.86\textwidth,
+            draw=colorrds, dashed,fill=white, rectangle,
+            inner sep=15pt, style=rounded corners,
+            %drop  shadow={fill=lightgray, opacity=0.7}
+        },
+    objetivotitle/.style={ fill=white,
+            style=rounded corners,
+            % drop shadow,
+        }
 }
-\newcommand{\instructionbox}[2][fill=white]{
+\newcommand{\objetivobox}[3][fill=white]{
+    \begin{tikzpicture}
+        \node[objetivobox,#1] (box)
+        {
+            \begin{minipage}[t]{0.6\textwidth}
+                \normalfont #3
+            \end{minipage}
+        };
+        \node[objetivotitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
+        \node[draw=none, fit=(box)] {};
+    \end{tikzpicture}
+}
+\newcommand{\gradesbox}[3][fill=white]{
+    \begin{tikzpicture}
+        \node[gradesbox, #1] (box) {
+            \begin{minipage}[t]{0.35\textwidth}
+                \normalfont #3
+            \end{minipage}
+        };
+        \node[gradestitle, #1] at (box.north) {\bfseries \comfortaa \color{Sepia} #2};
+        \node[draw=none, fit=(box)] {};
+    \end{tikzpicture}
+}
+\newcommand{\instructionbox}[3][fill=white]{
     \begin{tikzpicture}
         \node [instructionbox, #1] (box)
-        {\begin{minipage}{0.9\linewidth}
+        {
+            \begin{minipage}{0.6\linewidth}
                 \setlength{\parindent}{2mm} % Indentar.
-                \normalfont #2
-            \end{minipage}};
-        \node[instructiontitle, right=10pt] at (box.north west) {Instrucciones};
+                \normalfont #3
+            \end{minipage}
+        };
+        \node[instructiontitle, right=10pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
         \node[draw=none, fit=(box)] {};
     \end{tikzpicture}
 }
-\newcommand{\gradesbox}[2][fill=white]{
-    \begin{tikzpicture}
-        \node[gradesbox, #1] (box) {\normalfont #2};
-        \node[gradestitle, #1] at (box.north) {Calificaciones:};
-        \node[draw=none, fit=(box)] {};
-    \end{tikzpicture}
-}
+
 %%%% LOGO
 \def\LOGO{%
     \begin{picture}(0,0)\unitlength=1cm
-        \put (4.5,-1.5) {\includegraphics[width=2.2cm]{logo.png}}
+        \put (3,-1.5) {\includegraphics[width=2.2cm]{logo.png}}
     \end{picture}
 }
 \makeatletter
 \AtBeginDocument{
 \setlength\linefillheight{.2in}
+% \setlength{\columnseprule}{5pt}
+\setlength{\columnsep}{30pt}
 \setlength{\parindent}{0pt}
 \addpoints
 \pagestyle{headandfoot}
@@ -167,64 +202,77 @@
 \runningheader{\thesubject}{\@title \ \theguide}{\hfill\thegrade \ (\thecycle)}
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
-\makebox[0.7\textwidth]{Nombre del alumno:\enspace\hrulefill}
-\makebox[0.3\textwidth]{Fecha:\enspace\hrulefill}
-\begin{center}
-    \instructionbox{
-        Lee con atenci\'on cada pregunta y realiza lo que se te pide.
-        De ser necesario, desarrolla tus respuestas en el espacio
-        determinado para cada pregunta o
-        en una hoja en blanco por separado, anotando en ella tu nombre
-        completo, el n\'umero del problema y la soluci\'on propuesta.
-    }
+\makebox[0.62\textwidth]{\large Nombre del alumno:\enspace\hrulefill}\hfill
+\makebox[0.30\textwidth]{\large Fecha:\enspace\hrulefill}\\
 
-    \gradesbox{
-        %\scriptsize
-        \cellwidth{0.5em}
-        \gradetablestretch{1.5}
-        \hqword{Pregunta}
-        \hpgword{P\'gina}
-        \hpword{Puntos}
-        \hsword{Obtenidos}
-        \htword{Total}
-        \vqword{Pregunta}
-        \vpgword{P\'gina}
-        \vpword{Puntos}
-        \vsword{Obtenidos}
-        \vtword{Total}
-        % \ifnum\numquestions > 9
-        % \multirowgradetable{2}[questions]
-        % \else
-        % \gradetable[h][questions]
-        % \fi
-        \gradetable[h][questions]
-    }
-    % \tikzset{
-    %     gradesbox/.style={anchor=north,xshift=-.25\textwidth,
-    %             yshift=-1.2cm,
-    %             draw=none, fill=white, rectangle,
-    %             inner xsep=1pt,inner ysep=2pt, style=rounded corners,
-    %             %drop  shadow={fill=lightgray, opacity=0.7}
-    %         },
-    %     gradestitle/.style={
-    %             fill=white,
-    %             style=rounded corners,
-    %         }
-    % }
-    % \begin{tikzpicture}[remember picture, overlay]
-    %     %%%% GRADESTABLE
-    %     \node[gradesbox] (box)
-    %     {
-    %         %\begin{minipage}[t][][t]{.42\textwidth}
-    %             %\begin{minipage}[t][][b]{.22\textwidth}
-    %             % \makebox[.22\textwidth]{
+% \begin{minipage}[t][][t]{0.6\textwidth}
+\objetivobox{Aprendizajes a evaluar:}{
+    \theaprendizajes
+}
+\gradesbox{Calificaciones:}{
+    %\scriptsize
+    \cellwidth{0.8em}
+    \gradetablestretch{1.5}
+    \hqword{Pregunta}
+    \hpgword{P\'gina}
+    \hpword{Puntos}
+    \hsword{Obtenidos}
+    \htword{Total}
+    \vqword{Pregunta}
+    \vpgword{P\'gina}
+    \vpword{Puntos}
+    \vsword{Obtenidos}
+    \vtword{Total}
+    % \ifnum\numquestions > 9
+    % \multirowgradetable{2}[questions]
+    % \else
+    % \gradetable[h][questions]
+    % \fi
+    \gradetable[v][questions]
+}\\
 
-    %         \end{minipage}%
-    %     };
-    %     \node[gradestitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Puntuación };
-    %     \node[draw=none, fit=(box)] {};
-    % \end{tikzpicture}
-\end{center}
+\instructionbox{Instrucciones:}{
+    Lee con atenci\'on cada pregunta y realiza lo que se te pide.
+    De ser necesario, desarrolla tus respuestas en el espacio
+    determinado para cada pregunta o
+    en una hoja en blanco por separado, anotando en ella tu nombre
+    completo, el n\'umero del problema y la soluci\'on propuesta.
+}
+% \end{minipage}\hfill
+% \begin{minipage}[t][][t]{0.3\textwidth}
+
+% \end{minipage}
+
+
+% \end{minipage}
+
+
+% \tikzset{
+%     gradesbox/.style={anchor=north,xshift=-.25\textwidth,
+%             yshift=-1.2cm,
+%             draw=none, fill=white, rectangle,
+%             inner xsep=1pt,inner ysep=2pt, style=rounded corners,
+%             %drop  shadow={fill=lightgray, opacity=0.7}
+%         },
+%     gradestitle/.style={
+%             fill=white,
+%             style=rounded corners,
+%         }
+% }
+% \begin{tikzpicture}[remember picture, overlay]
+%     %%%% GRADESTABLE
+%     \node[gradesbox] (box)
+%     {
+%         %\begin{minipage}[t][][t]{.42\textwidth}
+%             %\begin{minipage}[t][][b]{.22\textwidth}
+%             % \makebox[.22\textwidth]{
+
+%         \end{minipage}%
+%     };
+%     \node[gradestitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Puntuación };
+%     \node[draw=none, fit=(box)] {};
+% \end{tikzpicture}
+% \end{center}
 
 }
 \makeatother

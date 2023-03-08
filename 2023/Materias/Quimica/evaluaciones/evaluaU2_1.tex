@@ -27,47 +27,59 @@
 %\thispagestyle{plain}
 % \INFO
 % \printanswers
-\begin{multicols}{2}
-    \include*{../blocks/vocabulario}
-    \include*{../blocks/block002}
-\end{multicols}
-\newpage
+% \begin{multicols}{2}
+%     \include*{../blocks/vocabulario}
+%     \include*{../blocks/block002}
+% \end{multicols}
+% \newpage
 \begin{questions}
     \include*{../questions/question005}
-    \include*{../questions/question012}
     \newpage
+    \include*{../questions/question012}
     \include*{../questions/question009}
-    \include*{../questions/question008}
+    % \include*{../questions/question008}
     %\include*{../questions/question007}
     \newpage
     \include*{../questions/question004}
     \newpage
-    \include*{../questions/question006}
+
+    \begin{minipage}[t][][t]{.45\textwidth}
+        \include*{../questions/question006}
+    \end{minipage}\hfill
+    \begin{minipage}[t][][t]{.45\textwidth}
+        \include*{../questions/question014}
+    \end{minipage}
+
+    \include*{../questions/question015}
     \newpage
+    \include*{../questions/question011}
+
     %\newpage
     % \include*{../questions/question010}
-    \include*{../questions/question011}
     \newpage
     \include*{../questions/question013}
-    \newpage
-    \include*{../questions/question015}
-    \include*{../questions/question012}
-    \newpage
-    \include*{../questions/question016}
-    \newpage
+    % \newpage
+    % \include*{../questions/question012}
+    %\newpage
+    % \include*{../questions/question016}
+    % \newpage
     % \include*{../questions/question017}
-    \include*{../questions/question014}
 \end{questions}
-\pagestyle{empty}
-\newgeometry{left=30mm,top=0mm,bottom=15mm}
+%\pagestyle{plain}
+% \newgeometry{left=30mm,top=0mm,bottom=15mm}
+%\vspace{30mm}
 \begin{landscape}
-    \vspace{30mm}\hspace{-20mm}
-    \begin{table}[H]
-        \caption{Tabla Peri\'odica de los Elementos.}
-        \TablaPeriodica[0.50]
-        \label{tab:periodic_table}
-    \end{table}
+    \begin{minipage}[b]{\textwidth}
+        \thispagestyle{plain}
+        \begin{table}[H]
+            \centering
+            \caption{Tabla Peri\'odica de los Elementos.}
+            \TablaPeriodica[0.48]
+            \label{tab:periodic_table}
+        \end{table}
+    \end{minipage}
 \end{landscape}
+
 % \restoregeometry
 
 \end{document}
