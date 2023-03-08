@@ -13,12 +13,13 @@
 %%%% Paquete texto %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{enumitem} % customize enumerate and item
 \RequirePackage{mytcolorboxes}
-\RequirePackage{bohr}
-\RequirePackage{chemfig}
+% \RequirePackage{myboxes}
+% \RequirePackage{bohr}
+% \RequirePackage{chemfig}
 \@ifpackageloaded{lipsum}{}{\RequirePackage{lipsum}}
 \@ifpackageloaded{tikz}{}{\RequirePackage{tikz}}
-% \RequirePackage{pgfplots}
-% \pgfplotsset{compat=newest}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=newest}
 \RequirePackage{lscape}
 \input{insbox}
 \usetikzlibrary{fit,shadows,shadows.blur,shapes,calc}
@@ -145,7 +146,6 @@
             \end{minipage}
         };
         \node[objetivotitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
-        \node[draw=none, fit=(box)] {};
     \end{tikzpicture}
 }
 \newcommand{\gradesbox}[3][fill=white]{
@@ -156,20 +156,19 @@
             \end{minipage}
         };
         \node[gradestitle,  right=10pt,yshift=1mm] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
-        \node[draw=none, fit=(box)] {};
     \end{tikzpicture}
 }
 \newcommand{\instructionbox}[3][fill=white]{
     \begin{tikzpicture}
         \node [instructionbox, #1] (box)
         {
+            \vspace{-0.5cm}
             \begin{minipage}{.95\linewidth}
                 \setlength{\parindent}{2mm} % Indentar.
                 \normalfont #3
             \end{minipage}
         };
         \node[instructiontitle, right=10pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
-        \node[draw=none, fit=(box)] {};
     \end{tikzpicture}
 }
 
@@ -183,7 +182,7 @@
 \AtBeginDocument{
 \setlength\linefillheight{.2in}
 % \setlength{\columnseprule}{5pt}
-\setlength{\columnsep}{30pt}
+\setlength{\columnsep}{20pt}
 \setlength{\parindent}{0pt}
 \addpoints
 \pagestyle{headandfoot}
@@ -205,7 +204,7 @@
 
 \begin{minipage}{\textwidth}
     \begin{minipage}{.6\textwidth}
-        \makebox[\textwidth]{\bfseries \comfortaa  Fecha:\enspace\hrulefill}\\[1em]
+        \makebox[\textwidth]{\bfseries \comfortaa  Fecha de aplicación:\enspace\hrulefill}\\[1em]
         \objetivobox{Aprendizajes a evaluar:}{
             \theaprendizajes
         }
