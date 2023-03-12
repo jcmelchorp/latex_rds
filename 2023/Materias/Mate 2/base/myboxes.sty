@@ -47,22 +47,6 @@
     borderline = {1.5pt}{0pt}{OliveDrab, dashed} % add "dashed" for dashed line
 }
 
-\newtcolorbox{openbox}{
-    enhanced,    
-    sharpish corners, % better drop shadow
-    boxrule = 0pt,
-    toprule = 4.5pt, % top rule weight
-    colframe = rdsdark,
-    fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
-}
-\newtcolorbox{closebox}{
-    enhanced,    
-    sharpish corners, % better drop shadow
-    boxrule = 0pt,
-    bottomrule = 4.5pt, % top rule weight
-    colframe = rdsdark,
-    fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
-}
 
 \newtcolorbox{bA}{
     %sharpish corners, % b
@@ -201,78 +185,61 @@
             drop  shadow={fill=gray, opacity=0.7}
         },
     abstracttitle/.style={
-        fill=white,
-        style=rounded corners,
-        % drop shadow,
-               }
+            fill=white,
+            style=rounded corners,
+            % drop shadow,
+        }
 }
 
 \newcommand{\boxabstract}[3][fill=white]{
-  \begin{tikzpicture}
-    \node [abstractbox, #1] (box)
-    {\begin{minipage}{.92\textwidth}
-        \setlength{\parindent}{0mm} % Indentar.
-        \normalfont \sffamily #3
-      \end{minipage}};
-    \node[abstracttitle,right=5pt,#1] at (box.north west) {\bfseries \sffamily \large #2};
-    \node[draw=none, fit=(box)] {};
-  \end{tikzpicture}
-  }%
+    \begin{tikzpicture}
+        \node [abstractbox, #1] (box)
+        {\begin{minipage}{.92\textwidth}
+                \setlength{\parindent}{0mm} % Indentar.
+                \normalfont \sffamily #3
+            \end{minipage}};
+        \node[abstracttitle,right=5pt,#1] at (box.north west) {\bfseries \sffamily \large #2};
+        \node[draw=none, fit=(box)] {};
+    \end{tikzpicture}
+}%
 
-  \newenvironment{startInfo}[4][Inicio]{
-    \begin{openbox}
-  \begin{minipage}{0.25\textwidth}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=.8\linewidth]{#3}
-        \caption{#4}
-        \label{fig:masabody}
-    \end{figure}
-\end{minipage}\hfill
-\begin{minipage}{0.7\textwidth}
-    \begin{center}
-        \color{rdsdark}\textbf{#1}
-    \end{center}
-    #2
-\end{minipage}
-  }{\end{openbox}}
 \newenvironment{opening}[2][Inicio]{
     \begin{openbox}
         \begin{center}
             \color{rdsdark}\textbf{#1}
         \end{center}
         #2
-}{ \end{openbox}}
+        }{ \end{openbox}}
 \newenvironment{closing}[2][Cierre]{
     \begin{closebox}
         \begin{center}\color{rdsdark}\textbf{#1}\end{center}
         #2
-}{ \end{closebox}}
+        }{ \end{closebox}}
 \newenvironment{problemas}[1]{
     \begin{practicabox}
         \begin{center}\color{DarkOliveGreen}\fontsize{18}{18}\selectfont\bbfamily Problemas\end{center}
         #1
-}{ \end{practicabox}}
+        }{ \end{practicabox}}
 \newenvironment{critico}[2][Piensa y se cr\'itico]{
     \begin{criticobox}
         \begin{center}\color{OliveDrab}\textbf{#1}\end{center}
         #2
-}{ \end{criticobox}}
+        }{ \end{criticobox}}
 \newenvironment{important}[3][\textwidth]{
     \noindent\begin{minipage}{#1}
-    \begin{importantbox}
-        \parbox{7mm}{\raisebox{2mm}{
-            \includegraphics[width=7mm]{keys.png}
-        }}
-        {\fontsize{16}{18}\selectfont\alterfont\bfseries\color{rdsdark} #2}\\
-        #3
-}{ 
-    \end{importantbox}% 
-\end{minipage}%
+        \begin{importantbox}
+            \parbox{7mm}{\raisebox{2mm}{
+                    \includegraphics[width=7mm]{keys.png}
+                }}
+            {\fontsize{16}{18}\selectfont\alterfont\bfseries\color{rdsdark} #2}\\
+            #3
+            }{
+        \end{importantbox}% 
+    \end{minipage}%
 }
 
 \newcommand{\dashedbox}[1]{%
-\tikz[baseline]\node[anchor=base, draw=gray, dash pattern=on 2pt off 1pt, outer sep=0pt, inner sep=3pt] {#1};%
+    \tikz[baseline]\node[anchor=base, draw=gray, dash pattern=on 2pt off 1pt, outer sep=0pt, inner sep=3pt] {#1};%
 }
 
 \usepackage[framemethod=tikz]{mdframed}
@@ -280,30 +247,20 @@
 \definecolor{mybrown}{RGB}{128,64,0}
 
 \mdfdefinestyle{mystyle}{%
-linecolor=colorrds,outerlinewidth=1pt,%
-frametitlerule=true,frametitlefont=\sffamily\bfseries\color{white},%
-frametitlerulewidth=1pt,frametitlerulecolor=colorrds,%
-frametitlebackgroundcolor=colorrds,
-backgroundcolor=colorrds!05,
-innertopmargin=\topskip,
-roundcorner=5pt
+    linecolor=colorrds,outerlinewidth=1pt,%
+    frametitlerule=true,frametitlefont=\sffamily\bfseries\color{white},%
+    frametitlerulewidth=1pt,frametitlerulecolor=colorrds,%
+    frametitlebackgroundcolor=colorrds,
+    backgroundcolor=colorrds!05,
+    innertopmargin=\topskip,
+    roundcorner=5pt
 }
 \mdtheorem[style=mystyle]{multipletcolorbox}{Multipletcolorbox}
 
 \gdef\Sepline{%
-  \par\noindent\makebox[\linewidth][l]{%
-  \hspace*{-\mdflength{innerleftmargin}}%
-   \tikz\draw[thick,dashed,gray!60] (0,0) --%
+    \par\noindent\makebox[\linewidth][l]{%
+        \hspace*{-\mdflength{innerleftmargin}}%
+        \tikz\draw[thick,dashed,gray!60] (0,0) --%
         (\textwidth+\the\mdflength{innerleftmargin}+\the\mdflength{innerrightmargin},0);
-  }\par\nobreak}
+    }\par\nobreak}
 
-  \makeatletter
-\newcommand{\DrawLine}{%
-  \begin{tikzpicture}
-  \path[use as bounding box] (0,0) -- (\linewidth,0);
-  \draw[color=colorrds!35!white,dashed,dash phase=2pt]
-        (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
-        (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
-  \end{tikzpicture}%
-  }
-\makeatother

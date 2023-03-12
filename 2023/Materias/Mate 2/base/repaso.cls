@@ -57,7 +57,7 @@
 \RequirePackage{comfortaa}% se usa en el nombre de la escuela \comfortaa [sand serif]
 \RequirePackage{foekfont}% se usa en el numero de repaso \foekfamily [handwriting]
 %\RequirePackage[rf]{electrum} %% lf option gives lining figures as default; 
-			  %% remove option to get oldstyle figures as default
+%% remove option to get oldstyle figures as default
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \newcommand*\alterfont{\fontfamily{lmtt}\selectfont}%% se usa en la palabra repaso \alterfont [typewriting]
@@ -91,8 +91,8 @@
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
     \node[shape=circle, draw, minimum size=1.8em, inner sep=0pt, thick] (char) {#1};}}
-    \renewcommand\choicelabel{\thechoice.}
-    \setlength\linefillheight{.2in}
+\renewcommand\choicelabel{\thechoice.}
+\setlength\linefillheight{.2in}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
 %\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
@@ -184,10 +184,10 @@
 % \renewcommand{\partlabel}{\colorbox{red} {\large{\textbf{\color{white}(\thepartno)}}}}
 \renewenvironment{TheSolution}{
   \begin{mdframed}[skipabove=\baselineskip,innertopmargin=\baselineskip,innerbottommargin=\baselineskip, linewidth=3pt,
-  linecolor=ao(english),  topline=false,
-  rightline=false,
-  bottomline=false]
- \textbf{\color{Sepia}Solución:}\enspace\ignorespaces}{\end{mdframed}}
+      linecolor=ao(english),  topline=false,
+      rightline=false,
+      bottomline=false]
+    \textbf{\color{Sepia}Solución:}\enspace\ignorespaces}{\end{mdframed}}
 % \newcommand{\puntuacion}{
 %   \centering
 %   \begin{mybox}{0.20\linewidth}{
@@ -206,7 +206,7 @@
       draw=colorrds, dashed,fill=white, rectangle,
       inner sep=15pt, style=rounded corners,
       %drop  shadow={fill=lightgray, opacity=0.7}
-      },
+    },
   aprendizajetitle/.style={
       fill=white,
       style=rounded corners,
@@ -217,24 +217,24 @@
       draw=none, fill=white, rectangle,
       inner xsep=1pt,inner ysep=2pt, style=rounded corners,
       %drop  shadow={fill=lightgray, opacity=0.7}
-      },
+    },
   requisitotitle/.style={
       fill=white,
       style=rounded corners,
       % drop shadow,
     },
-    instructionbox/.style={xshift=-.7\textwidth,
+  instructionbox/.style={xshift=-.7\textwidth,
       yshift=-4.6cm,
       draw=gray, fill=white, rectangle,
       inner sep=15pt,style=rounded corners,
-       %drop  shadow={fill=lightgray, opacity=0.7}
-       blur shadow={
-        shadow opacity=40,
-        shadow yshift=-1mm,
-        %shadow blur steps=30,
-        shadow blur extra rounding=5pt
-      }},
-    instructiontitle/.style={
+      %drop  shadow={fill=lightgray, opacity=0.7}
+      blur shadow={
+          shadow opacity=40,
+          shadow yshift=-1mm,
+          %shadow blur steps=30,
+          shadow blur extra rounding=5pt
+        }},
+  instructiontitle/.style={
       fill=white,
       style=rounded corners,
       % drop shadow,
@@ -244,12 +244,12 @@
 \newcommand{\INFO}{%
   \begin{tikzpicture}[remember picture]
     \draw[colorrds,ultra thick,xshift=-1.2\textwidth ,yshift=0cm,
-    rounded corners=5pt] (0,0)
+      rounded corners=5pt] (0,0)
     rectangle
     (\textwidth,3.1cm);
     %%%% TITULO
     \node[yshift=0cm,xshift=-.65\textwidth,
-    rectangle,
+      rectangle,
       rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
       blur shadow={
           shadow opacity=40,
@@ -282,18 +282,18 @@
     % };
     %%%% APRENDIZAJES
     \node[aprendizajebox] (box)
-    { 
+    {
       \begin{minipage}{.62\textwidth}
         \normalfont  \theaprendizajes
       \end{minipage}
-      };
+    };
     \node[aprendizajetitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes a evaluar};
     %%%% GRADESTABLE
     \node[requisitobox] (box)
-    { 
+    {
       \begin{minipage}[t][][t]{.24\textwidth}
-    %\begin{minipage}[t][][b]{.22\textwidth}
-     % \makebox[.22\textwidth]{
+        %\begin{minipage}[t][][b]{.22\textwidth}
+        % \makebox[.22\textwidth]{
         \scriptsize
         \cellwidth{0.5em}
         \gradetablestretch{1.5}
@@ -326,7 +326,7 @@
     }%
     };
     \node[draw=none, fit=(box)] {};
-    \end{tikzpicture}
+  \end{tikzpicture}
 }
 \newenvironment{mybox}[3][]{%
   \begin{tikzpicture}[#1]%
@@ -358,6 +358,7 @@
 \RequirePackage{adjustbox}
 %\RequirePackage{dashbox}
 \RequirePackage{myboxes}
+\RequirePackage{mytcolorboxes}
 %%%% EXTERNAL SOURCES
 \RequirePackage{newclude}
 \RequirePackage{import}

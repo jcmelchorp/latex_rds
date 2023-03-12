@@ -46,6 +46,11 @@
   fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
 }
 
+
+\newcommand{\dashedbox}[1]{%
+  \tikz[baseline]\node[anchor=base, draw=gray, dash pattern=on 2pt off 1pt, outer sep=0pt, inner sep=3pt] {#1};%
+}
+
 \newenvironment{startInfo}[4][Inicio]{
   \begin{openbox}
     \begin{minipage}{0.25\textwidth}
