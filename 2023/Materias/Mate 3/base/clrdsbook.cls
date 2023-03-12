@@ -24,12 +24,12 @@
 
 
 \RequirePackage[
-letterpaper,
-left=1in, 
-right=1in, 
-top=1in,
-bottom=1in,
-headheight=10mm,% Set \headheight to 10mm
+    letterpaper,
+    left=1in,
+    right=1in,
+    top=1in,
+    bottom=1in,
+    headheight=10mm,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 
 \RequirePackage{anyfontsize}
@@ -51,7 +51,7 @@ headheight=10mm,% Set \headheight to 10mm
 \RequirePackage{my-subsection}
 
 \RequirePackage{graphicx}
-\graphicspath{{./Images}} %Setting the graphicspath
+\graphicspath{{../images}} %Setting the graphicspath
 
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
@@ -66,28 +66,28 @@ headheight=10mm,% Set \headheight to 10mm
 
 \makeatletter
 \renewcommand{\maketitle}{
-\newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
-\thispagestyle{empty}
-\begin{center}
-    \vspace{4cm}
-    {\Huge \thesubject } \\
-    \vspace{1cm} \normalsize
-    {\bfseries \large {\@title}} \\
-    para los alumnos de {\thegrade} \\
-    {en el curso durante el ciclo escolar} \\
-    {\bfseries 2022-2023} \\
-    \vspace{2cm}
-    {\small POR} \\
-    \Large {\@author} \\[0.5em]
-    \normalsize Profesor de asignatura en \\
-    \vspace{2cm}
-    \includegraphics[width=4cm]{logo} \\
-    \vspace{2.75cm}
-\end{center}
-\includegraphics[width=1\textwidth]{cover}
-\newpage \thispagestyle{empty}
-\setcounter{page}{0}
-\restoregeometry
+    \newgeometry{left=0mm,top=50mm,bottom=0mm,right=0mm}
+    \thispagestyle{empty}
+    \begin{center}
+        \vspace{4cm}
+        {\Huge \thesubject } \\
+        \vspace{1cm} \normalsize
+        {\bfseries \large {\@title}} \\
+        para los alumnos de {\thegrade} \\
+        {en el curso durante el ciclo escolar} \\
+        {\bfseries 2022-2023} \\
+        \vspace{2cm}
+        {\small POR} \\
+        \Large {\@author} \\[0.5em]
+        \normalsize Profesor de asignatura en \\
+        \vspace{2cm}
+        \includegraphics[width=4cm]{logo} \\
+        \vspace{2.75cm}
+    \end{center}
+    \includegraphics[width=1\textwidth]{cover}
+    \newpage \thispagestyle{empty}
+    \setcounter{page}{0}
+    \restoregeometry
 }
 \makeatother
 
