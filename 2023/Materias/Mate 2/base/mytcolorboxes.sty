@@ -1,0 +1,76 @@
+\ProvidesPackage{mytcolorboxes}
+\@ifpackageloaded{tcolorbox}{}{\RequirePackage[most]{tcolorbox}}
+\tcbset{
+  sharp corners,
+  before skip = 0.1cm,    % add extra space before the box
+  after skip = 0.1cm      % add extra space after the box
+}                           % setting global options for tcolorbox
+
+\newtcolorbox{infocard}[2][]{%
+  enhanced,
+  colback=colorrds!5!white,
+  colframe=colorrds!35!white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  center title,
+  adjusted title={#2},
+  #1
+}
+
+\newtcolorbox{defcard}[1][]{%
+  enhanced,
+  colback=orange!5!white,
+  colframe=orange!35!white,
+  coltitle=black,
+  fonttitle=\bfseries,
+  center title,
+  adjusted title=Vocabulario,
+  #1
+}
+
+\newtcolorbox{openbox}{
+  enhanced,
+  sharpish corners, % better drop shadow
+  boxrule = 0pt,
+  toprule = 4.5pt, % top rule weight
+  colframe = rdsdark,
+  fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
+}
+
+\newtcolorbox{closebox}{
+  enhanced,
+  sharpish corners, % better drop shadow
+  boxrule = 0pt,
+  bottomrule = 4.5pt, % top rule weight
+  colframe = rdsdark,
+  fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
+}
+
+\newenvironment{startInfo}[4][Inicio]{
+  \begin{openbox}
+    \begin{minipage}{0.25\textwidth}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=.8\linewidth]{#3}
+        \caption{#4}
+        \label{fig:masabody}
+      \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+      \begin{center}
+        \color{rdsdark}\textbf{#1}
+      \end{center}
+      #2
+    \end{minipage}
+    }{\end{openbox}}
+
+\makeatletter
+\newcommand{\DrawLine}{%
+  \begin{tikzpicture}
+    \path[use as bounding box] (0,0) -- (\linewidth,0);
+    \draw[color=colorrds!35!white,dashed,dash phase=2pt]
+    (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
+    (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
+  \end{tikzpicture}%
+}
+\makeatother
