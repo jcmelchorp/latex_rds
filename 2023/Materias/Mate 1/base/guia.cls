@@ -355,6 +355,7 @@
 \RequirePackage{amssymb,amsmath}
 \decimalpoint
 \RequirePackage{adjustbox}
+\RequirePackage{mytcolorboxes}
 \RequirePackage{myboxes}
 
 %%%% EXTERNAL SOURCES
