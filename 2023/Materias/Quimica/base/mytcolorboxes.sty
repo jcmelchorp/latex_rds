@@ -57,3 +57,14 @@
       #2
     \end{minipage}
     }{\end{openbox}}
+
+\makeatletter
+\newcommand{\DrawLine}{%
+  \begin{tikzpicture}
+    \path[use as bounding box] (0,0) -- (\linewidth,0);
+    \draw[color=colorrds!35!white,dashed,dash phase=2pt]
+    (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
+    (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
+  \end{tikzpicture}%
+}
+\makeatother

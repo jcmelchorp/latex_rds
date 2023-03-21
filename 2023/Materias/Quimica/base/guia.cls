@@ -7,8 +7,9 @@
 \RequirePackage{rdscolors}
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
-\arrayrulecolor{rdsdark!50}
-
+\arrayrulecolor{rdsdark!80}
+\renewcommand{\arraystretch}{1.4}
+\newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 % \newcommand{\answerAngleBox}[2][]{
 %   \definecolor{#2}{HTML}{0DBE80}
 %   \begin{center}
@@ -58,7 +59,7 @@
 \RequirePackage{comfortaa}% se usa en el nombre de la escuela \comfortaa [sand serif]
 \RequirePackage{foekfont}% se usa en el numero de guia \foekfamily [handwriting]
 %\RequirePackage[rf]{electrum} %% lf option gives lining figures as default; 
-			  %% remove option to get oldstyle figures as default
+%% remove option to get oldstyle figures as default
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \newcommand*\alterfont{\fontfamily{lmtt}\selectfont}%% se usa en la palabra guia \alterfont [typewriting]
@@ -94,6 +95,8 @@
     \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
 \renewcommand\choicelabel{\circled{\thechoice}}
 \setlength\linefillheight{.2in}
+\AtBeginEnvironment{solutionbox}{\vspace{-0.5\baselineskip}}
+\AtEndEnvironment{solutionbox}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
@@ -174,20 +177,19 @@
 \newcommand{\requisitos}[1]{\renewcommand{\therequisitos}{#1}}
 % These commands set up the running header on the top of the exam pages
 \pagestyle{headandfoot}
-\firstpageheader{}{}{}
+\firstpageheader{}{{\ifprintanswers\color{red}\Huge Autocontrol\fi}}{}
 \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
-\runningheader{\thesubject}{Guía \# \theguide}{\hfill\thegrade \ (\thecycle)}
+\runningheader{\thesubject}{Guía \# \theguide \ {\ifprintanswers\color{red} (Autocontrol)\fi}}{\hfill\thegrade \ (\thecycle)}
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
-
 % \renewcommand{\questionlabel}{\colorbox{red} {\huge{\textbf{\color{white}~\thequestion.}}}}
 % \renewcommand{\partlabel}{\colorbox{red} {\large{\textbf{\color{white}(\thepartno)}}}}
 \renewenvironment{TheSolution}{
   \begin{mdframed}[skipabove=\baselineskip,innertopmargin=\baselineskip,innerbottommargin=\baselineskip, linewidth=3pt,
-  linecolor=ao(english),  topline=false,
-  rightline=false,
-  bottomline=false]
- \textbf{\color{Sepia}Solución:}\enspace\ignorespaces}{\end{mdframed}}
+      linecolor=ao(english),  topline=false,
+      rightline=false,
+      bottomline=false]
+    \textbf{\color{Sepia}Solución:}\enspace\ignorespaces}{\end{mdframed}}
 % \newcommand{\puntuacion}{
 %   \centering
 %   \begin{mybox}{0.20\linewidth}{
@@ -206,7 +208,7 @@
       draw=colorrds, dashed,fill=white, rectangle,
       inner sep=15pt, style=rounded corners,
       %drop  shadow={fill=lightgray, opacity=0.7}
-      },
+    },
   aprendizajetitle/.style={
       fill=white,
       style=rounded corners,
@@ -217,24 +219,24 @@
       draw=none, fill=white, rectangle,
       inner xsep=1pt,inner ysep=2pt, style=rounded corners,
       %drop  shadow={fill=lightgray, opacity=0.7}
-      },
+    },
   requisitotitle/.style={
       fill=white,
       style=rounded corners,
       % drop shadow,
     },
-    instructionbox/.style={xshift=-.7\textwidth,
+  instructionbox/.style={xshift=-.7\textwidth,
       yshift=-4.6cm,
       draw=gray, fill=white, rectangle,
       inner sep=15pt,style=rounded corners,
-       %drop  shadow={fill=lightgray, opacity=0.7}
-       blur shadow={
-        shadow opacity=40,
-        shadow yshift=-1mm,
-        %shadow blur steps=30,
-        shadow blur extra rounding=5pt
-      }},
-    instructiontitle/.style={
+      %drop  shadow={fill=lightgray, opacity=0.7}
+      blur shadow={
+          shadow opacity=40,
+          shadow yshift=-1mm,
+          %shadow blur steps=30,
+          shadow blur extra rounding=5pt
+        }},
+  instructiontitle/.style={
       fill=white,
       style=rounded corners,
       % drop shadow,
@@ -244,12 +246,12 @@
 \newcommand{\INFO}{%
   \begin{tikzpicture}[remember picture]
     \draw[colorrds,ultra thick,xshift=-1.2\textwidth ,yshift=0cm,
-    rounded corners=5pt] (0,0)
+      rounded corners=5pt] (0,0)
     rectangle
     (\textwidth,3.1cm);
     %%%% TITULO
     \node[yshift=0cm,xshift=-.65\textwidth,
-    rectangle,
+      rectangle,
       rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
       blur shadow={
           shadow opacity=40,
@@ -266,13 +268,13 @@
     };
     %%%% BOLA
     \node[xshift=-.27\textwidth ,circle,inner xsep=5pt,inner ysep=5pt,
-    blur shadow={
+      blur shadow={
           shadow opacity=40,
           shadow yshift=-1mm,
           %shadow blur steps=30,
           %shadow blur extra rounding=5pt
-        },  
-    fill=Olive!35]
+        },
+      fill=MainColor!50]
     {
       \begin{minipage}{1cm}
         \centering
@@ -282,20 +284,20 @@
     };
     %%%% APRENDIZAJES
     \node[aprendizajebox] (box)
-    { 
+    {
       \begin{minipage}[t][][t]{.42\textwidth}
         \normalfont  \theaprendizajes
       \end{minipage}
-      };
+    };
     \node[aprendizajetitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
     \node[draw=none, fit=(box)] {};
     %%%% GRADESTABLE
     \node[requisitobox] (box)
-    { 
+    {
       \begin{minipage}[t][][t]{.52\textwidth}
-    %\begin{minipage}[t][][b]{.22\textwidth}
-     % \makebox[.22\textwidth]{
-        \footnotesize 
+        %\begin{minipage}[t][][b]{.22\textwidth}
+        % \makebox[.22\textwidth]{
+        \footnotesize
         \cellwidth{0.8em}
         \gradetablestretch{1.5}
         \hqword{Pregunta}
@@ -303,10 +305,10 @@
         \hpword{Puntos}
         \hsword{Obtenidos}
         \htword{Total}
-        \ifnum\numquestions > 9
-        \multirowgradetable{2}[questions]
+        \ifnum \numquestions > 10
+          \multirowgradetable{2}[questions]
         \else
-        \gradetable[h][questions]
+          \gradetable[h][questions]
         \fi
       \end{minipage}%
     };
@@ -322,12 +324,12 @@
     {
     \parbox{0.8\textwidth}{%
     {\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa  \textbf{Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
-    { \fontsize{16}{20}\selectfont \textbf{\color{OliveGreen}\thesubject} \hfill {\color{Brown}\thegrade} }\\
+    { \fontsize{16}{20}\selectfont \textbf{\color{SubjectColor}\thesubject} \hfill {\color{MainColor}\thegrade} }\\
     { \@author \hfill \thecycle}\\
     }%
     };
     \node[draw=none, fit=(box)] {};
-    \end{tikzpicture}
+  \end{tikzpicture}
 }
 \newenvironment{mybox}[3][]{%
   \begin{tikzpicture}[#1]%
@@ -345,6 +347,7 @@
 \makeatother
 %%%% CAPTIONS
 \RequirePackage{caption,capt-of}
+\RequirePackage{subcaption}
 %%%% LINKS
 \RequirePackage{float}
 \RequirePackage{bookmark}
@@ -356,7 +359,7 @@
 \decimalpoint
 \RequirePackage{adjustbox}
 \RequirePackage{myboxes}
-
+\RequirePackage{mytcolorboxes}
 %%%% EXTERNAL SOURCES
 \RequirePackage{newclude}
 \RequirePackage{import}

@@ -360,7 +360,6 @@
 \RequirePackage{adjustbox}
 \RequirePackage{mytcolorboxes}
 \RequirePackage{myboxes}
-
 %%%% EXTERNAL SOURCES
 \RequirePackage{newclude}
 \RequirePackage{import}
