@@ -2,19 +2,18 @@
 
 % \ifprintanswers
 \begin{table}[H]
+    \rowcolors{2}{colorrds!10}{lightgray!10}
     \centering
     \caption{Precio del aguacate}
     \label{tab:precio_aguacate}
-    \begin{tabular}{c|c|l}
-        Peso & Precio                    & Razón entre precio y peso \\
-        \midrule
-        1    & \ifprintanswers59.065\fi  & \ifprintanswers59.065\fi  \\
-        \hline
-        2    & 118.33                    & \ifprintanswers59.065\fi  \\
-        \hline
-        3    & \ifprintanswers177.195\fi & \ifprintanswers59.065\fi  \\
-        \hline
-        4    & 236.26                    & \ifprintanswers59.065\fi  \\
+    \begin{tabular}{|c|c|c|}
+        \toprule
+        \rowcolor{colorrds!80}
+        \textbf{\color{white}Peso} & \textbf{\color{white}Precio} & \textbf{\color{white}Razón entre precio y peso} \\\midrule
+        1                          & \ifprintanswers59.065\fi     & \ifprintanswers59.065\fi                        \\\hline
+        2                          & 118.33                       & \ifprintanswers59.065\fi                        \\\hline
+        3                          & \ifprintanswers177.195\fi    & \ifprintanswers59.065\fi                        \\\hline
+        4                          & 236.26                       & \ifprintanswers59.065\fi                        \\\cline{2-3}
         \bottomrule
     \end{tabular}
 \end{table}

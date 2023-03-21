@@ -3,46 +3,61 @@
 % \begin{multicols}{2}
 
 \begin{table}[H]
+    \rowcolors{4}{colorrds!10}{lightgray!10}
     \centering
     \caption{}
     \label{tab:3.6}
-    \begin{tabular}{c|c|c|c|c|c|}
-        \multirow{2}*{\minitab[c]{Regla de                \\[-0.5em] recurrencia}} &
-        \multicolumn{5}{c|}{\minitab[c]{Número de término \\[-0.5em] en la sucesión}}
-        \\ \cline{2-6}
-                               & 1 & 2 & 3 & 4 & 5        \\ \hline
-        $4\left(n+1\right)$    &   &   &   &   &          \\ \hline
-        $4n+4$                 &   &   &   &   &          \\ \hline
-        $2n+2\left(n-1\right)$ &   &   &   &   &          \\ \hline
-        $4\left(n-1\right)+8$  &   &   &   &   &          \\ \cline{2-6}
+    \begin{tabular}{|r|*{5}{p{1.8em}|}}
+        \toprule
+        \rowcolor{colorrds!80}
+                               & \multicolumn{5}{c|}{\bfseries\color{white}\minitab[c]{Posición en la sucesión}}                     \\ \cline{2-6}
+        \multirow{-2}*{\cellcolor{colorrds!80}\bfseries\color{white}\minitab[c]{Regla de                                             \\ recurrencia}}                       & 1                                                                       & 2 & 3 & 4 & 5 \\ \hline
+        $4\left(n+1\right)$    & 8                                                                               & 12 & 16 & 20 & 24 \\ \hline
+        $4n+4$                 & 8                                                                               & 12 & 16 & 20 & 24 \\ \hline
+        $2n+2\left(n-1\right)$ & 2                                                                               & 6  & 10 & 14 & 18 \\ \hline
+        $4\left(n-1\right)+8$  & 8                                                                               & 12 & 16 & 20 & 24 \\ \cline{2-6}
+        \bottomrule
     \end{tabular}
 \end{table}
 
 \begin{parts}
     \part ¿Hay reglas con las que obtienes los mismos términos? ¿Cuáles?
 
-    \begin{solutionbox}{1.5cm}
+    \begin{solutionbox}{1.2cm}
+        Sí, con $4(n + 1), 4n +4 y 4(n - 1)+8$.
     \end{solutionbox}
 
     \part Si sustituyes el mismo valor en dos o más reglas y obtienes el mismo término, ¿qué puedes decir acerca de las reglas?
 
-    \begin{solutionbox}{1.5cm}
+    \begin{solutionbox}{1.2cm}
+        Que son las mismas reglas escritas de manera diferente.
     \end{solutionbox}
 
     \part Simplifica las reglas de la Tabla \ref{tab:3.6}. ¿A qué expresión llegaste en cada caso?
 
-    \begin{solutionbox}{1.5cm}
+    \begin{solutionbox}{2.4cm}
+        $4(n + 1) = 4n + 4$\\
+        $4n + 4 \text{ ya está simplificada}$\\
+        $2n + 2(n - 1) = 2n + 2n - 2 = 4n - 2$\\
+        $4(n - 1) + 8 = 4n - 4 + 8 = 4n + 4$\\
     \end{solutionbox}
 
     \part Con base en lo anterior, ¿qué puedes concluir acerca de las reglas?
 
-    \begin{solutionbox}{1.5cm}
+    \begin{solutionbox}{2cm}
+        Tres son la misma regla:\\
+        $4(n + 1) = 4n + 4 = 4(n - 1) + 8$.\\
+        La regla $2n + 2(n - 1)$ es diferente a las anteriores.
     \end{solutionbox}
 
     \part Reúnete con tus compañeros. Respondan con argumentos: dadas dos o más reglas, ¿qué
     significa que sean equivalentes?, ¿cómo pueden saber si lo son?
 
-    \begin{solutionbox}{1.5cm}
+    \begin{solutionbox}{2cm}
+        Se busca que los alumnos expliquen que dos o más reglas son equiva-
+        lentes si para cualquier posición se obtienen los mismos términos o bien, que
+        expliquen que mediante operaciones algebraicas, se puede transformar una
+        expresión en la otra.
     \end{solutionbox}
 \end{parts}
 % \end{multicols}

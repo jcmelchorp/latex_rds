@@ -1,6 +1,6 @@
 \ProvidesPackage{myboxes}
 \RequirePackage[framemethod=tikz]{mdframed}
-\RequirePackage[many]{tcolorbox}
+\@ifpackageloaded{tcolorbox}{}{\RequirePackage[most]{tcolorbox}}
 % \usepackage{mathspec} 			    % for FONTS
 % \usepackage{setspace}               % for LINE SPACING
 % \setmainfont{Noto Sans}[

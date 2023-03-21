@@ -7,10 +7,9 @@
 \RequirePackage{rdscolors}
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
-\arrayrulecolor{rdsdark!50}
+\arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1.4}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
-
 % \newcommand{\answerAngleBox}[2][]{
 %   \definecolor{#2}{HTML}{0DBE80}
 %   \begin{center}
@@ -96,6 +95,8 @@
     \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
 \renewcommand\choicelabel{\circled{\thechoice}}
 \setlength\linefillheight{.2in}
+\AtBeginEnvironment{solutionbox}{\vspace{-0.5\baselineskip}}
+\AtEndEnvironment{solutionbox}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
@@ -176,12 +177,11 @@
 \newcommand{\requisitos}[1]{\renewcommand{\therequisitos}{#1}}
 % These commands set up the running header on the top of the exam pages
 \pagestyle{headandfoot}
-\firstpageheader{}{}{}
+\firstpageheader{}{{\ifprintanswers\color{red}\Huge Autocontrol\fi}}{}
 \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
-\runningheader{\thesubject}{Guía \# \theguide}{\hfill\thegrade \ (\thecycle)}
+\runningheader{\thesubject}{Guía \# \theguide \ {\ifprintanswers\color{red} (Autocontrol)\fi}}{\hfill\thegrade \ (\thecycle)}
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
-
 % \renewcommand{\questionlabel}{\colorbox{red} {\huge{\textbf{\color{white}~\thequestion.}}}}
 % \renewcommand{\partlabel}{\colorbox{red} {\large{\textbf{\color{white}(\thepartno)}}}}
 \renewenvironment{TheSolution}{
@@ -274,7 +274,7 @@
           %shadow blur steps=30,
           %shadow blur extra rounding=5pt
         },
-      fill=RoyalBlue!35]
+      fill=MainColor!50]
     {
       \begin{minipage}{1cm}
         \centering
@@ -324,7 +324,7 @@
     {
     \parbox{0.8\textwidth}{%
     {\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa  \textbf{Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
-    { \fontsize{16}{20}\selectfont \textbf{\color{Goldenrod}\thesubject} \hfill {\color{RoyalBlue}\thegrade} }\\
+    { \fontsize{16}{20}\selectfont \textbf{\color{SubjectColor}\thesubject} \hfill {\color{MainColor}\thegrade} }\\
     { \@author \hfill \thecycle}\\
     }%
     };
@@ -347,6 +347,7 @@
 \makeatother
 %%%% CAPTIONS
 \RequirePackage{caption,capt-of}
+\RequirePackage{subcaption}
 %%%% LINKS
 \RequirePackage{float}
 \RequirePackage{bookmark}
@@ -357,6 +358,7 @@
 \RequirePackage{amssymb,amsmath}
 \decimalpoint
 \RequirePackage{adjustbox}
+\RequirePackage{mytcolorboxes}
 \RequirePackage{myboxes}
 
 %%%% EXTERNAL SOURCES
