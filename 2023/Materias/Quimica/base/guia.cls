@@ -95,6 +95,13 @@
     \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
 \renewcommand\choicelabel{\circled{\thechoice}}
 \setlength\linefillheight{.2in}
+\setlength{\parindent}{0pt}
+% \newcommand{\gsection}[1]% #1 = title
+% {\stepcounter{section}%
+%\setcounter{question}{0}%
+% \fullwidth{\smallskip\textbf{\large #1}}}
+%\renewcommand{\thequestion}{\thesection.\arabic{question}}
+\patchcmd{\questions}{10.}{\thequestion.}{}{}% fix left margin
 \AtBeginEnvironment{solutionbox}{\vspace{-0.5\baselineskip}}
 \AtEndEnvironment{solutionbox}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
@@ -155,7 +162,6 @@
 % \makeatother
 %%%% INFO
 \makeatletter
-\setlength{\parindent}{0pt}
 %%%% LOGO
 \def\LOGO{%
   \begin{picture}(0,0)\unitlength=1cm
@@ -357,6 +363,7 @@
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
 \decimalpoint
+\RequirePackage{etoolbox}
 \RequirePackage{adjustbox}
 \RequirePackage{myboxes}
 \RequirePackage{mytcolorboxes}

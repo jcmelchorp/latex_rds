@@ -1,40 +1,40 @@
-\question[15] Completa el siguiente mapa mental sobre la materia y sus propiedades.
+\question[10] Completa el siguiente mapa mental sobre la materia y sus propiedades.
 
 \begin{tikzpicture}[ every annotation/.style = {draw,
-        fill = white, font = \HUGE}]
-  \path[mindmap,concept color=colorrds!50,text=black]
-  node[concept] {La materia \\{\small(Todo lo que existe y ocupa un lugar en el espacio)}}
-  [clockwise from=-45]
-  child[concept color=green!20!black,text=white] {
-      node[concept] {se clasifica en...}
-        [clockwise from=-45]
-      child { node[concept] {Mezclas}
-            [clockwise from=285]
-          child[concept color=green!50!black] {
-              node[concept] {heterogéneas}
-                [clockwise from=15]
-              child { node[concept] {Coloides} }
-              child { node[concept] {Emulsiones} }
-              child { node[concept] {Suspensi\'on} }
-              child { node[concept] {Disoluci\'on saturada} }
-            }
-          child[concept color=green!50!black] {
-              node[concept] {homogéneas}
-                [clockwise from=275]
-              child { node[concept] {Disoluci\'on insaturada} }
-              child { node[concept] {Aleación} }
-            }
+                fill = white, font = \HUGE}]
+    \path[mindmap,concept color=colorrds!50,text=black]
+    node[concept] {La materia \\{\small(Todo lo que existe y ocupa un lugar en el espacio)}}
+    [clockwise from=-45]
+    child[concept color=green!20!black,text=white] {
+            node[concept] {se clasifica en...}
+                [clockwise from=-45]
+            child { node[concept] {Mezclas}
+                        [clockwise from=285]
+                    child[concept color=green!50!black] {
+                            node[concept] {heterogéneas}
+                                [clockwise from=15]
+                            child { node[concept] {Coloides} }
+                            child { node[concept] {Emulsiones} }
+                            child { node[concept] {Suspensi\'on} }
+                            child { node[concept] {Disoluci\'on saturada} }
+                        }
+                    child[concept color=green!50!black] {
+                            node[concept] {homogéneas}
+                                [clockwise from=275]
+                            child { node[concept] {Disoluci\'on insaturada} }
+                            child { node[concept] {Aleación} }
+                        }
+                }
+            child { node[concept] {Sustancias puras}
+                        [clockwise from=-115]
+                    child[concept color=green!50!black] {
+                            node[concept] {Compuestos}
+                        }
+                    child[concept color=green!50!black] {
+                            node[concept] {Sustancias elementales }
+                        }
+                }
         }
-      child { node[concept] {Sustancias puras}
-            [clockwise from=-115]
-          child[concept color=green!50!black] {
-              node[concept] {Compuestos}
-            }
-          child[concept color=green!50!black] {
-              node[concept] {Sustancias elementales }
-            }
-        }
-    }
-  % child[concept color=red] { node[concept] {technical} }
-  % child[concept color=orange] { node[concept] {theoretical} };
+    % child[concept color=red] { node[concept] {technical} }
+    % child[concept color=orange] { node[concept] {theoretical} };
 \end{tikzpicture}

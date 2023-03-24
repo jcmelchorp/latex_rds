@@ -1,10 +1,29 @@
 \ProvidesPackage{mytcolorboxes}
 \@ifpackageloaded{tcolorbox}{}{\RequirePackage[most]{tcolorbox}}
+\tcbuselibrary{skins}
+\tcbuselibrary{raster}
 \tcbset{
+  %enhanced.
   sharp corners,
   before skip = 0.1cm,    % add extra space before the box
   after skip = 0.1cm      % add extra space after the box
 }                           % setting global options for tcolorbox
+\newtcolorbox{qbox}[2][]{%
+  %text height=10cm,
+  colback=red!5!white,
+  colframe=red!75!black,
+  fonttitle=\bfseries,
+  adjusted title={Pregunta: #1},
+  {#2}
+}
+% \begin{tcbitemize}[raster columns=4, raster equal height=rows,
+%     size=small,colback=colorrds!5!white,
+%     colframe=colorrds!35!white,colbacktitle=colorrds!50!white,
+%     fonttitle=\centering\bfseries,title={Pregunta \# \thetcbrasternum}]
+
+%   \tcbitem
+%   \tcbitem
+% \end{tcbitemize}
 
 \newtcolorbox{infocard}[2][]{%
   enhanced,
@@ -79,3 +98,4 @@
   \end{tikzpicture}%
 }
 \makeatother
+
