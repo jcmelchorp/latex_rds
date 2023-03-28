@@ -211,10 +211,10 @@
 % }
 %%%% STYLES
 \tikzset{
-    aprendizajebox/.style={anchor=north,xshift=-.95\textwidth,
+    aprendizajebox/.style={anchor=north,xshift=-.92\textwidth,
             yshift=-1.25cm,
             draw=colorrds, dashed,fill=white, rectangle,
-            inner sep=15pt, style=rounded corners,
+            inner sep=10pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
     aprendizajetitle/.style={
@@ -222,10 +222,10 @@
             style=rounded corners,
             % drop shadow,
         },
-    requisitobox/.style={anchor=north east,xshift=-.2\textwidth,
-            yshift=-1.21cm,
+    requisitobox/.style={anchor=north east,xshift=-.22\textwidth,
+            yshift=-1.2cm,
             draw=none, fill=white, rectangle,
-            inner xsep=1pt,inner ysep=2pt, style=rounded corners,
+            inner xsep=0pt,inner ysep=2pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
     requisitotitle/.style={
@@ -298,23 +298,26 @@
         %%%% APRENDIZAJES
         \node[aprendizajebox] (box)
         {
-            \begin{minipage}[t][][t]{.45\textwidth}
+            % % \colorbox{red}{
+            % \begin{minipage}[t][][t]{.48\textwidth}
+            \adjustbox{
+                minipage=0.48\textwidth,
+                %cframe=red,
+            }{
                 \normalfont  \theaprendizajes
-            \end{minipage}
+                % \end{minipage}
+            }%
         };
         \node[aprendizajetitle,right=5pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
-        \node[draw=none, fit=(box)] {};
+        % \node[draw=none, fit=(box)] {};
         %%%% GRADESTABLE
         \node[requisitobox] (box)
         {
             \adjustbox{
-                min width=50pt,
-                max width=0.48\linewidth,
+                min width=0.25\linewidth,
+                max width=0.42\linewidth,
                 %cframe=red,
             }{
-                % \begin{minipage}[t][][t]{.48\textwidth}
-                % \begin{flushright}%\begin{minipage}[t][][b]{.22\textwidth}
-                % \makebox[.22\textwidth]{
                 \cellwidth{0.5em}
                 \vqword{Pregunta}
                 \vpgword{P\'gina}
@@ -328,18 +331,15 @@
                 \htword{Total}
                 \ifnum\numquestions > 10
                     \gradetablestretch{1.2}
-                    % \FPeval{\result}{round(\numquestions/10,0)}
-                    % \result
                     \multirowgradetable{2}[questions]
                 \else
                     \gradetablestretch{1.4}
                     \gradetable[h][questions]
                 \fi
-                % \end{flushright}
-                % \end{minipage}%
-            }};
+            }%
+        };
         \node[requisitotitle,xshift=-70pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación   };
-        \node[draw=none, fit=(box)] {};
+        % \node[draw=none, fit=(box)] {};
     \end{tikzpicture}
     \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
         %%%% LOGO

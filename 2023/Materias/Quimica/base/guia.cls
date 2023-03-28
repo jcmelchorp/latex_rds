@@ -29,29 +29,29 @@
 \RequirePackage{tikz}
 \input{insbox}
 \usetikzlibrary{
-  arrows,
-  positioning,
-  matrix,
-  calc,
-  decorations.pathreplacing,
-  decorations.pathmorphing,
-  decorations.markings,
-  decorations.text,
-  shapes,
-  shapes.symbols,
-  backgrounds,
-  shadows,
-  shadows.blur,
-  trees,
-  fit,
-  snakes,
-  patterns,
-  mindmap,
-  intersections,
-  calendar,
-  plotmarks,
-  spy,
-  tikzmark}
+    arrows,
+    positioning,
+    matrix,
+    calc,
+    decorations.pathreplacing,
+    decorations.pathmorphing,
+    decorations.markings,
+    decorations.text,
+    shapes,
+    shapes.symbols,
+    backgrounds,
+    shadows,
+    shadows.blur,
+    trees,
+    fit,
+    snakes,
+    patterns,
+    mindmap,
+    intersections,
+    calendar,
+    plotmarks,
+    spy,
+    tikzmark}
 
 \RequirePackage{addfont}
 \RequirePackage{fetamont}
@@ -76,97 +76,99 @@
 % \newcommand*\initfamily{\usefont{U}{Elzevier}{xl}{n}}
 %\def\tfont{\usefont{T1}{fve}{m}{n}\selectfont}
 \RequirePackage[
-  letterpaper,
-  includehead,
-  left=15mm,
-  right=15mm,
-  top=5mm,
-  bottom=25mm,
-  headheight=10mm,% Set \headheight to 10mm
+    %showframe=true,
+    letterpaper,
+    includehead,
+    left=15mm,
+    right=15mm,
+    top=5mm,
+    bottom=25mm,
+    headheight=10mm,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 \RequirePackage{anyfontsize}
+\RequirePackage{ragged2e}
+\RequirePackage{fp}% http://ctan.org/pkg/fp
 \newcommand{\HUGE}{\fontsize{50}{60}}
 \RequirePackage{graphicx}
 \graphicspath{{../images}} %Setting the graphicspath
-
+\RequirePackage{calc}
 \RequirePackage{xparse,xpatch}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
-    \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
+        \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
 \renewcommand\choicelabel{\circled{\thechoice}}
 \setlength\linefillheight{.2in}
-\setlength{\parindent}{0pt}
-% \newcommand{\gsection}[1]% #1 = title
-% {\stepcounter{section}%
-%\setcounter{question}{0}%
-% \fullwidth{\smallskip\textbf{\large #1}}}
-%\renewcommand{\thequestion}{\thesection.\arabic{question}}
-\patchcmd{\questions}{10.}{\thequestion.}{}{}% fix left margin
-\AtBeginEnvironment{solutionbox}{\vspace{-0.5\baselineskip}}
-\AtEndEnvironment{solutionbox}{\vspace{0.8\baselineskip}}
+%\patchcmd{\questions}{1.}{\thequestion.}{}{}% fix left margin
+%\patchcmd{\questions}{\question}{\begin{qbox}\question\end{qbox}}{}{}% fix left margin
+\AtBeginEnvironment{solutionbox}{\vspace{-0.2\baselineskip}}
+\AtEndEnvironment{solutionbox}{\vspace{0.2\baselineskip}}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{oneparchoices}{\vspace{-0.5\baselineskip}}
-\AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
+\AtBeginEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
 \renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
-\renewcommand\questionlabel{\color{Sepia}\bfseries\comfortaa\fbox{\thequestion}}
+%\renewcommand\questionlabel{\color{Sepia}\bfseries\comfortaa\fbox{\thequestion}}
+\renewcommand\questionlabel{}
+\pointsinmargin
+\pointformat{}
 %\bracketedpoints
-\pointformat{\textcolor{DarkOliveGreen}{[\thepoints]}}
+%\pointformat{\textcolor{DarkOliveGreen}{[\thepoints]}}
 \pointpoints{punto}{puntos}
 % Custom formatting for problem parts.
 \newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{Sepia!50}\bfseries\sffamily\comfortaa\fbox{{\thequestion\small\thepartno}}}
+\renewcommand{\partlabel}{\color{Sepia}\bfseries\sffamily\comfortaa\colorbox{gray!20}{{\thequestion\small\thepartno}}}
 \newcommand{\tf}[1][{}]{%
-  \fillin[#1][1cm]%
+    \fillin[#1][1cm]%
 }
 \checkboxchar{$\Box$}
+\newcommand\questionboxed[1][0]{
+    \question[#1] \tcbitem[title={\color{Sepia}\bfseries\sffamily\comfortaa Ejercicio \thequestion} \hfill {\color{colorrds}\totalpoints \ \points}]
+}
+\AtBeginEnvironment{questions}{
+    %\setcounter{question}{1}
+    \begin{tcbitemize}[raster columns=1, raster equal height=rows,
+            enhanced,arc=10mm,sharpish corners, % better drop shadow
+            % raster width=16cm,raster column skip=8mm,raster halign=center,
+            raster force size=false,
+            colframe=DarkOliveGreen!50!white,colbacktitle=DarkOliveGreen!20!white,
+            fonttitle=\bfseries,]
+        %\addtocounter{question}{1}
+        %\setcounter{question}{1}
+        }
+        \AtEndEnvironment{questions}{\end{tcbitemize}
+}
+%%%%%%%%%% HOOKS (questions, parts and choices)
+\renewcommand{\questionshook}{%
+    \setlength{\leftmargin}{0pt}%
+    \labelwidth\leftmargin\advance\labelwidth-\labelsep%
+}
 
-% % redefine \part command to be \mypart
-% \appto\parts{\let\exampart\part\let\part\mypart}
-% \makeatletter
-% \ExplSyntaxOn
-% \tl_new:N \g_grade_table_tl% this will; become the new grade table
+% % Dimensions tuned to be about right.
+% \renewcommand{\partshook}{
+%   \setlength{\topsep}{-0.02in}%
+%   \setlength{\leftmargin}{\leftmargin+0.08in}%
+%   \setlength{\labelsep}{0.22in}%
+% }
 
-% \int_new:N \g_score_int% this will be the exam score
-% \NewDocumentCommand\mypart{o}{
-%   \IfNoValueTF{#1}{\exampart}{
-%     % don't do anything special inside solutions
-%     \if@insolution\exampart[#1]
-%     \else\exampart[#1]
-%       \int_compare:nNnT {\arabic{partno}} = {1} {
-%         \tl_gput_right:Nn \g_grade_table_tl { \midrule }
-%       }
-%       \tl_gput_right:Nx \g_grade_table_tl {
-%         \arabic{question}\alph{partno}
-%       }
-%       \tl_gput_right:No \g_grade_table_tl  {& #1  }
-%       \int_gadd:Nn \g_score_int {#1}
-%     \fi
-%   }
+% \newlength{\mcindent}
+% \setlength{\mcindent}{0.55cm}
+% \renewcommand{\choiceshook}{%
+%   % The dimensions are tuned to be about right. I should figure out how to not have random numbers.
+%   \settowidth{\leftmargin}{W\hspace{\labelsep}\hspace{0.18in}\hspace{\mcindent}}
 % }
-% \NewDocumentCommand\GradeTable{}{% the new grade table
-%   \begin{tabular}{ccc}
-%     \toprule
-%      \@hqword &  {\tl_use:N \g_grade_table_tl} & Total \\
-%      \@hpword & {\int_use:N \g_score_int} & \\
-%      \@hsword & &\\
-%   \bottomrule
-%   \end{tabular}
-% }
-% \ExplSyntaxOff
-% \makeatother
 %%%% INFO
 \makeatletter
+\setlength{\parindent}{0pt}
 %%%% LOGO
 \def\LOGO{%
-  \begin{picture}(0,0)\unitlength=1cm
-    \put (4.5,-1.5) {\includegraphics[width=2.2cm]{logo.png}}
-  \end{picture}
+    \begin{picture}(0,0)\unitlength=1cm
+        \put (4.5,-1.5) {\includegraphics[width=2.2cm]{logo.png}}
+    \end{picture}
 }
 %%%% INPUTS
 \newcommand{\thesubject}{1}
@@ -191,11 +193,11 @@
 % \renewcommand{\questionlabel}{\colorbox{red} {\huge{\textbf{\color{white}~\thequestion.}}}}
 % \renewcommand{\partlabel}{\colorbox{red} {\large{\textbf{\color{white}(\thepartno)}}}}
 \renewenvironment{TheSolution}{
-  \begin{mdframed}[skipabove=\baselineskip,innertopmargin=\baselineskip,innerbottommargin=\baselineskip, linewidth=3pt,
-      linecolor=ao(english),  topline=false,
-      rightline=false,
-      bottomline=false]
-    \textbf{\color{Sepia}Solución:}\enspace\ignorespaces}{\end{mdframed}}
+    \begin{mdframed}[skipabove=\baselineskip,innertopmargin=\baselineskip,innerbottommargin=\baselineskip, linewidth=3pt,
+            linecolor=ao(english),  topline=false,
+            rightline=false,
+            bottomline=false]
+        \textbf{\color{Sepia}Solución:}\enspace\ignorespaces}{\end{mdframed}}
 % \newcommand{\puntuacion}{
 %   \centering
 %   \begin{mybox}{0.20\linewidth}{
@@ -209,146 +211,164 @@
 % }
 %%%% STYLES
 \tikzset{
-  aprendizajebox/.style={anchor=north,xshift=-.96\textwidth,
-      yshift=-1.3cm,
-      draw=colorrds, dashed,fill=white, rectangle,
-      inner sep=15pt, style=rounded corners,
-      %drop  shadow={fill=lightgray, opacity=0.7}
-    },
-  aprendizajetitle/.style={
-      fill=white,
-      style=rounded corners,
-      % drop shadow,
-    },
-  requisitobox/.style={anchor=north,xshift=-.45\textwidth,
-      yshift=-1.2cm,
-      draw=none, fill=white, rectangle,
-      inner xsep=1pt,inner ysep=2pt, style=rounded corners,
-      %drop  shadow={fill=lightgray, opacity=0.7}
-    },
-  requisitotitle/.style={
-      fill=white,
-      style=rounded corners,
-      % drop shadow,
-    },
-  instructionbox/.style={xshift=-.7\textwidth,
-      yshift=-4.6cm,
-      draw=gray, fill=white, rectangle,
-      inner sep=15pt,style=rounded corners,
-      %drop  shadow={fill=lightgray, opacity=0.7}
-      blur shadow={
-          shadow opacity=40,
-          shadow yshift=-1mm,
-          %shadow blur steps=30,
-          shadow blur extra rounding=5pt
-        }},
-  instructiontitle/.style={
-      fill=white,
-      style=rounded corners,
-      % drop shadow,
-    }
+    aprendizajebox/.style={anchor=north,xshift=-.92\textwidth,
+            yshift=-1.25cm,
+            draw=colorrds, dashed,fill=white, rectangle,
+            inner sep=10pt, style=rounded corners,
+            %drop  shadow={fill=lightgray, opacity=0.7}
+        },
+    aprendizajetitle/.style={
+            fill=white,
+            style=rounded corners,
+            % drop shadow,
+        },
+    requisitobox/.style={anchor=north east,xshift=-.22\textwidth,
+            yshift=-1.2cm,
+            draw=none, fill=white, rectangle,
+            inner xsep=0pt,inner ysep=2pt, style=rounded corners,
+            %drop  shadow={fill=lightgray, opacity=0.7}
+        },
+    requisitotitle/.style={
+            fill=white,
+            style=rounded corners,
+            % drop shadow,
+        },
+    instructionbox/.style={xshift=-.4\textwidth,
+            yshift=-4.6cm,
+            draw=gray, fill=white, rectangle,
+            inner sep=15pt,style=rounded corners,
+            %drop  shadow={fill=lightgray, opacity=0.7}
+            blur shadow={
+                    shadow opacity=40,
+                    shadow yshift=-1mm,
+                    %shadow blur steps=30,
+                    shadow blur extra rounding=5pt
+                }},
+    instructiontitle/.style={
+            fill=white,
+            style=rounded corners,
+            % drop shadow,
+        }
 }
 %%%% COMMAND
 \newcommand{\INFO}{%
-  \begin{tikzpicture}[remember picture]
-    \draw[colorrds,ultra thick,xshift=-1.2\textwidth ,yshift=0cm,
-      rounded corners=5pt] (0,0)
-    rectangle
-    (\textwidth,3.1cm);
-    %%%% TITULO
-    \node[yshift=0cm,xshift=-.65\textwidth,
-      rectangle,
-      rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
-      blur shadow={
-          shadow opacity=40,
-          shadow yshift=-2mm,
-          %shadow blur steps=30,
-          shadow blur extra rounding=5pt
-        },
-      fill=colorrds]
-    {
-      \parbox{0.65\textwidth}{
-        \centering \bfseries \comfortaa
-        \color{white} \fontsize{14}{21}\selectfont\@title
-      }%
-    };
-    %%%% BOLA
-    \node[xshift=-.27\textwidth ,circle,inner xsep=5pt,inner ysep=5pt,
-      blur shadow={
-          shadow opacity=40,
-          shadow yshift=-1mm,
-          %shadow blur steps=30,
-          %shadow blur extra rounding=5pt
-        },
-      fill=MainColor!50]
-    {
-      \begin{minipage}{1cm}
-        \centering
-        {\fontsize{9}{12}\selectfont \color{Sepia} \alterfont Guía}\\
-        {\fontsize{28}{1}\selectfont \color{white} \bfseries \foekfamily \theguide}
-      \end{minipage}
-    };
-    %%%% APRENDIZAJES
-    \node[aprendizajebox] (box)
-    {
-      \begin{minipage}[t][][t]{.42\textwidth}
-        \normalfont  \theaprendizajes
-      \end{minipage}
-    };
-    \node[aprendizajetitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
-    \node[draw=none, fit=(box)] {};
-    %%%% GRADESTABLE
-    \node[requisitobox] (box)
-    {
-      \begin{minipage}[t][][t]{.52\textwidth}
-        %\begin{minipage}[t][][b]{.22\textwidth}
-        % \makebox[.22\textwidth]{
-        \footnotesize
-        \cellwidth{0.8em}
-        \gradetablestretch{1.5}
-        \hqword{Pregunta}
-        \hpgword{P\'gina}
-        \hpword{Puntos}
-        \hsword{Obtenidos}
-        \htword{Total}
-        \ifnum \numquestions > 10
-          \multirowgradetable{2}[questions]
-        \else
-          \gradetable[h][questions]
-        \fi
-      \end{minipage}%
-    };
-    \node[requisitotitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Puntuación   };
-    \node[draw=none, fit=(box)] {};
-  \end{tikzpicture}
-  \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
-    %%%% LOGO
-    \node[yshift=-3.5cm,xshift=-2.5cm]{\LOGO};
-    %%%% SCHOOL TITLE
-    \node[anchor=west, rectangle,yshift=-3.5cm,xshift=4cm,
-    rounded corners=2pt,inner xsep=20pt,inner ysep=0pt]
-    {
-    \parbox{0.8\textwidth}{%
-    {\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa  \textbf{Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
-    { \fontsize{16}{20}\selectfont \textbf{\color{SubjectColor}\thesubject} \hfill {\color{MainColor}\thegrade} }\\
-    { \@author \hfill \thecycle}\\
-    }%
-    };
-    \node[draw=none, fit=(box)] {};
-  \end{tikzpicture}
+    \begin{tikzpicture}[remember picture]
+        \draw[colorrds,ultra thick,xshift=-1.2\textwidth ,yshift=0cm,
+            rounded corners=5pt] (0,0)
+        rectangle
+        (\textwidth,3.1cm);
+        %%%% TITULO
+        \node[yshift=5pt,xshift=-.68\textwidth,
+            rectangle,
+            rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
+            blur shadow={
+                    shadow opacity=40,
+                    shadow yshift=-2mm,
+                    %shadow blur steps=30,
+                    shadow blur extra rounding=5pt
+                },
+            fill=colorrds]
+        {
+            \adjustbox{
+                stack,
+                color=white,
+                min size={0.4\textwidth}{10pt},
+                max size={0.65\textwidth}{25pt}
+            }{
+                \centering \bfseries \comfortaa
+                \color{white} \fontsize{14}{21}\selectfont\@title
+            }%
+        };
+        %%%% BOLA
+        \node[anchor= west,xshift=-.27\textwidth ,circle,inner xsep=5pt,inner ysep=5pt,
+            blur shadow={
+                    shadow opacity=40,
+                    shadow yshift=-1mm,
+                    %shadow blur steps=30,
+                    %shadow blur extra rounding=5pt
+                },
+            fill=MainColor!50]
+        {
+            \begin{minipage}{1cm}
+                \centering
+                {\fontsize{9}{12}\selectfont \color{Sepia} \alterfont Guía}\\
+                {\fontsize{28}{1}\selectfont \color{white} \bfseries \foekfamily \theguide}
+            \end{minipage}
+        };
+        %%%% APRENDIZAJES
+        \node[aprendizajebox] (box)
+        {
+            % % \colorbox{red}{
+            % \begin{minipage}[t][][t]{.48\textwidth}
+            \adjustbox{
+                minipage=0.48\textwidth,
+                %cframe=red,
+            }{
+                \normalfont  \theaprendizajes
+                % \end{minipage}
+            }%
+        };
+        \node[aprendizajetitle,right=5pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
+        % \node[draw=none, fit=(box)] {};
+        %%%% GRADESTABLE
+        \node[requisitobox] (box)
+        {
+            \adjustbox{
+                min width=0.25\linewidth,
+                max width=0.42\linewidth,
+                %cframe=red,
+            }{
+                \cellwidth{0.5em}
+                \vqword{Pregunta}
+                \vpgword{P\'gina}
+                \vpword{Puntos}
+                \vsword{Obtenidos}
+                \vtword{Total}
+                \hqword{Pregunta}
+                \hpgword{P\'gina}
+                \hpword{Puntos}
+                \hsword{Obtenidos}
+                \htword{Total}
+                \ifnum\numquestions > 10
+                    \gradetablestretch{1.2}
+                    \multirowgradetable{2}[questions]
+                \else
+                    \gradetablestretch{1.4}
+                    \gradetable[h][questions]
+                \fi
+            }%
+        };
+        \node[requisitotitle,xshift=-70pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación   };
+        % \node[draw=none, fit=(box)] {};
+    \end{tikzpicture}
+    \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
+        %%%% LOGO
+        \node[yshift=-3.5cm,xshift=-2.5cm]{\LOGO};
+        %%%% SCHOOL TITLE
+        \node[anchor=west, rectangle,yshift=-3.5cm,xshift=4cm,
+        rounded corners=2pt,inner xsep=20pt,inner ysep=0pt]
+        {
+        \parbox{0.8\textwidth}{%
+        {\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa  \textbf{Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
+        { \fontsize{16}{20}\selectfont \textbf{\color{SubjectColor}\thesubject} \hfill {\color{MainColor}\thegrade} }\\
+        { \@author \hfill \thecycle}\\
+        }%
+        };
+        \node[draw=none, fit=(box)] {};
+    \end{tikzpicture}
 }
 \newenvironment{mybox}[3][]{%
-  \begin{tikzpicture}[#1]%
-    \def\myboxname{#3}%
-    % good options: minimum height, minimum width
-    \node [draw, inner sep=0ex,  align=justify, draw=none]
-    (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
-    }{%
-    \egroup;
-    \node [right, inner sep=3pt, outer sep=0pt,
-      text height=2ex] (BOXNAME)
-    at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
-  \end{tikzpicture}
+    \begin{tikzpicture}[#1]%
+        \def\myboxname{#3}%
+        % good options: minimum height, minimum width
+        \node [draw, inner sep=0ex,  align=justify, draw=none]
+        (BOXCONTENT) \bgroup\rule{0ex}{0ex}\ignorespaces
+        }{%
+        \egroup;
+        \node [right, inner sep=3pt, outer sep=0pt,
+            text height=2ex] (BOXNAME)
+        at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
+    \end{tikzpicture}
 }
 \makeatother
 %%%% CAPTIONS
@@ -363,10 +383,9 @@
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
 \decimalpoint
-\RequirePackage{etoolbox}
 \RequirePackage{adjustbox}
-\RequirePackage{myboxes}
 \RequirePackage{mytcolorboxes}
+\RequirePackage{myboxes}
 %%%% EXTERNAL SOURCES
 \RequirePackage{newclude}
 \RequirePackage{import}
