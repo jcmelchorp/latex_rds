@@ -86,6 +86,8 @@
     headheight=10mm,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 \RequirePackage{anyfontsize}
+\RequirePackage{ragged2e}
+\RequirePackage{fp}% http://ctan.org/pkg/fp
 \newcommand{\HUGE}{\fontsize{50}{60}}
 \RequirePackage{graphicx}
 \graphicspath{{../images}} %Setting the graphicspath
@@ -209,8 +211,8 @@
 % }
 %%%% STYLES
 \tikzset{
-    aprendizajebox/.style={anchor=north,xshift=-.98\textwidth,
-            yshift=-1.3cm,
+    aprendizajebox/.style={anchor=north,xshift=-.95\textwidth,
+            yshift=-1.25cm,
             draw=colorrds, dashed,fill=white, rectangle,
             inner sep=15pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
@@ -220,8 +222,8 @@
             style=rounded corners,
             % drop shadow,
         },
-    requisitobox/.style={anchor=north,xshift=-.5\textwidth,
-            yshift=-1.2cm,
+    requisitobox/.style={anchor=north east,xshift=-.2\textwidth,
+            yshift=-1.21cm,
             draw=none, fill=white, rectangle,
             inner xsep=1pt,inner ysep=2pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
@@ -231,7 +233,7 @@
             style=rounded corners,
             % drop shadow,
         },
-    instructionbox/.style={xshift=-.7\textwidth,
+    instructionbox/.style={xshift=-.4\textwidth,
             yshift=-4.6cm,
             draw=gray, fill=white, rectangle,
             inner sep=15pt,style=rounded corners,
@@ -256,7 +258,7 @@
         rectangle
         (\textwidth,3.1cm);
         %%%% TITULO
-        \node[yshift=0cm,xshift=-.65\textwidth,
+        \node[yshift=5pt,xshift=-.68\textwidth,
             rectangle,
             rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
             blur shadow={
@@ -267,13 +269,18 @@
                 },
             fill=colorrds]
         {
-            \parbox{0.65\textwidth}{
+            \adjustbox{
+                stack,
+                color=white,
+                min size={0.4\textwidth}{10pt},
+                max size={0.65\textwidth}{25pt}
+            }{
                 \centering \bfseries \comfortaa
                 \color{white} \fontsize{14}{21}\selectfont\@title
             }%
         };
         %%%% BOLA
-        \node[xshift=-.27\textwidth ,circle,inner xsep=5pt,inner ysep=5pt,
+        \node[anchor= west,xshift=-.27\textwidth ,circle,inner xsep=5pt,inner ysep=5pt,
             blur shadow={
                     shadow opacity=40,
                     shadow yshift=-1mm,
@@ -291,21 +298,24 @@
         %%%% APRENDIZAJES
         \node[aprendizajebox] (box)
         {
-            \begin{minipage}[t][][t]{.35\textwidth}
+            \begin{minipage}[t][][t]{.45\textwidth}
                 \normalfont  \theaprendizajes
             \end{minipage}
         };
-        \node[aprendizajetitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
+        \node[aprendizajetitle,right=5pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
         \node[draw=none, fit=(box)] {};
         %%%% GRADESTABLE
         \node[requisitobox] (box)
         {
-            \begin{minipage}[t][][t]{.5\textwidth}
-                %\begin{minipage}[t][][b]{.22\textwidth}
+            \adjustbox{
+                min width=50pt,
+                max width=0.48\linewidth,
+                %cframe=red,
+            }{
+                % \begin{minipage}[t][][t]{.48\textwidth}
+                % \begin{flushright}%\begin{minipage}[t][][b]{.22\textwidth}
                 % \makebox[.22\textwidth]{
-                \footnotesize
-                \cellwidth{0.3em}
-                \gradetablestretch{1.8}
+                \cellwidth{0.5em}
                 \vqword{Pregunta}
                 \vpgword{P\'gina}
                 \vpword{Puntos}
@@ -317,13 +327,18 @@
                 \hsword{Obtenidos}
                 \htword{Total}
                 \ifnum\numquestions > 10
+                    \gradetablestretch{1.2}
+                    % \FPeval{\result}{round(\numquestions/10,0)}
+                    % \result
                     \multirowgradetable{2}[questions]
                 \else
+                    \gradetablestretch{1.4}
                     \gradetable[h][questions]
                 \fi
-            \end{minipage}%
-        };
-        \node[requisitotitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Puntuación   };
+                % \end{flushright}
+                % \end{minipage}%
+            }};
+        \node[requisitotitle,xshift=-70pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación   };
         \node[draw=none, fit=(box)] {};
     \end{tikzpicture}
     \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
