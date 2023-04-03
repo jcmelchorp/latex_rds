@@ -21,34 +21,22 @@
 \pagestyle{headandfoot}
 \addpoints
 \INFO
-\printanswers
+%\printanswers
+\begin{multicols}{2}
+    \include*{../blocks/block035a}
+    \include*{../blocks/block035c}
+    \include*{../blocks/block035b}
+    \include*{../blocks/block035d}
+\end{multicols}
 \begin{questions}
-    \begin{multicols}{2}
-        \include*{../questions/question074}
-    \end{multicols}
-    \include*{../questions/question104a}
-    \include*{../questions/question104b}
-    \include*{../questions/question104c}
-    \include*{../questions/question104d}
-    \include*{../questions/question104e}
-    \include*{../questions/question104f}
-    \include*{../questions/question104g}
-    \include*{../questions/question104h}
-
-
-
-    %%% Áreas de prismas rectos
-    % \include*{../questions/question105a}
-    % \newpage
-    % \include*{../questions/question105b}
-    % \include*{../questions/question105c}
-    %%% Pirámides
-    % \include*{../questions/question105d}
-    % \include*{../questions/question105e}
-    % \include*{../questions/question105f}
+    \questionboxed[10]{\include*{../questions/question104c}}
+    \questionboxed[15]{\include*{../questions/question104d}}
+    \questionboxed[10]{\include*{../questions/question104e}}
+    \questionboxed[10]{\include*{../questions/question104f}}
+    \questionboxed[15]{\include*{../questions/question104g}}
+    \questionboxed[10]{\include*{../questions/question104b}}
+    \questionboxed[10]{\include*{../questions/question104h}}
+    \questionboxed[10]{\include*{../questions/question104a}}
+    \questionboxed[10]{\include*{../questions/question074}}
 \end{questions}
-
-%\vfill
-%\puntuacion
-
 \end{document}

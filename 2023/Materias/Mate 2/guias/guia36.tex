@@ -21,26 +21,26 @@
 \pagestyle{headandfoot}
 \addpoints
 \INFO
-%\printanswers
+\printanswers
+\begin{multicols}{2}
+    \include*{../blocks/block035a}
+    \include*{../blocks/block035b}
+    \include*{../blocks/block035d}
+\end{multicols}
 \begin{questions}
-    \include*{../questions/question102a}
-    \include*{../questions/question102b}
-    \include*{../questions/question102c}
-    \include*{../questions/question104a}
-    \include*{../questions/question104b}
-    \newpage
-    \include*{../questions/question102d}
-    \newpage
-    \include*{../questions/question102e}
-    \newpage
-    \include*{../questions/question102f}
-    \newpage
-    \include*{../questions/question102g}
-    \newpage
-
+    \questionboxed[10]{\include*{../questions/question102a}}
+    \questionboxed[10]{\include*{../questions/question102b}}
+    \questionboxed[10]{\include*{../questions/question102c}}
+    \questionboxed[10]{\include*{../questions/question102d}}
+    \questionboxed[10]{\include*{../questions/question102e}}
+    \questionboxed[10]{\include*{../questions/question102f}}
+    \questionboxed[10]{\include*{../questions/question102g}}
+    \questionboxed[10]{\include*{../questions/question104a}}
+    \questionboxed[10]{\include*{../questions/question104b}}
+    \questionboxed[10]{\include*{../questions/question104c}}
+    % \questionboxed[10]{\include*{../questions/question104d}}
+    % \questionboxed[10]{\include*{../questions/question104e}}
+    % \questionboxed[10]{\include*{../questions/question104f}}
+    % \questionboxed[10]{\include*{../questions/question104g}}
 \end{questions}
-
-%\vfill
-%\puntuacion
-
 \end{document}

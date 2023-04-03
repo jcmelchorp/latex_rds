@@ -21,24 +21,36 @@
 \pagestyle{headandfoot}
 \addpoints
 \INFO
-\printanswers
+%\printanswers
+\vspace{-2em}
+\begin{multicols}{2}
+    \include*{../blocks/block030a}
+    \include*{../blocks/block030d}
+    \columnbreak
+    \include*{../blocks/block030b}
+    \include*{../blocks/block030c}
+\end{multicols}
+\begin{importantbox}
+    La \textbf{regla de recurrencia} de una sucesión es una expresión algebraica que permite calcular el valor de cada término con sólo saber su posición en la serie ($n$).
+\end{importantbox}
+\newpage
 \begin{questions}
-    \include*{../questions/question106a}
-    \include*{../questions/question106b}
-    \include*{../questions/question106c}
-    \include*{../questions/question106d}
-    \include*{../questions/question106e}
-    \include*{../questions/question106f}
-    \include*{../questions/question106g}
-    \include*{../questions/question106h}
-    \include*{../questions/question106i}
-    \include*{../questions/question106j}
-    \include*{../questions/question107a}
-    \include*{../questions/question107b}
-    \include*{../questions/question107c}
-    \include*{../questions/question107d}
-    \include*{../questions/question107e}
-    \include*{../questions/question107f}
+    \questionboxed[10]{\include*{../questions/question106a}}
+    \questionboxed[10]{\include*{../questions/question106b}}
+    \questionboxed[10]{\include*{../questions/question106c}}
+    \questionboxed[10]{\include*{../questions/question106d}}
+    \questionboxed[10]{\include*{../questions/question106e}}
+    % \questionboxed[10]{\include*{../questions/question106f}}
+    % \questionboxed[10]{\include*{../questions/question106g}}
+    % \questionboxed[10]{\include*{../questions/question106h}}
+    % \questionboxed[10]{\include*{../questions/question106i}}
+    % \questionboxed[10]{\include*{../questions/question106j}}
+    \questionboxed[10]{\include*{../questions/question107a}}
+    \questionboxed[10]{\include*{../questions/question107b}}
+    \questionboxed[10]{\include*{../questions/question107c}}
+    \questionboxed[10]{\include*{../questions/question107d}}
+    \questionboxed[10]{\include*{../questions/question107e}}
+    % \questionboxed[10]{\include*{../questions/question107f}}
 \end{questions}
 
 %\vfill

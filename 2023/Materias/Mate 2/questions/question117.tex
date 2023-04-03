@@ -10,8 +10,14 @@ Miguel tiene bloques de plástico de igual tamaño y arma una torre con todos el
 \end{minipage}\hfill
 \begin{minipage}{0.6\linewidth}
     Si Miguel armara una torre de 32 filas,
-    \textbf{¿cuántos bloques necesitará en total?}
-    \begin{solutionbox}{1.2cm}
-        528 bloques.
-    \end{solutionbox}
+    \textbf{¿cuántos bloques necesitará en total?}\\
 \end{minipage}
+
+\begin{solutionbox}{4cm}
+    Ya que la regla de recurrencia es:
+    \[a_n=(n-1)+1\]
+    entonces,
+    \[a_{32}=(32-1)+1=32\]
+    y,
+    \[s_{32}=\dfrac{32(a_0+a_{32})}{2}=\dfrac{32(1+32)}{2}=528\]
+\end{solutionbox}
