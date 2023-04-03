@@ -3,27 +3,37 @@ Encuentra el valor de $x$ en el triángulo de la figura \ref{fig:lados_pitagoras
 \begin{minipage}[t][][t]{0.35\textwidth}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.3\textwidth]{../images/lados_pitagoras_38.png}
+        \includegraphics[width=0.9\linewidth]{../images/lados_pitagoras_38.png}
 
         \caption{}
         \label{fig:lados_pitagoras_38}
     \end{figure}
 \end{minipage}\hfill
 \begin{minipage}[t][][t]{0.6\textwidth}
-    \begin{solutionbox}{8cm}
-        \begin{minipage}{0.3\textwidth}
+    \begin{solutionbox}{9cm}
+        \begin{minipage}{0.4\textwidth}
             \begin{figure}[H]
                 \centering
-                %\includegraphics[width=0.9\linewidth]{../images/findangle10a.png}
+                \includegraphics[width=0.9\linewidth]{../images/lados_pitagoras_38a.png}
                 \caption{}
-                \label{fig:findangle10a}
+                \label{fig:lados_pitagoras_38a}
             \end{figure}
         \end{minipage}\hfill
-        \begin{minipage}{0.65\textwidth}
-            Dado que tiene dos lados congruentes (aquellos cuya longitud es 5), el triángulo es isósceles. Los ángulos opuestos a los lados congruentes también son congruentes, por lo que el ángulo sin etiqueta mide $x^\circ$ (Ver Figura \ref{fig:findangle10a}).
-            Los tres ángulos en un triángulo suman 180$^\circ$. Podemos escribir este enunciado como una ecuación:
-            \[x^\circ + x^\circ + 70^\circ = 180^\circ \]
-            \[\therefore x^\circ = \dfrac{180^\circ - 70^\circ}{2}  = 55^\circ\]
+        \begin{minipage}{0.55\textwidth}
+            Tenemos un triángulo rectángulo, por lo que podemos usar el teorema de Pitágoras.
+            La ecuación del teorema es:
+            \[{\color{orange}c}^2={\color{cyan}a}^2+{\color{LimeGreen}b}^2\]
+            donde $a$ y $b$ son las longitudes de los catetos, y $c$ es la longitud de la hipotenusa.
+            Etiquetemos la Figura del problema con $a$, $b$ y $c$ (ver Figura \ref{fig:lados_pitagoras_38a}).
+            Observa que $a$ y $b$ pueden intercambiarse, pues son catetos.
         \end{minipage}
+        \begin{align*}
+            {\color{cyan}a}^2+{\color{LimeGreen}b}^2  ={\color{orange}c}^2 & \text{\quad El teorema de Pitágoras}                          \\
+            {\color{cyan}5}^2+{\color{LimeGreen}x}^2  ={\color{orange}6}^2 & \text{\quad Sustituye las longitudes}                         \\
+            25+x^2   =36                                                   & \text{\quad Evalua los cuadrados conocidos}                   \\
+            x^2=36-25                                                      & \text{\quad Despejando } x                                    \\
+            x^2=11                                                         & \text{\quad Restando}                                         \\
+            x=\sqrt{11}                                                    & \text{\quad Calculando la raíz en ambos lados de la ecuación} \\
+        \end{align*}
     \end{solutionbox}
 \end{minipage}

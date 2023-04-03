@@ -22,19 +22,30 @@
 \pagestyle{headandfoot}
 \addpoints
 \INFO
-\printanswers
-\include*{../blocks/block000}
-\newpage
+%\printanswers
+\vspace{-0.5cm}
+\begin{multicols}{2}
+    \include*{../blocks/block034a}
+    \include*{../blocks/block034c}
+    \include*{../blocks/block034d}
+    \columnbreak
+    \include*{../blocks/block034b}
+    \include*{../blocks/block034e}
+\end{multicols}
 \begin{questions}
     %\include*{../questions/question000}
-    \questionboxed[10] \include*{../questions/question039e}
-    \questionboxed[10] \include*{../questions/question039f}
-    \questionboxed[10] \include*{../questions/question039g}
-    \questionboxed[10] \include*{../questions/question039h}
-    \questionboxed[10] \include*{../questions/question039i}
-    \questionboxed[10] \include*{../questions/question039j}
-    \questionboxed[10] \include*{../questions/question039k}
-    \questionboxed[10] \include*{../questions/question039l}
+    \questionboxed[10]{\include*{../questions/question039a}}
+    \questionboxed[10]{\include*{../questions/question039b}}
+    \questionboxed[10]{\include*{../questions/question039c}}
+    \questionboxed[10]{\include*{../questions/question039d}}
+    \questionboxed[10]{\include*{../questions/question039e}}
+    %\questionboxed[10]{\include*{../questions/question039f}}
+    \questionboxed[10]{\include*{../questions/question039g}}
+    \questionboxed[10]{\include*{../questions/question039h}}
+    % \questionboxed[10]{\include*{../questions/question039i}}
+    \questionboxed[10]{\include*{../questions/question039j}}
+    \questionboxed[10]{\include*{../questions/question039k}}
+    \questionboxed[10]{\include*{../questions/question039l}}
 \end{questions}
 
 \end{document}

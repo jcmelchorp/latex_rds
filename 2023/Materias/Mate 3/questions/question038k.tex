@@ -1,0 +1,58 @@
+Encuentra el valor de $x$ en el siguiente triángulo isóceles:
+
+% \begin{minipage}[t][][t]{0.3\textwidth}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{../images/pitagoras10.png}
+    \caption{}
+    \label{fig:pitagoras10}
+\end{figure}
+% \end{minipage}\hfill
+% \begin{minipage}[t][][t]{0.68\textwidth}
+\begin{solutionbox}{15cm}
+    \begin{minipage}{0.2\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\linewidth]{../images/pitagoras10a.png}
+            \caption{}
+            \label{fig:pitagoras10a}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\linewidth]{../images/pitagoras10b.png}
+            \caption{}
+            \label{fig:pitagoras10b}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\linewidth]{../images/pitagoras10c.png}
+            \caption{}
+            \label{fig:pitagoras10c}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.75\textwidth}
+        El triángulo isóceles está formado por 2 triángulos congruentes (ver Figura \ref{fig:pitagoras10a}).
+        La base de cada triángulo rectángulo es la mitad de la base del triángulo isóceles.
+        Cuando se trata de un triángulo rectángulo podemos utilizar el teorema de Pitágoras para encontrar un lado faltante.
+        La ecuación del teorema de Pitágoras es:
+        \[{\color{orange}c}^2={\color{cyan}a}^2+{\color{LimeGreen}b}^2\]
+        donde $a$ y $b$ son las longitudes de los catetos, y $c$ es la longitud de la hipotenusa.
+        Etiquetemos la Figura del problema con $a$, $b$ y $c$ (ver Figura \ref{fig:pitagoras10b}).
+        Observa que $a$ y $b$ pueden intercambiarse, pues son catetos.
+        \begin{align*}
+            {\color{cyan}a}^2+{\color{LimeGreen}b}^2  ={\color{orange}c}^2         & \text{\quad El teorema de Pitágoras}                          \\
+            {\color{cyan}a}^2+{\color{LimeGreen}2}^2  ={\color{orange}\sqrt{13}}^2 & \text{\quad Sustituye las longitudes}                         \\
+            a^2+4   =13                                                            & \text{\quad Evalua los cuadrados conocidos}                   \\
+            a^2=13-4                                                               & \text{\quad Despejando } x                                    \\
+            a^2=9                                                                  & \text{\quad Restando}                                         \\
+            a=3                                                                    & \text{\quad Calculando la raíz en ambos lados de la ecuación} \\
+        \end{align*}
+        Como $a=3$ y $a$ es la mitad de la longitud de $x$ (ver Figura \ref{fig:pitagoras10c}), podemos multiplicar para obtener $x$.
+        \begin{align*}
+            x & = a\cdot 2 \\
+            x & = 3\cdot 2 \\
+            x & = 6        \\
+        \end{align*}
+    \end{minipage}
+\end{solutionbox}
+% \end{minipage}

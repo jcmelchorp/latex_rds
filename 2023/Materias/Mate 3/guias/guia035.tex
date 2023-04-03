@@ -22,14 +22,26 @@
 \pagestyle{headandfoot}
 \addpoints
 \INFO
-\printanswers
-\include*{../blocks/block000}
-\newpage
+%\printanswers
+\begin{multicols}{2}
+    \include*{../blocks/block034a}
+    \include*{../blocks/block034c}
+    % \include*{../blocks/block034d}
+    \columnbreak
+    \include*{../blocks/block034b}
+\end{multicols}
 \begin{questions}
     %\include*{../questions/question000}
-    \questionboxed[10] \include*{../questions/question037a}
-    \questionboxed[10] \include*{../questions/question037b}
-    \questionboxed[10] \include*{../questions/question037c}
+    \questionboxed[10]{\include*{../questions/question037a}}
+    \questionboxed[10]{\include*{../questions/question037b}}
+    \questionboxed[10]{\include*{../questions/question037c}}
+    \questionboxed[10]{\include*{../questions/question037d}}
+    \questionboxed[10]{\include*{../questions/question037e}}
+    \questionboxed[10]{\include*{../questions/question037f}}
+    \questionboxed[10]{\include*{../questions/question037g}}
+    \questionboxed[10]{\include*{../questions/question037h}}
+    \questionboxed[10]{\include*{../questions/question037i}}
+    \questionboxed[10]{\include*{../questions/question037j}}
 \end{questions}
 
 \end{document}
