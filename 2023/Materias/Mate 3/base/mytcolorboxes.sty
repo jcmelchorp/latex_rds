@@ -25,6 +25,19 @@
 %   \tcbitem
 % \end{tcbitemize}
 
+\newenvironment{ejemplos}{%
+  \begin{tcbitemize}[
+      enhanced,sharpish corners,
+      raster columns=1, raster equal height=rows,
+      colframe=Goldenrod!35!white,colbacktitle=Goldenrod!20!white,
+      fonttitle=\bfseries,title={\color{DarkOliveGreen}\bfseries\sffamily\comfortaa Ejemplo \thetcbrasternum \hfill {}},
+      %before skip=6pt,after skip=6pt,
+      %borderline west={3mm}{0pt}{red}
+    ]}{\end{tcbitemize}}
+\newcommand\ejemplo[1][]{
+  \tcbitem[#1] \printanswers
+}
+
 \newtcolorbox{infocard}[2][]{%
   enhanced,
   colback=colorrds!5!white,
