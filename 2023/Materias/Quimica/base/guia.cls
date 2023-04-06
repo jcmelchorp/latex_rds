@@ -171,14 +171,14 @@
     \end{picture}
 }
 %%%% INPUTS
-\newcommand{\thesubject}{1}
-\newcommand{\subject}[1]{\renewcommand{\thesubject}{#1}}
-\newcommand{\thegrade}{1}
-\newcommand{\grade}[1]{\renewcommand{\thegrade}{#1}}
-\newcommand{\theguide}{1}
-\newcommand{\guide}[1]{\renewcommand{\theguide}{#1}}
-\newcommand{\thecycle}{1}
-\newcommand{\cycle}[1]{\renewcommand{\thecycle}{#1}}
+\newcommand{\themateria}{1}
+\newcommand{\materia}[1]{\renewcommand{\themateria}{#1}}
+\newcommand{\thegrado}{1}
+\newcommand{\grado}[1]{\renewcommand{\thegrado}{#1}}
+\newcommand{\theguia}{1}
+\newcommand{\guia}[1]{\renewcommand{\theguia}{#1}}
+\newcommand{\thecicloescolar}{1}
+\newcommand{\cicloescolar}[1]{\renewcommand{\thecicloescolar}{#1}}
 \newcommand{\theaprendizajes}{1}
 \newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{#1}}
 \newcommand{\therequisitos}{1}
@@ -187,7 +187,7 @@
 \pagestyle{headandfoot}
 \firstpageheader{}{{\ifprintanswers\color{red}\Huge Autocontrol\fi}}{}
 \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
-\runningheader{\thesubject}{Guía \# \theguide \ {\ifprintanswers\color{red} (Autocontrol)\fi}}{\hfill\thegrade \ (\thecycle)}
+\runningheader{\themateria}{Guía \# \theguia \ {\ifprintanswers\color{red} (Autocontrol)\fi}}{\hfill\thegrado \ (\thecicloescolar)}
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
 % \renewcommand{\questionlabel}{\colorbox{red} {\huge{\textbf{\color{white}~\thequestion.}}}}
@@ -204,7 +204,7 @@
 %     \fontsize{24}{32}\selectfont \ffmwfamily \color{colorrds} Calificación}
 % %\cellwidth{0.2em}
 % %\gradetablestretch{1}
-% %\multirowgradetable{2}
+% %\multirowgradotable{2}
 % %\gradetable[h][questions]
 % %\GradeTable
 % \end{mybox}
@@ -292,7 +292,7 @@
             \begin{minipage}{1cm}
                 \centering
                 {\fontsize{9}{12}\selectfont \color{Sepia} \alterfont Guía}\\
-                {\fontsize{28}{1}\selectfont \color{white} \bfseries \foekfamily \theguide}
+                {\fontsize{28}{1}\selectfont \color{white} \bfseries \foekfamily \theguia}
             \end{minipage}
         };
         %%%% APRENDIZAJES
@@ -330,7 +330,7 @@
                 \hsword{Obtenidos}
                 \htword{Total}
                 \ifnum\numquestions > 10
-                    \gradetablestretch{1.2}
+                    \gradotablestretch{1.2}
                     \multirowgradetable{2}[questions]
                 \else
                     \gradetablestretch{1.4}
@@ -350,8 +350,8 @@
         {
         \parbox{0.8\textwidth}{%
         {\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa  \textbf{Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
-        { \fontsize{16}{20}\selectfont \textbf{\color{SubjectColor}\thesubject} \hfill {\color{MainColor}\thegrade} }\\
-        { \@author \hfill \thecycle}\\
+        { \fontsize{16}{20}\selectfont \textbf{\color{SubjectColor}\themateria} \hfill {\color{MainColor}\thegrado} }\\
+        { \@author \hfill \thecicloescolar}\\
         }%
         };
         \node[draw=none, fit=(box)] {};

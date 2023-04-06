@@ -1,23 +1,20 @@
-\begin{tcolorbox}[
-        colbacktitle=gray!20,
-        fonttitle=\bfseries,
-        coltitle=black,
-        colframe=colorrds!35!white,
-        center title,
-        adjusted title={Criterios de congruencia}]
-    \begin{tcbitemize}[
+\begin{notecard}{Criterios de congruencia}
+    \begin{tcbitemize}[%
             raster columns=4,
             raster equal height,
-            raster column skip=1mm,
+            raster equal skip=0pt,
+            raster column skip=0pt,
             size=small,
-            colback=MainColor!5!white,
-            colframe=MainColor!65!white,
+            sharpish corners,
+            colback=MainColor!2!white,
+            colframe=MainColor!50!white,
             colbacktitle=MainColor!20!white,
             center title,
-            fonttitle=\footnotesize\color{black}]
-        \captionsetup[figure]{labelformat=empty}% redefines the caption setup of the figures
-
-        \tcbitem[title={Lado Lado Lado (LLL)}]
+            coltitle=black,
+            fonttitle=\small]
+        \captionsetup[figure]{labelformat=empty,font={small}}% redefines the caption setup of the figures
+        \tcbitem[adjusted title={Lado Lado Lado (LLL)}
+        ]
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.9\textwidth]{../images/criterioLLL}
@@ -25,7 +22,7 @@
             \label{fig:criterioLLL}
         \end{figure}
 
-        \tcbitem[title={Lado Ángulo Lado (LAL)}]
+        \tcbitem[adjusted title={Lado Ángulo Lado (LAL)}]
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.9\textwidth]{../images/criterioLAL}
@@ -33,7 +30,7 @@
             \label{fig:criterioLAL}
         \end{figure}
 
-        \tcbitem[title={Ángulo Lado Ángulo (ALA)}]
+        \tcbitem[adjusted title={Ángulo Lado Ángulo (ALA)}]
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.9\textwidth]{../images/criterioALA}
@@ -41,7 +38,7 @@
             \label{fig:criterioALA}
         \end{figure}
 
-        \tcbitem[title={Ángulo Ángulo Lado (AAL)}]
+        \tcbitem[adjusted title={Ángulo Ángulo Lado (AAL)}]
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.9\textwidth]{../images/criterioAAL}
@@ -49,4 +46,4 @@
             \label{fig:criterioAAL}
         \end{figure}
     \end{tcbitemize}
-\end{tcolorbox}
+\end{notecard}
