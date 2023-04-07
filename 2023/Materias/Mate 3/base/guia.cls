@@ -179,13 +179,13 @@
 \newcommand{\unidad}[1]{\renewcommand{\theunidad}{#1}}
 \newcommand{\theaprendizajes}{1}
 \newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{#1}}
-\newcommand{\thegradetablebox}{1}
-\newcommand{\gradetablebox}[1]{\renewcommand{\thegradetablebox}{#1}}
+% \newcommand{\thegradetablebox}{1}
+% \newcommand{\gradetablebox}[1]{\renewcommand{\thegradetablebox}{#1}}
 % These commands set up the running header on the top of the exam pages
 \pagestyle{headandfoot}
 \firstpageheader{}{}{}
 \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
-\runningheader{\themateria}{Guía \# \theguia \ {\ifprintanswers\color{red} (Autocontrol)\fi}}{\hfill\thegrado \ (\thecicloescolar)}
+\runningheader{{\color{SubjectColor}\themateria} }{Guía \theguia \quad {\ifprintanswers\autocontrol{\color{red}\alterfont\shadowtext{Autocontrol}}\fi}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
 \runningfooter{}{\color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
 % \renewcommand{\questionlabel}{\colorbox{red} {\huge{\textbf{\color{white}~\thequestion.}}}}
@@ -230,6 +230,7 @@
             rounded corners=5pt] (0,0)
         rectangle
         (\textwidth-1pt,3.1cm);
+        \node[xshift=-.915\textwidth , yshift=23pt] { \adjustbox{minipage=0.25\textwidth}{\fontsize{5}{1}\selectfont\sffamily \bfseries \color{black!60} Última revisión del documento: \today} };
         %%%% TITULO
         \node[yshift=5pt,xshift=-.68\textwidth,
             rectangle,
@@ -275,7 +276,7 @@
         \node[aprendizajetitle,xshift=45pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes:};
         %%%% GRADESTABLE
         \node[gradetablebox] (box)
-        {\adjustbox{min size={0.3\textwidth}{35pt},max size={0.46\textwidth+3pt}{40pt}}{%
+        {\adjustbox{min size={0.05\textwidth}{10pt},max size={0.46\textwidth+3pt}{60pt}}{%
         \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Obtenidos}\vtword{Total}%
         \arrayrulecolor{colorrds!30}%
         \ifnum\numquestions>10%
@@ -299,10 +300,9 @@
         {\@author  \hfill Unidad \theunidad \hspace{2.5em} \thecicloescolar}\\
         }%
         };
-        %\node[draw=none, fit=(box)] {};
     \end{tikzpicture}%
     \begin{tikzpicture}[remember picture, overlay,shift=(current page.north east)]
-        \node[yshift=-3.8cm,xshift=-0.55\textwidth]{\autocontrol{\color{red}\LARGE\alterfont\shadowtext{Autocontrol}}};
+        \node[yshift=-4cm,xshift=-0.55\textwidth]{\autocontrol{\color{red}\LARGE\alterfont\shadowtext{Autocontrol}}};
     \end{tikzpicture}%
 }
 \newenvironment{mybox}[3][]{%
