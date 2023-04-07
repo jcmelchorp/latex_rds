@@ -1,35 +1,98 @@
 \ProvidesPackage{mytcolorboxes}
 \@ifpackageloaded{tcolorbox}{}{\RequirePackage[most]{tcolorbox}}
+
 \tcbset{
-  sharp corners,
-  before skip = 0.1cm,    % add extra space before the box
-  after skip = 0.1cm      % add extra space after the box
+  %sharp corners,
+  enhanced,
+  colback = white,
+  fonttitle=\bfseries,
+  %before skip = 1mm,    % add extra space before the box
+  %after skip = 1mm      % add extra space after the box
 }                           % setting global options for tcolorbox
 
-\newtcolorbox{infocard}[2][]{%
+\newtcbox{\autocontrol}[1][]{%
+  boxsep=0mm,
+  colback=white,
+  colframe=red!70!black,
+  frame style={opacity=0.5},
+  interior style={opacity=1},
+  nobeforeafter,
+  tcbox raise base,
+  shrink tight,
+  rotate=3,
+  extrude by=1mm,
   enhanced,
-  colback=colorrds!5!white,
-  colframe=colorrds!35!white,
-  fonttitle=\bfseries,
-  coltitle=black,
-  center title,
+  fuzzy shadow={0.45mm}{-0.75mm}{0mm}{0.1mm}{black},  #1
+}
+
+
+\newenvironment{ejemplos}{%
+  \begin{tcbitemize}[
+      sharpish corners,
+      raster columns=1, raster equal height=rows,
+      colframe=Goldenrod!35!white,colbacktitle=Goldenrod!20!white,
+      fonttitle=\color{DarkOliveGreen}\sffamily\comfortaa,
+      title={Ejemplo \thetcbrasternum \hfill {}},
+      %before skip=6pt,after skip=6pt,
+      %borderline west={3mm}{0pt}{red}
+    ]}{\end{tcbitemize}}
+\newcommand\ejemplo[1][]{
+  \tcbitem[#1] \printanswers
+}
+
+\newtcolorbox{pregunta}[1][]{%
+  colframe=PreguntaCard,
+  colbacktitle=white,
+  fonttitle=\color{PreguntaTitle}\bfseries\sffamily\comfortaa,
+  #1
+}
+
+\newtcolorbox{porejemplo}[1][]{%
+  colframe=ExampleCard,
+  colbacktitle=ExampleCard!10!white,
+  coltitle=ExampleTitle,
+  fonttitle=\comfortaa,
+  #1
+}
+
+\newtcolorbox{infocard}[2][]{%
+  colbacktitle=colorrds!25!white,
+  %colback=colorrds!2!white,
+  colframe=colorrds!25!white,
+  coltitle=black!90!white,
+  center title,  %size=small,
+  %after skip=0pt,
   adjusted title={#2},
   #1
 }
 
-\newtcolorbox{defcard}[1][]{%
-  % enhanced,
-  colback=orange!5!white,
-  colframe=orange!35!white,
-  coltitle=black,
-  fonttitle=\bfseries,
-  center title,
-  adjusted title=Vocabulario,
+\newtcolorbox{notecard}[2][]{%
+  left=0mm,right=0mm,
+  top=0mm,bottom=0mm,
+  boxsep=0mm,
+  colbacktitle=white,
+  colback=MainColor!2!white,
+  colframe=MainColor!50!white,
+  coltitle=black!80!white,
+  center title,% size=small,
+  %before skip=0pt,
+  toptitle=4pt,bottomtitle=4pt,
+  title={#2},
   #1
 }
 
+
+
+
+\newtcolorbox{defcard}[1][Vocabulario]{%
+  colback=orange!5!white,
+  colframe=orange!35!white,
+  coltitle=black,
+  center title, %size=small,
+  adjusted title={#1},
+}
+
 \newtcolorbox{openbox}{
-  enhanced,
   sharpish corners, % better drop shadow
   boxrule = 0pt,
   toprule = 4.5pt, % top rule weight
@@ -38,12 +101,16 @@
 }
 
 \newtcolorbox{closebox}{
-  enhanced,
   sharpish corners, % better drop shadow
   boxrule = 0pt,
   bottomrule = 4.5pt, % top rule weight
   colframe = rdsdark,
   fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
+}
+
+
+\newcommand{\dashedbox}[1]{%
+  \tikz[baseline]\node[anchor=base, draw=gray, dash pattern=on 2pt off 1pt, outer sep=0pt, inner sep=3pt] {#1};%
 }
 
 \newenvironment{startInfo}[4][Inicio]{
@@ -65,12 +132,11 @@
     }{\end{openbox}}
 
 \makeatletter
-\newcommand{\DrawLine}{%
+\newcommand{\DrawLine}[1][\linewidth]{%
   \begin{tikzpicture}
-    \path[use as bounding box] (0,0) -- (\linewidth,0);
-    \draw[color=colorrds!35!white,dashed,dash phase=2pt]
-    (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
-    (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
+    \path[use as bounding box] (0,0) -- (#1,0);
+    \draw[color=colorrds,dashed,dash phase=2pt] (0-\kvtcb@boxsep,0)--(#1-\kvtcb@rightlower+\kvtcb@boxsep,0);
   \end{tikzpicture}%
 }
 \makeatother
+
