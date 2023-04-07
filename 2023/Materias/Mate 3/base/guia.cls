@@ -1,5 +1,5 @@
 \def\fileversion{1.0}
-\def\filedate{2023/04/04}
+\def\filedate{2023/04/07}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{guia}[\filedate\space Plantilla Guía RDS Version \fileversion\space by J.Melchor]
 \LoadClass{exam}
@@ -132,9 +132,9 @@
 \newcounter{ejemplonum}
 \setcounter{ejemplonum}{0}
 \newcommand\ejemplosboxed[1][0]{%
-    \printanswers\refstepcounter{ejemplonum}%
+    \refstepcounter{ejemplonum}%
     \begin{porejemplo}[adjusted title={Ejemplo \theejemplonum}]%
-        #1%
+        \printanswers #1%
     \end{porejemplo}
 }%
 %%%%%%%%%% HOOKS (questions, parts and choices)
@@ -178,16 +178,19 @@
 \newcommand{\theunidad}{1}
 \newcommand{\unidad}[1]{\renewcommand{\theunidad}{#1}}
 \newcommand{\theaprendizajes}{1}
-\newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{#1}}
-% \newcommand{\thegradetablebox}{1}
-% \newcommand{\gradetablebox}[1]{\renewcommand{\thegradetablebox}{#1}}
-% These commands set up the running header on the top of the exam pages
-\pagestyle{headandfoot}
-\firstpageheader{}{}{}
-\firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
-\runningheader{{\color{SubjectColor}\themateria} }{Guía \theguia \quad {\ifprintanswers\autocontrol{\color{red}\alterfont\shadowtext{Autocontrol}}\fi}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
-\runningfooter{}{\color{colorrds}\thepage \ de \numpages}{}
-\runningheadrule
+\newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{
+        \begin{itemize}[leftmargin=*,label=\small\color{colorrds}\faIcon{user-graduate}]%
+            #1%
+        \end{itemize}%
+    }}
+\newcommand\thecontrol[1][yshift=-4cm,xshift=-0.55\textwidth]{%
+    \ifprintanswers%
+        {\begin{tikzpicture}[remember picture, overlay,shift=(current page.north east)]%
+            \node[#1]{\autocontrol{\color{red}\alterfont\shadowtext{Autocontrol}}};
+        \end{tikzpicture}}%
+    \else{}%
+    \fi%
+}
 % \renewcommand{\questionlabel}{\colorbox{red} {\huge{\textbf{\color{white}~\thequestion.}}}}
 % \renewcommand{\partlabel}{\colorbox{red} {\large{\textbf{\color{white}(\thepartno)}}}}
 %%%% STYLES
@@ -246,11 +249,11 @@
             \adjustbox{
                 stack,
                 color=white,
-                min size={0.4\textwidth}{10pt},
-                max size={0.65\textwidth}{25pt}
+                min size={0.2\textwidth}{8pt},
+                max size={0.65\textwidth}{20pt}
             }{
                 \centering \bfseries \comfortaa
-                \color{white} \fontsize{14}{21}\selectfont\@title
+                \color{white} \@title
             }%
         };
         \node[nombrebox] (box) {
@@ -301,9 +304,7 @@
         }%
         };
     \end{tikzpicture}%
-    \begin{tikzpicture}[remember picture, overlay,shift=(current page.north east)]
-        \node[yshift=-4cm,xshift=-0.55\textwidth]{\autocontrol{\color{red}\LARGE\alterfont\shadowtext{Autocontrol}}};
-    \end{tikzpicture}%
+    \thecontrol[yshift=-4cm,xshift=-0.55\textwidth,scale=1.5]
 }
 \newenvironment{mybox}[3][]{%
     \begin{tikzpicture}[#1]%
@@ -319,6 +320,19 @@
     \end{tikzpicture}%
 }
 \makeatother
+\AtBeginDocument{
+    % These commands set up the running header on the top of the exam pages
+    \pagestyle{headandfoot}
+    \firstpageheader{}{}{}
+    \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
+    \ifprintanswers
+        \runningheader{{\color{SubjectColor}\themateria} }{Guía \theguia \quad {\thecontrol[yshift=-1.2cm,xshift=-0.48\textwidth]}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
+    \else
+        \runningheader{{\color{SubjectColor}\themateria} }{Guía \theguia }{\color{MainColor}\thegrado \ (\thecicloescolar)}
+    \fi
+    \runningfooter{}{\color{colorrds}\thepage \ de \numpages}{}
+    \runningheadrule
+}
 %%%% CAPTIONS
 \RequirePackage{caption,capt-of}
 \RequirePackage{subcaption}
