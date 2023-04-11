@@ -15,9 +15,10 @@
 \setlength{\parskip}{1em}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 \RequirePackage{enumitem}
+\RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1.4}
-
+\RequirePackage{forest}
 \RequirePackage{tikz}
 \input{insbox}
 \usetikzlibrary{
@@ -30,6 +31,7 @@
     decorations.markings,
     decorations.text,
     shapes,
+    shapes.geometric,
     shapes.symbols,
     backgrounds,
     shadows,
@@ -143,6 +145,18 @@
     \setlength{\leftmargin}{0pt}%
     \labelwidth\leftmargin\advance\labelwidth+\labelsep%
 }
+
+\DeclareDocumentCommand\iconNamed{ m m m g }{%       
+    \vspace{5pt}
+    \begin{minipage}{1.5cm}
+        \centering
+        \adjustbox{min size={0.4cm}{0.6cm},max size={0.8cm}{0.8cm}}
+        {\color{#1}$\text{\faIcon{#3}}$\IfNoValueF{#4}{$^{\text{\faIcon{#4}}}$}} \\
+        {\sffamily \scriptsize #2}\nobreak%
+    \end{minipage}\nobreak%
+    \vspace{5pt}%
+}
+
 
 % % Dimensions tuned to be about right.
 % \renewcommand{\partshook}{
