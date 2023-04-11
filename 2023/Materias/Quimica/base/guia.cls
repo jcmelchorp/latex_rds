@@ -90,6 +90,7 @@
 \graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{calc}
 \RequirePackage{xparse,xpatch}
+\RequirePackage{setspace}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
         \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
@@ -146,13 +147,14 @@
     \labelwidth\leftmargin\advance\labelwidth+\labelsep%
 }
 
+
 \DeclareDocumentCommand\iconNamed{ m m m g }{%       
     \vspace{5pt}
     \begin{minipage}{1.5cm}
-        \centering
+        \centering\scriptsize\sffamily
         \adjustbox{min size={0.4cm}{0.6cm},max size={0.8cm}{0.8cm}}
-        {\color{#1}$\text{\faIcon{#3}}$\IfNoValueF{#4}{$^{\text{\faIcon{#4}}}$}} \\
-        {\sffamily \scriptsize #2}\nobreak%
+        {\color{#1}$\text{\faIcon{#3}}$\IfNoValueF{#4}{$^{\text{\faIcon{#4}}}$}} \\[1em]
+        #2
     \end{minipage}\nobreak%
     \vspace{5pt}%
 }
