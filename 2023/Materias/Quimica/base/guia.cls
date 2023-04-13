@@ -15,6 +15,7 @@
 \setlength{\parskip}{1em}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 \RequirePackage{enumitem}
+\RequirePackage[version=3]{mhchem}
 \RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1.4}
@@ -45,7 +46,7 @@
     calendar,
     plotmarks,
     spy,
-    tikzmark}
+    tikzmark,trees}
 
 \RequirePackage{addfont}
 \RequirePackage{fetamont}
@@ -354,12 +355,14 @@
 \RequirePackage{subcaption}
 %%%% LINKS
 \RequirePackage{float}
+\RequirePackage{lipsum}
 \RequirePackage{bookmark}
 \RequirePackage{xparse}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol,multirow,booktabs}
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
+\RequirePackage{mathtools}
 \decimalpoint
 \RequirePackage{adjustbox}
 \RequirePackage{mytcolorboxes}
