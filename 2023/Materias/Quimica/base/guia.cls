@@ -15,7 +15,7 @@
 \setlength{\parskip}{1em}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 \RequirePackage{enumitem}
-\RequirePackage[version=3]{mhchem}
+\RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1.4}
