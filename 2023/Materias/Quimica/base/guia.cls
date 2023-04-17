@@ -117,9 +117,9 @@
 %\pointformat{\textcolor{DarkOliveGreen}{[\thepoints]}}
 \pointpoints{punto}{puntos}
 % Custom formatting for problem parts.
-\newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
+\newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}}}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{Sepia}\bfseries\sffamily\comfortaa\colorbox{gray!20}{{\thequestion\small\thepartno}}}
+\renewcommand{\partlabel}{\colorbox{gray!20}{\color{Sepia}\bfseries\comfortaa\thepartno}}
 \newcommand{\tf}[1][{}]{%
     \fillin[#1][1cm]%
 }
@@ -160,7 +160,20 @@
     \vspace{5pt}%
 }
 
+\newcommand\comillas[1]{``#1''}
 
+\newcommand\icondescription[2][home]{
+    \begin{minipage}{\linewidth}
+        \begin{minipage}{.1\linewidth}
+            \color{colorrds}\LARGE\faIcon[regular]{#1}
+        \end{minipage}\hfill
+        \begin{minipage}{.85\linewidth}
+            \begin{tcolorbox}[size=small,halign=left,colframe=rdsdark,arc=3mm, sharp corners=west]
+                \sffamily#2
+            \end{tcolorbox}
+        \end{minipage}
+    \end{minipage}
+}
 % % Dimensions tuned to be about right.
 % \renewcommand{\partshook}{
 %   \setlength{\topsep}{-0.02in}%
