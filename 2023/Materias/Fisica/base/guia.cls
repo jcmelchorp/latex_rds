@@ -21,8 +21,21 @@
 \renewcommand{\arraystretch}{1.4}
 \RequirePackage{forest}
 \RequirePackage{tikz}
+\RequirePackage{physics}
+\tikzset{>=latex} % for LaTeX arrow head
+% Styles
+\tikzset{axis/.style={black, thick,->}}
+\tikzset{vector/.style={>=stealth,->}}
+\tikzset{every text node part/.style={align=center}}
+\colorlet{myblue}{black!40!blue}
+\colorlet{myred}{black!40!red}
+\colorlet{vcol}{green!50!black}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EVcol}{orange!80!black!60}
+\colorlet{Bcol}{violet!90}
 \input{insbox}
 \usetikzlibrary{
+    3d,
     arrows,
     positioning,
     matrix,
@@ -33,6 +46,7 @@
     decorations.text,
     shapes,
     shapes.geometric,
+    shapes.multipart,
     shapes.symbols,
     backgrounds,
     shadows,
@@ -47,7 +61,6 @@
     plotmarks,
     spy,
     tikzmark,trees}
-
 \RequirePackage{addfont}
 \RequirePackage{fetamont}
 \RequirePackage{bbold}% se usa como \bbfamily [outlined]
