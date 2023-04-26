@@ -15,12 +15,27 @@
 \setlength{\parskip}{1em}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 \RequirePackage{enumitem}
+\RequirePackage[version=4]{mhchem}
+\RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1.4}
-
+\RequirePackage{forest}
 \RequirePackage{tikz}
+\RequirePackage{physics}
+\tikzset{>=latex} % for LaTeX arrow head
+% Styles
+\tikzset{axis/.style={black, thick,->}}
+\tikzset{vector/.style={>=stealth,->}}
+\tikzset{every text node part/.style={align=center}}
+\colorlet{myblue}{black!40!blue}
+\colorlet{myred}{black!40!red}
+\colorlet{vcol}{green!50!black}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EVcol}{orange!80!black!60}
+\colorlet{Bcol}{violet!90}
 \input{insbox}
 \usetikzlibrary{
+    3d,
     arrows,
     positioning,
     matrix,
@@ -30,6 +45,8 @@
     decorations.markings,
     decorations.text,
     shapes,
+    shapes.geometric,
+    shapes.multipart,
     shapes.symbols,
     backgrounds,
     shadows,
@@ -43,8 +60,7 @@
     calendar,
     plotmarks,
     spy,
-    tikzmark}
-
+    tikzmark,trees}
 \RequirePackage{addfont}
 \RequirePackage{fetamont}
 \RequirePackage{bbold}% se usa como \bbfamily [outlined]
@@ -88,6 +104,7 @@
 \graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{calc}
 \RequirePackage{xparse,xpatch}
+\RequirePackage{setspace}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
         \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
@@ -113,9 +130,9 @@
 %\pointformat{\textcolor{DarkOliveGreen}{[\thepoints]}}
 \pointpoints{punto}{puntos}
 % Custom formatting for problem parts.
-\newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
+\newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}}}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{Sepia}\bfseries\sffamily\comfortaa\colorbox{gray!20}{{\thequestion\small\thepartno}}}
+\renewcommand{\partlabel}{\colorbox{gray!20}{\color{Sepia}\bfseries\comfortaa\thepartno}}
 \newcommand{\tf}[1][{}]{%
     \fillin[#1][1cm]%
 }
@@ -144,6 +161,32 @@
     \labelwidth\leftmargin\advance\labelwidth+\labelsep%
 }
 
+
+\DeclareDocumentCommand\iconNamed{ m m m g }{%       
+    \vspace{5pt}
+    \begin{minipage}{1.5cm}
+        \centering\scriptsize\sffamily
+        \adjustbox{min size={0.4cm}{0.6cm},max size={0.8cm}{0.8cm}}
+        {\color{#1}$\text{\faIcon{#3}}$\IfNoValueF{#4}{$^{\text{\faIcon{#4}}}$}} \\[1em]
+        #2
+    \end{minipage}\nobreak%
+    \vspace{5pt}%
+}
+
+\newcommand\comillas[1]{``#1''}
+
+\newcommand\icondescription[2][home]{
+    \begin{minipage}{\linewidth}
+        \begin{minipage}{.1\linewidth}
+            \color{colorrds}\LARGE\faIcon[regular]{#1}
+        \end{minipage}\hfill
+        \begin{minipage}{.85\linewidth}
+            \begin{tcolorbox}[size=small,halign=left,colframe=rdsdark,arc=3mm, sharp corners=west]
+                \sffamily#2
+            \end{tcolorbox}
+        \end{minipage}
+    \end{minipage}
+}
 % % Dimensions tuned to be about right.
 % \renewcommand{\partshook}{
 %   \setlength{\topsep}{-0.02in}%
@@ -338,12 +381,14 @@
 \RequirePackage{subcaption}
 %%%% LINKS
 \RequirePackage{float}
+\RequirePackage{lipsum}
 \RequirePackage{bookmark}
 \RequirePackage{xparse}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol,multirow,booktabs}
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
+\RequirePackage{mathtools}
 \decimalpoint
 \RequirePackage{adjustbox}
 \RequirePackage{mytcolorboxes}
