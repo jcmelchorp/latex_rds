@@ -1,34 +1,41 @@
+\def\fileversion{1.0}
+\def\filedate{2023/04/07}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{guia}[2023/01/20 Plantilla Guía RDS]
-
+\ProvidesClass{guia}[\filedate\space Plantilla Guía RDS Version \fileversion\space by J.Melchor]
 \LoadClass{exam}
+\DeclareOption{addpoints}{\addpoints}
+\DeclareOption{answers}{\printanswers}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{exam}}
 \ProcessOptions\relax
 \RequirePackage{rdscolors}
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
+\renewcommand{\baselinestretch}{1}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
+\RequirePackage{enumitem}
+\RequirePackage[version=4]{mhchem}
+\RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1.4}
-\newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
-% \newcommand{\answerAngleBox}[2][]{
-%   \definecolor{#2}{HTML}{0DBE80}
-%   \begin{center}
-%     {
-%       \color{pasto}
-%       \textbf{$\angle #1 ^\circ =$}
-%     }
-%     \fbox{
-%       \begin{minipage}{2cm}
-%         \hfill\vspace{0.5cm}
-%       \end{minipage}
-%     }
-%   \end{center}
-% }
-\RequirePackage{enumitem}
-
+\RequirePackage{forest}
 \RequirePackage{tikz}
+\RequirePackage{physics}
+\tikzset{>=latex} % for LaTeX arrow head
+% Styles
+\tikzset{axis/.style={black, thick,->}}
+\tikzset{vector/.style={>=stealth,->}}
+\tikzset{every text node part/.style={align=center}}
+\colorlet{myblue}{black!40!blue}
+\colorlet{myred}{black!40!red}
+\colorlet{vcol}{green!50!black}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EVcol}{orange!80!black!60}
+\colorlet{Bcol}{violet!90}
 \input{insbox}
 \usetikzlibrary{
+    3d,
     arrows,
     positioning,
     matrix,
@@ -38,6 +45,8 @@
     decorations.markings,
     decorations.text,
     shapes,
+    shapes.geometric,
+    shapes.multipart,
     shapes.symbols,
     backgrounds,
     shadows,
@@ -51,8 +60,7 @@
     calendar,
     plotmarks,
     spy,
-    tikzmark}
-
+    tikzmark,trees}
 \RequirePackage{addfont}
 \RequirePackage{fetamont}
 \RequirePackage{bbold}% se usa como \bbfamily [outlined]
@@ -64,7 +72,10 @@
 \RequirePackage[utf8]{inputenc}
 \newcommand*\alterfont{\fontfamily{lmtt}\selectfont}%% se usa en la palabra guia \alterfont [typewriting]
 \RequirePackage{fontawesome5}
-
+\RequirePackage{shadowtext}
+\shadowoffsetx{0.75pt}
+\shadowoffsety{0.5pt}
+\shadowrgb{0.3, 0.3, 0.3}
 % \input Acorn.fd
 % \newcommand*\initfamily{\usefont{U}{Acorn}{xl}{n}}
 %\addfont{OT1}{cmgray}{\cmgray}
@@ -76,7 +87,7 @@
 % \newcommand*\initfamily{\usefont{U}{Elzevier}{xl}{n}}
 %\def\tfont{\usefont{T1}{fve}{m}{n}\selectfont}
 \RequirePackage[
-    %showframe=true,
+    % showframe=true,
     letterpaper,
     includehead,
     left=15mm,
@@ -86,16 +97,18 @@
     headheight=10mm,% Set \headheight to 10mm
 ]{geometry} % Custom margins
 \RequirePackage{anyfontsize}
+\RequirePackage{ragged2e}
+\RequirePackage{fp}% http://ctan.org/pkg/fp
 \newcommand{\HUGE}{\fontsize{50}{60}}
 \RequirePackage{graphicx}
 \graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{calc}
 \RequirePackage{xparse,xpatch}
+\RequirePackage{setspace}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
         \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
 \renewcommand\choicelabel{\circled{\thechoice}}
-\setlength\linefillheight{.2in}
 %\patchcmd{\questions}{1.}{\thequestion.}{}{}% fix left margin
 %\patchcmd{\questions}{\question}{\begin{qbox}\question\end{qbox}}{}{}% fix left margin
 \AtBeginEnvironment{solutionbox}{\vspace{-0.2\baselineskip}}
@@ -117,35 +130,63 @@
 %\pointformat{\textcolor{DarkOliveGreen}{[\thepoints]}}
 \pointpoints{punto}{puntos}
 % Custom formatting for problem parts.
-\newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
+\newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}}}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{Sepia}\bfseries\sffamily\comfortaa\colorbox{gray!20}{{\thequestion\small\thepartno}}}
+\renewcommand{\partlabel}{\colorbox{gray!20}{\color{Sepia}\bfseries\comfortaa\thepartno}}
 \newcommand{\tf}[1][{}]{%
     \fillin[#1][1cm]%
 }
 \checkboxchar{$\Box$}
-\newcommand\questionboxed[1][0]{
-    \question[#1] \tcbitem[title={\color{Sepia}\bfseries\sffamily\comfortaa Ejercicio \thequestion} \hfill {\color{colorrds}\totalpoints \ \points}]
-}
-\AtBeginEnvironment{questions}{
-    %\setcounter{question}{1}
-    \begin{tcbitemize}[raster columns=1, raster equal height=rows,
-            enhanced,arc=10mm,sharpish corners, % better drop shadow
-            % raster width=16cm,raster column skip=8mm,raster halign=center,
-            raster force size=false,
-            colframe=DarkOliveGreen!50!white,colbacktitle=DarkOliveGreen!20!white,
-            fonttitle=\bfseries,]
-        %\addtocounter{question}{1}
-        %\setcounter{question}{1}
-        }
-        \AtEndEnvironment{questions}{\end{tcbitemize}
-}
+%%%% Custom question command %%%%%
+\newcounter{preguntanum}
+\setcounter{preguntanum}{0}
+\newcommand\questionboxed[2][0]{%
+    \question[#1]\begin{pregunta}[adjusted title={ Ejercicio \thequestion} \hfill {\color{colorrds}\totalpoints \ \points}]%
+        #2%
+    \end{pregunta}
+}%
+%%%%% Example command
+\newcounter{ejemplonum}
+\setcounter{ejemplonum}{0}
+\newcommand\ejemplosboxed[1][0]{%
+    \refstepcounter{ejemplonum}%
+    \begin{porejemplo}[adjusted title={Ejemplo \theejemplonum}]%
+        \printanswers #1%
+    \end{porejemplo}
+}%
 %%%%%%%%%% HOOKS (questions, parts and choices)
 \renewcommand{\questionshook}{%
+    \setlength{\topsep}{-20mm}%
     \setlength{\leftmargin}{0pt}%
-    \labelwidth\leftmargin\advance\labelwidth-\labelsep%
+    \labelwidth\leftmargin\advance\labelwidth+\labelsep%
 }
 
+
+\DeclareDocumentCommand\iconNamed{ m m m g }{%       
+    \vspace{5pt}
+    \begin{minipage}{1.5cm}
+        \centering\scriptsize\sffamily
+        \adjustbox{min size={0.4cm}{0.6cm},max size={0.8cm}{0.8cm}}
+        {\color{#1}$\text{\faIcon{#3}}$\IfNoValueF{#4}{$^{\text{\faIcon{#4}}}$}} \\[1em]
+        #2
+    \end{minipage}\nobreak%
+    \vspace{5pt}%
+}
+
+\newcommand\comillas[1]{``#1''}
+
+\newcommand\icondescription[2][home]{
+    \begin{minipage}{\linewidth}
+        \begin{minipage}{.1\linewidth}
+            \color{colorrds}\LARGE\faIcon[regular]{#1}
+        \end{minipage}\hfill
+        \begin{minipage}{.85\linewidth}
+            \begin{tcolorbox}[size=small,halign=left,colframe=rdsdark,arc=3mm, sharp corners=west]
+                \sffamily#2
+            \end{tcolorbox}
+        \end{minipage}
+    \end{minipage}
+}
 % % Dimensions tuned to be about right.
 % \renewcommand{\partshook}{
 %   \setlength{\topsep}{-0.02in}%
@@ -161,11 +202,11 @@
 % }
 %%%% INFO
 \makeatletter
-\setlength{\parindent}{0pt}
 %%%% LOGO
 \def\LOGO{%
     \begin{picture}(0,0)\unitlength=1cm
-        \put (4.5,-1.5) {\includegraphics[width=2.2cm]{logo.png}}
+        \put (4.51,-1.52) {\includegraphics[width=2.4cm]{logo_shadow.png}}
+        \put (4.5,-1.5) {\includegraphics[width=2.4cm]{logo.png}}
     \end{picture}
 }
 %%%% INPUTS
@@ -177,73 +218,53 @@
 \newcommand{\guia}[1]{\renewcommand{\theguia}{#1}}
 \newcommand{\thecicloescolar}{1}
 \newcommand{\cicloescolar}[1]{\renewcommand{\thecicloescolar}{#1}}
+\newcommand{\theunidad}{1}
+\newcommand{\unidad}[1]{\renewcommand{\theunidad}{#1}}
 \newcommand{\theaprendizajes}{1}
-\newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{#1}}
-\newcommand{\therequisitos}{1}
-\newcommand{\requisitos}[1]{\renewcommand{\therequisitos}{#1}}
-% These commands set up the running header on the top of the exam pages
-\pagestyle{headandfoot}
-\firstpageheader{}{{\ifprintanswers\color{red}\Huge Autocontrol\fi}}{}
-\firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
-\runningheader{\themateria}{Guía \# \theguia \ {\ifprintanswers\color{red} (Autocontrol)\fi}}{\hfill\thegrado \ (\thecicloescolar)}
-\runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
-\runningheadrule
+\newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{
+        \begin{itemize}[leftmargin=*,label=\small\color{colorrds}\faIcon{user-graduate}]%
+            #1%
+        \end{itemize}%
+    }}
+\newcommand\thecontrol[1][yshift=-4cm,xshift=-0.55\textwidth]{%
+    \ifprintanswers%
+        {\begin{tikzpicture}[remember picture, overlay,shift=(current page.north east)]%
+            \node[#1]{\autocontrol{\color{red}\alterfont\shadowtext{Autocontrol}}};
+        \end{tikzpicture}}%
+    \else{}%
+    \fi%
+}
 % \renewcommand{\questionlabel}{\colorbox{red} {\huge{\textbf{\color{white}~\thequestion.}}}}
 % \renewcommand{\partlabel}{\colorbox{red} {\large{\textbf{\color{white}(\thepartno)}}}}
-\renewenvironment{TheSolution}{
-    \begin{mdframed}[skipabove=\baselineskip,innertopmargin=\baselineskip,innerbottommargin=\baselineskip, linewidth=3pt,
-            linecolor=ao(english),  topline=false,
-            rightline=false,
-            bottomline=false]
-        \textbf{\color{Sepia}Solución:}\enspace\ignorespaces}{\end{mdframed}}
-% \newcommand{\puntuacion}{
-%   \centering
-%   \begin{mybox}{0.20\linewidth}{
-%     \fontsize{24}{32}\selectfont \ffmwfamily \color{colorrds} Calificación}
-% %\cellwidth{0.2em}
-% %\gradetablestretch{1}
-% %\multirowgradetable{2}
-% %\gradetable[h][questions]
-% %\GradeTable
-% \end{mybox}
-% }
 %%%% STYLES
 \tikzset{
-    aprendizajebox/.style={anchor=north,xshift=-.98\textwidth,
-            yshift=-1.3cm,
+    nombrebox/.style={xshift=-.7\textwidth-3pt,
+            yshift=-1.1cm,
+            draw=none, fill=white, rectangle,
+            inner xsep=2pt, style=rounded corners,
+            %drop  shadow={fill=lightgray, opacity=0.7}
+        },
+    aprendizajebox/.style={anchor=north,xshift=-.96\textwidth-3pt,
+            yshift=-1.7cm,
             draw=colorrds, dashed,fill=white, rectangle,
-            inner sep=15pt, style=rounded corners,
+            inner sep=10pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
     aprendizajetitle/.style={
             fill=white,
+            inner xsep=2pt,inner ysep=2pt,
             style=rounded corners,
             % drop shadow,
         },
-    requisitobox/.style={anchor=north,xshift=-.5\textwidth,
-            yshift=-1.2cm,
-            draw=none, fill=white, rectangle,
-            inner xsep=1pt,inner ysep=2pt, style=rounded corners,
+    gradetablebox/.style={anchor=north east,xshift=-.21\textwidth-1pt,
+            yshift=-1.7cm,
+            draw=colorrds, dashed,fill=white, rectangle,
+            inner sep=5pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
-    requisitotitle/.style={
+    gradetableboxtitle/.style={
             fill=white,
-            style=rounded corners,
-            % drop shadow,
-        },
-    instructionbox/.style={xshift=-.7\textwidth,
-            yshift=-4.6cm,
-            draw=gray, fill=white, rectangle,
-            inner sep=15pt,style=rounded corners,
-            %drop  shadow={fill=lightgray, opacity=0.7}
-            blur shadow={
-                    shadow opacity=40,
-                    shadow yshift=-1mm,
-                    %shadow blur steps=30,
-                    shadow blur extra rounding=5pt
-                }},
-    instructiontitle/.style={
-            fill=white,
+            inner xsep=2pt,inner ysep=2pt,
             style=rounded corners,
             % drop shadow,
         }
@@ -251,18 +272,19 @@
 %%%% COMMAND
 \newcommand{\INFO}{%
     \begin{tikzpicture}[remember picture]
-        \draw[colorrds,ultra thick,xshift=-1.2\textwidth ,yshift=0cm,
+        \draw[colorrds,ultra thick,xshift=-1.2\textwidth-5pt ,yshift=0cm,
             rounded corners=5pt] (0,0)
         rectangle
-        (\textwidth,3.1cm);
+        (\textwidth-1pt,3.1cm);
+        \node[xshift=-.915\textwidth , yshift=23pt] { \adjustbox{minipage=0.25\textwidth}{\fontsize{5}{1}\selectfont\sffamily \bfseries \color{black!60} Última revisión del documento: \today} };
         %%%% TITULO
-        \node[yshift=0cm,xshift=-.65\textwidth,
+        \node[yshift=5pt,xshift=-.68\textwidth,
             rectangle,
             rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
             blur shadow={
-                    shadow opacity=40,
-                    shadow yshift=-2mm,
-                    %shadow blur steps=30,
+                    shadow opacity=50,
+                    shadow yshift=-1mm,
+                    shadow blur steps=5,
                     shadow blur extra rounding=5pt
                 },
             fill=colorrds]
@@ -270,67 +292,47 @@
             \adjustbox{
                 stack,
                 color=white,
-                min size={0.1\textwidth}{20pt},
+                min size={0.2\textwidth}{8pt},
                 max size={0.65\textwidth}{20pt}
             }{
                 \centering \bfseries \comfortaa
-                \color{white} \fontsize{14}{21}\selectfont\@title
+                \color{white} \@title
             }%
         };
+        \node[nombrebox] (box) {
+            \makebox[0.72\linewidth]{\textbf{\comfortaa \color{Sepia} Nombre del alumno: } \DrawLine[9.4cm]}
+            \makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}
+        };
         %%%% BOLA
-        \node[xshift=-.27\textwidth ,circle,inner xsep=5pt,inner ysep=5pt,
+        \node[anchor= west,yshift=6pt,xshift=-.3\textwidth ,circle,inner xsep=3pt,inner ysep=3pt,
             blur shadow={
                     shadow opacity=40,
                     shadow yshift=-1mm,
-                    %shadow blur steps=30,
-                    %shadow blur extra rounding=5pt
                 },
-            fill=MainColor!50]
+            fill=MainColor]
         {
-            \begin{minipage}{1cm}
+            \begin{minipage}{0.8cm}
                 \centering
-                {\fontsize{9}{12}\selectfont \color{Sepia} \alterfont Guía}\\
-                {\fontsize{28}{1}\selectfont \color{white} \bfseries \foekfamily \theguia}
+                {\fontsize{9}{1}\selectfont \color{Guia} \bfseries\comfortaa Guía}\\
+                {\fontsize{22}{1}\selectfont \color{white} \bfseries \foekfamily \theguia}
             \end{minipage}
         };
         %%%% APRENDIZAJES
-        \node[aprendizajebox] (box)
-        {
-            \begin{minipage}[t][][t]{.35\textwidth}
-                \normalfont  \theaprendizajes
-            \end{minipage}
-        };
-        \node[aprendizajetitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes};
-        \node[draw=none, fit=(box)] {};
+        \node[aprendizajebox] (box) {\adjustbox{minipage=0.45\textwidth}{\theaprendizajes}};
+        \node[aprendizajetitle,xshift=45pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes:};
         %%%% GRADESTABLE
-        \node[requisitobox] (box)
-        {
-            \begin{minipage}[t][][t]{.5\textwidth}
-                %\begin{minipage}[t][][b]{.22\textwidth}
-                % \makebox[.22\textwidth]{
-                \footnotesize
-                \cellwidth{0.3em}
-                \gradetablestretch{1.8}
-                \vqword{Pregunta}
-                \vpgword{P\'gina}
-                \vpword{Puntos}
-                \vsword{Obtenidos}
-                \vtword{Total}
-                \hqword{Pregunta}
-                \hpgword{P\'gina}
-                \hpword{Puntos}
-                \hsword{Obtenidos}
-                \htword{Total}
-                \ifnum\numquestions > 10
-                    \multirowgradetable{2}[questions]
-                \else
-                    \gradetable[h][questions]
-                \fi
-            \end{minipage}%
-        };
-        \node[requisitotitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Puntuación   };
-        \node[draw=none, fit=(box)] {};
-    \end{tikzpicture}
+        \node[gradetablebox] (box)
+        {\adjustbox{min size={0.05\textwidth}{10pt},max size={0.46\textwidth+3pt}{60pt}}{%
+        \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Obtenidos}\vtword{Total}%
+        \arrayrulecolor{colorrds!30}%
+        \ifnum\numquestions>10%
+            {\multirowgradetable{2}[questions]}%
+            \else%
+            {\gradetable[h][questions]}%
+        \fi%
+        }};
+        \node[gradetableboxtitle,xshift=-110pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación:};
+    \end{tikzpicture}%
     \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
         %%%% LOGO
         \node[yshift=-3.5cm,xshift=-2.5cm]{\LOGO};
@@ -339,13 +341,13 @@
         rounded corners=2pt,inner xsep=20pt,inner ysep=0pt]
         {
         \parbox{0.8\textwidth}{%
-        {\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa  \textbf{Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
-        { \fontsize{16}{20}\selectfont \textbf{\color{SubjectColor}\themateria} \hfill {\color{MainColor}\thegrado} }\\
-        { \@author \hfill \thecicloescolar}\\
+        {\textbf{\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
+        {\fontsize{16}{20}\selectfont {\color{SubjectColor}\themateria}  \hfill {\color{MainColor}\thegrado} }\\
+        {\@author  \hfill Unidad \theunidad \hspace{2.5em} \thecicloescolar}\\
         }%
         };
-        \node[draw=none, fit=(box)] {};
-    \end{tikzpicture}
+    \end{tikzpicture}%
+    \thecontrol[yshift=-4cm,xshift=-0.55\textwidth,scale=1.5]
 }
 \newenvironment{mybox}[3][]{%
     \begin{tikzpicture}[#1]%
@@ -358,20 +360,35 @@
         \node [right, inner sep=3pt, outer sep=0pt,
             text height=2ex] (BOXNAME)
         at ([shift={(-1em,5pt)}]BOXCONTENT.north west) {\myboxname};
-    \end{tikzpicture}
+    \end{tikzpicture}%
 }
 \makeatother
+\AtBeginDocument{
+    % These commands set up the running header on the top of the exam pages
+    \pagestyle{headandfoot}
+    \firstpageheader{}{}{}
+    \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
+    \ifprintanswers
+        \runningheader{{\color{SubjectColor}\themateria} }{Guía \theguia \quad {\thecontrol[yshift=-1.2cm,xshift=-0.48\textwidth]}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
+    \else
+        \runningheader{{\color{SubjectColor}\themateria} }{Guía \theguia }{\color{MainColor}\thegrado \ (\thecicloescolar)}
+    \fi
+    \runningfooter{}{\color{colorrds}\thepage \ de \numpages}{}
+    \runningheadrule
+}
 %%%% CAPTIONS
 \RequirePackage{caption,capt-of}
 \RequirePackage{subcaption}
 %%%% LINKS
 \RequirePackage{float}
+\RequirePackage{lipsum}
 \RequirePackage{bookmark}
 \RequirePackage{xparse}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol,multirow,booktabs}
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
+\RequirePackage{mathtools}
 \decimalpoint
 \RequirePackage{adjustbox}
 \RequirePackage{mytcolorboxes}
