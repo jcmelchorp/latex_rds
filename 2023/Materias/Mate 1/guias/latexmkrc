@@ -1,1 +1,2 @@
-$ENV{'TEXINPUTS'}='/home/pete-on-dell/Github/latex_rds/2023/resources//:../base//:' . $ENV{'TEXINPUTS'}; 
+$ENV{'TEXINPUTS'}='../../../resources//:../base//:' . $ENV{'TEXINPUTS'};
+ 
