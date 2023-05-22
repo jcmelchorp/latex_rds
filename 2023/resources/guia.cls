@@ -8,6 +8,8 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{exam}}
 \ProcessOptions\relax
 \RequirePackage{rdscolors}
+% \RequirePackage{lineno}
+% \pagewiselinenumbers
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
 \renewcommand{\baselinestretch}{1}
@@ -383,7 +385,7 @@
 \RequirePackage{float}
 \RequirePackage{lipsum}
 \RequirePackage{bookmark}
-\RequirePackage{xparse}
+\RequirePackage{xstring,xparse}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol,multirow,booktabs}
 %%%% MATH
@@ -393,6 +395,7 @@
 \RequirePackage{adjustbox}
 \RequirePackage{mytcolorboxes}
 \RequirePackage{myboxes}
+\RequirePackage{card}
 %%%% EXTERNAL SOURCES
 \RequirePackage{newclude}
 \RequirePackage{import}
