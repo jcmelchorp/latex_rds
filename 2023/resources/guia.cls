@@ -139,6 +139,14 @@
     \fillin[#1][1cm]%
 }
 \checkboxchar{$\Box$}
+\newenvironment{partsolved}{
+    \printanswers
+    \bgroup
+}{
+    \noprintanswers
+    \egroup
+}
+
 %%%% Custom question command %%%%%
 \newcounter{preguntanum}
 \setcounter{preguntanum}{0}
