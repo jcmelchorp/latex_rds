@@ -59,7 +59,7 @@
 \RequirePackage{import}
 \RequirePackage{subfiles} % Best loaded last in the preamble
 % \usepackage[overload,debug]{exam-randomizechoices}
-
+\renewcommand{\arraystretch}{1.4}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
 %\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
@@ -68,7 +68,7 @@
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
-
+\newcommand\comillas[1]{``#1''}
 \newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
 \newcommand{\tf}[1][{}]{%
     \fillin[#1][1cm]%
@@ -190,7 +190,7 @@
 \firstpageheader{}{
 %\vspace{2.5cm}
 {\LARGE\color{colorrds}  Escuela Rafael D\'iaz Serd\'an}\LOGO\\
-{\bfseries\large\color{DarkOliveGreen}\thesubject} \quad {\large\color{Sepia}\thegrade \ (\thecycle)}\\
+{\bfseries\large\color{SubjectColor}\thesubject} \quad {\large\color{MainColor}\thegrade \ (\thecycle)}\\
 \textbf{\@title \ \theguide}\\
 \small \@author
 }{}
@@ -210,7 +210,7 @@
         }
     \end{minipage}\hfill
     \begin{minipage}{.32\textwidth}
-        \gradesbox{Calificaciones:}{
+        \gradesbox{Calificación:}{
             %\scriptsize
             \cellwidth{0.8em}
             \gradetablestretch{1.2}
