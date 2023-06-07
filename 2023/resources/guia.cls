@@ -392,10 +392,10 @@
 %%%% LINKS
 \RequirePackage{float}
 \RequirePackage{lipsum}
-\RequirePackage{bookmark}
+\RequirePackage{bookmark,booktabs}
 \RequirePackage{xstring,xparse}
 \RequirePackage{wrapfig}
-\RequirePackage{multicol,multirow,booktabs}
+\RequirePackage{multicol,multirow}
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
 \RequirePackage{mathtools}
