@@ -18,15 +18,24 @@
 \RequirePackage{enumitem} % customize enumerate and item
 \RequirePackage{mytcolorboxes}
 % \RequirePackage{myboxes}
-% \RequirePackage{bohr}
-% \RequirePackage{chemfig}
+\RequirePackage{bohr}
+\RequirePackage{chemfig}
+\RequirePackage[version=4]{mhchem}
+\RequirePackage{array}
+\RequirePackage{forest}
+
+\RequirePackage{physics}
+
+\tikzset{>=latex} % for LaTeX arrow head
+
 \@ifpackageloaded{lipsum}{}{\RequirePackage{lipsum}}
 \@ifpackageloaded{tikz}{}{\RequirePackage{tikz}}
+\RequirePackage{tkz-euclide}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=newest}
 \RequirePackage{lscape}
 \input{insbox}
-\usetikzlibrary{fit,shadows,shadows.blur,shapes,calc}
+\usetikzlibrary{fit,shadows,shadows.blur,shapes, calc, arrows}
 \RequirePackage{fontawesome5}
 \RequirePackage{bbold}% se usa como \bbfamily [outlined]
 \RequirePackage{comfortaa}% se usa en el nombre de la escuela \comfortaa [sand serif]
@@ -47,7 +56,7 @@
 \RequirePackage{anyfontsize}
 \newcommand{\HUGE}{\fontsize{50}{60}}
 \RequirePackage{graphicx}
-\graphicspath{{../images}} %Setting the graphicspath
+%\graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{xparse,xpatch}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \RequirePackage[font=normalsize]{caption}
