@@ -1,8 +1,12 @@
+\def\fileversion{1.0}
+\def\filedate{2023/06/05}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{evalua}[2023/01/20 Plantilla Guía RDS]
+\ProvidesClass{evalua}[2023/01/20 Plantilla Evaluación RDS]
 \LoadClass{exam}
+\DeclareOption{addpoints}{\addpoints}
+\DeclareOption{answers}{\printanswers}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{exam}}
-\ProcessOptions\relax
+\ProcessOptions\relax\ProcessOptions\relax
 
 %%%% Paquete colores %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{rdscolors}
@@ -49,8 +53,9 @@
 \RequirePackage[font=normalsize]{caption}
 \RequirePackage{capt-of}
 \RequirePackage{float}
+\RequirePackage{wrapfig}
 \RequirePackage{multicol}
-\RequirePackage{bookmark}
+\RequirePackage{bookmark,booktabs}
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
 \decimalpoint
@@ -83,22 +88,35 @@
 \renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
 
 \checkboxchar{$\Box$}
-\pointformat{\textcolor{DarkOliveGreen}{[\thepoints]}}
+\pointformat{\textcolor{SubjectColor}{[\thepoints]}}
 \pointpoints{punto}{puntos}
 
 %%%%%%%%%% Document Info %%%%%%%%%%%%%%%%%
 %%%% INPUTS
-\newcommand{\thesubject}{1}
-\newcommand{\materia}[1]{\renewcommand{\thesubject}{#1}}
-\newcommand{\thegrade}{1}
-\newcommand{\grado}[1]{\renewcommand{\thegrade}{#1}}
-\newcommand{\theguide}{1}
-\newcommand{\guide}[1]{\renewcommand{\theguide}{#1}}
-\newcommand{\thecycle}{1}
-\newcommand{\cicloescolar}[1]{\renewcommand{\thecycle}{#1}}
+\newcommand{\themateria}{1}
+\newcommand{\materia}[1]{\renewcommand{\themateria}{#1}}
+\newcommand{\thegrado}{1}
+\newcommand{\grado}[1]{\renewcommand{\thegrado}{#1}}
+\newcommand{\theguia}{1}
+\newcommand{\guia}[1]{\renewcommand{\theguia}{#1}}
+\newcommand{\thecicloescolar}{1}
+\newcommand{\cicloescolar}[1]{\renewcommand{\thecicloescolar}{#1}}
+\newcommand{\theunidad}{1}
+\newcommand{\unidad}[1]{\renewcommand{\theunidad}{#1}}
 \newcommand{\theaprendizajes}{1}
-\newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{#1}}
-
+\newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{
+        \begin{itemize}[leftmargin=*,label=\small\color{colorrds}\faIcon{user-graduate}]%
+            #1%
+        \end{itemize}%
+    }}
+\newcommand\thecontrol[1][yshift=-4cm,xshift=-0.55\textwidth]{%
+    \ifprintanswers%
+        {\begin{tikzpicture}[remember picture, overlay,shift=(current page.north east)]%
+            \node[#1]{\autocontrol{\color{red}\alterfont\shadowtext{Autocontrol}}};
+        \end{tikzpicture}}%
+    \else{}%
+    \fi%
+}
 \tikzset{
     instructionbox/.style={%dashed,
             draw=colorrds,fill=white, rectangle,
@@ -190,30 +208,40 @@
 \firstpageheader{}{
 %\vspace{2.5cm}
 {\LARGE\color{colorrds}  Escuela Rafael D\'iaz Serd\'an}\LOGO\\
-{\bfseries\large\color{SubjectColor}\thesubject} \quad {\large\color{MainColor}\thegrade \ (\thecycle)}\\
-\textbf{\@title \ \theguide}\\
+{\bfseries\large\color{SubjectColor}\themateria} \\
+{\large\color{MainColor}\thegrado \ (\thecicloescolar)}\\
+\textbf{\@title \ \theunidad}\\
 \small \@author
 }{}
 \firstpagefooter{}{
     \color{colorrds}\thepage \ de \numpages
 }{}
-\runningheader{\thesubject}{\@title \ \theguide}{\hfill\thegrade \ (\thecycle)}
+\runningheader{\color{SubjectColor}\themateria}{\@title \ \theunidad}{\hfill\color{MainColor}\thegrado \ (\thecicloescolar)}
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
-\makebox[\textwidth]{\bfseries \comfortaa  Nombre del alumno:\enspace\hrulefill}\\
+
+\makebox[0.73\linewidth]{\textbf{\comfortaa \color{Sepia} Nombre del alumno: } \DrawLine[9cm]}
+\makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}\\
+
+\instructionbox{Instrucciones:}{
+    Lee con atenci\'on cada pregunta y realiza lo que se te pide.
+    De ser necesario, desarrolla tus respuestas en el espacio
+    determinado para cada pregunta o
+    en una hoja en blanco por separado, anotando en ella tu nombre
+    completo, el n\'umero del problema y la soluci\'on propuesta.
+}
 
 \begin{minipage}{\textwidth}
-    \begin{minipage}{.6\textwidth}
-        \makebox[\textwidth]{\bfseries \comfortaa  Fecha de aplicación:\enspace\hrulefill}\\[1em]
+    \begin{minipage}[t][][b]{.6\textwidth}
         \objetivobox{Aprendizajes a evaluar:}{
             \theaprendizajes
         }
     \end{minipage}\hfill
-    \begin{minipage}{.32\textwidth}
+    \begin{minipage}[t][][b]{.32\textwidth}
         \gradesbox{Calificación:}{
             %\scriptsize
             \cellwidth{0.8em}
-            \gradetablestretch{1.2}
+            \gradetablestretch{1.3}
             \hqword{Pregunta}
             \hpgword{P\'gina}
             \hpword{Puntos}
@@ -233,14 +261,6 @@
         }
     \end{minipage}
 \end{minipage}
-
-\instructionbox{Instrucciones:}{
-    Lee con atenci\'on cada pregunta y realiza lo que se te pide.
-    De ser necesario, desarrolla tus respuestas en el espacio
-    determinado para cada pregunta o
-    en una hoja en blanco por separado, anotando en ella tu nombre
-    completo, el n\'umero del problema y la soluci\'on propuesta.
-}
 % \begin{minipage}[t][][t]{0.3\textwidth}
 
 % \end{minipage}
