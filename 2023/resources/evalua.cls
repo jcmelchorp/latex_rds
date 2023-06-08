@@ -44,6 +44,11 @@
 %% remove option to get oldstyle figures as default
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
+\newcommand*\alterfont{\fontfamily{lmtt}\selectfont}%% se usa en la palabra guia \alterfont [typewriting]
+\RequirePackage{shadowtext}
+\shadowoffsetx{0.75pt}
+\shadowoffsety{0.5pt}
+\shadowrgb{0.3, 0.3, 0.3}
 \RequirePackage[
     letterpaper,
     includehead,
@@ -121,7 +126,7 @@
 \newcommand\thecontrol[1][yshift=-4cm,xshift=-0.55\textwidth]{%
     \ifprintanswers%
         {\begin{tikzpicture}[remember picture, overlay,shift=(current page.north east)]%
-            \node[#1]{\autocontrol{\color{red}\alterfont\shadowtext{Autocontrol}}};
+            \node[#1]{\autocontrol{\color{red}\alterfont\shadowtext{Soluciones propuestas}}};
         \end{tikzpicture}}%
     \else{}%
     \fi%
@@ -215,17 +220,21 @@
 \pagestyle{headandfoot}
 \extraheadheight[2cm]{0.5cm}
 \firstpageheader{}{
-%\vspace{2.5cm}
 {\LARGE\color{colorrds}  Escuela Rafael D\'iaz Serd\'an}\LOGO\\
 {\bfseries\large\color{SubjectColor}\themateria} \\
 {\large\color{MainColor}\thegrado \ (\thecicloescolar)}\\
 \textbf{\@title \ \theunidad}\\
 \small \@author
+\thecontrol[yshift=-4cm,xshift=-0.6\textwidth,scale=1.5]
 }{}
 \firstpagefooter{}{
     \color{colorrds}\thepage \ de \numpages
 }{}
-\runningheader{\color{SubjectColor}\themateria}{\@title \ \theunidad}{\hfill\color{MainColor}\thegrado \ (\thecicloescolar)}
+\ifprintanswers
+    \runningheader{\color{SubjectColor}\themateria}{\@title \ \theunidad {\thecontrol[yshift=-1.7cm,xshift=-0.9\textwidth]}}{\hfill\color{MainColor}\thegrado \ (\thecicloescolar)}
+\else
+    \runningheader{\color{SubjectColor}\themateria}{\@title \ \theunidad }{\hfill\color{MainColor}\thegrado \ (\thecicloescolar)}
+\fi
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
 
