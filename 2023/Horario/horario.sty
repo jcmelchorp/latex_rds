@@ -5,7 +5,7 @@
 %% The original source files were:
 %%
 %% schedule.dtx  (with options: `package')
-%% 
+%%
 %% This is a generated file.
 %% 
 %% Copyright (c) Ethan Deneault <edeneault@ut.edu>, 2019
@@ -27,22 +27,25 @@
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesPackage{horario}[2019/7/31 v1.20 horario package]
 \RequirePackage{calc}
+\RequirePackage{colortbl}
 \RequirePackage{xcolor}
-\definecolor{dark}{gray}{.75}
+\definecolor{dark}{gray}{.25}
+\arrayrulecolor{blue}
+
 \def\@sunday{Su}
-\def\@Sunday{Sunday}
+\def\@Domingo{Domingo}
 \def\@monday{M}
 \def\@Lunes{Lunes}
 \def\@tuesday{T}
 \def\@Martes{Martes}
 \def\@wednesday{W}
-\def\@Miercoles{Miércoles}
+\def\@Miercoles{Miercoles}
 \def\@thursday{Th}
 \def\@Jueves{Jueves}
 \def\@friday{F}
 \def\@Viernes{Viernes}
 \def\@saturday{Sa}
-\def\@Saturday{Saturday}
+\def\@Sabado{Sabado}
 \newlength{\cell@height}
 \setlength{\cell@height}{1in}
 \newlength{\cell@width}
@@ -58,7 +61,7 @@
 \newlength{\@temp@length}
 \newlength{\@@temp@length}
 \newlength{\line@thickness} % The thickness of the lines in the drawing
-\setlength{\line@thickness}{.4pt}
+\setlength{\line@thickness}{.1pt}
 \newlength{\adjusted@cell@width}
 \newlength{\adjusted@cell@height}
 
@@ -94,13 +97,13 @@
 \newcounter{label@sep}  % distance from label to gride
 \setcounter{label@sep}{5} %initialized to 5 picture units
 
-\newcounter{x@Sunday}
+\newcounter{x@Domingo}
 \newcounter{x@Lunes}
 \newcounter{x@Martes}
 \newcounter{x@Miercoles}
 \newcounter{x@Jueves}
 \newcounter{x@Viernes}
-\newcounter{x@Saturday}
+\newcounter{x@Sabado}
 
 \newsavebox{\temp@box}
 \newif\ifweekends
@@ -143,7 +146,7 @@
    \setcounter{dp@hlines}{\value{number@of@cells}*(60/\value{pu@subticks}) + 1}}
 
 \def\draw@grid{%\calculate@grid@dimensions
-   \linethickness{.2pt}%
+   \linethickness{.1pt}%
    \multiput(0,0)(0,\value{pu@subticks}){\value{dp@hlines}}{\line(1,0){\value{grid@width}}}%
    \thicklines
    \multiput(0,0)(0,60){\value{dp@hcell@lines}}{\line(1,0){\value{grid@width}}}
@@ -154,18 +157,18 @@
    \setlength{\adjusted@cell@width}{\cell@width - 1\line@thickness}
    \setlength{\adjusted@cell@height}{\cell@height - 1\line@thickness}}
 
-\def\@Su@week{{Sunday} {Lunes} {Martes} {Miercoles} {Jueves} {Viernes} {Saturday}}
-\def\@M@week{{Lunes} {Martes} {Miercoles} {Jueves} {Viernes} {Saturday} {Sunday}}
-\def\@T@week{{Martes} {Miercoles} {Jueves} {Viernes} {Saturday} {Sunday} {Lunes}}
-\def\@W@week{{Miercoles} {Jueves} {Viernes} {Saturday} {Sunday} {Lunes} {Martes}}
-\def\@Th@week{{Jueves} {Viernes} {Saturday} {Sunday} {Lunes} {Martes} {Miercoles}}
-\def\@F@week{{Viernes} {Saturday} {Sunday} {Lunes} {Martes} {Miercoles} {Jueves}}
-\def\@Sa@week{{Saturday} {Sunday} {Lunes} {Martes} {Miercoles} {Jueves} {Viernes}}
+\def\@Su@week{{Domingo} {Lunes} {Martes} {Miércoles} {Jueves} {Viernes} {Sabado}}
+\def\@M@week{{Lunes} {Martes} {Miercoles} {Jueves} {Viernes} {Sabado} {Domingo}}
+\def\@T@week{{Martes} {Miercoles} {Jueves} {Viernes} {Sabado} {Domingo} {Lunes}}
+\def\@W@week{{Miercoles} {Jueves} {Viernes} {Sabado} {Domingo} {Lunes} {Martes}}
+\def\@Th@week{{Jueves} {Viernes} {Sabado} {Domingo} {Lunes} {Martes} {Miercoles}}
+\def\@F@week{{Viernes} {Sabado} {Domingo} {Lunes} {Martes} {Miercoles} {Jueves}}
+\def\@Sa@week{{Sabado} {Domingo} {Lunes} {Martes} {Miercoles} {Jueves} {Viernes}}
 
 \def\BeginOn#1{\def\start@day{#1}}
 
 \def\add@labels{%
-   \ifx\start@day\@Sunday \expandafter\do@days\@Su@week \relax
+   \ifx\start@day\@Domingo \expandafter\do@days\@Su@week \relax
    \else\ifx\start@day\@Lunes \expandafter\do@days\@M@week \relax
       \else\ifx\start@day\@Martes \expandafter\do@days\@T@week \relax
          \else\ifx\start@day\@Miercoles \expandafter\do@days\@W@week \relax
@@ -187,7 +190,7 @@
          \iftwelve
             \setcounter{@tempd}{\value{@tempc}+12}%
             \put(\value{x@coord},\value{y@coord}){%
-               \makebox(0,0)[r]{\the@tempd:00~midnight~~}}% Midnight Hack
+               \makebox(0,0)[r]{\the@tempd:00~am~~}}% Midnight Hack
          \else
             \setcounter{@tempd}{\value{@tempc}}%
             \put(\value{x@coord},\value{y@coord}){%
@@ -197,7 +200,7 @@
             \iftwelve
                \setcounter{@tempd}{\value{@tempc}-12}%
                \put(\value{x@coord},\value{y@coord}){%
-                  \makebox(0,0)[r]{\the@tempd:00~midnight~}}% Midnight Hack
+                  \makebox(0,0)[r]{\the@tempd:00~am~}}% Midnight Hack
             \else
                \setcounter{@tempd}{\value{@tempc}}%
                \put(\value{x@coord},\value{y@coord}){%
@@ -217,7 +220,7 @@
                   \iftwelve
                      \setcounter{@tempd}{\value{@tempc}}%
                      \put(\value{x@coord},\value{y@coord}){%
-                        \makebox(0,0)[r]{\the@tempd:00~noon~}}% Noontime Hack
+                        \makebox(0,0)[r]{\the@tempd:00~pm~}}% Noontime Hack
                   \else
                      \setcounter{@tempd}{\value{@tempc}}%
                      \put(\value{x@coord},\value{y@coord}){%
@@ -323,51 +326,51 @@
       \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\large #7}}\fi}
 
 \def\set@x@coords@for@days{%
-   \ifx\start@day\@Sunday%
+   \ifx\start@day\@Domingo%
       \@i=0\relax%
-      \@tfor \@temp := {Sunday} {Lunes} {Martes} {Miercoles} {Jueves} {Viernes} {Saturday} \do%
+      \@tfor \@temp := {Domingo} {Lunes} {Martes} {Miercoles} {Jueves} {Viernes} {Sabado} \do%
       {\setcounter{x@\@temp}{\@i*\value{pu@cell@width}}%
          \advance\@i by 1}
       \def\skipday@i{F}
       \def\skipday@ii{Sa}\fi
    \ifx\start@day\@Lunes
       \@i=0\relax%
-      \@tfor \@temp := {Lunes} {Martes} {Miercoles} {Jueves} {Viernes} {Saturday} {Sunday} \do%
+      \@tfor \@temp := {Lunes} {Martes} {Miercoles} {Jueves} {Viernes} {Sabado} {Domingo} \do%
       {\setcounter{x@\@temp}{\@i*\value{pu@cell@width}}%
          \advance\@i by 1}
       \def\skipday@i{Sa}
       \def\skipday@ii{Su}\fi
    \ifx\start@day\@Martes
       \@i=0\relax%
-      \@tfor \@temp := {Martes} {Miercoles} {Jueves} {Viernes} {Saturday} {Sunday} {Lunes} \do%
+      \@tfor \@temp := {Martes} {Miercoles} {Jueves} {Viernes} {Sabado} {Domingo} {Lunes} \do%
       {\setcounter{x@\@temp}{\@i*\value{pu@cell@width}}%
          \advance\@i by 1}
       \def\skipday@i{Su}
       \def\skipday@ii{M}\fi
    \ifx\start@day\@Miercoles
       \@i=0\relax%
-      \@tfor \@temp := {Miercoles} {Jueves} {Viernes} {Saturday} {Sunday} {Lunes} {Martes} \do%
+      \@tfor \@temp := {Miercoles} {Jueves} {Viernes} {Sabado} {Domingo} {Lunes} {Martes} \do%
       {\setcounter{x@\@temp}{\@i*\value{pu@cell@width}}%
          \advance\@i by 1}
       \def\skipday@i{M}
       \def\skipday@ii{T}\fi
    \ifx\start@day\@Jueves
       \@i=0\relax%
-      \@tfor \@temp := {Jueves} {Viernes} {Saturday} {Sunday} {Lunes} {Martes} {Miercoles} \do%
+      \@tfor \@temp := {Jueves} {Viernes} {Sabado} {Domingo} {Lunes} {Martes} {Miercoles} \do%
       {\setcounter{x@\@temp}{\@i*\value{pu@cell@width}}%
          \advance\@i by 1}
       \def\skipday@i{T}
       \def\skipday@ii{W}\fi
    \ifx\start@day\@Viernes
       \@i=0\relax%
-      \@tfor \@temp := {Viernes} {Saturday} {Sunday} {Lunes} {Martes} {Miercoles} {Jueves} \do%
+      \@tfor \@temp := {Viernes} {Sabado} {Domingo} {Lunes} {Martes} {Miercoles} {Jueves} \do%
       {\setcounter{x@\@temp}{\@i*\value{pu@cell@width}}%
          \advance\@i by 1}
       \def\skipday@i{W}
       \def\skipday@ii{Th}\fi
-   \ifx\start@day\@Saturday
+   \ifx\start@day\@Sabado
       \@i=0\relax%
-      \@tfor \@temp := {Saturday} {Sunday} {Lunes} {Martes} {Miercoles} {Jueves} {Viernes} \do%
+      \@tfor \@temp := {Sabado} {Domingo} {Lunes} {Martes} {Miercoles} {Jueves} {Viernes} \do%
       {\setcounter{x@\@temp}{\@i*\value{pu@cell@width}}%
          \advance\@i by 1}
       \def\skipday@i{Th}
@@ -402,13 +405,13 @@
    \else \let\@next=\set@x@coords\fi\@next#1}
 
 \def\set@x@coords#1,{\def\the@day{#1}%
-   \ifx\the@day\@sunday\setcounter{xcoords}{\value{x@Sunday}}%
+   \ifx\the@day\@sunday\setcounter{xcoords}{\value{x@Domingo}}%
    \else\ifx\the@day\@monday\setcounter{xcoords}{\value{x@Lunes}}%
       \else\ifx\the@day\@tuesday\setcounter{xcoords}{\value{x@Martes}}%
          \else\ifx\the@day\@wednesday\setcounter{xcoords}{\value{x@Miercoles}}%
             \else\ifx\the@day\@thursday\setcounter{xcoords}{\value{x@Jueves}}%
                \else\ifx\the@day\@friday\setcounter{xcoords}{\value{x@Viernes}}%
-                  \else\setcounter{xcoords}{\value{x@Saturday}}%
+                  \else\setcounter{xcoords}{\value{x@Sabado}}%
                   \fi\fi\fi\fi\fi\fi%
    \edef\@@temp{\csname \appt@name @time\endcsname}%
    \expandafter\set@y@coords\@@temp\stop}
