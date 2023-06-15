@@ -1,21 +1,19 @@
 \def\fileversion{1.0}
-\def\filedate{2023/04/07}
+\def\filedate{2023/06/14}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{guia}[\filedate\space Plantilla Guía RDS Version \fileversion\space by J.Melchor]
+\ProvidesClass{repaso}[\filedate\space Plantilla Repaso RDS Version \fileversion\space by J.Melchor]
 \LoadClass{exam}
 \DeclareOption{addpoints}{\addpoints}
 \DeclareOption{answers}{\printanswers}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{exam}}
 \ProcessOptions\relax
 \RequirePackage{rdscolors}
-% \RequirePackage{lineno}
-% \pagewiselinenumbers
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
+\arrayrulecolor{rdsdark!50}
 \renewcommand{\baselinestretch}{1}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
-\setlength\linefillheight{.2in}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 \RequirePackage{enumitem}
 \RequirePackage[version=4]{mhchem}
@@ -24,18 +22,14 @@
 \renewcommand{\arraystretch}{1.4}
 \RequirePackage{forest}
 \RequirePackage{tikz}
+\RequirePackage[all]{xy}
 \RequirePackage{physics}
-\tikzset{>=latex} % for LaTeX arrow head
 % Styles
+\tikzset{>=latex} % for LaTeX arrow head
 \tikzset{axis/.style={black, thick,->}}
 \tikzset{vector/.style={>=stealth,->}}
 \tikzset{every text node part/.style={align=center}}
-\colorlet{myblue}{black!40!blue}
-\colorlet{myred}{black!40!red}
-\colorlet{vcol}{green!50!black}
-\colorlet{Ecol}{orange!90!black}
-\colorlet{EVcol}{orange!80!black!60}
-\colorlet{Bcol}{violet!90}
+\RequirePackage{pgfplots}
 \input{insbox}
 \usetikzlibrary{
     3d,
@@ -48,9 +42,9 @@
     decorations.markings,
     decorations.text,
     shapes,
+    shapes.symbols,
     shapes.geometric,
     shapes.multipart,
-    shapes.symbols,
     backgrounds,
     shadows,
     shadows.blur,
@@ -63,33 +57,23 @@
     calendar,
     plotmarks,
     spy,
-    tikzmark
-}
+    tikzmark}
+
 \RequirePackage{addfont}
 \RequirePackage{fetamont}
 \RequirePackage{bbold}% se usa como \bbfamily [outlined]
 \RequirePackage{comfortaa}% se usa en el nombre de la escuela \comfortaa [sand serif]
-\RequirePackage{foekfont}% se usa en el numero de guia \foekfamily [handwriting]
+\RequirePackage{foekfont}% se usa en el numero de repaso \foekfamily [handwriting]
 %\RequirePackage[rf]{electrum} %% lf option gives lining figures as default; 
 %% remove option to get oldstyle figures as default
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
-\newcommand*\alterfont{\fontfamily{lmtt}\selectfont}%% se usa en la palabra guia \alterfont [typewriting]
+\newcommand*\alterfont{\fontfamily{lmtt}\selectfont}%% se usa en la palabra repaso \alterfont [typewriting]
 \RequirePackage{fontawesome5}
 \RequirePackage{shadowtext}
 \shadowoffsetx{0.75pt}
 \shadowoffsety{0.5pt}
 \shadowrgb{0.3, 0.3, 0.3}
-% \input Acorn.fd
-% \newcommand*\initfamily{\usefont{U}{Acorn}{xl}{n}}
-%\addfont{OT1}{cmgray}{\cmgray}
-%\input GotIn.fd
-%\newcommand*\initfamily{\usefont{U}{GotIn}{xl}{n}}
-% \input Carrickc.fd
-% \newcommand*\initfamily{\usefont{U}{Carrickc}{m}{n}}
-% \input Elzevier.fd
-% \newcommand*\initfamily{\usefont{U}{Elzevier}{xl}{n}}
-%\def\tfont{\usefont{T1}{fve}{m}{n}\selectfont}
 \RequirePackage[
     % showframe=true,
     letterpaper,
@@ -108,13 +92,11 @@
 \graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{calc}
 \RequirePackage{xparse,xpatch}
-\RequirePackage{setspace}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
-        \node[shape=circle, draw, minimum size=1.5em, inner sep=0pt, thick] (char) {#1};}}
+        \node[shape=circle, draw,  minimum size=1.2em, inner sep=0pt, thick] (char) {#1};}}
 \renewcommand\choicelabel{\circled{\thechoice}}
-%\patchcmd{\questions}{1.}{\thequestion.}{}{}% fix left margin
-%\patchcmd{\questions}{\question}{\begin{qbox}\question\end{qbox}}{}{}% fix left margin
+\setlength\linefillheight{.2in}
 \AtBeginEnvironment{solutionbox}{\vspace{-0.2\baselineskip}}
 \AtEndEnvironment{solutionbox}{\vspace{0.2\baselineskip}}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
@@ -308,7 +290,7 @@
                 max size={0.65\textwidth}{20pt}
             }{
                 \centering \bfseries \comfortaa
-                \color{white} \@title
+                \color{white} \@title \ \theunidad
             }%
         };
         \node[nombrebox] (box) {
@@ -325,7 +307,7 @@
         {
             \begin{minipage}{0.8cm}
                 \centering
-                {\fontsize{9}{1}\selectfont \color{Guia} \bfseries\comfortaa Guía}\\
+                {\fontsize{8}{1}\selectfont \color{Guia} \bfseries\comfortaa Unidad}\\
                 {\fontsize{22}{1}\selectfont \color{white} \bfseries \foekfamily \theguia}
             \end{minipage}
         };
