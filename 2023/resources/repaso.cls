@@ -238,7 +238,7 @@
             inner xsep=2pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
-    aprendizajebox/.style={anchor=north,xshift=-.96\textwidth-3pt,
+    aprendizajebox/.style={anchor=north,xshift=-.88\textwidth-3pt,
             yshift=-1.7cm,
             draw=colorrds, dashed,fill=white, rectangle,
             inner sep=10pt, style=rounded corners,
@@ -297,34 +297,22 @@
             \makebox[0.72\linewidth]{\textbf{\comfortaa \color{Sepia} Nombre del alumno: } \DrawLine[9.4cm]}
             \makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}
         };
-        %%%% BOLA
-        \node[anchor= west,yshift=6pt,xshift=-.3\textwidth ,circle,inner xsep=3pt,inner ysep=3pt,
-            blur shadow={
-                    shadow opacity=40,
-                    shadow yshift=-1mm,
-                },
-            fill=MainColor]
-        {
-            \begin{minipage}{0.8cm}
-                \centering
-                {\fontsize{8}{1}\selectfont \color{Guia} \bfseries\comfortaa Unidad}\\
-                {\fontsize{22}{1}\selectfont \color{white} \bfseries \foekfamily \theguia}
-            \end{minipage}
-        };
         %%%% APRENDIZAJES
-        \node[aprendizajebox] (box) {\adjustbox{minipage=0.45\textwidth}{\theaprendizajes}};
+        \node[aprendizajebox] (box) {\adjustbox{minipage=0.6\textwidth}{\theaprendizajes}};
         \node[aprendizajetitle,xshift=45pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes:};
         %%%% GRADESTABLE
         \node[gradetablebox] (box)
-        {\adjustbox{min size={0.05\textwidth}{10pt},max size={0.46\textwidth+3pt}{60pt}}{%
+        {%
+        \adjustbox{min size={0.05\textwidth}{10pt},max size={0.46\textwidth+3pt}{80pt}}{%
         \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Obtenidos}\vtword{Total}%
         \arrayrulecolor{colorrds!30}%
-        \ifnum\numquestions>10%
+        \ifnum\numquestions>15%
             {\multirowgradetable{2}[questions]}%
             \else%
-            {\gradetable[h][questions]}%
+            {\gradetable[v][questions]}%
         \fi%
-        }};
+        }
+        };
         \node[gradetableboxtitle,xshift=-110pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación:};
     \end{tikzpicture}%
     \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
