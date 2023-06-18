@@ -359,8 +359,7 @@
     \runningheadrule
 }
 %%%% CAPTIONS
-\RequirePackage{caption,capt-of}
-\RequirePackage{subcaption}
+\RequirePackage{caption,subcaption,capt-of}
 %%%% LINKS
 \RequirePackage{float}
 \RequirePackage{lipsum}
