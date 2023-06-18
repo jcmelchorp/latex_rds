@@ -220,10 +220,10 @@
             #1%
         \end{itemize}%
     }}
-\newcommand\thecontrol[1][yshift=-4cm,xshift=-0.55\textwidth]{%
+\newcommand\thecontrol[1][]{%
     \ifprintanswers%
         {\begin{tikzpicture}[remember picture, overlay,shift=(current page.north east)]%
-            \node[#1]{\autocontrol{\color{red}\alterfont\shadowtext{Autocontrol}}};
+            \node[#1]{\autocontrol{\color{red}\alterfont\shadowtext{Soluciones propuestas}}};
         \end{tikzpicture}}%
     \else{}%
     \fi%
@@ -270,7 +270,7 @@
             rounded corners=5pt] (0,0)
         rectangle
         (\textwidth-1pt,3.1cm);
-        \node[xshift=-.915\textwidth , yshift=23pt] { \adjustbox{minipage=0.25\textwidth}{\fontsize{5}{1}\selectfont\sffamily \bfseries \color{black!60} Última revisión del documento: \today} };
+        \node[xshift=-.93\textwidth , yshift=23pt] { \adjustbox{minipage=0.25\textwidth}{\fontsize{5}{1}\selectfont\sffamily \bfseries \color{black!60} Última revisión del documento: \today} };
         %%%% TITULO
         \node[yshift=5pt,xshift=-.68\textwidth,
             rectangle,
@@ -319,17 +319,17 @@
         %%%% LOGO
         \node[yshift=-3.5cm,xshift=-2.5cm]{\LOGO};
         %%%% SCHOOL TITLE
-        \node[anchor=west, rectangle,yshift=-3.5cm,xshift=4cm,
-        rounded corners=2pt,inner xsep=20pt,inner ysep=0pt]
+        \node[anchor=west, rectangle,yshift=-3.2cm,xshift=4cm,
+            rounded corners=2pt,inner xsep=20pt,inner ysep=0pt]
         {
-        \parbox{0.8\textwidth}{%
-        {\textbf{\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an}}\\[1ex]
-        {\fontsize{16}{20}\selectfont {\color{SubjectColor}\themateria}  \hfill {\color{MainColor}\thegrado} }\\
-        {\@author  \hfill Unidad \theunidad \hspace{2.5em} \thecicloescolar}\\
-        }%
+            \begin{minipage}{0.8\textwidth}
+                \hspace{-0.4em}{\textbf{\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an}}\\[0.5em]
+                {\fontsize{16}{20}\selectfont {\color{SubjectColor}\themateria}  \hfill {\color{MainColor}\thegrado} }\\
+                {\@author  \hfill Unidad \theunidad \hspace{2.4em} \thecicloescolar}
+            \end{minipage}
         };
     \end{tikzpicture}%
-    \thecontrol[yshift=-4cm,xshift=-0.55\textwidth,scale=1.5]
+    \thecontrol[yshift=-4cm,xshift=-0.5\textwidth,scale=1.5]
 }
 \newenvironment{mybox}[3][]{%
     \begin{tikzpicture}[#1]%
@@ -351,9 +351,9 @@
     \firstpageheader{}{}{}
     \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
     \ifprintanswers
-        \runningheader{{\color{SubjectColor}\themateria} }{Guía \theguia \quad {\thecontrol[yshift=-1.2cm,xshift=-0.48\textwidth]}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
+        \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad \quad {\thecontrol[yshift=-1.2cm,xshift=-0.40\textwidth,scale=0.75]}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
     \else
-        \runningheader{{\color{SubjectColor}\themateria} }{Guía \theguia }{\color{MainColor}\thegrado \ (\thecicloescolar)}
+        \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad }{\color{MainColor}\thegrado \ (\thecicloescolar)}
     \fi
     \runningfooter{}{\color{colorrds}\thepage \ de \numpages}{}
     \runningheadrule

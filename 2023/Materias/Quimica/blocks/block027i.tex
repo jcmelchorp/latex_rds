@@ -7,12 +7,12 @@
         ]
 
         \node [block, ] (hc) {Dividir entre $6.023 \times 10^{23}$};
-        \node [block, fill=Green!65, below right= of hc] (serv) {Moles};
+        \node [block, fill=Green!45, below right= of hc] (serv) {Moles};
         \node [block, below left= of serv] (util) {Multiplicar por $6.023 \times 10^{23}$};
         \node [block, fill=orange!45, above left = of util] (fin) {Número de partículas};
         \node [block,  below right= of serv] (mass1) {Dividir entre $m_a$ o $m_m$};
         \node [block, above right= of serv] (mass2) {Multiplicar por $m_a$ o $m_m$};
-        \node [block,fill=colorrds!65, below right= of mass2] (mass) {Masa};
+        \node [block,fill=colorrds!45, below right= of mass2] (mass) {Masa};
 
         % Connections
         \path [line] (hc.east) to[out=0, in=90] (serv.north);
