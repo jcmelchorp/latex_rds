@@ -101,8 +101,8 @@
 \AtEndEnvironment{solutionbox}{\vspace{0.2\baselineskip}}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
-\AtBeginEnvironment{oneparchoices}{\vspace{0.5\baselineskip}}
-\AtEndEnvironment{oneparchoices}{\vspace{0.5\baselineskip}}
+\AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
 \AtBeginEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
