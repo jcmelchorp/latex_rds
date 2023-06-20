@@ -10,7 +10,6 @@
 \RequirePackage{rdscolors}
 \RequirePackage[spanish]{babel}
 \renewcommand\spanishtablename{Tabla}
-\arrayrulecolor{rdsdark!50}
 \renewcommand{\baselinestretch}{1}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}

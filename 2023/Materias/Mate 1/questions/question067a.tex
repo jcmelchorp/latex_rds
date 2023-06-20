@@ -1,69 +1,51 @@
-Coloca en la tabla el valor de la razón entre el precio y el peso de los siguientes productos de reciclaje.
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{l|c|c|c}
-        Producto           & Peso & Precio & Razón $\left(\frac{\text{precio}}{\text{peso}}\right)$ \\
-        \hline
-        Periódico          & 800  & 240    & \ifprintanswers
-            \textbf{0.3}
-        \else
-            \quad
-        \fi                                                                                         \\
-        \hline
-        Cartón             & 500  & 225    &
-        \ifprintanswers
-            \textbf{0.45}
-        \else
-            \quad
-        \fi                                                                                         \\
-        \hline
-        Bolsa de plástico & 50   & 50     &
-        \ifprintanswers
-            \textbf{1}
-        \else
-            \quad
-        \fi                                                                                         \\
-        \hline
-        Pet                & 600  & 660    &
-        \ifprintanswers
-            \textbf{1.1}
-        \else
-            \quad
-        \fi                                                                                         \\
-        \hline
-        Vidrio             & 1000 & 250    &
-        \ifprintanswers
-            \textbf{0.25}
-        \else
-            \quad
-        \fi                                                                                         \\
-        % \hline
-        % Plástico mixto     & 400  & 300    &
-        % \ifprintanswers
-        %     \textbf{0.75}
-        % \else
-        %     \quad
-        % \fi                                                                                         \\
-        % \hline
-        % Papel              & 2000 & 400    &
-        % \ifprintanswers
-        %     \textbf{0.2}
-        % \else
-        %     \quad
-        % \fi                                                                                         \\
-    \end{tabular}
-    \caption{Lista con los datos de precio y peso para los productos de reciclaje.}
-    \label{table:SINMAT1_U3_AC67_IMG1}
-\end{table}
-
 \begin{parts}
-    \part Escribe en el espacio en balnco la respuesta correcta.
-    \begin{subparts}
-        \subpart \include*{../parts/question068aa02}
-        \subpart \include*{../parts/question068a03}
-        \subpart \include*{../parts/question068aa04}
-        \subpart \include*{../parts/question068aa01}
-        \subpart \include*{../parts/question068aa05}
-    \end{subparts}
+    \part Coloca en la tabla el valor de la razón entre el precio y el peso de los siguientes productos de reciclaje.
+
+    \begin{table}[H]
+        \rowcolors{2}{colorrds!10}{lightgray!10}
+        \centering
+        \begin{tabular}{|r|c|c|c|}
+            \toprule
+            \rowcolor{colorrds!80}
+            \textbf{\color{white}Producto} & \textbf{\color{white}Peso} & \textbf{\color{white}Precio} & \textbf{\color{white}Razón $\left(\dfrac{\text{precio}}{\text{peso}}\right)$} \\\midrule
+            Periódico                      & 600                        & 480                          & \ifprintanswers
+                \textbf{\dfrac{480}{600}=0.8}            \else
+                \quad
+            \fi                                                                                                                                                                        \\\hline
+            Cartón                         & 1250                       & 750                          &
+            \ifprintanswers
+                \textbf{\dfrac{750}{1250}=0.6}            \else
+                \quad
+            \fi                                                                                                                                                                        \\\hline
+            Pet                            & 600                        & 264                          &
+            \ifprintanswers
+                \textbf{\dfrac{264}{600}=0.44}
+            \else
+                \quad
+            \fi                                                                                                                                                                        \\\hline
+            Vidrio                         & 200                        & 1250                         &
+            \ifprintanswers
+                \textbf{\dfrac{1250}{200}=6.25}
+            \else
+                \quad
+            \fi                                                                                                                                                                        \\\hline
+            Papel                          & 400                        & 2000                         &
+            \ifprintanswers
+                \textbf{\dfrac{2000}{400}=5}
+            \else
+                \quad
+            \fi                                                                                                                                                                        \\\cline{2-4}
+            \bottomrule
+        \end{tabular}
+        \caption{Lista con los datos de precio y peso para los productos de reciclaje.}
+        \label{table:SINMAT1_U3_AC67_IMG1}
+    \end{table}
+    
+
+
+    \part \include*{../parts/question068aa02}
+    \part \include*{../parts/question068a03}
+    \part \include*{../parts/question068aa04}
+    \part \include*{../parts/question068aa01}
+    \part \include*{../parts/question068aa05}
 \end{parts}

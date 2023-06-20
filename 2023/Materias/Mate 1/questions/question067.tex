@@ -1,6 +1,7 @@
 \begin{parts}
     \part Coloca el valor de la razón entre el precio y el peso de los siguientes productos de reciclaje.
 
+    \renewcommand{\arraystretch}{1.2}
     \begin{table}[H]
         \rowcolors{2}{colorrds!10}{lightgray!10}
         \centering
@@ -8,37 +9,33 @@
             \toprule
             \rowcolor{colorrds!80}
             \textbf{\color{white}Producto} & \textbf{\color{white}Peso} & \textbf{\color{white}Precio} & \textbf{\color{white}Razón $\left(\dfrac{\text{precio}}{\text{peso}}\right)$} \\\midrule
-            Periódico                      & 600                        & 480                          & \ifprintanswers
-                %\textbf{1.5}
-                0.8
+            Periódico                      & 600                        & 480                          & 
+            \ifprintanswers
+                \textbf{$\dfrac{480}{600}=0.8$}
             \else
                 \quad
             \fi                                                                                                                                                                        \\\hline
             Cartón                         & 1250                       & 750                          &
             \ifprintanswers
-                %\textbf{1.66}
-                0.6
+                \textbf{$\dfrac{750}{1250}=0.6$}
             \else
                 \quad
             \fi                                                                                                                                                                        \\\hline
-            Pet                            & 600                        & 264                          &
+            PET                            & 600                        & 264                          &
             \ifprintanswers
-                %\textbf{2.27}
-                0.44
+                \textbf{$\dfrac{264}{600}=0.44$}
             \else
                 \quad
             \fi                                                                                                                                                                        \\\hline
             Vidrio                         & 200                        & 1250                         &
             \ifprintanswers
-                6.25
-                %\textbf{0.16}
+                \textbf{$\dfrac{1250}{200}=6.25$}
             \else
                 \quad
             \fi                                                                                                                                                                        \\\hline
             Papel                          & 400                        & 2000                         &
             \ifprintanswers
-                %\textbf{0.20}
-                1.5
+                \textbf{$\dfrac{2000}{400}=5$}
             \else
                 \quad
             \fi                                                                                                                                                                        \\\cline{2-4}
@@ -46,16 +43,9 @@
         \end{tabular}
     \end{table}
 
-
-    \part Completa los siguientes enunciados con las cantidades faltantes.
-
-    \begin{multicols}{2}
-        % \begin{subparts}
-        %     \subpart \include*{../parts/question068aa01}
-        %     \subpart \include*{../parts/question068aa02}
-        %     \subpart \include*{../parts/question068aa03}
-        %     \subpart \include*{../parts/question068aa04}
-        %     \subpart \include*{../parts/question068aa05}
-        % \end{subparts}
-    \end{multicols}
+    \part \include*{../parts/question068aa01}
+    \part \include*{../parts/question068aa02}
+    \part \include*{../parts/question068aa03}
+    \part \include*{../parts/question068aa04}
+    \part \include*{../parts/question068aa05}
 \end{parts}
