@@ -350,7 +350,7 @@
     \firstpageheader{}{}{}
     \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
     \ifprintanswers
-        \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad \quad {\thecontrol[yshift=-1.2cm,xshift=-0.40\textwidth,scale=0.75]}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
+        \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad \quad {\thecontrol[yshift=-1.2cm,xshift=-0.42\textwidth,scale=0.75]}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
     \else
         \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad }{\color{MainColor}\thegrado \ (\thecicloescolar)}
     \fi
