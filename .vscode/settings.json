@@ -4,4 +4,6 @@
     "diffEditor.codeLens": false,
     "latex-workshop.chktex.enabled": true,
     "ltex.additionalRules.enablePickyRules": true,
+    "files.autoGuessEncoding": true,
+    "files.trimFinalNewlines": true,
 }
