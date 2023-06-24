@@ -39,13 +39,13 @@
 \def\@tuesday{T}
 \def\@Martes{Martes}
 \def\@wednesday{W}
-\def\@Miercoles{Miercoles}
+\def\@Miercoles{Miércoles}
 \def\@thursday{Th}
 \def\@Jueves{Jueves}
 \def\@friday{F}
 \def\@Viernes{Viernes}
 \def\@saturday{Sa}
-\def\@Sabado{Sabado}
+\def\@Sabado{Sábado}
 \newlength{\cell@height}
 \setlength{\cell@height}{1in}
 \newlength{\cell@width}
@@ -61,7 +61,7 @@
 \newlength{\@temp@length}
 \newlength{\@@temp@length}
 \newlength{\line@thickness} % The thickness of the lines in the drawing
-\setlength{\line@thickness}{.1pt}
+\setlength{\line@thickness}{.0pt}
 \newlength{\adjusted@cell@width}
 \newlength{\adjusted@cell@height}
 
@@ -157,13 +157,13 @@
    \setlength{\adjusted@cell@width}{\cell@width - 1\line@thickness}
    \setlength{\adjusted@cell@height}{\cell@height - 1\line@thickness}}
 
-\def\@Su@week{{Domingo} {Lunes} {Martes} {Miércoles} {Jueves} {Viernes} {Sabado}}
-\def\@M@week{{Lunes} {Martes} {Miercoles} {Jueves} {Viernes} {Sabado} {Domingo}}
-\def\@T@week{{Martes} {Miercoles} {Jueves} {Viernes} {Sabado} {Domingo} {Lunes}}
-\def\@W@week{{Miercoles} {Jueves} {Viernes} {Sabado} {Domingo} {Lunes} {Martes}}
-\def\@Th@week{{Jueves} {Viernes} {Sabado} {Domingo} {Lunes} {Martes} {Miercoles}}
-\def\@F@week{{Viernes} {Sabado} {Domingo} {Lunes} {Martes} {Miercoles} {Jueves}}
-\def\@Sa@week{{Sabado} {Domingo} {Lunes} {Martes} {Miercoles} {Jueves} {Viernes}}
+\def\@Su@week{{Domingo} {Lunes} {Martes} {Miércoles} {Jueves} {Viernes} {Sábado}}
+\def\@M@week{{Lunes} {Martes} {Miércoles} {Jueves} {Viernes} {Sábado} {Domingo}}
+\def\@T@week{{Martes} {Miércoles} {Jueves} {Viernes} {Sábado} {Domingo} {Lunes}}
+\def\@W@week{{Miércoles} {Jueves} {Viernes} {Sábado} {Domingo} {Lunes} {Martes}}
+\def\@Th@week{{Jueves} {Viernes} {Sábado} {Domingo} {Lunes} {Martes} {Miércoles}}
+\def\@F@week{{Viernes} {Sábado} {Domingo} {Lunes} {Martes} {Miércoles} {Jueves}}
+\def\@Sa@week{{Sábado} {Domingo} {Lunes} {Martes} {Miércoles} {Jueves} {Viernes}}
 
 \def\BeginOn#1{\def\start@day{#1}}
 
