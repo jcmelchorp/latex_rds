@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"latex-workshop.chktex.enabled": true
+		"workshop.linting.chktex.exec.path": true,
+		"workshop.linting.chktex.exec.path": true
 	}
 }
