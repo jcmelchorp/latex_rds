@@ -5,7 +5,6 @@
 		}
 	],
 	"settings": {
-		"workshop.linting.chktex.exec.path": true,
 		"workshop.linting.chktex.exec.path": true
 	}
 }
