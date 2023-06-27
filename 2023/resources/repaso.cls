@@ -134,7 +134,7 @@
 \newcounter{preguntanum}
 \setcounter{preguntanum}{0}
 \newcommand\questionboxed[2][0]{%
-    \question[#1]\begin{pregunta}[adjusted title={ Ejercicio \thequestion} \hfill {\color{colorrds}\totalpoints \ \points}]%
+    \question[#1]\begin{pregunta}[adjusted title={ Ejercicio \thequestion} \hfill {\color{colorrds}\rule[-1mm]{0.7cm}{0.2mm} de \totalpoints \ \points}]%
         #2%
     \end{pregunta}
 }%
@@ -198,8 +198,8 @@
 %%%% LOGO
 \def\LOGO{%
     \begin{picture}(0,0)\unitlength=1cm
-        \put (4.51,-1.52) {\includegraphics[width=2.4cm]{logo_shadow.png}}
-        \put (4.5,-1.5) {\includegraphics[width=2.4cm]{logo.png}}
+        \put (4.51,-1.02) {\includegraphics[width=2cm]{logo_shadow.png}}
+        \put (4.5,-1.) {\includegraphics[width=2cm]{logo.png}}
     \end{picture}
 }
 %%%% INPUTS
@@ -207,8 +207,8 @@
 \newcommand{\materia}[1]{\renewcommand{\themateria}{#1}}
 \newcommand{\thegrado}{1}
 \newcommand{\grado}[1]{\renewcommand{\thegrado}{#1}}
-\newcommand{\theguia}{1}
-\newcommand{\guia}[1]{\renewcommand{\theguia}{#1}}
+\newcommand{\thenivel}{1}
+\newcommand{\nivel}[1]{\renewcommand{\thenivel}{#1}}
 \newcommand{\thecicloescolar}{1}
 \newcommand{\cicloescolar}[1]{\renewcommand{\thecicloescolar}{#1}}
 \newcommand{\theunidad}{1}
@@ -237,9 +237,10 @@
             inner xsep=2pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
-    aprendizajebox/.style={anchor=north,xshift=-.88\textwidth-3pt,
-            yshift=-1.7cm,
-            draw=colorrds, dashed,fill=white, rectangle,
+    aprendizajebox/.style={anchor=north,xshift=-.89\textwidth-3pt,
+            yshift=-2cm,
+            draw=none,%=colorrds, dashed,
+            fill=white, rectangle,
             inner sep=10pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
@@ -250,8 +251,9 @@
             % drop shadow,
         },
     gradetablebox/.style={anchor=north east,xshift=-.21\textwidth-1pt,
-            yshift=-1.7cm,
-            draw=colorrds, dashed,fill=white, rectangle,
+            yshift=-2cm,
+            draw=none,%=colorrds, dashed,
+            fill=white, rectangle,
             inner sep=5pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
@@ -265,31 +267,30 @@
 %%%% COMMAND
 \newcommand{\INFO}{%
     \begin{tikzpicture}[remember picture]
-        \draw[colorrds,ultra thick,xshift=-1.2\textwidth-5pt ,yshift=0cm,
+        \draw[colorrds,ultra thin,xshift=-1.2\textwidth-5pt ,yshift=0cm,
             rounded corners=5pt] (0,0)
         rectangle
-        (\textwidth-1pt,3.1cm);
-        \node[xshift=-.93\textwidth , yshift=23pt] { \adjustbox{minipage=0.25\textwidth}{\fontsize{5}{1}\selectfont\sffamily \bfseries \color{black!60} Última revisión del documento: \today} };
+        (\textwidth-1pt,2.7cm);
+        \node[xshift=-.95\textwidth , yshift=20pt] { \adjustbox{minipage=0.25\textwidth}{\fontsize{5}{1}\selectfont\sffamily \bfseries \color{black!60} Última revisión del documento: \today} };
         %%%% TITULO
-        \node[yshift=5pt,xshift=-.68\textwidth,
+        \node[xshift=-.68\textwidth,
             rectangle,
-            rounded corners=2pt,inner xsep=20pt,inner ysep=10pt,
+            rounded corners=2pt,inner xsep=10pt,inner ysep=5pt,
             blur shadow={
                     shadow opacity=50,
                     shadow yshift=-1mm,
                     shadow blur steps=5,
                     shadow blur extra rounding=5pt
-                },
-            fill=colorrds]
+                }, fill=white]
         {
             \adjustbox{
                 stack,
-                color=white,
-                min size={0.2\textwidth}{8pt},
-                max size={0.65\textwidth}{20pt}
+                color=MainColor,
+                min size={0.4\textwidth}{15pt},
+                max size={0.65\textwidth}{15pt}
             }{
                 \centering \bfseries \comfortaa
-                \color{white} \@title \ \theunidad
+                \color{MainColor} \@title \ \theunidad
             }%
         };
         \node[nombrebox] (box) {
@@ -312,18 +313,18 @@
         \fi%
         }
         };
-        \node[gradetableboxtitle,xshift=-110pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación:};
+        \node[gradetableboxtitle,xshift=-150pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación:};
     \end{tikzpicture}%
     \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
         %%%% LOGO
         \node[yshift=-3.5cm,xshift=-2.5cm]{\LOGO};
         %%%% SCHOOL TITLE
-        \node[anchor=west, rectangle,yshift=-3.2cm,xshift=4cm,
+        \node[anchor=west, rectangle,yshift=-3cm,xshift=3.5cm,
             rounded corners=2pt,inner xsep=20pt,inner ysep=0pt]
         {
-            \begin{minipage}{0.8\textwidth}
-                \hspace{-0.4em}{\textbf{\color{colorrds}\fontsize{20}{20}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an}}\\[0.5em]
-                {\fontsize{16}{20}\selectfont {\color{SubjectColor}\themateria}  \hfill {\color{MainColor}\thegrado} }\\
+            \begin{minipage}{0.84\textwidth}
+                \hspace{-0.4em}{\textbf{\color{colorrds}\fontsize{18}{14}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an}}\\[0.5em]
+                {\fontsize{16}{20}\selectfont {\color{SubjectColor}\themateria}  \hfill {\color{MainColor}\thegrado$^\circ$ de \thenivel} }\\
                 {\@author  \hfill Unidad \theunidad \hspace{2.4em} \thecicloescolar}
             \end{minipage}
         };
@@ -350,9 +351,9 @@
     \firstpageheader{}{}{}
     \firstpagefooter{}{  \color{colorrds}\thepage \ de \numpages}{}
     \ifprintanswers
-        \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad \quad {\thecontrol[yshift=-1.2cm,xshift=-0.42\textwidth,scale=0.75]}}{\color{MainColor}\thegrado \ (\thecicloescolar)}
+        \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad \quad {\thecontrol[yshift=-1.2cm,xshift=-0.42\textwidth,scale=0.75]}}{\color{MainColor}\thegrado$^\circ$ de \thenivel \ (\thecicloescolar)}
     \else
-        \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad }{\color{MainColor}\thegrado \ (\thecicloescolar)}
+        \runningheader{{\color{SubjectColor}\themateria} }{Unidad \ \theunidad }{\color{MainColor}\thegrado$^\circ$ de \thenivel \ (\thecicloescolar)}
     \fi
     \runningfooter{}{\color{colorrds}\thepage \ de \numpages}{}
     \runningheadrule
