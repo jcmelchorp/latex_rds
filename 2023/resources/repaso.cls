@@ -23,6 +23,7 @@
 \RequirePackage{tikz}
 \RequirePackage[all]{xy}
 \RequirePackage{physics}
+\RequirePackage{tkz-euclide}
 % Styles
 \tikzset{>=latex} % for LaTeX arrow head
 \tikzset{axis/.style={black, thick,->}}
@@ -341,7 +342,7 @@
             \end{minipage}
         };
     \end{tikzpicture}%
-    \thecontrol[yshift=-3.5cm,xshift=-0.5\textwidth,scale=1.5]
+    \thecontrol[yshift=-3.8cm,xshift=-0.5\textwidth,scale=1.5]
 }
 \newenvironment{mybox}[3][]{%
     \begin{tikzpicture}[#1]%

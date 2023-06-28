@@ -1,8 +1,9 @@
-\documentclass[12pt]{repaso}
-\grado{1$^\circ$ de Secundaria}
+\documentclass[12pt,addpoints,answers]{repaso}
+\grado{1}
+\nivel{Secundaria}
 \cicloescolar{2022-2023}
-\materia{Matemáticas 1}
-\unidad{3}
+\materia{Matemáticas}
+\unidad{2}
 \title{Repaso para el examen de la Unidad}
 \aprendizajes{
         \item Determina y usa la jerarquía de operaciones y los paréntesis en
@@ -19,40 +20,27 @@
               triángulos y cuadriláteros desarrollando
               y aplicando fórmulas.
 }
-\author{J. C. Melchor Pinto}
+\author{Melchor Pinto, J.C.}
 \begin{document}
 \INFO%
 \begin{multicols}{2}
-    \include*{../blocks/block001}
-    \include*{../blocks/block003}
-    \include*{../blocks/block000}
-    \include*{../blocks/block002}
+      \include*{../blocks/block001}
+      \include*{../blocks/block003}
+      \include*{../blocks/block000}
+      \include*{../blocks/block002}
 \end{multicols}
-
 \begin{questions}
-    {\printanswers
-        \include*{../questions/question001}
-        \include*{../questions/question004}
-        \newpage
-        \include*{../questions/question002}
-    }
-    \newpage
-    \include*{../questions/question003}
-    \newpage
-    \include*{../questions/question005}
-    \include*{../questions/question006}
-    \newpage
-    \include*{../questions/question007}
-    \include*{../questions/question007}
-    \include*{../questions/question008}
-    \include*{../questions/question009}
-    \newpage
-    \include*{../questions/question011}
-    \include*{../questions/question010}
-    % \newpage
+      \questionboxed[10]{\include*{../questions/question003}}
+      \ejemplosboxed[\include*{../questions/question001}]
+      \ejemplosboxed[\include*{../questions/question004}]
+      \ejemplosboxed[\include*{../questions/question002}]
+      \questionboxed[10]{\include*{../questions/question005}}
+      \questionboxed[10]{\include*{../questions/question006}}
+      \questionboxed[10]{\include*{../questions/question007}}
+      \questionboxed[10]{\include*{../questions/question007}}
+      \questionboxed[10]{\include*{../questions/question008}}
+      \questionboxed[10]{\include*{../questions/question009}}
+      \questionboxed[10]{\include*{../questions/question011}}
+      \questionboxed[10]{\include*{../questions/question010}}
 \end{questions}
-
-%\vfill
-%\puntuacion
-
 \end{document}

@@ -1,6 +1,6 @@
 Coloca el valor de la razón entre el precio y el peso de los siguientes productos de reciclaje.
-
 \renewcommand{\arraystretch}{1}
+
 \begin{table}[H]
     \rowcolors{2}{colorrds!10}{lightgray!10}
     \centering
@@ -9,32 +9,33 @@ Coloca el valor de la razón entre el precio y el peso de los siguientes product
         \rowcolor{colorrds!80}
         \textbf{\color{white}Producto} & \textbf{\color{white}Peso} & \textbf{\color{white}Precio} & \textbf{\color{white}Razón $\left(\dfrac{\text{precio}}{\text{peso}}\right)$} \\\midrule
         Periódico                      & 600                        & 480                          &
-        \ifprintanswers
+        \ifprintanswers%
             \textbf{$\frac{480}{600}=0.8$}
-        \else
-        \textbf{$\frac{480}{600}=0.8$}            \fi                                                                                                                              \\\hline
+        \else%
+            \textbf{$\frac{480}{600}=0.8$}
+        \fi                                                                                                                                                                        \\\hline
         Cartón                         & 1250                       & 750                          &
-        \ifprintanswers
+        \ifprintanswers%
             \textbf{$\frac{750}{1250}=0.6$}
-        \else
+        \else%
             \quad
         \fi                                                                                                                                                                        \\\hline
         PET                            & 600                        & 264                          &
-        \ifprintanswers
+        \ifprintanswers%
             \textbf{$\frac{264}{600}=0.44$}
-        \else
+        \else%
             \quad
         \fi                                                                                                                                                                        \\\hline
         Vidrio                         & 200                        & 1250                         &
-        \ifprintanswers
+        \ifprintanswers%
             \textbf{$\frac{1250}{200}=6.25$}
-        \else
+        \else%
             \quad
         \fi                                                                                                                                                                        \\\hline
         Papel                          & 400                        & 2000                         &
-        \ifprintanswers
+        \ifprintanswers%
             \textbf{$\frac{2000}{400}=5$}
-        \else
+        \else%
             \quad
         \fi                                                                                                                                                                        \\\cline{2-4}
         \bottomrule
@@ -98,7 +99,4 @@ Coloca el valor de la razón entre el precio y el peso de los siguientes product
             $\$250$         & $\Rightarrow$ & $x=\dfrac{\$250  \times 200 \text{ kg}}{\$1250}=40 \text{ kg}$ \\
         \end{tabular}
     \end{solutionbox}
-
-
-
 \end{parts}
