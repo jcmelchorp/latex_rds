@@ -122,6 +122,8 @@
     \fillin[#1][1cm]%
 }
 \checkboxchar{$\Box$}
+\CorrectChoiceEmphasis{\color{red!50!gray}\bf}
+\checkedchar{$\surd$}
 \newenvironment{partsolved}{
     \printanswers
     \bgroup
@@ -267,11 +269,11 @@
 %%%% COMMAND
 \newcommand{\INFO}{%
     \begin{tikzpicture}[remember picture]
-        \draw[colorrds,ultra thin,xshift=-1.2\textwidth-5pt ,yshift=0cm,
+        \draw[colorrds,thin,xshift=-1.2\textwidth-5pt ,yshift=0cm,
             rounded corners=5pt] (0,0)
         rectangle
         (\textwidth-1pt,2.7cm);
-        \node[xshift=-.95\textwidth , yshift=20pt] { \adjustbox{minipage=0.25\textwidth}{\fontsize{5}{1}\selectfont\sffamily \bfseries \color{black!60} Última revisión del documento: \today} };
+        \node[xshift=-.95\textwidth , yshift=20pt] { \adjustbox{minipage=0.30\textwidth}{\fontsize{5}{1}\selectfont \comfortaa  \color{black!60} Última revisión del documento: \today} };
         %%%% TITULO
         \node[xshift=-.68\textwidth,
             rectangle,
@@ -286,10 +288,10 @@
             \adjustbox{
                 stack,
                 color=MainColor,
-                min size={0.4\textwidth}{15pt},
-                max size={0.65\textwidth}{15pt}
+                min size={0.4\textwidth}{10pt},
+                max size={0.65\textwidth}{20pt}
             }{
-                \centering \bfseries \comfortaa
+                \centering \comfortaa %\sffamily \bfseries 
                 \color{MainColor} \@title \ \theunidad
             }%
         };
@@ -299,21 +301,31 @@
         };
         %%%% APRENDIZAJES
         \node[aprendizajebox] (box) {\adjustbox{minipage=0.6\textwidth}{\theaprendizajes}};
-        \node[aprendizajetitle,xshift=45pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes:};
+        \node[aprendizajetitle,xshift=45pt,yshift=4pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes:};
         %%%% GRADESTABLE
         \node[gradetablebox] (box)
         {%
-        \adjustbox{min size={0.05\textwidth}{10pt},max size={0.46\textwidth+3pt}{80pt}}{%
+        \adjustbox{
+        min size={0.05\textwidth}{50pt},
+        max size={0.36\textwidth+3pt}{80pt}
+        }{%
         \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Obtenidos}\vtword{Total}%
         \arrayrulecolor{colorrds!30}%
-        \ifnum\numquestions>15%
-            {\multirowgradetable{2}[questions]}%
-            \else%
-            {\gradetable[v][questions]}%
+
+
+        \ifnum\numquestions>7%
+            {
+            \ifnum\numquestions>15%
+                {\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+                \else%
+                {\multirowgradetable{2}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+            \fi%
+            }%
+            \else{\gradetable[h][questions]}%
         \fi%
-        }
+        }%
         };
-        \node[gradetableboxtitle,xshift=-150pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación:};
+        \node[gradetableboxtitle,xshift=-112pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación:};
     \end{tikzpicture}%
     \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
         %%%% LOGO
@@ -329,7 +341,7 @@
             \end{minipage}
         };
     \end{tikzpicture}%
-    \thecontrol[yshift=-4cm,xshift=-0.5\textwidth,scale=1.5]
+    \thecontrol[yshift=-3.5cm,xshift=-0.5\textwidth,scale=1.5]
 }
 \newenvironment{mybox}[3][]{%
     \begin{tikzpicture}[#1]%
