@@ -5,6 +5,8 @@
 		}
 	],
 	"settings": {
-		"workshop.linting.chktex.exec.path": true
+		"latex-workshop.linting.chktex.enabled": true,
+		"latex-workshop.check.duplicatedLabels.enabled": true,
+		"latex-workshop.linting.run": "onSave"
 	}
 }
