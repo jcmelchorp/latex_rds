@@ -23,7 +23,7 @@
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
 \RequirePackage{forest}
-
+% \RequirePackage{ragged2e}
 \RequirePackage{physics}
 
 \tikzset{>=latex} % for LaTeX arrow head
@@ -50,6 +50,7 @@
 \shadowoffsety{0.5pt}
 \shadowrgb{0.3, 0.3, 0.3}
 \RequirePackage[
+    % showframe,
     letterpaper,
     includehead,
     left=20mm,
@@ -67,6 +68,7 @@
 \RequirePackage[font=normalsize]{caption}
 \RequirePackage{capt-of}
 \RequirePackage{float}
+\RequirePackage{adjustbox}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol}
 \RequirePackage{bookmark,booktabs}
@@ -123,6 +125,37 @@
             #1%
         \end{itemize}%
     }}
+\newcommand{\thereglas}{1}
+\newcommand{\reglas}[1]{\renewcommand{\thereglas}{%
+        \small Al comenzar este examen, aceptas las siguientes reglas:
+        \begin{itemize}[topsep=1pt, partopsep=0pt,itemsep=1pt,parsep=0pt]%
+            #1
+        \end{itemize}
+        Si no consideraste alguna de estas reglas,
+        comunícalo a tu profesor.
+    }}
+\reglas{
+    \item[\small\color{red!70!black}\faIcon{toilet-paper-slash}] No se
+    permite salir del sal\'on
+    de
+    clases.
+    \item[\small\color{red!70!black}\faIcon{handshake-slash}] No se permite
+    intercambiar
+    ningun tipo de material.
+    \item[\small\color{red!70!black}\faIcon{mobile-alt}] No se permite el uso
+    de
+    celular
+    o cualquier otro dispositivo.
+    \item[\small\color{red!70!black}\faIcon{paper-plane}] No se permite el uso
+    de apuntes,
+    libros, notas o formularios.
+    \item[\small\color{red!70!black}\faIcon{eye-slash}] No se permite mirar el
+    examen
+    de
+    otros alumnos.
+    \item[\small\color{red!70!black}\faIcon{people-arrows}] No se permite la
+    comunicaci\'on oral o escrita con otros alumnos.
+}
 \newcommand\thecontrol[1][yshift=-4cm,xshift=-0.55\textwidth]{%
     \ifprintanswers%
         {\begin{tikzpicture}[remember picture, overlay,shift=(current page.north east)]%
@@ -134,7 +167,7 @@
 \tikzset{
     instructionbox/.style={%dashed,
             draw=colorrds,fill=white, rectangle,
-            inner sep=12pt, style=rounded corners,
+            inner sep=10pt, style=rounded corners,
             %drop shadow={fill=black, opacity=1}
             blur shadow={
                     shadow opacity=40,
@@ -148,6 +181,7 @@
             fill=white,
             style=rounded corners},
     gradesbox/.style={
+            xshift=-.2\textwidth,
             draw=none,
             fill=white,
             rectangle,
@@ -161,7 +195,7 @@
             anchor=north,
             xshift=-.86\textwidth,
             draw=colorrds, dashed,fill=white, rectangle,
-            inner sep=15pt, style=rounded corners,
+            inner sep=10pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
     objetivotitle/.style={ fill=white,
@@ -169,39 +203,43 @@
             % drop shadow,
         }
 }
-\newcommand{\objetivobox}[3][fill=white]{
+\newcommand{\objetivobox}[3][fill=white]{%
     \begin{tikzpicture}
         \node[objetivobox,#1] (box)
-        {
-            \begin{minipage}[t][][t]{\linewidth}
+        {%
+            \adjustbox{minipage=.95\linewidth}{%
                 \normalfont #3
-            \end{minipage}
+            }%
         };
-        \node[objetivotitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
-    \end{tikzpicture}
+        \node[objetivotitle,right=10pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
+    \end{tikzpicture}%
 }
-\newcommand{\gradesbox}[3][fill=white]{
-    \begin{tikzpicture}
-        \node[gradesbox, #1] (box) {
-            \begin{minipage}[t][][t]{0.35\textwidth}
+\newcommand{\gradesbox}[3][fill=white]{%
+    \begin{tikzpicture}%
+        \node[gradesbox, #1] (box) {%
+            % \begin{minipage}[t][][t]{0.25\textwidth}
+            \adjustbox{%
+                % minipage=.9\linewidth
+                % min size={0.1\textwidth}{150pt},
+                max size={.98\linewidth}{250pt}
+            }{%
                 \normalfont #3
-            \end{minipage}
+            }%
+            % \end{minipage}
         };
-        \node[gradestitle,  right=10pt,yshift=1mm] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
-    \end{tikzpicture}
+        \node[gradestitle, right=30pt,yshift=1mm] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
+    \end{tikzpicture}%
 }
-\newcommand{\instructionbox}[3][fill=white]{
-    \begin{tikzpicture}
+\newcommand{\instructionbox}[3][fill=white]{%
+    \begin{tikzpicture}%
         \node [instructionbox, #1] (box)
-        {
-            \vspace{-0.5cm}
-            \begin{minipage}{.95\linewidth}
-                \setlength{\parindent}{2mm} % Indentar.
+        {%
+            \adjustbox{minipage=.98\linewidth}{%
                 \normalfont #3
-            \end{minipage}
+            }%
         };
         \node[instructiontitle, right=10pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
-    \end{tikzpicture}
+    \end{tikzpicture}%
 }
 
 %%%% LOGO
@@ -212,9 +250,9 @@
 }
 \makeatletter
 \AtBeginDocument{
+\setlength{\columnsep}{10pt}
 \setlength\linefillheight{.2in}
 % \setlength{\columnseprule}{5pt}
-\setlength{\columnsep}{20pt}
 \setlength{\parindent}{0pt}
 \addpoints
 \pagestyle{headandfoot}
@@ -224,95 +262,68 @@
 {\bfseries\large\color{SubjectColor}\themateria} \\
 {\large\color{MainColor}\thegrado \ (\thecicloescolar)}\\
 \textbf{\@title \ \theunidad}\\
-\small \@author
+{\small \@author}
 \thecontrol[yshift=-4cm,xshift=-0.6\textwidth,scale=1.5]
 }{}
 \firstpagefooter{}{
     \color{colorrds}\thepage \ de \numpages
 }{}
 \ifprintanswers
-    \runningheader{\color{SubjectColor}\themateria}{\@title \ \theunidad {\thecontrol[yshift=-1.7cm,xshift=-0.9\textwidth]}}{\hfill\color{MainColor}\thegrado \ (\thecicloescolar)}
+    \runningheader{\color{SubjectColor}\themateria}{\@title \ \theunidad {\thecontrol[yshift=-1.7cm,xshift=-0.8\textwidth]}}{\hfill\color{MainColor}\thegrado \ (\thecicloescolar)}
 \else
     \runningheader{\color{SubjectColor}\themateria}{\@title \ \theunidad }{\hfill\color{MainColor}\thegrado \ (\thecicloescolar)}
 \fi
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
+\vspace{1cm}
+\begin{minipage}{\textwidth}
+    \makebox[0.73\linewidth]{\textbf{\comfortaa \color{Sepia} Nombre del alumno: } \DrawLine[9cm]}
+    \makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}
+\end{minipage}
 
-\makebox[0.73\linewidth]{\textbf{\comfortaa \color{Sepia} Nombre del alumno: } \DrawLine[9cm]}
-\makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}\\
-
-\instructionbox{Instrucciones:}{
-    Lee con atenci\'on cada pregunta y realiza lo que se te pide.
-    De ser necesario, desarrolla tus respuestas en el espacio
-    determinado para cada pregunta o
-    en una hoja en blanco por separado, anotando en ella tu nombre
-    completo, el n\'umero del problema y la soluci\'on propuesta.
-}
+\vspace{0.2cm}
 
 \begin{minipage}{\textwidth}
-    \begin{minipage}[t][][b]{.6\textwidth}
-        \objetivobox{Aprendizajes a evaluar:}{
-            \theaprendizajes
-        }
-    \end{minipage}\hfill
-    \begin{minipage}[t][][b]{.32\textwidth}
-        \gradesbox{Calificación:}{
-            %\scriptsize
-            \cellwidth{0.8em}
-            \gradetablestretch{1.3}
-            \hqword{Pregunta}
-            \hpgword{P\'gina}
-            \hpword{Puntos}
-            \hsword{Obtenidos}
-            \htword{Total}
-            \vqword{Pregunta}
-            \vpgword{P\'gina}
-            \vpword{Puntos}
-            \vsword{Obtenidos}
-            \vtword{Total}
-            % \ifnum\numquestions > 9
-            % \multirowgradetable{2}[questions]
-            % \else
-            % \gradetable[h][questions]
-            % \fi
-            \gradetable[v][questions]
+    \hspace{0.1cm}\begin{minipage}[t][][b]{.34\textwidth}
+        \instructionbox{Instrucciones:}{%\large%
+            Lee con atenci\'on cada pregunta y realiza lo que se te pide.
+            Desarrolla tus respuestas en el espacio determinado para cada solución.
+            De ser necesario, utiliza una hoja en blanco por separado, anotando en ella tu nombre
+            completo, el n\'umero del problema y la soluci\'on propuesta.
+        }%
+    \end{minipage}\hspace{0.9cm}%
+    \begin{minipage}[t][][b]{.56\textwidth}
+        \instructionbox{Reglas:}{%
+            \thereglas
         }
     \end{minipage}
 \end{minipage}
-% \begin{minipage}[t][][t]{0.3\textwidth}
 
-% \end{minipage}
+\vspace{0.2cm}
 
-
-% \end{minipage}
-
-
-% \tikzset{
-%     gradesbox/.style={anchor=north,xshift=-.25\textwidth,
-%             yshift=-1.2cm,
-%             draw=none, fill=white, rectangle,
-%             inner xsep=1pt,inner ysep=2pt, style=rounded corners,
-%             %drop  shadow={fill=lightgray, opacity=0.7}
-%         },
-%     gradestitle/.style={
-%             fill=white,
-%             style=rounded corners,
-%         }
-% }
-% \begin{tikzpicture}[remember picture, overlay]
-%     %%%% GRADESTABLE
-%     \node[gradesbox] (box)
-%     {
-%         %\begin{minipage}[t][][t]{.42\textwidth}
-%             %\begin{minipage}[t][][b]{.22\textwidth}
-%             % \makebox[.22\textwidth]{
-
-%         \end{minipage}%
-%     };
-%     \node[gradestitle,right=5pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Puntuación };
-%     \node[draw=none, fit=(box)] {};
-% \end{tikzpicture}
-% \end{center}
-
+\begin{minipage}{\textwidth}
+    \begin{minipage}[t][][b]{.68\textwidth}
+        \objetivobox{Aprendizajes a evaluar:}{%\small%
+            \theaprendizajes
+        }
+    \end{minipage}\hfill%
+    \begin{minipage}[t][][b]{.3\textwidth}
+        \gradesbox{Calificación:}{%
+            \cellwidth{0.8em}%
+            \gradetablestretch{1.2}%
+            \hqword{Pregunta}%
+            \hpgword{P\'gina}%
+            \hpword{Puntos}%
+            \hsword{Obtenidos}%
+            \htword{Total}%
+            \vqword{Pregunta}%
+            \vpgword{P\'gina}%
+            \vpword{Puntos}%
+            \vsword{Obtenidos}%
+            \vtword{Total}%
+            \gradetable[v][questions]%
+        }%
+    \end{minipage}
+\end{minipage}%
 }
 \makeatother

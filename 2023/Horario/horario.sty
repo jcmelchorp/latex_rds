@@ -28,7 +28,9 @@
 \ProvidesPackage{horario}[2019/7/31 v1.20 horario package]
 \RequirePackage{calc}
 \RequirePackage{colortbl}
-\RequirePackage{xcolor}
+\RequirePackage[usenames,dvipsnames]{xcolor}
+\definecolor{colorrds}{HTML}{0060A0}
+
 \definecolor{dark}{gray}{.25}
 \arrayrulecolor{blue}
 
@@ -145,12 +147,11 @@
    \setcounter{dp@vlines}{\value{number@of@days}+1}
    \setcounter{dp@hlines}{\value{number@of@cells}*(60/\value{pu@subticks}) + 1}}
 
-\def\draw@grid{%\calculate@grid@dimensions
-   \linethickness{.1pt}%
-   \multiput(0,0)(0,\value{pu@subticks}){\value{dp@hlines}}{\line(1,0){\value{grid@width}}}%
-   \thicklines
+\def\draw@grid{\calculate@grid@dimensions
+   \linethickness{0.0pt}%
+   \multiput(0,0)(0,\value{pu@subticks}){\value{dp@hlines}}{\color{lightgray}\line(1,0){\value{grid@width}}}%
    \multiput(0,0)(0,60){\value{dp@hcell@lines}}{\line(1,0){\value{grid@width}}}
-   \thinlines}
+}
 
 \def\LineThickness#1{\setlength{\line@thickness}{#1}%
    \linethickness{\line@thickness}%
@@ -168,8 +169,8 @@
 \def\BeginOn#1{\def\start@day{#1}}
 
 \def\add@labels{%
-   \ifx\start@day\@Domingo \expandafter\do@days\@Su@week \relax
-   \else\ifx\start@day\@Lunes \expandafter\do@days\@M@week \relax
+   \ifx\start@day\@Domingo \expandafter\do@days\@Su@week  \relax
+   \else\ifx\start@day\@Lunes \expandafter\do@days\@M@week  \relax
       \else\ifx\start@day\@Martes \expandafter\do@days\@T@week \relax
          \else\ifx\start@day\@Miercoles \expandafter\do@days\@W@week \relax
             \else\ifx\start@day\@Jueves \expandafter\do@days\@Th@week \relax
@@ -254,49 +255,50 @@
                   \iftwelve
                      \setcounter{@tempd}{\value{@tempc}+12}%
                      \put(\value{x@coord},\value{y@coord}){%
-                        \makebox(0,0)[r]{\tiny\the@tempd:\the@minutes~am~}}% Hack to get 12:xx AM right.
+                        \makebox(0,0)[r]{\color{dark}\tiny\the@tempd:\the@minutes~am~}}% Hack to get 12:xx AM right.
                   \else
                      \setcounter{@tempd}{\value{@tempc}}%
                      \put(\value{x@coord},\value{y@coord}){%
-                        \makebox(0,0)[r]{\tiny\the@tempd:\the@minutes~~}}
+                        \makebox(0,0)[r]{\color{dark}\tiny\the@tempd:\the@minutes~~}}
                   \fi
                \else\ifnum\value{@tempc}=24%
                      \iftwelve
                         \setcounter{@tempd}{\value{@tempc}-12}%
                         \put(\value{x@coord},\value{y@coord}){%
-                           \makebox(0,0)[r]{\tiny\the@tempd:\the@minutes~am~}}% Hack to get 12:xx AM right.
+                           \makebox(0,0)[r]{\color{dark}\tiny\the@tempd:\the@minutes~am~}}% Hack to get 12:xx AM right.
                      \else
                         \setcounter{@tempd}{\value{@tempc}}%
                         \put(\value{x@coord},\value{y@coord}){%
-                           \makebox(0,0)[r]{\tiny\the@tempd:\the@minutes~~}}
+                           \makebox(0,0)[r]{\color{dark}\tiny\the@minutes~min~}}
                      \fi
                   \else\ifnum\value{@tempc}>12%
                         \iftwelve
                            \setcounter{@tempd}{\value{@tempc}-12}%
                            \put(\value{x@coord},\value{y@coord}){%
-                              \makebox(0,0)[r]{\tiny\the@tempd:\the@minutes~pm~}}% ...write the time (using pm)...
+                              \makebox(0,0)[r]{\color{dark}\tiny\the@minutes~min~}}% ...write the time (using pm)...
                         \else
                            \setcounter{@tempd}{\value{@tempc}}%
                            \put(\value{x@coord},\value{y@coord}){%
-                              \makebox(0,0)[r]{\tiny\the@tempd:\the@minutes~~}}
+                              % \makebox(0,0)[r]{\color{dark}\tiny\the@tempd:\the@minutes~~}}
+                              \makebox(0,0)[r]{\color{dark}\tiny\the@minutes~min~}}
                         \fi
                      \else\ifnum\value{@tempc}=12%
                            \iftwelve
                               \setcounter{@tempd}{\value{@tempc}}%
                               \put(\value{x@coord},\value{y@coord}){%
-                                 \makebox(0,0)[r]{\tiny\the@tempd:\the@minutes~pm~}}% Hack to get 12:xx PM right.
+                                 \makebox(0,0)[r]{\color{dark}\tiny\the@minutes~min~}}% Hack to get 12:xx PM right.
                            \else
                               \setcounter{@tempd}{\value{@tempc}}%
                               \put(\value{x@coord},\value{y@coord}){%
-                                 \makebox(0,0)[r]{\tiny\the@tempd:\the@minutes~~}}
+                                 \makebox(0,0)[r]{\color{dark}\tiny\the@minutes~min~}}
                            \fi
                         \else
                            \iftwelve
                               \put(\value{x@coord},\value{y@coord}){%
-                                 \makebox(0,0)[r]{\tiny\the@tempc:\the@minutes~am~}}% ...write the time (using am).
+                                 \makebox(0,0)[r]{\color{dark}\tiny\the@minutes~min~}}% ...write the time (using am).
                            \else
                               \put(\value{x@coord},\value{y@coord}){%
-                                 \makebox(0,0)[r]{\tiny\the@tempc:\the@minutes~~}}
+                                 \makebox(0,0)[r]{\color{dark}\tiny\the@minutes~min~}}
                            \fi
                         \fi%
                      \fi%
@@ -310,20 +312,20 @@
 \def\do@days#1#2#3#4#5#6#7{%
    \setcounter{x@coord}{1*\ratio{\value{pu@cell@width} pt}{2 pt}}%
    \setcounter{y@coord}{\value{grid@height}+\value{label@sep}}%
-   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\large #1}}%
+   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\Large #1}}%
    \setcounter{x@coord}{\value{x@coord}+\value{pu@cell@width}}%
-   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\large #2}}%
+   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\Large #2}}%
    \setcounter{x@coord}{\value{x@coord}+\value{pu@cell@width}}%
-   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\large #3}}%
+   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\Large #3}}%
    \setcounter{x@coord}{\value{x@coord}+\value{pu@cell@width}}%
-   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\large #4}}%
+   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\Large #4}}%
    \setcounter{x@coord}{\value{x@coord}+\value{pu@cell@width}}%
-   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\large #5}}%
+   \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\Large #5}}%
    \setcounter{x@coord}{\value{x@coord}+\value{pu@cell@width}}%
    \ifweekends
-      \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\large #6}}%
+      \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\Large #6}}%
       \setcounter{x@coord}{\value{x@coord}+\value{pu@cell@width}}%
-      \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\large #7}}\fi}
+      \put(\value{x@coord},\value{y@coord}){\makebox(0,0)[b]{\Large #7}}\fi}
 
 \def\set@x@coords@for@days{%
    \ifx\start@day\@Domingo%
@@ -449,11 +451,11 @@
       \ifx \the@day\skipday@ii \@includefalse \fi\fi % second condition for change
    \ifinrange \relax\else \@includefalse \fi %
    \if@include %
-      \put(\value{xcoords},\value{ycoords}){\colorbox{\appt@color}{\parbox[t]{\cell@width}{\ %
+      \put(\value{xcoords},\value{ycoords}){\fcolorbox{dark}{\appt@color}{\parbox[t]{\cell@width-0.5pt}{\ %
                \vspace{\box@depth}}}}
       \thinlines
-      \put(\value{xcoords},\value{ycoords}){\line(1,0){\value{pu@cell@width}}}
-      \put(\value{xcoords},\value{ycoords@bot}){\line(1,0){\value{pu@cell@width}}}
+      \put(0,\value{ycoords}){\color{dark}\line(1,0){\value{xcoords}}}%\dashline{\value{xcoords}}(0,\value{ycoords})(\value{xcoords},\value{ycoords})}
+      \put(0,\value{ycoords@bot}){\color{dark}\line(1,0){\value{xcoords}}}
       \put(\value{xcoords},\value{ycoords}){%
          \  \parbox[t]{\cell@width-8pt}{\mbox{}\\ \appt@textsize %
             \ifdim\box@depth>\baselineskip
@@ -486,7 +488,7 @@
 
 \newlength{\title@height}
 \newlength{\label@height}
-\settoheight{\label@height}{Miercoles}
+\settoheight{\label@height}{Miércoles}
 
 \newcounter{pu@label@width}
 \newlength{\center@hack}
@@ -517,7 +519,7 @@
       \fi
       \add@times
       \set@x@coords@for@days}
-      {\multiput(0,0)(\value{pu@cell@width},0){\value{dp@vlines}}{\line(0,1){\value{grid@height}}}
+      {%\multiput(0,\value{ycoords})(\value{xcoords},\value{pu@cell@height}){\value{dp@vlines}}{\line(0,1){\value{pu@cell@height}}}%
    \end{picture}\bigskip}
 
 \setlength{\fboxsep}{0in}

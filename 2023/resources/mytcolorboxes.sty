@@ -42,7 +42,7 @@
 }
 
 \newtcbox{\autocontrol}[1][]{%
-  boxsep=0mm,
+  boxsep=1mm,
   colback=white,
   colframe=red!70!black,
   frame style={opacity=0.5},
@@ -51,7 +51,7 @@
   tcbox raise base,
   shrink tight,
   rotate=3,
-  extrude by=2mm,
+  extrude by=1mm,
   enhanced,
   fuzzy shadow={0.15mm}{-0.25mm}{0mm}{0.1mm}{black},  #1
 }
@@ -92,7 +92,8 @@
   colframe=colorrds!25!white,
   coltitle=black!90!white,
   center title,  %size=small,
-  %after skip=0pt,
+  after skip=0pt,
+  before skip=0pt,
   adjusted title={#2},
   #1
 }
