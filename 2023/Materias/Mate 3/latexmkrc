@@ -1,1 +1,1 @@
-$ENV{'TEXINPUTS'}='../../../resources//:../base//:../base/pgf-periodictable//:' . $ENV{'TEXINPUTS'};
+$ENV{'TEXINPUTS'}='./../../resources//:./base//:./base/pgf-periodictable//:' . $ENV{'TEXINPUTS'};
