@@ -15,6 +15,10 @@
 \setlength{\parskip}{1em}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 \RequirePackage{enumitem}
+\RequirePackage{xfrac}
+\RequirePackage{cancel}
+\RequirePackage{bohr}
+\RequirePackage{chemfig}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
@@ -30,6 +34,7 @@
 \tikzset{vector/.style={>=stealth,->}}
 \tikzset{every text node part/.style={align=center}}
 \RequirePackage{pgfplots}
+\RequirePackage{lscape}
 \input{insbox}
 \usetikzlibrary{
     3d,
