@@ -18,6 +18,8 @@
 \RequirePackage{enumitem} % customize enumerate and item
 \RequirePackage{mytcolorboxes}
 % \RequirePackage{myboxes}
+\RequirePackage{xfrac}
+\RequirePackage{cancel}
 \RequirePackage{bohr}
 \RequirePackage{chemfig}
 \RequirePackage[version=4]{mhchem}
@@ -103,7 +105,9 @@
 \renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
 \renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
 
-\checkboxchar{$\Box$}
+\checkboxchar{\faIcon[regular]{square}}
+\CorrectChoiceEmphasis{\color{red!50!gray}\bf}
+\checkedchar{\faIcon[regular]{check-square}}
 \pointformat{\textcolor{SubjectColor}{[\thepoints]}}
 \pointpoints{punto}{puntos}
 
@@ -128,33 +132,19 @@
 \newcommand{\thereglas}{1}
 \newcommand{\reglas}[1]{\renewcommand{\thereglas}{%
         \small Al comenzar este examen, aceptas las siguientes reglas:
-        \begin{itemize}[topsep=1pt, partopsep=0pt,itemsep=1pt,parsep=0pt]%
+        \begin{itemize}[topsep=1pt, partopsep=0pt,itemsep=1pt,parsep=0pt,label=\color{red!70!black}\faTimes]%
             #1
         \end{itemize}
         Si no consideraste alguna de estas reglas,
         comunícalo a tu profesor.
     }}
 \reglas{
-    \item[\small\color{red!70!black}\faIcon{toilet-paper-slash}] No se
-    permite salir del sal\'on
-    de
-    clases.
-    \item[\small\color{red!70!black}\faIcon{handshake-slash}] No se permite
-    intercambiar
-    ningun tipo de material.
-    \item[\small\color{red!70!black}\faIcon{mobile-alt}] No se permite el uso
-    de
-    celular
-    o cualquier otro dispositivo.
-    \item[\small\color{red!70!black}\faIcon{paper-plane}] No se permite el uso
-    de apuntes,
-    libros, notas o formularios.
-    \item[\small\color{red!70!black}\faIcon{eye-slash}] No se permite mirar el
-    examen
-    de
-    otros alumnos.
-    \item[\small\color{red!70!black}\faIcon{people-arrows}] No se permite la
-    comunicaci\'on oral o escrita con otros alumnos.
+    \item No se permite \textbf{salir} del sal\'on de clases. %\faToiletPaperSlash
+    \item No se permite \textbf{intercambiar o prestar} ningún tipo de material.
+    \item No se permite el uso de \textbf{celular} o cualquier \textbf{otro dispositivo}.
+    \item No se permite el uso de \textbf{apuntes}, \textbf{libros}, notas o formularios.
+    \item No se permite \textbf{mirar} el examen de otros alumnos.
+    \item No se permite la \textbf{comunicaci\'on} oral o escrita con otros alumnos.
 }
 \newcommand\thecontrol[1][yshift=-4cm,xshift=-0.55\textwidth]{%
     \ifprintanswers%
@@ -284,7 +274,7 @@
 \vspace{0.2cm}
 
 \begin{minipage}{\textwidth}
-    \hspace{0.1cm}\begin{minipage}[t][][b]{.34\textwidth}
+    \hspace{0.1cm}\begin{minipage}[t][][b]{.33\textwidth}
         \instructionbox{Instrucciones:}{%\large%
             Lee con atenci\'on cada pregunta y realiza lo que se te pide.
             Desarrolla tus respuestas en el espacio determinado para cada solución.
@@ -292,7 +282,7 @@
             completo, el n\'umero del problema y la soluci\'on propuesta.
         }%
     \end{minipage}\hspace{0.9cm}%
-    \begin{minipage}[t][][b]{.56\textwidth}
+    \begin{minipage}[t][][b]{.58\textwidth}
         \instructionbox{Reglas:}{%
             \thereglas
         }

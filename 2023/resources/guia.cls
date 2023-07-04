@@ -140,7 +140,9 @@
 \newcommand{\tf}[1][{}]{%
     \fillin[#1][1cm]%
 }
-\checkboxchar{$\Box$}
+\checkboxchar{\faIcon[regular]{square}}
+\CorrectChoiceEmphasis{\color{red!50!gray}\bf}
+\checkedchar{\faIcon[regular]{check-square}}
 \newenvironment{partsolved}{
     \printanswers
     \bgroup
