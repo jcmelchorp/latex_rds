@@ -67,8 +67,7 @@
 %\graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{xparse,xpatch}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
-\RequirePackage[font=normalsize]{caption}
-\RequirePackage{capt-of}
+\RequirePackage{caption,subcaption,capt-of}
 \RequirePackage{float}
 \RequirePackage{adjustbox}
 \RequirePackage{wrapfig}
@@ -88,7 +87,7 @@
 %\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
 %\AtEndEnvironment{oneparchoices}{\vspace{-0.8\baselineskip}}
 \AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
+\AtEndEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
 \newcommand\comillas[1]{``#1''}
