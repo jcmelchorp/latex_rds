@@ -1,12 +1,14 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".",
+			"name": "latex RDS",
 		}
 	],
 	"settings": {
 		"latex-workshop.linting.chktex.enabled": true,
 		"latex-workshop.check.duplicatedLabels.enabled": true,
+		"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/out",
 		"latex-workshop.latex.tools": [
 			{
 				"name": "latexmk",
