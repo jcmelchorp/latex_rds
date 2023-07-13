@@ -20,7 +20,7 @@
 					"%DOC%"
 				],
 				"env": {
-					"TEXINPUTS": "%DIR%/resources//:"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/resources//:"
 				}
 			},
 			{
