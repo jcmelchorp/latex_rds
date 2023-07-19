@@ -8,7 +8,11 @@
 	"settings": {
 		"latex-workshop.linting.chktex.enabled": true,
 		"latex-workshop.check.duplicatedLabels.enabled": true,
-		"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/out",
+		"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/2023/out",
+		"latex-workshop.latex.texDirs": [
+			"%WORKSPACE_FOLDER%/2023/resources/",
+			"%DIR%/base/"
+		],
 		"latex-workshop.latex.tools": [
 			{
 				"name": "latexmk",
@@ -22,7 +26,7 @@
 					"%DOC%"
 				],
 				"env": {
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/resources//:"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/"
 				}
 			},
 			{
@@ -68,7 +72,9 @@
 					"-file-line-error",
 					"%DOC%"
 				],
-				"env": {}
+				"env": {
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/"
+				}
 			},
 			{
 				"name": "bibtex",
