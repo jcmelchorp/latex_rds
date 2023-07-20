@@ -22,12 +22,13 @@
 					"-interaction=nonstopmode",
 					"-file-line-error",
 					"-pdf",
+					"--aux-directory=%OUTDIR%/.aux",
 					"-outdir=%OUTDIR%",
 					"%DOC%"
 				],
-				"env": {
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/"
-				}
+				// "env": {
+				// 	"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/"
+				// }
 			},
 			{
 				"name": "lualatexmk",

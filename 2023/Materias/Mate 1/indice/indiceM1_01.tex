@@ -1,0 +1,154 @@
+\documentclass[12pt]{book}
+\usepackage[undotted]{minitoc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shadows.blur}
+\usepackage{titlesec}
+
+\addtocontents{toc}{\setcounter{tocdepth}{4}}
+\setcounter{minitocdepth}{3}
+\nomtcrule         % removes rules = horizontal lines from minitocs
+\nomtcpagenumbers  % remove page numbers from minitocs
+
+\newcommand{\mychapter}[1]{
+    \thispagestyle{empty}
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+    \mtcaddchapter{}
+    \mtcsettitle{minitoc}{}
+    {\Large \scshape En esta unidad estudiaremos \dots}
+    \minitoc
+    \newpage
+    \thispagestyle{empty} \mbox{}
+    \newpage
+}
+\addto\captionsspanish{%
+    \renewcommand{\chaptername}{Unidad}
+    \renewcommand{\contentsname}{Contenido} 
+}
+%\usepackage{remreset}
+% \makeatletter
+% \@removefromreset{section}{chapter}
+% \makeatother
+% \renewcommand{\thechapter}{\arabic{chapter}}
+% \newcommand*\chapterlabel{}
+% \titleformat{\chapter}
+
+\begin{document}
+\dominitoc[n]%% Crea minitoc
+\title{Matemáticas 1}
+\author{Melchor Pinto, JC}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\begin{mainmatter}
+    \mychapter{Unidad 1}
+
+    \section{Fracciones y decimales}
+    \subsection{Equivalencias de fracciones y decimales}
+    \subsection{Decimales peri\'odicos}
+    \subsubsection{Redondeo y truncamiento}
+
+    \section{Recta Num\'erica, Densidad y Orden}
+    \subsection{Fracciones y decimales en la Recta Num\'erica}
+    \subsection{Densidad de fracciones y decimales}
+    \subsection{Orden de fracciones y decimales}
+    \subsubsection{Orden en los n\'umeros fraccionarios}
+    \subsubsection{Orden en los n\'umeros decimales}
+
+    \section{Aritmética de números enteros (positivos y negativos)}
+
+    \subsection{Adición de n\'umeros enteros}
+    \subsubsection{Suma de numeros enteros}
+    \subsubsection{Conmutatividad aditiva}
+    \subsubsection{Resta de n\'umeros enteros}
+    \subsection{Producto de n\'umeros enteros}
+    \subsubsection{Multiplicación de números enteros}
+    \subsubsection{Conmutatividad multiplicativa}
+    \subsubsection{División de números enteros}
+
+    \section{Aritmética de números racionales (fraccionarios y decimales)}
+
+    \subsection{Adición de n\'umeros fraccionarios y decimales}
+    \subsubsection{Suma de numeros fraccionarios y decimales}
+    \subsubsection{Resta de n\'umeros fraccionarios y decimales}
+    \subsection{Producto de n\'umeros fraccionarios y decimales}
+    \subsubsection{Multiplicación de números fraccionarios y decimales}
+    \subsubsection{División de números fraccionarios y decimales}
+
+    \section{Jerarqu\'ia de operaciones y signos de agrupaci\'on}
+    \subsection{Jerarqu\'ia de operaciones}
+    \subsection{Signos de agrupaci\'on}
+
+    \mychapter{Unidad 2}
+
+    \section{Perímetros y áreas de figuras geométricas}
+    \subsection{Perímetro de triángulos y cuadriláteros}
+    \subsection{Áreas de triángulos y cuadriláteros}
+
+    \section{\'Angulos, tri\'angulos y cuadril\'ateros}
+    \subsection{\'Angulos y rectas paralelas}
+    \subsection{Suma de los \'angulos interiores de un tri\'angulo y de un cuadril\'atero}
+    \subsubsection{\'Angulos de un tri\'angulo}
+    \subsubsection{\'Angulos de un cuadril\'atero}
+
+    \section{Medidas de tendencia central}
+    \subsection{Media aritm\'etica o promedio}
+    \subsubsection{El rango}
+    \subsection{La mediana}
+    \subsection{La moda}
+
+    \section{El azar y la probabilidad frecuencial}
+    \subsection{Tipos, recolección y organización de datos}
+    \subsection{Experimentos aleatorios y deterministas}
+    \subsection{Espacio muestral de un experimento aleatorio}
+    \subsection{Cálculo de la probabilidad frecuencial}
+
+    \mychapter{Unidad 3}
+
+    \section{Proporcionalidad}
+    \subsection{Valor faltante}
+    \subsection{Razón unitaria}
+    \subsection{Porcentajes}
+    \subsubsection{Cálculo del porcentaje}
+    \subsubsection{Problemas con porcentajes}
+    \subsection{Gráficas circulares}
+    \subsubsection{Recolecta y registra datos}
+    \subsubsection{Registra datos en gráficas circulares}
+    \subsubsection{Leer e interpretar datos en gráficas circulares}
+
+    \section{Situaciones de variación proporcional}
+    \subsection{Comparación de situaciones de variación proporcional con tablas}
+    \subsection{Comparación de situaciones de variación proporcional con gráficas}
+    \subsection{Comparación de situaciones de variación proporcional con expresiones algebraicas}
+
+    \section{Pendiente de una recta y razón de cambio}
+    \subsection{Variación proporcional y pendiente}
+    \subsection{Razón de cambio y variación}
+    \subsection{Efectos en la recta al cambiar la pendiente}
+    \subsection{Efectos en la recta al cambiar la ordenada al origen}
+
+    \section{Análisis y comparación de situaciones de variación lineal}
+    \subsection{Efectos de la recta al cambiar la ordenada al origen}
+    \subsection{Situaciones de variación lineal asociadas a la física, la biología y la economía}
+
+
+    \section{Fundamentos de álgebra}
+    \subsection{Lenguaje algebraico y expresiones algebraicas}
+    \subsection{Aritmética de expresiones algebraicas}
+    \subsubsection{Adición de expresiones algebraicas}
+    \subsubsection{Producto y cociente de números racionales con expresiones algebraicas}
+    \subsection{Ecuaciones}
+    \subsubsection{Solución de ecuaciones}
+
+
+
+
+
+\end{mainmatter}
+\end{document}
