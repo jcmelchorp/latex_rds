@@ -16,7 +16,7 @@
 		"latex-workshop.latex.texDirs": [
 			"%WORKSPACE_FOLDER%/2023/resources",
 			"%DIR%/base",
-			"%DIR%/base/pgf-periodictable"
+			"%DIR%/base/pgf-periodictable",
 		],
 		"latex-workshop.latex.tools": [
 			{
@@ -32,7 +32,7 @@
 					"%DOC%"
 				],
 				"env": {
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/:"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:%DIR%/base/:"
 				}
 			},
 			{
