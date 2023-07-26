@@ -51,7 +51,7 @@
 \RequirePackage{my-subsection}
 
 \RequirePackage{graphicx}
-\graphicspath{{../images}} %Setting the graphicspath
+\graphicspath{ ../images/ }
 
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}

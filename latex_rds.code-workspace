@@ -6,12 +6,17 @@
 		}
 	],
 	"settings": {
+		"editor.formatOnSave": true,
+		"editor.formatOnType": false,
 		"latex-workshop.linting.chktex.enabled": true,
+		"latex-workshop.showContextMenu": true,
+		"latex-workshop.latex.autoBuild.run": "onSave",
 		"latex-workshop.check.duplicatedLabels.enabled": true,
 		"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/2023/out",
 		"latex-workshop.latex.texDirs": [
-			"%WORKSPACE_FOLDER%/2023/resources/",
-			"%DIR%/base/"
+			"%WORKSPACE_FOLDER%/2023/resources",
+			"%DIR%/base",
+			"%DIR%/base/pgf-periodictable"
 		],
 		"latex-workshop.latex.tools": [
 			{
@@ -22,13 +27,13 @@
 					"-interaction=nonstopmode",
 					"-file-line-error",
 					"-pdf",
-					"--aux-directory=%OUTDIR%/.aux",
+					"-aux-directory=%OUTDIR%",
 					"-outdir=%OUTDIR%",
 					"%DOC%"
 				],
-				// "env": {
-				// 	"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/"
-				// }
+				"env": {
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/:"
+				}
 			},
 			{
 				"name": "lualatexmk",
@@ -71,10 +76,13 @@
 					"-synctex=1",
 					"-interaction=nonstopmode",
 					"-file-line-error",
+					"-pdf",
+					"--aux-directory=%OUTDIR%",
+					"-outdir=%OUTDIR%",
 					"%DOC%"
 				],
 				"env": {
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/:"
 				}
 			},
 			{
@@ -141,7 +149,19 @@
 					"%DOC%.tex"
 				],
 				"env": {}
+			},
+			{
+				"name": "texify",
+				"command": "texify",
+				"args": [
+					"--synctex",
+					"--pdf",
+					"--tex-option=\"-interaction=nonstopmode\"",
+					"--tex-option=\"-file-line-error\"",
+					"%DOC_EXT%"
+				],
+				"env": {}
 			}
-		]
+		],
 	}
 }
