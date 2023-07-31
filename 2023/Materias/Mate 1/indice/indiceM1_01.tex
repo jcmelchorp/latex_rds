@@ -12,7 +12,6 @@
 \usepackage{titlesec}
 \usepackage{pgfkeys}
 \usepackage{multicol}
-
 %% equivalencias al entero
 \newcounter{CountOfSections}
 \newcommand{\fracgraph}[3][1]{%
@@ -35,7 +34,22 @@
     }%
 \end{tikzpicture}
 }
-%%%
+%%%%
+%% Recta numérica (intervalo)
+\newcommand{\rectnuminterval}[5][]{
+        \begin{tikzpicture}[#1]
+            \draw[very thick] (#2,0.5) -- (#3,0.5);
+            \path [draw=black, fill=#4] (#2,0.5) circle (2pt);
+            \path [draw=black, fill=#5, thick] (#3,0.5) circle (2pt);
+            \draw[latex-latex] (-3.5,0) -- (3.5,0) ;
+            \foreach \x in  {-3,-2,-1,0,1,2,3}
+            \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+            \foreach \x in {-3,-2,-1,0,1,2,3}
+            \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below]
+            {$\x$};
+        \end{tikzpicture}
+    }
+%%%%
 \addtocontents{toc}{\setcounter{tocdepth}{4}}
 \setcounter{minitocdepth}{3}
 \nomtcrule         % removes rules = horizontal lines from minitocs
@@ -192,8 +206,9 @@
     \subsubsection{Redondeo y truncamiento}
 
 
-
     \section{Recta Num\'erica, Densidad y Orden}
+    \rectnuminterval[scale=1]{2}{-1}{black}{white}
+
     \subsection{Fracciones y decimales en la Recta Num\'erica}
     \subsection{Densidad de fracciones y decimales}
     \subsection{Orden de fracciones y decimales}
