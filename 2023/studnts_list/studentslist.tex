@@ -9,7 +9,7 @@
 \usepackage{tabularx}
 \usepackage{anyfontsize}
 \usepackage{fancyhdr}
-\renewcommand{\arraystretch}{1.9}
+\usepackage{booktabs}
 \setlength\headheight{50pt} 
 \lhead{\includegraphics[width=2cm]{logo}}
 \chead{}
@@ -379,8 +379,9 @@ Ciclo escolar 2022-2023}
 \begin{document}
 \pagestyle{fancy}
 \sffamily
-
-
+\renewcommand{\arraystretch}{1.2}
+\include{grades}
+\renewcommand{\arraystretch}{1.9}
 \chead{\fontsize{24}{32}\selectfont \sffamily Matemáticas 1}
 \studentlist{1° de Secundaria}
 \newpage

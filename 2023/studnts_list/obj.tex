@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{json} % Load the json package
+\usepackage{enumitem} % To customize itemize
+
+\title{High School Student CV Profiles}
+\author{Your Name}
+
+\begin{document}
+\maketitle
+
+\section{CV Profiles}
+
+% Load the JSON file
+\jsonfile{obj.json}
+
+% Define a custom itemize environment for cleaner formatting
+\newenvironment{cvitemize}{%
+    \begin{itemize}[label={}, leftmargin=0pt, itemindent=1.5em, itemsep=5pt, parsep=0pt]
+        \setlength{\itemsep}{0pt}
+              \setlength{\parskip}{0pt}
+              \setlength{\parsep}{0pt}
+              }{%
+    \end{itemize}
+}
+
+% Display CV profile for each student
+\foreach \student in \jsonstudents{
+    \subsection{\studentname}
+    \begin{cvitemize}
+        \item \textbf{Grade:} \studentgrade
+        \item \textbf{Age:} \studentpersonalinfoage
+        \item \textbf{Gender:} \studentpersonalinfogender
+        \item \textbf{Address:} \studentpersonalinfoaddress
+        \item \textbf{Contact:} \studentpersonalinfocontact
+    \end{cvitemize}
+
+    \subsubsection{Courses and Grades}
+    \begin{cvitemize}
+        \foreach \course in \studentcourses{
+            \item \textbf{\coursecourse_name:} \coursegrade, Taught by \courseteacher
+        }
+    \end{cvitemize}
+}
+
+\end{document}

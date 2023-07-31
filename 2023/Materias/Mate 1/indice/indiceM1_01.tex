@@ -4,11 +4,38 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage[spanish]{babel}
+\decimalpoint
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
+\usepackage{longdivision}
 \usetikzlibrary{shadows.blur}
 \usepackage{titlesec}
+\usepackage{pgfkeys}
+\usepackage{multicol}
 
+%% equivalencias al entero
+\newcounter{CountOfSections}
+\newcommand{\fracgraph}[3][1]{%
+    % #1 = optional height
+\begin{tikzpicture}
+    \draw (0,0) rectangle (#2,#1) node [midway] {1};
+
+    \setcounter{CountOfSections}{0}%
+    \foreach \Size/\Options in {#3} {%
+        \stepcounter{CountOfSections}%
+        \pgfmathsetmacro{\YCoord}{#1*\arabic{CountOfSections}}%
+        \draw  (0,-\YCoord) rectangle (#2,-\YCoord+#1);
+        \pgfmathsetmacro{\Xincrement}{#2/\Size}%
+         \foreach \x in {1,...,\Size} {%
+            \pgfmathsetmacro{\Xcoord}{\x*\Xincrement}%
+            \pgfmathsetmacro{\XcoordLabel}{(\x-0.5)*\Xincrement}%
+            \draw [fill=\Options]  ($(\Xcoord-\Xincrement,-\YCoord)$)  rectangle ($(\Xcoord,-\YCoord+#1)$);
+            \node at ($(\XcoordLabel,-\YCoord+0.5*#1)$) {$\frac{1}{\Size}$};
+        }%
+    }%
+\end{tikzpicture}
+}
+%%%
 \addtocontents{toc}{\setcounter{tocdepth}{4}}
 \setcounter{minitocdepth}{3}
 \nomtcrule         % removes rules = horizontal lines from minitocs
@@ -50,9 +77,121 @@
     \mychapter{Unidad 1}
 
     \section{Fracciones y decimales}
+    En esta sección, estudiaremos las fracciones y los decimales, que son dos formas de representar números racionales. Los números racionales son aquellos que se pueden expresar como el cociente de dos números enteros. Por ejemplo, $\frac{1}{2}$, $5$ o $7.6$. En esta sección, aprenderemos a representar números racionales en forma de fracción, en forma decimal y de forma entera. También aprenderemos a comparar fracciones, decimales y enteros, y a convertir de una forma a otra.
+
     \subsection{Equivalencias de fracciones y decimales}
+
+    \subsubsection{Fracciones equivalentes}
+    Cuando dos fracciones representan el mismo número, decimos que son equivalentes. Por ejemplo, $\frac{1}{2}$ y $\frac{2}{4}$ son equivalentes, porque representan el mismo número. Para verlo, podemos dividir una pizza en dos partes iguales, y luego dividir una de esas partes en dos partes iguales.
+
+    Aquí podemos notar que $\frac{1}{2} = \frac{2}{4}$, y que $\frac{2}{4} = \frac{4}{8}$.
+
+    \begin{tikzpicture}
+        % Crust
+        \draw[fill=brown!80!black] (0, 0) circle (3cm);
+        % Tomato Sauce
+        \fill[red!80!black] (0, 0) circle (2.75cm);
+        % Cheese
+        \fill[yellow!80!white] (0, 0) circle (2.6cm);
+        % Pepperoni
+        \foreach \x in {5,55,...,365}
+        \fill[red!60!black] (\x:1.8cm) circle (0.25cm);
+        \foreach \x in {-10,80,...,305}
+        \fill[red!60!black] (\x:0.9cm) circle (0.18cm);
+        \foreach \x in {-25,20,...,290}
+        \fill[red!70!black] (\x:1.2cm) circle (0.16cm);
+        % Division lines for pizza slices
+        \foreach \x in {0,90,180}
+        \draw[line width=0.15cm, color=white] (0, 0) -- (\x:3.1cm);
+        % Fractions labels
+        \foreach \angle/\label in {45/4, 135/4
+                , 270/2}
+        \draw (\angle:3.5cm) node {\Large \bfseries $\frac{1}{\label}$};
+    \end{tikzpicture}
+    \begin{tikzpicture}
+        % Crust
+        \draw[fill=brown!80!black] (0, 0) circle (3cm);
+        % Tomato Sauce
+        \fill[red!80!black] (0, 0) circle (2.75cm);
+        % Cheese
+        \fill[yellow!80!white] (0, 0) circle (2.6cm);
+        % Pepperoni
+        \foreach \x in {5,55,...,365}
+        \fill[red!60!black] (\x:1.8cm) circle (0.25cm);
+        \foreach \x in {-10,80,...,305}
+        \fill[red!60!black] (\x:0.9cm) circle (0.18cm);
+        \foreach \x in {-25,20,...,290}
+        \fill[red!70!black] (\x:1.2cm) circle (0.16cm);
+        % Division lines for pizza slices
+        \foreach \x in {0,45,...,180,270}
+        \draw[line width=0.15cm, color=white] (0, 0) -- (\x:3.1cm);
+        % Fractions labels
+        \foreach \angle/\label in {20/8, 65/8,110/8, 155/8
+                , 225/4,315/4}
+        \draw (\angle:3.5cm) node {\Large \bfseries $\frac{1}{\label}$};
+    \end{tikzpicture}
+
+
+    % Representacion detallada en Tikz de una pizza de peperoni.
+    \begin{tikzpicture}
+        % Crust
+        \draw[fill=brown!80!black] (0, 0) circle (3cm);
+        % Tomato Sauce
+        \fill[red!80!black] (0, 0) circle (2.75cm);
+        % Cheese
+        \fill[yellow!80!white] (0, 0) circle (2.6cm);
+        % Pepperoni
+        \foreach \x in {5,55,...,365}
+        \fill[red!60!black] (\x:1.8cm) circle (0.25cm);
+        \foreach \x in {-10,80,...,305}
+        \fill[red!60!black] (\x:0.9cm) circle (0.18cm);
+        \foreach \x in {-25,20,...,290}
+        \fill[red!70!black] (\x:1.2cm) circle (0.16cm);
+        % Division lines for pizza slices
+        \foreach \x in {0,45,90,180}
+        \draw[line width=0.25cm, color=white] (0, 0) -- (\x:3.1cm);
+        % Fractions labels
+        \foreach \angle/\label in {20/8, 65/8, 135/4
+                , 270/2}
+        \draw (\angle:3.5cm) node {\Large \bfseries $\frac{1}{\label}$};
+    \end{tikzpicture}
+
+    % explicación de la equivalencia al entero de fracciones
+    \subsubsection{Equivalencias al entero}
+    Una fracción es equivalente al entero cuando el numerador es igual al denominador. Por ejemplo, $\frac{3}{3}$ es equivalente a $1$, porque
+    \begin{multicols}{2}
+        \fracgraph{5}{2/cyan!50,3/red!40,4/brown!50}
+
+        \begin{align*}
+            \color{cyan!80!black}\dfrac{1}{2}+\dfrac{1}{2}                            & =\dfrac{2}{2}=1 \\[0.5em]
+            \color{red!80!black}\dfrac{1}{3}+\dfrac{1}{3}+\dfrac{1}{3}                & =\dfrac{3}{3}=1 \\[0.5em]
+            \color{brown!80!black}\dfrac{1}{4}+\dfrac{1}{4}+\dfrac{1}{4}+\dfrac{1}{4} & =\dfrac{4}{4}=1
+        \end{align*}
+    \end{multicols}
+    \subsubsection{Convierte decimales a fracciones}
+    Para convertir un decimal a fracción, debemos escribir el número decimal como una fracción decimal, y luego simplificarla. Por ejemplo, para convertir $0.75$ a fracción, escribimos $0.75$ como $\frac{75}{100}$, y luego simplificamos la fracción.
+
+    \[0.75=\frac{75}{100}\]
+
+    En una \textbf{fracción decimal} el denominador debe ser una potencia de $10$. En este caso, el denominador es $100$, que es una potencia de $10$. Si el decimal tiene un solo dígito después del punto decimal, el denominador debe ser $10$. Por ejemplo, para convertir $0.5$ a fracción, escribimos $0.5$ como $\frac{5}{10}$, y luego simplificamos la fracción.
+
+    \[0.5=\frac{5}{10}\]
+
+
+    Para \textbf{simplificar una fracción}, dividimos el numerador y el denominador entre el máximo común divisor de ambos. En este caso, el máximo común divisor de $75$ y $100$ es $25$, por lo que la fracción simplificada es
+
+    \[\frac{75}{100}=\frac{75\div25}{100\div25}=\frac{3}{4}\]
+
+    \subsubsection{Convierte fracciones a decimales}
+    Para convertir una fracción a decimal, dividimos el numerador entre el denominador. Por ejemplo, para convertir $\frac{3}{4}$ a decimal, dividimos $3$ entre $4$.
+    \begin{center}
+        \longdivision{3}{4} \qquad entonces, $\dfrac{3}{4}=0.75$
+    \end{center}
+
     \subsection{Decimales peri\'odicos}
     \subsubsection{Redondeo y truncamiento}
+
+
 
     \section{Recta Num\'erica, Densidad y Orden}
     \subsection{Fracciones y decimales en la Recta Num\'erica}

@@ -1,0 +1,58 @@
+{
+  "students": [
+    {
+      "name": "John Smith",
+      "grade": "10",
+      "personal_info": {
+        "age": "16",
+        "gender": "Male",
+        "address": "123 Main St, City",
+        "contact": "john.smith@example.com"
+      },
+      "courses": [
+        {
+          "course_name": "Mathematics",
+          "teacher": "Mr. Johnson",
+          "grade": "92"
+        },
+        {
+          "course_name": "Physics",
+          "teacher": "Mrs. Anderson",
+          "grade": "85"
+        },
+        {
+          "course_name": "English",
+          "teacher": "Ms. Brown",
+          "grade": "78"
+        }
+      ]
+    },
+    {
+      "name": "Jane Doe",
+      "grade": "11",
+      "personal_info": {
+        "age": "17",
+        "gender": "Female",
+        "address": "456 Oak Ave, Town",
+        "contact": "jane.doe@example.com"
+      },
+      "courses": [
+        {
+          "course_name": "Mathematics",
+          "teacher": "Mr. Smith",
+          "grade": "88"
+        },
+        {
+          "course_name": "Biology",
+          "teacher": "Dr. Johnson",
+          "grade": "90"
+        },
+        {
+          "course_name": "Literature",
+          "teacher": "Mrs. White",
+          "grade": "95"
+        }
+      ]
+    }
+    ]
+}
