@@ -32,7 +32,7 @@
 					"%DOC%"
 				],
 				"env": {
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:%DIR%/base/:"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/:%DIR%/base/pgf-periodictable/:%DIR%/base/:"
 				}
 			},
 			{

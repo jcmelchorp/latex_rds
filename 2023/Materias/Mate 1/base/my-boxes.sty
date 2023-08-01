@@ -4,6 +4,7 @@
 \input{insbox}
 \usetikzlibrary{
     arrows,
+    arrows.meta,
     positioning,
     matrix,
     calc,
@@ -85,7 +86,7 @@
 }
 
 \newtcolorbox{openbox}{
-    enhanced,    
+    enhanced,
     sharpish corners, % better drop shadow
     boxrule = 0pt,
     toprule = 4.5pt, % top rule weight
@@ -93,7 +94,7 @@
     fuzzy shadow = {0mm}{-4pt}{-2pt}{1pt}{black!60!white}, % {xshift}{yshift}{offset}{step}{options} 
 }
 \newtcolorbox{closebox}{
-    enhanced,    
+    enhanced,
     sharpish corners, % better drop shadow
     boxrule = 0pt,
     bottomrule = 4.5pt, % top rule weight
@@ -254,55 +255,65 @@
             drop  shadow={fill=gray, opacity=0.7}
         },
     abstracttitle/.style={
-        fill=white,
-        style=rounded corners,
-        % drop shadow,
-               }
+            fill=white,
+            style=rounded corners,
+            % drop shadow,
+        }
 }
+\tikzset{>=latex} % for LaTeX arrow head
 
+% \tikzset{
+%     arcarrow/.style={
+%             decoration={
+%                     markings,
+%                     mark=at position #1 with {\arrow{>}}
+%                 },
+%             postaction={decorate}
+%         }
+% }
 \newcommand{\boxabstract}[3][fill=white]{
-  \begin{tikzpicture}
-    \node [abstractbox, #1] (box)
-    {\begin{minipage}{.92\textwidth}
-        \setlength{\parindent}{0mm} % Indentar.
-        \normalfont \sffamily #3
-      \end{minipage}};
-    \node[abstracttitle,right=5pt,#1] at (box.north west) {\bfseries \sffamily \large #2};
-    \node[draw=none, fit=(box)] {};
-  \end{tikzpicture}
-  }%
+    \begin{tikzpicture}
+        \node [abstractbox, #1] (box)
+        {\begin{minipage}{.92\textwidth}
+                \setlength{\parindent}{0mm} % Indentar.
+                \normalfont \sffamily #3
+            \end{minipage}};
+        \node[abstracttitle,right=5pt,#1] at (box.north west) {\bfseries \sffamily \large #2};
+        \node[draw=none, fit=(box)] {};
+    \end{tikzpicture}
+}%
 
 \newenvironment{opening}[1]{
     \begin{openbox}
         \begin{center}\color{rdsdark}\textbf{Inicio}\end{center}
         #1
-}{ \end{openbox}}
+        }{ \end{openbox}}
 \newenvironment{closing}[1]{
     \begin{closebox}
         \begin{center}\color{rdsdark}\textbf{Cierre}\end{center}
         #1
-}{ \end{closebox}}
+        }{ \end{closebox}}
 \newenvironment{problemas}[1]{
     \begin{practicabox}
         \begin{center}\color{DarkOliveGreen}\fontsize{18}{18}\selectfont\bbfamily Problemas\end{center}
         #1
-}{ \end{practicabox}}
+        }{ \end{practicabox}}
 \newenvironment{critico}[1]{
     \begin{criticobox}
         \begin{center}\color{OliveDrab}\textbf{Piensa y se cr\'itico}\end{center}
         #1
-}{ \end{criticobox}}
+        }{ \end{criticobox}}
 \newenvironment{important}[3][\textwidth]{
     \noindent\begin{minipage}{#1}
-    \begin{importantbox}
-        \parbox{7mm}{\raisebox{2mm}{
-            \includegraphics[width=7mm]{keys.png}
-        }}
-        {\fontsize{16}{18}\selectfont\alterfont\bfseries\color{rdsdark} #2}\\
-        #3
-}{ 
-    \end{importantbox}% 
-\end{minipage}%
+        \begin{importantbox}
+            \parbox{7mm}{\raisebox{2mm}{
+                    \includegraphics[width=7mm]{keys.png}
+                }}
+            {\fontsize{16}{18}\selectfont\alterfont\bfseries\color{rdsdark} #2}\\
+            #3
+            }{
+        \end{importantbox}% 
+    \end{minipage}%
 }
 
 

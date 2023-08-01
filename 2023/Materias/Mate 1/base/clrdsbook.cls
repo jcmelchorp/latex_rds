@@ -20,8 +20,45 @@
 \addfont{OT1}{cmgray}{\cmgray}
 \input{GotIn.fd}
 
+\RequirePackage{longdivision}
+%% equivalencias al entero
+\newcounter{CountOfSections}
+\newcommand{\fracgraph}[3][1]{%
+    % #1 = optional height
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (#2,#1) node [midway] {1};
 
-
+        \setcounter{CountOfSections}{0}%
+        \foreach \Size/\Options in {#3} {%
+                \stepcounter{CountOfSections}%
+                \pgfmathsetmacro{\YCoord}{#1*\arabic{CountOfSections}}%
+                \draw  (0,-\YCoord) rectangle (#2,-\YCoord+#1);
+                \pgfmathsetmacro{\Xincrement}{#2/\Size}%
+                \foreach \x in {1,...,\Size} {%
+                        \pgfmathsetmacro{\Xcoord}{\x*\Xincrement}%
+                        \pgfmathsetmacro{\XcoordLabel}{(\x-0.5)*\Xincrement}%
+                        \draw [fill=\Options]  ($(\Xcoord-\Xincrement,-\YCoord)$)  rectangle ($(\Xcoord,-\YCoord+#1)$);
+                        \node at ($(\XcoordLabel,-\YCoord+0.5*#1)$) {$\frac{1}{\Size}$};
+                    }%
+            }%
+    \end{tikzpicture}
+}
+%%%%
+%% Recta numérica (intervalo)
+\newcommand{\rectnuminterval}[5][]{
+    \begin{tikzpicture}[#1]
+        \draw[very thick] (#2,0.5) -- (#3,0.5);
+        \path [draw=black, fill=#4] (#2,0.5) circle (2pt);
+        \path [draw=black, fill=#5, thick] (#3,0.5) circle (2pt);
+        \draw[latex-latex] (-3.5,0) -- (3.5,0) ;
+        \foreach \x in  {-3,-2,-1,0,1,2,3}
+        \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+        \foreach \x in {-3,-2,-1,0,1,2,3}
+        \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below]
+        {$\x$};
+    \end{tikzpicture}
+}
+%%%%
 
 \RequirePackage[
     letterpaper,
@@ -51,7 +88,6 @@
 \RequirePackage{my-subsection}
 
 \RequirePackage{graphicx}
-\graphicspath{ ../images/ }
 
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
