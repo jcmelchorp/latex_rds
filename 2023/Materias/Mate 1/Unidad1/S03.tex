@@ -1,4 +1,28 @@
 \thispagestyle{plain}
+
+\section{Números enteros (positivos y negativos)}
+Los números positivos son aquellos mayores que cero, como $1, 2, 3, \ldots$. Por otro lado, los números negativos son aquellos menores que cero y están precedidos por el signo menos ($-$), como $-1, -2, -3, \ldots$. Ambos tipos de números se encuentran en la recta numérica:
+
+\begin{center}
+    \begin{tikzpicture}
+        % Numeric line
+        \draw[latex-latex] (-6,0) -- (6,0);
+        \foreach \x in {-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6}
+        \draw (\x,0.1) -- (\x,-0.1);
+        \foreach \x/\label in {-6/-6,-5/-5,-4/-4,-3/-3,-2/-2,-1/-1,0/0,1/1,2/2,3/3,4/4,5/5,6/6}
+        \node[below] at (\x,-0.1) {$\label$};
+
+        % Positive and negative points
+        \filldraw[blue] (3,0) circle (2pt) node[above] {3};
+        \filldraw[red] (-2,0) circle (2pt) node[above] {-2};
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Signo de los números enteros}
+El signo de un número nos indica si es positivo o negativo. Un número positivo no lleva ningún signo, mientras que un número negativo lleva el signo menos ($-$) delante de él. Por ejemplo, el número 4 es positivo, y el número $-4$ es negativo.
+
+En la recta numérica, un número positivo se ubica a la derecha del cero, mientras que un número negativo se coloca a la izquierda del cero.
+
 \section{Aritmética de números enteros (positivos y negativos)}
 En esta sección, aprenderemos cómo sumar y restar números enteros, incluyendo tanto números positivos como negativos. Utilizaremos rectas numéricas para ilustrar los conceptos.
 
