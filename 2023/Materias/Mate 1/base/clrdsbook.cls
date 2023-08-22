@@ -127,15 +127,17 @@
 
 \RequirePackage{etoolbox}
 \RequirePackage{caption,capt-of}
-\RequirePackage[colorlinks = true, linkcolor = colorrds]{hyperref}
 
 
 \addtocontents{toc}{\setcounter{tocdepth}{4}}
 
 \RequirePackage[undotted]{minitoc}
+\let\stdcontentsline\contentsline
 \setcounter{minitocdepth}{3}
 \nomtcrule         % removes rules = horizontal lines from minitocs
 \nomtcpagenumbers  % remove page numbers from minitocs
+\renewcommand{\beforeminitoc}{\renewcommand{\contentsline}[4]{\stdcontentsline{##1}{##2}{##3}}}
+\RequirePackage[colorlinks = true, linkcolor = colorrds]{hyperref}
 
 \RequirePackage{float}
 \RequirePackage{bookmark}
