@@ -103,7 +103,6 @@
 \renewcommand{\thepartno}{\alph{partno}}
 \renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
 \renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
-
 \checkboxchar{\faIcon[regular]{square}}
 \CorrectChoiceEmphasis{\color{red!50!gray}\bf}
 \checkedchar{\faIcon[regular]{check-square}}
