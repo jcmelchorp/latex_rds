@@ -317,8 +317,6 @@
         }{%
         \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Obtenidos}\vtword{Total}%
         \arrayrulecolor{colorrds!30}%
-
-
         \ifnum\numquestions>7%
             {
             \ifnum\numquestions>15%

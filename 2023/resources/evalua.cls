@@ -80,6 +80,14 @@
 \RequirePackage{newclude}
 \RequirePackage{import}
 \RequirePackage{subfiles} % Best loaded last in the preamble
+\RequirePackage{titlesec}
+\titleformat{\section}
+{\normalfont\fontsize{10}{5}\bfseries\color{gray}}{\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.5em}{0.3em}
+\titleformat{\subsection}
+{\normalfont\fontsize{10}{5}\bfseries\color{lightgray}}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{0.5em}{0.3em}
+
 % \usepackage[overload,debug]{exam-randomizechoices}
 \renewcommand{\arraystretch}{1.4}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
@@ -168,17 +176,19 @@
     instructiontitle/.style={
             fill=white,
             style=rounded corners},
-    gradesbox/.style={
-            xshift=-.2\textwidth,
-            draw=none,
-            fill=white,
-            rectangle,
-            inner xsep=1pt,
-            inner ysep=2pt,
-            style=rounded corners
+    gradesbox/.style={anchor=north east,xshift=-.21\textwidth-1pt,
+            yshift=-2cm,
+            draw=none,%=colorrds, dashed,
+            fill=white, rectangle,
+            inner sep=5pt, style=rounded corners,
+            %drop  shadow={fill=lightgray, opacity=0.7}
         },
-    gradestitle/.style={fill=white,
-            style=rounded corners},
+    gradetableboxtitle/.style={
+            fill=white,
+            inner xsep=2pt,inner ysep=2pt,
+            style=rounded corners,
+            % drop shadow,
+        },
     objetivobox/.style={
             anchor=north,
             xshift=-.86\textwidth,
@@ -202,20 +212,28 @@
         \node[objetivotitle,right=10pt,yshift=2pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
     \end{tikzpicture}%
 }
-\newcommand{\gradesbox}[3][fill=white]{%
+\newcommand{\gradesbox}[2][fill=white]{%
     \begin{tikzpicture}%
         \node[gradesbox, #1] (box) {%
-            % \begin{minipage}[t][][t]{0.25\textwidth}
-            \adjustbox{%
-                % minipage=.9\linewidth
-                % min size={0.1\textwidth}{150pt},
-                max size={.98\linewidth}{250pt}
-            }{%
-                \normalfont #3
+        \adjustbox{
+        min size={0.05\textwidth}{50pt},
+        max size={0.9\linewidth}{78pt}
+        }{%
+        \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Ganados}\vtword{Total}%
+        \arrayrulecolor{colorrds!30}%
+        \ifnum\numquestions>7%
+            {
+            \ifnum\numquestions>15%
+                {\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+                \else%
+                {\multirowgradetable{2}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+            \fi%
             }%
-            % \end{minipage}
+            \else{\gradetable[h][questions]}%
+        \fi%
+        }%
         };
-        \node[gradestitle, right=30pt,yshift=1mm] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
+        \node[gradetableboxtitle,xshift=-112pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} #2};
     \end{tikzpicture}%
 }
 \newcommand{\instructionbox}[3][fill=white]{%
@@ -290,27 +308,13 @@
 \vspace{0.2cm}
 
 \begin{minipage}{\textwidth}
-    \begin{minipage}[t][][b]{.68\textwidth}
+    \begin{minipage}[t][][b]{.55\textwidth}
         \objetivobox{Aprendizajes a evaluar:}{%\small%
             \theaprendizajes
         }
     \end{minipage}\hfill%
-    \begin{minipage}[t][][b]{.3\textwidth}
-        \gradesbox{Calificación:}{%
-            \cellwidth{0.8em}%
-            \gradetablestretch{1.2}%
-            \hqword{Pregunta}%
-            \hpgword{P\'gina}%
-            \hpword{Puntos}%
-            \hsword{Obtenidos}%
-            \htword{Total}%
-            \vqword{Pregunta}%
-            \vpgword{P\'gina}%
-            \vpword{Puntos}%
-            \vsword{Obtenidos}%
-            \vtword{Total}%
-            \gradetable[v][questions]%
-        }%
+    \begin{minipage}[t][][b]{.4\textwidth}
+        \gradesbox{Calificación:}%
     \end{minipage}
 \end{minipage}%
 }
