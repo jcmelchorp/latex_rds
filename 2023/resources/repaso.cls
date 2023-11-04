@@ -97,6 +97,14 @@
 \graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{calc}
 \RequirePackage{xparse,xpatch}
+\RequirePackage{titlesec}
+\titleformat{\section}
+{\normalfont\fontsize{10}{5}\bfseries\color{gray}}{\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.5em}{0.3em}
+\titleformat{\subsection}
+{\normalfont\fontsize{10}{5}\bfseries\color{lightgray}}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{0.5em}{0.3em}
+
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
         \node[shape=circle, draw,  minimum size=1.2em, inner sep=0pt, thick] (char) {#1};}}
