@@ -72,6 +72,11 @@
 \RequirePackage{adjustbox}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol}
+\RequirePackage{longdivision}
+\RequirePackage{xlop}
+\newcommand\R{\color{red}}
+\newcommand\B{\color{blue}}
+\newcommand\Y{\color{yellow}}
 \RequirePackage{bookmark,booktabs}
 %%%% MATH
 \RequirePackage{amssymb,amsmath}
