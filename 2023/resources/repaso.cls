@@ -347,8 +347,8 @@
             rounded corners=2pt,inner xsep=20pt,inner ysep=0pt]
         {
             \begin{minipage}{0.84\textwidth}
-                \hspace{-0.4em}{\textbf{\color{colorrds}\fontsize{18}{14}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an}}\\[0.5em]
-                {\fontsize{16}{20}\selectfont {\color{SubjectColor}\themateria}  \hfill {\color{MainColor}\thegrado$^\circ$ de \thenivel} }\\
+                \hspace{-0.4em}{\textbf{\color{colorrds}\fontsize{18}{14}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an}}\\[0.1em]
+                {\fontsize{14}{14}\selectfont {\color{SubjectColor}\themateria}  \hfill {\color{MainColor}\thegrado$^\circ$ de \thenivel} }\\[-0.2em]
                 {\@author  \hfill Unidad \theunidad \hspace{2.4em} \thecicloescolar}
             \end{minipage}
         };
