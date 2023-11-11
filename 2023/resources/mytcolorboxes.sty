@@ -20,6 +20,11 @@
   center title,
   #1
 }
+\newtcbox{\wordpill}[1][]{enhanced,on line,
+  colback=olive!5!white,colframe=olive!75!black,
+  boxrule=1pt,boxsep=0pt,  tcbox raise base,
+  fuzzy shadow={0.15mm}{-0.25mm}{0mm}{0.1mm}{black},  #1
+}
 
 \newtcolorbox{sectionbox}[2][]{%
   empty,title={#2},attach boxed title to top left,
