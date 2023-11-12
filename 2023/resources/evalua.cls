@@ -7,7 +7,8 @@
 \DeclareOption{answers}{\printanswers}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{exam}}
 \ProcessOptions\relax\ProcessOptions\relax
-
+%%%% Random Choices  %%%%%%%%%%%%%%%%
+%\RequirePackage[randomize,overload]{exam-randomizechoices}
 %%%% Paquete colores %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{rdscolors}
 %%%% Paquete idioma %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,9 +28,7 @@
 \RequirePackage{forest}
 % \RequirePackage{ragged2e}
 \RequirePackage{physics}
-
 \tikzset{>=latex} % for LaTeX arrow head
-
 \@ifpackageloaded{lipsum}{}{\RequirePackage{lipsum}}
 \@ifpackageloaded{tikz}{}{\RequirePackage{tikz}}
 \RequirePackage{tkz-euclide}
