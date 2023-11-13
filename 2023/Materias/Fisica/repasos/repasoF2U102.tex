@@ -1,4 +1,4 @@
-\documentclass[12pt,addpoints]{repaso}
+\documentclass[12pt,addpoints,answers]{repaso}
 \grado{2}
 \nivel{Secundaria}
 \cicloescolar{2023-2024}
@@ -19,21 +19,18 @@
 \begin{document}
 \INFO%
 \begin{questions}
-     \questionboxed[5]{Coloca los conceptos en el lugar que les corresponda en la imagen.\\
+     \questionboxed[5]{Coloca los conceptos en el lugar que les corresponda en la imagen.
 
-          \begin{center}
-               \wordpill{Sublimación}
-               \wordpill{Fusión}
-               \wordpill{Ebullición}
-               \wordpill{Sólido}
-               \wordpill{Líquido}
-               \wordpill{Gaseoso}
-               \wordpill{Solidificación}
-               \wordpill{Condensación}
-               \wordpill{Deposición}
-               \vspace*{1em}
-               \includegraphics[width=.75\textwidth]{../images/SINFI_U2_AC47_IMG1.png}
-          \end{center}
+          \begin{minipage}[t][][b]{.26\textwidth}\Large
+               \wordpill{Sublimación} \wordpill{Fusión} \wordpill{Ebullición} \wordpill{Gaseoso} \wordpill{Sólido} \wordpill{Solidificación} \wordpill{Deposición} \wordpill{Líquido} \wordpill{Condensación}
+          \end{minipage}\hfill%
+          \begin{minipage}[t][][b]{.6\textwidth}
+               \ifprintanswers{
+                    \includegraphics[width=\linewidth]{../images/SINFI_U2_AC47_IMG1_SOL.png}
+               }\else{
+                    \includegraphics[width=\linewidth]{../images/SINFI_U2_AC47_IMG1.png}
+               }\fi
+          \end{minipage}
      }
 
      \questionboxed[5]{Elige la(s) respuesta(s). Pueden existir más de 2 respuestas correctas.

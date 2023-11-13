@@ -95,13 +95,13 @@
 % \usepackage[overload,debug]{exam-randomizechoices}
 \renewcommand{\arraystretch}{1.4}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
+\AtEndEnvironment{choices}{\vspace{0.1\baselineskip}}
 %\AtBeginEnvironment{oneparchoices}{\vspace{0.3\baselineskip}}
 %\AtEndEnvironment{oneparchoices}{\vspace{-0.8\baselineskip}}
 \AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
+\AtEndEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \newcommand\comillas[1]{``#1''}
 \newcommand{\midmatch}{\hspace{0.75in}\underline{\hspace{0.5in}     }}
 \newcommand{\tf}[1][{}]{%
@@ -110,7 +110,7 @@
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
         \node[shape=circle, draw, fill=Goldenrod!10, minimum size=1.8em, inner sep=0pt, thick] (char) {#1};}}
 
-\renewcommand\choicelabel{\color{DarkOliveGreen}\bfseries\thechoice.}
+\renewcommand\choicelabel{{\color{DarkOliveGreen}\bfseries\thechoice}.}
 \renewcommand\questionlabel{\color{Sepia}\circled{\thequestion}}
 \renewcommand{\thepartno}{\alph{partno}}
 \renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
