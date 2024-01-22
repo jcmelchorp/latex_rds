@@ -23,11 +23,14 @@
 \RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1.4}
+\RequirePackage{mytcolorboxes}
 \RequirePackage{forest}
 \RequirePackage{tikz}
 \RequirePackage[all]{xy}
-\RequirePackage{physics}
+\usepackage{physics}
+\renewcommand{\div}{\divisionsymbol}
 \RequirePackage{tkz-euclide}
+\RequirePackage{longdivision}
 % Styles
 \tikzset{>=latex} % for LaTeX arrow head
 \tikzset{axis/.style={black, thick,->}}
@@ -97,6 +100,8 @@
 \graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{calc}
 \RequirePackage{xparse,xpatch}
+\RequirePackage{longdivision}
+\RequirePackage{xlop}
 \RequirePackage{titlesec}
 \titleformat{\section}
 {\normalfont\fontsize{10}{5}\bfseries\color{gray}}{\thesection}{0.5em}{}
@@ -396,7 +401,6 @@
 \RequirePackage{mathtools}
 \decimalpoint
 \RequirePackage{adjustbox}
-\RequirePackage{mytcolorboxes}
 \RequirePackage{myboxes}
 \RequirePackage{card}
 %%%% EXTERNAL SOURCES
