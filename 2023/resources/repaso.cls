@@ -40,6 +40,7 @@
 \RequirePackage{lscape}
 \input{insbox}
 \usetikzlibrary{
+    angles, quotes,
     3d,
     arrows,
     positioning,
@@ -390,6 +391,8 @@
 %%%% CAPTIONS
 \RequirePackage{caption,subcaption,capt-of}
 %%%% LINKS
+% \RequirePackage{pst-all}
+
 \RequirePackage{float}
 \RequirePackage{lipsum}
 \RequirePackage{bookmark,booktabs}
