@@ -18,7 +18,8 @@
 %%%% Paquete texto %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{enumitem} % customize enumerate and item
 \RequirePackage{mytcolorboxes}
-% \RequirePackage{myboxes}
+\RequirePackage{myboxes}
+\RequirePackage{exam-randomizechoices}
 \RequirePackage{xfrac}
 \RequirePackage{cancel}
 \RequirePackage{bohr}
@@ -63,7 +64,7 @@
 \RequirePackage{anyfontsize}
 \newcommand{\HUGE}{\fontsize{50}{60}}
 \RequirePackage{graphicx}
-%\graphicspath{{../images}} %Setting the graphicspath
+\graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{xparse,xpatch}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \RequirePackage{caption,subcaption,capt-of}
@@ -92,7 +93,6 @@
 {\normalfont\fontsize{10}{5}\bfseries\color{lightgray}}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{0.5em}{0.3em}
 
-% \usepackage[overload,debug]{exam-randomizechoices}
 \renewcommand{\arraystretch}{1.4}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.1\baselineskip}}
@@ -111,15 +111,18 @@
         \node[shape=circle, draw, fill=Goldenrod!10, minimum size=1.8em, inner sep=0pt, thick] (char) {#1};}}
 
 \renewcommand\choicelabel{{\color{DarkOliveGreen}\bfseries\thechoice}.}
-\renewcommand\questionlabel{\color{Sepia}\circled{\thequestion}}
+% \qformat{\color{BrickRed}\circled{\thequestion}}
+\renewcommand\questionlabel{\color{BrickRed!65!black}\circled{\thequestion}}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{Sepia!60}\circled{{\thequestion\thepartno}}}
+\renewcommand{\partlabel}{\color{BrickRed!65!black}\circled{{\thequestion\thepartno}}}
 \renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
 \checkboxchar{\faIcon[regular]{square}}
 \CorrectChoiceEmphasis{\color{red!50!gray}\bf}
 \checkedchar{\faIcon[regular]{check-square}}
-\pointformat{\textcolor{SubjectColor}{[\thepoints]}}
-\pointpoints{punto}{puntos}
+% \pointsinmargin
+%\pointformat{}
+\pointformat{\color{SubjectColor}{\scalebox{0.6}[1.0]{[\hspace*{0.3em}\sffamily\rule[-1mm]{3mm}{0.2pt} de \thepoints]}}}
+\pointpoints{pt}{pts}
 
 %%%%%%%%%% Document Info %%%%%%%%%%%%%%%%%
 %%%% INPUTS
