@@ -114,7 +114,7 @@
 % \qformat{\color{BrickRed}\circled{\thequestion}}
 \renewcommand\questionlabel{\color{BrickRed!65!black}\circled{\thequestion}}
 \renewcommand{\thepartno}{\alph{partno}}
-\renewcommand{\partlabel}{\color{BrickRed!65!black}\circled{{\thequestion\thepartno}}}
+\renewcommand{\partlabel}{\color{BrickRed!65!black}\normalsize\circled{{\thequestion\thepartno}}}
 \renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
 \checkboxchar{\faIcon[regular]{square}}
 \CorrectChoiceEmphasis{\color{red!50!gray}\bf}
