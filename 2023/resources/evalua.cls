@@ -28,6 +28,8 @@
 \RequirePackage{forest}
 % \RequirePackage{ragged2e}
 \RequirePackage{physics}
+\renewcommand{\div}{\divisionsymbol}
+\RequirePackage{longdivision}
 \tikzset{>=latex} % for LaTeX arrow head
 \@ifpackageloaded{lipsum}{}{\RequirePackage{lipsum}}
 \@ifpackageloaded{tikz}{}{\RequirePackage{tikz}}
@@ -63,7 +65,7 @@
 \RequirePackage{anyfontsize}
 \newcommand{\HUGE}{\fontsize{50}{60}}
 \RequirePackage{graphicx}
-%\graphicspath{{../images}} %Setting the graphicspath
+\graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{xparse,xpatch}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \RequirePackage{caption,subcaption,capt-of}
@@ -71,7 +73,6 @@
 \RequirePackage{adjustbox}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol}
-\RequirePackage{longdivision}
 \RequirePackage{xlop}
 \newcommand\R{\color{red}}
 \newcommand\B{\color{blue}}
