@@ -29,6 +29,8 @@
 \RequirePackage{forest}
 % \RequirePackage{ragged2e}
 \RequirePackage{physics}
+\renewcommand{\div}{\divisionsymbol}
+\RequirePackage{longdivision}
 \tikzset{>=latex} % for LaTeX arrow head
 \@ifpackageloaded{lipsum}{}{\RequirePackage{lipsum}}
 \@ifpackageloaded{tikz}{}{\RequirePackage{tikz}}
@@ -72,7 +74,6 @@
 \RequirePackage{adjustbox}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol}
-\RequirePackage{longdivision}
 \RequirePackage{xlop}
 \newcommand\R{\color{red}}
 \newcommand\B{\color{blue}}
