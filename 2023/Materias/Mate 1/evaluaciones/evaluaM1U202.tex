@@ -9,39 +9,45 @@
     operaciones con números naturales, enteros y
     decimales (para multiplicación y división, sólo números
     positivos).
-\item Resuelve problemas de cálculo de porcentajes, de tanto por
+    \item Resuelve problemas de cálculo de porcentajes, de tanto por
     ciento y de la cantidad base.
 }
 \author{Prof.: Julio César Melchor Pinto}
 \begin{document}
 \begin{questions}
-    \section*{\ifprintanswers{Operaciones con decimales}\else{}\fi}
+    % \section*{\ifprintanswers{Operaciones con decimales}\else{}\fi}
     \question[8]{ Realiza las siguientes operaciones de decimales:
 
         \begin{multicols}{2}
-            \begin{parts}\large
-                \part \quad \opadd[hfactor=decimal,resultstyle=\color{white},carryadd=false,carrysub=false]{24.97}{19.34} \\[3em]
+            \begin{parts}
+                \ifprintanswers{\large\part \quad \opadd[hfactor=decimal,resultstyle=\color{red},carryadd=true,carrysub=false]{24.97}{19.34} \\[3em]}
+                \else{          \large\part \quad \opadd[hfactor=decimal,resultstyle=\color{white},carryadd=false,carrysub=false]{24.97}{19.34} \\[3em]}
+                \fi
 
-                \part  \quad  \opsub[hfactor=decimal,resultstyle=\color{white}carrysub=false]{968.31}{134.67} \\[1ex]
-
+                \ifprintanswers{\large\part  \quad  \opsub[hfactor=decimal,resultstyle=\color{red},carrysub=true]{968.31}{134.67} \\[1ex]}
+                \else{          \large\part  \quad  \opsub[hfactor=decimal,resultstyle=\color{white},carrysub=false]{968.31}{134.67} \\[1ex]}
+                \fi
                 \columnbreak%
 
-                \part \quad \opmul[hfactor=decimal,resultstyle=\color{white},displayintermediary=None]{198.4}{12.2} \\[4em]
+                \ifprintanswers{\part \quad \opmul[hfactor=decimal,resultstyle=\color{red},displayintermediary=all]{198.4}{12.2} \\[4em]}
+                \else{          \large\part \quad \opmul[hfactor=decimal,resultstyle=\color{white},displayintermediary=None]{198.4}{12.2} \\[4em]}
+                \fi
 
-                \part \quad $1.2 \overline{) \ 8.32 \ }$
-
+                \ifprintanswers{\large\part\opdiv[period,style=text,hrulewidth=0.2pt,vruleperiod=0.7,hfactor=decimal,resultstyle=\color{red}]{8.32}{1.2}}
+                \else{          \large\part  \quad $1.2 \overline{) \ 8.32 \ }$}
+                \fi
             \end{parts}
         \end{multicols}
     }
 
-    \subsection*{\ifprintanswers{Resolución de problemas}\else{}\fi}
+    % \subsection*{\ifprintanswers{Resolución de problemas}\else{}\fi}
 
     \question[10] Resuelve los siguientes problemas:
     \begin{parts}
         \part La mamá de Susana compró 11 m (metros) de franela y pagó 103.40 pesos. ¿Cuánto cuesta el metro de franela?
 
         \begin{solutionbox}{2cm}
-            \opdiv[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{103.40}{11}
+            \opdiv[hfactor=decimal,resultstyle={\ifprintanswers{\color{red}}\else{\color{white}}\fi},displayintermediary=None,carryadd=false,carrysub=false]{103.40}{11}
         \end{solutionbox}
 
         % \part El precio de 385 artículos comerciales es de 1,232 pesos. ¿Cuál es el precio unitario de cada artículo?
@@ -51,9 +57,10 @@
         % \end{solutionbox}
     \end{parts}
 
-    \section*{\ifprintanswers{Operaciones con fracciones}\else{}\fi}
+    \newpage
+    % \section*{\ifprintanswers{Operaciones con fracciones}\else{}\fi}
 
-    \subsection*{\ifprintanswers{Operaciones con fracciones}\else{}\fi}
+    % \subsection*{\ifprintanswers{Operaciones con fracciones}\else{}\fi}
 
     \question[6] Realiza las siguientes operaciones con fracciones:
 
@@ -74,13 +81,13 @@
 
             \part $\dfrac{7}{8}+\dfrac{3}{4}=$ \fillin[$\dfrac{7}{8}+\dfrac{6}{8}=\dfrac{13}{8}$][0in]  \\[3em]
 
-            \part $ \dfrac{7}{8} \divisionsymbol\dfrac{3}{4}=$ \fillin[$\dfrac{}{}$][0in]  \\[1em]
+            \part $ \dfrac{7}{8} \divisionsymbol \dfrac{3}{4}=$ \fillin[$\dfrac{28}{24}=\dfrac{14}{12}$][0in]  \\[1em]
 
         \end{parts}
     \end{multicols}
 
 
-    \subsection*{\ifprintanswers{Resolución de problemas}\else{}\fi}
+    % \subsection*{\ifprintanswers{Resolución de problemas}\else{}\fi}
 
     \question[10] Resuelve los siguientes problemas:
 
@@ -101,60 +108,74 @@
         \end{solutionbox}
     \end{parts}
 
-    \section*{\ifprintanswers{Porcentajes}\else{}\fi}
-    \subsection*{\ifprintanswers{Porcentajes a decimal}\else{}\fi}
+    % \section*{\ifprintanswers{Porcentajes}\else{}\fi}
+    % \subsection*{\ifprintanswers{Porcentajes a decimal}\else{}\fi}
 
     \question[6] Escribe como decimal los siguientes porcentajes:
 
     \begin{multicols}{3}
         \begin{parts}\large
-            \part $10.8\% =$ \fillin[0.1][0in]
+            \part $10.8\% =$ \fillin[0.108][0in]
 
-            \part $5\% =$ \fillin[0.5][0in]
+            \part $5\% =$ \fillin[0.05][0in]
 
-            \part $0.5\% =$ \fillin[0.1][0in]
+            \part $0.5\% =$ \fillin[0.005][0in]
         \end{parts}
     \end{multicols}
 
     % \newpage
-    \subsection*{\ifprintanswers{Decimal a porcentaje}\else{}\fi}
+    % \subsection*{\ifprintanswers{Decimal a porcentaje}\else{}\fi}
 
     \question[6] Escribe como porcentaje los siguientes decimales:
 
     \begin{multicols}{3}
         \begin{parts}\large
-            \part $0.704=\quad$  \fillin[70.4\%][0in] \%
+            \part $0.704=\quad$  \fillin[70.4][0in] \%
 
-            \part $0.014=\quad$    \fillin[1.4\%][0in]   \%
+            \part $0.014=\quad$    \fillin[1.4][0in]   \%
 
-            \part $1=\quad$      \fillin[100\%][0in]  \%
+            \part $1=\quad$      \fillin[100][0in]  \%
         \end{parts}
     \end{multicols}
 
-    \subsection*{\ifprintanswers{Porcentaje de cantidades}\else{}\fi}
+    % \subsection*{\ifprintanswers{Porcentaje de cantidades}\else{}\fi}
 
     \question[10] Calcula el porcentaje de las siguientes cantidades:
 
     \begin{parts}
         \setlength{\columnsep}{1.2cm}
-        \begin{multicols}{3}\large
-            \part  15\% de 900 es: \fillin[135][0in]   \\[3em]
-            \part  0.5\% de 1200 es: \fillin[6][0in]   \\[3em]
-            \part  3.5\% de 415 es: \fillin[14.525][0in]   \\[3em]
+        \begin{multicols}{3}
+            \part  {\large 15\% de 900 es: \fillin[135][0in] }
+
+            \begin{solutionbox}{2cm}
+                \[900\times\dfrac{15}{100}=135\]
+            \end{solutionbox}
+
+            \part  {\large 0.5\% de 1200 es: \fillin[6][0in] }
+
+            \begin{solutionbox}{2cm}
+                \[1200\times\dfrac{0.5}{100}=6\]
+            \end{solutionbox}
+
+            \part  {\large 3.5\% de 415 es: \fillin[14.525][0in] }
+
+            \begin{solutionbox}{2cm}
+                \[415\times\dfrac{3.5}{100}=14.525\]
+            \end{solutionbox}
         \end{multicols}
 
         \begin{multicols}{2}
 
             \part Si se sabe que 210 es el 21\% de cierta cantidad, ¿cuál es esta cantidad?
 
-            \begin{solutionbox}{2.5cm}
+            \begin{solutionbox}{2.8cm}
                 Para conocer la cantidad, se debe dividir 210 entre 21; entonces:
-                \[100\times\dfrac{210}{21}=10\]
+                \[100\times\dfrac{210}{21}=1000\]
             \end{solutionbox}
 
             \part Si se sabe que 120 es el 35\% de cierta cantidad, ¿cuál es esta cantidad?
 
-            \begin{solutionbox}{2.5cm}
+            \begin{solutionbox}{2.8cm}
                 Para conocer la cantidad, se debe dividir 120 entre 35; entonces:
                 \[100\times\dfrac{120}{35}=342.86\]
             \end{solutionbox}
@@ -163,7 +184,7 @@
 
     \end{parts}
 
-    \subsection*{\ifprintanswers{Resolución de problemas}\else{}\fi}
+    % \subsection*{\ifprintanswers{Resolución de problemas}\else{}\fi}
 
     \question[8] Resuelve los siguientes problemas:
 
@@ -171,15 +192,15 @@
         \begin{parts}
             \part El costo de una computadora es de \$12,220 pesos, si la tasa de impuesto es del 15\%. ¿Cuánto será el total a pagar por la computadora?
 
-            \begin{solutionbox}{3cm}
+            \begin{solutionbox}{4cm}
                 Para conocer el total a pagar por la computadora, se debe multiplicar 12220 por 15\%; entonces:
-                \[12220\times 115\%= 14053\]
+                \[12220\times 15\%= 14,050\]
                 Por lo tanto, el total a pagar por la computadora es de 14053 pesos.
             \end{solutionbox}
 
             \part El 24\% de los habitantes de un pueblo tienen menos de 30 años. ¿Cuántos habitantes tiene el pueblo si hay 120 jóvenes menores de 30 años?
 
-            \begin{solutionbox}{3cm}
+            \begin{solutionbox}{4cm}
                 Para conocer el total de habitantes del pueblo, se debe dividir 120 entre 24\%; entonces:
                 \[100\times\dfrac{120}{24}=500\]
                 Por lo tanto, el pueblo tiene 500 habitantes.
@@ -188,8 +209,8 @@
     \end{multicols}
 
 
-    \section*{\ifprintanswers{Potencias y raíces}\else{}\fi}
-    \subsection*{\ifprintanswers{Potenciación}\else{}\fi}
+    % \section*{\ifprintanswers{Potencias y raíces}\else{}\fi}
+    % \subsection*{\ifprintanswers{Potenciación}\else{}\fi}
 
     \question[6] Realiza las siguientes potencias:
 
@@ -201,7 +222,7 @@
 
             \columnbreak%
 
-            \part $10^4=$ \fillin[10000][0in] \\[1em]
+            \part $10^4=$ \fillin[10,000][0in] \\[1em]
 
             % \part $\left(\dfrac{1}{3}\right)^3=$ \fillin[$\dfrac{1}{27}$][0in]
 
@@ -214,25 +235,25 @@
         \end{parts}
     \end{multicols}
 
-    \subsection*{\ifprintanswers{Notación científica}\else{}\fi}
+    % \subsection*{\ifprintanswers{Notación científica}\else{}\fi}
 
     \question[6]{Escribe la forma desarrollada de los siguientes números:
 
         \begin{multicols}{3}
             \begin{parts}\large
-                \part $1.0934\times10^{4}=$ \\[3em]
+                \part $1.0934\times10^{4}=$ \fillin[10,934][0in] \\[3em]
 
                 % \part $3.39\times10^{3}=$ \\[1em]
 
                 \columnbreak%
 
-                \part $1.2\times10^{6}=$ \\[3em]
+                \part $1.2\times10^{6}=$ \fillin[1,200,000][0in] \\[3em]
 
                 % \part $4\times10^{2}=$ \\[1em]
 
                 \columnbreak%
 
-                \part $2.08\times10^{5}=$  \\[3em]
+                \part $2.08\times10^{5}=$ \fillin[208,000][0in] \\[3em]
 
                 % \part $0.5\times10^{3}=$ \\[1em]
 
@@ -246,11 +267,11 @@
             \begin{parts}\large
                 % \part $0.04=$ \\[3em]
 
-                \part $760000000=$ \\[1em]
+                \part $760000000=$ \fillin[$7.6\times10^{8}$][0in] \\[3em]
 
                 \columnbreak%
 
-                \part $5000000=$ \\[3em]
+                \part $5000000=$ \fillin[$5\times10^{6}$][0in] \\[3em]
 
                 % \part $0.1=$ \\[1em]
 
@@ -258,34 +279,35 @@
 
                 % \part $25=$  \\[3em]
 
-                \part $1.01=$ \\[1em]
+                \part $1.01=$ \fillin[$1.01\times10^{0}$][0in] \\[3em]
             \end{parts}
         \end{multicols}
     }
 
 
-    \subsection*{\ifprintanswers{Raíces}\else{}\fi}
+    % \subsection*{\ifprintanswers{Raíces}\else{}\fi}
     \question[6]{Calcula las siguientes raíces cuadradas:
         \begin{multicols}{3}
             \begin{parts}\large
-                \part $\sqrt{169}=$\\[3em]
+                \part $\sqrt{169}=$ \fillin[13][0in]\\[3em]
                 % \part $\sqrt{1.44}=$\\[1em]
 
                 \columnbreak%
 
-                \part $\sqrt{0.09}=$\\[3em]
+                \part $\sqrt{0.09}=$ \fillin[0.3][0in] \\[3em]
                 % \part $\sqrt{2.25}=$\\[1em]
 
                 \columnbreak%
 
-                \part $\sqrt{196}=$\\[3em]
+                \part $\sqrt{196}=$ \fillin[14][0in]\\[3em]
                 % \part $\sqrt{900}=$\\[1em]
             \end{parts}
         \end{multicols}
     }
 
-    \section*{\ifprintanswers{Sistema de unidades}\else{}\fi}
-    \subsection*{\ifprintanswers{Unidades de longitud y masa}\else{}\fi}
+    \newpage
+    % \section*{\ifprintanswers{Sistema de unidades}\else{}\fi}
+    % \subsection*{\ifprintanswers{Unidades de longitud y masa}\else{}\fi}
 
     \question[4]{Convierte las siguientes unidades de longitud y de masa como se te pide:
 
@@ -293,7 +315,8 @@
             \begin{parts}
                 \part Convierte 34 m (metros) a Hm (hectómetros)
 
-                \begin{solutionbox}{2.5cm}
+                \begin{solutionbox}{2cm}
+                    \[ 34 \text{ m} = 34 \times \dfrac{1}{100} \text{ Hm}=0.34 \text{ Hm}\]
                 \end{solutionbox}
 
                 % \part Convierte 98 mm (milímetros) a  cm (centímetros)
@@ -303,7 +326,8 @@
 
                 \part Convierte 93.4 mg (miligramos) a gr. (gramos).
 
-                \begin{solutionbox}{2.5cm}
+                \begin{solutionbox}{2cm}
+                    \[ 93.4 \text{ mg} = 93.4 \times \dfrac{1}{1000} \text{ g}=0.0934 \text{ g}\]
                 \end{solutionbox}
 
                 % \part Convierte 29 Dg (decagramos) a mg (miligramos).
@@ -314,7 +338,7 @@
         \end{multicols}
     }
 
-    \subsection*{\ifprintanswers{Unidades de capacidad}\else{}\fi}
+    % \subsection*{\ifprintanswers{Unidades de capacidad}\else{}\fi}
     \question[4]{Convierte las siguientes unidades de capacidad como se te pide:
 
         \begin{multicols}{2}
@@ -327,6 +351,8 @@
                 \part Convierte 19 L (litros) a mL (mililitros).
 
                 \begin{solutionbox}{2cm}
+                    \[ 19 \text{ L} = 19 \times 1000 \text{ mL}=19,000 \text{ mL}\]
+
                 \end{solutionbox}
 
                 \columnbreak%
@@ -339,13 +365,14 @@
                 \part Convierte 567 mm$^3$ (milímetros cúbicos) a L (litros).
 
                 \begin{solutionbox}{2cm}
+                    \[ 567 \text{ mm$^3$} = 567 \times \dfrac{1}{1000^3} \text{ L}=0.000000567 \text{ L}\]
                 \end{solutionbox}
 
             \end{parts}
         \end{multicols}
 
     }
-    \subsection*{\ifprintanswers{Unidades de área y volumen}\else{}\fi}
+    % \subsection*{\ifprintanswers{Unidades de área y volumen}\else{}\fi}
     \question[4]{Convierte las siguientes unidades de área y volumen como se te pide:
 
         \begin{multicols}{2}
@@ -358,11 +385,13 @@
                 \part Convierte 8 km$^2$ (kilómetros cuadrados) a m$^2$ (metros cuadrados).
 
                 \begin{solutionbox}{2cm}
+                    \[ 8 \text{ km$^2$} = 8 \times 100^3 \text{ m$^2$}=8,000,000 \text{ m$^2$}\]
                 \end{solutionbox}
 
                 \part Convierte 18 Dm$^3$ (decámetros cúbicos) a mm$^3$ (milímetros cúbicos).
 
                 \begin{solutionbox}{2cm}
+                    \[ 18 \text{ Dm$^3$} = 18 \times 1000^4 \text{ mm$^3$}=18 \times 10^{12} \text{ mm$^3$}\]
                 \end{solutionbox}
 
                 % \part Convierte 801 mm$^2$ (milímetros cuadrados) a Dm$^2$ (decámetros cuadrados).
