@@ -38,18 +38,23 @@
 \tikzset{every text node part/.style={align=center}}
 \RequirePackage{pgfplots}
 \RequirePackage{lscape}
+\RequirePackage{amssymb,amsmath}
 \input{insbox}
 \usetikzlibrary{
-    angles, quotes,
+    angles,
+    quotes,
     3d,
     arrows,
     positioning,
     matrix,
     calc,
+    chains,
+    cd,
     decorations.pathreplacing,
     decorations.pathmorphing,
     decorations.markings,
     decorations.text,
+    graphs,
     shapes,
     shapes.symbols,
     shapes.geometric,
@@ -58,6 +63,7 @@
     shadows,
     shadows.blur,
     trees,
+    through,
     fit,
     snakes,
     patterns,
@@ -66,6 +72,8 @@
     calendar,
     plotmarks,
     spy,
+    % spring,
+    % orient,
     tikzmark}
 
 \RequirePackage{addfont}
@@ -400,7 +408,6 @@
 \RequirePackage{wrapfig}
 \RequirePackage{multicol,multirow}
 %%%% MATH
-\RequirePackage{amssymb,amsmath}
 \RequirePackage{mathtools}
 \decimalpoint
 \RequirePackage{adjustbox}
