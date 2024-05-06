@@ -72,10 +72,8 @@
     calendar,
     plotmarks,
     spy,
-    % spring,
-    % orient,
-    tikzmark}
-
+    quotes
+}
 \RequirePackage{addfont}
 \RequirePackage{fetamont}
 \RequirePackage{bbold}% se usa como \bbfamily [outlined]
@@ -91,6 +89,7 @@
 \shadowoffsetx{0.75pt}
 \shadowoffsety{0.5pt}
 \shadowrgb{0.3, 0.3, 0.3}
+\RequirePackage{ifthen}
 \RequirePackage[
     % showframe=true,
     letterpaper,
@@ -108,7 +107,12 @@
 \RequirePackage{graphicx}
 \graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{calc}
-\RequirePackage{xparse,xpatch}
+\RequirePackage{xpatch}
+\RequirePackage{mathtools}
+\RequirePackage{xparse}
+\ExplSyntaxOn
+\cs_new_eq:NN \calc \fp_eval:n
+\ExplSyntaxOff
 \RequirePackage{longdivision}
 \RequirePackage{xlop}
 \RequirePackage{titlesec}
@@ -118,7 +122,6 @@
 \titleformat{\subsection}
 {\normalfont\fontsize{10}{5}\bfseries\color{lightgray}}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{0.5em}{0.3em}
-
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
         \node[shape=circle, draw,  minimum size=1.2em, inner sep=0pt, thick] (char) {#1};}}
@@ -295,6 +298,15 @@
         }
 }
 %%%% COMMAND
+\newcommand\quadraticseries[3]{%
+    \def\diff{\calc{#2-#1}}%
+    \def\siff{\calc{#3-#2}}%
+    \def\const{\calc{\siff-\diff}}%
+    \def\fiff{\calc{\siff+\const}}%
+    \def\giff{\calc{\fiff+\const}}%
+    \def\hiff{\calc{\giff+\const}}%
+    \[ \lefteqn{\underbrace{\phantom{{#1},{#2}}}_{\diff}}{#1}, \overbrace{{#2},\lefteqn{\color{red}\underbrace{\phantom{{#3},\calc{#3+\fiff}}}_{\fiff}}{#3}}^{\siff}, \color{red}\overbrace{\calc{#3+\fiff},\lefteqn{\underbrace{\phantom{\calc{#3+\fiff}, \calc{#3+\fiff+\giff}}}_{\hiff}}\calc{#3+\fiff+\giff}}^{\giff}, \calc{#3+\fiff+\giff+\hiff}\]
+}
 \newcommand{\INFO}{%
     \begin{tikzpicture}[remember picture]
         \draw[colorrds,thin,xshift=-1.2\textwidth-5pt ,yshift=0cm,
@@ -408,7 +420,6 @@
 \RequirePackage{wrapfig}
 \RequirePackage{multicol,multirow}
 %%%% MATH
-\RequirePackage{mathtools}
 \decimalpoint
 \RequirePackage{adjustbox}
 \RequirePackage{myboxes}
