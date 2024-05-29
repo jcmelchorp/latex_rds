@@ -17,29 +17,31 @@
 \arrayrulecolor{rdsdark!50}
 %%%% Paquete texto %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{enumitem} % customize enumerate and item
-\RequirePackage{mytcolorboxes}
-\RequirePackage{myboxes}
-\RequirePackage{exam-randomizechoices}
-\RequirePackage{xfrac}
+\RequirePackage{mytcolorboxes,myboxes}
+% \RequirePackage{exam-randomizechoices}
+\RequirePackage{calc}
+\RequirePackage{xfrac,xlop,xparse,xpatch,xstring}
+\RequirePackage{mathtools}
+\ExplSyntaxOn
+\cs_new_eq:NN \calc \fp_eval:n
+\ExplSyntaxOff
 \RequirePackage{cancel}
-\RequirePackage{bohr}
-\RequirePackage{chemfig}
+\RequirePackage{bohr,physics,chemfig}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
 \RequirePackage{forest}
 % \RequirePackage{ragged2e}
-\RequirePackage{physics}
 \renewcommand{\div}{\divisionsymbol}
 \RequirePackage{longdivision}
 \tikzset{>=latex} % for LaTeX arrow head
 \@ifpackageloaded{lipsum}{}{\RequirePackage{lipsum}}
 \@ifpackageloaded{tikz}{}{\RequirePackage{tikz}}
+\usetikzlibrary{quotes,angles,graphs,chains,cd,fit,shadows,shadows.blur,shapes, patterns,calc, arrows,through}
 \RequirePackage{tkz-euclide}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=newest}
 \RequirePackage{lscape}
 \input{insbox}
-\usetikzlibrary{fit,shadows,shadows.blur,shapes, calc, arrows}
 \RequirePackage{fontawesome5}
 \RequirePackage{bbold}% se usa como \bbfamily [outlined]
 \RequirePackage{comfortaa}% se usa en el nombre de la escuela \comfortaa [sand serif]
@@ -67,14 +69,12 @@
 \newcommand{\HUGE}{\fontsize{50}{60}}
 \RequirePackage{graphicx}
 \graphicspath{{../images}} %Setting the graphicspath
-\RequirePackage{xparse,xpatch}
 \RequirePackage[colorlinks = true,urlcolor=colorrds, linkcolor = colorrds]{hyperref}
 \RequirePackage{caption,subcaption,capt-of}
 \RequirePackage{float}
 \RequirePackage{adjustbox}
 \RequirePackage{wrapfig}
 \RequirePackage{multicol}
-\RequirePackage{xlop}
 \newcommand\R{\color{red}}
 \newcommand\B{\color{blue}}
 \newcommand\Y{\color{yellow}}
@@ -167,6 +167,16 @@
         \end{tikzpicture}}%
     \else{}%
     \fi%
+}
+%%%% COMMAND
+\newcommand\quadraticseries[3]{%
+    \def\diff{\calc{#2-#1}}%
+    \def\siff{\calc{#3-#2}}%
+    \def\const{\calc{\siff-\diff}}%
+    \def\fiff{\calc{\siff+\const}}%
+    \def\giff{\calc{\fiff+\const}}%
+    \def\hiff{\calc{\giff+\const}}%
+    \[ \lefteqn{\underbrace{\phantom{{#1},{#2}}}_{\diff}}{#1}, \overbrace{{#2},\lefteqn{\color{red}\underbrace{\phantom{{#3},\calc{#3+\fiff}}}_{\fiff}}{#3}}^{\siff}, \color{red}\overbrace{\calc{#3+\fiff},\lefteqn{\underbrace{\phantom{\calc{#3+\fiff}, \calc{#3+\fiff+\giff}}}_{\hiff}}\calc{#3+\fiff+\giff}}^{\giff}, \calc{#3+\fiff+\giff+\hiff}\]
 }
 \tikzset{
     instructionbox/.style={%dashed,

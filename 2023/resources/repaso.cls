@@ -42,7 +42,6 @@
 \input{insbox}
 \usetikzlibrary{
     angles,
-    quotes,
     3d,
     arrows,
     positioning,
