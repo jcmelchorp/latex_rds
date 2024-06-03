@@ -1,0 +1,13 @@
+Menciona si se trata de un ácido o de una base en disolución acuosa de acuerdo con el modelo de Arrhenius.
+a) Ca(OH)2 (ac) → Ca2+ (ac) + OH- (ac)
+Ácido Base
+b) HCl (ac) → H+ (ac) + Cl- (ac)
+Ácido Base
+c) CH3COOH (ac) → H+ (ac) + CH3COO- (ac)
+Ácido Base
+d) NH4OH (ac) → NH4+(ac) + OH- (ac)
+Ácido Base
+e) KOH (ac) → K+ (ac) + OH- (ac)
+Ácido Base
+f) HCN (ac) → H+ (ac) + CN- (ac)
+Ácido Base

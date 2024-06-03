@@ -1,0 +1,10 @@
+Ordena los siguientes pasos de acuerdo con la ruta que sigue un medicamento en el organismo.
+1. El fármaco es absorbido por el estómago o el intestino.
+
+2. El medicamento se administra vía oral o intravenosa.
+
+3. El medicamento se disuelve y se distribuye a través de la sangre.
+
+4. Los residuos del fármaco se eliminan a través de la orina.
+
+5. Las enzimas metabolizan el medicamento cuando llegan al hígado.
