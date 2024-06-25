@@ -136,7 +136,7 @@
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
-\renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
+\renewcommand{\solutiontitle}{\noindent\hspace{-0.2cm}}
 %\renewcommand\questionlabel{\color{Sepia}\bfseries\comfortaa\fbox{\thequestion}}
 \renewcommand\questionlabel{}
 \pointsinmargin
@@ -297,6 +297,9 @@
         }
 }
 %%%% COMMAND
+\newcommand\fracquestion[2]{%
+    \begin{minipage}[c][][t]{0.8cm}\begin{solutionbox}{1.3cm}\large\fillin[#1][0in]\end{solutionbox} \end{minipage}\hfill\begin{minipage}[c][][t]{0.7\linewidth} #2 \end{minipage}%
+}
 \newcommand\quadraticseries[3]{%
     \def\diff{\calc{#2-#1}}%
     \def\siff{\calc{#3-#2}}%
