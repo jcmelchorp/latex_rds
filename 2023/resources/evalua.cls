@@ -169,6 +169,9 @@
     \fi%
 }
 %%%% COMMAND
+\newcommand\fracquestion[2]{%
+    \begin{minipage}[c][][t]{0.8cm}\begin{solutionbox}{1.3cm}\large\fillin[#1][0in]\end{solutionbox} \end{minipage}\hfill\begin{minipage}[c][][t]{0.7\linewidth} #2 \end{minipage}%
+}
 \newcommand\quadraticseries[3]{%
     \def\diff{\calc{#2-#1}}%
     \def\siff{\calc{#3-#2}}%
