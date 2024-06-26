@@ -300,6 +300,36 @@
 \newcommand\fracquestion[2]{%
     \begin{minipage}[c][][t]{0.8cm}\begin{solutionbox}{1.3cm}\large\fillin[#1][0in]\end{solutionbox} \end{minipage}\hfill\begin{minipage}[c][][t]{0.7\linewidth} #2 \end{minipage}%
 }
+\newcount\segmentsleft
+\tikzset{pics/.cd,
+    circle fraction/.style args={#1/#2}{code={%
+                    \segmentsleft=#1\relax
+                    \pgfmathloop
+                    \ifnum\segmentsleft<1\else
+                    \ifnum\segmentsleft<#2 \edef\n{\the\segmentsleft}\else\def\n{#2}\fi
+                    \begin{scope}[shift={(\pgfmathcounter,0)}]
+                        \foreach \i [evaluate={\a=360/#2*(\i-1)+90;}] in {1,...,\n}
+                        \fill[fill=lightgray] (0,0) -- (\a:3/8) arc (\a:\a+360/#2:3/8) -- cycle;
+                        \draw circle [radius=3/8];
+                        \ifnum#2>1
+                            \foreach \i [evaluate={\a=360/#2*(\i-1);}] in {1,...,#2}
+                            \draw (0,0) -- (90+\a:3/8);
+                        \fi
+                    \end{scope}
+                    \advance\segmentsleft by-#2
+                    \repeatpgfmathloop
+                }}
+}
+\newcommand{\circlefraction}[2]{
+    \adjustbox{
+        stack,
+        min size={0.2\textwidth}{80pt},
+        max size={0.5\textwidth}{180pt}
+    }{
+        \begin{tikzpicture}
+            \pic  at (0, 0) {circle fraction={#1/#2}};
+        \end{tikzpicture} }%
+}
 \newcommand\quadraticseries[3]{%
     \def\diff{\calc{#2-#1}}%
     \def\siff{\calc{#3-#2}}%
