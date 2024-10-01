@@ -1,0 +1,117 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+
+\definecolor{colorrds}{HTML}{0060A0}
+\definecolor{rdsdark}{HTML}{003050}
+\definecolor{gold}{RGB}{239,173,91}
+
+\usetikzlibrary{decorations.shapes}
+
+\begin{tikzpicture}
+    \def\ang{30}
+    \foreach \i in {0,1,2,...,11}{
+            \begin{scope}[rotate=\i*\ang]
+
+                \draw[colorrds,fill=colorrds](0,0) to (8,0) to [bend
+                    right=45]  (\ang:8cm) -- cycle;
+
+                \foreach \j in {2,4,...,\ang} {
+                        \draw[thin, gold] (0,0) -- (\j:\j*0.03cm+7cm);
+                    }
+
+                \draw[line width=10mm, colorrds] (7.5,0) to [bend right=45]
+                (\ang:7.5cm);
+
+                \draw[fill=colorrds, colorrds, ultra thick] (0,0) --
+                (2.2,0) to [bend right=60]
+                (\ang:2.2cm) -- cycle;
+            \end{scope}
+        }
+
+    \foreach \i in {0,1,2,...,11}{
+            \begin{scope}[rotate=\i*\ang]
+
+                \foreach \k in {0.4,0.6,...,1.6} {
+                        \draw[thick, rdsdark] (\k,0) to [bend right=60] (\ang:\k
+                        cm);
+                    }
+
+                \draw[ultra thick, gold] (2,0) to [bend right=60] (\ang:2cm);
+                \draw[ultra thick, gold] (2.1,0) to [bend right=60] (\ang:2.1cm);
+                \draw[ultra thick, gold] (2.2,0) to [bend right=60] (\ang:2.2cm);
+
+                \draw[gold, decorate, decoration={shape
+                            backgrounds,shape=circle,shape
+                            size=0.5mm,shape sep=1mm}] (1.7,0) to [bend
+                    right=60] (\ang:1.7cm);
+                \draw[gold, decorate, decoration={shape
+                            backgrounds,shape=circle,shape
+                            size=0.5mm,shape sep=1mm}] (1.8,0) to [bend
+                    right=60] (\ang:1.8cm);
+
+                \draw[very thick, rdsdark] (0,0) --(2.2,0);
+
+                \draw[line width=3mm, gold] (7,0) to [bend right=45] (\ang:7cm);
+
+                \draw[gold, thick, decorate, decoration={shape
+                            backgrounds,shape=circle,shape size=1.8mm,shape
+                            sep=3.05mm}] (7.4,0) to [bend
+                    right=45] (\ang:7.4cm);
+
+                \draw[ultra thick, rdsdark, fill=colorrds] (2.2,0) ..
+                controls (3,-0.2) and
+                (5.8,3.1) .. (6,0);
+                \draw[ultra thick, rdsdark, fill=colorrds] (2.2,0) ..
+                controls (3,0.2) and
+                (5.8,-3.1) .. (6,0);
+
+                \draw[ultra thick, rdsdark] (4,0.92) .. controls (4.5,1) and
+                (4.7,0) ..
+                (5,0);
+                \draw[ultra thick, rdsdark] (4,-0.92) .. controls (4.5,-1) and
+                (4.7,0) ..
+                (5,0);
+
+                \draw[ultra thick, rdsdark] (2.4,0) .. controls (4.5,1) and
+                (4.5,0) ..
+                (2.4,0);
+                \draw[ultra thick, rdsdark] (2.4,0) .. controls (4.5,-1) and
+                (4.5,0) ..
+                (2.4,0);
+
+                \draw[very thick, gold] (3.8,0) circle (0.2cm);
+                \draw[very thick, gold] (4.15,0) circle (0.15cm);
+                \draw[very thick, gold] (4.4,0) circle (0.1cm);
+                \draw[very thick, gold] (4.55,0) circle (0.05cm);
+
+                \draw[very thick, rdsdark] (5.5,0) circle (0.5cm);
+                \filldraw[rdsdark, inner color=colorrds,outer color=rdsdark]
+                (5.5,0) circle
+                (0.5cm);
+
+                \draw[very thick, rdsdark] (5,0.65) circle (0.3cm);
+                \draw[very thick, rdsdark] (5,-0.65) circle (0.3cm);
+                \draw[very thick, rdsdark] (4.55,0.8) circle (0.15cm);
+                \draw[very thick, rdsdark] (4.55,-0.8) circle (0.15cm);
+
+                \draw[ultra thick, rdsdark, fill=colorrds] (6,0) .. controls
+                (6.4,1.2) and
+                (6.9,0) .. (7,0);
+                \draw[ultra thick, rdsdark, fill=colorrds] (6,0) .. controls
+                (6.4,-1.2) and
+                (6.9,0) .. (7,0);
+
+                \foreach \j in {0,0.2,0.4,0.6,0.8,1}{
+                        \draw[very thick, rdsdark, dotted] (6,0) .. controls
+                        (6.4,1-\j) and (6.9,0)
+                        .. (7,0);
+                        \draw[very thick, rdsdark, dotted] (6,0) .. controls
+                        (6.4,-1+\j) and (6.9,0)
+                        .. (7,0);
+                    }
+            \end{scope}
+        }
+\end{tikzpicture}
+
+\end{document}

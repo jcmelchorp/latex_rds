@@ -12,9 +12,9 @@
 		"latex-workshop.showContextMenu": true,
 		"latex-workshop.latex.autoBuild.run": "onSave",
 		"latex-workshop.check.duplicatedLabels.enabled": true,
-		"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/2023/out",
+		"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/2425/out",
 		"latex-workshop.latex.texDirs": [
-			"%WORKSPACE_FOLDER%/2023/resources",
+			"%WORKSPACE_FOLDER%/2425/resources",
 			"%DIR%/base",
 			"%DIR%/image",
 			"%DIR%/base/pgf-periodictable",
@@ -33,7 +33,7 @@
 					"%DOC%"
 				],
 				"env": {
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/:%DIR%/base/pgf-periodictable/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2425/resources/:%DIR%/base/:%DIR%/base/pgf-periodictable/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:"
 				}
 			},
 			{
@@ -83,7 +83,7 @@
 					"%DOC%"
 				],
 				"env": {
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/2023/resources/:%DIR%/base/:%DIR%/base/pgf-periodictable/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2425/resources/:%DIR%/base/:%DIR%/base/pgf-periodictable/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:"
 				}
 			},
 			{

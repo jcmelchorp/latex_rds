@@ -1,0 +1,44 @@
+\documentclass[12pt,addpoints]{evalua}
+\grado{3$^\circ$ de Secundaria}
+\cicloescolar{2022-2023}
+\materia{Ciencias y Tecnología: Química}
+\unidad{2}
+\title{Examen de la Unidad}
+\aprendizajes{
+        \item Deduce información acerca de la estructura atómica
+              a partir de datos experimentales sobre propiedades
+              atómicas periódicas.
+        \item Representa y diferencia mediante esquemas, modelos y
+              simbología química, elementos y compuestos, así como
+              átomos y moléculas.
+        \item Explica y predice propiedades físicas de los materiales
+              con base en modelos submicroscópicos sobre la
+              estructura de átomos, moléculas o iones, y sus
+              interacciones electrostáticas.
+}
+\author{Prof.: Julio César Melchor Pinto}
+\include{../blocks/periodic_table}
+\begin{document}
+\begin{questions}
+    \question[15] \include*{../questions/question012}
+    \newpage
+    \question[15] \include*{../questions/question005}
+    \question[15] \include*{../questions/question009}
+    \newpage
+    \question[15] \include*{../questions/question004}
+    \newpage
+    \question[20] \include*{../questions/question015}
+    \question[20] \include*{../questions/question013}
+\end{questions}
+\begin{landscape}
+    \begin{minipage}[b]{\textwidth}
+        \thispagestyle{foot}
+        \begin{table}[H]
+            \centering
+            \caption{Tabla Peri\'odica de los Elementos.}
+            \TablaPeriodica[0.48]
+            \label{tab:periodic_table}
+        \end{table}
+    \end{minipage}
+\end{landscape}
+\end{document}
