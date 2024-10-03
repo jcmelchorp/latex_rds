@@ -1,0 +1,34 @@
+{
+	"ejemplosboxed": {
+		"scope": "latex,tex",
+		"prefix": "ejemplosboxed",
+		"body": [
+			"\\ejemplosboxed[{",
+			"\t\\begin{multicols}{2}",
+			"\t\t\\begin{parts}",
+			"\t\t\t\\part  \\fillin[][0.5cm]",
+			"\t\t\t\\begin{solutionbox}{2cm}",
+			"\t\t\t\\end{solutionbox}",
+			"\t\t\t\\part \\fillin[][0.5cm]",
+			"\t\t\t\\begin{solutionbox}{2cm}",
+			"\t\t\t\\end{solutionbox}",
+			"\t\t\\end{parts}",
+			"\t\\end{multicols}",
+			"}]"
+			],
+		"description": "Custom question fancybox in exam Class"
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

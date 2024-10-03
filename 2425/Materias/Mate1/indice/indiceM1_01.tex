@@ -1,0 +1,165 @@
+\documentclass[12pt]{book}
+\usepackage[undotted]{minitoc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{longdivision}
+\usetikzlibrary{shadows.blur}
+\usepackage{titlesec}
+\usepackage{pgfkeys}
+\usepackage{multicol}
+%% equivalencias al entero
+\newcounter{CountOfSections}
+\newcommand{\fracgraph}[3][1]{%
+    % #1 = optional height
+\begin{tikzpicture}
+    \draw (0,0) rectangle (#2,#1) node [midway] {1};
+
+    \setcounter{CountOfSections}{0}%
+    \foreach \Size/\Options in {#3} {%
+        \stepcounter{CountOfSections}%
+        \pgfmathsetmacro{\YCoord}{#1*\arabic{CountOfSections}}%
+        \draw  (0,-\YCoord) rectangle (#2,-\YCoord+#1);
+        \pgfmathsetmacro{\Xincrement}{#2/\Size}%
+         \foreach \x in {1,...,\Size} {%
+            \pgfmathsetmacro{\Xcoord}{\x*\Xincrement}%
+            \pgfmathsetmacro{\XcoordLabel}{(\x-0.5)*\Xincrement}%
+            \draw [fill=\Options]  ($(\Xcoord-\Xincrement,-\YCoord)$)  rectangle ($(\Xcoord,-\YCoord+#1)$);
+            \node at ($(\XcoordLabel,-\YCoord+0.5*#1)$) {$\frac{1}{\Size}$};
+        }%
+    }%
+\end{tikzpicture}
+}
+%%%%
+%% Recta numérica (intervalo)
+\newcommand{\rectnuminterval}[5][]{
+        \begin{tikzpicture}[#1]
+            \draw[very thick] (#2,0.5) -- (#3,0.5);
+            \path [draw=black, fill=#4] (#2,0.5) circle (2pt);
+            \path [draw=black, fill=#5, thick] (#3,0.5) circle (2pt);
+            \draw[latex-latex] (-3.5,0) -- (3.5,0) ;
+            \foreach \x in  {-3,-2,-1,0,1,2,3}
+            \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+            \foreach \x in {-3,-2,-1,0,1,2,3}
+            \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below]
+            {$\x$};
+        \end{tikzpicture}
+    }
+%%%%
+\addtocontents{toc}{\setcounter{tocdepth}{4}}
+\setcounter{minitocdepth}{3}
+\nomtcrule         % removes rules = horizontal lines from minitocs
+\nomtcpagenumbers  % remove page numbers from minitocs
+
+\newcommand{\mychapter}[1]{
+    \thispagestyle{empty}
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+    \mtcaddchapter{}
+    \mtcsettitle{minitoc}{}
+    {\Large \scshape En esta unidad estudiaremos \dots}
+    \minitoc
+    \newpage
+    \thispagestyle{empty} \mbox{}
+    \newpage
+}
+\addto\captionsspanish{%
+    \renewcommand{\chaptername}{Unidad}
+    \renewcommand{\contentsname}{Contenido} 
+}
+%\usepackage{remreset}
+% \makeatletter
+% \@removefromreset{section}{chapter}
+% \makeatother
+% \renewcommand{\thechapter}{\arabic{chapter}}
+% \newcommand*\chapterlabel{}
+% \titleformat{\chapter}
+
+\begin{document}
+\dominitoc[n]%% Crea minitoc
+\title{Matemáticas 1}
+\author{Melchor Pinto, JC}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\begin{mainmatter}
+    \mychapter{Unidad 1}
+
+
+
+
+
+
+
+    \mychapter{Unidad 2}
+
+    \section{Perímetros y áreas de figuras geométricas}
+    \subsection{Perímetro de triángulos y cuadriláteros}
+    \subsection{Áreas de triángulos y cuadriláteros}
+
+    \section{\'Angulos, tri\'angulos y cuadril\'ateros}
+    \subsection{\'Angulos y rectas paralelas}
+    \subsection{Suma de los \'angulos interiores de un tri\'angulo y de un cuadril\'atero}
+    \subsubsection{\'Angulos de un tri\'angulo}
+    \subsubsection{\'Angulos de un cuadril\'atero}
+
+    \section{Medidas de tendencia central}
+    \subsection{Media aritm\'etica o promedio}
+    \subsubsection{El rango}
+    \subsection{La mediana}
+    \subsection{La moda}
+
+    \section{El azar y la probabilidad frecuencial}
+    \subsection{Tipos, recolección y organización de datos}
+    \subsection{Experimentos aleatorios y deterministas}
+    \subsection{Espacio muestral de un experimento aleatorio}
+    \subsection{Cálculo de la probabilidad frecuencial}
+
+    \mychapter{Unidad 3}
+
+    \section{Proporcionalidad}
+    \subsection{Valor faltante}
+    \subsection{Razón unitaria}
+    \subsection{Porcentajes}
+    \subsubsection{Cálculo del porcentaje}
+    \subsubsection{Problemas con porcentajes}
+    \subsection{Gráficas circulares}
+    \subsubsection{Recolecta y registra datos}
+    \subsubsection{Registra datos en gráficas circulares}
+    \subsubsection{Leer e interpretar datos en gráficas circulares}
+
+    \section{Situaciones de variación proporcional}
+    \subsection{Comparación de situaciones de variación proporcional con tablas}
+    \subsection{Comparación de situaciones de variación proporcional con gráficas}
+    \subsection{Comparación de situaciones de variación proporcional con expresiones algebraicas}
+
+    \section{Pendiente de una recta y razón de cambio}
+    \subsection{Variación proporcional y pendiente}
+    \subsection{Razón de cambio y variación}
+    \subsection{Efectos en la recta al cambiar la pendiente}
+    \subsection{Efectos en la recta al cambiar la ordenada al origen}
+
+    \section{Análisis y comparación de situaciones de variación lineal}
+    \subsection{Efectos de la recta al cambiar la ordenada al origen}
+    \subsection{Situaciones de variación lineal asociadas a la física, la biología y la economía}
+
+
+    \section{Fundamentos de álgebra}
+    \subsection{Lenguaje algebraico y expresiones algebraicas}
+    \subsection{Aritmética de expresiones algebraicas}
+    \subsubsection{Adición de expresiones algebraicas}
+    \subsubsection{Producto y cociente de números racionales con expresiones algebraicas}
+    \subsection{Ecuaciones}
+    \subsubsection{Solución de ecuaciones}
+
+
+
+
+
+\end{mainmatter}
+\end{document}
