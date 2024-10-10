@@ -135,7 +135,7 @@
 \AtBeginEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{oneparcheckboxes}{\vspace{0.8\baselineskip}}
+\AtEndEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \renewcommand{\solutiontitle}{\noindent\hspace{-0.2cm}}
 %\renewcommand\questionlabel{\color{Sepia}\bfseries\comfortaa\fbox{\thequestion}}
 \renewcommand\questionlabel{}
