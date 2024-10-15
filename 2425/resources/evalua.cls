@@ -117,7 +117,7 @@
 \renewcommand{\thepartno}{\alph{partno}}
 \renewcommand{\partlabel}{\color{SubjectColor}\normalsize\circled{{{\color{BrickRed!65!black}\thequestion}\thepartno}}}
 \renewcommand{\solutiontitle}{\noindent\textbf{Soluci\'on:}\par\noindent}
-\checkboxchar{\LARGE\faIcon[regular]{square}}
+\checkboxchar{\faIcon[regular]{square}}
 \CorrectChoiceEmphasis{\color{red!50!gray}\bf}
 \checkedchar{\faIcon[regular]{check-square}}
 % \pointsinmargin
@@ -286,9 +286,9 @@
 \extraheadheight[2cm]{0.5cm}
 \firstpageheader{}{
 {\LARGE\color{colorrds}  Escuela Rafael D\'iaz Serd\'an}\LOGO\\
+{\bfseries\large\color{MainColor}\thegrado \ (\thecicloescolar)}\\
 {\bfseries\large\color{SubjectColor}\themateria} \\
-{\large\color{MainColor}\thegrado \ (\thecicloescolar)}\\
-\textbf{\@title \ \theunidad}\\
+{\@title \ \theunidad}\\
 {\small \@author}
 \thecontrol[yshift=-4cm,xshift=-0.6\textwidth,scale=1.5]
 }{}
@@ -302,10 +302,17 @@
 \fi
 \runningfooter{}{  \color{colorrds}\thepage \ de \numpages}{}
 \runningheadrule
-\vspace{1cm}
+
+\vspace{0.2cm}
+
 \begin{minipage}{\textwidth}
     \makebox[0.73\linewidth]{\textbf{\comfortaa \color{Sepia} Nombre del alumno: } \DrawLine[9cm]}
     \makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}
+\end{minipage}
+\vspace*{0.1cm}
+
+\begin{minipage}{\textwidth}
+    \makebox[\linewidth]{\textbf{\comfortaa \color{Sepia} Evaluador: } \DrawLine[15.5cm]}
 \end{minipage}
 
 \vspace{0.2cm}
