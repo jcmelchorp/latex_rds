@@ -22,7 +22,7 @@
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
-\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arraystretch}{1}
 \RequirePackage{mytcolorboxes}
 \RequirePackage{forest}
 \RequirePackage{tikz}
