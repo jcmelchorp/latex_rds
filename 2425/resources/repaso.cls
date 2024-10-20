@@ -126,14 +126,14 @@
         \node[shape=circle, draw,  minimum size=1.2em, inner sep=0pt, thick] (char) {#1};}}
 \renewcommand\choicelabel{\circled{\thechoice}}
 \setlength\linefillheight{.2in}
-\AtBeginEnvironment{solutionbox}{\vspace{-0.2\baselineskip}}
-\AtEndEnvironment{solutionbox}{\vspace{0.2\baselineskip}}
+\AtBeginEnvironment{solutionbox}{\vspace{-0.1\baselineskip}}
+\AtEndEnvironment{solutionbox}{\vspace{0.1\baselineskip}}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
-\AtEndEnvironment{choices}{\vspace{0.8\baselineskip}}
+\AtEndEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtBeginEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{oneparchoices}{\vspace{0.1\baselineskip}}
-\AtBeginEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
-\AtEndEnvironment{checkboxes}{\vspace{0.8\baselineskip}}
+\AtBeginEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
+\AtEndEnvironment{checkboxes}{\vspace{0.1\baselineskip}}
 \AtBeginEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{oneparcheckboxes}{\vspace{0.1\baselineskip}}
 \renewcommand{\solutiontitle}{\noindent\hspace{-0.2cm}}
