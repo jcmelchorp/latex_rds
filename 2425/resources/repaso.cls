@@ -22,7 +22,7 @@
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
-\renewcommand{\arraystretch}{1}
+\renewcommand{\arraystretch}{1.2}
 \RequirePackage{mytcolorboxes}
 \RequirePackage{forest}
 \RequirePackage{tikz}
@@ -117,7 +117,7 @@
 \RequirePackage{titlesec}
 \titleformat{\section}
 {\normalfont\fontsize{10}{5}\bfseries\color{gray}}{\thesection}{0.5em}{}
-\titlespacing*{\section}{0pt}{0.5em}{0.3em}
+\titlespacing*{\section}{0pt}{0em}{0.3em}
 \titleformat{\subsection}
 {\normalfont\fontsize{10}{5}\bfseries\color{lightgray}}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{0.5em}{0.3em}
