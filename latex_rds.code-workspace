@@ -11,7 +11,7 @@
 		"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
 		"latex-workshop.linting.chktex.enabled": true,
 		"latex-workshop.showContextMenu": true,
-		"latex-workshop.formatting.latex": "latexindent",
+		"latex-workshop.formatting.latex": "tex-fmt",
 		"latex-workshop.latex.autoBuild.run": "onSave",
 		"latex-workshop.check.duplicatedLabels.enabled": true,
 		"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/2425/out",
