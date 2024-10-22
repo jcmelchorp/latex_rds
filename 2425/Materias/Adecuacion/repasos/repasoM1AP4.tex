@@ -13,6 +13,9 @@
 \author{Melchor Pinto, JC}
 \begin{document}
 \INFO
+\begin{multicols}{2}
+	\tableofcontents
+\end{multicols}\newpage
 \begin{questions}\large
 	\addcontentsline{toc}{section}{Unidad 1}
 	\section*{Unidad 1}
@@ -62,6 +65,7 @@
 		\end{multicols}
 	}
 
+
 	\questionboxed[2]{Escribe en números romanos los siguientes números
 
 		\begin{multicols}{4}
@@ -84,6 +88,25 @@
 
 	\addcontentsline{toc}{subsection}{Sistema decimal}
 	\subsection*{Sistema decimal}
+
+	% \subsection*{\ifprintanswers{Notación desarrollada 1                        }\else{}\fi}
+	% \subsection*{\ifprintanswers{Notación desarrollada 2                        }\else{}\fi}
+	\questionboxed[4]{Escribe la notación desarrollada de cada uno de los siguientes números:
+
+		\begin{multicols}{2}
+			\begin{parts}
+				\part $818 =$ \fillin[$800+10+8$][2.4in]
+				\part $936 =$ \fillin[$900+30+6$][2.4in]
+				% \part $4936 =$ \fillin[$4000+900+30+6$][2.4in]
+				\part $2096=$ \fillin[$2000+90+6$][2.4in]
+				\part $4818 =$ \fillin[$4000+800+10+8$][2.4in]
+				% \part $7145 =$ \fillin[$7000+100+40+5$][2.4in]
+				\part $19679=$ \fillin[$10000+9000+600+70+9$][2.4in]
+				\part $26324=$ \fillin[$20000+6000+300+20+4$][2.4in]
+			\end{parts}
+		\end{multicols}
+	}
+
 	% \subsection*{\ifprintanswers{Posicionamiento decimal 1                      }\else{}\fi}
 	% \subsection*{\ifprintanswers{Posicionamiento decimal 2                      }\else{}\fi}
 
@@ -190,23 +213,7 @@
 		\end{multicols}
 	}
 
-	% \subsection*{\ifprintanswers{Notación desarrollada 1                        }\else{}\fi}
-	% \subsection*{\ifprintanswers{Notación desarrollada 2                        }\else{}\fi}
-	\questionboxed[4]{Escribe la notación desarrollada de cada uno de los siguientes números:
 
-		\begin{multicols}{2}
-			\begin{parts}
-				\part $818 =$ \fillin[$800+10+8$][2.4in]
-				\part $936 =$ \fillin[$900+30+6$][2.4in]
-				% \part $4936 =$ \fillin[$4000+900+30+6$][2.4in]
-				\part $2096=$ \fillin[$2000+90+6$][2.4in]
-				\part $4818 =$ \fillin[$4000+800+10+8$][2.4in]
-				% \part $7145 =$ \fillin[$7000+100+40+5$][2.4in]
-				\part $19679=$ \fillin[$10000+9000+600+70+9$][2.4in]
-				\part $26324=$ \fillin[$20000+6000+300+20+4$][2.4in]
-			\end{parts}
-		\end{multicols}
-	}
 
 	\addcontentsline{toc}{subsection}{Tablas de multiplicar}
 	\subsection*{Tablas de multiplicar}
@@ -500,7 +507,7 @@
 		\begin{multicols}{3}
 			\begin{parts}
 				\part \ifprintanswers{   \opmul[hfactor=decimal,resultstyle=\color{red},displayintermediary=None]{314}{2} }
-				\else{            \opmul[hfactor=decimal,resultstyle=\color{white},displayintermediary=None]{314}{2}\\[0.5cm] }
+				\else{            \opmul[hfactor=decimal,resultstyle=\color{white},displayintermediary=None]{314}{2}\\[0.2cm] }
 				\fi
 
 				\part \ifprintanswers{   \opmul[hfactor=decimal,resultstyle=\color{red},displayintermediary=None]{283}{44} }
@@ -533,35 +540,35 @@
 		\begin{multicols}{4}
 			\begin{parts}
 				\part \ifprintanswers{\large\opidiv{23}{6}} \\[2em]
-				\else{           $6 \overline{) \ 23\ }$} \\[4em]
+				\else{           $6 \overline{) \ 23\ }$} \\[3em]
 				\fi
 
 				\part \ifprintanswers{\large\opidiv{200}{3}} \\[2em]
-				\else{           $3 \overline{) \ 200\ }$} \\[4em]
+				\else{           $3 \overline{) \ 200\ }$} \\[3em]
 				\fi
 
 				\part \ifprintanswers{\large\opidiv{99}{8}} \\[2em]
-				\else{           $8 \overline{) \ 99\ }$} \\[4em]
+				\else{           $8 \overline{) \ 99\ }$} \\[3em]
 				\fi
 
 				\part \ifprintanswers{\large\opidiv{283}{6}} \\[2em]
-				\else{           $6 \overline{) \ 283\ }$} \\[4em]
+				\else{           $6 \overline{) \ 283\ }$} \\[3em]
 				\fi
 
 				\part \ifprintanswers{\large\opidiv{4032}{8}} \\[2em]
-				\else{           $8 \overline{) \ 4032\ }$} \\[4em]
+				\else{           $8 \overline{) \ 4032\ }$} \\[3em]
 				\fi
 
 				\part \ifprintanswers{\large\opidiv{644}{8}} \\[2em]
-				\else{           $8 \overline{) \ 644\ }$} \\[4em]
+				\else{           $8 \overline{) \ 644\ }$} \\[3em]
 				\fi
 
 				\part \ifprintanswers{\large\opidiv{656}{7}} \\[2em]
-				\else{           $7 \overline{) \ 656\ }$} \\[4em]
+				\else{           $7 \overline{) \ 656\ }$} \\[3em]
 				\fi
 
 				\part \ifprintanswers{\large\opidiv{2303}{7}} \\[2em]
-				\else{           $7 \overline{) \ 2303\ }$} \\[4em]
+				\else{           $7 \overline{) \ 2303\ }$} \\[3em]
 				\fi
 			\end{parts}
 		\end{multicols}
