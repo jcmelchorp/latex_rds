@@ -6,9 +6,9 @@
 		}
 	],
 	"settings": {
-		"editor.formatOnSave": true,
+		"editor.formatOnSave": false,
 		"editor.formatOnType": false,
-		"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+		"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
 		"latex-workshop.linting.chktex.enabled": true,
 		"latex-workshop.showContextMenu": true,
 		"latex-workshop.formatting.latex": "tex-fmt",

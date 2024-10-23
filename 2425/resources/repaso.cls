@@ -15,14 +15,17 @@
 \setlength{\parskip}{1em}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 \RequirePackage{enumitem}
+\RequirePackage{xpatch}
 \RequirePackage{xfrac}
+\RequirePackage{xlop}
+\RequirePackage{calculator}
 \RequirePackage{cancel}
 \RequirePackage{bohr}
 \RequirePackage{chemfig}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
 \arrayrulecolor{rdsdark!80}
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1}
 \RequirePackage{mytcolorboxes}
 \RequirePackage{forest}
 \RequirePackage{tikz}
@@ -37,6 +40,7 @@
 \tikzset{vector/.style={>=stealth,->}}
 \tikzset{every text node part/.style={align=center}}
 \RequirePackage{pgfplots}
+% \pgfplotsset{compat=1.18}
 \RequirePackage{lscape}
 \RequirePackage{amssymb,amsmath}
 \input{insbox}
@@ -106,14 +110,11 @@
 \RequirePackage{graphicx}
 \graphicspath{{../images}} %Setting the graphicspath
 \RequirePackage{calc}
-\RequirePackage{xpatch}
 \RequirePackage{mathtools}
-\RequirePackage{xparse}
-\ExplSyntaxOn
-\cs_new_eq:NN \calc \fp_eval:n
-\ExplSyntaxOff
-\RequirePackage{longdivision}
-\RequirePackage{xlop}
+% \RequirePackage{xparse}
+% \ExplSyntaxOn
+% \cs_new_eq:NN \calc \fp_eval:n
+% \ExplSyntaxOff
 \RequirePackage{titlesec}
 \titleformat{\section}
 {\normalfont\fontsize{10}{5}\bfseries\color{gray}}{\thesection}{0.5em}{}
@@ -444,7 +445,6 @@
 \RequirePackage{caption,subcaption,capt-of}
 %%%% LINKS
 % \RequirePackage{pst-all}
-
 \RequirePackage{float}
 \RequirePackage{lipsum}
 \RequirePackage{bookmark,booktabs}
