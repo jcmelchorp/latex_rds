@@ -236,10 +236,6 @@
 \newcommand{\gradesbox}[2][fill=white]{%
     \begin{tikzpicture}%
         \node[gradesbox, #1] (box) {%
-        \adjustbox{
-        min size={0.05\textwidth}{50pt},
-        max size={0.9\linewidth}{78pt}
-        }{%
         \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Ganados}\vtword{Total}%
         \arrayrulecolor{colorrds!30}%
         \ifnum\numquestions>7%
@@ -252,9 +248,9 @@
             }%
             \else{\gradetable[h][questions]}%
         \fi%
-        }%
+        %}%
         };
-        \node[gradetableboxtitle,xshift=-112pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} #2};
+        \node[gradetableboxtitle,xshift=-200pt,yshift=4pt] at (box.north east) {\bfseries \LARGE \comfortaa \color{Sepia} #2};
     \end{tikzpicture}%
 }
 \newcommand{\instructionbox}[3][fill=white]{%
@@ -342,7 +338,12 @@
         }
     \end{minipage}\hfill%
     \begin{minipage}[t][][b]{.4\textwidth}
-        \gradesbox{Calificación:}%
+        \adjustbox{
+            min size={0.05\textwidth}{50pt},
+            max size={0.9\textwidth+3pt}{400pt}
+            }{%
+            \gradesbox{Calificación:}%
+            }%
     \end{minipage}
 \end{minipage}%
 }

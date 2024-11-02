@@ -8,12 +8,12 @@
 	"settings": {
 		"editor.formatOnSave": false,
 		"editor.formatOnType": false,
-		"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+		"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
 		"latex-workshop.linting.chktex.enabled": true,
 		"latex-workshop.showContextMenu": true,
 		"latex-workshop.formatting.latex": "tex-fmt",
 		"latex-workshop.latex.autoBuild.run": "onSave",
-		"latex-workshop.check.duplicatedLabels.enabled": true,
+		"latex-workshop.check.duplicatedLabels.enabled": false,
 		"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/2425/out",
 		"latex-workshop.latex.texDirs": [
 			"%WORKSPACE_FOLDER%/2425/resources",
