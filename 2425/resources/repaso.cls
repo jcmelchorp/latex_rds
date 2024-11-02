@@ -380,7 +380,7 @@
         {%
         \adjustbox{
         min size={0.05\textwidth}{50pt},
-        max size={0.36\textwidth+3pt}{80pt}
+        max size={0.45\textwidth+3pt}{130pt}
         }{%
         \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Obtenidos}\vtword{Total}%
         \arrayrulecolor{colorrds!30}%
