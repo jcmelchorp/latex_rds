@@ -24,6 +24,11 @@
 \RequirePackage{chemfig}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    % \addtocounter{page}{-1}%
+    \newpage}
 \arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1}
 \RequirePackage{mytcolorboxes}

@@ -29,6 +29,13 @@
 \RequirePackage{bohr,physics,chemfig}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
+\RequirePackage{afterpage}
+\newcommand\blankpage{%
+   \clearpage%
+    \thispagestyle{plain}%
+    % \addtocounter{page}{-1}%
+     \null%
+     \newpage}
 \RequirePackage{forest}
 % \RequirePackage{ragged2e}
 \renewcommand{\div}{\divisionsymbol}
