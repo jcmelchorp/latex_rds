@@ -24,11 +24,13 @@
 \RequirePackage{chemfig}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{array}
+\RequirePackage{afterpage}
 \newcommand\blankpage{%
-    \null
-    \thispagestyle{empty}%
+   \clearpage%
+    \thispagestyle{plain}%
     % \addtocounter{page}{-1}%
-    \newpage}
+     \null%
+     \newpage}
 \arrayrulecolor{rdsdark!80}
 \renewcommand{\arraystretch}{1}
 \RequirePackage{mytcolorboxes}
@@ -392,7 +394,7 @@
         \ifnum\numquestions>7%
             {
             \ifnum\numquestions>15%
-                {\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+                {\ifthenelse{\isodd{\numquestions}}{\multicolumngradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
                 \else%
                 {\multirowgradetable{2}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
             \fi%
