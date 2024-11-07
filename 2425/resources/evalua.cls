@@ -248,7 +248,7 @@
         \ifnum\numquestions>7%
             {
             \ifnum\numquestions>15%
-                {\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+                {\ifthenelse{\isodd{\numquestions}}{\multicolumngradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
                 \else%
                 {\multirowgradetable{2}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
             \fi%
