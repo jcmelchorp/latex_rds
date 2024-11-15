@@ -380,21 +380,21 @@
             \makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}
         };
         %%%% APRENDIZAJES
-        \node[aprendizajebox] (box) {\adjustbox{minipage=0.6\textwidth}{\theaprendizajes}};
+        \node[aprendizajebox] (box) {\adjustbox{minipage=0.58\textwidth}{\theaprendizajes}};
         \node[aprendizajetitle,xshift=45pt,yshift=4pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes:};
         %%%% GRADESTABLE
         \node[gradetablebox] (box)
         {%
         \adjustbox{
         min size={0.05\textwidth}{50pt},
-        max size={0.45\textwidth+3pt}{130pt}
+        max size={0.38\textwidth+3pt}{130pt}
         }{%
         \cellwidth{0.5em}\hqword{Pregunta}\hpgword{Página}\hpword{Puntos}\hsword{Obtenidos}\htword{Total}\vqword{Pregunta}\vpgword{P\'gina}\vpword{Puntos}\vsword{Obtenidos}\vtword{Total}%
         \arrayrulecolor{colorrds!30}%
         \ifnum\numquestions>7%
             {
-            \ifnum\numquestions>15%
-                {\ifthenelse{\isodd{\numquestions}}{\multicolumngradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+            \ifnum\numquestions>20%
+                {\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
                 \else%
                 {\multirowgradetable{2}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
             \fi%
