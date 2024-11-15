@@ -380,7 +380,7 @@
             \makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}
         };
         %%%% APRENDIZAJES
-        \node[aprendizajebox] (box) {\adjustbox{minipage=0.58\textwidth}{\theaprendizajes}};
+        \node[aprendizajebox] (box) {\adjustbox{minipage=0.6\textwidth}{\theaprendizajes}};
         \node[aprendizajetitle,xshift=45pt,yshift=4pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} Aprendizajes:};
         %%%% GRADESTABLE
         \node[gradetablebox] (box)
