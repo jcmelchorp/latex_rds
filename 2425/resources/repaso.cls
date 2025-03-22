@@ -134,6 +134,8 @@
         \node[shape=circle, draw,  minimum size=1.2em, inner sep=0pt, thick] (char) {#1};}}
 \renewcommand\choicelabel{\circled{\thechoice}}
 \setlength\linefillheight{.2in}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+\AtBeginEnvironment{eqnaray}{\setcounter{equation}{0}}
 \AtBeginEnvironment{solutionbox}{\vspace{-0.1\baselineskip}}
 \AtEndEnvironment{solutionbox}{\vspace{0.1\baselineskip}}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
