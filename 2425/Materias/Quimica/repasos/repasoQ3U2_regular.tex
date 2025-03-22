@@ -1,4 +1,4 @@
-\documentclass[12pt,addpoints]{repaso}
+\documentclass[12pt,addpoints,answers]{repaso}
 \grado{3}
 \nivel{Secundaria}
 \cicloescolar{2024-2025}
@@ -21,16 +21,23 @@
 \include{../blocks/periodic_table}
 \begin{document}
 \INFO
-\ejemplosboxed[\include*{../questions/question025a}]
+\ejemplosboxed[\include*{../questions/question025c}]
 \begin{questions}
-    \questionboxed[5]{\include*{../questions/question025c}}
+    \questionboxed[5]{\include*{../questions/question025a}}
     % \questionboxed[5]{\include*{../questions/question025d}}
     \questionboxed[5]{\include*{../questions/question025e}}
+    \begin{multicols}{2}
     \ejemplosboxed[\include*{../questions/question026l}]
     \ejemplosboxed[\include*{../questions/question026e}]
-    \questionboxed[5]{\include*{../questions/question026o}}
-    % \questionboxed[5]{\include*{../questions/question026t}}
+    \end{multicols}
+    
+    \begin{multicols}{2}
+        \questionboxed[5]{\include*{../questions/question026q}}
+        \questionboxed[5]{\include*{../questions/question026t}}
+    \end{multicols}
     \questionboxed[5]{\include*{../questions/question026j}}
+
+    \questionboxed[5]{\include*{../questions/question026o}}
     \questionboxed[5]{\include*{../questions/question026s}}
     \questionboxed[5]{\include*{../questions/question026n}}
     \questionboxed[5]{\include*{../questions/question026i}}
