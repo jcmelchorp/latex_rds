@@ -20,6 +20,7 @@
 \RequirePackage{mytcolorboxes,myboxes}
 % \RequirePackage{exam-randomizechoices}
 \RequirePackage{calc}
+\RequirePackage{calculator}
 \RequirePackage{xfrac,xlop,xparse,xpatch,xstring}
 \RequirePackage{mathtools}
 \ExplSyntaxOn
