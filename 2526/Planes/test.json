@@ -1,0 +1,19 @@
+{
+    "semanas": [
+       {
+        "unidad": 1,
+        "fechaDeInicio": "2024-08-26",
+        "fechaDeCierre": "2024-08-30",
+        "semanaEscolar": 1,
+        "contenido": "Operaciones básicas con números enteros y decimales (suma y resta).",
+        "aprendizaje": "Comprenderán y realizarán sumas y restas con números enteros y decimales, aplicando los procedimientos correctos.",
+        "tema": "Suma y resta de números.",
+        "leccin": "Uso de las operaciones de suma y resta en situaciones cotidianas.",
+        "inicio": "La clase comenzará con una actividad interactiva en la que Compartirán ejemplos de situaciones cotidianas en las que utilizan sumas y restas, como comprar en una tienda o calcular la distancia recorrida. Se les motivará a pensar en cómo las operaciones básicas son esenciales para la resolución de problemas reales. Esta discusión inicial servirá para conectar los conceptos de suma y resta con sus aplicaciones prácticas, generando interés y contextualización del tema.",
+        "desarrollo": "Se explicará detalladamente cómo realizar sumas y restas con números enteros y decimales, enfatizando la importancia de colocar correctamente los números en columnas al realizar operaciones largas. Se mostrarán ejemplos paso a paso en la pizarra, comenzando con problemas sencillos y avanzando gradualmente hacia ejercicios que incluyen decimales y valores negativos. Los estudiantes trabajarán en parejas para resolver ejercicios prácticos en sus cuadernos, lo cual fomentará la colaboración y la discusión sobre diferentes estrategias de resolución. Se proporcionarán hojas de trabajo con problemas que mezclen sumas y restas en contextos cotidianos para reforzar la comprensión.",
+        "cierre": "Para cerrar la clase, los estudiantes resolverán un problema contextualizado, como ajustar un presupuesto simple o calcular cambios de una compra. Se realizará una breve reflexión grupal en la que Compartirán los desafíos que encontraron y las estrategias que les funcionaron mejor. Se asignará una tarea con problemas de suma y resta para reforzar lo aprendido, y se animará a los estudiantes a practicar en casa con ejemplos de su vida cotidiana.",
+        "ejesArticuladores": "Uso de las matemáticas en la vida diaria; resolución de problemas prácticos; desarrollo del pensamiento lógico-matemático.",
+        "evaluacinFormativa": "Observación de la participación en discusiones, corrección de ejercicios en clase, y tarea de problemas mixtos de suma y resta."
+    }
+    ]
+}

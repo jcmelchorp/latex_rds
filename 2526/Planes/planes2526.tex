@@ -1,0 +1,28 @@
+\documentclass{report}
+\usepackage{jsonparse} % Load the json package
+
+\title{Planeación semanal 2025--2026}
+\author{Julio César Melchor Pinto}
+
+% Load the JSON file
+\JSONParseFromFile{\semanasdata}{test.json}
+\begin{document}
+\maketitle
+\JSONParseArrayMapInline{\semanasdata}{semanas}{%
+    \noindent
+    Semana escolar: \JSONParseValue{\semanasdata}{semanas[#1].semanaEscolar} \\
+    Unidad: \JSONParseValue{\semanasdata}{semanas[#1].unidad} \\
+    Fecha de inicio: \JSONParseValue{\semanasdata}{semanas[#1].fechaDeInicio} \\
+    Fecha de cierre: \JSONParseValue{\semanasdata}{semanas[#1].fechaDeCierre} \\
+    Contenido: \JSONParseValue{\semanasdata}{semanas[#1].contenido} \\
+    Aprendizaje: \JSONParseValue{\semanasdata}{semanas[#1].aprendizaje} \\
+    Tema: \JSONParseValue{\semanasdata}{semanas[#1].tema} \\
+    Lección: \JSONParseValue{\semanasdata}{semanas[#1].leccin} \\
+    Inicio: \JSONParseValue{\semanasdata}{semanas[#1].inicio} \\
+    Desarrollo: \JSONParseValue{\semanasdata}{semanas[#1].desarrollo} \\
+    Cierre: \JSONParseValue{\semanasdata}{semanas[#1].cierre} \\
+    Ejes articuladores: \JSONParseValue{\semanasdata}{semanas[#1].ejesArticuladores} \\
+    Evaluación formativa: \JSONParseValue{\semanasdata}{semanas[#1].evaluacinFormativa} \\
+    \newpage
+} 
+\end{document}
