@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularx}
+\usepackage[a4paper, landscape, margin=0.5in]{geometry}
+\usepackage{ragged2e}
+
+% Configuración de tcolorbox para los títulos y bloques
+\tcbset{
+    titlebox/.style={
+        fonttitle=\bfseries\Large\Centering,
+        colbacktitle=blue!10,
+        coltitle=blue!70!black,
+        boxrule=1pt,
+        arc=4mm,
+        boxsep=0mm,
+        title filled,
+        left=0pt,
+        right=0pt,
+        top=0pt,
+        bottom=0pt,
+        frame style={blue!70!black}
+    },
+    infobox/.style={
+        colback=white,
+        boxrule=1pt,
+        arc=2mm,
+        boxsep=2mm,
+        frame style={blue!70!black},
+        left=2mm,
+        right=2mm,
+        top=2mm,
+        bottom=2mm,
+        title code={
+            %\tcbifempty{\tcbtitle}{}{\textbf{\tcbtitle\quad}}
+        }
+    }
+}
+
+% Formato para la tabla
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\begin{center}
+    % Títulos principales en cajas tcolorbox
+    \begin{tcolorbox}[titlebox, title={Escuela Rafael Díaz Serdán 30PES0329R turno matutino}]
+    \end{tcolorbox}
+    \begin{tcolorbox}[titlebox, title={Planeación didáctica - Ciclo escolar 2024-2025}]
+    \end{tcolorbox}
+\end{center}
+
+\vspace{1cm}
+
+% Bloque de información general
+\begin{tcolorbox}[infobox]
+    \textbf{Período de realización:} del \underline{\hspace{2cm}} / \underline{\hspace{2cm}} / \underline{\hspace{2cm}} al \underline{\hspace{2cm}} / \underline{\hspace{2cm}} / \underline{\hspace{2cm}}
+    
+    \vspace{0.5cm}
+    
+    \begin{tabularx}{\textwidth}{|l|Y|l|Y|}
+        \hline
+        \textbf{Grado y grupo:} & & \textbf{Trimestre:} & \\
+        \hline
+        \textbf{Profesor:} & & \textbf{Disciplina:} & \\
+        \hline
+        \textbf{Contenido:} & & \textbf{Campo formativo:} & \\
+        \hline
+        \textbf{Ejes articuladores:} & \multicolumn{3}{Y|}{} \\
+        \hline
+    \end{tabularx}
+\end{tcolorbox}
+
+\vspace{1cm}
+
+% Bloque de contenido programático
+\begin{tcolorbox}[infobox, title={Contenido programático:}]
+    \vspace{2cm} % Espacio en blanco para el contenido
+\end{tcolorbox}
+
+\vspace{5mm}
+
+% Bloque de Proceso de desarrollo de aprendizaje (PDA)
+\begin{tcolorbox}[infobox, title={Proceso de desarrollo de aprendizaje (PDA):}]
+    \vspace{2cm} % Espacio en blanco para el PDA
+\end{tcolorbox}
+
+\vspace{5mm}
+
+% Bloque de Instrumento y estrategia de evaluación
+\begin{tcolorbox}[infobox, title={Instrumento y estrategia de evaluación:}]
+    \vspace{2cm} % Espacio en blanco para la evaluación
+\end{tcolorbox}
+
+\vspace{2cm}
+
+% Bloque de firmas
+\begin{tcolorbox}[infobox]
+    \begin{tabularx}{\textwidth}{|c|c|}
+        \hline
+        \multicolumn{1}{|p{0.5\textwidth}|}{\Centering Nombre y firma de quien elabora este documento} & \multicolumn{1}{p{0.5\textwidth}|}{\Centering Nombre y firma de quien autoriza este documento} \\
+        \hline
+        \multicolumn{1}{|c|}{ \vspace{1.5cm} } & \multicolumn{1}{c|}{ \vspace{1.5cm} } \\
+        \hline
+    \end{tabularx}
+\end{tcolorbox}
+
+\end{document}
