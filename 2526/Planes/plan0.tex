@@ -1,33 +1,60 @@
 \documentclass{article}
-%\usepackage[utf8]{inputenc}
-\usepackage[most]{tcolorbox}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[many]{tcolorbox}
 \usepackage{tabularx}
-\usepackage[a4paper, landscape, margin=0.5in]{geometry}
+\usepackage[landscape, margin=0.5in]{geometry}
 \usepackage{ragged2e}
 \usepackage{multicol}
+\usepackage{jsonparse} % Load the json package
 
 
 % Configuración de tcolorbox para los títulos y bloques
 \tcbset{
     titlebox/.style={
-        colbacktitle=blue!5,
-        colframe=black!100,
-        coltitle=black!70,
-        boxrule=1pt,
+        colbacktitle=white,
+        colback=blue!0.5!white,
+        colframe=black,
+        coltitle=black,
+        boxrule=0.4pt,
         arc=2mm,
         boxsep=0mm,
         left=0pt,
         right=0pt,
-        top=0pt,
-        bottom=2pt
+        top=2pt,
+        bottom=0pt,
+        subtitle style={
+            fontupper=\sffamily,
+            boxrule=0.4pt,
+            boxsep=1mm,
+            top=1mm,
+            bottom=1mm,
+            colback=blue!10,
+            colupper=green!30!black,
+        }
     },
     infobox/.style={
-        colback=white,
-                colbacktitle=blue!50,
-        boxrule=1pt,
+        colframe=black!100,
+        colback=blue!1!white,
+        colbacktitle=blue!10,
+        coltitle=black,
+        boxrule=0.4pt,
         arc=2mm,
         boxsep=1mm,
-        frame style={blue!70!white},
+        frame style={black!100},
+        left=2mm,
+        right=2mm,
+        top=0mm,
+        bottom=2mm,
+    },
+    contentbox/.style={
+        colframe=gray!40!white,
+        colback=white,
+        colbacktitle=gray!30!white,
+        boxrule=1pt,
+        arc=0mm,
+        boxsep=1mm,
+        frame style={gray!10!white},
         left=2mm,
         right=2mm,
         top=0mm,
@@ -40,7 +67,7 @@
 
 \def\LOGO{%
     \begin{picture}(0,0)\unitlength=2cm
-        \put (0.05,-0.47) {\includegraphics[width=1.55cm]{logo_shadow.png}}
+        \put (0.045,-0.47) {\includegraphics[width=1.55cm]{logo_shadow.png}}
         \put (0.04,-0.46) {\includegraphics[width=1.55cm]{logo.png}}
     \end{picture}
 }
@@ -48,8 +75,9 @@
 \pagestyle{empty}
 % Formato para la tabla
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.25}
 \setlength{\columnsep}{2pt}
+\setlength{\arrayrulewidth}{0.1pt}
 
 \newcommand*\planTitle[0]{\small%
 \begin{minipage}{0.065\textwidth}
@@ -63,43 +91,44 @@
 {\color{black!80}Profesor: Julio César Melchor Pinto}
 \end{minipage}%
 % Bloque de información general
-    \begin{tabularx}{0.7\textwidth}{|l|Y|l|Y}
-        \textbf{Grado y grupo:} & & \textbf{Trimestre:} & \\
+    \begin{tabularx}{0.7\textwidth}{|r|Y|r|l}
+        Período de realización: &  del \underline{\quad} / \underline{\quad} / \underline{\quad}   al \underline{\quad} / \underline{\quad} / \underline{\quad} & Trimestre: & {Unidad 1} \\
         \hline
-       \textbf{Profesor:} & & \textbf{Disciplina:} & \\
+        Campo formativo: & {Saberes y Pensamiento Científico} & Disciplina: & Matemáticas 1 \\
         \hline
-      \textbf{Contenido:} & & \textbf{Campo formativo:} & \\
+      Contenido:  & {Sucesiones Aritméticas y Geométricas} & Grado y grupo: & 3 de Secundaria \\
         \hline
-       \textbf{Ejes articuladores:} & & \textbf{Período de realización:} &  del \underline{\quad} / \underline{\quad} / \underline{\quad}   al \underline{\quad} / \underline{\quad} / \underline{\quad} \\
+       Ejes articuladores: & & & \\
     \end{tabularx}
-
 }
+
 \begin{document}
-    % Caja principal
-    \begin{tcolorbox}[titlebox,title=\planTitle]
-\centering%
-% Bloque de contenido programático
-\begin{tcolorbox}[infobox,sharp corners=north, title={Contenido programático:},width=\textwidth]
-  \vspace{12cm} % Espacio en blanco para el contenido
-\end{tcolorbox}\vspace{-3mm}
-\begin{multicols}{3}\centering
-% Bloque de Proceso de desarrollo de aprendizaje (PDA)
-\begin{tcolorbox}[infobox, title={Proceso de desarrollo de aprendizaje (PDA):},width=\linewidth]
-    \vspace{4em} % Espacio en blanco para el PDA
-\end{tcolorbox}%
-% Bloque de Instrumento y estrategia de evaluación
-\begin{tcolorbox}[infobox, title={Instrumento y estrategia de evaluación:},width=\linewidth]
-    \vspace{4em} % Espacio en blanco para la evaluación
-\end{tcolorbox}%
-% Bloque de firmas
-%\begin{tcolorbox}[width=0.99\linewidth,arc=2mm]
-    \begin{tabularx}{\linewidth}{|c|c|}
-        \multicolumn{1}{p{0.45\linewidth}}{\centering  Elabora este documento} & \multicolumn{1}{p{0.48\linewidth}}{\centering Autoriza este documento} \\
-        \hline
-        \multicolumn{1}{Y|}{\vspace{3em}\centering Nombre y firma} & \multicolumn{1}{Y}{\vspace{3em}\centering Nombre y firma} \\
-    \end{tabularx}
- %   \end{tcolorbox}
-\end{multicols}
- \end{tcolorbox}
+% Caja principal
+\begin{tcolorbox}[titlebox,title=\planTitle]
+    % Bloque de contenido programático
+    {\sffamily \quad Contenido programático de la planeación didáctica}
+    \tcbsubtitle{INICIO}
+    \vspace{3cm}
+    \tcbsubtitle{DESARROLLO}
+    \vspace{3cm}
+    \tcbsubtitle{CIERRE}
+    \vspace{3cm}
+\end{tcolorbox}
+    \begin{multicols}{3}\centering
+        % Bloque de Proceso de desarrollo de aprendizaje (PDA)
+        \begin{tcolorbox}[infobox, title={Proceso de desarrollo de aprendizaje (PDA):}]
+            \vspace{4em} % Espacio en blanco para el PDA
+        \end{tcolorbox}%
+        % Bloque de firmas
+     \begin{tabularx}{0.95\linewidth}{|c|c|}
+            \multicolumn{1}{p{0.45\linewidth}}{\centering  Elabora:} & \multicolumn{1}{p{0.45\linewidth}}{\centering Autoriza:} \\
+            \hline
+            \multicolumn{1}{Y|}{\vspace{3em}\centering \footnotesize Nombre y firma}             & \multicolumn{1}{Y}{\vspace{3em}\centering \footnotesize Nombre y firma}              \\
+        \end{tabularx}
+        % Bloque de Instrumento y estrategia de evaluación
+        \begin{tcolorbox}[infobox, title={Instrumento y estrategia de evaluación:}]
+            \vspace{4em} % Espacio en blanco para la evaluación
+        \end{tcolorbox}%
+    \end{multicols}
 
 \end{document}
