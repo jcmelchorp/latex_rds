@@ -18,8 +18,8 @@
 \pagestyle{empty}
 
 % Definir el estilo de las líneas
-\renewcommand{\arraystretch}{1.5}
-\setlength{\extrarowheight}{2pt}
+\renewcommand{\arraystretch}{1}
+\setlength{\extrarowheight}{0pt}
 
 % Definir estilos de TikZ para las cajas
 \tikzset{
@@ -47,31 +47,30 @@
 
 \small % Usar una fuente más pequeña para que quepa todo
 
-\begin{tabularx}{\textwidth}{|p{0.25\textwidth}|X|p{0.25\textwidth}|}
-    \hhline{|-|-|-|}
-    \multicolumn{1}{|p{0.25\textwidth}|}{\vspace{-0.5cm}
-    \includegraphics[width=0.2\textwidth]{logo.png} \\
-    \textbf{Escuela Rafael Díaz Serdán} \\
-    30PES0329R turno matutino \\
-    \textbf{Planeación didáctica} \\
-    Educación para la vida Ciclo escolar 2024-2025
-    } &
-    \multicolumn{2}{p{0.75\textwidth}|}{\vspace{-0.5cm}
-    \begin{tabularx}{\textwidth}{|l|X|l|X|l|X|}
-        \hline
-        \textbf{Periodo:} & \underline{\hspace{\fill}} & \textbf{Grado y grupo:} & \underline{\hspace{\fill}} & \textbf{Sesiones:} & \underline{\hspace{\fill}} \\
-        \hhline{|-|-|-|-|-|-|}
-        \textbf{Profesor:} & \underline{\hspace{\fill}} & \textbf{Campo formativo:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
-        \hhline{|-|-|-~-~|}
-        \textbf{Disciplina:} & \underline{\hspace{\fill}} & \textbf{Lección:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
-        \hhline{|-|-|-~-~|}
-        \textbf{Tema:} & \underline{\hspace{\fill}} & \textbf{Contenido:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
-        \hhline{|-|-|-~-~|}
-        \textbf{Ejes articuladores:} & \underline{\hspace{\fill}} & \multicolumn{4}{c|}{} \\
-        \hhline{|-~-|-~-~-|}
-    \end{tabularx}
-    } \\
-    \hhline{|-|-|-|}
+\begin{tabularx}{\textwidth}{p{0.25\textwidth}|X|p{0.25\textwidth}}
+                \hhline{|-|-|-|}
+    \multicolumn{1}{p{0.25\textwidth}}{
+        \includegraphics[width=0.2\textwidth]{logo.png} \\
+        \textbf{Escuela Rafael Díaz Serdán} \\
+        30PES0329R turno matutino \\
+        \textbf{Planeación didáctica} \\
+        Educación para la vida Ciclo escolar 2024-2025 } &
+    \multicolumn{2}{p{0.75\textwidth}}{
+        \begin{tabularx}{\linewidth}{|l|X|l|X|l|X|}
+            \hhline
+            \textbf{Periodo:} & \underline{\hspace{\fill}} & \textbf{Grado y grupo:} & \underline{\hspace{\fill}} & \textbf{Sesiones:} & \underline{\hspace{\fill}} \\
+            \hhline{|-|-|-|-|-|-|}
+            \textbf{Profesor:} & \underline{\hspace{\fill}} & \textbf{Campo formativo:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
+            \hhline{|-|-|----|}
+            \textbf{Disciplina:} & \underline{\hspace{\fill}} & \textbf{Lección:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
+            \hhline{|-|-|----|}
+            \textbf{Tema:} & \underline{\hspace{\fill}} & \textbf{Contenido:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
+            \hhline{|-|-|----|}
+            \textbf{Ejes articuladores:} & \underline{\hspace{\fill}} & \multicolumn{4}{c|}{} \\
+            \hhline{|---|---|}
+        \end{tabularx}
+    }  \\
+                \hhline{|-|-|-|}
 \end{tabularx}
 
 \vspace{0.2cm}

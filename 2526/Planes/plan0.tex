@@ -1,35 +1,36 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage[most]{tcolorbox}
 \usepackage{tabularx}
 \usepackage[a4paper, landscape, margin=0.5in]{geometry}
 \usepackage{ragged2e}
+\usepackage{multicol}
+
 
 % Configuración de tcolorbox para los títulos y bloques
 \tcbset{
     titlebox/.style={
-        fonttitle=\bfseries\Large\Centering,
-        colbacktitle=blue!10,
-        coltitle=blue!70!black,
+        colbacktitle=blue!5,
+        colframe=black!100,
+        coltitle=black!70,
         boxrule=1pt,
-        arc=4mm,
+        arc=2mm,
         boxsep=0mm,
-        title filled,
         left=0pt,
         right=0pt,
         top=0pt,
-        bottom=0pt,
-        frame style={blue!70!black}
+        bottom=2pt
     },
     infobox/.style={
         colback=white,
+                colbacktitle=blue!50,
         boxrule=1pt,
         arc=2mm,
-        boxsep=2mm,
-        frame style={blue!70!black},
+        boxsep=1mm,
+        frame style={blue!70!white},
         left=2mm,
         right=2mm,
-        top=2mm,
+        top=0mm,
         bottom=2mm,
         title code={
             %\tcbifempty{\tcbtitle}{}{\textbf{\tcbtitle\quad}}
@@ -37,73 +38,68 @@
     }
 }
 
+\def\LOGO{%
+    \begin{picture}(0,0)\unitlength=2cm
+        \put (0.05,-0.47) {\includegraphics[width=1.55cm]{logo_shadow.png}}
+        \put (0.04,-0.46) {\includegraphics[width=1.55cm]{logo.png}}
+    \end{picture}
+}
+
+\pagestyle{empty}
 % Formato para la tabla
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\columnsep}{2pt}
 
-\begin{document}
-
-\begin{center}
-    % Títulos principales en cajas tcolorbox
-    \begin{tcolorbox}[titlebox, title={Escuela Rafael Díaz Serdán 30PES0329R turno matutino}]
-    \end{tcolorbox}
-    \begin{tcolorbox}[titlebox, title={Planeación didáctica - Ciclo escolar 2024-2025}]
-    \end{tcolorbox}
-\end{center}
-
-\vspace{1cm}
-
+\newcommand*\planTitle[0]{\small%
+\begin{minipage}{0.065\textwidth}
+\LOGO
+\end{minipage}%
+\begin{minipage}{0.235\textwidth}\centering
+{\color{blue!40!black}\fontsize{14}{12}\selectfont Escuela Rafael Díaz Serdán}\\[-0.5em]
+{\color{gray!40!black}\fontsize{6}{4}\selectfont {\sffamily \quad 30PES0329R} \hfill turno matutino \quad}\\
+{\color{black} \fontsize{12}{12}\selectfont Planeación didáctica}\\[-0.3em]
+{\color{red!40!black}\fontsize{8}{8}\selectfont Ciclo escolar {\sffamily\bfseries  2024-2025}}\\
+{\color{black!80}Profesor: Julio César Melchor Pinto}
+\end{minipage}%
 % Bloque de información general
-\begin{tcolorbox}[infobox]
-    \textbf{Período de realización:} del \underline{\hspace{2cm}} / \underline{\hspace{2cm}} / \underline{\hspace{2cm}} al \underline{\hspace{2cm}} / \underline{\hspace{2cm}} / \underline{\hspace{2cm}}
-    
-    \vspace{0.5cm}
-    
-    \begin{tabularx}{\textwidth}{|l|Y|l|Y|}
-        \hline
+    \begin{tabularx}{0.7\textwidth}{|l|Y|l|Y}
         \textbf{Grado y grupo:} & & \textbf{Trimestre:} & \\
         \hline
-        \textbf{Profesor:} & & \textbf{Disciplina:} & \\
+       \textbf{Profesor:} & & \textbf{Disciplina:} & \\
         \hline
-        \textbf{Contenido:} & & \textbf{Campo formativo:} & \\
+      \textbf{Contenido:} & & \textbf{Campo formativo:} & \\
         \hline
-        \textbf{Ejes articuladores:} & \multicolumn{3}{Y|}{} \\
-        \hline
+       \textbf{Ejes articuladores:} & & \textbf{Período de realización:} &  del \underline{\quad} / \underline{\quad} / \underline{\quad}   al \underline{\quad} / \underline{\quad} / \underline{\quad} \\
     \end{tabularx}
-\end{tcolorbox}
 
-\vspace{1cm}
-
+}
+\begin{document}
+    % Caja principal
+    \begin{tcolorbox}[titlebox,title=\planTitle]
+\centering%
 % Bloque de contenido programático
-\begin{tcolorbox}[infobox, title={Contenido programático:}]
-    \vspace{2cm} % Espacio en blanco para el contenido
-\end{tcolorbox}
-
-\vspace{5mm}
-
+\begin{tcolorbox}[infobox,sharp corners=north, title={Contenido programático:},width=\textwidth]
+  \vspace{12cm} % Espacio en blanco para el contenido
+\end{tcolorbox}\vspace{-3mm}
+\begin{multicols}{3}\centering
 % Bloque de Proceso de desarrollo de aprendizaje (PDA)
-\begin{tcolorbox}[infobox, title={Proceso de desarrollo de aprendizaje (PDA):}]
-    \vspace{2cm} % Espacio en blanco para el PDA
-\end{tcolorbox}
-
-\vspace{5mm}
-
+\begin{tcolorbox}[infobox, title={Proceso de desarrollo de aprendizaje (PDA):},width=\linewidth]
+    \vspace{4em} % Espacio en blanco para el PDA
+\end{tcolorbox}%
 % Bloque de Instrumento y estrategia de evaluación
-\begin{tcolorbox}[infobox, title={Instrumento y estrategia de evaluación:}]
-    \vspace{2cm} % Espacio en blanco para la evaluación
-\end{tcolorbox}
-
-\vspace{2cm}
-
+\begin{tcolorbox}[infobox, title={Instrumento y estrategia de evaluación:},width=\linewidth]
+    \vspace{4em} % Espacio en blanco para la evaluación
+\end{tcolorbox}%
 % Bloque de firmas
-\begin{tcolorbox}[infobox]
-    \begin{tabularx}{\textwidth}{|c|c|}
+%\begin{tcolorbox}[width=0.99\linewidth,arc=2mm]
+    \begin{tabularx}{\linewidth}{|c|c|}
+        \multicolumn{1}{p{0.45\linewidth}}{\centering  Elabora este documento} & \multicolumn{1}{p{0.48\linewidth}}{\centering Autoriza este documento} \\
         \hline
-        \multicolumn{1}{|p{0.5\textwidth}|}{\Centering Nombre y firma de quien elabora este documento} & \multicolumn{1}{p{0.5\textwidth}|}{\Centering Nombre y firma de quien autoriza este documento} \\
-        \hline
-        \multicolumn{1}{|c|}{ \vspace{1.5cm} } & \multicolumn{1}{c|}{ \vspace{1.5cm} } \\
-        \hline
+        \multicolumn{1}{Y|}{\vspace{3em}\centering Nombre y firma} & \multicolumn{1}{Y}{\vspace{3em}\centering Nombre y firma} \\
     \end{tabularx}
-\end{tcolorbox}
+ %   \end{tcolorbox}
+\end{multicols}
+ \end{tcolorbox}
 
 \end{document}
