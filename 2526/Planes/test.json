@@ -2,8 +2,8 @@
     "semanas": [
        {
         "unidad": 1,
-        "fechaDeInicio": "2024-08-26",
-        "fechaDeCierre": "2024-08-30",
+        "fechaDeInicio": "08-26",
+        "fechaDeCierre": "08-30",
         "semanaEscolar": 1,
         "contenido": "Operaciones básicas con números enteros y decimales (suma y resta).",
         "aprendizaje": "Comprenderán y realizarán sumas y restas con números enteros y decimales, aplicando los procedimientos correctos.",
@@ -17,8 +17,8 @@
     },
     {
         "unidad": 1,
-        "fechaDeInicio": "2024-09-02",
-        "fechaDeCierre": "2024-09-06",
+        "fechaDeInicio": "09-02",
+        "fechaDeCierre": "09-06",
         "semanaEscolar": 2,
         "contenido": "Operaciones básicas de multiplicación y división con números enteros y decimales.",
         "aprendizaje": "Los estudiantes podrán multiplicar y dividir números enteros y decimales, aplicando algoritmos apropiados y entendiendo su utilidad en problemas cotidianos.",
@@ -32,8 +32,8 @@
     },
     {
         "unidad": 1,
-        "fechaDeInicio": "2024-09-09",
-        "fechaDeCierre": "2024-09-13",
+        "fechaDeInicio": "09-09",
+        "fechaDeCierre": "09-13",
         "semanaEscolar": 3,
         "contenido": "Resolución de problemas que involucren sumas, restas, multiplicaciones y divisiones.",
         "aprendizaje": "Los estudiantes desarrollarán habilidades para identificar y aplicar las operaciones básicas en la resolución de problemas contextualizados.",
@@ -47,8 +47,8 @@
     },
     {
         "unidad": 1,
-        "fechaDeInicio": "2024-09-16",
-        "fechaDeCierre": "2024-09-20",
+        "fechaDeInicio": "09-16",
+        "fechaDeCierre": "09-20",
         "semanaEscolar": 4,
         "contenido": "Clasificación y representación de fracciones.",
         "aprendizaje": "El alumno identificará y clasificará diferentes tipos de fracciones (propias, impropias y mixtas) y las representará de manera gráfica.",
@@ -62,8 +62,8 @@
     },
     {
         "unidad": 1,
-        "fechaDeInicio": "2024-09-23",
-        "fechaDeCierre": "2024-09-26",
+        "fechaDeInicio": "09-23",
+        "fechaDeCierre": "09-26",
         "semanaEscolar": 5,
         "contenido": "Nombres de fracciones y su representación en la recta numérica.",
         "aprendizaje": "El alumno nombrará fracciones y las ubicará correctamente en la recta numérica.",

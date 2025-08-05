@@ -96,14 +96,24 @@
 {\sffamily Disciplina:} Matemáticas 1 \\
 {\sffamily Grado y grupo:}  3 de Secundaria\\
 \end{minipage}%
-    \begin{tabularx}{0.7\textwidth}{rYrl}
-        {\sffamily Ejes articuladores:} & \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,width=\linewidth,height=1cm,fit basedim=11pt]{#1} & {\sffamily Campo formativo:} & {\resizebox{100pt}{!}{Saberes y Pensamiento Científico}}\\
-               &&{\sffamily Ciclo escolar:} & 2025-2026\\
-& &  {\sffamily Trimestre:} &  Unidad #5 \\
-        {\sffamily Contenido:}  &  \multirow{2}{\linewidth}{#2} & {\sffamily Semana:} &  {#6} \\
-        & & {\sffamily Período:} &  #7 {\sffamily al} #8 \\
-        {\sffamily Lección:} & \multirow{2}{\linewidth}{#4} & {\sffamily Duración:} & 6 horas  \\
-        & & {\sffamily Tema:}  & {\resizebox{100pt}{!}{#3}} \\
+   % \begin{tabularx}{0.7\textwidth}{rYrl}
+   %    % {\sffamily Ejes articuladores:} & \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,width=\linewidth,height=1cm,fit basedim=11pt]{#1} & {\sffamily Campo formativo:} & {\resizebox{100pt}{!}{Saberes y Pensamiento Científico}}\\
+   %    {\sffamily Ejes articuladores:} & \multirow[t]{2}{\linewidth}{#1} & {\sffamily Campo formativo:} & {\resizebox{100pt}{!}{Saberes y Pensamiento Científico}}\\
+   %    &&{\sffamily Ciclo escolar:} & 2025-2026\\
+   %     & &{\sffamily Trimestre:} &  Unidad #5 \\
+   %     {\sffamily Contenido:}  &  \multirow[t]{2}{\linewidth}{#2} & {\sffamily Semana:} &  {#6} \\
+   %     & & {\sffamily Período:} &  #7 {\sffamily al} #8 \\
+   %     {\sffamily Lección:} & \multirow[t]{2}{\linewidth}{#4} & {\sffamily Duración:} & 6 horas  \\
+   %     & & {\sffamily Tema:}  & {\resizebox{100pt}{!}{#3}} \\
+   %     \end{tabularx}
+        \begin{tabularx}{0.7\textwidth}{rYrl}
+            {\sffamily Ciclo escolar:} & 2025-2026 & {\sffamily Trimestre:} &  Unidad {#5} \\
+            {\sffamily Campo formativo:} & Saberes y Pensamiento Científico &{\sffamily Período:} &  #7 {\sffamily al} #8 \\
+            {\sffamily Tema:}  & #3 &{\sffamily Semana:} &  {#6}\\
+            & &{\sffamily Duración:} & 6 horas \\
+            {\sffamily Contenido:}  &  \multicolumn{3}{l}{#2}\\
+            {\sffamily Ejes articuladores:} &   \multicolumn{3}{l}{#1}\\
+            {\sffamily Lección:} &   \multicolumn{3}{l}{#4}\\ 
         \end{tabularx}
 }
 % Comando para el diseño de la semana
@@ -154,11 +164,11 @@
 }
 
 
-\JSONParseFromFile{\semanasdata}{test.json}
+\JSONParseFromFile{\semanasdata}{data2526.json}
 
 \begin{document}
 \JSONParseArrayMapInline{\semanasdata}{semanas}{%
-    \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle{U\JSONParseValue{\semanasdata}{semanas[#1].ejesArticuladores}}
+    \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle{\JSONParseValue{\semanasdata}{semanas[#1].ejesArticuladores}}
             {\JSONParseValue{\semanasdata}{semanas[#1].leccin}}
             {\JSONParseValue{\semanasdata}{semanas[#1].tema}}
             {\JSONParseValue{\semanasdata}{semanas[#1].contenido}}
@@ -167,13 +177,11 @@
             {\JSONParseValue{\semanasdata}{semanas[#1].fechaDeInicio}}
             {\JSONParseValue{\semanasdata}{semanas[#1].fechaDeCierre}}
         ]%
-
-        \weekcontents{{\JSONParseValue{\semanasdata}{semanas[#1].inicio}}}
-        {{\JSONParseValue{\semanasdata}{semanas[#1].desarrollo}}}
-        {{\JSONParseValue{\semanasdata}{semanas[#1].cierre}}}
+        \weekcontents{\JSONParseValue{\semanasdata}{semanas[#1].inicio}}
+        {\JSONParseValue{\semanasdata}{semanas[#1].desarrollo}}
+        {\JSONParseValue{\semanasdata}{semanas[#1].cierre}}
     \end{tcolorbox}
-    \weekbottom{{\JSONParseValue{\semanasdata}{semanas[#1].aprendizaje}}}
-    {{\JSONParseValue{\semanasdata}{semanas[#1].evaluacin}}}
+    \weekbottom{\JSONParseValue{\semanasdata}{semanas[#1].aprendizaje}}
+    {\JSONParseValue{\semanasdata}{semanas[#1].evaluacinFormativa}}
 }
 \end{document}
-ejes
