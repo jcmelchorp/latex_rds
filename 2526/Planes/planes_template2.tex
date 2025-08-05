@@ -97,7 +97,7 @@
 {\sffamily Grado y grupo:}  3 de Secundaria\\
 \end{minipage}%
     \begin{tabularx}{0.7\textwidth}{rYrl}
-        {\sffamily Ejes articuladores:} & \multirow{3}{\linewidth}{#1} & {\sffamily Campo formativo:} & {\resizebox{100pt}{!}{Saberes y Pensamiento Científico}}\\
+        {\sffamily Ejes articuladores:} & \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,width=\linewidth,height=1cm,fit basedim=11pt]{#1} & {\sffamily Campo formativo:} & {\resizebox{100pt}{!}{Saberes y Pensamiento Científico}}\\
                &&{\sffamily Ciclo escolar:} & 2025-2026\\
 & &  {\sffamily Trimestre:} &  Unidad #5 \\
         {\sffamily Contenido:}  &  \multirow{2}{\linewidth}{#2} & {\sffamily Semana:} &  {#6} \\
@@ -152,23 +152,28 @@
     \end{tcolorbox}%
 \end{multicols}
 }
+
+
+\JSONParseFromFile{\semanasdata}{test.json}
+
 \begin{document}
-% Caja principal
-    \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle{Uso de las matemáticas en la vida diaria; resolución de problemas prácticos; desarrollo del pensamiento lógico-matemático.}
-        {{Operaciones básicas con números enteros y decimales (suma y resta).}}
-        {{Suma y resta de números.}}
-        {{Uso de las operaciones de suma y resta en situaciones cotidianas.}}
-        {{1}}
-        {{1}}
-        {{2024-08-26}}
-        {{2024-08-3}}
+\JSONParseArrayMapInline{\semanasdata}{semanas}{%
+    \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle{U\JSONParseValue{\semanasdata}{semanas[#1].ejesArticuladores}}
+            {\JSONParseValue{\semanasdata}{semanas[#1].leccin}}
+            {\JSONParseValue{\semanasdata}{semanas[#1].tema}}
+            {\JSONParseValue{\semanasdata}{semanas[#1].contenido}}
+            {\JSONParseValue{\semanasdata}{semanas[#1].unidad}}
+            {\JSONParseValue{\semanasdata}{semanas[#1].semanaEscolar}}
+            {\JSONParseValue{\semanasdata}{semanas[#1].fechaDeInicio}}
+            {\JSONParseValue{\semanasdata}{semanas[#1].fechaDeCierre}}
         ]%
 
-
-\weekcontents{La clase comenzará con una actividad interactiva en la que Compartirán ejemplos de situaciones cotidianas en las que utilizan sumas y restas, como comprar en una tienda o calcular la distancia recorrida. Se les motivará a pensar en cómo las operaciones básicas son esenciales para la resolución de problemas reales. Esta discusión inicial servirá para conectar los conceptos de suma y resta con sus aplicaciones prácticas, generando interés y contextualización del tema.}
-{{Se explicará detalladamente cómo realizar sumas y restas con números enteros y decimales, enfatizando la importancia de colocar correctamente los números en columnas al realizar operaciones largas. Se mostrarán ejemplos paso a paso en la pizarra, comenzando con problemas sencillos y avanzando gradualmente hacia ejercicios que incluyen decimales y valores negativos. Los estudiantes trabajarán en parejas para resolver ejercicios prácticos en sus cuadernos, lo cual fomentará la colaboración y la discusión sobre diferentes estrategias de resolución. Se proporcionarán hojas de trabajo con problemas que mezclen sumas y restas en contextos cotidianos para reforzar la comprensión.}}
-{{Para cerrar la clase, los estudiantes resolverán un problema contextualizado, como ajustar un presupuesto simple o calcular cambios de una compra. Se realizará una breve reflexión grupal en la que Compartirán los desafíos que encontraron y las estrategias que les funcionaron mejor. Se asignará una tarea con problemas de suma y resta para reforzar lo aprendido, y se animará a los estudiantes a practicar en casa con ejemplos de su vida cotidiana.}}
-\end{tcolorbox}
-\weekbottom{Comprenderán y realizarán sumas y restas con números enteros y decimales, aplicando los procedimientos correctos.}
-{{Observación de la participación en discusiones, corrección de ejercicios en clase, y tarea de problemas mixtos de suma y resta.}}
+        \weekcontents{{\JSONParseValue{\semanasdata}{semanas[#1].inicio}}}
+        {{\JSONParseValue{\semanasdata}{semanas[#1].desarrollo}}}
+        {{\JSONParseValue{\semanasdata}{semanas[#1].cierre}}}
+    \end{tcolorbox}
+    \weekbottom{{\JSONParseValue{\semanasdata}{semanas[#1].aprendizaje}}}
+    {{\JSONParseValue{\semanasdata}{semanas[#1].evaluacin}}}
+}
 \end{document}
+ejes
