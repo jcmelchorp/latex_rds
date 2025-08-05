@@ -109,7 +109,7 @@
         \begin{tabularx}{0.7\textwidth}{rYrl}
             {\sffamily Ciclo escolar:} & 2025-2026 & {\sffamily Trimestre:} &  Unidad {#5} \\
             {\sffamily Campo formativo:} & Saberes y Pensamiento Científico &{\sffamily Período:} &  #7 {\sffamily al} #8 \\
-            {\sffamily Tema:}  & #3 &{\sffamily Semana:} &  {#6}\\
+            {\sffamily Tema:}  & \multirow[t]{2}{\linewidth}{#3} &{\sffamily Semana:} &  {#6}\\
             & &{\sffamily Duración:} & 6 horas \\
             {\sffamily Contenido:}  &  \multicolumn{3}{l}{#2}\\
             {\sffamily Ejes articuladores:} &   \multicolumn{3}{l}{#1}\\
@@ -164,12 +164,12 @@
 }
 
 
-\JSONParseFromFile{\semanasdata}{data2526.json}
+\JSONParseFromFile{\semanasdata}{data.json}
 
 \begin{document}
 \JSONParseArrayMapInline{\semanasdata}{semanas}{%
     \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle{\JSONParseValue{\semanasdata}{semanas[#1].ejesArticuladores}}
-            {\JSONParseValue{\semanasdata}{semanas[#1].leccin}}
+            {\JSONParseValue{\semanasdata}{semanas[#1].leccion}}
             {\JSONParseValue{\semanasdata}{semanas[#1].tema}}
             {\JSONParseValue{\semanasdata}{semanas[#1].contenido}}
             {\JSONParseValue{\semanasdata}{semanas[#1].unidad}}
@@ -182,6 +182,6 @@
         {\JSONParseValue{\semanasdata}{semanas[#1].cierre}}
     \end{tcolorbox}
     \weekbottom{\JSONParseValue{\semanasdata}{semanas[#1].aprendizaje}}
-    {\JSONParseValue{\semanasdata}{semanas[#1].evaluacinFormativa}}
+    {\JSONParseValue{\semanasdata}{semanas[#1].evaluacionFormativa}}
 }
 \end{document}
