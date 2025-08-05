@@ -1,132 +1,29 @@
-\documentclass[11pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[spanish]{babel}
-\usepackage[margin=0.5in, landscape]{geometry}
-\usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage{hhline}
-\usepackage{longtable}
-\usepackage{lastpage}
-\usepackage{calc}
-\usepackage{fancybox}
-\usepackage{tikz}
+\documentclass{article}
+\usepackage{jsonparse}
 
-% Deshabilitar la numeración de páginas y la cabecera/pie de página
-\pagestyle{empty}
+\JSONParseFromFile{\semanasdata}{test.json}
+\JSONParseArrayMapInline{\semanasdata}{semanas}{
 
-% Definir el estilo de las líneas
-\renewcommand{\arraystretch}{1}
-\setlength{\extrarowheight}{0pt}
-
-% Definir estilos de TikZ para las cajas
-\tikzset{
-    titlebox/.style={
-        rectangle,
-        rounded corners=5pt,
-        draw=blue!50,
-        fill=blue!10,
-        line width=1pt,
-        inner sep=5pt,
-        minimum width=1.0\textwidth
-    },
-    daybox/.style={
-        rectangle,
-        rounded corners=5pt,
-        draw=blue!30,
-        fill=blue!5,
-        line width=0.5pt,
-        inner sep=5pt,
-        text width=0.95\textwidth
-    }
 }
 
+
 \begin{document}
-
-\small % Usar una fuente más pequeña para que quepa todo
-
-\begin{tabularx}{\textwidth}{p{0.25\textwidth}|X|p{0.25\textwidth}}
-                \hhline{|-|-|-|}
-    \multicolumn{1}{p{0.25\textwidth}}{
-        \includegraphics[width=0.2\textwidth]{logo.png} \\
-        \textbf{Escuela Rafael Díaz Serdán} \\
-        30PES0329R turno matutino \\
-        \textbf{Planeación didáctica} \\
-        Educación para la vida Ciclo escolar 2024-2025 } &
-    \multicolumn{2}{p{0.75\textwidth}}{
-        \begin{tabularx}{\linewidth}{|l|X|l|X|l|X|}
-            \hhline
-            \textbf{Periodo:} & \underline{\hspace{\fill}} & \textbf{Grado y grupo:} & \underline{\hspace{\fill}} & \textbf{Sesiones:} & \underline{\hspace{\fill}} \\
-            \hhline{|-|-|-|-|-|-|}
-            \textbf{Profesor:} & \underline{\hspace{\fill}} & \textbf{Campo formativo:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
-            \hhline{|-|-|----|}
-            \textbf{Disciplina:} & \underline{\hspace{\fill}} & \textbf{Lección:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
-            \hhline{|-|-|----|}
-            \textbf{Tema:} & \underline{\hspace{\fill}} & \textbf{Contenido:} & \underline{\hspace{\fill}} & \multicolumn{2}{c|}{} \\
-            \hhline{|-|-|----|}
-            \textbf{Ejes articuladores:} & \underline{\hspace{\fill}} & \multicolumn{4}{c|}{} \\
-            \hhline{|---|---|}
-        \end{tabularx}
-    }  \\
-                \hhline{|-|-|-|}
-\end{tabularx}
-
-\vspace{0.2cm}
-
-\begin{tabularx}{\textwidth}{|p{0.6\textwidth}|X|}
-    \hline
-    \textbf{Contenido programático:}
-    \begin{tabularx}{\textwidth}{lX}
-        \textbf{INICIO:} & \underline{\hspace{\fill}} \\
-        \textbf{DESARROLLO:} & \underline{\hspace{\fill}} \\
-        \textbf{CIERRE:} & \underline{\hspace{\fill}} 
-    \end{tabularx}
-    
-    \vspace{0.2cm}
-    \hrule
-    \vspace{0.2cm}
-    
-    \textbf{Proceso de desarrollo de aprendizaje (PDA):} \underline{\hspace{\fill}}
-    \vspace{1cm}
-    
-    \begin{tabularx}{\textwidth}{|p{0.45\textwidth}|X|}
-        \hline
-        \textbf{Instrumento y estrategia de evaluación:} & \\
-        \underline{\hspace{\fill}} & \\
-        \hhline{|-|-|}
-        \multicolumn{2}{|c|}{\textbf{Nombre y firma del docente \hspace{2cm} Nombre y firma de quien autoriza este documento}} \\
-        \hline
-    \end{tabularx}
-    &
-    \multicolumn{1}{|p{0.4\textwidth}|}{
-    \textbf{Observaciones:}
-    \begin{tabularx}{\textwidth}{|X|}
-        \hline
-        \begin{tikzpicture}
-            \node[daybox, anchor=west] {\textbf{Lunes:}\newline\underline{\hspace{\fill}}\newline\underline{\hspace{\fill}}};
-        \end{tikzpicture} \\
-        \hline
-        \begin{tikzpicture}
-            \node[daybox, anchor=west] {\textbf{Martes:}\newline\underline{\hspace{\fill}}\newline\underline{\hspace{\fill}}};
-        \end{tikzpicture} \\
-        \hline
-        \begin{tikzpicture}
-            \node[daybox, anchor=west] {\textbf{Miércoles:}\newline\underline{\hspace{\fill}}\newline\underline{\hspace{\fill}}};
-        \end{tikzpicture} \\
-        \hline
-        \begin{tikzpicture}
-            \node[daybox, anchor=west] {\textbf{Jueves:}\newline\underline{\hspace{\fill}}\newline\underline{\hspace{\fill}}};
-        \end{tikzpicture} \\
-        \hline
-        \begin{tikzpicture}
-            \node[daybox, anchor=west] {\textbf{Viernes:}\newline\underline{\hspace{\fill}}\newline\underline{\hspace{\fill}}};
-        \end{tikzpicture} \\
-        \hline
-    \end{tabularx}
-    } \\
-    \hhline{|-|-|}
-\end{tabularx}
-
+%\JSONParseValue{\semanasdata}{semanas}
+\JSONParseArrayMapInline{\semanasdata}{semanas}{
+    \noindent
+    Semana escolar: \JSONParseValue{\semanasdata}{semanas[#1].semanaEscolar} \\
+    Unidad: \JSONParseValue{\semanasdata}{semanas[#1].unidad} \\
+    Fecha de inicio: \JSONParseValue{\semanasdata}{semanas[#1].fechaDeInicio} \\
+    Fecha de cierre: \JSONParseValue{\semanasdata}{semanas[#1].fechaDeCierre} \\
+    Contenido: \JSONParseValue{\semanasdata}{semanas[#1].contenido} \\
+    Aprendizaje: \JSONParseValue{\semanasdata}{semanas[#1].aprendizaje} \\
+    Tema: \JSONParseValue{\semanasdata}{semanas[#1].tema} \\
+    Lección: \JSONParseValue{\semanasdata}{semanas[#1].leccin} \\
+    Inicio: \JSONParseValue{\semanasdata}{semanas[#1].inicio} \\
+    Desarrollo: \JSONParseValue{\semanasdata}{semanas[#1].desarrollo} \\
+    Cierre: \JSONParseValue{\semanasdata}{semanas[#1].cierre} \\
+    Ejes articuladores: \JSONParseValue{\semanasdata}{semanas[#1].ejesArticuladores} \\
+    Evaluación formativa: \JSONParseValue{\semanasdata}{semanas[#1].evaluacinFormativa} \\
+    \newpage
+}
 \end{document}
