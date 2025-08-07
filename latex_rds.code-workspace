@@ -30,13 +30,13 @@
 					"-interaction=nonstopmode",
 					"-file-line-error",
 					"-pdf",
-					"-aux-directory=%OUTDIR%",
+					"-aux-directory=%WORKSPACE_FOLDER%/2526/aux",
 					"-outdir=%OUTDIR%",
 					"%DOC%"
 				],
 				"env": {
 					//"TEXINPUTS": "%WORKSPACE_FOLDER%/2526/resources/:%DIR%/base/:%DIR%/base/pgf-periodictable/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:"
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/2526/resources/:%DIR%/base/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2526/resources/:%DIR%/base/:%DIR%/../base/:"
 				}
 			},
 			{
@@ -81,13 +81,13 @@
 					"-interaction=nonstopmode",
 					"-file-line-error",
 					"-pdf",
-					"--aux-directory=%OUTDIR%",
+					"--aux-directory=%WORKSPACE_FOLDER%/2526/out",
 					"-outdir=%OUTDIR%",
 					"%DOC%"
 				],
 				"env": {
 					//"TEXINPUTS": "%WORKSPACE_FOLDER%/2526/resources/:%DIR%/base/:%DIR%/base/pgf-periodictable/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:"
-					"TEXINPUTS": "%WORKSPACE_FOLDER%/2526/resources/:%DIR%/base/:%DIR%/../base/:%DIR%/../base/pgf-periodictable/:"
+					"TEXINPUTS": "%WORKSPACE_FOLDER%/2526/resources/:%DIR%/base/:%DIR%/../base/:"
 				}
 			},
 			{
