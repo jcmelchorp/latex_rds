@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{tikz}
+\newcommand*\rangofecha[2]{
+    \begin{tikzpicture}[thick]
+        \node (box) [
+            draw,                   % Dibuja el borde
+            rounded corners=4pt,    % Redondea las esquinas
+            minimum width=3.2cm,      % Ancho total
+            minimum height=1.5em    % Alto total
+        ] {}; % El nodo no lleva texto dentro, solo define la forma.
+        \draw ([xshift=-1mm]box.north) -- ([xshift=1mm]box.center) -- ([xshift=-1mm]box.south);
+        \node at ([xshift=-0.8cm]box.center) {#1};
+        \node at ([xshift=0.8cm]box.center) {#2};
+    \end{tikzpicture}
+}
+\begin{document}
+\rangofecha{\textbf{31-sept}}{\textbf{26-sept}}
+
+
+\end{document}
