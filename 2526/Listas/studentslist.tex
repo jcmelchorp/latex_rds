@@ -1,0 +1,581 @@
+\documentclass[landscape]{article}
+\usepackage[letterpaper,includehead,left=0.5in,right=0.5in,bottom=0.5in,top=0.5in]{geometry} % make room
+\usepackage{xparse,array}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames,table]{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{anyfontsize}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+%\setlength\headheight{50pt} 
+\ExplSyntaxOn
+\NewDocumentCommand{\studentlist}{m}
+{% #1 = file name
+  \studentlist:n { #1 }
+}
+
+\ior_new:N \studentlist_stream
+\seq_new:N \studentlist_seq
+\seq_new:N \studentlist_temp_seq
+\tl_new:N \studentlist_header
+\renewcommand{\arraystretch}{1}
+\cs_new_protected:Nn \studentlist:n
+{
+  \seq_clear:N \studentlist_seq
+  \ior_open:Nn \studentlist_stream { #1 }
+  \int_zero:N \l_tmpa_int
+  % populate the sequence
+  \ior_map_inline:Nn \studentlist_stream
+  {
+    \int_incr:N \l_tmpa_int
+    \seq_put_right:Nx \studentlist_seq
+    {
+      \int_to_arabic:n { \l_tmpa_int } & \exp_not:n {\fontsize{12}{10}\selectfont ##1 } &
+    }
+  }
+  % build the header
+  \tl_set:Nn \studentlist_header_sep
+  {
+    \hline
+    \multicolumn{2}{|c|}{\fontsize{14}{12}\selectfont \bfseries #1} &
+    \multicolumn{22}{|c|}{\cellcolor{RoyalBlue!50}\fontsize{14}{12}\selectfont \bfseries Septiembre}  & 
+    \multicolumn{3}{|c|}{\cellcolor{ForestGreen!50}\fontsize{10}{8}\selectfont \bfseries Octubre} \\
+    \hline
+    &
+    &
+    \multicolumn{5}{|c|}{\bfseries Semana~1} &
+    \multicolumn{5}{|c|}{\bfseries Semana~2} &
+    \multicolumn{5}{|c|}{\bfseries Semana~3} &
+    \multicolumn{5}{|c|}{\bfseries Semana~4} &
+    \multicolumn{5}{|c|}{\bfseries Semana~5}
+    \\ \cline{3-27}
+    \# & \textbf{Nombre~del~alumno} &
+    \rotatebox{90}{lun,~1~} &
+    \rotatebox{90}{mar,~2~} &
+    \rotatebox{90}{mié,~3~} &
+    \rotatebox{90}{jue,~4~} &
+    \rotatebox{90}{vie,~5~} &
+    \rotatebox{90}{lun,~8~} &
+    \rotatebox{90}{mar,~9~} &
+    \rotatebox{90}{mié,~10~} &
+    \rotatebox{90}{jue,~11~} &
+    \rotatebox{90}{vie,~12~} &
+    \rotatebox{90}{lun,~15~} &
+    \rotatebox{90}{mar,~16~} &
+    \rotatebox{90}{mié,~17~} &
+    \rotatebox{90}{jue,~18~} &
+    \rotatebox{90}{vie,~19~} &
+    \rotatebox{90}{lun,~22~} &
+    \rotatebox{90}{mar,~23~} &
+    \rotatebox{90}{mié,~24~} &
+    \rotatebox{90}{jue,~25~} &
+    \rotatebox{90}{vie,~26~} &
+    \rotatebox{90}{lun,~29~} &
+    \rotatebox{90}{mar,~30~} &
+    \rotatebox{90}{mié,~1~} &
+    \rotatebox{90}{jue,~2~} &
+    \rotatebox{90}{vie,~3~}
+    \\ \hline
+  }
+  \tl_set:Nn \studentlist_header_oct
+  {
+    \hline
+    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
+    \multicolumn{20}{|c|}{\cellcolor{ForestGreen!50}\fontsize{14}{12}\selectfont \bfseries Octubre} & 
+     \multicolumn{5}{|c|}{\cellcolor{Brown!50}\fontsize{12}{10}\selectfont \bfseries Noviembre} \\
+    \hline
+    &
+    &
+    \multicolumn{5}{|c|}{\bfseries Semana~6} &
+    \multicolumn{5}{|c|}{\bfseries Semana~7} &
+    \multicolumn{5}{|c|}{\bfseries Semana~8} &
+    \multicolumn{5}{|c|}{\bfseries Semana~9} &
+    \multicolumn{5}{|c|}{\bfseries Semana~10}
+    \\ \cline{3-27}
+    \# & \textbf{Nombre~del~alumno} &
+    \rotatebox{90}{lun,~6~} &
+    \rotatebox{90}{mar,~7~} &
+    \rotatebox{90}{mié,~8~} &
+    \rotatebox{90}{jue,~9~} &
+    \rotatebox{90}{vie,~10~} &
+    \rotatebox{90}{lun,~13~} &
+    \rotatebox{90}{mar,~14~} &
+    \rotatebox{90}{mié,~15~} &
+    \rotatebox{90}{jue,~16~} &
+    \rotatebox{90}{vie,~17~} &
+    \rotatebox{90}{lun,~20~} &
+    \rotatebox{90}{mar,~21~} &
+    \rotatebox{90}{mié,~22~} &
+    \rotatebox{90}{jue,~23~} &
+    \rotatebox{90}{vie,~24~} &
+    \rotatebox{90}{lun,~27~} &
+    \rotatebox{90}{mar,~28~} &
+    \rotatebox{90}{mié,~29~} &
+    \rotatebox{90}{jue,~38~} &
+    \rotatebox{90}{vie,~31~} &
+    \rotatebox{90}{lun,~3~} &
+    \rotatebox{90}{mar,~4~} &
+    \rotatebox{90}{mié,~5~} &
+    \rotatebox{90}{jue,~6~} &
+    \rotatebox{90}{vie,~7~}
+    \\ \hline
+  }
+  \tl_set:Nn \studentlist_header_nov
+  {
+    \hline
+    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
+    \multicolumn{15}{|c|}{\cellcolor{Brown!50}\fontsize{16}{18}\selectfont \bfseries Noviembre} &
+     \multicolumn{10}{|c|}{\cellcolor{Goldenrod!50}\fontsize{16}{18}\selectfont \bfseries Diciembre} \\
+    \hline
+    &
+    &
+    \multicolumn{5}{|c|}{\bfseries Semana~11} &
+    \multicolumn{5}{|c|}{\bfseries Semana~12} &
+    \multicolumn{5}{|c|}{\bfseries Semana~13} &
+    \multicolumn{5}{|c|}{\bfseries Semana~14} &
+    \multicolumn{5}{|c|}{\bfseries Semana~15}
+    \\ \cline{3-27}
+    \# & \textbf{Nombre~del~alumno} &
+    \rotatebox{90}{lun,~10~} &
+    \rotatebox{90}{mar,~11~} &
+    \rotatebox{90}{mié,~12~} &
+    \rotatebox{90}{jue,~13~} &
+    \rotatebox{90}{vie,~14~} &
+    \rotatebox{90}{lun,~17~} &
+    \rotatebox{90}{mar,~18~} &
+    \rotatebox{90}{mié,~19~} &
+    \rotatebox{90}{jue,~20~} &
+    \rotatebox{90}{vie,~21~} &
+    \rotatebox{90}{lun,~24~} &
+    \rotatebox{90}{mar,~25~} &
+    \rotatebox{90}{mié,~26~} &
+    \rotatebox{90}{jue,~27~} &
+    \rotatebox{90}{vie,~28~} &
+    \rotatebox{90}{lun,~1~} &
+    \rotatebox{90}{mar,~2~} &
+    \rotatebox{90}{mié,~3~} &
+    \rotatebox{90}{jue,~4~} &
+    \rotatebox{90}{vie,~5~} &
+    \rotatebox{90}{lun,~8~} &
+    \rotatebox{90}{mar,~9~} &
+    \rotatebox{90}{mié,~10~} &
+    \rotatebox{90}{jue,~11~} &
+    \rotatebox{90}{vie,~12~}
+    \\ \hline
+  }
+
+  \tl_set:Nn \studentlist_header_ene
+  {
+    \hline
+    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
+    \multicolumn{5}{|c|}{\cellcolor{Goldenrod!50}\fontsize{12}{10}\selectfont \bfseries Diciembre} & 
+     \multicolumn{15}{|c|}{\cellcolor{NavyBlue!50}\fontsize{12}{10}\selectfont \bfseries Enero} &
+     \multicolumn{5}{|c|}{\cellcolor{Orange!50}\fontsize{12}{10}\selectfont \bfseries Febrero} \\
+     \hline    &
+    &
+    \multicolumn{5}{|c|}{\bfseries Semana~16} &
+    \multicolumn{5}{|c|}{\bfseries Semana~17} &
+    \multicolumn{5}{|c|}{\bfseries Semana~18} &
+    \multicolumn{5}{|c|}{\bfseries Semana~19} &
+    \multicolumn{5}{|c|}{\bfseries Semana~20} 
+    \\ \cline{3-27}
+    \# & \textbf{Nombre~del~alumno} &
+    \rotatebox{90}{lun,~15~} &
+    \rotatebox{90}{mar,~16~} &
+    \rotatebox{90}{mié,~17~} &
+    \rotatebox{90}{jue,~18~} &
+    \rotatebox{90}{vie,~19~} &
+    \rotatebox{90}{lun,~12~} &
+    \rotatebox{90}{mar,~13~} &
+    \rotatebox{90}{mié,~14~} &
+    \rotatebox{90}{jue,~15~} &
+    \rotatebox{90}{vie,~16~} &
+    \rotatebox{90}{lun,~19~} &
+    \rotatebox{90}{mar,~20~} &
+    \rotatebox{90}{mié,~21~} &
+    \rotatebox{90}{jue,~22~} &
+    \rotatebox{90}{vie,~23~} &
+    \rotatebox{90}{lun,~26~} &
+    \rotatebox{90}{mar,~27~} &
+    \rotatebox{90}{mié,~28~} &
+    \rotatebox{90}{jue,~29~} &
+    \rotatebox{90}{vie,~30~} &
+    \rotatebox{90}{lun,~2~} &
+    \rotatebox{90}{mar,~3~} &
+    \rotatebox{90}{mié,~4~} &
+    \rotatebox{90}{jue,~5~} &
+    \rotatebox{90}{vie,~6~}
+    \\ \hline
+  }
+
+  \tl_set:Nn \studentlist_header_feb
+  {
+    \hline
+    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
+    \multicolumn{15}{|c|}{\cellcolor{Orange!50}\fontsize{12}{10}\selectfont \bfseries Febrero} & 
+     \multicolumn{10}{|c|}{\cellcolor{Periwinkle!50}\fontsize{12}{10}\selectfont \bfseries Marzo}\\
+     \hline    &
+    &
+    \multicolumn{5}{|c|}{\bfseries Semana~21} &
+    \multicolumn{5}{|c|}{\bfseries Semana~22} &
+    \multicolumn{5}{|c|}{\bfseries Semana~23} &
+    \multicolumn{5}{|c|}{\bfseries Semana~24} &
+    \multicolumn{5}{|c|}{\bfseries Semana~25} 
+    \\ \cline{3-27}
+    \# & \textbf{Nombre~del~alumno} &
+    \rotatebox{90}{lun,~9~} &
+    \rotatebox{90}{mar,~10~} &
+    \rotatebox{90}{mié,~11~} &
+    \rotatebox{90}{jue,~12~} &
+    \rotatebox{90}{vie,~13~} &
+    \rotatebox{90}{lun,~16~} &
+    \rotatebox{90}{mar,~17~} &
+    \rotatebox{90}{mié,~18~} &
+    \rotatebox{90}{jue,~19~} &
+    \rotatebox{90}{vie,~20~} &
+    \rotatebox{90}{lun,~23~} &
+    \rotatebox{90}{mar,~24~} &
+    \rotatebox{90}{mié,~25~} &
+    \rotatebox{90}{jue,~26~} &
+    \rotatebox{90}{vie,~27~} &
+    \rotatebox{90}{lun,~2~} &
+    \rotatebox{90}{mar,~3~} &
+    \rotatebox{90}{mié,~4~} &
+    \rotatebox{90}{jue,~5~} &
+    \rotatebox{90}{vie,~6~} &
+    \rotatebox{90}{lun,~9~} &
+    \rotatebox{90}{mar,~10~} &
+    \rotatebox{90}{mié,~11~} &
+    \rotatebox{90}{jue,~12~} &
+    \rotatebox{90}{vie,~13~} 
+    \\ \hline
+  }
+  \tl_set:Nn \studentlist_header_mar
+  {
+    \hline
+    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
+    \multicolumn{10}{|c|}{\cellcolor{Periwinkle!50}\fontsize{14}{12}\selectfont \bfseries Marzo} & 
+    \multicolumn{14}{|c|}{\cellcolor{SkyBlue!50}\fontsize{14}{12}\selectfont \bfseries Abril} &
+    \multicolumn{1}{|r|}{\cellcolor{Maroon!50}\fontsize{5}{3}\selectfont  \rotatebox{90}{Mayo}} \\
+    \hline
+    &
+    &
+    \multicolumn{5}{|c|}{\bfseries Semana~26} &
+    \multicolumn{5}{|c|}{\bfseries Semana~27} &
+    \multicolumn{5}{|c|}{\bfseries Semana~28} &
+    \multicolumn{5}{|c|}{\bfseries Semana~29} &
+    \multicolumn{5}{|c|}{\bfseries Semana~30}
+    \\ \cline{3-27}
+    \# & \textbf{Nombre~del~alumno} &
+    \rotatebox{90}{lun,~16~} &
+    \rotatebox{90}{mar,~17~} &
+    \rotatebox{90}{mié,~18~} &
+    \rotatebox{90}{jue,~19~} &
+    \rotatebox{90}{vie,~20~} &
+    \rotatebox{90}{lun,~23~} &
+    \rotatebox{90}{mar,~24~} &
+    \rotatebox{90}{mié,~25~} &
+    \rotatebox{90}{jue,~26~} &
+    \rotatebox{90}{vie,~27~} &
+    \rotatebox{90}{lun,~13~} &
+    \rotatebox{90}{mar,~14~} &
+    \rotatebox{90}{mié,~15~} &
+    \rotatebox{90}{jue,~16~} &
+    \rotatebox{90}{vie,~17~} &
+    \rotatebox{90}{lun,~20~} &
+    \rotatebox{90}{mar,~21~} &
+    \rotatebox{90}{mié,~22~} &
+    \rotatebox{90}{jue,~23~} &
+    \rotatebox{90}{vie,~24~} &
+    \rotatebox{90}{lun,~27~} &
+    \rotatebox{90}{mar,~28~} &
+    \rotatebox{90}{mié,~29~} &
+    \rotatebox{90}{jue,~30~} &
+    \rotatebox{90}{vie,~1~}
+    \\ \hline
+  }
+  \tl_set:Nn \studentlist_header_may
+  {
+    \hline
+    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
+    \multicolumn{20}{|c|}{\cellcolor{Maroon!50}\fontsize{14}{12}\selectfont \bfseries Mayo} & 
+    \multicolumn{5}{|c|}{\cellcolor{LimeGreen!50}\fontsize{14}{12}\selectfont \bfseries Junio}  \\
+    \hline
+     %\cline{3-27}
+    &
+    &
+    \multicolumn{5}{|c|}{\bfseries Semana~31} &
+    \multicolumn{5}{|c|}{\bfseries Semana~32} &
+    \multicolumn{5}{|c|}{\bfseries Semana~33} &
+    \multicolumn{5}{|c|}{\bfseries Semana~34} &
+    \multicolumn{5}{|c|}{\bfseries Semana~35}
+    \\ \cline{3-27}
+    \# & \textbf{Nombre~del~alumno} &
+    \rotatebox{90}{lun,~4~} &
+    \rotatebox{90}{mar,~5~} &
+    \rotatebox{90}{mié,~6~} &
+    \rotatebox{90}{jue,~7~} &
+    \rotatebox{90}{vie,~8~} &
+    \rotatebox{90}{lun,~11~} &
+    \rotatebox{90}{mar,~12~} &
+    \rotatebox{90}{mié,~13~} &
+    \rotatebox{90}{jue,~14~} &
+    \rotatebox{90}{vie,~15~} &
+    \rotatebox{90}{lun,~18~} &
+    \rotatebox{90}{mar,~19~} &
+    \rotatebox{90}{mié,~20~} &
+    \rotatebox{90}{jue,~21~} &
+    \rotatebox{90}{vie,~22~} &
+    \rotatebox{90}{lun,~25~} &
+    \rotatebox{90}{mar,~26~} &
+    \rotatebox{90}{mié,~27~} &
+    \rotatebox{90}{jue,~28~} &
+    \rotatebox{90}{vie,~29~}&
+    \rotatebox{90}{lun,~1~} &
+    \rotatebox{90}{mar,~2~} &
+    \rotatebox{90}{mié,~3~} &
+    \rotatebox{90}{jue,~4~} &
+    \rotatebox{90}{vie,~5~}%
+    % \rotatebox{90}{lun,~2~} &
+    % \rotatebox{90}{mar,~3~} &
+    % \rotatebox{90}{mié,~4~} &
+    % \rotatebox{90}{jue,~5~} &
+    % \rotatebox{90}{vie,~6~} &
+    % \rotatebox{90}{lun,~9~} &
+    % \rotatebox{90}{mar,~10~} &
+    % \rotatebox{90}{mié,~11~} &
+    % \rotatebox{90}{jue,~12~} &
+    % \rotatebox{90}{vie,~13~} &
+    % \rotatebox{90}{lun,~16~} &
+    % \rotatebox{90}{mar,~17~} &
+    % \rotatebox{90}{mié,~18~} &
+    % \rotatebox{90}{jue,~19~} &
+    % \rotatebox{90}{vie,~20~} &
+    % \rotatebox{90}{lun,~23~} &
+    % \rotatebox{90}{mar,~24~} &
+    % \rotatebox{90}{mié,~25~} &
+    % \rotatebox{90}{jue,~26~} &
+    % \rotatebox{90}{vie,~27~} &
+    % \rotatebox{90}{lun,~30~} &
+    % \rotatebox{90}{mar,~31~} &
+    % \rotatebox{90}{mie,~1~}  &
+    % \rotatebox{90}{jue,~2~}  &
+    % \rotatebox{90}{vie,~3~}
+      % \rotatebox{90}{lun,~5~} &
+    % \rotatebox{90}{mar,~6~} &
+    % \rotatebox{90}{mié,~7~} &
+    % \rotatebox{90}{jue,~8~} &
+    % \rotatebox{90}{vie,~9~} &
+    % \rotatebox{90}{lun,~12~} &
+    % \rotatebox{90}{mar,~13~} &
+    % \rotatebox{90}{mié,~14~} &
+    % \rotatebox{90}{jue,~15~} &
+    % \rotatebox{90}{vie,~16~} &
+    % \rotatebox{90}{lun,~19~} &
+    % \rotatebox{90}{mar,~20~} &
+    % \rotatebox{90}{mié,~21~} &
+    % \rotatebox{90}{jue,~22~} &
+    % \rotatebox{90}{vie,~23~} &
+    % \rotatebox{90}{lun,~26~} &
+    % \rotatebox{90}{mar,~27~} &
+    % \rotatebox{90}{mié,~28~} &
+    % \rotatebox{90}{jue,~29~} &
+    % \rotatebox{90}{vie,~30~} &
+    % \rotatebox{90}{lun,~3~} &
+    % \rotatebox{90}{mar,~4~} &
+    % \rotatebox{90}{mié,~5~} &
+    % \rotatebox{90}{jue,~6~} &
+    % \rotatebox{90}{vie,~7~}
+    \\ \hline
+  }
+  \tl_set:Nn \studentlist_header_jun
+  {
+    \hline
+    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
+    \multicolumn{17}{|c|}{\cellcolor{LimeGreen!50}\fontsize{14}{12}\selectfont \bfseries Junio} & 
+    \multicolumn{8}{|c|}{\cellcolor{Melon!50}\fontsize{14}{12}\selectfont \bfseries Julio}  \\
+    \hline
+     %\cline{3-27}
+    &
+    &
+    \multicolumn{5}{|c|}{\bfseries Semana~36} &
+    \multicolumn{5}{|c|}{\bfseries Semana~37} &
+    \multicolumn{5}{|c|}{\bfseries Semana~38} &
+    \multicolumn{5}{|c|}{\bfseries Semana~39} &
+    \multicolumn{5}{|c|}{\bfseries Semana~40}
+    \\ \cline{3-27}
+    \# & \textbf{Nombre~del~alumno} &
+    \rotatebox{90}{lun,~8~} &
+    \rotatebox{90}{mar,~9~} &
+    \rotatebox{90}{mié,~10~} &
+    \rotatebox{90}{jue,~11~} &
+    \rotatebox{90}{vie,~12~} &
+    \rotatebox{90}{lun,~15~} &
+    \rotatebox{90}{mar,~16~} &
+    \rotatebox{90}{mié,~17~} &
+    \rotatebox{90}{jue,~18~} &
+    \rotatebox{90}{vie,~19~} &
+    \rotatebox{90}{lun,~22~} &
+    \rotatebox{90}{mar,~23~} &
+    \rotatebox{90}{mié,~24~} &
+    \rotatebox{90}{jue,~25~} &
+    \rotatebox{90}{vie,~26~} &
+    \rotatebox{90}{lun,~29~} &
+    \rotatebox{90}{mar,~30~} &
+    \rotatebox{90}{mié,~1~} &
+    \rotatebox{90}{jue,~2~} &
+    \rotatebox{90}{vie,~3~} &
+    \rotatebox{90}{lun,~6~} &
+    \rotatebox{90}{mar,~7~} &
+    \rotatebox{90}{mié,~8~} &
+    \rotatebox{90}{jue,~9~} &
+    \rotatebox{90}{vie,~10~}
+    % \rotatebox{90}{lun,~13~} &
+    % \rotatebox{90}{mar,~14~} &
+    % \rotatebox{90}{mié,~15~} &
+    % \rotatebox{90}{jue,~16~} &
+    % \rotatebox{90}{vie,~17~} &
+    % \rotatebox{90}{lun,~20~} &
+    % \rotatebox{90}{mar,~21~} &
+    % \rotatebox{90}{mié,~22~} &
+    % \rotatebox{90}{jue,~23~} &
+    % \rotatebox{90}{vie,~24~} &
+    % \rotatebox{90}{lun,~27~} &
+    % \rotatebox{90}{mar,~28~} &
+    % \rotatebox{90}{mié,~29~} &
+    % \rotatebox{90}{jue,~30~} &
+    % \rotatebox{90}{vie,~31~} &
+    % \rotatebox{90}{lun,~17~} &
+    % \rotatebox{90}{mar,~18~} &
+    % \rotatebox{90}{mié,~19~} &
+    % \rotatebox{90}{jue,~20~} &
+    % \rotatebox{90}{vie,~21~} &
+    % \rotatebox{90}{lun,~24~} &
+    % \rotatebox{90}{mar,~25~} &
+    % \rotatebox{90}{mié,~26~} &
+    % \rotatebox{90}{jue,~27~} &
+    % \rotatebox{90}{vie,~28~}%
+    % \rotatebox{90}{lun,~2~} &
+    % \rotatebox{90}{mar,~3~} &
+    % \rotatebox{90}{mié,~4~} &
+    % \rotatebox{90}{jue,~5~} &
+    % \rotatebox{90}{vie,~6~} &
+    % \rotatebox{90}{lun,~9~} &
+    % \rotatebox{90}{mar,~10~} &
+    % \rotatebox{90}{mié,~11~} &
+    % \rotatebox{90}{jue,~12~} &
+    % \rotatebox{90}{vie,~13~} &
+    % \rotatebox{90}{lun,~16~} &
+    % \rotatebox{90}{mar,~17~} &
+    % \rotatebox{90}{mié,~18~} &
+    % \rotatebox{90}{jue,~19~} &
+    % \rotatebox{90}{vie,~20~} &
+    % \rotatebox{90}{lun,~23~} &
+    % \rotatebox{90}{mar,~24~} &
+    % \rotatebox{90}{mié,~25~} &
+    % \rotatebox{90}{jue,~26~} &
+    % \rotatebox{90}{vie,~27~} &
+    % \rotatebox{90}{lun,~30~} &
+    % \rotatebox{90}{mar,~31~} &
+    % \rotatebox{90}{mie,~1~}  &
+    % \rotatebox{90}{jue,~2~}  &
+    % \rotatebox{90}{vie,~3~}
+    \\ \hline
+  }
+  % check the number
+  \int_compare:nT { \seq_count:N \studentlist_seq > 20 }
+  {
+    \__studentlist_halve:
+  }
+  % make the table
+  \par\noindent
+  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+    \tl_use:N \studentlist_header_sep
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+    \tl_use:N \studentlist_header_oct
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+    \tl_use:N \studentlist_header_nov
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+    \tl_use:N \studentlist_header_ene
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+    \tl_use:N \studentlist_header_feb
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+    \tl_use:N \studentlist_header_mar
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+    \tl_use:N \studentlist_header_may
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+    \tl_use:N \studentlist_header_jun
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+}
+
+\cs_new_protected:Nn \__studentlist_halve:
+{
+  % make it even
+  \int_if_odd:nT { \seq_count:N \studentlist_seq }
+  {
+    \seq_put_right:Nn \studentlist_seq { \multicolumn{25}{c}{} }
+  }
+  % split in half
+  \seq_clear:N \studentlist_temp_seq
+  \int_step_inline:nn { \seq_count:N \studentlist_seq / 2 }
+  {
+    \seq_put_right:Nx \studentlist_temp_seq
+    {
+      \seq_item:Nn \studentlist_seq { ##1 } &
+      \seq_item:Nn \studentlist_seq { ##1 + \seq_count:N
+        \studentlist_seq / 2 }
+    }
+  }
+  % replace the sequence
+  \seq_set_eq:NN \studentlist_seq \studentlist_temp_seq
+  % double the header
+  \tl_put_right:Nx \studentlist_header
+  {
+    & \exp_not:V \studentlist_header
+  }
+}
+
+\cs_new_protected:Nn \__studentlist_row:n
+{
+  #1 & & & & & & & & & & & & & & & & & & & & & & & & \\ \hline
+}
+
+\ExplSyntaxOff
+\begin{document}
+\renewcommand{\arraystretch}{1.2}
+\studentlist{1° de Secundaria}
+\studentlist{2° de Secundaria}
+\studentlist{3° de Secundaria}
+\end{document}
