@@ -1,0 +1,191 @@
+\documentclass[landscape]{article}
+\usepackage[letterpaper,left=0.5in,right=0.5in,bottom=0.5in,top=0.5in]{geometry} % make room
+\usepackage{xparse,array}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames,table]{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{anyfontsize}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\pagestyle{empty}
+\ExplSyntaxOn
+\NewDocumentCommand{\studentlist}{m}
+{% #1 = file name
+  \studentlist:n { #1 }
+}
+
+\ior_new:N \studentlist_stream
+\seq_new:N \studentlist_seq
+\seq_new:N \studentlist_temp_seq
+\tl_new:N \studentlist_header
+\renewcommand{\arraystretch}{1}
+\cs_new_protected:Nn \studentlist:n
+{
+  \seq_clear:N \studentlist_seq
+  \ior_open:Nn \studentlist_stream { #1 }
+  \int_zero:N \l_tmpa_int
+  % populate the sequence
+  \ior_map_inline:Nn \studentlist_stream
+  {
+    \int_incr:N \l_tmpa_int
+    \seq_put_right:Nx \studentlist_seq
+    {
+      \int_to_arabic:n { \l_tmpa_int } & \exp_not:n {\fontsize{10}{8}\selectfont ##1 } &
+    }
+  }
+  % build the header
+  \tl_set:Nn \studentlist_header_uuno
+  {
+    \# & \multicolumn{1}{w{l}{16em}}{\textbf{Nombre~del~alumno}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} 
+    \\ \hline
+  }
+  \tl_set:Nn \studentlist_header_udos
+  {
+    \# & \multicolumn{1}{w{l}{16em}}{\textbf{Nombre~del~alumno}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} 
+    \\ \hline
+  }
+  \tl_set:Nn \studentlist_header_utres
+  {
+    \# & \multicolumn{1}{w{l}{16em}}{\textbf{Nombre~del~alumno}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} &
+    \multicolumn{1}{w{l}{0.7em}}{\rotatebox{60}{}} 
+    \\ \hline
+  }
+  % check the number
+  \int_compare:nT { \seq_count:N \studentlist_seq > 25 }
+  {
+    \__studentlist_halve:
+  }
+  % make the table
+  \par\noindent
+  \begin{tabular}{rw{l}{16em}|*{25}{w{l}{0.7em}|}}
+    \tl_use:N \studentlist_header_uuno
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{rw{l}{16em}|*{25}{w{l}{0.7em}|}}
+    \tl_use:N \studentlist_header_udos
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+  \newpage
+  \par\noindent
+  \begin{tabular}{rw{l}{16em}|*{25}{w{l}{0.7em}|}}
+    \tl_use:N \studentlist_header_utres
+    \seq_map_function:NN \studentlist_seq \__studentlist_row:n
+  \end{tabular}
+}
+
+\cs_new_protected:Nn \__studentlist_halve:
+{
+  % make it even
+  \int_if_odd:nT { \seq_count:N \studentlist_seq }
+  {
+    \seq_put_right:Nn \studentlist_seq { \multicolumn{25}{|c|}{} }
+  }
+  % split in half
+  \seq_clear:N \studentlist_temp_seq
+  \int_step_inline:nn { \seq_count:N \studentlist_seq / 2 }
+  {
+    \seq_put_right:Nx \studentlist_temp_seq
+    {
+      \seq_item:Nn \studentlist_seq { ##1 } &
+      \seq_item:Nn \studentlist_seq { ##1 + \seq_count:N
+        \studentlist_seq / 2 }
+    }
+  }
+  % replace the sequence
+  \seq_set_eq:NN \studentlist_seq \studentlist_temp_seq
+  % double the header
+  \tl_put_right:Nx \studentlist_header
+  {
+    & \exp_not:V \studentlist_header
+  }
+}
+
+\cs_new_protected:Nn \__studentlist_row:n
+{
+  #1 & & & & & & & & & & & & & & & & & & & & & & & & \\ \hline
+}
+
+\ExplSyntaxOff
+\begin{document}
+\renewcommand{\arraystretch}{1.2}
+\studentlist{1° de Secundaria}
+\end{document}

@@ -1,5 +1,5 @@
 \documentclass[landscape]{article}
-\usepackage[letterpaper,includehead,left=0.5in,right=0.5in,bottom=0.5in,top=0.5in]{geometry} % make room
+\usepackage[letterpaper,left=0.5in,right=0.5in,bottom=0.5in,top=0.5in]{geometry} % make room
 \usepackage{xparse,array}
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
@@ -10,7 +10,7 @@
 \usepackage{anyfontsize}
 \usepackage{fancyhdr}
 \usepackage{booktabs}
-%\setlength\headheight{50pt} 
+\pagestyle{empty}
 \ExplSyntaxOn
 \NewDocumentCommand{\studentlist}{m}
 {% #1 = file name
@@ -33,7 +33,7 @@
     \int_incr:N \l_tmpa_int
     \seq_put_right:Nx \studentlist_seq
     {
-      \int_to_arabic:n { \l_tmpa_int } & \exp_not:n {\fontsize{12}{10}\selectfont ##1 } &
+      \int_to_arabic:n { \l_tmpa_int } & \exp_not:n {\fontsize{10}{8}\selectfont ##1 } &
     }
   }
   % build the header
@@ -63,7 +63,7 @@
     \rotatebox{90}{mié,~10~} &
     \rotatebox{90}{jue,~11~} &
     \rotatebox{90}{vie,~12~} &
-    \rotatebox{90}{lun,~15~} &
+    \rotatebox{90}{\cellcolor{Red!50}lun,~15~} &
     \rotatebox{90}{mar,~16~} &
     \rotatebox{90}{mié,~17~} &
     \rotatebox{90}{jue,~18~} &
@@ -72,7 +72,7 @@
     \rotatebox{90}{mar,~23~} &
     \rotatebox{90}{mié,~24~} &
     \rotatebox{90}{jue,~25~} &
-    \rotatebox{90}{vie,~26~} &
+    \rotatebox{90}{\cellcolor{Red!50}vie,~26~} &
     \rotatebox{90}{lun,~29~} &
     \rotatebox{90}{mar,~30~} &
     \rotatebox{90}{mié,~1~} &
@@ -115,7 +115,7 @@
     \rotatebox{90}{mar,~28~} &
     \rotatebox{90}{mié,~29~} &
     \rotatebox{90}{jue,~38~} &
-    \rotatebox{90}{vie,~31~} &
+    \rotatebox{90}{\cellcolor{Red!50}vie,~31~} &
     \rotatebox{90}{lun,~3~} &
     \rotatebox{90}{mar,~4~} &
     \rotatebox{90}{mié,~5~} &
@@ -144,7 +144,7 @@
     \rotatebox{90}{mié,~12~} &
     \rotatebox{90}{jue,~13~} &
     \rotatebox{90}{vie,~14~} &
-    \rotatebox{90}{lun,~17~} &
+    \rotatebox{90}{\cellcolor{Red!50}lun,~17~} &
     \rotatebox{90}{mar,~18~} &
     \rotatebox{90}{mié,~19~} &
     \rotatebox{90}{jue,~20~} &
@@ -153,7 +153,7 @@
     \rotatebox{90}{mar,~25~} &
     \rotatebox{90}{mié,~26~} &
     \rotatebox{90}{jue,~27~} &
-    \rotatebox{90}{vie,~28~} &
+    \rotatebox{90}{\cellcolor{Red!50}vie,~28~} &
     \rotatebox{90}{lun,~1~} &
     \rotatebox{90}{mar,~2~} &
     \rotatebox{90}{mié,~3~} &
@@ -202,8 +202,8 @@
     \rotatebox{90}{mar,~27~} &
     \rotatebox{90}{mié,~28~} &
     \rotatebox{90}{jue,~29~} &
-    \rotatebox{90}{vie,~30~} &
-    \rotatebox{90}{lun,~2~} &
+    \rotatebox{90}{\cellcolor{Red!50} vie,~30~} &
+    \rotatebox{90}{\cellcolor{Red!50} lun,~2~} &
     \rotatebox{90}{mar,~3~} &
     \rotatebox{90}{mié,~4~} &
     \rotatebox{90}{jue,~5~} &
@@ -240,7 +240,7 @@
     \rotatebox{90}{mar,~24~} &
     \rotatebox{90}{mié,~25~} &
     \rotatebox{90}{jue,~26~} &
-    \rotatebox{90}{vie,~27~} &
+    \rotatebox{90}{\cellcolor{Red!50}vie,~27~} &
     \rotatebox{90}{lun,~2~} &
     \rotatebox{90}{mar,~3~} &
     \rotatebox{90}{mié,~4~} &
@@ -270,7 +270,7 @@
     \multicolumn{5}{|c|}{\bfseries Semana~30}
     \\ \cline{3-27}
     \# & \textbf{Nombre~del~alumno} &
-    \rotatebox{90}{lun,~16~} &
+    \rotatebox{90}{\cellcolor{Red!50} lun,~16~} &
     \rotatebox{90}{mar,~17~} &
     \rotatebox{90}{mié,~18~} &
     \rotatebox{90}{jue,~19~} &
@@ -279,7 +279,7 @@
     \rotatebox{90}{mar,~24~} &
     \rotatebox{90}{mié,~25~} &
     \rotatebox{90}{jue,~26~} &
-    \rotatebox{90}{vie,~27~} &
+    \rotatebox{90}{\cellcolor{Red!50}vie,~27~} &
     \rotatebox{90}{lun,~13~} &
     \rotatebox{90}{mar,~14~} &
     \rotatebox{90}{mié,~15~} &
@@ -289,12 +289,12 @@
     \rotatebox{90}{mar,~21~} &
     \rotatebox{90}{mié,~22~} &
     \rotatebox{90}{jue,~23~} &
-    \rotatebox{90}{vie,~24~} &
+    \rotatebox{90}{\cellcolor{Red!50}vie,~24~} &
     \rotatebox{90}{lun,~27~} &
     \rotatebox{90}{mar,~28~} &
     \rotatebox{90}{mié,~29~} &
     \rotatebox{90}{jue,~30~} &
-    \rotatebox{90}{vie,~1~}
+    \rotatebox{90}{\cellcolor{Red!50} vie,~1~}
     \\ \hline
   }
   \tl_set:Nn \studentlist_header_may
@@ -315,7 +315,7 @@
     \\ \cline{3-27}
     \# & \textbf{Nombre~del~alumno} &
     \rotatebox{90}{lun,~4~} &
-    \rotatebox{90}{mar,~5~} &
+    \rotatebox{90}{\cellcolor{Red!50} mar,~5~} &
     \rotatebox{90}{mié,~6~} &
     \rotatebox{90}{jue,~7~} &
     \rotatebox{90}{vie,~8~} &
@@ -323,7 +323,7 @@
     \rotatebox{90}{mar,~12~} &
     \rotatebox{90}{mié,~13~} &
     \rotatebox{90}{jue,~14~} &
-    \rotatebox{90}{vie,~15~} &
+    \rotatebox{90}{\cellcolor{Red!50} vie,~15~} &
     \rotatebox{90}{lun,~18~} &
     \rotatebox{90}{mar,~19~} &
     \rotatebox{90}{mié,~20~} &
@@ -333,7 +333,7 @@
     \rotatebox{90}{mar,~26~} &
     \rotatebox{90}{mié,~27~} &
     \rotatebox{90}{jue,~28~} &
-    \rotatebox{90}{vie,~29~}&
+    \rotatebox{90}{\cellcolor{Red!50}vie,~29~}&
     \rotatebox{90}{lun,~1~} &
     \rotatebox{90}{mar,~2~} &
     \rotatebox{90}{mié,~3~} &
@@ -422,7 +422,7 @@
     \rotatebox{90}{mar,~23~} &
     \rotatebox{90}{mié,~24~} &
     \rotatebox{90}{jue,~25~} &
-    \rotatebox{90}{vie,~26~} &
+    \rotatebox{90}{\cellcolor{Red!50} vie,~26~} &
     \rotatebox{90}{lun,~29~} &
     \rotatebox{90}{mar,~30~} &
     \rotatebox{90}{mié,~1~} &
@@ -492,49 +492,49 @@
   }
   % make the table
   \par\noindent
-  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
     \tl_use:N \studentlist_header_sep
     \seq_map_function:NN \studentlist_seq \__studentlist_row:n
   \end{tabular}
   \newpage
   \par\noindent
-  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
     \tl_use:N \studentlist_header_oct
     \seq_map_function:NN \studentlist_seq \__studentlist_row:n
   \end{tabular}
   \newpage
   \par\noindent
-  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
     \tl_use:N \studentlist_header_nov
     \seq_map_function:NN \studentlist_seq \__studentlist_row:n
   \end{tabular}
   \newpage
   \par\noindent
-  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
     \tl_use:N \studentlist_header_ene
     \seq_map_function:NN \studentlist_seq \__studentlist_row:n
   \end{tabular}
   \newpage
   \par\noindent
-  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
     \tl_use:N \studentlist_header_feb
     \seq_map_function:NN \studentlist_seq \__studentlist_row:n
   \end{tabular}
   \newpage
   \par\noindent
-  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
     \tl_use:N \studentlist_header_mar
     \seq_map_function:NN \studentlist_seq \__studentlist_row:n
   \end{tabular}
   \newpage
   \par\noindent
-  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
     \tl_use:N \studentlist_header_may
     \seq_map_function:NN \studentlist_seq \__studentlist_row:n
   \end{tabular}
   \newpage
   \par\noindent
-  \begin{tabular}{|rw{l}{22em}|*{25}{w{l}{0.5em}|}}
+  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
     \tl_use:N \studentlist_header_jun
     \seq_map_function:NN \studentlist_seq \__studentlist_row:n
   \end{tabular}
@@ -579,3 +579,5 @@
 \studentlist{2° de Secundaria}
 \studentlist{3° de Secundaria}
 \end{document}
+
+23+24+23+23+24+21+22+24
