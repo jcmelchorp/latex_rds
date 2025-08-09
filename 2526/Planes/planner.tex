@@ -1,12 +1,12 @@
 \documentclass{article}
 \usepackage{planner} % Load the planner package
 \begin{document}
-%\planner{0}{test}%
+\planner{0}{test}%
 %\planner{1}{math}%
 %\planner{2}{math}%
 %\planner{3}{math}%
 %\planner{3}{chem}%
-\planner{2}{phys}%
+%\planner{2}{phys}%
 \JSONParseArrayMapInline{\weekdata}{weeks}{%
     \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle
         {\JSONParseValue{\weekdata}{weeks[#1].ejesArticuladores}}
@@ -17,7 +17,7 @@
         {\JSONParseValue{\weekdata}{weeks[#1].semanaEscolar}}
         {\JSONParseValue{\weekdata}{weeks[#1].fechaDeInicio}}
         {\JSONParseValue{\weekdata}{weeks[#1].fechaDeCierre}}
-        {\classhours{6}}
+        {\classhours{5}}
     ]%
         \weekcontents
             {\JSONParseValue{\weekdata}{weeks[#1].inicio}}
