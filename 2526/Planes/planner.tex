@@ -1,31 +1,45 @@
 \documentclass{article}
 \usepackage{planner} % Load the planner package
 \begin{document}
-\planner{0}{test}%
-%\planner{1}{math}%
-%\planner{2}{math}%
-%\planner{3}{math}%
-%\planner{3}{chem}%
-%\planner{2}{phys}%
+\planner{0}{test}{1}%
+%\planner{1}{math}{1}%
+%\planner{2}{math}{1}%
+%\planner{3}{math}{1}%
+%\planner{3}{chem}{1}%
+%\planner{2}{phys}{1}%
 \JSONParseArrayMapInline{\weekdata}{weeks}{%
-    \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle
-        {\JSONParseValue{\weekdata}{weeks[#1].ejesArticuladores}}
-        {\JSONParseValue{\weekdata}{weeks[#1].contenido}}
-        {\JSONParseValue{\weekdata}{weeks[#1].tema}}
-        {\JSONParseValue{\weekdata}{weeks[#1].leccion}}
-        {\JSONParseValue{\weekdata}{weeks[#1].unidad}}
-        {\JSONParseValue{\weekdata}{weeks[#1].semanaEscolar}}
-        {\JSONParseValue{\weekdata}{weeks[#1].fechaDeInicio}}
-        {\JSONParseValue{\weekdata}{weeks[#1].fechaDeCierre}}
+\begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle
+        {\JSONParseValue{\weekdata}{weeks[#1].EjesArticuladores}}
+        {\JSONParseValue{\weekdata}{weeks[#1].Contenido}}
+        {\JSONParseValue{\weekdata}{weeks[#1].Tema}}
+        {\JSONParseValue{\weekdata}{weeks[#1].Leccion}}
+        {\JSONParseValue{\weekdata}{weeks[#1].Unidad}}
+        {\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}}
+        {\JSONParseValue{\weekdata}{weeks[#1].FechaDeInicio}}
+        {\JSONParseValue{\weekdata}{weeks[#1].FechaDeCierre}}
         {\classhours{5}}
     ]%
-        \weekcontents
-            {\JSONParseValue{\weekdata}{weeks[#1].inicio}}
-            {\JSONParseValue{\weekdata}{weeks[#1].desarrollo}}
-            {\JSONParseValue{\weekdata}{weeks[#1].cierre}}
-    \end{tcolorbox}
-    \weekbottom
-        {\JSONParseValue{\weekdata}{weeks[#1].aprendizaje}}
-        {\JSONParseValue{\weekdata}{weeks[#1].evaluacionFormativa}}
+    \weekcontents
+    {\JSONParseValue{\weekdata}{weeks[#1].Inicio}}
+    {\JSONParseValue{\weekdata}{weeks[#1].Desarrollo}}
+    {\JSONParseValue{\weekdata}{weeks[#1].Cierre}}
+    {%
+    \JSONParseArrayMapInline{\weekdata}{weeks[#1].Actividades}{%
+    \tcbox[size=fbox,on line]{\JSONParseValue{\weekdata}{weeks[#1].Actividades[##1]}}%
+    }
+}
+{%
+\JSONParseArrayMapInline{\weekdata}{weeks[#1].Evidencias}{%
+\tcbox[on line,top=2mm,right=2mm,bottom=2mm,left=2mm,arc=8pt]{\large\JSONParseValue{\weekdata}{weeks[#1].Evidencias[##1]}}%
+}
+}{
+    \JSONParseArrayMapInline{\weekdata}{weeks[#1].Practicas}{%
+\tcbox[size=fbox,on line]{\JSONParseValue{\weekdata}{weeks[#1].Practicas[##1]}}%
+}
+}
+\end{tcolorbox}
+\weekbottom
+{\JSONParseValue{\weekdata}{weeks[#1].Aprendizaje}}
+{\JSONParseValue{\weekdata}{weeks[#1].EvaluacionFormativa}}
 }
 \end{document}

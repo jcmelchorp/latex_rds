@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[landscape,twocolumn,12pt]{article}
 \usepackage[letterpaper,left=0.5in,right=0.5in,bottom=0.5in,top=0.5in]{geometry} % make room
 \usepackage[utf8]{inputenc}
 \usepackage[dvipsnames,table]{xcolor}% http://ctan.org/pkg/xcolor
@@ -7,7 +7,11 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{multirow,multicol}
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1}
+\setlength{\arrayrulewidth}{0.1pt}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.25em}
 \ExplSyntaxOn
 \NewDocumentCommand{\dailylist}{m}
 {% #1 = file name
@@ -28,159 +32,48 @@
     \int_incr:N \l_tmpa_int
     \seq_put_right:Nx \dailylist_seq
     {
-      \int_to_arabic:n { \l_tmpa_int } & \exp_not:n {\fontsize{10}{8}\selectfont ##1 } &
-    }
+     % \int_to_arabic:n { \l_tmpa_int } & \exp_not:n {\fontsize{8}{8}\selectfont ##1 } &
+       & \exp_not:n {\fontsize{8}{8}\selectfont ##1 } &
+      }
   }
   % build the header
   \tl_set:Nn \dailylist_header_uuno
   {
-    \hline
-    \multicolumn{2}{|c|}{\fontsize{14}{12}\selectfont \bfseries #1} &
-    \multicolumn{22}{|c|}{\cellcolor{RoyalBlue!50}\fontsize{14}{12}\selectfont \bfseries Septiembre}  & 
-    \multicolumn{3}{|c|}{\cellcolor{ForestGreen!50}\fontsize{10}{8}\selectfont \bfseries Octubre} \\
-    \hline
+    \multicolumn{2}{c}{\fontsize{14}{12}\selectfont \bfseries #1} &
+    \multicolumn{2}{c}{\cellcolor{RoyalBlue!50}\fontsize{8}{8}\selectfont \bfseries S}  & 
+    \multicolumn{3}{c}{\cellcolor{ForestGreen!50}\fontsize{8}{8}\selectfont \bfseries O} \\
     &
     &
-    \multicolumn{5}{|c|}{\bfseries Semana~1} &
-    \multicolumn{5}{|c|}{\bfseries Semana~2} &
-    \multicolumn{5}{|c|}{\bfseries Semana~3} &
-    \multicolumn{5}{|c|}{\bfseries Semana~4} &
-    \multicolumn{5}{|c|}{\bfseries Semana~5}
-    \\ \cline{3-27}
-    \# & \textbf{Nombre~del~alumno} &
-    \rotatebox{90}{lun,~1~} &
-    \rotatebox{90}{mar,~2~} &
-    \rotatebox{90}{mié,~3~} &
-    \rotatebox{90}{jue,~4~} &
-    \rotatebox{90}{vie,~5~} &
-    \rotatebox{90}{lun,~8~} &
-    \rotatebox{90}{mar,~9~} &
-    \rotatebox{90}{mié,~10~} &
-    \rotatebox{90}{jue,~11~} &
-    \rotatebox{90}{vie,~12~} &
-    \rotatebox{90}{\cellcolor{Red!50}lun,~15~} &
-    \rotatebox{90}{mar,~16~} &
-    \rotatebox{90}{mié,~17~} &
-    \rotatebox{90}{jue,~18~} &
-    \rotatebox{90}{vie,~19~} &
-    \rotatebox{90}{lun,~22~} &
-    \rotatebox{90}{mar,~23~} &
-    \rotatebox{90}{mié,~24~} &
-    \rotatebox{90}{jue,~25~} &
-    \rotatebox{90}{\cellcolor{Red!50}vie,~26~} &
-    \rotatebox{90}{lun,~29~} &
-    \rotatebox{90}{mar,~30~} &
-    \rotatebox{90}{mié,~1~} &
-    \rotatebox{90}{jue,~2~} &
-    \rotatebox{90}{vie,~3~}
-    \\ \hline
-  }
-  \tl_set:Nn \dailylist_header_udos
-  {
-    \hline
-    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
-    \multicolumn{20}{|c|}{\cellcolor{ForestGreen!50}\fontsize{14}{12}\selectfont \bfseries Octubre} & 
-     \multicolumn{5}{|c|}{\cellcolor{Brown!50}\fontsize{12}{10}\selectfont \bfseries Noviembre} \\
-    \hline
-    &
-    &
-    \multicolumn{5}{|c|}{\bfseries Semana~6} &
-    \multicolumn{5}{|c|}{\bfseries Semana~7} &
-    \multicolumn{5}{|c|}{\bfseries Semana~8} &
-    \multicolumn{5}{|c|}{\bfseries Semana~9} &
-    \multicolumn{5}{|c|}{\bfseries Semana~10}
-    \\ \cline{3-27}
-    \# & \textbf{Nombre~del~alumno} &
-    \rotatebox{90}{lun,~6~} &
-    \rotatebox{90}{mar,~7~} &
-    \rotatebox{90}{mié,~8~} &
-    \rotatebox{90}{jue,~9~} &
-    \rotatebox{90}{vie,~10~} &
-    \rotatebox{90}{lun,~13~} &
-    \rotatebox{90}{mar,~14~} &
-    \rotatebox{90}{mié,~15~} &
-    \rotatebox{90}{jue,~16~} &
-    \rotatebox{90}{vie,~17~} &
-    \rotatebox{90}{lun,~20~} &
-    \rotatebox{90}{mar,~21~} &
-    \rotatebox{90}{mié,~22~} &
-    \rotatebox{90}{jue,~23~} &
-    \rotatebox{90}{vie,~24~} &
-    \rotatebox{90}{lun,~27~} &
-    \rotatebox{90}{mar,~28~} &
-    \rotatebox{90}{mié,~29~} &
-    \rotatebox{90}{jue,~38~} &
-    \rotatebox{90}{\cellcolor{Red!50}vie,~31~} &
-    \rotatebox{90}{lun,~3~} &
-    \rotatebox{90}{mar,~4~} &
-    \rotatebox{90}{mié,~5~} &
-    \rotatebox{90}{jue,~6~} &
-    \rotatebox{90}{vie,~7~}
-    \\ \hline
-  }
-  \tl_set:Nn \dailylist_header_utres
-  {
-    \hline
-    \multicolumn{2}{|c|}{\fontsize{16}{18}\selectfont\bfseries #1} &
-    \multicolumn{5}{|c|}{\cellcolor{Brown!50}\fontsize{16}{18}\selectfont \bfseries Noviembre} &
-     \multicolumn{10}{|c|}{\cellcolor{Goldenrod!50}\fontsize{16}{18}\selectfont \bfseries Diciembre} \\
-    \hline
-    &
-    &
-    \multicolumn{5}{|c|}{\bfseries Semana~11} &
-    \multicolumn{5}{|c|}{\bfseries Semana~12} &
-    \multicolumn{5}{|c|}{\bfseries Semana~13} &
-    \multicolumn{5}{|c|}{\bfseries Semana~14} &
-    \multicolumn{5}{|c|}{\bfseries Semana~15}
-    \\ \cline{3-27}
-    \# & \textbf{Nombre~del~alumno} &
-    \rotatebox{90}{lun,~10~} &
-    \rotatebox{90}{mar,~11~} &
-    \rotatebox{90}{mié,~12~} &
-    \rotatebox{90}{jue,~13~} &
-    \rotatebox{90}{vie,~14~} &
-    \rotatebox{90}{\cellcolor{Red!50}lun,~17~} &
-    \rotatebox{90}{mar,~18~} &
-    \rotatebox{90}{mié,~19~} &
-    \rotatebox{90}{jue,~20~} &
-    \rotatebox{90}{vie,~21~} &
-    \rotatebox{90}{lun,~24~} &
-    \rotatebox{90}{mar,~25~} &
-    \rotatebox{90}{mié,~26~} &
-    \rotatebox{90}{jue,~27~} &
-    \rotatebox{90}{\cellcolor{Red!50}vie,~28~} 
+    \multicolumn{5}{c|}{\bfseries Semana~1} 
+    \\ \cline{3-7}
+     & \textbf{Actividad} &
+    \rotatebox{60}{lun,~1~} &
+    \rotatebox{60}{mar,~2~} &
+    \rotatebox{60}{mié,~3~} &
+    \rotatebox{60}{jue,~4~} &
+    \rotatebox{60}{vie,~5~} 
     \\ \hline
   }
   % check the number
-  \int_compare:nT { \seq_count:N \dailylist_seq > 190 }
+  \int_compare:nT { \seq_count:N \dailylist_seq > 181 }
   {
     \__dailylist_halve:
   }
   % make the table
   \par\noindent
-  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
+  %\begin{table*}[!ht]
+  \begin{tabular}{rw{l}{16em}|*{5}{w{l}{0.8em}|}}
     \tl_use:N \dailylist_header_uuno
     \seq_map_function:NN \dailylist_seq \__dailylist_row:n
   \end{tabular}
-  \newpage
-  \par\noindent
-  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
-    \tl_use:N \dailylist_header_udos
-    \seq_map_function:NN \dailylist_seq \__dailylist_row:n
-  \end{tabular}
-  \newpage
-  \par\noindent
-  \begin{tabular}{|rw{l}{16em}|*{25}{w{l}{0.4em}|}}
-    \tl_use:N \dailylist_header_utres
-    \seq_map_function:NN \dailylist_seq \__dailylist_row:n
-  \end{tabular}
+  %\end{table*}
 }
 \cs_new_protected:Nn \__dailylist_halve:
 {
   % make it even
   \int_if_odd:nT { \seq_count:N \dailylist_seq }
   {
-    \seq_put_right:Nn \dailylist_seq { \multicolumn{25}{c}{} }
+    \seq_put_right:Nn \dailylist_seq { \multicolumn{5}{c}{} }
   }
   % split in half
   \seq_clear:N \dailylist_temp_seq
@@ -203,9 +96,11 @@
 }
 \cs_new_protected:Nn \__dailylist_row:n
 {
-  #1 & & & & & & & & & & & & & & & & & & & & & & & & \\ \hline
+  #1 & & &  &  \\ \cline{3-7}
 }
 \ExplSyntaxOff
 \begin{document}
-\dailylist{mate1}
+\dailylist{math11}
+\dailylist{math12}
+\dailylist{math13}
 \end{document}

@@ -1,7 +1,7 @@
 \ProvidesPackage{planner}
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage[spanish]{babel}
-\RequirePackage[many]{tcolorbox}
+\RequirePackage[most]{tcolorbox}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{tabularx}
@@ -16,6 +16,9 @@
 \RequirePackage{ifthen}
 \RequirePackage{xifthen}
 \tcbuselibrary{listings}
+\RequirePackage{pgffor}
+
+\usetikzlibrary{shapes, positioning} % 'shapes' for rounded corners, 'positioning' for relative placement
 
 % Configuración de tcolorbox para los títulos y bloques
 \tcbset{
@@ -55,7 +58,7 @@
         right=2mm,
         top=2mm,
         bottom=2mm,
-    },
+    }
 }
 
 
@@ -73,6 +76,27 @@
 \definecolor{sec1Color}{HTML}{86608E}
 \definecolor{sec2Color}{HTML}{4C8BA7}
 \definecolor{sec3Color}{HTML}{A94939}
+
+\newtcolorbox{titlebox}[2][]{%
+  attach boxed title to top center
+              % = {yshift*=-\tcboxedtitleheight},
+              = {yshift=-\tcboxedtitleheight/3},
+  top=0mm,
+  bottom=0mm,
+  left=0mm,
+  right=0mm,
+  %colback      = rdsColor!20!white,
+  colback      = white,
+  colframe     = white,
+  fonttitle    = \sffamily,
+  colbacktitle = rdsColor!85!black,
+  boxrule=0.0pt,
+  arc=2pt,
+  boxsep=1mm,
+  title        = #2,#1,
+  on line,
+  enhanced,
+}
 
 \newtcblisting{unidadBox}{%
   listing only,
@@ -124,7 +148,7 @@
   \ifthenelse{\equal{#1}{3}}{\textcolor{sec3Color}{\textbf{3° de Secundaria}}}{}%
 }
 
-\newcommand{\planner}[2]{%
+\newcommand{\planner}[3]{%
     \def\schoolinfo{\RaggedRight%
         {\color{rdsColor}\fontsize{14}{12}\selectfont Escuela Rafael Díaz Serdán}\\[-0.5em]
         {\color{gray!40!black}\fontsize{6}{6}\selectfont \sffamily 30PES0329R \hfill turno matutino \hspace{2pt}}\\[0.2em]
@@ -133,7 +157,7 @@
         {\sffamily Disciplina:} \classtitle{#2#1} \\
         {\sffamily Grado y grupo:}  \leveltitle{#1}\\
     }
-    \JSONParseFromFile{\weekdata}{#2#1.json}
+    \JSONParseFromFile{\weekdata}{#2#1_#3.json}
 }
 
 \def\LOGO{%
@@ -145,8 +169,6 @@
 
 % Comando para el diseño del encabezado
 \newcommand*\planTitle[9]{\small%
-	\def\fechaini{#7}
-	\def\fechaend{#8}
     \begin{minipage}{0.07\textwidth}
         \LOGO
     \end{minipage}%
@@ -163,19 +185,33 @@
     \end{tabularx}
 }
 
-\newcommand*\weekcontents[3]{%
+\newcommand*\weekcontents[6]{%
+\begin{minipage}[t][12cm][t]{0.7\textwidth}
     \tcbsubtitle{INICIO}
     \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2.8cm]{#1}
     \tcbsubtitle{DESARROLLO}
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=4.6cm]{#2}
+    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=3cm]{#2}
     \tcbsubtitle{CIERRE}
     \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2cm]{#3}
-}
-
+\end{minipage}\hfill
+\begin{minipage}[t][12cm][t]{0.24\textwidth}
+    \begin{tcbraster}[raster columns=3]
+        \begin{titlebox}{Actividades}\centering
+            #4
+        \end{titlebox}
+        \begin{titlebox}[minipage boxed title*=-0.5cm,attach boxed title to top center = {yshift=-\tcboxedtitleheight/4},colback=white]{\scriptsize Cuaderno de Evidencias}\centering
+            #5
+        \end{titlebox}
+        \begin{titlebox}{Prácticas}\centering
+            #6
+        \end{titlebox}
+    \end{tcbraster}%
+\end{minipage}
+    }
 \newcommand*\weekbottom[2]{%
 \begin{multicols}{3}\centering
     \begin{tcolorbox}[infobox, title={\sffamily \large Proceso de desarrollo de aprendizaje (PDA):}]
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1.5cm, fit basedim=11pt]{#1}
+    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1cm, fit basedim=11pt]{#1}
     \end{tcolorbox}%
     \begin{tabularx}{0.95\linewidth}{c|c}
         \multicolumn{1}{p{0.45\linewidth}}{\centering \sffamily Elabora:}  & \multicolumn{1}{p{0.45\linewidth}}{\centering \sffamily Autoriza:}                \\
@@ -185,7 +221,8 @@
     \end{tabularx} \\
     {\centering \fontsize{6}{4}\selectfont  \color{black!60} Última revisión del documento:  \today}%
     \begin{tcolorbox}[infobox, title={\sffamily \large Instrumento y estrategia de evaluación:}]
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1.5cm, fit basedim=11pt]{#2}
+    %\tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1.5cm, fit basedim=11pt]{#2}
+    #2
     \end{tcolorbox}%
 \end{multicols}
 }
