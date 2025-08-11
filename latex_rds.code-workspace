@@ -30,7 +30,7 @@
 					"-interaction=nonstopmode",
 					"-file-line-error",
 					"-pdf",
-					"-aux-directory=%WORKSPACE_FOLDER%/2526/aux",
+					"-aux-directory=%OUTDIR%",
 					"-outdir=%OUTDIR%",
 					"%DOC%"
 				],
@@ -81,7 +81,7 @@
 					"-interaction=nonstopmode",
 					"-file-line-error",
 					"-pdf",
-					"--aux-directory=%WORKSPACE_FOLDER%/2526/out",
+					"--aux-directory=%OUTDIR%",
 					"-outdir=%OUTDIR%",
 					"%DOC%"
 				],

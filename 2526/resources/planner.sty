@@ -15,6 +15,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{ifthen}
 \RequirePackage{xifthen}
+\RequirePackage{enumitem}
 \tcbuselibrary{listings}
 \RequirePackage{pgffor}
 
@@ -157,7 +158,10 @@
         {\sffamily Disciplina:} \classtitle{#2#1} \\
         {\sffamily Grado y grupo:}  \leveltitle{#1}\\
     }
-    \JSONParseFromFile{\weekdata}{#2#1_#3.json}
+    \def\unitinfo{\RaggedRight%
+        \tcbox[colback=rdsColor!5!white,colframe=rdsColor,size=fbox,on line]{Unidad #3}
+    }
+    \JSONParseFromFile{\weekdata}{#2#1_u#3.json}
 }
 
 \def\LOGO{%
@@ -168,7 +172,7 @@
 }
 
 % Comando para el diseño del encabezado
-\newcommand*\planTitle[9]{\small%
+\newcommand*\planTitle[8]{\small%
     \begin{minipage}{0.07\textwidth}
         \LOGO
     \end{minipage}%
@@ -176,17 +180,17 @@
         \schoolinfo
     \end{minipage}%
     \begin{tabularx}{0.7\textwidth}{rYr}
-        {\sffamily Campo formativo:} & Saberes y Pensamiento Científico  &  \tcbox[colback=red!5!white,colframe=rdsColor,size=fbox,on line]{2025-2026} \tcbox[colback=rdsColor!5!white,colframe=rdsColor,size=fbox,on line]{Unidad #5}  \\ 
+        {\sffamily Campo formativo:} & Saberes y Pensamiento Científico  &  \tcbox[colback=red!5!white,colframe=rdsColor,size=fbox,on line]{2025-2026} \unitinfo  \\ 
         {\sffamily Tema:}  & \multirow[t]{2}{\linewidth}{#3} & \rangofecha{#7}{#8} \\
-        & & \tcbox[colback=yellow!20!white,colframe=rdsColor,size=fbox,on line]{Semana {\bfseries #6}} \tcbox[colframe=rdsColor,size=fbox,on line]{ {#9} \begin{minipage}{1.2cm}\tiny Períodos\\lectivos\end{minipage}}  \\
+        & & \tcbox[colback=yellow!20!white,colframe=rdsColor,size=fbox,on line]{Semana {\bfseries #6}} \tcbox[colframe=rdsColor,size=fbox,on line]{ {#5} \begin{minipage}{1.2cm}\tiny Períodos\\lectivos\end{minipage}}  \\
         {\sffamily Contenido:}  &  \multicolumn{2}{l}{#2}\\
         {\sffamily Ejes articuladores:} &   \multicolumn{2}{l}{#1}\\
         {\sffamily Lección:} &   \multicolumn{2}{l}{#4}\\ 
     \end{tabularx}
 }
 
-\newcommand*\weekcontents[6]{%
-\begin{minipage}[t][12cm][t]{0.7\textwidth}
+\newcommand*\weekcontents[8]{%
+\begin{minipage}[t][12cm][t]{0.76\textwidth}
     \tcbsubtitle{INICIO}
     \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2.8cm]{#1}
     \tcbsubtitle{DESARROLLO}
@@ -202,10 +206,16 @@
         \begin{titlebox}[minipage boxed title*=-0.5cm,attach boxed title to top center = {yshift=-\tcboxedtitleheight/4},colback=white]{\scriptsize Cuaderno de Evidencias}\centering
             #5
         \end{titlebox}
-        \begin{titlebox}{Prácticas}\centering
+        \begin{titlebox}{Proyectos}\centering
             #6
         \end{titlebox}
-    \end{tcbraster}%
+    \end{tcbraster}
+    \begin{tcolorbox}[infobox, title={\sffamily  Referencias:}]
+        #7
+    \end{tcolorbox}
+    \begin{tcolorbox}[infobox, title={\sffamily  Vinculación del campo formativo:}]
+        #8
+    \end{tcolorbox}
 \end{minipage}
     }
 \newcommand*\weekbottom[2]{%
