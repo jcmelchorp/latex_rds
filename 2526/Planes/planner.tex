@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage[most]{tcolorbox}
+\usepackage{amssymb}
 \usepackage{tabularx}
 \usepackage[landscape, margin=0.5in]{geometry}
 \usepackage{ragged2e}
@@ -17,6 +18,10 @@
 \usepackage{enumitem}
 \usepackage{pgffor}
 \usepackage{tikz}
+\usepackage{xparse} %for NewDocumentCommand
+\usepackage{etoolbox}
+\usepackage{l3sys-query} %for query JSON files
+
 \usetikzlibrary{shapes, positioning} % 'shapes' for rounded corners, 'positioning' for relative placement
 
 % Configuración de tcolorbox para los títulos y bloques
@@ -85,8 +90,8 @@
   bottom=0mm,
   left=0mm,
   right=0mm,
-  %colback      = rdsColor!20!white,
-  colback      = white,
+  colback      = rdsColor!20!white,
+%   colback      = white,
   colframe     = white,
   fonttitle    = \sffamily,
   colbacktitle = rdsColor!85!black,
@@ -98,8 +103,17 @@
   enhanced,
 }
 
-
-
+\NewDocumentCommand{\mymacrotwo}{ m g }
+ {%
+  \IfNoValueTF{#2}%
+   {%
+    #1: none%
+   }
+   {
+    #1: #2%
+   }%
+ }
+ 
 \newcommand*\rangofecha[2]{
     \begin{tikzpicture}[baseline]
         \node (box) [rdsColor,
@@ -126,10 +140,6 @@
   \ifthenelse{\equal{#1}{test0}}{\textcolor{red}{\textbf{TESTING}}}{}%
 }
 
-\newcommand{\classhours}[1]{%
-#1%
-}
-
 \newcommand{\leveltitle}[1]{%
   \ifthenelse{\equal{#1}{0}}{\textcolor{red}{\textbf{TESTING}}}{}%
   \ifthenelse{\equal{#1}{1}}{\textcolor{sec1Color}{\textbf{1° de Secundaria}}}{}%
@@ -150,6 +160,17 @@
         \tcbox[colback=rdsColor!5!white,colframe=rdsColor,size=fbox,on line]{Unidad #3}
     }
     \JSONParseFromFile{\weekdata}{#2#1_u#3.json}
+    %\QueryFiles[reverse]{*.json}{\JSONParseFromFile{\weekdata}{##1}}
+    % \JSONParseArrayUse[store in=\actividades]{\weekdata}{weeks[#1].Actividades}{,}
+    \ifthenelse{\equal{#2}{math}}{ }{
+        \JSONParseArrayUse[store in=\evidencias]{\weekdata}{weeks[#1].Evidencias}{,}
+    \JSONParseArrayUse[store in=\proyectos]{\weekdata}{weeks[#1].Proyectos}{,}
+    }%
+    
+}
+
+\newcommand{\itembox}{
+    \tcbox[size=fbox,on line]{\JSONParseArrayValue}
 }
 
 \def\LOGO{%
@@ -177,35 +198,26 @@
     \end{tabularx}
 }
 
-\newcommand*\weekcontents[8]{%
-\begin{minipage}[t][12cm][t]{0.76\textwidth}
+\NewDocumentCommand{\badges}{ m m }{
+    \begin{tcolorbox}[infobox, title={\sffamily  Referencias:}]
+        #2
+    \end{tcolorbox}
+    \begin{tcolorbox}[infobox, title={\sffamily  Vinculación del campo formativo:}]
+        \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1.5cm, fit basedim=11pt]{#1}
+    \end{tcolorbox}
+}
+
+\NewDocumentCommand{\weekcontents}{ m m m }{%
+%\newcommand{\weekcontents}[8]{%
+\begin{minipage}[t][12cm][b]{0.76\textwidth}
     \tcbsubtitle{INICIO}
     \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2.8cm]{#1}
     \tcbsubtitle{DESARROLLO}
     \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=4.5cm]{#2}
     \tcbsubtitle{CIERRE}
     \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=1cm]{#3}
-\end{minipage}\hfill
-\begin{minipage}[t][12cm][t]{0.24\textwidth}
-    \begin{tcbraster}[raster columns=3]
-        \begin{titlebox}{Actividades}\centering
-            #4
-        \end{titlebox}
-        \begin{titlebox}[minipage boxed title*=-0.5cm,attach boxed title to top center = {yshift=-\tcboxedtitleheight/4},colback=white]{\scriptsize Cuaderno de Evidencias}\centering
-            #5
-        \end{titlebox}
-        \begin{titlebox}{Proyectos}\centering
-            #6
-        \end{titlebox}
-    \end{tcbraster}
-    \begin{tcolorbox}[infobox, title={\sffamily  Vinculación del campo formativo:}]
-        #8
-    \end{tcolorbox}\vfill
-    \begin{tcolorbox}[infobox, title={\sffamily  Referencias:}]
-        #7
-    \end{tcolorbox}
 \end{minipage}
-    }
+}
 \newcommand*\weekbottom[2]{%
 \begin{multicols}{3}\centering
     \begin{tcolorbox}[infobox, title={\sffamily \large Proceso de desarrollo de aprendizaje (PDA):}]
@@ -231,6 +243,8 @@
 \end{multicols}
 }
 
+
+
 \begin{document}
 \planner{0}{test}{1}%
 %\planner{1}{math}{1}%
@@ -239,6 +253,7 @@
 %\planner{3}{chem}{1}%
 %\planner{2}{phys}{1}%
 \JSONParseArrayMapInline{\weekdata}{weeks}{%
+%\JSONParseArrayUse[store in=\actividades]{\weekdata}{weeks[#1].Actividades}{,}
 \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle
         {\JSONParseValue{\weekdata}{weeks[#1].EjesArticuladores}}
         {\JSONParseValue{\weekdata}{weeks[#1].Contenido}}
@@ -249,26 +264,31 @@
         {\JSONParseValue{\weekdata}{weeks[#1].FechaDeInicio}}
         {\JSONParseValue{\weekdata}{weeks[#1].FechaDeCierre}}
     ]%
-        \weekcontents
+        \weekcontents%
             {\JSONParseValue{\weekdata}{weeks[#1].Inicio}}
             {\JSONParseValue{\weekdata}{weeks[#1].Desarrollo}}
-            {\JSONParseValue{\weekdata}{weeks[#1].Cierre}}
-            {%
-                \JSONParseArrayMapInline{\weekdata}{weeks[#1].Actividades}{%
-                    \tcbox[size=fbox,on line]{\JSONParseValue{\weekdata}{weeks[#1].Actividades[##1]}}%
-                }
+            {\JSONParseValue{\weekdata}{weeks[#1].Cierre}}\hfill%
+         \begin{minipage}[t][12cm][b]{0.25\textwidth}
+                    %%
+                    %% coloca aqui espacio para notas
+                    %%
+                    \begin{tcolorbox}[infobox, title={\sffamily  Notas:}]
+                        \vspace{3cm}
+                    \end{tcolorbox}
+                    \JSONParseArrayMapFunction[
+                        code before={\begin{titlebox}{Actividades}\centering\Large},
+                        code after={\end{titlebox}}
+                    ]{\weekdata}{weeks[#1].ActPro}{\itembox}
+            \badges{\JSONParseValue{\weekdata}{weeks[#1].Vinculacion}}{%
+                 \begin{itemize}[itemsep=0pt,itemindent=-2em]
+                     \item Física, Imagina, págs. \JSONParseValue{\weekdata}{weeks[#1].LibroMcMillan}
+                     \JSONParseArrayMapInline{\weekdata}{weeks[#1].LibroSep}{%
+                        \item \JSONParseValue{\weekdata}{weeks[#1].LibroSep[##1]}
+                     }%
+                 \end{itemize}%
             }
-            {\tcbox[on line,top=2mm,right=2mm,bottom=2mm,left=2mm,arc=8pt]{\JSONParseValue{\weekdata}{weeks[#1].Evidencias}}}
-            {\tcbox[size=fbox,on line]{\JSONParseValue{\weekdata}{weeks[#1].Proyecto}}}
-            {%
-            \begin{itemize}[itemsep=0pt,itemindent=-2em]
-                \item Física, Imagina, págs. \JSONParseValue{\weekdata}{weeks[#1].LibroMcMillan}
-                \JSONParseArrayMapInline{\weekdata}{weeks[#1].LibroSep}{%
-                   \item \JSONParseValue{\weekdata}{weeks[#1].LibroSep[##1]}
-                }%
-            \end{itemize}%
-            }
-            {\JSONParseValue{\weekdata}{weeks[#1].Vinculacion}}
+        
+    \end{minipage}%
 \end{tcolorbox}
 \weekbottom
     {\JSONParseValue{\weekdata}{weeks[#1].Aprendizaje}}
