@@ -30,98 +30,25 @@
         "Troya"
       ],
       "LibroSep": [
-        "MeXmáticas"
+        "Saberes y Pensamiento Científico, 193-203"
       ],
-      "LibroMcMillan": "",
-      "Vinculacion": "",
+      "LibroMcMillan": "Química, Imagina, págs. 20-27",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "Libros": [
+        "Saberes y Pensamiento Científico, 182-191 y 182-191",
+        "Nuestro libro de Proyectos, 112-121",
+        "Química, Imagina, págs. 56-63"
+      ],
       "ActPro": [
-        "24",
+        "17",
+        "18",
         "25",
         "26",
         "27",
         "28",
-        "24",
-        "25",
-        "26",
-        "27",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "28",
-        "3",
-        "Troya"
-      ]
-    },
-    {
-      "PeriodosLectivos": 6,
-      "FechaDeInicio": "13 oct",
-      "FechaDeCierre": "17 oct",
-      "SemanaEscolar": 7,
-      "Contenido": "Unidades y medidas utilizados en Física.",
-      "Aprendizaje": "Conoce los instrumentos de medición.",
-      "Tema": "Instrumentos de medición",
-      "Leccion": "Lección 7. Instrumentos de medición",
-      "Inicio": "El objetivo de esta sección es mostrar a los alumnos la importancia de la medición, pero que no siempre se cuenta con los instrumentos adecuados para hacerlas. Sin embargo, la curiosidad y la creatividad natural del ser humano lo ha llevado a crear diversas maneras de tratar de responder a sus inquietudes. La invención de los dispositivos para medir masa, longitud, tiempo, luminosidad, etcétera, ha llevado a la humanidad a avanzar a pasos agigantados en el desarrollo de la tecnología en apenas un par de siglos. Le proponemos que le haga las siguientes preguntas a sus alumnos: * Si no existieran las cintas métricas o las reglas, ¿cómo medirías la estatura de una persona? ¿Y la distancia de una ciudad a otra? * ¿Qué instrumento inventarías para medir el grosor de un cabello? * Si no existieran las balanzas, ¿cómo medirías la masa de los alimentos que compras? ¿Y tu masa? * ¿Cómo medirías el transcurso de los días si no existieran los calendarios? ¿Y el tiempo que te lleva realizar una actividad en tu vida cotidiana, como bañarte o transportarte? Permítales a los alumnos que usen su imaginación para inventar dispositivos de medición. Que expliquen sus ideas y las comparen con las de sus compañeros, para que hagan consciencia de la utilidad y la importancia de los instrumentos de medición en la vida cotidiana. Antes de responder las preguntas de esta sección, pídales que comenten qué instrumentos de medición conocen y para qué sirven. Seguramente sólo mencionarán los más comunes, para medir masa, tiempo y longitud. Invítelos a mencionar otros instrumentos, por ejemplo, para medir volumen y capacidad, qué instrumento se utiliza para medir la fuerza, o la luminosidad de un foco.",
-      "Desarrollo": "Antes de que lean esta página, pregunte a sus alumnos qué creen que significan los términos precisión, sensibilidad, exactitud y fiabilidad en el contexto de la medición. Pregunte sobre un término a la vez y pida que le den ejemplos; es decir, que expliquen qué creen que significa que un instrumento de medición sea preciso y mencionen algunos ejemplos. Haga lo mismo para el resto de los conceptos y luego pida a distintos alumnos que lean las definiciones que están en el libro. Después, pídales que corrijan su concepción original de cada término, si es necesario. Si tiene la posibilidad, lleve algunos de los instrumentos de medición como vernier, micrómetro, cinta métrica y multímetro. Muestre a sus estudiantes cómo se utilizan y pregúnteles qué medirían con cada uno. Le sugerimos que, de ser posible, proyecte los videos sugeridos en la página 43. Si cuenta con ellos, muéstreles también una báscula, un dinamómetro, un cronómetro y un termómetro, y pregúnteles qué creen que mide cada uno. Organice a sus alumnos en tercias y pídales que anoten en su cuaderno qué medirían con los instrumentos anteriores y en qué contextos de su vida cotidiana lo harían. Después, anímelos a compartir sus ejemplos con sus compañeros y que comparen sus respuestas.  Si tiene la oportunidad, muéstreles el video sugerido en la página 44 para que sepan qué es un espectrómetro de masas. Puede dejarles de tarea que vean el video sobre el reloj atómico y hacer una sesión de preguntas al día siguiente para que compartan qué entendieron sobre el funcionamiento del reloj. Le sugerimos que deje de tarea que hagan una presentación por equipos sobre los instrumentos de medición que aparecen en la página 45 para que la presenten ante el grupo. También, utilice los ejemplos de instrumentos de medición para unidades derivadas que se preguntan en la actividad de reflexión y asígnelos a otros equipos para su presentación. Anímelos a utilizar diversas formas de presentar su trabajo, ya sea mediante presentaciones electrónicas o hechas en cartulinas con recortes y dibujos.",
-      "Cierre": "El propósito es que los alumnos consoliden lo que aprendieron en esta secuencia, que lo apliquen en la resolución de situaciones de su vida cotidiana y que comprendan por qué existen diversos instrumentos para medir la misma unidad básica, dependiendo del contexto en el que se utilicen. ¿Qué instrumentos se usan, por ejemplo, para medir la calidad del aire que respiramos? Para responder invite a sus alumnos a trabajar la ficha 3 del Cuaderno de evidencias.",
-      "EjesArticuladores": "Pensamiento crítico.",
-      "EvaluacionFormativa": [
-        "Sabe qué es un instrumento de medición y para qué se utiliza."
-      ],
-      "Evidencias": [],
-      "Actividades": [
-        "11"
-      ],
-      "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 250-252",
-        "Nuestro librode proyectos, 96-105"
-      ],
-      "LibroMcMillan": "42-45",
-      "Vinculacion": "",
-      "ActPro": [
-        "11"
-      ]
-    },
-    {
-      "PeriodosLectivos": 6,
-      "FechaDeInicio": "20 oct",
-      "FechaDeCierre": "24 oct",
-      "SemanaEscolar": 8,
-      "Contenido": "Estructura, propiedades y características de la materia.",
-      "Aprendizaje": "Materiales, sus propiedades y características.",
-      "Tema": "Materiales de tu entorno y sus propiedades",
-      "Leccion": "Lección 8. Materiales y sus propiedades",
-      "Inicio": "El objetivo de esta sección es mostrar a los alumnos las aplicaciones de los materiales en los distintos aspectos de la vida y la forma en la que han sido utilizados por el ser humano para obtener alimento y protegerse del clima y los elementos externos. Sin embargo, también nos presenta la realidad de la sobreexplotación de los recursos naturales y cómo se ha acelerado en los últimos dos siglos como consecuencia de los avances tecnológicos y los procesos de producción. Le proponemos que les haga las siguientes preguntas a sus alumnos: * ¿Por qué es importante conocer las propiedades de los materiales? * ¿Cuáles son las ventajas de contar cada vez con más materiales para la fabricación de productos de uso cotidiano? * ¿Es realmente necesario sobreexplotar los recursos naturales para satisfacer las necesidades de la humanidad, o podríamos satisfacerlas sin abusar de la extracción de los recursos? * ¿Consideras que desperdicias recursos en tus actividades cotidianas? Da algunos ejemplos y plantea qué podrías hacer para disminuir el desperdicio. La sección de Inicio también tiene la intención de despertar el asombro de los estudiantes al presentar una máquina capaz de cortar acero a partir de un chorro de agua, resalte esta propiedad del líquido que a primera vista parecería imposible y reflexione con ellos sobre las características de los materiales que podríamos aprovechar en aplicaciones inesperadas, todo gracias al ingenio humano.",
-      "Desarrollo": "El primer párrafo de esta sección plantea que la materia es un concepto abstracto, pero podría pedirles a sus estudiantes que digan qué cosas que observan a su alrededor están hechas de materia. Probablemente mencionen que todas lo están, entonces pregúnteles si el aire está hecho de materia y cómo podemos percibirlo. Después, mencione otras cosas que no son materia, como las ideas, el tiempo y el espacio, para aclarar el concepto y propiedades de la materia. Pregunte cuáles creen que son las propiedades de la materia que se pueden medir, pida ejemplos concretos, anímelos a observar los objetos que los rodean en el salón de clases y que describan algunas de sus propiedades. Si observa que los alumnos no pueden expresar sus ideas, puede orientarlos con propiedades como la masa, la longitud, el volumen, etcétera. Si mencionan características como el olor, el sabor o el color, explíqueles que éstas son propiedades cualitativas que no se pueden medir, mientras que las cuantitativas como la masa y la longitud, sí. Solicite a sus estudiantes que den ejemplos de cómo medir las propiedades extensivas, qué instrumentos se utilizan y cuáles son las unidades de medida correspondientes. En la página 47 se hace énfasis en el cálculo de la densidad de los materiales. Coménteles que la densidad es una característica distintiva de los materiales, es decir, si conocemos la densidad, podemos determinar de qué material se trata. Resuelva en el pizarrón ejemplos para calcular la densidad de diferentes materiales, por ejemplo: * Un lingote de oro con una masa de 301 g tiene un volumen de 15.6 cm3. Calcula la densidad del oro. * La densidad del mercurio, el único metal líquido a temperatura ambiente, es de 13.6 g/mL. Calcula la masa de 5.5 mL de mercurio. Utilice los ejemplos anteriores para comentar lo siguiente: La densidad del mercurio es aproximadamente 13 veces mayor que la del agua; por tanto, algunos objetos que se hunden en el agua flotarán sobre mercurio, incluyendo piezas de plomo, plata y acero; sin embargo, las piezas de oro se hunden, ya que el oro tiene una densidad más alta que el mercurio. También le recomendamos que resuelva problemas en los que se calcule la masa y el volumen en lugar de la densidad. Después de resolver la actividad de la página 48, organice una lluvia de ideas para que den ejemplos de materiales de su vida cotidiana que presenten las propiedades intensivas que se muestran en la actividad. Recuérdeles que deben tener cuidado cuando manejan cierto tipo de materiales. Pida también ejemplos de objetos según la clasificación de la página 49.",
-      "Cierre": "El propósito de esta sección es que los alumnos apliquen los conocimientos adquiridos en la lección y reflexionen sobre la aplicación de las propiedades de los distintos materiales en la elaboración de diferentes productos",
-      "EjesArticuladores": "Inclusión.",
-      "EvaluacionFormativa": [
-        "Reconoce la diferencia entre propiedades extensivas e intensivas de la materia.",
-        "Comprende e identifica las propiedades de los materiales y su aplicación en la vida cotidiana."
-      ],
-      "Evidencias": [
-        "4",
-        "5"
-      ],
-      "Actividades": [
-        "12",
-        "13"
-      ],
-      "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 241-244",
-        "Nuestro libro de proyectos, 156-162"
-      ],
-      "LibroMcMillan": "46-49",
-      "Vinculacion": "",
-      "ActPro": [
-        "12",
-        "13",
-        "4",
-        "5"
+        "F25",
+        "F3",
+        "Caballo de Troya"
       ]
     }
   ]
