@@ -21,9 +21,37 @@
 \usepackage{xparse} %for NewDocumentCommand
 \usepackage{etoolbox}
 \usepackage{l3sys-query} %for query JSON files
+\usepackage{lipsum}
 
 \usetikzlibrary{shapes, positioning} % 'shapes' for rounded corners, 'positioning' for relative placement
 
+\newtcolorbox{notasbox}[1][]{
+    enhanced,
+    breakable,
+    colback=rdsColor!1!white,
+    colframe=rdsColor,
+    boxrule=0.4pt,
+    underlay unbroken and first={%
+        \ifnumequal{\tcbsegmentstate}{1}{
+            \begin{tcbclipinterior}
+            \draw[help lines,rdsColor!80!white, ystep=\baselineskip, xstep=\linewidth] (segmentation.west) grid (frame.south east);
+            \end{tcbclipinterior}
+        }{} 
+    },
+    underlay middle and last={%
+        \ifnumequal{\tcbsegmentstate}{1}{
+            \begin{tcbclipinterior}\color{rdsColor}
+            \draw[help lines,rdsColor!80!white, ystep=\baselineskip, xstep=\linewidth] (segmentation.west) grid (frame.south east);
+            \end{tcbclipinterior}
+        }{\ifnumequal{\tcbsegmentstate}{2}{
+            \begin{tcbclipinterior}\color{rdsColor}
+            \draw[help lines,rdsColor!80!white, ystep=\baselineskip, xstep=\linewidth] (frame.north west) grid (frame.south east);
+            \end{tcbclipinterior}
+            }{} 
+        }
+    },
+    #1
+}
 % Configuración de tcolorbox para los títulos y bloques
 \tcbset{
     titlebox/.style={
@@ -40,8 +68,8 @@
         top=2pt,
         bottom=10pt,
         subtitle style={
-            fontupper=\sffamily\normalsize,
-            fontlower=\huge,
+            fontupper=\sffamily\small,
+            %fontlower=\huge,
             boxrule=0.4pt,
             boxsep=2mm,
             top=0mm,
@@ -52,7 +80,7 @@
     },
     infobox/.style={
         coltitle=green!30!black,
-        colframe=black!100,
+        colframe=rdsColor,
         colback=rdsColor!1!white,
         colbacktitle=rdsColor!10,
         boxrule=0.4pt,
@@ -85,34 +113,23 @@
 \newtcolorbox{titlebox}[2][]{%
   attach boxed title to top center
               % = {yshift*=-\tcboxedtitleheight},
-              = {yshift=-\tcboxedtitleheight/3},
-  top=0mm,
-  bottom=0mm,
-  left=0mm,
-  right=0mm,
-  colback      = rdsColor!20!white,
-%   colback      = white,
-  colframe     = white,
+              = {yshift=-\tcboxedtitleheight},
+  top=15pt,
+  bottom=2pt,
+  left=2pt,
+  right=2pt,
+%  colback      = rdsColor!20!white,
+   colback      = white,
+  colframe     = rdsColor,
   fonttitle    = \sffamily,
   colbacktitle = rdsColor!85!black,
-  boxrule=0.0pt,
+  boxrule=0.4pt,
   arc=2pt,
-  boxsep=1mm,
+  boxsep=0mm,
   title        = #2,#1,
   on line,
   enhanced,
 }
-
-\NewDocumentCommand{\mymacrotwo}{ m g }
- {%
-  \IfNoValueTF{#2}%
-   {%
-    #1: none%
-   }
-   {
-    #1: #2%
-   }%
- }
  
 \newcommand*\rangofecha[2]{
     \begin{tikzpicture}[baseline]
@@ -203,19 +220,19 @@
         #2
     \end{tcolorbox}
     \begin{tcolorbox}[infobox, title={\sffamily  Vinculación del campo formativo:}]
-        \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1.5cm, fit basedim=11pt]{#1}
+        \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1cm, fit basedim=11pt]{#1}
     \end{tcolorbox}
 }
 
 \NewDocumentCommand{\weekcontents}{ m m m }{%
 %\newcommand{\weekcontents}[8]{%
-\begin{minipage}[t][12cm][b]{0.76\textwidth}
+\begin{minipage}[t][12cm][b]{0.76\linewidth}
     \tcbsubtitle{INICIO}
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2.8cm]{#1}
+    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2.5cm]{#1}
     \tcbsubtitle{DESARROLLO}
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=4.5cm]{#2}
+    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=5cm]{#2}
     \tcbsubtitle{CIERRE}
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=1cm]{#3}
+    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=1.5cm]{#3}
 \end{minipage}
 }
 \newcommand*\weekbottom[2]{%
@@ -246,11 +263,11 @@
 
 
 \begin{document}
-\planner{0}{test}{1}%
+%\planner{0}{test}{1}%
 %\planner{1}{math}{1}%
 %\planner{2}{math}{1}%
 %\planner{3}{math}{1}%
-%\planner{3}{chem}{1}%
+\planner{3}{chem}{1}%
 %\planner{2}{phys}{1}%
 \JSONParseArrayMapInline{\weekdata}{weeks}{%
 %\JSONParseArrayUse[store in=\actividades]{\weekdata}{weeks[#1].Actividades}{,}
@@ -268,22 +285,20 @@
             {\JSONParseValue{\weekdata}{weeks[#1].Inicio}}
             {\JSONParseValue{\weekdata}{weeks[#1].Desarrollo}}
             {\JSONParseValue{\weekdata}{weeks[#1].Cierre}}\hfill%
-         \begin{minipage}[t][12cm][b]{0.25\textwidth}
-                    %%
-                    %% coloca aqui espacio para notas
-                    %%
-                    \begin{tcolorbox}[infobox, title={\sffamily  Notas:}]
-                        \vspace{3cm}
-                    \end{tcolorbox}
-                    \JSONParseArrayMapFunction[
-                        code before={\begin{titlebox}{Actividades}\centering\Large},
-                        code after={\end{titlebox}}
-                    ]{\weekdata}{weeks[#1].ActPro}{\itembox}
+         \begin{minipage}[t][12cm][b]{0.25\linewidth}
+            \JSONParseArrayMapFunction[
+                code before={\begin{titlebox}{Actividades}\centering\large},
+                code after={\end{titlebox}}
+            ]{\weekdata}{weeks[#1].ActPro}{\itembox}\vfill
+                    \begin{notasbox}
+                        {\color{rdsColor}\sffamily Notas:}
+                        \tcblower
+                        {\vspace{2mm} \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill }
+                    \end{notasbox}
             \badges{\JSONParseValue{\weekdata}{weeks[#1].Vinculacion}}{%
                  \begin{itemize}[itemsep=0pt,itemindent=-2em]
-                     \item Física, Imagina, págs. \JSONParseValue{\weekdata}{weeks[#1].LibroMcMillan}
-                     \JSONParseArrayMapInline{\weekdata}{weeks[#1].LibroSep}{%
-                        \item \JSONParseValue{\weekdata}{weeks[#1].LibroSep[##1]}
+                     \JSONParseArrayMapInline{\weekdata}{weeks[#1].Libros}{%
+                        \item \small \JSONParseValue{\weekdata}{weeks[#1].Libros[##1]}
                      }%
                  \end{itemize}%
             }
