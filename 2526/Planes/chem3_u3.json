@@ -25,8 +25,7 @@
       "LibroMcMillan": "",
       "Vinculacion": "",
       "Libros": [
-        "Saberes y Pensamiento Científico, 294-298",
-        ""
+        "Saberes y Pensamiento Científico, 294-298"
       ],
       "ActPro": [
         "Me preparo"
@@ -59,7 +58,7 @@
         "Saberes y Pensamiento Científico, 148-152 y 236-240"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 166-167",
-      "Vinculacion": "Biología: Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.\\\\\nMatemáticas: Analiza datos en gráficas.",
+      "Vinculacion": "\\textbf{Biología:} Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
       "Libros": [
         "Saberes y Pensamiento Científico, 148-152 y 236-240",
         "Química, Imagina, págs. 166-167"
@@ -100,7 +99,7 @@
         "Nuestro libro de Proyectos, 122-131"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 168-173",
-      "Vinculacion": "Biología: Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.",
+      "Vinculacion": "\\textbf{Biología:} Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.",
       "Libros": [
         "Saberes y Pensamiento Científico, 142-155 ",
         "Nuestro libro de Proyectos, 122-131",
@@ -141,7 +140,7 @@
         "Saberes y Pensamiento Científico, 280-283"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 174-177",
-      "Vinculacion": "Biología: Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.\\\\\nMatemáticas: Analiza datos en tablas y resuelve operaciones.",
+      "Vinculacion": "\\textbf{Biología:} Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas y resuelve operaciones.",
       "Libros": [
         "Saberes y Pensamiento Científico, 280-283",
         "Química, Imagina, págs. 174-177"
@@ -180,7 +179,7 @@
         "Saberes y Pensamiento Científico, 156-159 y 284-285"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 178-183",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\nMatemáticas: Resuelve operaciones.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Resuelve operaciones.",
       "Libros": [
         "Saberes y Pensamiento Científico, 156-159 y 284-285",
         "Química, Imagina, págs. 178-183"
@@ -220,7 +219,7 @@
         "Saberes y Pensamiento Científico, 286-289"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 184-187",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
       "Libros": [
         "Saberes y Pensamiento Científico, 286-289",
         "Química, Imagina, págs. 184-187"
@@ -262,7 +261,7 @@
         "Saberes y Pensamiento Científico, 161-165 y 291-292"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 188-193",
-      "Vinculacion": "Física. Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
       "Libros": [
         "Saberes y Pensamiento Científico, 161-165 y 291-292",
         "Química, Imagina, págs. 188-193"
@@ -301,7 +300,7 @@
       ],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 193-197",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\nMatemáticas: Analiza datos en gráficas.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
       "Libros": [
         "Química, Imagina, págs. 193-197"
       ],
@@ -336,7 +335,7 @@
       "Proyectos": [],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 198-203",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
       "Libros": [
         "Química, Imagina, págs. 198-203"
       ],
@@ -374,7 +373,7 @@
       ],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 204-209",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
       "Libros": [
         "Química, Imagina, págs. 204-209"
       ],
@@ -414,7 +413,7 @@
       ],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 210-213",
-      "Vinculacion": "Física: Reconoce los saberes y las prácticas para el aprovechamiento de energías y la sustentabilidad.\\\\\nMatemáticas: Analiza datos en gráficas.",
+      "Vinculacion": "\\textbf{Física:} Reconoce los saberes y las prácticas para el aprovechamiento de energías y la sustentabilidad.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
       "Libros": [
         "Química, Imagina, págs. 210-213"
       ],
@@ -454,7 +453,7 @@
       "Proyectos": [],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 214-219",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\nMatemáticas: Analiza datos en tablas y gráficas.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas y gráficas.",
       "Libros": [
         "Química, Imagina, págs. 214-219"
       ],
@@ -496,7 +495,7 @@
       ],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 220-225",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
       "Libros": [
         "Química, Imagina, págs. 220-225"
       ],

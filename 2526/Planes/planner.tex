@@ -253,22 +253,20 @@
     
     \columnbreak%
 
-    \begin{tcolorbox}[infobox, title={\sffamily \large Instrumento y estrategia de evaluación:}]
+    \begin{tcolorbox}[infobox, title={\sffamily \large Evaluación formativa:}]
     %\tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1.5cm, fit basedim=11pt]{#2}
     \scriptsize #2
     \end{tcolorbox}%
 \end{multicols}
 }
 
-
-
 \begin{document}
-\planner{0}{test}{1}%
+%\planner{0}{test}{1}%
 %\planner{1}{math}{1}%
 %\planner{2}{math}{1}%
 %\planner{3}{math}{1}%
-%\planner{3}{chem}{1}%
-%\planner{2}{phys}{1}%
+\planner{3}{chem}{3}%
+%\planner{2}{phys}{3}%
 \JSONParseArrayMapInline{\weekdata}{weeks}{%
 %\JSONParseArrayUse[store in=\actividades]{\weekdata}{weeks[#1].Actividades}{,}
 \begin{tcolorbox}[titlebox,title=\RaggedLeft\planTitle

@@ -27,7 +27,7 @@
       "Proyectos": [],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 82-87",
-      "Vinculacion": "Física: Identifica la estructura, propiedades y características de la materia.\\\\\nMatemáticas: Analiza datos en gráficas.",
+      "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\\\\\n\\textbf{Matemáticas:} Analiza datos en gráficas.",
       "Libros": [
         "Química, Imagina, págs. 82-87"
       ],
@@ -63,7 +63,7 @@
         "Saberes y Pensamiento Científico, 217"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 88-91",
-      "Vinculacion": "Física: Identifica la estructura, propiedades y características de la materia.",
+      "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.",
       "Libros": [
         "Saberes y Pensamiento Científico, 217",
         "Química, Imagina, págs. 88-91"
@@ -96,7 +96,7 @@
       "Proyectos": [],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 92-95",
-      "Vinculacion": "Física: Identifica la estructura, propiedades y características de la materia.\\\\\nMatemáticas: Analiza datos en tablas y gráficas.",
+      "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\\\\\n\\textbf{Matemáticas:} Analiza datos en tablas y gráficas.",
       "Libros": [
         "Química, Imagina, págs. 92-95"
       ],
@@ -133,7 +133,7 @@
         "Saberes y Pensamiento Científico, 216-220"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 96-101",
-      "Vinculacion": "Física: Identifica la estructura, propiedades y características de la materia.\nMatemáticas: Resuelve operaciones.",
+      "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\n\\textbf{Matemáticas:} Resuelve operaciones.",
       "Libros": [
         "Saberes y Pensamiento Científico, 216-220",
         "Química, Imagina, págs. 96-101"
@@ -172,7 +172,7 @@
         "Saberes y Pensamiento Científico, 255-260"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 102-109",
-      "Vinculacion": "Física: Identifica la estructura, propiedades y características de la materia.\\\\\nMatemáticas: Analiza datos en tablas.",
+      "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\\\\\n\\textbf{Matemáticas:} Analiza datos en tablas.",
       "Libros": [
         "Saberes y Pensamiento Científico, 255-260",
         "Química, Imagina, págs. 102-109"
@@ -211,7 +211,7 @@
         "Saberes y Pensamiento Científico, 260-262"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 110-115",
-      "Vinculacion": "Física: Identifica la estructura, propiedades y características de la materia.\nMatemáticas: Analiza datos en tablas y gráficas.",
+      "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\n\\textbf{Matemáticas:} Analiza datos en tablas y gráficas.",
       "Libros": [
         "Saberes y Pensamiento Científico, 260-262",
         "Química, Imagina, págs. 110-115"
@@ -248,7 +248,7 @@
         "Saberes y Pensamiento Científico, 204-207"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 116-119",
-      "Vinculacion": "Física: Reconoce las interacciones de la electricidad y el magnetismo.",
+      "Vinculacion": "\\textbf{Física:} Reconoce las interacciones de la electricidad y el magnetismo.",
       "Libros": [
         "Saberes y Pensamiento Científico, 204-207",
         "Química, Imagina, págs. 116-119"
@@ -287,7 +287,7 @@
         "Saberes y Pensamiento Científico, 166-169 y 221-225"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 120-125",
-      "Vinculacion": "Física: Identifica la estructura, propiedades y características de la materia.",
+      "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.",
       "Libros": [
         "Saberes y Pensamiento Científico, 166-169 y 221-225",
         "Química, Imagina, págs. 120-125"
@@ -329,7 +329,7 @@
         "Saberes y Pensamiento Científico, 223-226"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 126-131",
-      "Vinculacion": "Física: Identifica la estructura, propiedades y características de la materia.",
+      "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.",
       "Libros": [
         "Saberes y Pensamiento Científico, 223-226",
         "Química, Imagina, págs. 126-131"
@@ -371,7 +371,7 @@
         "Saberes y Pensamiento Científico, 319-330"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 132-135",
-      "Vinculacion": "Biología: Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.",
+      "Vinculacion": "\\textbf{Biología:} Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.",
       "Libros": [
         "Saberes y Pensamiento Científico, 319-330",
         "Química, Imagina, págs. 132-135"
@@ -413,7 +413,7 @@
         "Nuestro libro de Proyectos, 122-131"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 136-141",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\nMatemáticas: Analiza datos en tablas.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\n\\textbf{Matemáticas:} Analiza datos en tablas.",
       "Libros": [
         "Saberes y Pensamiento Científico, 269-273",
         "Nuestro libro de Proyectos, 122-131",
@@ -460,7 +460,7 @@
         "Saberes y Pensamiento Científico, 208-215"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 142-147",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\nMatemáticas: Resuelve operaciones.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\n\\textbf{Matemáticas:} Resuelve operaciones.",
       "Libros": [
         "Saberes y Pensamiento Científico, 208-215",
         "Química, Imagina, págs. 142-147"
@@ -504,7 +504,7 @@
         "Nuestro libro de Proyectos, 122-131"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 148-151",
-      "Vinculacion": "Física: Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
       "Libros": [
         "Saberes y Pensamiento Científico, 315-318 ",
         "Nuestro libro de Proyectos, 122-131",
@@ -544,7 +544,7 @@
         "Saberes y Pensamiento Científico, 308-310"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 152-159",
-      "Vinculacion": "Física: Reconoce las Interacciones en fenómenos relacionados con la fuerza y el movimiento.\\\\\nMatemáticas: Resuelve operaciones.",
+      "Vinculacion": "\\textbf{Física:} Reconoce las Interacciones en fenómenos relacionados con la fuerza y el movimiento.\\\\\n\\textbf{Matemáticas:} Resuelve operaciones.",
       "Libros": [
         "Saberes y Pensamiento Científico, 308-310",
         "Química, Imagina, págs. 152-159"
