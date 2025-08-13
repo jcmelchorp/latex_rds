@@ -16,39 +16,113 @@
       "EvaluacionFormativa": [
         "Observación de la participación en discusiones, corrección de ejercicios en clase, y tarea de problemas mixtos de suma y resta."
       ],
-      "Evidencias": [
-        "3"
-      ],
+      "Evidencias": [],
       "Actividades": [
-        "24",
-        "25",
-        "26",
-        "27",
-        "28"
+        "1",
+        "2"
       ],
-      "Proyectos": [
-        "Troya"
-      ],
+      "Proyectos": [],
       "LibroSep": [
-        "Saberes y Pensamiento Científico, 193-203"
+        "MeXmáticas"
       ],
-      "LibroMcMillan": "Química, Imagina, págs. 20-27",
-      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: } Resuelve problemas sobre dinámica de poblaciones, utilizando la suma para calcular el total de individuos tras nacimientos o inmigraciones, y la resta para determinar la población restante después de muertes o emigraciones.",
       "Libros": [
-        "Saberes y Pensamiento Científico, 182-191 y 182-191",
-        "Nuestro libro de Proyectos, 112-121",
-        "Química, Imagina, págs. 56-63"
+        "MeXmáticas",
+        "Apuntes de clase y ejercicios propuestos"
       ],
       "ActPro": [
-        "17",
-        "18",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "PeriodosLectivos": 6,
+      "FechaDeInicio": "26 ene",
+      "FechaDeCierre": "30 ene",
+      "SemanaEscolar": 19,
+      "Contenido": "Leyes de Newton",
+      "Aprendizaje": "Experimenta e interpreta las interacciones de la fuerza y el movimiento, relacionados con las Leyes de Newton para explicar actividades cotidianas.",
+      "Tema": "Ley de la inercia (Primera Ley de Newton), Segunda Ley de Newton, ley de la acción y la reacción (Tercera Ley de Newton).",
+      "Leccion": "Lección 9. Leyes de Newton",
+      "Inicio": "La sección de Inicio presenta un episodio anecdótico de la vida de Robert Goddard, iniciador de la ingeniería aeroespacial, quien construyó el primer cohete de combustible líquido. Lo interesante de la historia es que su sueño de construir un cohete espacial inició con la lectura de un libro de ficción. Pero la seguridad de que su idea realmente podría funcionar se fundamentó en la lectura del libro Principia Mathematica de Newton, particularmente de la Tercera Ley. Resalte a sus alumnos la relación entre la ciencia ficción y la literatura con la ciencia. Para ello, invítelos a que expongan libros, series o películas donde se muestre esa relación.",
+      "Desarrollo": "Las leyes de Newton son consideradas una de las aportaciones más importantes de la Física a la humanidad, porque son la base de la Mecánica clásica, teoría general del movimiento. Es prácticamente imposible mirar alrededor y no encontrar algo donde las leyes de Newton hayan sido aplicadas: la fuerza generada por los motores, la resistencia del concreto y del asfalto, el peralte de las curvas en las carreteras, las grúas en las construcciones; la lista sería interminable. Las leyes de Newton se aplican en todos los casos donde existen movimientos y fuerzas; por ello, su estudio es muy importante. El propósito de la actividad de la página 115 consiste en que los alumnos comprendan el concepto de inercia mediante la observación del comportamiento de dos cuerpos al alterar su estado de movimiento; este experimento puede ser muy interesante y motivador si se plantea como un reto y las explicaciones de los resultados se comparten y discuten entre todo el grupo. Al terminar la actividad, organice una lluvia de ideas en la que los alumnos expongan ejemplos de situaciones donde intervenga la inercia; por ejemplo, qué pasa cuando un automóvil avanza con mucha rapidez y el conductor pisa el freno de manera inesperada, o por qué un mago puede jalar un mantel sobre el que se encuentran platos y cubiertos sin que caigan. La actividad de la página 116 tiene como objetivo que los alumnos analicen, a partir de su propia experiencia, la relación que existe entre la masa de un objeto y la inercia, y que reconozcan la forma en que este conocimiento se formaliza por medio de la Primera Ley de Newton. Explique a los alumnos la diferencia entre la masa y el volumen o el tamaño de un objeto. Pídales que den ejemplos de situaciones cotidianas donde la masa de los objetos interviene como un factor importante para modificar su movimiento. Resalte las aplicaciones de la inercia, por ejemplo, en el caso de las naves espaciales como las Voyager, que continúan su movimiento sin una fuerza que las impulse. El objetivo de la actividad de la página 117 es que los alumnos comprendan la relación entre la masa, la fuerza y la aceleración. En este caso, la fuerza aplicada se debe al peso de las monedas colocadas en el vasito suspendido, la masa del carrito se modifica añadiendo monedas sobre él, y su aceleración se determina con las mediciones de distancia y tiempo para cada intervalo. La actividad está sujeta a mediciones imprecisas, por lo que los alumnos deben buscar las mejores condiciones para realizarlas y, en caso necesario, priorizar los resultados cualitativos. Con la actividad de la página 119, los alumnos experimentarán vivencialmente la Tercera Ley de Newton. Es importante que los estudiantes distingan las fuerzas de acción y la consecuente reacción y que identifiquen que éstas siempre están presentes por pares. Pida a sus alumnos que expongan y expliquen otros ejemplos donde se manifiesten claramente estas fuerzas.",
+      "Cierre": "El propósito es que los alumnos comparen y reflexionen sobre las respuestas que dieron en la situación inicial y asuman una postura crítica sobre la manera en que las leyes de Newton son útiles para explicar fenómenos relacionados con el movimiento. Invite a los alumnos a resolver las actividades de esta fase y a comparar sus respuestas con las de sus compañeros de grupo. Pídales que elaboren un mapa conceptual sobre las leyes de Newton, también puede sugerirles que elaboren fichas de trabajo ilustradas con estas mismas leyes. A partir de una historia muy emotiva, la ficha 10 del Cuaderno de evidencias invita a trabajar y reflexionar sobre las leyes de Newton, en especial con la primera.",
+      "EjesArticuladores": "Pensamiento crítico.",
+      "EvaluacionFormativa": [
+        "Comprende la ley de la inercia.",
+        "Comprende la relación entre la masa, la fuerza aplicada y la aceleración de un objeto.",
+        "Comprende la ley de acción y reacción."
+      ],
+      "Evidencias": [
+        "F10"
+      ],
+      "Actividades": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "Proyectos": [
+        "Movimiento Cuerpos"
+      ],
+      "LibroSep": [
+        "Saberes y pensamiento científico, 287-289"
+      ],
+      "LibroMcMillan": "Física, Imagina, págs. 114-119",
+      "Vinculacion": "\\textbf{Matemáticas: } Utiliza correctamente las distintas unidades de medida del SI.",
+      "Libros": [
+        "Saberes y pensamiento científico, 287-289 y 287-289",
+        "Física, Imagina, págs. 114-119",
+        "Nuestro libro de proyectos, 287-289 y 287-289"
+      ],
+      "ActPro": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "22",
+        "23",
+        "24",
+        "25",
         "25",
         "26",
-        "27",
-        "28",
-        "F25",
-        "F3",
-        "Caballo de Troya"
+        "F10",
+        "26",
+        "F10",
+        "Movimiento Cuerpos"
+      ]
+    },
+    {
+      "PeriodosLectivos": 6,
+      "FechaDeInicio": "23 mar",
+      "FechaDeCierre": "27 mar",
+      "SemanaEscolar": 27,
+      "Contenido": "Introducción a la Unidad 3",
+      "Aprendizaje": "",
+      "Tema": "Introducción a la Unidad 3",
+      "Leccion": "Me preparo",
+      "Inicio": "El alumnado debe tener noción de lo que es una mezcla y comprender la diferencia entre ésta y un compuesto. En la actividad 1, los componentes de la mezcla interactúan, y algunos de ellos experimentarán reacciones químicas.",
+      "Desarrollo": "Los estudiantes deberán recordar que la harina se obtiene del trigo y que contiene carbohidratos, que son una de las fuentes principales de energía. Otro tipo de nutrimentos son las proteínas, como el huevo, que es la fuente proteica principal del pan. Ya conocen la clasificación de la materia y las características de las reacciones químicas que se emplean en la obtención de energía. Utilice esta sección como ejercicio para tener una idea general de los conocimientos previos que tienen respecto a las reacciones químicas y a la energía. Explore sus experiencias fuera del contexto escolar con reacciones en las que hayan visto manifestaciones de energía como calor y luz, y oriéntelos para que descubran que se trata de reacciones químicas. Como introducción a los cambios químicos, repase los cambios físicos que estudiaron en su curso de Física en los que se requiere y se desprende energía al llevarse a cabo, en particular los cambios de estado de la materia. Del mismo modo, relacione el proceso de digestión y la nutrición que estudiaron en su curso de Biología con reacciones químicas que ocurren en nuestro cuerpo y que generan energía.",
+      "Cierre": "Oriente a los estudiantes hacia una comprensión sobre la diversidad de los alimentos. Para ello, pida que observen la imagen y pregunte ¿cuáles son las principales fuentes de alimentos que consumen en su dieta diaria? ¿Qué procesos piensan que atraviesan los alimentos desde que se cultivan hasta que llegan a su plato? En la actualidad, la agricultura ha adoptado diversos métodos para mejorar la producción de sus cultivos, como la aplicación de fertilizantes químicos. Comente que, gracias al uso de estos materiales, se satisface la enorme demanda de cereales alimentarios y otros productos en todo el mundo. Al respecto, pregunte ¿consideran que el uso excesivo de pesticidas y fertilizantes en el suelo puede tener efectos negativos? Elabore en el pizarrón una lista con sus respuestas y mencione que, en efecto, el uso en exceso de fertilizantes está deteriorando la calidad del suelo y de las aguas subterráneas, debido a los componentes de estas sustancias, que en gran medida son nitrógeno y fósforo. Aproveche la discusión en torno a esta problemática para relacionar los temas con el ods 9 (Industria, innovación e infraestructura). Con ayuda del contenido \"¿Sabes cómo funcionan los biofertilizantes?\", material que se sugiere en los \"Recursos de apoyo complementarios\", mencione que en la actualidad se desarrollan nuevos fertilizantes a base de microorganismos, que son capaces de reestructurar el suelo y mejorar el desarrollo de los cultivos. Si lo considera oportuno, introduzca a los educandos a uno de los temas centrales de la unidad: ácidos y bases. Para ello, pregunte ¿qué entienden por neutralización? Comente que algunos fertilizantes contienen carbonato de calcio, con el propósito de aumentar el pH del suelo, es decir, reducir la acidez generada por la lixiviación por medio de un proceso que se conoce como neutralización.",
+      "EjesArticuladores": "",
+      "EvaluacionFormativa": ["Recupera los aprendizajes de la Unidad anterior."],
+      "Evidencias": [],
+      "Actividades": [],
+      "Proyectos": [
+        "Me preparo"
+      ],
+      "LibroSep": [
+        "Saberes y Pensamiento Científico, 294-298"
+      ],
+      "LibroMcMillan": "",
+      "Vinculacion": "",
+      "Libros": [
+        "Saberes y Pensamiento Científico, 294-298"
+      ],
+      "ActPro": [
+        "Me preparo"
       ]
     }
   ]
