@@ -59,7 +59,7 @@
         "Saberes y Pensamiento Científico, 293-298"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 16-19",
-      "Vinculacion": "\\textbf{Biología:} Reconoce los distintos saberes de los pueblos originarios acerca del medio ambiente.\\\\\n\\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "Vinculacion": "\\textbf{Biología:} Reconoce los distintos saberes de los pueblos originarios acerca del medio ambiente.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
       "Libros": [
         "Saberes y Pensamiento Científico, 293-298",
         "Química, Imagina, págs. 16-19"
@@ -99,7 +99,7 @@
         "Saberes y Pensamiento Científico, 193-203"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 20-27",
-      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\n\\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
       "Libros": [
         "Saberes y Pensamiento Científico, 193-203",
         "Química, Imagina, págs. 20-27"
@@ -142,7 +142,7 @@
         "Nuestro libro de Proyectos, 102-111"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 28-33",
-      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\\n\\textbf{Matemáticas:} Analiza datos en tablas y encuentra las relaciones.",
+      "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas y encuentra las relaciones.",
       "Libros": [
         "Saberes y Pensamiento Científico, 263-268 ",
         "Nuestro libro de Proyectos, 102-111",
@@ -188,7 +188,7 @@
         "Nuestro libro de Proyectos, 102-111"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 34-37",
-      "Vinculacion": "\\textbf{Física:} Usa unidades y medidas utilizados en Física.\\\\\n\\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "Vinculacion": "\\textbf{Física:} Usa unidades y medidas utilizados en Física.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
       "Libros": [
         "Saberes y Pensamiento Científico, 247-254",
         "Nuestro libro de Proyectos, 102-111",
@@ -227,7 +227,7 @@
       "Proyectos": [],
       "LibroSep": [],
       "LibroMcMillan": "Química, Imagina, págs. 38-45",
-      "Vinculacion": "\\textbf{Física:} Estructura, propiedades y características de la materia. Reconoce los estados de agregación de la materia.\\\\\n\\textbf{Matemáticas:} Resuelve operaciones y analiza datos en gráficas.",
+      "Vinculacion": "\\textbf{Física:} Estructura, propiedades y características de la materia. Reconoce los estados de agregación de la materia.\\\\ \\textbf{Matemáticas:} Resuelve operaciones y analiza datos en gráficas.",
       "Libros": [
         "Química, Imagina, págs. 38-45"
       ],
@@ -397,7 +397,7 @@
         "Saberes y Pensamiento Científico, 170-177"
       ],
       "LibroMcMillan": "Química, Imagina, págs. 64-69",
-      "Vinculacion": "\\textbf{Biología:} Aplica sus conocimientos sobre los ecosistemas para integrar las consecuencias de la contaminación en su comunidad.\\\\\n\\textbf{Matemáticas:} Analiza datos en tablas y gráficas.",
+      "Vinculacion": "\\textbf{Biología:} Aplica sus conocimientos sobre los ecosistemas para integrar las consecuencias de la contaminación en su comunidad.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas y gráficas.",
       "Libros": [
         "Saberes y Pensamiento Científico, 170-177",
         "Química, Imagina, págs. 64-69"
@@ -465,7 +465,9 @@
         "Evaluación formativa."
       ],
       "Evidencias": [],
-      "Actividades": [],
+      "Actividades": [
+        "Repaso de Unidad"
+      ],
       "Proyectos": [
         "Examen de Unidad"
       ],
@@ -476,6 +478,7 @@
         "Química, Imagina, págs. 74-75"
       ],
       "ActPro": [
+        "Repaso de Unidad",
         "Examen de Unidad"
       ]
     }
