@@ -15,7 +15,7 @@
 \usepackage{xcolor}
 \usepackage{ifthen}
 \usepackage{xifthen}
-\usepackage{enumitem}
+\usepackage{enumitem} % for custom \item
 \usepackage{pgffor}
 \usepackage{tikz}
 \usepackage{xparse} %for NewDocumentCommand
@@ -34,18 +34,18 @@
     underlay unbroken and first={%
         \ifnumequal{\tcbsegmentstate}{1}{
             \begin{tcbclipinterior}
-            \draw[help lines,rdsColor!80!white, ystep=\baselineskip, xstep=\linewidth] (segmentation.west) grid (frame.south east);
+            \draw[help lines,rdsColor!60!white, ystep=\baselineskip, xstep=\linewidth] (segmentation.west) grid (frame.south east);
             \end{tcbclipinterior}
         }{} 
     },
     underlay middle and last={%
         \ifnumequal{\tcbsegmentstate}{1}{
             \begin{tcbclipinterior}\color{rdsColor}
-            \draw[help lines,rdsColor!80!white, ystep=\baselineskip, xstep=\linewidth] (segmentation.west) grid (frame.south east);
+            \draw[help lines,rdsColor!40!white, ystep=\baselineskip, xstep=\linewidth] (segmentation.west) grid (frame.south east);
             \end{tcbclipinterior}
         }{\ifnumequal{\tcbsegmentstate}{2}{
             \begin{tcbclipinterior}\color{rdsColor}
-            \draw[help lines,rdsColor!80!white, ystep=\baselineskip, xstep=\linewidth] (frame.north west) grid (frame.south east);
+            \draw[help lines,rdsColor!40!white, ystep=\baselineskip, xstep=\linewidth] (frame.north west) grid (frame.south east);
             \end{tcbclipinterior}
             }{} 
         }
@@ -60,8 +60,8 @@
         fontupper=\small,
         colframe=rdsColor,
         coltitle=black,
-        boxrule=0.4pt,
-        arc=2mm,
+        boxrule=0.1pt,
+        %arc=2mm,
         boxsep=0mm,
         left=10pt,
         right=0pt,
@@ -69,7 +69,6 @@
         bottom=10pt,
         subtitle style={
             fontupper=\sffamily\small,
-            %fontlower=\huge,
             boxrule=0.4pt,
             boxsep=2mm,
             top=0mm,
@@ -122,7 +121,7 @@
    colback      = white,
   colframe     = rdsColor,
   fonttitle    = \sffamily,
-  colbacktitle = rdsColor!85!black,
+  colbacktitle = rdsColor!65!white,
   boxrule=0.4pt,
   arc=2pt,
   boxsep=0mm,
@@ -136,14 +135,14 @@
         \node (box) [rdsColor,
             draw,                   % Dibuja el borde
             anchor=base,baseline,
-            rounded corners=1pt,    % Redondea las esquinas
+            rounded corners=4pt,    % Redondea las esquinas
             minimum width=3cm,      % Ancho total
-            minimum height=1.2em,    % Alto total
+            minimum height=1.4em,    % Alto total
             yshift=0.3em
         ] {}; % El nodo no lleva texto dentro, solo define la forma.
         \draw[rdsColor] ([xshift=-1mm]box.north) -- ([xshift=1mm]box.center) -- ([xshift=-1mm]box.south);
-        \node at ([xshift=-0.8cm]box.center) {#1};
-        \node at ([xshift=0.8cm]box.center) {#2};
+        \node at ([xshift=-0.8cm]box.center) {\large #1};
+        \node at ([xshift=0.8cm]box.center) {\large #2};
     \end{tikzpicture}%
 }
 
@@ -174,7 +173,7 @@
         {\sffamily Grado y grupo:}  \leveltitle{#1}\\
     }
     \def\unitinfo{\RaggedRight%
-        \tcbox[colback=rdsColor!5!white,colframe=rdsColor,size=fbox,on line]{Unidad #3}
+        \tcbox[colback=rdsColor!5!white,colframe=rdsColor,size=fbox,on line]{\large {\sffamily Unidad} #3}
     }
     \JSONParseFromFile{\weekdata}{#2#1_u#3.json}
     %\QueryFiles[reverse]{*.json}{\JSONParseFromFile{\weekdata}{##1}}
@@ -187,7 +186,7 @@
 }
 
 \newcommand{\itembox}{
-    \tcbox[size=fbox,on line]{\JSONParseArrayValue}
+    \tcbox[size=fbox,on line,colback=orange!10!white]{\JSONParseArrayValue}
 }
 
 \def\LOGO{%
@@ -206,9 +205,9 @@
         \schoolinfo
     \end{minipage}%
     \begin{tabularx}{0.7\textwidth}{rYr}
-        {\sffamily Campo formativo:} & Saberes y Pensamiento Científico  &  \tcbox[colback=red!5!white,colframe=rdsColor,size=fbox,on line]{2025-2026} \unitinfo  \\ 
+        {\sffamily Campo formativo:} & Saberes y Pensamiento Científico  &  \tcbox[colback=red!10!white,colframe=rdsColor,size=fbox,on line]{\large 2025-2026} \unitinfo  \\ 
         {\sffamily Tema:}  & \multirow[t]{2}{\linewidth}{#3} & \rangofecha{#7}{#8} \\
-        & & \tcbox[colback=yellow!20!white,colframe=rdsColor,size=fbox,on line]{Semana {\bfseries #6}} \tcbox[colframe=rdsColor,size=fbox,on line]{ {#5} \begin{minipage}{1.2cm}\tiny Períodos\\lectivos\end{minipage}}  \\
+        & & \tcbox[colback=yellow!20!white,colframe=rdsColor,size=fbox,on line]{\large {\sffamily Semana} {\bfseries #6}} \tcbox[colframe=rdsColor,size=fbox,on line]{ {\Large #5} \begin{minipage}[b]{1cm}\sffamily\tiny Períodos\\lectivos\end{minipage}}  \\
         {\sffamily Contenido:}  &  \multicolumn{2}{l}{#2}\\
         {\sffamily Ejes articuladores:} &   \multicolumn{2}{l}{#1}\\
         {\sffamily Lección:} &   \multicolumn{2}{l}{#4}\\ 
@@ -217,7 +216,7 @@
 
 \NewDocumentCommand{\badges}{ m m }{
     \begin{tcolorbox}[infobox, title={\sffamily  Referencias:}]
-         #2
+        \small #2
     \end{tcolorbox}
     \begin{tcolorbox}[infobox, title={\sffamily  Vinculación del campo formativo:}]
         \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1.5cm]{#1}
@@ -226,13 +225,13 @@
 
 \NewDocumentCommand{\weekcontents}{ m m m }{%
 %\newcommand{\weekcontents}[8]{%
-\begin{minipage}[t][12cm][b]{0.74\linewidth}
+\begin{minipage}[t][12.5cm][b]{0.74\linewidth}
     \tcbsubtitle{INICIO}
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2.5cm]{#1}
+    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2.6cm]{#1}
     \tcbsubtitle{DESARROLLO}
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=5cm]{#2}
+    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=4.75cm]{#2}
     \tcbsubtitle{CIERRE}
-    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=1.5cm]{#3}
+    \tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=10pt,height=2.25cm]{#3}
 \end{minipage}
 }
 \newcommand*\weekbottom[2]{%
@@ -255,7 +254,7 @@
 
     \begin{tcolorbox}[infobox, title={\sffamily \large Evaluación formativa:}]
     %\tcboxfit[colback=white,colframe=white,top=0mm,bottom=0mm,left=0mm,right=0mm,height=1.5cm, fit basedim=11pt]{#2}
-    \scriptsize #2
+    \small #2
     \end{tcolorbox}%
 \end{multicols}
 }
@@ -283,7 +282,7 @@
             {\JSONParseValue{\weekdata}{weeks[#1].Inicio}}
             {\JSONParseValue{\weekdata}{weeks[#1].Desarrollo}}
             {\JSONParseValue{\weekdata}{weeks[#1].Cierre}}\hfill%
-         \begin{minipage}[t][12cm][b]{0.27\linewidth}
+         \begin{minipage}[t][12.5cm][b]{0.27\linewidth}
             \JSONParseArrayMapFunction[
                 code before={\begin{titlebox}{Actividades}\centering\large},
                 code after={\end{titlebox}}
@@ -291,7 +290,7 @@
                     \begin{notasbox}
                         {\color{rdsColor}\sffamily Notas:}
                         \tcblower
-                        {\vspace{2mm} \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill }
+                        {\vspace{2mm} \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill }
                     \end{notasbox}\vfill
             \badges{\JSONParseValue{\weekdata}{weeks[#1].Vinculacion}}{%
                  \begin{itemize}[itemsep=0pt,itemindent=-2em]
