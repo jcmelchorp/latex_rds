@@ -1,128 +1,263 @@
 {
   "weeks": [
     {
-      "PeriodosLectivos": 5,
-      "FechaDeInicio": "1 sept",
-      "FechaDeCierre": "5 sept",
-      "SemanaEscolar": 1,
-      "Contenido": "Operaciones básicas con números enteros y decimales (suma y resta).",
-      "Aprendizaje": "Comprenderán y realizarán sumas y restas con números enteros y decimales, aplicando los procedimientos correctos.",
-      "Tema": "Suma y resta de números.",
-      "Leccion": "Uso de las operaciones de suma y resta en situaciones cotidianas.",
-      "Inicio": "La clase comenzará con una actividad interactiva en la que Compartirán ejemplos de situaciones cotidianas en las que utilizan sumas y restas, como comprar en una tienda o calcular la distancia recorrida. Se les motivará a pensar en cómo las operaciones básicas son esenciales para la resolución de problemas reales. Esta discusión inicial servirá para conectar los conceptos de suma y resta con sus aplicaciones prácticas, generando interés y contextualización del tema.",
-      "Desarrollo": "Se explicará detalladamente cómo realizar sumas y restas con números enteros y decimales, enfatizando la importancia de colocar correctamente los números en columnas al realizar operaciones largas. Se mostrarán ejemplos paso a paso en la pizarra, comenzando con problemas sencillos y avanzando gradualmente hacia ejercicios que incluyen decimales y valores negativos. Los estudiantes trabajarán en parejas para resolver ejercicios prácticos en sus cuadernos, lo cual fomentará la colaboración y la discusión sobre diferentes estrategias de resolución. Se proporcionarán hojas de trabajo con problemas que mezclen sumas y restas en contextos cotidianos para reforzar la comprensión.",
-      "Cierre": "Para cerrar la clase, los estudiantes resolverán un problema contextualizado, como ajustar un presupuesto simple o calcular cambios de una compra. Se realizará una breve reflexión grupal en la que Compartirán los desafíos que encontraron y las estrategias que les funcionaron mejor. Se asignará una tarea con problemas de suma y resta para reforzar lo aprendido, y se animará a los estudiantes a practicar en casa con ejemplos de su vida cotidiana.",
-      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
-      "EvaluacionFormativa": [
-        "Observación de la participación en discusiones, corrección de ejercicios en clase, y tarea de problemas mixtos de suma y resta."
-      ],
-      "Evidencias": [],
-      "Actividades": [
-        "1",
-        "2"
-      ],
-      "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
-      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Biología: } Resuelve problemas sobre dinámica de poblaciones, utilizando la suma para calcular el total de individuos tras nacimientos o inmigraciones, y la resta para determinar la población restante después de muertes o emigraciones.",
-      "Libros": [
-        "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
-      ],
-      "ActPro": [
-        "1",
-        "2"
-      ]
-    },
-    {
       "PeriodosLectivos": 6,
-      "FechaDeInicio": "26 ene",
-      "FechaDeCierre": "30 ene",
-      "SemanaEscolar": 19,
-      "Contenido": "Leyes de Newton",
-      "Aprendizaje": "Experimenta e interpreta las interacciones de la fuerza y el movimiento, relacionados con las Leyes de Newton para explicar actividades cotidianas.",
-      "Tema": "Ley de la inercia (Primera Ley de Newton), Segunda Ley de Newton, ley de la acción y la reacción (Tercera Ley de Newton).",
-      "Leccion": "Lección 9. Leyes de Newton",
-      "Inicio": "La sección de Inicio presenta un episodio anecdótico de la vida de Robert Goddard, iniciador de la ingeniería aeroespacial, quien construyó el primer cohete de combustible líquido. Lo interesante de la historia es que su sueño de construir un cohete espacial inició con la lectura de un libro de ficción. Pero la seguridad de que su idea realmente podría funcionar se fundamentó en la lectura del libro Principia Mathematica de Newton, particularmente de la Tercera Ley. Resalte a sus alumnos la relación entre la ciencia ficción y la literatura con la ciencia. Para ello, invítelos a que expongan libros, series o películas donde se muestre esa relación.",
-      "Desarrollo": "Las leyes de Newton son consideradas una de las aportaciones más importantes de la Física a la humanidad, porque son la base de la Mecánica clásica, teoría general del movimiento. Es prácticamente imposible mirar alrededor y no encontrar algo donde las leyes de Newton hayan sido aplicadas: la fuerza generada por los motores, la resistencia del concreto y del asfalto, el peralte de las curvas en las carreteras, las grúas en las construcciones; la lista sería interminable. Las leyes de Newton se aplican en todos los casos donde existen movimientos y fuerzas; por ello, su estudio es muy importante. El propósito de la actividad de la página 115 consiste en que los alumnos comprendan el concepto de inercia mediante la observación del comportamiento de dos cuerpos al alterar su estado de movimiento; este experimento puede ser muy interesante y motivador si se plantea como un reto y las explicaciones de los resultados se comparten y discuten entre todo el grupo. Al terminar la actividad, organice una lluvia de ideas en la que los alumnos expongan ejemplos de situaciones donde intervenga la inercia; por ejemplo, qué pasa cuando un automóvil avanza con mucha rapidez y el conductor pisa el freno de manera inesperada, o por qué un mago puede jalar un mantel sobre el que se encuentran platos y cubiertos sin que caigan. La actividad de la página 116 tiene como objetivo que los alumnos analicen, a partir de su propia experiencia, la relación que existe entre la masa de un objeto y la inercia, y que reconozcan la forma en que este conocimiento se formaliza por medio de la Primera Ley de Newton. Explique a los alumnos la diferencia entre la masa y el volumen o el tamaño de un objeto. Pídales que den ejemplos de situaciones cotidianas donde la masa de los objetos interviene como un factor importante para modificar su movimiento. Resalte las aplicaciones de la inercia, por ejemplo, en el caso de las naves espaciales como las Voyager, que continúan su movimiento sin una fuerza que las impulse. El objetivo de la actividad de la página 117 es que los alumnos comprendan la relación entre la masa, la fuerza y la aceleración. En este caso, la fuerza aplicada se debe al peso de las monedas colocadas en el vasito suspendido, la masa del carrito se modifica añadiendo monedas sobre él, y su aceleración se determina con las mediciones de distancia y tiempo para cada intervalo. La actividad está sujeta a mediciones imprecisas, por lo que los alumnos deben buscar las mejores condiciones para realizarlas y, en caso necesario, priorizar los resultados cualitativos. Con la actividad de la página 119, los alumnos experimentarán vivencialmente la Tercera Ley de Newton. Es importante que los estudiantes distingan las fuerzas de acción y la consecuente reacción y que identifiquen que éstas siempre están presentes por pares. Pida a sus alumnos que expongan y expliquen otros ejemplos donde se manifiesten claramente estas fuerzas.",
-      "Cierre": "El propósito es que los alumnos comparen y reflexionen sobre las respuestas que dieron en la situación inicial y asuman una postura crítica sobre la manera en que las leyes de Newton son útiles para explicar fenómenos relacionados con el movimiento. Invite a los alumnos a resolver las actividades de esta fase y a comparar sus respuestas con las de sus compañeros de grupo. Pídales que elaboren un mapa conceptual sobre las leyes de Newton, también puede sugerirles que elaboren fichas de trabajo ilustradas con estas mismas leyes. A partir de una historia muy emotiva, la ficha 10 del Cuaderno de evidencias invita a trabajar y reflexionar sobre las leyes de Newton, en especial con la primera.",
+      "FechaDeInicio": "9 feb",
+      "FechaDeCierre": "13 feb",
+      "SemanaEscolar": 21,
+      "Contenido": "Principio de Pascal",
+      "Aprendizaje": "Experimenta e interpreta las interacciones de la fuerza y el movimiento relacionados con los principios de Pascal, para explicar actividades cotidianas. Identifica algunos dispositivos de uso cotidiano en los cuales se aplica el Principio de Pascal (sistemas de frenos hidráulicos, elevadores y gatos hidráulicos) y de Arquímedes (flotación de barcos, submarinos y globos aerostáticos, entre otros); colabora en equipo para proponer actividades experimentales y resolver problemas sencillos relativos a las propiedades de los fluidos.",
+      "Tema": "Principio de Pascal, la prensa hidráulica.",
+      "Leccion": "Lección 11. Principio de Pascal",
+      "Inicio": "El alumno conocerá los principios físicos que sustentan el Principio de Pascal y la forma en que se aplica en la vida cotidiana. En la sección de Inicio, solicite a sus alumnos que indiquen y describan en qué lugares y aparatos han visto herramientas o partes de maquinaria que emplean pistones para ejercer fuerzas. Explíqueles que esos pistones contienen un líquido y que gracias a ellos se facilita la labor de los trabajadores. Resalte el hecho de que gracias a ese tipo de máquinas, el trabajo del ser humano se facilita, lo que contribuye a la salud, el bienestar y a mejorar la calidad de vida de los trabajadores. Haga ver a sus estudiantes que la ciencia y la tecnología trabajan, la mayoría de las veces, en beneficio del ser humano y que por ello es importante su estudio y progreso.",
+      "Desarrollo": "Esta sección tiene como objetivo que el alumno analice las variables que involucra la ecuación de la presión. Solicite a los alumnos que propongan ejemplos cotidianos donde hayan visto la acción de la presión y su relación con la fuerza y el área; por ejemplo, en el uso de agujas, alfileres, clavos, picahielos, etcétera, donde, debido a que la punta de estos objetos es muy delgada, se ejercen en ellos presiones muy grandes; lo mismo ocurre con cuchillos, cinceles, cuñas y flechas que, debido a su filo delgado, pueden hacer cortes o introducirse en otros objetos. Podrán comprobar la relación entre el área y la presión con la actividad de la chincheta y la goma. La segunda parte de la lección se refiere a la presión debida a los fluidos. Recuerde a sus alumnos los principios del modelo cinético de partículas, en particular la que afirma que las partículas de un fluido se mantienen en constante movimiento, con velocidad variable (dirección y magnitud) y que chocan constantemente entre sí y con las paredes del recipiente que los contiene; este principio es fundamental para entender la presión en los fluidos. La actividad experimental de la página 128 tiene como objetivo mostrar que la presión en los fluidos depende de la altura de la columna de fluido. La tercera parte de la lección se refiere específicamente al Principio de Pascal. La actividad del buzo de Descartes tiene la finalidad de que los alumnos comprendan que la presión en los líquidos se transmite en todas direcciones, es por ello que la fuerza que el alumno ejerce al presionar la botella se transmite al interior del gotero comprimiendo el aire de su interior; con ello, la densidad del gotero aumenta y se hunde; al dejar de presionar la botella, aumenta el volumen del aire del gotero con lo que su densidad disminuye y se eleva.",
+      "Cierre": "Retome la situación de Inicio y pida a sus alumnos que expliquen el funcionamiento de las herramientas mostradas con base en lo que aprendieron en la lección; con ello, podrá valorar la comprensión del tema. Pida a sus alumnos que resuelvan la ficha 11 del Cuaderno de evidencias para reforzar los contenidos de la lección.",
       "EjesArticuladores": "Pensamiento crítico.",
       "EvaluacionFormativa": [
-        "Comprende la ley de la inercia.",
-        "Comprende la relación entre la masa, la fuerza aplicada y la aceleración de un objeto.",
-        "Comprende la ley de acción y reacción."
+        "Comprende el concepto de presión, su expresión matemática y la relación entre sus variables. ",
+        "Entiende el Principio de Pascal y es capaz de resolver problemas de aplicación."
       ],
       "Evidencias": [
-        "F10"
+        "F11"
       ],
       "Actividades": [
-        "22",
-        "23",
-        "24",
-        "25",
-        "26"
+        "30"
       ],
       "Proyectos": [
-        "Movimiento Cuerpos"
+        "Pascal"
       ],
       "LibroSep": [
-        "Saberes y pensamiento científico, 287-289"
+        "Saberes y pensamiento científico, 291-295; 116-118"
       ],
-      "LibroMcMillan": "Física, Imagina, págs. 114-119",
-      "Vinculacion": "\\textbf{Matemáticas: } Utiliza correctamente las distintas unidades de medida del SI.",
+      "LibroMcMillan": "Física, Imagina, págs. 126-131",
+      "Vinculacion": "\\textbf{Matemáticas: } Reconoce e interpreta relaciones proporcionales y no proporcionales a partir de su representación tabular, gráfica y algebraica.",
       "Libros": [
-        "Saberes y pensamiento científico, 287-289 y 287-289",
-        "Física, Imagina, págs. 114-119",
-        "Nuestro libro de proyectos, 287-289 y 287-289"
+        "Saberes y pensamiento científico, 291-295; 116-118",
+        "Física, Imagina, págs. 126-131"
       ],
       "ActPro": [
-        "22",
-        "23",
-        "24",
-        "25",
-        "22",
-        "23",
-        "24",
-        "25",
-        "25",
-        "26",
-        "F10",
-        "26",
-        "F10",
-        "Movimiento Cuerpos"
+        "30",
+        "F11",
+        "Pascal"
       ]
     },
     {
       "PeriodosLectivos": 6,
-      "FechaDeInicio": "23 mar",
-      "FechaDeCierre": "27 mar",
-      "SemanaEscolar": 27,
-      "Contenido": "Introducción a la Unidad 3",
-      "Aprendizaje": "",
-      "Tema": "Introducción a la Unidad 3",
-      "Leccion": "Me preparo",
-      "Inicio": "El alumnado debe tener noción de lo que es una mezcla y comprender la diferencia entre ésta y un compuesto. En la actividad 1, los componentes de la mezcla interactúan, y algunos de ellos experimentarán reacciones químicas.",
-      "Desarrollo": "Los estudiantes deberán recordar que la harina se obtiene del trigo y que contiene carbohidratos, que son una de las fuentes principales de energía. Otro tipo de nutrimentos son las proteínas, como el huevo, que es la fuente proteica principal del pan. Ya conocen la clasificación de la materia y las características de las reacciones químicas que se emplean en la obtención de energía. Utilice esta sección como ejercicio para tener una idea general de los conocimientos previos que tienen respecto a las reacciones químicas y a la energía. Explore sus experiencias fuera del contexto escolar con reacciones en las que hayan visto manifestaciones de energía como calor y luz, y oriéntelos para que descubran que se trata de reacciones químicas. Como introducción a los cambios químicos, repase los cambios físicos que estudiaron en su curso de Física en los que se requiere y se desprende energía al llevarse a cabo, en particular los cambios de estado de la materia. Del mismo modo, relacione el proceso de digestión y la nutrición que estudiaron en su curso de Biología con reacciones químicas que ocurren en nuestro cuerpo y que generan energía.",
-      "Cierre": "Oriente a los estudiantes hacia una comprensión sobre la diversidad de los alimentos. Para ello, pida que observen la imagen y pregunte ¿cuáles son las principales fuentes de alimentos que consumen en su dieta diaria? ¿Qué procesos piensan que atraviesan los alimentos desde que se cultivan hasta que llegan a su plato? En la actualidad, la agricultura ha adoptado diversos métodos para mejorar la producción de sus cultivos, como la aplicación de fertilizantes químicos. Comente que, gracias al uso de estos materiales, se satisface la enorme demanda de cereales alimentarios y otros productos en todo el mundo. Al respecto, pregunte ¿consideran que el uso excesivo de pesticidas y fertilizantes en el suelo puede tener efectos negativos? Elabore en el pizarrón una lista con sus respuestas y mencione que, en efecto, el uso en exceso de fertilizantes está deteriorando la calidad del suelo y de las aguas subterráneas, debido a los componentes de estas sustancias, que en gran medida son nitrógeno y fósforo. Aproveche la discusión en torno a esta problemática para relacionar los temas con el ods 9 (Industria, innovación e infraestructura). Con ayuda del contenido \"¿Sabes cómo funcionan los biofertilizantes?\", material que se sugiere en los \"Recursos de apoyo complementarios\", mencione que en la actualidad se desarrollan nuevos fertilizantes a base de microorganismos, que son capaces de reestructurar el suelo y mejorar el desarrollo de los cultivos. Si lo considera oportuno, introduzca a los educandos a uno de los temas centrales de la unidad: ácidos y bases. Para ello, pregunte ¿qué entienden por neutralización? Comente que algunos fertilizantes contienen carbonato de calcio, con el propósito de aumentar el pH del suelo, es decir, reducir la acidez generada por la lixiviación por medio de un proceso que se conoce como neutralización.",
-      "EjesArticuladores": "",
-      "EvaluacionFormativa": ["Recupera los aprendizajes de la Unidad anterior."],
+      "FechaDeInicio": "16 feb",
+      "FechaDeCierre": "20 feb",
+      "SemanaEscolar": 22,
+      "Contenido": "Principios de Pascal y de Arquímedes.",
+      "Aprendizaje": "Experimenta e interpreta las interacciones de la fuerza y el movimiento relacionados con los principios de Arquímedes, para explicar actividades cotidianas. Identifica algunos dispositivos de uso cotidiano en los cuales se aplica el Principio de Pascal y de Arquímedes.",
+      "Tema": "Principio de Arquímedes",
+      "Leccion": "Lección 12. Principio de Arquímedes",
+      "Inicio": "En esta sección se plantea el hundimiento del Titanic. En el error frecuente se mencionó que los alumnos consideran que los objetos se hunden tomando en cuenta solamente su peso. Para aclarar esta situación, le sugerimos que plantee ejemplos concretos que le ayuden a explicar que la densidad de los objetos y de los líquidos en los que se sumergen determinan si un objeto se hunde o flota. Antes de plantearlos, pregúnteles por qué no se hunde un barco si es tan pesado, esto le dará la pauta para comentar que el casco hueco tiene aire y que el aire es menos denso que el agua, por tanto, el barco en su conjunto flota. Dígales que un objeto cuya densidad es menor que la del agua, flotará en ella. Le sugerimos situaciones como las siguientes:  ¿Por qué una persona muy delgada se hunde en una alberca cuando trata de flotar acostándose horizontalmente, y una persona con sobrepeso flota sin esfuerzo? Esto le permitirá comentar que la grasa es menos densa que el agua (puede mostrar un vaso con agua con aceite para que lo visualicen).  ¿Por qué una persona con sobrepeso tiene más dificultad para llegar al fondo de la alberca y un buzo con mayor masa muscular puede bucear fácilmente? La respuesta tiene el mismo argumento que la anterior.  Si existiera una alberca que pudiera contener a Saturno, este planeta flotaría, porque su densidad es menor que la del agua.",
+      "Desarrollo": "Antes de comenzar esta sección, le sugerimos que pregunte a los estudiantes si han notado que cargar a una persona dentro de una alberca es mucho más fácil que hacerlo fuera de ella. Permítales que compartan sus experiencias y pregunte por qué creen que ocurre. Después, solicite a un par de alumnos que lean el texto de la página 133. El principio de Arquímedes o ¿por qué flotan los barcos? Le recomendamos que la actividad experimental de la página 133 sea demostrativa, y que la realice en el escritorio para que todos los alumnos la vean. Pídales que respondan verbalmente las preguntas de la actividad para que, con su ayuda, lleguen a una conclusión y la anoten en su cuaderno. También puede repetir el experimento usando alcohol, agua con azúcar y aceite, para que comparen las densidades y puedan establecer en qué casos el empuje que experimenta el huevo es mayor. Es conveniente que resuelva en el pizarrón el ejemplo de la aplicación de la fórmula para calcular el empuje que experimenta un cuerpo sumergido en un fluido. Proponga más ejemplos para consolidar sus habilidades matemáticas, por ejemplo:  Un cubo de hierro de 20 cm de lado se sumerge totalmente en agua. Si su peso es 560.40 N, calcula la fuerza de flotación, la fuerza resultante y responde si flotará o se hundirá.  Un cilindro de cobre, de base igual a 35 cm$^2$ y una altura de 12 cm, se sumerge hasta la mitad por medio de un alambre delgado en un recipiente que contiene alcohol. Calcula el peso del cilindro, la fuerza de flotación, la fuerza resultante y responde si flotará o se hundirá si se suelta el alambre. Para realizar la actividad experimental de la página 135, le sugerimos que organice a sus alumnos en equipos de 3 a 4 personas, para que todos participen y no sólo observen.",
+      "Cierre": "El propósito es que los alumnos retomen lo aprendido en la lección y respondan nuevamente las preguntas de las secciones de Inicio y Desarrollo.",
+      "EjesArticuladores": "Vida saludable.",
+      "EvaluacionFormativa": [
+        "Comprende el Principio de Arquímedes.",
+        "Entiende el papel de la densidad para determinar si un objeto flota o se hunde en un líquido."
+      ],
       "Evidencias": [],
-      "Actividades": [],
+      "Actividades": [
+        "31",
+        "32"
+      ],
       "Proyectos": [
-        "Me preparo"
+        "Presion"
       ],
       "LibroSep": [
-        "Saberes y Pensamiento Científico, 294-298"
+        "Saberes y pensamiento científico, 295-299 y 119-120"
       ],
-      "LibroMcMillan": "",
-      "Vinculacion": "",
+      "LibroMcMillan": "Física, Imagina, págs. 132-135",
+      "Vinculacion": "\\textbf{Matemáticas: } Modela diversas situaciones que se resuelven con ecuaciones lineales.",
       "Libros": [
-        "Saberes y Pensamiento Científico, 294-298"
+        "Saberes y pensamiento científico, 295-299 y 119-120",
+        "Física, Imagina, págs. 132-135"
       ],
       "ActPro": [
-        "Me preparo"
+        "31",
+        "32",
+        "Presion"
+      ]
+    },
+    {
+      "PeriodosLectivos": 6,
+      "FechaDeInicio": "23 feb",
+      "FechaDeCierre": "27 feb",
+      "SemanaEscolar": 23,
+      "Contenido": "Saberes y prácticas para el aprovechamiento de energías y el desarrollo sustentable.",
+      "Aprendizaje": "Analiza las características de la energía mecánica (cinética y potencial) y describe casos donde se conserva.",
+      "Tema": "Energía mecánica: cinética y potencial. Conservación de la energía mecánica.",
+      "Leccion": "Lección 13. Energía Mecánica",
+      "Inicio": "La situación de Inicio habla de una actividad muy llamativa para los estudiantes, y muestra un ejemplo perfecto para mostrar qué es la energía mecánica. Para acompañar esta situación, le recomendamos que lleve o que construya un péndulo sencillo para que pueda mostrar cómo sería el movimiento del skater. Cuando haga la demostración, puede tomar el pizarrón de fondo y pedir a dos alumnos que se coloquen a la izquierda y derecha de la posición del péndulo, para que dibujen una marca cuando alcance la altura máxima de cada extremo y hagan marcas conforme oscile hasta llegar a su posición de equilibrio. Esta actividad les ayudará a responder las preguntas de la sección.",
+      "Desarrollo": "Una vez que hayan leído el texto inicial, solicite a sus alumnos que den ejemplos específicos de actividades que realicen en las que pueden observar que la energía provoca algún cambio, ya sea de posición, deformación, un cambio de temperatura, etcétera. Una vez que hayan revisado las definiciones de energía cinética y energía potencial, organice una lluvia de ideas para que compartan ejemplos de su manifestación en situaciones cotidianas, en las que además puedan calcularla numéricamente. Puede orientarlos con preguntas, por ejemplo:  ¿Cómo pueden relacionar la energía cinética con el ciclismo o la natación?  ¿Cómo relacionan la energía cinética con la temperatura?  Si un vehículo choca con un objeto, ¿cómo se relaciona la intensidad del golpe con la energía cinética?  ¿Cómo se transforma la energía mecánica mientras un objeto cae desde cierta altura y finalmente llega al suelo? Le sugerimos que resuelva los problemas planteados en el pizarrón preguntando a sus alumnos sobre los pasos que deben seguir para resolverlos. Después, deje más ejercicios para calcular la energía cinética, en el siguiente enlace encontrará algunos:  Después de leer el texto sobre la conservación de la energía mecánica, puede utilizar el siguiente simulador, que además ilustra el ejemplo del skater. Pregunte a sus alumnos cómo sería la gráfica del valor de las energías cinética y potencial (respecto del tiempo), si pudieran tomar los valores del movimiento de los vagones de la montaña rusa.",
+      "Cierre": "El propósito es que los alumnos apliquen lo aprendido en la lección y retomen las preguntas del inicio y las respondan, pero ahora en términos de la energía mecánica. Pueden responder en grupo y guardar las respuestas en su Portafolio de evidencias.",
+      "EjesArticuladores": "Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Entiende qué son la energía cinética y la energía potencial, cómo se calculan y cuál es su relación.  ",
+        "Comprende el concepto de conservación de la energía mecánica."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "33",
+        "34"
+      ],
+      "Proyectos": [
+        "Energia Mecanica"
+      ],
+      "LibroSep": [
+        "Saberes y pensamiento científico, 133 y 135-139"
+      ],
+      "LibroMcMillan": "Física, Imagina, págs. 136-139",
+      "Vinculacion": "\\textbf{Biología: } Identifica la cantidad de energía que proporcionan los alimentos para prevenir enfermedades relacionadas con la alimentación.",
+      "Libros": [
+        "Saberes y pensamiento científico, 133 y 135-139",
+        "Física, Imagina, págs. 136-139"
+      ],
+      "ActPro": [
+        "33",
+        "34",
+        "Energia Mecanica"
+      ]
+    },
+    {
+      "PeriodosLectivos": 6,
+      "FechaDeInicio": "2 mar",
+      "FechaDeCierre": "6 mar",
+      "SemanaEscolar": 24,
+      "Contenido": "Saberes y prácticas para el aprovechamiento de energías y el desarrollo sustentable.",
+      "Aprendizaje": "Relaciona al calor como una forma de energía y describe los motores que funcionan con energía calorífica, los efectos del calor disipado, los gases expelidos y valora sus efectos en la atmósfera.",
+      "Tema": "Concepto de calor como transferencia de energía. Máquinas térmicas y sus efectos en la atmósfera y el ambiente.",
+      "Leccion": "Lección 14. Calor como transferencia de energía\nLección 15. Máquinas térmicas",
+      "Inicio": "La situación planteada en la sección Inicio no tiene una explicación única hasta la fecha, pero puede visitar la siguiente página que contiene más información, además de un video que habla del efecto Mpemba.  www.edutics.mx/xGT Le sugerimos plantear algunas preguntas relacionadas con el tema, por ejemplo:  Imagina que es un día muy frío en invierno, caminas descalzo sobre una alfombra y después sobre el suelo de la cocina. ¿Por qué tus pies sienten más frío en el piso de la cocina que sobre la alfombra, si ambos están a la misma temperatura? Respuesta: La sensación se explica por las distintas tasas de transferencia de calor: la pérdida de calor es más rápida para la piel en contacto con las baldosas que con la alfombra, por lo que la sensación de frío es más intensa. La situación inicial propone un análisis y reflexión sobre las máquinas perpetuas, se sugiere diseñar y construir algunas de ellas y analizar por qué no funcionan. Oriente la discusión al principio de conservación de la energía.",
+      "Desarrollo": "Una vez que hayan leído el experimento pensado de la página 141, pregunte a sus alumnos el significado de temperatura, calor y energía térmica. Guíelos para que comprendan las diferencias y la relación entre estos conceptos y para que escriban las definiciones en su cuaderno:  La energía térmica se refiere a la energía de un sistema, es decir, la energía cinética de las partículas que lo constituyen. Esta energía es responsable de la temperatura del sistema.  La temperatura es una medida relacionada con la energía cinética promedio de las partículas de un sistema.  El calor es la energía en transferencia de un cuerpo a otro, cuando éstos se encuentran a distinta temperatura y en contacto térmico.  La energía interna de un sistema es la suma de la energía cinética, la de rotación, de vibración y cualquier tipo de energía que contengan las partículas que lo conforman. Después de revisar los mecanismos de transmisión del calor, pida a los estudiantes que den algunos ejemplos de los tres mecanismos de conducción del calor que encuentren en sus actividades cotidianas y los expliquen. Le sugerimos comentar que la tasa de transferencia de calor por radiación también depende del color del objeto. El negro es el más eficaz, y el blanco es el menos eficaz.",
+      "Cierre": "El propósito de esta sección es que los alumnos apliquen lo aprendido en la lección, retomen las preguntas de la sección Inicio y las respondan nuevamente. Le sugerimos que contesten en grupo y anoten las respuestas en una hoja para su Portafolio de evidencias.",
+      "EjesArticuladores": "Pensamiento crítico.",
+      "EvaluacionFormativa": [
+        "Comprende la diferencia entre calor, temperatura, energía térmica y energía interna.",
+        "Reconoce y explica los mecanismos de transferencia de calor.",
+        "Comprende qué es una máquina térmica y las transformaciones energéticas que involucra.",
+        "Entiende y aplica las ecuaciones para el cálculo de la eficiencia térmica."
+      ],
+      "Evidencias": [
+        "F12"
+      ],
+      "Actividades": [
+        "35",
+        "36",
+        "37",
+        "38",
+        "39"
+      ],
+      "Proyectos": [
+        "Maquina Vapor"
+      ],
+      "LibroSep": [
+        "Saberes y pensamiento científico, 185-189"
+      ],
+      "LibroMcMillan": "Física, Imagina, págs. 140-147",
+      "Vinculacion": "\\textbf{Biología: } Analiza las prácticas de consumo que han alterado los ciclos biogeoquímicos del carbono y nitrógeno, sus efectos asociados al calentamiento global y sus impactos en el medio ambiente y la salud.",
+      "Libros": [
+        "Saberes y pensamiento científico, 185-189",
+        "Física, Imagina, págs. 140-147"
+      ],
+      "ActPro": [
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "F12",
+        "Maquina Vapor"
+      ]
+    },
+    {
+      "PeriodosLectivos": 6,
+      "FechaDeInicio": "9 mar",
+      "FechaDeCierre": "13 mar",
+      "SemanaEscolar": 25,
+      "Contenido": "Saberes y prácticas para el aprovechamiento de energías y el desarrollo sustentable.",
+      "Aprendizaje": "Identifica formas de energías renovables y no renovables, su empleo y origen en su comunidad (solar, eólica, hidráulica, geológica, mareomotriz, nuclear) y valora sus beneficios.",
+      "Tema": "Energía renovable",
+      "Leccion": "Lección 16. Energías renovables",
+      "Inicio": "Después de leer el texto de esta sección, pregunte a los alumnos si comprendieron la diferencia entre efecto invernadero y calentamiento global. Le recomendamos que vea el video sugerido en la sección de Audiovisuales, donde se explican ambos conceptos. Después, pídales que respondan las preguntas de la sección en una sesión grupal, para que todos aporten sus ideas y pueda aclarar sus dudas. En la siguiente liga encontrará un cuestionario que le puede servir para evaluar a los alumnos y que, una vez respondido, pueden guardar en su Portafolio de evidencias:  www.edutics.mx/xN9",
+      "Desarrollo": "La idea central de la lección es el uso y aprovechamiento de la energía térmica, particularmente en su transformación a energía mecánica (que estudiaron en la lección 13). Las máquinas térmicas son muy usadas actualmente y son la base para producir otros tipos de energía, como la eléctrica. Resalte que la eficiencia de estas máquinas es limitada, lo que se traduce en un alto consumo de fuentes de energía, principalmente de origen fósil, lo que conlleva problemas ambientales graves.",
+      "Cierre": "Como conclusión, los alumnos deben tener claro que las máquinas perpetuas son imposibles, por lo que siempre se necesitan fuentes de energía externas. Proponga a los alumnos el diseño de pequeñas máquinas que usen energías renovables como la eólica y la solar. Pida a los estudiantes que resuelvan la ficha 12 del Cuaderno de evidencias, incluye una actividad sobre el cálculo de la eficiencia térmica y una reflexión sobre las fuentes de energía y su relación con el ambiente.",
+      "EjesArticuladores": "Vida saludable.",
+      "EvaluacionFormativa": [
+        "Reconoce la diferencia entre efecto invernadero y cambio climático.  ",
+        "Comprende que el cambio climático es una consecuencia del efecto invernadero."
+      ],
+      "Evidencias": [
+        "F13"
+      ],
+      "Actividades": [
+        "40"
+      ],
+      "Proyectos": [
+        "Eolico"
+      ],
+      "LibroSep": [
+        "Saberes y pensamiento científico, 217-221 ",
+        "Nuestro libro de proyectos, 206-212"
+      ],
+      "LibroMcMillan": "Física, Imagina, págs. 148-151",
+      "Vinculacion": "\\textbf{Biología: } Analiza los efectos asociados al calentamiento global y sus impactos en el medio ambiente.",
+      "Libros": [
+        "Saberes y pensamiento científico, 217-221 ",
+        "Nuestro libro de proyectos, 206-212",
+        "Física, Imagina, págs. 148-151"
+      ],
+      "ActPro": [
+        "40",
+        "F13",
+        "Eolico"
+      ]
+    },
+    {
+      "PeriodosLectivos": 6,
+      "FechaDeInicio": "16 mar",
+      "FechaDeCierre": "20 mar",
+      "SemanaEscolar": 26,
+      "Contenido": "Saberes y prácticas para el aprovechamiento de energías y el desarrollo sustentable.",
+      "Aprendizaje": "Realiza experimentos en donde se aproveche la energía del sol ya sea considerando las propiedades de la luz (energía solar) o las de la materia (convección).",
+      "Tema": "Energía solar",
+      "Leccion": "Lección 17. Energía solar",
+      "Inicio": "Antes de leer la información de la sección, le sugerimos que pregunte a sus alumnos si saben qué es un calentador solar, si han visto uno y cómo creen que funciona. Permítales compartir sus ideas para después leer con ellos la información de la sección. Después, vuelva a preguntarles y pídales que corrijan sus interpretaciones y creencias sobre qué es un calentador solar y cómo funciona, de esta manera podrán responder las preguntas de la sección en conjunto y con su ayuda. Le recomendamos ver con sus alumnos el siguiente video que explica de manera muy sencilla cómo funciona un calentador solar.  Resolver el mapa conceptual implica que el alumno ha entendido el orden en el que se organizaron los conceptos. Pida a algunos voluntarios que lo expliquen frente al grupo y comparen sus explicaciones.",
+      "Desarrollo": "Para complementar la información de la página 148 le sugerimos consultar la siguiente liga de internet, donde encontrará una explicación sobre los combustibles fósiles: Le sugerimos que elija algunos alumnos para que lean la información de la página 149, después pida que elaboren un mapa mental con los problemas enlistados y los complementen con otros que ellos investiguen, indíqueles que incluyan imágenes para ilustrarlos. En la siguiente liga encontrará un video que habla sobre la contaminación que producen los combustibles fósiles. Después, pídales que intercambien el cuestionario con algunos de sus compañeros y lo respondan. En sesión grupal, revise las preguntas y respuestas para que comenten si fueron útiles para evaluar sus conocimientos. Ésta es otra manera de fomentar la coevaluación y la autoevaluación. Pida a sus alumnos que elaboren y organicen una presentación sobre los accidentes nucleares de Chernobyl y Fukushima, y puede agregar el accidente nuclear que ocurrió en Three Mile Island en Pensilvania, Estados Unidos de América, en 1979. Solicite que utilicen imágenes, dibujos y noticias. Después, le proponemos que vea en clase el video sugerido en la sección Recursos de apoyo complementarios. Organice una sesión para que los estudiantes mencionen los puntos más importantes y anótelos en el pizarrón, pida que hagan un mapa conceptual que guardarán en su Portafolio de evidencias. Le recomendamos que, para llevar a cabo la actividad experimental de la página 153, les pida con anticipación los materiales (por equipo). Planee la actividad para una sesión de al menos dos horas, puede aprovechar la hora de laboratorio para que tengan tiempo de armar su horno solar y observar su funcionamiento. Le recomendamos que vea el siguiente video, que explica el funcionamiento del horno solar de manera muy sencilla.  Igualmente, pida a otros alumnos que muestren cómo incluyeron los conceptos relacionados con los principios de Arquímedes y Pascal, resalten coincidencias y diferencias, poniendo especial atención en las explicaciones, pues ellas muestran el grado de comprensión de los alumnos.",
+      "Cierre": "El propósito de esta sección es que los alumnos apliquen lo aprendido en la lección y respondan nuevamente las preguntas de la sección inicial. Organice una sesión grupal para que respondan las preguntas. Para reforzar los contenidos de la lección, pida que resuelvan la ficha 33 del Cuaderno de evidencias. Como complemento sugiera que elaboren otro mapa con los contenidos no incluidos en éste.",
+      "EjesArticuladores": "Pensamiento crítico.",
+      "EvaluacionFormativa": [
+        "Comprende qué es la energía solar y cómo se produce. ",
+        "Reconoce la energía solar como fuente de energía limpia y renovable."
+      ],
+      "Evidencias": [
+        "F14"
+      ],
+      "Actividades": [
+        "41",
+        "42"
+      ],
+      "Proyectos": [
+        "Energia"
+      ],
+      "LibroSep": [
+        "Saberes y pensamiento científico, 217-221",
+        "Nuestro libro de proyectos, 206-212"
+      ],
+      "LibroMcMillan": "Física, Imagina, págs. 152-157",
+      "Vinculacion": "\\textbf{Biología: } Explica por qué los saberes de los pueblos originarios han aportado al aprovechamiento de los recursos naturales y el desarrollo sustentable en el ecosistema local.",
+      "Libros": [
+        "Saberes y pensamiento científico, 217-221",
+        "Nuestro libro de proyectos, 206-212",
+        "Física, Imagina, págs. 152-157"
+      ],
+      "ActPro": [
+        "41",
+        "42",
+        "F14",
+        "Energia"
       ]
     }
   ]

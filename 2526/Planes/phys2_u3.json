@@ -101,7 +101,8 @@
       ],
       "Evidencias": [],
       "Actividades": [
-        "3.4"
+        "3",
+        "4"
       ],
       "Proyectos": [
         "Induccion"
@@ -116,7 +117,8 @@
         "Física, Imagina, págs. 172-177"
       ],
       "ActPro": [
-        "3.4",
+        "3",
+        "4",
         "Induccion"
       ]
     },
@@ -130,7 +132,7 @@
       "Tema": "Luz visible",
       "Leccion": "Lección 4. Luz visible",
       "Inicio": "En esta sección se establece la relación de la luz con el sentido de la vista. Partiendo de un repaso de la anatomía del ojo se plantea el fenómeno de la visión desde la perspectiva de la Física al señalar cómo intervienen los fenómenos de refracción y reflexión de la luz en el interior del ojo. Ilustre la formación de imágenes en el ojo humano usando una lupa y mostrando cómo se forman imágenes invertidas, también puede usar o solicitar a los alumnos que construyan una cámara oscura para ese propósito. Amplíe la reflexión planteada en el texto invitando a los estudiantes a comparar los sentidos, pues la vista es radicalmente distinta a los demás en un aspecto: mientras que el tacto y el gusto requieren de contacto directo, el olfato y el oído pueden ocurrir a cierta distancia, con un alcance limitado; pero la vista está prácticamente ilimitada en alcance: podemos ver estrellas y galaxias a simple vista, con mayor o menor agudeza. También puede invitarlos a enumerar los tipos de luz que conocen: infrarroja, ultravioleta o luz negra, luz blanca, luz láser, etcétera; y, si es posible, algunas de sus aplicaciones.",
-      "Desarrollo": "En el tema \"Características de la luz\", se plantean las leyes de la óptica. El enfoque es cualitativo y el objetivo del texto es familiarizar a los estudiantes con los fenómenos de la reflexión y la refracción de la luz y, adicionalmente, con el hecho de que la luz viaja a una velocidad muy grande, pero finita. Los elementos del modelo físico están enunciados de manera implícita y convendrá hacerlos notar a los estudiantes: * La luz se propaga en línea recta, esto se demuestra en el experimento de la página 179, con la luz láser, y puede hacerse más evidente aún si se realiza en condiciones de semioscuridad. Conviene aclarar a los estudiantes que la luz láser no es igual a la luz blanca, pero tienen la misma naturaleza, por lo que las conclusiones establecidas para el láser son válidas para la luz blanca y, de hecho, para otros tipos de luz. * En el experimento también se establece la ley básica de la reflexión: la igualdad del ángulo del rayo incidente con el ángulo del rayo reflejado. * Las conclusiones del experimento se usan para explicar observaciones cualitativas que ya se han estudiado en los cursos de Ciencias en Primaria: que un objeto en particular puede absorber casi toda, parte o nada de la luz que incide sobre él y que, en consecuencia, puede ser opaco, translúcido o transparente. Para favorecer la comprensión de la ley de reflexión puede apoyarse, adicionalmente, en videos, animaciones, simulaciones, diagramas o modelos icónicos. Y una vez establecida la ley de la reflexión, puede invitar a los alumnos a citar ejemplos de este fenómeno en la naturaleza y la forma en que es aprovechada en aparatos o dispositivos de la vida cotidiana mediante el uso de espejos. El experimento de las páginas 180 y 181 muestra la refracción de la luz de manera cualitativa. Puede ampliar el experimento usando el puntero láser del primer experimento, por ejemplo, haciendo incidir el rayo dentro de un recipiente vacío y, luego, llenándolo con agua y observando la nueva posición del punto iluminado. Aproveche el resultado para indicar que el haz de luz se quiebra o refracta al pasar de un medio material a otro. El experimento puede ser más ilustrativo si utiliza dos punteros láser de diferente color, pues podría demostrar que el ángulo en que se desvía la luz depende también de su color. Esto sería ideal para la parte final del Desarrollo, donde se trata de la descomposición de la luz blanca en el espectro de colores.",
+      "Desarrollo": "En el tema \"Características de la luz\", se plantean las leyes de la óptica. El enfoque es cualitativo y el objetivo del texto es familiarizar a los estudiantes con los fenómenos de la reflexión y la refracción de la luz y, adicionalmente, con el hecho de que la luz viaja a una velocidad muy grande, pero finita. Los elementos del modelo físico están enunciados de manera implícita y convendrá hacerlos notar a los estudiantes:  La luz se propaga en línea recta, esto se demuestra en el experimento de la página 179, con la luz láser, y puede hacerse más evidente aún si se realiza en condiciones de semioscuridad. Conviene aclarar a los estudiantes que la luz láser no es igual a la luz blanca, pero tienen la misma naturaleza, por lo que las conclusiones establecidas para el láser son válidas para la luz blanca y, de hecho, para otros tipos de luz.  En el experimento también se establece la ley básica de la reflexión: la igualdad del ángulo del rayo incidente con el ángulo del rayo reflejado.  Las conclusiones del experimento se usan para explicar observaciones cualitativas que ya se han estudiado en los cursos de Ciencias en Primaria: que un objeto en particular puede absorber casi toda, parte o nada de la luz que incide sobre él y que, en consecuencia, puede ser opaco, translúcido o transparente. Para favorecer la comprensión de la ley de reflexión puede apoyarse, adicionalmente, en videos, animaciones, simulaciones, diagramas o modelos icónicos. Y una vez establecida la ley de la reflexión, puede invitar a los alumnos a citar ejemplos de este fenómeno en la naturaleza y la forma en que es aprovechada en aparatos o dispositivos de la vida cotidiana mediante el uso de espejos. El experimento de las páginas 180 y 181 muestra la refracción de la luz de manera cualitativa. Puede ampliar el experimento usando el puntero láser del primer experimento, por ejemplo, haciendo incidir el rayo dentro de un recipiente vacío y, luego, llenándolo con agua y observando la nueva posición del punto iluminado. Aproveche el resultado para indicar que el haz de luz se quiebra o refracta al pasar de un medio material a otro. El experimento puede ser más ilustrativo si utiliza dos punteros láser de diferente color, pues podría demostrar que el ángulo en que se desvía la luz depende también de su color. Esto sería ideal para la parte final del Desarrollo, donde se trata de la descomposición de la luz blanca en el espectro de colores.",
       "Cierre": "El propósito es que los alumnos consoliden lo que aprendieron en esta secuencia, y lo apliquen en la comprensión del funcionamiento de dispositivos de la vida cotidiana. Le sugerimos que resuelva con sus alumnos la ficha 17 del Cuaderno de evidencias para que analicen el problema de la contaminación lumínica y propongan acciones para evitarla o disminuirla.",
       "EjesArticuladores": "Vida saludable.",
       "EvaluacionFormativa": [
@@ -170,7 +172,7 @@
       "Aprendizaje": "Explica el funcionamiento de aparatos tecnológicos de comunicación, a partir de las ondas electromagnéticas.",
       "Tema": "Ondas electromagnéticas. Aplicaciones",
       "Leccion": "Lección 5. Ondas electromagnéticas",
-      "Inicio": "El propósito del texto inicial es introducir el tema de las ondas electromagnéticas mediante sus aplicaciones, cada vez más sofisticadas, en la telecomunicación móvil. Para ello se presenta un resumen de las principales características distintivas de las generaciones de telefonía celular, desde la tecnología analógica de la década de 1980 hasta el lanzamiento anunciado del Internet de las cosas. Los puntos clave por resaltar y comentar con los estudiantes son: * las diferencias entre la tecnología analógica y la digital; * las unidades en que se mide la información y la rapidez con que se transfiere; * la seguridad o privacidad en la comunicación. Estos temas pueden ser usados para despertar el interés en los estudiantes. Antes de abordar de lleno el contenido de la lección, organice una lluvia de ideas o una pequeña investigación para que establezcan algunas conclusiones sobre ellos.",
+      "Inicio": "En el tema \"Características de la luz\", se plantean las leyes de la óptica. El enfoque es cualitativo y el objetivo del texto es familiarizar a los estudiantes con los fenómenos de la reflexión y la refracción de la luz y, adicionalmente, con el hecho de que la luz viaja a una velocidad muy grande, pero finita. Los elementos del modelo físico están enunciados de manera implícita y convendrá hacerlos notar a los estudiantes:  La luz se propaga en línea recta, esto se demuestra en el experimento de la página 179, con la luz láser, y puede hacerse más evidente aún si se realiza en condiciones de semioscuridad. Conviene aclarar a los estudiantes que la luz láser no es igual a la luz blanca, pero tienen la misma naturaleza, por lo que las conclusiones establecidas para el láser son válidas para la luz blanca y, de hecho, para otros tipos de luz.  En el experimento también se establece la ley básica de la reflexión: la igualdad del ángulo del rayo incidente con el ángulo del rayo reflejado.  Las conclusiones del experimento se usan para explicar observaciones cualitativas que ya se han estudiado en los cursos de Ciencias en Primaria: que un objeto en particular puede absorber casi toda, parte o nada de la luz que incide sobre él y que, en consecuencia, puede ser opaco, translúcido o transparente. Para favorecer la comprensión de la ley de reflexión puede apoyarse, adicionalmente, en videos, animaciones, simulaciones, diagramas o modelos icónicos. Y una vez establecida la ley de la reflexión, puede invitar a los alumnos a citar ejemplos de este fenómeno en la naturaleza y la forma en que es aprovechada en aparatos o dispositivos de la vida cotidiana mediante el uso de espejos. El experimento de las páginas 180 y 181 muestra la refracción de la luz de manera cualitativa. Puede ampliar el experimento usando el puntero láser del primer experimento, por ejemplo, haciendo incidir el rayo dentro de un recipiente vacío y, luego, llenándolo con agua y observando la nueva posición del punto iluminado. Aproveche el resultado para indicar que el haz de luz se quiebra o refracta al pasar de un medio material a otro. El experimento puede ser más ilustrativo si utiliza dos punteros láser de diferente color, pues podría demostrar que el ángulo en que se desvía la luz depende también de su color. Esto sería ideal para la parte final del Desarrollo, donde se trata de la descomposición de la luz blanca en el espectro de colores.",
       "Desarrollo": "Esta parte de la lección se divide en tres secciones. En la sección introductoria, páginas 184 y 185, se recuerda a los estudiantes que las ondas electromagnéticas se producen siempre que se tiene una carga eléctrica acelerada; la idea clave es que una antena emisora es un circuito eléctrico en el que se acelera la carga para emitir señales en forma de ondas electromagnéticas, y la antena receptora transforma la señal electromagnética en corrientes eléctricas, es decir, actúa de manera inversa. El experimento de la página 185 demuestra la existencia de las ondas electromagnéticas y que los dispositivos de telecomunicaciones son sensibles a ellas. Use simulaciones para fomentar en los estudiantes el análisis cualitativo de la situación. La sección termina con la introducción de la fórmula de Planck, que da pie a clasificar el espectro electromagnético en términos de la frecuencia de las ondas. La sección titulada \"El espectro electromagnético\" presenta ejemplos de las aplicaciones tecnológicas particulares que se dan a cada región del espectro electromagnético. Para combatir ideas erróneas, mencione que las fuentes de radiación electromagnética pueden emitir en una franja de frecuencias, pero no lo hacen de manera homogénea, sino que la emisión se concentra en una frecuencia en particular, donde emite con mayor intensidad que el resto; por ejemplo, el Sol emite con mayor intensidad en la región visible (y en particular, el color amarillo), en razón de ello nuestros ojos se han adaptado evolutivamente a su luz; aunque hay dispositivos muy especializados, llamados fuentes monocromáticas, que emiten en una sola frecuencia, como el láser, los leds o las lámparas de vapor. Fomente la habilidad matemática de los alumnos planteando problemas para calcular la frecuencia, longitud de onda y la energía de ondas electromagnéticas en particular. Para reforzar el aprendizaje de las aplicaciones comparta con los estudiantes recursos audiovisuales o infografías, e invítelos a identificar qué tipo de radiación electromagnética utilizan los aparatos de su casa, escuela y comunidad. La sección final de esta parte de la lección: \"Aplicaciones en la tecnología de comunicaciones\", está dedicada a explicar el funcionamiento de la telefonía celular y el gps . Para comprobar el grado de comprensión que los estudiantes adquieran sobre los principios básicos de estas tecnologías, puede invitarlos a compartir hipótesis para explicar fallas en la comunicación celular cuando se atraviesan túneles o al interior de edificios con grandes estructuras metálicas.",
       "Cierre": "El propósito es que los alumnos consoliden lo que aprendieron en esta secuencia y lo apliquen en el análisis cualitativo y cuantitativo de fenómenos simples. La ficha 18 del Cuaderno de evidencias relaciona las ondas sísmicas con las electromagnéticas en las alertas sísmicas. Pida que la resuelvan y expliquen por qué son eficientes y útiles estos sistemas de prevención.",
       "EjesArticuladores": "Pensamiento crítico.",
@@ -182,7 +184,8 @@
         "F18"
       ],
       "Actividades": [
-        "6.7"
+        "6",
+        "7"
       ],
       "Proyectos": [
         "Ondas Electromagneticas"
@@ -197,7 +200,8 @@
         "Física, Imagina, págs. 184-189"
       ],
       "ActPro": [
-        "6.7",
+        "6",
+        "7",
         "F18",
         "Ondas Electromagneticas"
       ]
@@ -221,7 +225,8 @@
       ],
       "Evidencias": [],
       "Actividades": [
-        "8.9"
+        "8",
+        "9"
       ],
       "Proyectos": [],
       "LibroSep": [
@@ -234,7 +239,8 @@
         "Física, Imagina, págs. 190-195"
       ],
       "ActPro": [
-        "8.9"
+        "8",
+        "9"
       ]
     },
     {
