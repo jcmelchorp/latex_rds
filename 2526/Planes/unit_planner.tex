@@ -1,11 +1,11 @@
-\documentclass[12pt]{article}
+\documentclass[10pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage[most]{tcolorbox}
 \usepackage{amssymb}
 \usepackage{tabularx}
-\usepackage[landscape,margin=0.5in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{ragged2e}
 \usepackage{multicol,multirow}
 \usepackage{jsonparse} % Load the json package
@@ -185,8 +185,8 @@ $\square$ & \JSONParseArrayValue  \\
     \def\disciplina{\classtitle{#2#1}}
     \def\gradogrupo{\leveltitle{#1}}
     \def\schoolinfounit{\RaggedRight%
-        {\color{rdsColor}\LARGE Escuela Rafael Díaz Serdán}\\[-0.5em]
-        {\color{gray!40!black}\scriptsize\sffamily 30PES0329R \hspace{0.5\linewidth} turno matutino }\\[0.2em]
+        {\color{rdsColor}\Large Escuela Rafael Díaz Serdán}\\[-0.5em]
+        {\color{gray!40!black}\scriptsize\sffamily 30PES0329R \hspace{0.3\linewidth} turno matutino }\\[0.2em]
         {\color{green!20!black}\large\sffamily Autocontrol del alumno}\\
         {\color{black!90}{\sffamily Profesor:} Julio César Melchor Pinto}\\
         %{\sffamily   Saberes y pensamiento científico}\\
@@ -252,8 +252,8 @@ $\square$ & \JSONParseArrayValue  \\
         \schoolinfounit
     \end{minipage}%
     \begin{tabularx}{0.57\textwidth}{rYr}
-         {\large\sffamily Disciplina:} & {\large\disciplina} &  {\large\unitinfo}  \\ 
-         {\large\sffamily Grado y grupo:} & {\large\gradogrupo} &  {\large\cicloescolar} \\ 
+         {\sffamily Disciplina:} & {\disciplina} &  {\large\unitinfo}  \\ 
+         {\sffamily Grado y grupo:} & {\gradogrupo} &  {\large\cicloescolar} \\ 
          \cline{2-3}
          {\large\sffamily Nombre del alumno:} &  \multicolumn{2}{|r|}{}\\
          \cline{2-3}
@@ -262,13 +262,13 @@ $\square$ & \JSONParseArrayValue  \\
 
 \begin{document}
 % \planner{0}{test}{1}%%
-\planner{1}{math}{1}%
+% \planner{1}{math}{1}%
 % \planner{2}{math}{1}%
-% \planner{3}{math}{1}%
- %\planner{3}{chem}{3}%
+\planner{3}{math}{1}%
+%  \planner{3}{chem}{1}% !!   11pt, landscape !!!!
 % \planner{2}{phys}{2}%
     \begin{tcolorbox}[unitbox,title=\studentTitle]
-        \begin{multicols}{2}
+        \begin{multicols}{2}%
         \begin{tcbraster}[raster columns=1,  
             %sharp corners,raster column skip= 0.5mm,raster equal height,
              nobeforeafter, raster width=0.97\linewidth]
