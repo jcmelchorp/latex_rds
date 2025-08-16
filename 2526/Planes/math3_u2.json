@@ -22,14 +22,16 @@
         "27"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Analiza datos de un experimento (ej. altura de 20 plantas), calculando las medidas de tendencia central y dispersión para describir la variabilidad y el comportamiento típico de la muestra.",
+      "Worklist": [
+        "A.26. Mediana y moda",
+        "A.27. Promedio"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "26",
@@ -59,14 +61,17 @@
         "30"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Aplica las reglas de probabilidad para calcular la posibilidad de que la descendencia herede rasgos genéticos, diferenciando entre eventos independientes y mutuamente excluyentes.",
+      "Worklist": [
+        "A.28. Desviación media",
+        "A.29. Eventos mutuamente excluyentes",
+        "A.30. Eventos dependientes e independientes"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "28",
@@ -96,14 +101,16 @@
         "32"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Calcula el área de la superficie de un pistón para determinar la fuerza total que ejerce un gas a una presión dada ($F=P \\\\times A$).",
+      "Worklist": [
+        "A.31. Perímetro",
+        "A.32. Área"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "31",
@@ -131,14 +138,15 @@
         "33"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Relaciona el área superficial total de un catalizador sólido con la velocidad de una reacción química, explicando por qué un polvo reacciona más rápido que un trozo sólido.",
+      "Worklist": [
+        "A.33. Área lateral y total"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "33"
@@ -166,14 +174,16 @@
         "35"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Determina la densidad de una sustancia ($\\\\rho = \\\\dfrac{m}{V}$) midiendo su masa y su volumen para poder identificarla.",
+      "Worklist": [
+        "A.34. Volumen",
+        "A.35. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "34",
@@ -202,14 +212,16 @@
         "37"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Representa un vector de fuerza o desplazamiento en el plano cartesiano, identificando su cuadrante para definir su dirección y sentido.",
+      "Worklist": [
+        "A.36. Ubicación en el plano cartesiano",
+        "A.37. Cuadrantes en el plano cartesiano"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "36",
@@ -239,14 +251,17 @@
         "40"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Interpreta una gráfica de posición contra tiempo, calculando la pendiente (velocidad) y la ordenada al origen (posición inicial) para obtener la ecuación del movimiento.",
+      "Worklist": [
+        "A.38. Pendiente y ordenada",
+        "A.39. Pendiente dados dos puntos",
+        "A.40. Ecuación de una recta"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "38",
@@ -279,14 +294,19 @@
         "45"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Traduce una ley física, como la Ley de Ohm, a la ecuación lineal $V=IR$ y la resuelve para encontrar el valor de cualquier variable desconocida.",
+      "Worklist": [
+        "A.41. Lenguaje algebraico",
+        "A.42. Ecuaciones lineales 1",
+        "A.43. Ecuaciones lineales 2",
+        "A.44. Ecuaciones lineales con fracciones",
+        "A.45. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "41",
@@ -317,14 +337,15 @@
         "46"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve un sistema 2x2 para encontrar las tensiones en dos cuerdas que sostienen un objeto, sustituyendo una ecuación en otra.",
+      "Worklist": [
+        "A.46. Método de eliminación"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "46"
@@ -351,14 +372,15 @@
         "47"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Aplica el método de eliminación para resolver un sistema de ecuaciones derivado de las Leyes de Kirchhoff en un circuito eléctrico simple.",
+      "Worklist": [
+        "A.47. Método de sustitución e igualación"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "47"
@@ -385,14 +407,15 @@
         "48"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Utiliza el método de igualación para encontrar el punto (posición y tiempo) en que dos móviles que parten de lugares distintos se encuentran.",
+      "Worklist": [
+        "A.48. Sistema de ecuaciones 3x3"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "48"
@@ -419,14 +442,15 @@
         "49"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Balancea una ecuación química compleja estableciendo un sistema de 3x3 ecuaciones (una para cada elemento) y resolviéndolo para encontrar los coeficientes estequiométricos.",
+      "Worklist": [
+        "A.49. Sistema de ecuaciones con fracciones"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "49"
@@ -453,14 +477,15 @@
         "50"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Resuelve problemas de mezclas, determinando qué volúmenes de dos disoluciones con concentraciones fraccionarias se deben mezclar para obtener una nueva concentración deseada.",
+      "Worklist": [
+        "A.50. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "50"
@@ -490,14 +515,16 @@
       "Proyectos": [
         "Examen de Unidad"
       ],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "",
+      "Worklist": [
+        "Repaso de Unidad",
+        "Examen de Unidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "Repaso de Unidad",

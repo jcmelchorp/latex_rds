@@ -1,263 +1,449 @@
 {
   "weeks": [
     {
-      "PeriodosLectivos": 6,
-      "FechaDeInicio": "9 feb",
-      "FechaDeCierre": "13 feb",
-      "SemanaEscolar": 21,
-      "Contenido": "Principio de Pascal",
-      "Aprendizaje": "Experimenta e interpreta las interacciones de la fuerza y el movimiento relacionados con los principios de Pascal, para explicar actividades cotidianas. Identifica algunos dispositivos de uso cotidiano en los cuales se aplica el Principio de Pascal (sistemas de frenos hidráulicos, elevadores y gatos hidráulicos) y de Arquímedes (flotación de barcos, submarinos y globos aerostáticos, entre otros); colabora en equipo para proponer actividades experimentales y resolver problemas sencillos relativos a las propiedades de los fluidos.",
-      "Tema": "Principio de Pascal, la prensa hidráulica.",
-      "Leccion": "Lección 11. Principio de Pascal",
-      "Inicio": "El alumno conocerá los principios físicos que sustentan el Principio de Pascal y la forma en que se aplica en la vida cotidiana. En la sección de Inicio, solicite a sus alumnos que indiquen y describan en qué lugares y aparatos han visto herramientas o partes de maquinaria que emplean pistones para ejercer fuerzas. Explíqueles que esos pistones contienen un líquido y que gracias a ellos se facilita la labor de los trabajadores. Resalte el hecho de que gracias a ese tipo de máquinas, el trabajo del ser humano se facilita, lo que contribuye a la salud, el bienestar y a mejorar la calidad de vida de los trabajadores. Haga ver a sus estudiantes que la ciencia y la tecnología trabajan, la mayoría de las veces, en beneficio del ser humano y que por ello es importante su estudio y progreso.",
-      "Desarrollo": "Esta sección tiene como objetivo que el alumno analice las variables que involucra la ecuación de la presión. Solicite a los alumnos que propongan ejemplos cotidianos donde hayan visto la acción de la presión y su relación con la fuerza y el área; por ejemplo, en el uso de agujas, alfileres, clavos, picahielos, etcétera, donde, debido a que la punta de estos objetos es muy delgada, se ejercen en ellos presiones muy grandes; lo mismo ocurre con cuchillos, cinceles, cuñas y flechas que, debido a su filo delgado, pueden hacer cortes o introducirse en otros objetos. Podrán comprobar la relación entre el área y la presión con la actividad de la chincheta y la goma. La segunda parte de la lección se refiere a la presión debida a los fluidos. Recuerde a sus alumnos los principios del modelo cinético de partículas, en particular la que afirma que las partículas de un fluido se mantienen en constante movimiento, con velocidad variable (dirección y magnitud) y que chocan constantemente entre sí y con las paredes del recipiente que los contiene; este principio es fundamental para entender la presión en los fluidos. La actividad experimental de la página 128 tiene como objetivo mostrar que la presión en los fluidos depende de la altura de la columna de fluido. La tercera parte de la lección se refiere específicamente al Principio de Pascal. La actividad del buzo de Descartes tiene la finalidad de que los alumnos comprendan que la presión en los líquidos se transmite en todas direcciones, es por ello que la fuerza que el alumno ejerce al presionar la botella se transmite al interior del gotero comprimiendo el aire de su interior; con ello, la densidad del gotero aumenta y se hunde; al dejar de presionar la botella, aumenta el volumen del aire del gotero con lo que su densidad disminuye y se eleva.",
-      "Cierre": "Retome la situación de Inicio y pida a sus alumnos que expliquen el funcionamiento de las herramientas mostradas con base en lo que aprendieron en la lección; con ello, podrá valorar la comprensión del tema. Pida a sus alumnos que resuelvan la ficha 11 del Cuaderno de evidencias para reforzar los contenidos de la lección.",
-      "EjesArticuladores": "Pensamiento crítico.",
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "1 sept",
+      "FechaDeCierre": "5 sept",
+      "SemanaEscolar": 1,
+      "Contenido": "Operaciones básicas con números enteros y decimales (suma y resta).",
+      "Aprendizaje": "Comprenderán y realizarán sumas y restas con números enteros y decimales, aplicando los procedimientos correctos.",
+      "Tema": "Suma y resta de números.",
+      "Leccion": "Uso de las operaciones de suma y resta en situaciones cotidianas.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
       "EvaluacionFormativa": [
-        "Comprende el concepto de presión, su expresión matemática y la relación entre sus variables. ",
-        "Entiende el Principio de Pascal y es capaz de resolver problemas de aplicación."
+        "Observación de la participación en discusiones, corrección de ejercicios en clase, y tarea de problemas mixtos de suma y resta."
       ],
-      "Evidencias": [
-        "F11"
-      ],
+      "Evidencias": [],
       "Actividades": [
+        "1",
+        "2"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: } Resuelve problemas sobre dinámica de poblaciones, utilizando la suma para calcular el total de individuos tras nacimientos o inmigraciones, y la resta para determinar la población restante después de muertes o emigraciones.",
+      "Worklist": [
+        "A.1.  Suma de números",
+        "A.2.  Resta de números"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "8 sept",
+      "FechaDeCierre": "12 sept",
+      "SemanaEscolar": 2,
+      "Contenido": "Operaciones básicas de multiplicación y división con números enteros y decimales.",
+      "Aprendizaje": "Los estudiantes podrán multiplicar y dividir números enteros y decimales, aplicando algoritmos apropiados y entendiendo su utilidad en problemas cotidianos.",
+      "Tema": "Multiplicación y división de números.",
+      "Leccion": "Ejecución de multiplicaciones y divisiones en diferentes contextos.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Participación en ejercicios grupales, corrección en clase, y asignación de una hoja de ejercicios de multiplicación y división."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "3",
+        "4"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: } Resuelve problemas de distribución equitativa usando la división, como repartir una cantidad de semillas en varias parcelas de experimentación para estudiar la germinación bajo las mismas condiciones.",
+      "Worklist": [
+        "A.3.  Multiplicación de números",
+        "A.4.  División de números"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "15 sept",
+      "FechaDeCierre": "19 sept",
+      "SemanaEscolar": 3,
+      "Contenido": "Resolución de problemas que involucren sumas, restas, multiplicaciones y divisiones.",
+      "Aprendizaje": "Los estudiantes desarrollarán habilidades para identificar y aplicar las operaciones básicas en la resolución de problemas contextualizados.",
+      "Tema": "Resolución de problemas con operaciones básicas.",
+      "Leccion": "Identificación de operaciones necesarias para resolver problemas matemáticos.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Observación de la discusión grupal, revisión de ejercicios en clase y evaluación de la tarea asignada con problemas de la vida real."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "5"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: } Calcula el balance energético de un animal durante una semana, sumando las calorías consumidas y restando las calorías gastadas en actividades",
+      "Worklist": [
+        "A.5.  Resolución de problemas"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "5"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "22 sept",
+      "FechaDeCierre": "26 sept",
+      "SemanaEscolar": 4,
+      "Contenido": "Clasificación y representación de fracciones. Nombres de fracciones y su representación en la recta numérica.",
+      "Aprendizaje": "El alumno identificará y clasificará diferentes tipos de fracciones (propias, impropias y mixtas) y las representará de manera gráfica. El alumno nombrará fracciones y las ubicará correctamente en la recta numérica.",
+      "Tema": "Fracciones.",
+      "Leccion": "Clasificación y representación. Nombres y ubicación en la recta numérica.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Evaluación mediante ejercicios de clasificación y representación, participación en discusiones grupales, y un póster de fracciones como proyecto."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: }  Convierte los resultados de cruzas genéticas mendelianas  a fracciones y las compara con otras probabilidades genéticas para determinar qué rasgo es más probable que aparezca.",
+      "Worklist": [
+        "A.6.  Clasificación de fracciones",
+        "A.7.  Representación de fracciones",
+        "A.8.  Nombre de fracciones",
+        "A.9.  Fracciones en la recta numérica",
+        "A.10. Conversión de fracciones"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "29 sept",
+      "FechaDeCierre": "3 oct",
+      "SemanaEscolar": 5,
+      "Contenido": "Conversión y comparación de fracciones utilizando M.C.D y M.C.M.",
+      "Aprendizaje": "El alumno convertirá fracciones y las comparará utilizando el M.C.D y M.C.M.",
+      "Tema": "Fracciones.",
+      "Leccion": "Conversión y comparación.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Ejercicios de conversión y comparación en grupo, quiz individual."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "11",
+        "12"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: }  Aplica operaciones con fracciones para calcular la porción de un terreno que se reforestará. ",
+      "Worklist": [
+        "A.11. Comparación de fracciones",
+        "A.12. Fracciones equivalentes"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "11",
+        "12"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "6 oct",
+      "FechaDeCierre": "10 oct",
+      "SemanaEscolar": 6,
+      "Contenido": "Simplificación de fracciones y resolución de problemas.",
+      "Aprendizaje": "El alumno simplificará fracciones y aplicará sus conocimientos para resolver problemas contextualizados.",
+      "Tema": "Fracciones.",
+      "Leccion": "Simplificación y aplicación.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Resolución de problemas en parejas, evaluación con rubrica."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "13",
+        "14",
+        "15"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: }  Aplica operaciones con fracciones para calcular la porción de un terreno que se reforestará. ",
+      "Worklist": [
+        "A.13. M.C.D y M.C.M",
+        "A.14. Simplificación de fracciones",
+        "A.15. Resolución de problemas"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "13 oct",
+      "FechaDeCierre": "17 oct",
+      "SemanaEscolar": 7,
+      "Contenido": "Ubicación de números decimales en la recta numérica y conversión de porcentajes a decimales.",
+      "Aprendizaje": "El alumno ubicará números decimales en la recta numérica y convertirá porcentajes a decimales.",
+      "Tema": "Números Decimales",
+      "Leccion": "Decimales y porcentajes.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Ejercicios de conversión y ubicación en la recta numérica."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "16",
+        "17"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: }  Calcula el Índice de Masa Corporal (IMC) de una persona utilizando la fórmula que involucra números decimales",
+      "Worklist": [
+        "A.16. Ubicación en la recta numérica",
+        "A.17. Porcentajes a decimal"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "16",
+        "17"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "20 oct",
+      "FechaDeCierre": "24 oct",
+      "SemanaEscolar": 8,
+      "Contenido": "Operaciones con múltiplos de 10 y conversión de fracciones a decimales.",
+      "Aprendizaje": "El alumno realizará operaciones con múltiplos de 10 y convertirá fracciones a decimales.",
+      "Tema": "Números Decimales",
+      "Leccion": "Operaciones y conversión.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Observación directa, ejercicios prácticos y quiz de conversión."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "18",
+        "19"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: }  Utiliza operaciones con decimales para calcular el crecimiento total o promedio a lo largo del tiempo.",
+      "Worklist": [
+        "A.18. Operaciones con múltiplos de 10",
+        "A.19. Conversión de fracciones a decimales"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "18",
+        "19"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "27 oct",
+      "FechaDeCierre": "31 oct",
+      "SemanaEscolar": 9,
+      "Contenido": "Conversión de decimales a fracciones y comparación de números negativos.",
+      "Aprendizaje": "El alumno convertirá decimales a fracciones y comparará números negativos.",
+      "Tema": "Decimales y números negativos.",
+      "Leccion": "Conversión y comparación.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Actividades de comparación en recta numérica y ejercicios de conversión."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "20"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: }  Expresa la probabilidad de heredar rasgos genéticos en forma de porcentajesExpresa la probabilidad de heredar rasgos genéticos en forma de porcentajes.",
+      "Worklist": [
+        "A.20. Conversión de decimales a fracciones"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "20"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "3 nov",
+      "FechaDeCierre": "7 nov",
+      "SemanaEscolar": 10,
+      "Contenido": "Suma y resta de números negativos.",
+      "Aprendizaje": "El alumno sumará y restará números negativos correctamente.",
+      "Tema": "Números negativos.",
+      "Leccion": "Suma y resta.",
+      "EjesArticuladores": "Apropiación de las culturas. Pensamiento crítico",
+      "EvaluacionFormativa": [
+        "Ejercicios de cálculo y juegos interactivos."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: }  Interpreta los números negativos para describir temperaturas bajo cero (°C) en ecosistemas",
+      "Worklist": [
+        "A.21. Ubicación en la recta numérica",
+        "A.22. Comparación de negativos",
+        "A.23. Determina el signo",
+        "A.24. Suma y resta con negativos 1",
+        "A.25. Suma y resta con negativos 2"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "10 nov",
+      "FechaDeCierre": "14 nov",
+      "SemanaEscolar": 11,
+      "Contenido": "Multiplicación, división y potencias con números negativos.",
+      "Aprendizaje": "El alumno multiplicará, dividirá y calculará potencias de números negativos siguiendo las reglas correspondientes.",
+      "Tema": "Números negativos.",
+      "Leccion": "Multiplicación y división",
+      "EjesArticuladores": "Apropiación de las culturas. Pensamiento crítico",
+      "EvaluacionFormativa": [
+        "Evaluación sumativa con ejercicios de multiplicación, división y potencias."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "26",
+        "27",
+        "28",
+        "29",
         "30"
       ],
-      "Proyectos": [
-        "Pascal"
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "\\textbf{Biología: } Resuelve problemas sumando y restando números negativos para calcular el cambio neto en la población de una especie a lo largo de varias temporadas.",
+      "Worklist": [
+        "A.26. Comparación de negativos",
+        "A.27. Suma y resta con negativos",
+        "A.28. Multiplicación y división con negativos",
+        "A.29. Potencias con numeros negativos",
+        "A.30. Jerarquía de operaciones"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 291-295; 116-118"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 126-131",
-      "Vinculacion": "\\textbf{Matemáticas: } Reconoce e interpreta relaciones proporcionales y no proporcionales a partir de su representación tabular, gráfica y algebraica.",
       "Libros": [
-        "Saberes y pensamiento científico, 291-295; 116-118",
-        "Física, Imagina, págs. 126-131"
+        "MeXmáticas",
+        "Apuntes de clase"
       ],
       "ActPro": [
-        "30",
-        "F11",
-        "Pascal"
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
       ]
     },
     {
-      "PeriodosLectivos": 6,
-      "FechaDeInicio": "16 feb",
-      "FechaDeCierre": "20 feb",
-      "SemanaEscolar": 22,
-      "Contenido": "Principios de Pascal y de Arquímedes.",
-      "Aprendizaje": "Experimenta e interpreta las interacciones de la fuerza y el movimiento relacionados con los principios de Arquímedes, para explicar actividades cotidianas. Identifica algunos dispositivos de uso cotidiano en los cuales se aplica el Principio de Pascal y de Arquímedes.",
-      "Tema": "Principio de Arquímedes",
-      "Leccion": "Lección 12. Principio de Arquímedes",
-      "Inicio": "En esta sección se plantea el hundimiento del Titanic. En el error frecuente se mencionó que los alumnos consideran que los objetos se hunden tomando en cuenta solamente su peso. Para aclarar esta situación, le sugerimos que plantee ejemplos concretos que le ayuden a explicar que la densidad de los objetos y de los líquidos en los que se sumergen determinan si un objeto se hunde o flota. Antes de plantearlos, pregúnteles por qué no se hunde un barco si es tan pesado, esto le dará la pauta para comentar que el casco hueco tiene aire y que el aire es menos denso que el agua, por tanto, el barco en su conjunto flota. Dígales que un objeto cuya densidad es menor que la del agua, flotará en ella. Le sugerimos situaciones como las siguientes:  ¿Por qué una persona muy delgada se hunde en una alberca cuando trata de flotar acostándose horizontalmente, y una persona con sobrepeso flota sin esfuerzo? Esto le permitirá comentar que la grasa es menos densa que el agua (puede mostrar un vaso con agua con aceite para que lo visualicen).  ¿Por qué una persona con sobrepeso tiene más dificultad para llegar al fondo de la alberca y un buzo con mayor masa muscular puede bucear fácilmente? La respuesta tiene el mismo argumento que la anterior.  Si existiera una alberca que pudiera contener a Saturno, este planeta flotaría, porque su densidad es menor que la del agua.",
-      "Desarrollo": "Antes de comenzar esta sección, le sugerimos que pregunte a los estudiantes si han notado que cargar a una persona dentro de una alberca es mucho más fácil que hacerlo fuera de ella. Permítales que compartan sus experiencias y pregunte por qué creen que ocurre. Después, solicite a un par de alumnos que lean el texto de la página 133. El principio de Arquímedes o ¿por qué flotan los barcos? Le recomendamos que la actividad experimental de la página 133 sea demostrativa, y que la realice en el escritorio para que todos los alumnos la vean. Pídales que respondan verbalmente las preguntas de la actividad para que, con su ayuda, lleguen a una conclusión y la anoten en su cuaderno. También puede repetir el experimento usando alcohol, agua con azúcar y aceite, para que comparen las densidades y puedan establecer en qué casos el empuje que experimenta el huevo es mayor. Es conveniente que resuelva en el pizarrón el ejemplo de la aplicación de la fórmula para calcular el empuje que experimenta un cuerpo sumergido en un fluido. Proponga más ejemplos para consolidar sus habilidades matemáticas, por ejemplo:  Un cubo de hierro de 20 cm de lado se sumerge totalmente en agua. Si su peso es 560.40 N, calcula la fuerza de flotación, la fuerza resultante y responde si flotará o se hundirá.  Un cilindro de cobre, de base igual a 35 cm$^2$ y una altura de 12 cm, se sumerge hasta la mitad por medio de un alambre delgado en un recipiente que contiene alcohol. Calcula el peso del cilindro, la fuerza de flotación, la fuerza resultante y responde si flotará o se hundirá si se suelta el alambre. Para realizar la actividad experimental de la página 135, le sugerimos que organice a sus alumnos en equipos de 3 a 4 personas, para que todos participen y no sólo observen.",
-      "Cierre": "El propósito es que los alumnos retomen lo aprendido en la lección y respondan nuevamente las preguntas de las secciones de Inicio y Desarrollo.",
-      "EjesArticuladores": "Vida saludable.",
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "17 nov",
+      "FechaDeCierre": "21 nov",
+      "SemanaEscolar": 12,
+      "Contenido": "Semana de evaluación trimestral",
+      "Aprendizaje": "Fortalecer y verificar la comprensión de los procedimientos y conceptos matemáticos estudiados durante el trimestre, para aplicarlos en la resolución de problemas y tener éxito en la evaluación",
+      "Tema": "Evaluación de la unidad",
+      "Leccion": "Examen de Unidad",
+      "EjesArticuladores": "Pensamiento Crítico",
       "EvaluacionFormativa": [
-        "Comprende el Principio de Arquímedes.",
-        "Entiende el papel de la densidad para determinar si un objeto flota o se hunde en un líquido."
+        "Se realizará a través de la observación directa del desempeño del alumno al resolver los ejercicios.",
+        "La participación en las puestas en común y la claridad al explicar sus dudas o soluciones."
       ],
       "Evidencias": [],
       "Actividades": [
-        "31",
-        "32"
+        "Repaso de Unidad"
       ],
       "Proyectos": [
-        "Presion"
+        "Examen de Unidad"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 295-299 y 119-120"
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "",
+      "Worklist": [
+        "Repaso de Unidad",
+        "Examen de Unidad"
       ],
-      "LibroMcMillan": "Física, Imagina, págs. 132-135",
-      "Vinculacion": "\\textbf{Matemáticas: } Modela diversas situaciones que se resuelven con ecuaciones lineales.",
       "Libros": [
-        "Saberes y pensamiento científico, 295-299 y 119-120",
-        "Física, Imagina, págs. 132-135"
+        "MeXmáticas",
+        "Apuntes de clase"
       ],
       "ActPro": [
-        "31",
-        "32",
-        "Presion"
-      ]
-    },
-    {
-      "PeriodosLectivos": 6,
-      "FechaDeInicio": "23 feb",
-      "FechaDeCierre": "27 feb",
-      "SemanaEscolar": 23,
-      "Contenido": "Saberes y prácticas para el aprovechamiento de energías y el desarrollo sustentable.",
-      "Aprendizaje": "Analiza las características de la energía mecánica (cinética y potencial) y describe casos donde se conserva.",
-      "Tema": "Energía mecánica: cinética y potencial. Conservación de la energía mecánica.",
-      "Leccion": "Lección 13. Energía Mecánica",
-      "Inicio": "La situación de Inicio habla de una actividad muy llamativa para los estudiantes, y muestra un ejemplo perfecto para mostrar qué es la energía mecánica. Para acompañar esta situación, le recomendamos que lleve o que construya un péndulo sencillo para que pueda mostrar cómo sería el movimiento del skater. Cuando haga la demostración, puede tomar el pizarrón de fondo y pedir a dos alumnos que se coloquen a la izquierda y derecha de la posición del péndulo, para que dibujen una marca cuando alcance la altura máxima de cada extremo y hagan marcas conforme oscile hasta llegar a su posición de equilibrio. Esta actividad les ayudará a responder las preguntas de la sección.",
-      "Desarrollo": "Una vez que hayan leído el texto inicial, solicite a sus alumnos que den ejemplos específicos de actividades que realicen en las que pueden observar que la energía provoca algún cambio, ya sea de posición, deformación, un cambio de temperatura, etcétera. Una vez que hayan revisado las definiciones de energía cinética y energía potencial, organice una lluvia de ideas para que compartan ejemplos de su manifestación en situaciones cotidianas, en las que además puedan calcularla numéricamente. Puede orientarlos con preguntas, por ejemplo:  ¿Cómo pueden relacionar la energía cinética con el ciclismo o la natación?  ¿Cómo relacionan la energía cinética con la temperatura?  Si un vehículo choca con un objeto, ¿cómo se relaciona la intensidad del golpe con la energía cinética?  ¿Cómo se transforma la energía mecánica mientras un objeto cae desde cierta altura y finalmente llega al suelo? Le sugerimos que resuelva los problemas planteados en el pizarrón preguntando a sus alumnos sobre los pasos que deben seguir para resolverlos. Después, deje más ejercicios para calcular la energía cinética, en el siguiente enlace encontrará algunos:  Después de leer el texto sobre la conservación de la energía mecánica, puede utilizar el siguiente simulador, que además ilustra el ejemplo del skater. Pregunte a sus alumnos cómo sería la gráfica del valor de las energías cinética y potencial (respecto del tiempo), si pudieran tomar los valores del movimiento de los vagones de la montaña rusa.",
-      "Cierre": "El propósito es que los alumnos apliquen lo aprendido en la lección y retomen las preguntas del inicio y las respondan, pero ahora en términos de la energía mecánica. Pueden responder en grupo y guardar las respuestas en su Portafolio de evidencias.",
-      "EjesArticuladores": "Interculturalidad crítica.",
-      "EvaluacionFormativa": [
-        "Entiende qué son la energía cinética y la energía potencial, cómo se calculan y cuál es su relación.  ",
-        "Comprende el concepto de conservación de la energía mecánica."
-      ],
-      "Evidencias": [],
-      "Actividades": [
-        "33",
-        "34"
-      ],
-      "Proyectos": [
-        "Energia Mecanica"
-      ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 133 y 135-139"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 136-139",
-      "Vinculacion": "\\textbf{Biología: } Identifica la cantidad de energía que proporcionan los alimentos para prevenir enfermedades relacionadas con la alimentación.",
-      "Libros": [
-        "Saberes y pensamiento científico, 133 y 135-139",
-        "Física, Imagina, págs. 136-139"
-      ],
-      "ActPro": [
-        "33",
-        "34",
-        "Energia Mecanica"
-      ]
-    },
-    {
-      "PeriodosLectivos": 6,
-      "FechaDeInicio": "2 mar",
-      "FechaDeCierre": "6 mar",
-      "SemanaEscolar": 24,
-      "Contenido": "Saberes y prácticas para el aprovechamiento de energías y el desarrollo sustentable.",
-      "Aprendizaje": "Relaciona al calor como una forma de energía y describe los motores que funcionan con energía calorífica, los efectos del calor disipado, los gases expelidos y valora sus efectos en la atmósfera.",
-      "Tema": "Concepto de calor como transferencia de energía. Máquinas térmicas y sus efectos en la atmósfera y el ambiente.",
-      "Leccion": "Lección 14. Calor como transferencia de energía\nLección 15. Máquinas térmicas",
-      "Inicio": "La situación planteada en la sección Inicio no tiene una explicación única hasta la fecha, pero puede visitar la siguiente página que contiene más información, además de un video que habla del efecto Mpemba.  www.edutics.mx/xGT Le sugerimos plantear algunas preguntas relacionadas con el tema, por ejemplo:  Imagina que es un día muy frío en invierno, caminas descalzo sobre una alfombra y después sobre el suelo de la cocina. ¿Por qué tus pies sienten más frío en el piso de la cocina que sobre la alfombra, si ambos están a la misma temperatura? Respuesta: La sensación se explica por las distintas tasas de transferencia de calor: la pérdida de calor es más rápida para la piel en contacto con las baldosas que con la alfombra, por lo que la sensación de frío es más intensa. La situación inicial propone un análisis y reflexión sobre las máquinas perpetuas, se sugiere diseñar y construir algunas de ellas y analizar por qué no funcionan. Oriente la discusión al principio de conservación de la energía.",
-      "Desarrollo": "Una vez que hayan leído el experimento pensado de la página 141, pregunte a sus alumnos el significado de temperatura, calor y energía térmica. Guíelos para que comprendan las diferencias y la relación entre estos conceptos y para que escriban las definiciones en su cuaderno:  La energía térmica se refiere a la energía de un sistema, es decir, la energía cinética de las partículas que lo constituyen. Esta energía es responsable de la temperatura del sistema.  La temperatura es una medida relacionada con la energía cinética promedio de las partículas de un sistema.  El calor es la energía en transferencia de un cuerpo a otro, cuando éstos se encuentran a distinta temperatura y en contacto térmico.  La energía interna de un sistema es la suma de la energía cinética, la de rotación, de vibración y cualquier tipo de energía que contengan las partículas que lo conforman. Después de revisar los mecanismos de transmisión del calor, pida a los estudiantes que den algunos ejemplos de los tres mecanismos de conducción del calor que encuentren en sus actividades cotidianas y los expliquen. Le sugerimos comentar que la tasa de transferencia de calor por radiación también depende del color del objeto. El negro es el más eficaz, y el blanco es el menos eficaz.",
-      "Cierre": "El propósito de esta sección es que los alumnos apliquen lo aprendido en la lección, retomen las preguntas de la sección Inicio y las respondan nuevamente. Le sugerimos que contesten en grupo y anoten las respuestas en una hoja para su Portafolio de evidencias.",
-      "EjesArticuladores": "Pensamiento crítico.",
-      "EvaluacionFormativa": [
-        "Comprende la diferencia entre calor, temperatura, energía térmica y energía interna.",
-        "Reconoce y explica los mecanismos de transferencia de calor.",
-        "Comprende qué es una máquina térmica y las transformaciones energéticas que involucra.",
-        "Entiende y aplica las ecuaciones para el cálculo de la eficiencia térmica."
-      ],
-      "Evidencias": [
-        "F12"
-      ],
-      "Actividades": [
-        "35",
-        "36",
-        "37",
-        "38",
-        "39"
-      ],
-      "Proyectos": [
-        "Maquina Vapor"
-      ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 185-189"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 140-147",
-      "Vinculacion": "\\textbf{Biología: } Analiza las prácticas de consumo que han alterado los ciclos biogeoquímicos del carbono y nitrógeno, sus efectos asociados al calentamiento global y sus impactos en el medio ambiente y la salud.",
-      "Libros": [
-        "Saberes y pensamiento científico, 185-189",
-        "Física, Imagina, págs. 140-147"
-      ],
-      "ActPro": [
-        "35",
-        "36",
-        "37",
-        "38",
-        "39",
-        "F12",
-        "Maquina Vapor"
-      ]
-    },
-    {
-      "PeriodosLectivos": 6,
-      "FechaDeInicio": "9 mar",
-      "FechaDeCierre": "13 mar",
-      "SemanaEscolar": 25,
-      "Contenido": "Saberes y prácticas para el aprovechamiento de energías y el desarrollo sustentable.",
-      "Aprendizaje": "Identifica formas de energías renovables y no renovables, su empleo y origen en su comunidad (solar, eólica, hidráulica, geológica, mareomotriz, nuclear) y valora sus beneficios.",
-      "Tema": "Energía renovable",
-      "Leccion": "Lección 16. Energías renovables",
-      "Inicio": "Después de leer el texto de esta sección, pregunte a los alumnos si comprendieron la diferencia entre efecto invernadero y calentamiento global. Le recomendamos que vea el video sugerido en la sección de Audiovisuales, donde se explican ambos conceptos. Después, pídales que respondan las preguntas de la sección en una sesión grupal, para que todos aporten sus ideas y pueda aclarar sus dudas. En la siguiente liga encontrará un cuestionario que le puede servir para evaluar a los alumnos y que, una vez respondido, pueden guardar en su Portafolio de evidencias:  www.edutics.mx/xN9",
-      "Desarrollo": "La idea central de la lección es el uso y aprovechamiento de la energía térmica, particularmente en su transformación a energía mecánica (que estudiaron en la lección 13). Las máquinas térmicas son muy usadas actualmente y son la base para producir otros tipos de energía, como la eléctrica. Resalte que la eficiencia de estas máquinas es limitada, lo que se traduce en un alto consumo de fuentes de energía, principalmente de origen fósil, lo que conlleva problemas ambientales graves.",
-      "Cierre": "Como conclusión, los alumnos deben tener claro que las máquinas perpetuas son imposibles, por lo que siempre se necesitan fuentes de energía externas. Proponga a los alumnos el diseño de pequeñas máquinas que usen energías renovables como la eólica y la solar. Pida a los estudiantes que resuelvan la ficha 12 del Cuaderno de evidencias, incluye una actividad sobre el cálculo de la eficiencia térmica y una reflexión sobre las fuentes de energía y su relación con el ambiente.",
-      "EjesArticuladores": "Vida saludable.",
-      "EvaluacionFormativa": [
-        "Reconoce la diferencia entre efecto invernadero y cambio climático.  ",
-        "Comprende que el cambio climático es una consecuencia del efecto invernadero."
-      ],
-      "Evidencias": [
-        "F13"
-      ],
-      "Actividades": [
-        "40"
-      ],
-      "Proyectos": [
-        "Eolico"
-      ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 217-221 ",
-        "Nuestro libro de proyectos, 206-212"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 148-151",
-      "Vinculacion": "\\textbf{Biología: } Analiza los efectos asociados al calentamiento global y sus impactos en el medio ambiente.",
-      "Libros": [
-        "Saberes y pensamiento científico, 217-221 ",
-        "Nuestro libro de proyectos, 206-212",
-        "Física, Imagina, págs. 148-151"
-      ],
-      "ActPro": [
-        "40",
-        "F13",
-        "Eolico"
-      ]
-    },
-    {
-      "PeriodosLectivos": 6,
-      "FechaDeInicio": "16 mar",
-      "FechaDeCierre": "20 mar",
-      "SemanaEscolar": 26,
-      "Contenido": "Saberes y prácticas para el aprovechamiento de energías y el desarrollo sustentable.",
-      "Aprendizaje": "Realiza experimentos en donde se aproveche la energía del sol ya sea considerando las propiedades de la luz (energía solar) o las de la materia (convección).",
-      "Tema": "Energía solar",
-      "Leccion": "Lección 17. Energía solar",
-      "Inicio": "Antes de leer la información de la sección, le sugerimos que pregunte a sus alumnos si saben qué es un calentador solar, si han visto uno y cómo creen que funciona. Permítales compartir sus ideas para después leer con ellos la información de la sección. Después, vuelva a preguntarles y pídales que corrijan sus interpretaciones y creencias sobre qué es un calentador solar y cómo funciona, de esta manera podrán responder las preguntas de la sección en conjunto y con su ayuda. Le recomendamos ver con sus alumnos el siguiente video que explica de manera muy sencilla cómo funciona un calentador solar.  Resolver el mapa conceptual implica que el alumno ha entendido el orden en el que se organizaron los conceptos. Pida a algunos voluntarios que lo expliquen frente al grupo y comparen sus explicaciones.",
-      "Desarrollo": "Para complementar la información de la página 148 le sugerimos consultar la siguiente liga de internet, donde encontrará una explicación sobre los combustibles fósiles: Le sugerimos que elija algunos alumnos para que lean la información de la página 149, después pida que elaboren un mapa mental con los problemas enlistados y los complementen con otros que ellos investiguen, indíqueles que incluyan imágenes para ilustrarlos. En la siguiente liga encontrará un video que habla sobre la contaminación que producen los combustibles fósiles. Después, pídales que intercambien el cuestionario con algunos de sus compañeros y lo respondan. En sesión grupal, revise las preguntas y respuestas para que comenten si fueron útiles para evaluar sus conocimientos. Ésta es otra manera de fomentar la coevaluación y la autoevaluación. Pida a sus alumnos que elaboren y organicen una presentación sobre los accidentes nucleares de Chernobyl y Fukushima, y puede agregar el accidente nuclear que ocurrió en Three Mile Island en Pensilvania, Estados Unidos de América, en 1979. Solicite que utilicen imágenes, dibujos y noticias. Después, le proponemos que vea en clase el video sugerido en la sección Recursos de apoyo complementarios. Organice una sesión para que los estudiantes mencionen los puntos más importantes y anótelos en el pizarrón, pida que hagan un mapa conceptual que guardarán en su Portafolio de evidencias. Le recomendamos que, para llevar a cabo la actividad experimental de la página 153, les pida con anticipación los materiales (por equipo). Planee la actividad para una sesión de al menos dos horas, puede aprovechar la hora de laboratorio para que tengan tiempo de armar su horno solar y observar su funcionamiento. Le recomendamos que vea el siguiente video, que explica el funcionamiento del horno solar de manera muy sencilla.  Igualmente, pida a otros alumnos que muestren cómo incluyeron los conceptos relacionados con los principios de Arquímedes y Pascal, resalten coincidencias y diferencias, poniendo especial atención en las explicaciones, pues ellas muestran el grado de comprensión de los alumnos.",
-      "Cierre": "El propósito de esta sección es que los alumnos apliquen lo aprendido en la lección y respondan nuevamente las preguntas de la sección inicial. Organice una sesión grupal para que respondan las preguntas. Para reforzar los contenidos de la lección, pida que resuelvan la ficha 33 del Cuaderno de evidencias. Como complemento sugiera que elaboren otro mapa con los contenidos no incluidos en éste.",
-      "EjesArticuladores": "Pensamiento crítico.",
-      "EvaluacionFormativa": [
-        "Comprende qué es la energía solar y cómo se produce. ",
-        "Reconoce la energía solar como fuente de energía limpia y renovable."
-      ],
-      "Evidencias": [
-        "F14"
-      ],
-      "Actividades": [
-        "41",
-        "42"
-      ],
-      "Proyectos": [
-        "Energia"
-      ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 217-221",
-        "Nuestro libro de proyectos, 206-212"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 152-157",
-      "Vinculacion": "\\textbf{Biología: } Explica por qué los saberes de los pueblos originarios han aportado al aprovechamiento de los recursos naturales y el desarrollo sustentable en el ecosistema local.",
-      "Libros": [
-        "Saberes y pensamiento científico, 217-221",
-        "Nuestro libro de proyectos, 206-212",
-        "Física, Imagina, págs. 152-157"
-      ],
-      "ActPro": [
-        "41",
-        "42",
-        "F14",
-        "Energia"
+        "Repaso de Unidad",
+        "Examen de Unidad"
       ]
     }
   ]

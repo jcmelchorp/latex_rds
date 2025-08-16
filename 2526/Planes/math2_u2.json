@@ -22,14 +22,16 @@
         "27"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Utiliza el radio de una polea o una rueda para calcular la distancia que recorre un punto en su borde (circunferencia) y relacionarla con el movimiento lineal.",
+      "Worklist": [
+        "A.26. Diámetro de un círculo",
+        "A.27. Radio de un círculo"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "26",
@@ -58,14 +60,16 @@
         "29"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Calcula el área de una caja de Petri para determinar la densidad de una colonia de bacterias (número de colonias por $cm^2$).",
+      "Worklist": [
+        "A.28. Perímetro",
+        "A.29. Área"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "28",
@@ -93,14 +97,15 @@
         "30"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve problemas de movimiento circular, calculando la distancia total que recorre un satélite en una órbita circular después de un número determinado de vueltas.",
+      "Worklist": [
+        "A.30. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "30"
@@ -129,14 +134,17 @@
         "33"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Aplica las propiedades de los ángulos para predecir la trayectoria de un rayo de luz al reflejarse en un espejo cóncavo o convexo (óptica geométrica).",
+      "Worklist": [
+        "A.31. Ángulos interiores",
+        "A.32. Ángulos centrales y exteriores",
+        "A.33. Ángulos centrales e inscritos"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "31",
@@ -166,14 +174,16 @@
         "35"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Calcula la longitud del arco recorrido por un péndulo o el área barrida por su cuerda para analizar su movimiento oscilatorio.",
+      "Worklist": [
+        "A.34. Arco de una circunferencia",
+        "A.35. Área de un sector circular"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "34",
@@ -202,14 +212,16 @@
         "37"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Utiliza el área de un pistón para calcular la fuerza total ejercida por un gas a una presión determinada, aplicando la fórmula $F=P \\\\times A$.",
+      "Worklist": [
+        "A.36. Perímetro",
+        "A.37. Área"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "36",
@@ -237,14 +249,15 @@
         "38"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Calcula el área superficial de un recipiente cilíndrico para estudiar factores que afectan la velocidad de una reacción, como la transferencia de calor.",
+      "Worklist": [
+        "A.38. Área lateral y total"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "38"
@@ -272,14 +285,16 @@
         "40"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Resuelve problemas de densidad, calculando el volumen de un objeto de forma irregular por desplazamiento de agua y usando su masa para encontrar su densidad ($\\\\rho = \\\\dfrac{m}{V}$).",
+      "Worklist": [
+        "A.39. Volumen",
+        "A.40. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "39",
@@ -307,14 +322,15 @@
         "41"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Traduce leyes fundamentales, como la Segunda Ley de Newton (\"La fuerza es igual a la masa por la aceleración\"), a su expresión algebraica (F=ma).",
+      "Worklist": [
+        "A.41. Lenguaje algebraico"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "41"
@@ -344,14 +360,18 @@
         "45"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Calcula el perímetro de una instalación experimental (ej. un acelerador de partículas de forma rectangular) cuyas dimensiones están dadas por expresiones algebraicas.",
+      "Worklist": [
+        "A.42. Suma de monomios y polinomios",
+        "A.43. Resta de monomios y polinomios",
+        "A.44. Operaciones combinadas",
+        "A.45. Perímetro de figuras geométricas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "42",
@@ -384,14 +404,18 @@
         "49"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Manipula fórmulas que contienen polinomios, por ejemplo, al derivar la ecuación de la posición en un movimiento uniformemente acelerado.",
+      "Worklist": [
+        "A.46. Suma y resta de exponentes",
+        "A.47. Multiplicación de exponentes",
+        "A.48. Multiplicación y división de monomios",
+        "A.49. Multiplicación de polinomios"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "46",
@@ -421,14 +445,15 @@
         "50"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Estima el área de un hábitat irregular (como un lago) dividiéndolo en figuras geométricas conocidas para calcular la población total de una especie acuática.",
+      "Worklist": [
+        "A.50. Áreas de figuras geométricas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "50"
@@ -457,14 +482,17 @@
         "53"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Utiliza y convierte unidades de masa (gramos, kg) y capacidad (mililitros, L) para preparar disoluciones con una concentración específica en el laboratorio.",
+      "Worklist": [
+        "A.51. Unidades de longitud",
+        "A.52. Unidades de masa",
+        "A.53. Unidades de capacidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "51",
@@ -494,14 +522,18 @@
         "55"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Emplea las unidades correctas de área ($m^2$) y volumen ($m^2$) para calcular magnitudes derivadas como la presión ($N\\/m^2$) o la densidad ($kg\\/m^3$).",
+      "Worklist": [
+        "A.54. Unidades de área y volumen",
+        "A.55. Unidades de capacidad 2",
+        "Repaso de Unidad",
+        "Examen de Unidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "54",

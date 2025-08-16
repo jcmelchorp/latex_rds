@@ -22,14 +22,16 @@
         "2"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Calcula la fuerza neta o resultante sobre un objeto, sumando fuerzas en el mismo sentido y restando las de sentidos opuestos.",
+      "Worklist": [
+        "A.1. Suma de números",
+        "A.2. Resta de números"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "1",
@@ -58,14 +60,16 @@
         "4"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Determina la masa molar de un compuesto, multiplicando la masa atómica de cada elemento por su número de átomos y sumando los resultados.",
+      "Worklist": [
+        "A.3. Multiplicación de números",
+        "A.4. División de números"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "3",
@@ -93,14 +97,15 @@
         "5"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve problemas de trabajo y potencia, calculando el trabajo realizado ($F\\\\times d$) y luego la potencia desarrollada.",
+      "Worklist": [
+        "A.5. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "5"
@@ -128,14 +133,16 @@
         "7"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Compara y opera con temperaturas bajo cero o con cargas eléctricas de iones para determinar cambios energéticos o la carga neta de una molécula.",
+      "Worklist": [
+        "A.6. Ubicación en la recta numérica",
+        "A.7. Comparación de negativos"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "6",
@@ -165,14 +172,17 @@
         "10"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Calcula el trabajo realizado por o sobre un campo eléctrico al mover una carga negativa, aplicando correctamente la jerarquía y las leyes de los signos.",
+      "Worklist": [
+        "A.8. Suma y resta con negativos",
+        "A.9. Multiplicación y división con negativos",
+        "A.10. Jerarquía de operaciones"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "8",
@@ -202,14 +212,16 @@
         "12"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Factoriza expresiones cinemáticas para identificar las condiciones iniciales o finales de un movimiento, como el tiempo en que un objeto vuelve a su punto de partida.",
+      "Worklist": [
+        "A.11. Término común",
+        "A.12. Diferencia de cuadrados"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "11",
@@ -238,14 +250,16 @@
         "14"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve ecuaciones de movimiento de un proyectil, factorizando el trinomio que describe su altura para encontrar el tiempo que tarda en alcanzar el suelo.",
+      "Worklist": [
+        "A.13. Trinomio cuadrado perfecto",
+        "A.14. Trinomios de la forma $x^2+bx+c$"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "13",
@@ -273,14 +287,15 @@
         "15"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Determina los instantes de tiempo en que un objeto en movimiento acelerado alcanza una posición específica, factorizando la ecuación cuadrática general que modela su trayectoria.",
+      "Worklist": [
+        "A.15. Trinomios de la forma $ax^2+bx+c$"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "15"
@@ -308,14 +323,16 @@
         "17"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Aplica las leyes de los exponentes para simplificar cálculos con notación científica al multiplicar o dividir cantidades muy grandes o pequeñas.",
+      "Worklist": [
+        "A.16. Suma de exponentes",
+        "A.17. Resta de exponentes"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "16",
@@ -344,14 +361,16 @@
         "19"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Manipula las variables en la Ley de Gravitación Universal ($F=G\\\\dfrac{m\\_1 m\\_2}{r^2}$  ), aplicando las leyes de los exponentes para analizar cómo cambia la fuerza si la distancia se duplica.",
+      "Worklist": [
+        "A.18. Multiplicación de exponentes",
+        "A.19. División de exponentes"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "18",
@@ -379,14 +398,15 @@
         "20"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Expresa en notación científica el tamaño de una célula o una bacteria (ej. $2 \\\\times 10^{-6}$ m) para comparar su escala con la de otros organismos.",
+      "Worklist": [
+        "A.20. Exponentes negativos"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "20"
@@ -417,14 +437,21 @@
         "25"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Modela la posición de un objeto con velocidad constante como una sucesión aritmética, donde la diferencia común es la distancia recorrida en cada segundo.",
+      "Worklist": [
+        "A.21. Completando la sucesión",
+        "A.22. Diferencia de una sucesión",
+        "A.23. Término general",
+        "A.24. Término enésimo",
+        "A.25. Suma de una sucesión aritmética",
+        "Repaso de Unidad",
+        "Examen de Unidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "21",

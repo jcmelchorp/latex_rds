@@ -24,14 +24,18 @@
         "4"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve problemas de cinemática calculando la distancia total recorrida (suma), el desplazamiento (resta) o la rapidez promedio (división) de un objeto en movimiento.",
+      "Worklist": [
+        "A.1.  Suma de números",
+        "A.2.  Resta de números",
+        "A.3.  Multiplicación de números",
+        "A.4.  División de números"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "1",
@@ -61,14 +65,15 @@
         "5"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Calcula la fuerza neta sobre un objeto, sumando y restando fuerzas que actúan en la misma dirección pero en sentidos opuestos, para predecir el estado de movimiento del objeto.",
+      "Worklist": [
+        "A.5.  Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "5"
@@ -96,14 +101,16 @@
         "7"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Compara temperaturas de diversas sustancias en grados Celsius, ubicándolas en una recta numérica para determinar cuál está más fría o cuál es el punto de congelación.",
+      "Worklist": [
+        "A.6.  Ubicación en la recta numérica",
+        "A.7.  Comparación de negativos"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "6",
@@ -132,14 +139,16 @@
         "9"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Interpreta el signo en modelos de oscilaciones o vibraciones, donde una potencia par puede significar un retorno a la posición inicial y una impar una posición opuesta.",
+      "Worklist": [
+        "A.8.  Suma y resta con negativos",
+        "A.9.  Multiplicación y división con negativos"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "8",
@@ -167,14 +176,15 @@
         "10"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Interpreta el signo en modelos de oscilaciones o vibraciones, donde una potencia par puede significar un retorno a la posición inicial y una impar una posición opuesta.",
+      "Worklist": [
+        "A.10. Potencias con números negativos"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "10"
@@ -203,14 +213,17 @@
         "13"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Utiliza las leyes de los exponentes para simplificar operaciones con el número de Avogadro ($6.022 \\\\times 10\\ ^{23}$) al calcular la cantidad de átomos o moléculas en una muestra.",
+      "Worklist": [
+        "A.11. Suma de exponentes",
+        "A.12. Resta de exponentes",
+        "A.13. Multiplicación de exponentes"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "11",
@@ -240,14 +253,16 @@
         "15"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Expresa y compara en notación científica el tamaño de un virus con el diámetro de un planeta para comprender las diferentes escalas del universo.",
+      "Worklist": [
+        "A.14. Notación científica 1",
+        "A.15. Notación científica 2"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "14",
@@ -276,14 +291,16 @@
         "17"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Representa vectores de fuerza o velocidad en un plano cartesiano, identificando el cuadrante para describir la dirección y el sentido del movimiento de un objeto.",
+      "Worklist": [
+        "A.16. Ubicación en el plano cartesiano",
+        "A.17. Cuadrantes en el plano cartesiano"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "16",
@@ -312,14 +329,16 @@
         "19"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Interpreta que la pendiente de una gráfica de posición contra tiempo representa la velocidad de un móvil y la ordenada al origen, su posición inicial.",
+      "Worklist": [
+        "A.18. Pendiente de una recta",
+        "A.19. Pendiente y ordenada"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "18",
@@ -347,14 +366,15 @@
         "20"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Modela la relación entre la temperatura en grados Celsius y Fahrenheit mediante una ecuación lineal, y la utiliza para realizar conversiones.",
+      "Worklist": [
+        "A.20. Ecuación de una recta"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "20"
@@ -385,14 +405,19 @@
         "25"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Convierte la proporción de supervivencia de una especie a un porcentaje para comunicar la tasa de supervivencia en un estudio de población.",
+      "Worklist": [
+        "A.21. Porcentajes a decimal",
+        "A.22. Decimal a porcentaje",
+        "A.23. Porcentaje de cantidades 1",
+        "A.24. Porcentaje de cantidades 2",
+        "A.25. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "21",
@@ -426,14 +451,17 @@
       "Proyectos": [
         "Examen de Unidad"
       ],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "",
+      "Worklist": [
+        "Repaso de Unidad",
+        "Examen de Unidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase",
+        "Repaso de unidad"
       ],
       "ActPro": [
         "Repaso de Unidad",

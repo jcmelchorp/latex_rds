@@ -26,14 +26,18 @@
       "Proyectos": [
         "Electrostaticos"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 301-307"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 160-167",
+      "LibroSep": "Saberes y pensamiento científico 301-307",
+      "LibroMcMillan": "Física Imagina  160-167",
       "Vinculacion": "\\textbf{Matemáticas: } Calcula potencias con exponente entero y la raíz cuadrada. Usa la notación científica.",
+      "Worklist": [
+        "Lección 1. Electricidad",
+        "A.1. Cargas en movimiento",
+        "F15. Energía eléctrica y medio ambiente",
+        "Electrostaticos"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 301-307",
-        "Física, Imagina, págs. 160-167"
+        "Saberes y pensamiento científico 301-307",
+        "Física Imagina  160-167"
       ],
       "ActPro": [
         "1",
@@ -67,14 +71,18 @@
       "Proyectos": [
         "Conductores"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 312-315"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 168-171",
+      "LibroSep": "Saberes y pensamiento científico 312-315",
+      "LibroMcMillan": "Física Imagina  168-171",
       "Vinculacion": "\\textbf{Biología: } Explica la participación del sistema nervioso en la coordinación de las funciones del cuerpo humano.",
+      "Worklist": [
+        "Lección 2. Electricidad, cuidados y precauciones",
+        "A.2. Cuidados con el uso de la electricidad",
+        "F16. ¡Cuidado con la electricidad!",
+        "Conductores"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 312-315",
-        "Física, Imagina, págs. 168-171"
+        "Saberes y pensamiento científico 312-315",
+        "Física Imagina  168-171"
       ],
       "ActPro": [
         "2",
@@ -107,14 +115,18 @@
       "Proyectos": [
         "Induccion"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 234-236"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 172-177",
+      "LibroSep": "Saberes y pensamiento científico 234-236",
+      "LibroMcMillan": "Física Imagina  172-177",
       "Vinculacion": "\\textbf{Matemáticas: } Encuentra la distancia de un punto a una recta y la distancia entre dos rectas paralelas.",
+      "Worklist": [
+        "Lección 3. Electricidad y magnetismo",
+        "A.3. ¿Qué sabes sobre el magnetismo?",
+        "A.4. Relación entre electricidad y magnetismo",
+        "Induccion"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 234-236",
-        "Física, Imagina, págs. 172-177"
+        "Saberes y pensamiento científico 234-236",
+        "Física Imagina  172-177"
       ],
       "ActPro": [
         "3",
@@ -148,14 +160,18 @@
       "Proyectos": [
         "Descomposicion"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 323-325"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 178-183",
+      "LibroSep": "Saberes y pensamiento científico 323-325",
+      "LibroMcMillan": "Física Imagina  178-183",
       "Vinculacion": "\\textbf{Matemáticas: } Encuentra y calcula los ángulos que se forman al intersecar dos segmentos.",
+      "Worklist": [
+        "Lección 4. Luz visible",
+        "A.5. ¡Qué onda con la luz!",
+        "F17. Luces deslumbrantes",
+        "Descomposicion"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 323-325",
-        "Física, Imagina, págs. 178-183"
+        "Saberes y pensamiento científico 323-325",
+        "Física Imagina  178-183"
       ],
       "ActPro": [
         "5",
@@ -190,14 +206,19 @@
       "Proyectos": [
         "Ondas Electromagneticas"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 318-323"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 184-189",
+      "LibroSep": "Saberes y pensamiento científico 318-323",
+      "LibroMcMillan": "Física Imagina  184-189",
       "Vinculacion": "\\textbf{Matemáticas: } Usa la notación científica al realizar cálculos con cantidades muy grandes o muy pequeñas.",
+      "Worklist": [
+        "Lección 5. Ondas electromagnéticas",
+        "A.6. Características del espectro electromagnético",
+        "A.7. Los efectos de la radiación electromagnética",
+        "F18. Me mantengo alerta",
+        "Ondas Electromagneticas"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 318-323",
-        "Física, Imagina, págs. 184-189"
+        "Saberes y pensamiento científico 318-323",
+        "Física Imagina  184-189"
       ],
       "ActPro": [
         "6",
@@ -229,14 +250,17 @@
         "9"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 262-264"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 190-195",
+      "LibroSep": "Saberes y pensamiento científico 262-264",
+      "LibroMcMillan": "Física Imagina  190-195",
       "Vinculacion": "\\textbf{Matemáticas: } Usa la notación científica al realizar cálculos con cantidades muy grandes o muy pequeñas.",
+      "Worklist": [
+        "Lección 6. El Universo",
+        "A.8. Las galaxias",
+        "A.9. Grupos de galaxias"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 262-264",
-        "Física, Imagina, págs. 190-195"
+        "Saberes y pensamiento científico 262-264",
+        "Física Imagina  190-195"
       ],
       "ActPro": [
         "8",
@@ -269,14 +293,20 @@
       "Proyectos": [
         "Universo"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 262-264"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 196-201",
+      "LibroSep": "Saberes y pensamiento científico 262-264",
+      "LibroMcMillan": "Física Imagina  196-201",
       "Vinculacion": "\\textbf{Matemáticas: } Identifica tendencias en los datos centrándose en sus valores representativos y sus variaciones.",
+      "Worklist": [
+        "Lección 7. Origen y evolución del Universo",
+        "A.10. Expansión del universo",
+        "A.11. Mecanismos de las estrellas",
+        "A.12. Los cuerpos cósmicos",
+        "A.13. Evolución del Universo",
+        "Universo"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 262-264",
-        "Física, Imagina, págs. 196-201"
+        "Saberes y pensamiento científico 262-264",
+        "Física Imagina  196-201"
       ],
       "ActPro": [
         "10",
@@ -309,14 +339,18 @@
         "16"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 231"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 202-207",
+      "LibroSep": "Saberes y pensamiento científico 231",
+      "LibroMcMillan": "Física Imagina  202-207",
       "Vinculacion": "\\textbf{Matemáticas: } Determina la medida de ángulos inscritos y centrales, así como de arcos de circunferencia.",
+      "Worklist": [
+        "Lección 8. Descubrimiento del Universo",
+        "A.14. El Universo a simple vista",
+        "A.15. El telescopio y paralaje",
+        "A.16. Exploración de cuerpos celestes por medio de ondas electromagnéticas"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 231",
-        "Física, Imagina, págs. 202-207"
+        "Saberes y pensamiento científico 231",
+        "Física Imagina  202-207"
       ],
       "ActPro": [
         "14",
@@ -349,11 +383,18 @@
       "Proyectos": [
         "Telescopio"
       ],
-      "LibroSep": [],
-      "LibroMcMillan": "Física, Imagina, págs. 208-211",
+      "LibroSep": "",
+      "LibroMcMillan": "Física Imagina  208-211",
       "Vinculacion": "\\textbf{Matemáticas: } Investiga figuras relacionadas con círculos y propiedades de los círculos.",
+      "Worklist": [
+        "Lección 9. Sistema Solar",
+        "A.17. El Sol",
+        "A.18. Estructura del Sol",
+        "A.19. El Sistema Solar",
+        "Telescopio"
+      ],
       "Libros": [
-        "Física, Imagina, págs. 208-211"
+        "Física Imagina  208-211"
       ],
       "ActPro": [
         "17",
@@ -383,14 +424,16 @@
         "20"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 175-176"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 212-215",
+      "LibroSep": "Saberes y pensamiento científico 175-176",
+      "LibroMcMillan": "Física Imagina  212-215",
       "Vinculacion": "\\textbf{Matemáticas: } Relaciona e interpreta relaciones proporcionales y no proporcionales.",
+      "Worklist": [
+        "Lección 10. Efecto invernadero, causas y consecuencias",
+        "A.20. El efecto invernadero"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 175-176",
-        "Física, Imagina, págs. 212-215"
+        "Saberes y pensamiento científico 175-176",
+        "Física Imagina  212-215"
       ],
       "ActPro": [
         "20"
@@ -417,16 +460,17 @@
         "21"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 222-225",
-        "Nuestro libro de proyectos, 114-119"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 216-219",
+      "LibroSep": "Saberes y pensamiento científico 222-225,Nuestro libro de proyectos 114-119",
+      "LibroMcMillan": "Física Imagina  216-219",
       "Vinculacion": "\\textbf{Biología: } Analiza las prácticas de consumo que han alterado los ciclos biogeoquímicos del carbono y el nitrógeno, sus efectos asociados al calentamiento global y sus impactos en el medio ambiente y la salud.",
+      "Worklist": [
+        "Lección 11. Gases de efecto invernadero",
+        "A.21. Gases naturales"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 222-225",
-        "Nuestro libro de proyectos, 114-119",
-        "Física, Imagina, págs. 216-219"
+        "Saberes y pensamiento científico 222-225",
+        "Nuestro libro de proyectos 114-119",
+        "Física Imagina  216-219"
       ],
       "ActPro": [
         "21"
@@ -456,14 +500,17 @@
         "22"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 260"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 220-223",
+      "LibroSep": "Saberes y pensamiento científico 260",
+      "LibroMcMillan": "Física Imagina  220-223",
       "Vinculacion": "\\textbf{Matemáticas: } Identifica tendencias en los datos centrándose en sus valores representativos y sus variaciones.",
+      "Worklist": [
+        "Lección 12. Aumento de la temperatura del planeta",
+        "A.22. Cambio Climático",
+        "F19. ¿Calentamiento global o cambio climático?"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 260",
-        "Física, Imagina, págs. 220-223"
+        "Saberes y pensamiento científico 260",
+        "Física Imagina  220-223"
       ],
       "ActPro": [
         "22",
@@ -496,14 +543,18 @@
       "Proyectos": [
         "Ambiente"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 217-221 y 258-260"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 224-227",
+      "LibroSep": "Saberes y pensamiento científico 217-221 y 258-260",
+      "LibroMcMillan": "Física Imagina  224-227",
       "Vinculacion": "\\textbf{Matemáticas: } Recolecta, registra, lee y comunica información mediante histogramas, gráficas poligonales y de línea.",
+      "Worklist": [
+        "Lección 13. Cuidado del ambiente",
+        "A.23. ¿Soy sustentable?",
+        "F20. Los guardianes del clima",
+        "Ambiente"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 217-221 y 258-260",
-        "Física, Imagina, págs. 224-227"
+        "Saberes y pensamiento científico 217-221 y 258-260",
+        "Física Imagina  224-227"
       ],
       "ActPro": [
         "23",

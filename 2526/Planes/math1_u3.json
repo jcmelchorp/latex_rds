@@ -22,14 +22,16 @@
         "57"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Discute las limitaciones biológicas de estos modelos, como la disponibilidad de recursos y la competencia.",
+      "Worklist": [
+        "A.56. Completa la sucesión aritmética 1",
+        "A.57. Completa la sucesión aritmética 2"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "56",
@@ -59,14 +61,17 @@
         "60"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Modela y resuelve problemas que involucran el crecimiento exponencial de poblaciones (bacterias, virus, etc.), representando el comportamiento a través de sucesiones geométricas.",
+      "Worklist": [
+        "A.58. Completa la sucesión geométrica",
+        "A.59. Diferencia de una sucesión",
+        "A.60. Término de una sucesión"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "58",
@@ -96,14 +101,16 @@
         "62"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Utiliza relaciones de proporcionalidad directa para analizar y comparar características anatómicas y fisiológicas entre diferentes especies.",
+      "Worklist": [
+        "A.61. Razones y proporciones",
+        "A.62. Variación directa e inversa"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "61",
@@ -133,14 +140,17 @@
         "65"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Calcula e interpreta medidas de tendencia central y dispersión para argumentar sobre la diversidad biológica y los efectos de la selección natural.",
+      "Worklist": [
+        "A.63. Mediana y moda",
+        "A.64. Promedio",
+        "A.65. Interpretación de gráficas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "63",
@@ -158,7 +168,7 @@
       "Tema": "Círculo",
       "Leccion": "Radio y diámetro de un círculo. Perímetro, área y resolución de problemas.",
       "Inicio": "El docente iniciará mostrando imágenes de objetos circulares (ruedas, monedas, relojes) y planteará preguntas como: \"¿Qué características tienen en común?\" Se introducirá el concepto de radio y diámetro explicando su relación con el centro del círculo. Se realizarán ejercicios de observación directa utilizando objetos reales, como tapas o platos, para medir radio y diámetro. El docente planteará una situación práctica: calcular la cantidad de material necesario para cubrir un círculo, como una mesa redonda o un campo deportivo. Se revisarán las fórmulas de perímetro ($P=2\\pi r$) y área ($A=\\pi r^2$) del círculo. Se explicará cómo elegir las fórmulas adecuadas según el problema.",
-      "Desarrollo": "Los estudiantes trabajarán con problemas prácticos para calcular radio y diámetro. Usarán instrumentos como reglas y compases para construir círculos y verificar relaciones. Se destacarán errores comunes, como sumar el radio dos veces al calcular el diámetro o identificar incorrectamente el centro. El docente modelará estrategias correctas, enfatizando el uso de definiciones y mediciones precisas. Los estudiantes trabajarán en equipos para resolver problemas con medidas reales y contextos diversos. Usarán calculadoras para realizar operaciones y verificar resultados. El docente supervisará y abordará errores comunes, como confundir radio con diámetro o usar mal el valor de $\\pi$ . Para reforzar, se realizarán ejercicios donde construyan círculos con compases y calculen sus medidas. ",
+      "Desarrollo": "Los estudiantes trabajarán con problemas prácticos para calcular radio y diámetro. Usarán instrumentos como reglas y compases para construir círculos y verificar relaciones. Se destacarán errores comunes, como sumar el radio dos veces al calcular el diámetro o identificar incorrectamente el centro. El docente modelará estrategias correctas, enfatizando el uso de definiciones y mediciones precisas. Los estudiantes trabajarán en equipos para resolver problemas con medidas reales y contextos diversos. Usarán calculadoras para realizar operaciones y verificar resultados. El docente supervisará y abordará errores comunes, como confundir radio con diámetro o usar mal el valor de $\\pi$ . Para reforzar, se realizarán ejercicios donde construyan círculos con compases y calculen sus medidas.",
       "Cierre": "Se realizará un concurso donde los estudiantes identifiquen radios y diámetros en diferentes figuras, y expliquen sus razonamientos. La evaluación incluirá actividades en MeXmáticas, donde completen ejercicios interactivos con retroalimentación automática. Los estudiantes compartirán los pasos y resultados de sus problemas, recibiendo retroalimentación grupal. La evaluación incluirá problemas interactivos en MeXmáticas y desafíos colaborativos.",
       "EjesArticuladores": "Inclusión. Pensamiento crítico.",
       "EvaluacionFormativa": [
@@ -173,14 +183,19 @@
         "70"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Aplica las propiedades del círculo y la circunferencia para modelar y comparar el campo de visión de animales depredadores y presas.",
+      "Worklist": [
+        "A.66. Diámetro de un círculo",
+        "A.67. Radio de un círculo",
+        "A.68. Perímetro",
+        "A.69. Área",
+        "A.70. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "66",
@@ -211,14 +226,15 @@
         "71"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Representa mediante ecuaciones lineales procesos metabólicos fundamentales como la fotosíntesis y la respiración celular. ",
+      "Worklist": [
+        "A.71. Lenguaje algebraico"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "71"
@@ -245,14 +261,15 @@
         "72"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Representa mediante ecuaciones lineales procesos metabólicos fundamentales como la fotosíntesis y la respiración celular. ",
+      "Worklist": [
+        "A.72. Ecuaciones $x+a=b$"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "72"
@@ -279,14 +296,15 @@
         "73"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Compara los resultados entre diferentes especies para explicar adaptaciones relacionadas con el consumo de energía y la termorregulación.",
+      "Worklist": [
+        "A.73. Ecuaciones $ax=b$"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "73"
@@ -313,14 +331,15 @@
         "74"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Modela mediante ecuaciones la relación entre la masa corporal de un ser vivo y la dosis segura de una sustancia (medicamento, nutriente o toxina).",
+      "Worklist": [
+        "A.74. Ecuaciones $ax+b=c$"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "74"
@@ -347,14 +366,15 @@
         "75"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Resuelve problemas para determinar la cantidad correcta y analiza las consecuencias biológicas de una dosificación inadecuada.",
+      "Worklist": [
+        "A.75. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "75"
@@ -382,14 +402,16 @@
         "77"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Identifica y describe las formas geométricas (polígonos, poliedros) presentes en estructuras biológicas a diferentes escalas (células, virus, panales, conchas). ",
+      "Worklist": [
+        "A.76. Perímetro",
+        "A.77. Área"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "76",
@@ -419,14 +441,17 @@
         "80"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Relaciona la eficiencia de estas formas con su función biológica, como la optimización del espacio o la resistencia estructural.",
+      "Worklist": [
+        "A.78. Área lateral y total",
+        "A.79. Volumen",
+        "A.80. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "78",
@@ -458,14 +483,17 @@
       "Proyectos": [
         "Examen de Unidad"
       ],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "",
+      "Worklist": [
+        "Repaso de Unidad",
+        "Examen de Unidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase",
+        "Repaso de unidad"
       ],
       "ActPro": [
         "Repaso de Unidad",

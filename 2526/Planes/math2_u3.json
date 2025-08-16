@@ -23,14 +23,17 @@
         "58"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Analiza los resultados de un experimento (ej. crecimiento de plantas), calculando el promedio, la mediana y la moda para determinar el efecto de una variable (luz, agua).",
+      "Worklist": [
+        "A.56. Mediana y moda",
+        "A.57. Promedio",
+        "A.58. Interpretación de gráficas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "56",
@@ -60,14 +63,16 @@
         "60"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Calcula la probabilidad de que un descendiente herede dos rasgos genéticos independientes multiplicando sus probabilidades individuales.",
+      "Worklist": [
+        "A.59. Eventos mutuamente excluyentes",
+        "A.60. Eventos dependientes e independientes"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "59",
@@ -97,14 +102,17 @@
         "63"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Determina la constante de proporcionalidad (masa) en la Segunda Ley de Newton, al analizar la relación directa entre la fuerza aplicada y la aceleración producida.",
+      "Worklist": [
+        "A.61. Relaciones proporcionales",
+        "A.62. Constante de proporcionalidad",
+        "A.63. Regla de correspondencia"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "61",
@@ -134,14 +142,16 @@
         "65"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Utiliza la Ley de Boyle para resolver problemas de proporción inversa entre la presión y el volumen de un gas a temperatura constante.",
+      "Worklist": [
+        "A.64. Proporción directa e inversa",
+        "A.65. Proporciones compuestas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "64",
@@ -170,14 +180,16 @@
         "67"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Modela el crecimiento de una población de bacterias que se duplica cada hora como una sucesión geométrica, prediciendo su tamaño en etapas futuras.",
+      "Worklist": [
+        "A.66. Completando la sucesión",
+        "A.67. Diferencia de una sucesión"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "66",
@@ -207,14 +219,17 @@
         "70"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Desarrolla una fórmula general para encontrar la posición de un objeto en cualquier instante $t$, basándose en su patrón de movimiento (sucesión aritmética).",
+      "Worklist": [
+        "A.68. Término enésimo 1",
+        "A.69. Término general",
+        "A.70. Término enésimo 2"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "68",
@@ -244,14 +259,16 @@
         "72"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Sustituye valores de masa y velocidad en la fórmula de la energía cinética ($E\\_c =\\\\dfrac{1}{2}  m v^2$) para calcular la energía de un objeto en movimiento.",
+      "Worklist": [
+        "A.71. Lenguaje algebraico",
+        "A.72. Sustitución de valores"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "71",
@@ -281,14 +298,17 @@
         "75"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Despeja una variable desconocida en una ecuación de primer grado, como calcular el tiempo ($t$) en la fórmula $v\\_f =v\\_i +at$.",
+      "Worklist": [
+        "A.73. Ecuaciones de primer grado 1",
+        "A.74. Ecuaciones de primer grado 2",
+        "A.75. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "73",
@@ -317,14 +337,15 @@
         "76"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve un sistema de ecuaciones para encontrar las corrientes desconocidas en diferentes partes de un circuito eléctrico, aplicando las leyes de Kirchhoff.",
+      "Worklist": [
+        "A.76. Método de eliminación"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "76"
@@ -351,14 +372,15 @@
         "77"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Química: }  Aplica un método algebraico (ej. sustitución) para resolver un sistema de ecuaciones que representa el balance de materia en una reacción química con múltiples reactivos.",
+      "Worklist": [
+        "A.77. Método de sustitución"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "77"
@@ -385,14 +407,15 @@
         "78"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve un sistema de ecuaciones para encontrar las corrientes desconocidas en diferentes partes de un circuito eléctrico, aplicando las leyes de Kirchhoff.",
+      "Worklist": [
+        "A.78. Método de igualación"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "78"
@@ -420,14 +443,16 @@
         "80"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve un sistema de ecuaciones para encontrar las corrientes desconocidas en diferentes partes de un circuito eléctrico, aplicando las leyes de Kirchhoff.",
+      "Worklist": [
+        "A.79. Sistema de ecuaciones 2x2",
+        "A.80. Sistema de ecuaciones 3x3"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "79",
@@ -458,14 +483,16 @@
       "Proyectos": [
         "Examen de Unidad"
       ],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "",
+      "Worklist": [
+        "Repaso de Unidad",
+        "Examen de Unidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "Repaso de Unidad",

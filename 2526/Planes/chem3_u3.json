@@ -21,13 +21,14 @@
       "Proyectos": [
         "Me preparo"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 294-298"
-      ],
+      "LibroSep": "Saberes y Pensamiento Científico 294-298",
       "LibroMcMillan": "",
       "Vinculacion": "",
+      "Worklist": [
+        "Me preparo"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 294-298"
+        "Saberes y Pensamiento Científico 294-298"
       ],
       "ActPro": [
         "Me preparo"
@@ -56,14 +57,17 @@
       "Proyectos": [
         "Descomposicion"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 148-152 y 236-240"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 166-167",
+      "LibroSep": "Saberes y Pensamiento Científico 148-152 y 236-240",
+      "LibroMcMillan": "Química Imagina  166-167",
       "Vinculacion": "\\textbf{Biología:} Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "Worklist": [
+        "Lección 1. Diversidad cultural de los alimentos",
+        "A.1 Conoce tus alimentos",
+        "Descomposicion"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 148-152 y 236-240",
-        "Química, Imagina, págs. 166-167"
+        "Saberes y Pensamiento Científico 148-152 y 236-240",
+        "Química Imagina  166-167"
       ],
       "ActPro": [
         "1",
@@ -96,16 +100,20 @@
       "Proyectos": [
         "Proteinas"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 142-155 ",
-        "Nuestro libro de Proyectos, 122-131"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 168-173",
+      "LibroSep": "Saberes y Pensamiento Científico 142-155 ,Nuestro libro de Proyectos 122-131",
+      "LibroMcMillan": "Química Imagina  168-173",
       "Vinculacion": "\\textbf{Biología:} Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.",
+      "Worklist": [
+        "Lección 2. Nutrimentos como fuentes de masa y energía",
+        "A.2 Nutrimentos como fuentes de masa y energía",
+        "A.3 Biomoléculas",
+        "F13. El mole, un festín de sabor",
+        "Proteinas"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 142-155 ",
-        "Nuestro libro de Proyectos, 122-131",
-        "Química, Imagina, págs. 168-173"
+        "Saberes y Pensamiento Científico 142-155 ",
+        "Nuestro libro de Proyectos 122-131",
+        "Química Imagina  168-173"
       ],
       "ActPro": [
         "2",
@@ -138,14 +146,18 @@
         "5"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 280-283"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 174-177",
+      "LibroSep": "Saberes y Pensamiento Científico 280-283",
+      "LibroMcMillan": "Química Imagina  174-177",
       "Vinculacion": "\\textbf{Biología:} Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas y resuelve operaciones.",
+      "Worklist": [
+        "Lección 3. Aporte energético de los alimentos",
+        "A.4 ¿Cuánta energía comes?",
+        "A.5 Necesidades energéticas de cada individuo",
+        "F14. Los extras del pozolito"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 280-283",
-        "Química, Imagina, págs. 174-177"
+        "Saberes y Pensamiento Científico 280-283",
+        "Química Imagina  174-177"
       ],
       "ActPro": [
         "4",
@@ -177,14 +189,18 @@
       "Proyectos": [
         "Acidos"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 156-159 y 284-285"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 178-183",
+      "LibroSep": "Saberes y Pensamiento Científico 156-159 y 284-285",
+      "LibroMcMillan": "Química Imagina  178-183",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Resuelve operaciones.",
+      "Worklist": [
+        "Lección 4. Sustancias ácidas y básicas",
+        "A.6 ¿Ácido o base?",
+        "A.7 ¿Cuál es el pH?",
+        "Acidos"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 156-159 y 284-285",
-        "Química, Imagina, págs. 178-183"
+        "Saberes y Pensamiento Científico 156-159 y 284-285",
+        "Química Imagina  178-183"
       ],
       "ActPro": [
         "6",
@@ -217,14 +233,19 @@
         "10"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 286-289"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 184-187",
+      "LibroSep": "Saberes y Pensamiento Científico 286-289",
+      "LibroMcMillan": "Química Imagina  184-187",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Worklist": [
+        "Lección 5. Ácidos y bases en agua",
+        "A.8 El modelo de Arrhenius",
+        "A.9 Fórmulas, pH y acidez",
+        "A.10 Los modelos científicos evolucionan",
+        "F15. Lo que disuelve la lluvia ácida"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 286-289",
-        "Química, Imagina, págs. 184-187"
+        "Saberes y Pensamiento Científico 286-289",
+        "Química Imagina  184-187"
       ],
       "ActPro": [
         "8",
@@ -259,14 +280,19 @@
       "Proyectos": [
         "Alimentos Acidos"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 161-165 y 291-292"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 188-193",
+      "LibroSep": "Saberes y Pensamiento Científico 161-165 y 291-292",
+      "LibroMcMillan": "Química Imagina  188-193",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Worklist": [
+        "Lección 6. Reacciones de neutralización",
+        "A.11 Productos en la vida cotidiana",
+        "A.12 Neutralizar para ayudar",
+        "F16. Hay vida en el mar",
+        "Alimentos Acidos"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 161-165 y 291-292",
-        "Química, Imagina, págs. 188-193"
+        "Saberes y Pensamiento Científico 161-165 y 291-292",
+        "Química Imagina  188-193"
       ],
       "ActPro": [
         "11",
@@ -301,11 +327,18 @@
       "Proyectos": [
         "Arrehenius"
       ],
-      "LibroSep": [],
-      "LibroMcMillan": "Química, Imagina, págs. 193-197",
+      "LibroSep": "",
+      "LibroMcMillan": "Química Imagina  193-197",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "Worklist": [
+        "Lección 7. Beneficios y riesgos de ácidos y bases",
+        "A.13 Beneficios y riesgos de ácidos y bases",
+        "A.14 ¿Tus alimentos son ácidos?",
+        "A.15 Cuida el medio ambiente",
+        "Arrehenius"
+      ],
       "Libros": [
-        "Química, Imagina, págs. 193-197"
+        "Química Imagina  193-197"
       ],
       "ActPro": [
         "13",
@@ -336,11 +369,16 @@
         "17"
       ],
       "Proyectos": [],
-      "LibroSep": [],
-      "LibroMcMillan": "Química, Imagina, págs. 198-203",
+      "LibroSep": "",
+      "LibroMcMillan": "Química Imagina  198-203",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Worklist": [
+        "Lección 8. Reacciones de óxido-reducción",
+        "A.16 ¿Oxida o reduce?",
+        "A.17 Reacciones de óxido-reducción"
+      ],
       "Libros": [
-        "Química, Imagina, págs. 198-203"
+        "Química Imagina  198-203"
       ],
       "ActPro": [
         "16",
@@ -374,11 +412,19 @@
       "Proyectos": [
         "Corrosion"
       ],
-      "LibroSep": [],
-      "LibroMcMillan": "Química, Imagina, págs. 204-209",
+      "LibroSep": "",
+      "LibroMcMillan": "Química Imagina  204-209",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Worklist": [
+        "Lección 9. Identificación y uso de reacciones redox",
+        "A.18 La química de la fotosíntesis y de la respiración",
+        "A.19 identificación y uso de reacciones redox",
+        "A.20 Energía química y sus alternativas",
+        "F17. Cómo proteger el mundo de la corrosión",
+        "Corrosion"
+      ],
       "Libros": [
-        "Química, Imagina, págs. 204-209"
+        "Química Imagina  204-209"
       ],
       "ActPro": [
         "18",
@@ -415,11 +461,18 @@
       "Proyectos": [
         "Reduccion"
       ],
-      "LibroSep": [],
-      "LibroMcMillan": "Química, Imagina, págs. 210-213",
+      "LibroSep": "",
+      "LibroMcMillan": "Química Imagina  210-213",
       "Vinculacion": "\\textbf{Física:} Reconoce los saberes y las prácticas para el aprovechamiento de energías y la sustentabilidad.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "Worklist": [
+        "Lección 10. Reacciones redox y desarrollo sustentable",
+        "A.21 Las redox en el medio ambiente",
+        "A.22 Control de la rapidez de una reacción",
+        "F18. Alternativas de energía con redox",
+        "Reduccion"
+      ],
       "Libros": [
-        "Química, Imagina, págs. 210-213"
+        "Química Imagina  210-213"
       ],
       "ActPro": [
         "21",
@@ -456,11 +509,20 @@
         "27"
       ],
       "Proyectos": [],
-      "LibroSep": [],
-      "LibroMcMillan": "Química, Imagina, págs. 214-219",
+      "LibroSep": "",
+      "LibroMcMillan": "Química Imagina  214-219",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas y gráficas.",
+      "Worklist": [
+        "Lección 11. Factores que influyen en la rapidez de una reacción",
+        "A.23 ¿Cómo modifico la rapidez de una reacción química?",
+        "A.24 Factores de rapidez en las reacciones",
+        "A.25 Energía y rapidez de las reacciones",
+        "A.26 Catalizadores en las reacciones químicas",
+        "A.27 Rapidez de reacción y conservación de alimentos",
+        "F19. Cómo acelerar un consumo responsable"
+      ],
       "Libros": [
-        "Química, Imagina, págs. 214-219"
+        "Química Imagina  214-219"
       ],
       "ActPro": [
         "23",
@@ -499,11 +561,19 @@
       "Proyectos": [
         "Velocidad Reaccion"
       ],
-      "LibroSep": [],
-      "LibroMcMillan": "Química, Imagina, págs. 220-225",
+      "LibroSep": "",
+      "LibroMcMillan": "Química Imagina  220-225",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Worklist": [
+        "Lección 12. Beneficios de modificar la rapidez de reacción",
+        "A.28 Rapidez de reacción y conservación",
+        "A.29 La química en la medicina",
+        "A.30 Implicaciones de la Química en la vida",
+        "F20. Acelera para contaminar menos",
+        "Velocidad Reaccion"
+      ],
       "Libros": [
-        "Química, Imagina, págs. 220-225"
+        "Química Imagina  220-225"
       ],
       "ActPro": [
         "28",

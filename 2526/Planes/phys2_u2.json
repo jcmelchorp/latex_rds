@@ -22,11 +22,15 @@
         "Me preparo"
       ],
       "Proyectos": [],
-      "LibroSep": [],
-      "LibroMcMillan": "Física, Imagina, págs. 76-77",
+      "LibroSep": "",
+      "LibroMcMillan": "Física Imagina  76-77",
       "Vinculacion": "",
+      "Worklist": [
+        "Me preparo",
+        "Me preparo"
+      ],
       "Libros": [
-        "Física, Imagina, págs. 76-77"
+        "Física Imagina  76-77"
       ],
       "ActPro": [
         "Me preparo"
@@ -61,14 +65,21 @@
       "Proyectos": [
         "Desplazamiento"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 127-129"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 78-83",
+      "LibroSep": "Saberes y pensamiento científico 127-129",
+      "LibroMcMillan": "Física Imagina  78-83",
       "Vinculacion": "\\textbf{Matemáticas: } Utiliza planos cartesianos para trazar trayectorias y distancias.",
+      "Worklist": [
+        "Lección 1. Movimiento",
+        "A.1. ¿Trayectoria o desplazamiento?",
+        "A.2. Cambios en el movimiento",
+        "A.3. ¡Qué onda!",
+        "A.4. ¿Cómo se mueven las ondas?",
+        "F7. A ruidos necios, oídos sordos",
+        "Desplazamiento"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 127-129",
-        "Física, Imagina, págs. 78-83"
+        "Saberes y pensamiento científico 127-129",
+        "Física Imagina  78-83"
       ],
       "ActPro": [
         "1",
@@ -109,14 +120,21 @@
       "Proyectos": [
         "Reposo"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 127-129"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 84-89",
+      "LibroSep": "Saberes y pensamiento científico 127-129",
+      "LibroMcMillan": "Física Imagina  84-89",
       "Vinculacion": "\\textbf{Matemáticas: } Modela diversas situaciones que se resuelven con ecuaciones lineales.",
+      "Worklist": [
+        "Lección 2. Velocidad y rapidez",
+        "A.5. ¿Quién fue el más rápido?",
+        "A.6. Explicaciones gráficas de velocidad",
+        "A.7. ¿Cómo se describe el movimiento?",
+        "A.8. ¿Cómo se ven la velocidad y el reposo?",
+        "A.9. Propagación de ondas",
+        "Reposo"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 127-129",
-        "Física, Imagina, págs. 84-89"
+        "Saberes y pensamiento científico 127-129",
+        "Física Imagina  84-89"
       ],
       "ActPro": [
         "5",
@@ -155,14 +173,20 @@
       "Proyectos": [
         "Aceleracion"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 130-131"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 90-95",
+      "LibroSep": "Saberes y pensamiento científico 130-131",
+      "LibroMcMillan": "Física Imagina  90-95",
       "Vinculacion": "\\textbf{Matemáticas: } Reconoce e interpreta relaciones proporcionales y no proporcionales a partir de su representación tabular, gráfica y algebraica.",
+      "Worklist": [
+        "Lección 3. Movimiento acelerado",
+        "A.10. ¿Cuándo es rapidez y cuándo es velocidad?",
+        "A.11. ¿Cómo cambia su rapidez?",
+        "A.12. ¿Es aceleración o es velocidad?",
+        "A.13. ¿Se mueve o está quieto?",
+        "Aceleracion"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 130-131",
-        "Física, Imagina, págs. 90-95"
+        "Saberes y pensamiento científico 130-131",
+        "Física Imagina  90-95"
       ],
       "ActPro": [
         "10",
@@ -204,14 +228,21 @@
       "Proyectos": [
         "Fuerza"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 279-281 y 191-194"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 96-105",
+      "LibroSep": "Saberes y pensamiento científico 279-281 y 191-194",
+      "LibroMcMillan": "Física Imagina  96-105",
       "Vinculacion": "\\textbf{Biología: } Identifica la importancia de tener un proyecto de vida saludable haciendo deporte, para evitar enfermedades relacionadas con el sedentarismo.\\\\ \\textbf{Matemáticas: } Traza e identifica ángulos para representar las fuerzas.\\\\ \\textbf{Biología: } Reconoce el funcionamiento del cuerpo humano y como se relaciona con la fuerza de fricción.",
+      "Worklist": [
+        "L4 Fuerzas e interacciones. L5 Suma de fuerzas y equilibrio. L6 Fuerza de fricción",
+        "A.14. Contacto y distancia",
+        "A.15. La medición de la fuerza",
+        "A.16. ¿Cómo se representan las fuerzas?",
+        "A.17. ¿Cómo se suman las fuerzas?",
+        "A.18. Fricción en el movimiento",
+        "Fuerza"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 279-281 y 191-194",
-        "Física, Imagina, págs. 96-105"
+        "Saberes y pensamiento científico 279-281 y 191-194",
+        "Física Imagina  96-105"
       ],
       "ActPro": [
         "14",
@@ -251,11 +282,19 @@
       "Proyectos": [
         "Masa Fuerza"
       ],
-      "LibroSep": [],
-      "LibroMcMillan": "Física, Imagina, págs. 106-113",
+      "LibroSep": "",
+      "LibroMcMillan": "Física Imagina  106-113",
       "Vinculacion": "\\textbf{Biología: } Reconoce el funcionamiento del cuerpo humano, especialmente el sistema locomotor.\\\\ \\textbf{Matemáticas: } Modela diversas situaciones que se resuelven con ecuaciones lineales.",
+      "Worklist": [
+        "Lección 7. Máquinas simples: palanca y rueda. Lección 8. Otras máquinas simples",
+        "A.19. ¿Qué máquinas son?",
+        "A.20. Máquinas ¿simples o compuestas?",
+        "A.21. Las ventajas de utilizar una polea",
+        "F9. La cuarta revolución industrial",
+        "Masa Fuerza"
+      ],
       "Libros": [
-        "Física, Imagina, págs. 106-113"
+        "Física Imagina  106-113"
       ],
       "ActPro": [
         "19",
@@ -295,14 +334,21 @@
       "Proyectos": [
         "Movimiento Cuerpos"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 287-289"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 114-119",
+      "LibroSep": "Saberes y pensamiento científico 287-289",
+      "LibroMcMillan": "Física Imagina  114-119",
       "Vinculacion": "\\textbf{Matemáticas: } Utiliza correctamente las distintas unidades de medida del SI.",
+      "Worklist": [
+        "Lección 9. Leyes de Newton",
+        "A.22. La medida de la inercia",
+        "A.23. Masa e inercia en el movimiento",
+        "A.24. Relación entre fuerza y aceleración",
+        "A.25. Acción y reacción",
+        "A.26. Tres ideas fundamentales sobre las fuerzas",
+        "Movimiento Cuerpos"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 287-289",
-        "Física, Imagina, págs. 114-119"
+        "Saberes y pensamiento científico 287-289",
+        "Física Imagina  114-119"
       ],
       "ActPro": [
         "22",
@@ -338,14 +384,19 @@
         "29"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 163-168"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 120-125",
+      "LibroSep": "Saberes y pensamiento científico 163-168",
+      "LibroMcMillan": "Física Imagina  120-125",
       "Vinculacion": "\\textbf{Matemáticas: } Realiza operaciones con notación científica para comprender la ley de Gravitación Universal y el peso de los objetos.",
+      "Worklist": [
+        "Lección 10. Ley de la Gravitación Universal",
+        "A.27. Importancia de las aportaciones de Newton",
+        "A.28. ¡A hombros de gigantes!",
+        "A.29. El peso en el Universo",
+        "F10. ¡Abróchense los cinturones!"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 163-168",
-        "Física, Imagina, págs. 120-125"
+        "Saberes y pensamiento científico 163-168",
+        "Física Imagina  120-125"
       ],
       "ActPro": [
         "27",
@@ -379,14 +430,18 @@
       "Proyectos": [
         "Pascal"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 291-295; 116-118"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 126-131",
+      "LibroSep": "Saberes y pensamiento científico 291-295; 116-118",
+      "LibroMcMillan": "Física Imagina  126-131",
       "Vinculacion": "\\textbf{Matemáticas: } Reconoce e interpreta relaciones proporcionales y no proporcionales a partir de su representación tabular, gráfica y algebraica.",
+      "Worklist": [
+        "Lección 11. Principio de Pascal",
+        "A.30. El barril de Pascal",
+        "F11. La prensa hidráulica",
+        "Pascal"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 291-295; 116-118",
-        "Física, Imagina, págs. 126-131"
+        "Saberes y pensamiento científico 291-295; 116-118",
+        "Física Imagina  126-131"
       ],
       "ActPro": [
         "30",
@@ -419,14 +474,18 @@
       "Proyectos": [
         "Presion"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 295-299 y 119-120"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 132-135",
+      "LibroSep": "Saberes y pensamiento científico 295-299 y 119-120",
+      "LibroMcMillan": "Física Imagina  132-135",
       "Vinculacion": "\\textbf{Matemáticas: } Modela diversas situaciones que se resuelven con ecuaciones lineales.",
+      "Worklist": [
+        "Lección 12. Principio de Arquímedes",
+        "A.31. Es momento de flotar",
+        "A.32. ¿Cómo se representa la fuerza de flotación?",
+        "Presion"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 295-299 y 119-120",
-        "Física, Imagina, págs. 132-135"
+        "Saberes y pensamiento científico 295-299 y 119-120",
+        "Física Imagina  132-135"
       ],
       "ActPro": [
         "31",
@@ -459,14 +518,18 @@
       "Proyectos": [
         "Energia Mecanica"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 133 y 135-139"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 136-139",
+      "LibroSep": "Saberes y pensamiento científico 133 y 135-139",
+      "LibroMcMillan": "Física Imagina  136-139",
       "Vinculacion": "\\textbf{Biología: } Identifica la cantidad de energía que proporcionan los alimentos para prevenir enfermedades relacionadas con la alimentación.",
+      "Worklist": [
+        "Lección 13. Energía Mecánica",
+        "A.33. ¡Ponle energía!",
+        "A.34. ¿Cómo se conserva la energía mecánica?",
+        "Energia Mecanica"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 133 y 135-139",
-        "Física, Imagina, págs. 136-139"
+        "Saberes y pensamiento científico 133 y 135-139",
+        "Física Imagina  136-139"
       ],
       "ActPro": [
         "33",
@@ -506,14 +569,22 @@
       "Proyectos": [
         "Maquina Vapor"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 185-189"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 140-147",
+      "LibroSep": "Saberes y pensamiento científico 185-189",
+      "LibroMcMillan": "Física Imagina  140-147",
       "Vinculacion": "\\textbf{Biología: } Analiza las prácticas de consumo que han alterado los ciclos biogeoquímicos del carbono y nitrógeno, sus efectos asociados al calentamiento global y sus impactos en el medio ambiente y la salud.",
+      "Worklist": [
+        "Lección 14. Calor como transferencia de energía",
+        "Lección 15. Máquinas térmicas",
+        "A.35. Mecanismos de transferencia de calor",
+        "A.36. Energía térmica",
+        "A.37. ¿Cómo funcionan las máquinas térmicas?",
+        "A.38. Eficiencia ideal",
+        "A.39. Transformación de energía calorífica",
+        "Maquina Vapor"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 185-189",
-        "Física, Imagina, págs. 140-147"
+        "Saberes y pensamiento científico 185-189",
+        "Física Imagina  140-147"
       ],
       "ActPro": [
         "35",
@@ -551,16 +622,19 @@
       "Proyectos": [
         "Eolico"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 217-221 ",
-        "Nuestro libro de proyectos, 206-212"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 148-151",
+      "LibroSep": "Saberes y pensamiento científico 217-221 ,Nuestro libro de proyectos 206-212",
+      "LibroMcMillan": "Física Imagina  148-151",
       "Vinculacion": "\\textbf{Biología: } Analiza los efectos asociados al calentamiento global y sus impactos en el medio ambiente.",
+      "Worklist": [
+        "Lección 16. Energías renovables",
+        "A.40. Energía eléctrica y fuentes de energía",
+        "F12. Fuentes de energía y su impacto ambiental",
+        "Eolico"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 217-221 ",
-        "Nuestro libro de proyectos, 206-212",
-        "Física, Imagina, págs. 148-151"
+        "Saberes y pensamiento científico 217-221 ",
+        "Nuestro libro de proyectos 206-212",
+        "Física Imagina  148-151"
       ],
       "ActPro": [
         "40",
@@ -595,16 +669,20 @@
       "Proyectos": [
         "Energia"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 217-221",
-        "Nuestro libro de proyectos, 206-212"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 152-157",
+      "LibroSep": "Saberes y pensamiento científico 217-221,Nuestro libro de proyectos 206-212",
+      "LibroMcMillan": "Física Imagina  152-157",
       "Vinculacion": "\\textbf{Biología: } Explica por qué los saberes de los pueblos originarios han aportado al aprovechamiento de los recursos naturales y el desarrollo sustentable en el ecosistema local.",
+      "Worklist": [
+        "Lección 17. Energía solar",
+        "A.41. Aprovechamiento de la energía y consumo sustentable",
+        "A.42. Aprovechemos la energía solar",
+        "F14. ¿Por qué usar un calentador solar?",
+        "Energia"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 217-221",
-        "Nuestro libro de proyectos, 206-212",
-        "Física, Imagina, págs. 152-157"
+        "Saberes y pensamiento científico 217-221",
+        "Nuestro libro de proyectos 206-212",
+        "Física Imagina  152-157"
       ],
       "ActPro": [
         "41",

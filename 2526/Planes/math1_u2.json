@@ -23,14 +23,17 @@
         "33"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Resuelve problemas que implican sumar y restar las longitudes decimales de diferentes partes de una planta (raíz, tallo, hojas) para determinar su crecimiento total en un período y compararlo con el de otros especímenes.",
+      "Worklist": [
+        "A.31. Suma de decimales",
+        "A.32. Resta de decimales",
+        "A.33. Multiplicación de decimales"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "31",
@@ -60,14 +63,16 @@
         "35"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Calcula, mediante multiplicaciones y divisiones con decimales, la cantidad exacta de nutrientes",
+      "Worklist": [
+        "A.34. División de decimales",
+        "A.35. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "34",
@@ -97,14 +102,17 @@
         "38"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Representa y compara, usando fracciones, los resultados de cruzas genéticas sencillas (leyes de Mendel), determinando qué fracción de la descendencia se espera que tenga un rasgo dominante o recesivo.",
+      "Worklist": [
+        "A.36. Suma y resta con denominadores iguales",
+        "A.37. Suma y resta denominadores diferentes",
+        "A.38. Multiplicación de fracciones"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "36",
@@ -134,14 +142,16 @@
         "40"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Resuelve problemas aditivos con fracciones para analizar la composición de la dieta de un animal.",
+      "Worklist": [
+        "A.39. División de fracciones",
+        "A.40. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "39",
@@ -170,14 +180,16 @@
         "42"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Calcula y representa con porcentajes la composición de diferentes ecosistemas.",
+      "Worklist": [
+        "A.41. Porcentajes a decimal",
+        "A.42. Decimal a porcentaje"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "41",
@@ -207,14 +219,17 @@
         "45"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Utiliza porcentajes para analizar y comparar la composición del cuerpo humano (ej. porcentaje de agua, masa muscular, grasa corporal) y lo relaciona con estados de salud, nutrición o deshidratación.",
+      "Worklist": [
+        "A.43. Porcentaje de cantidades 1",
+        "A.44. Porcentaje de cantidades 2",
+        "A.45. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "43",
@@ -244,14 +259,16 @@
         "47"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Aplica potencias de base 10 para estimar la energía disponible en los distintos niveles de una cadena trófica.",
+      "Worklist": [
+        "A.46. Potenciación 1",
+        "A.47. Potenciación 2"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "46",
@@ -280,14 +297,16 @@
         "49"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Expresa en notación científica las dimensiones de entidades biológicas microscópicas (diámetro de una bacteria, longitud de un virus, grosor de una membrana celular).",
+      "Worklist": [
+        "A.48. Notación científica 1",
+        "A.49. Notación científica 2"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "48",
@@ -315,14 +334,15 @@
         "50"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Calcula la raíz cuadrada del área de un hábitat cuadrado para determinar la longitud de sus lados.",
+      "Worklist": [
+        "A.50. Raíces"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "50"
@@ -349,14 +369,15 @@
         "51"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Mide y compara la longitud, envergadura o altura de diferentes especímenes (hojas, insectos, aves) usando las unidades de longitud adecuadas (cm, m), y utiliza los datos para clasificar organismos o identificar patrones de crecimiento.",
+      "Worklist": [
+        "A.51. Unidades de longitud"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "51"
@@ -383,14 +404,15 @@
         "52"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Determina la masa de diferentes seres vivos u órganos (semillas, frutos, corazón de un animal) utilizando gramos y kilogramos, y usa estos datos para calcular la biomasa total de una población en un área definida.",
+      "Worklist": [
+        "A.52. Unidades de masa"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "52"
@@ -417,14 +439,15 @@
         "53"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: } Mide y registra el volumen de líquidos en experimentos de biología (ej. agua para una planta, soluciones nutritivas, muestras de agua de un estanque) usando mililitros (ml) y litros (L), y realiza conversiones entre ellos.",
+      "Worklist": [
+        "A.53. Unidades de capacidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "53"
@@ -452,14 +475,16 @@
         "55"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Modela una célula como una esfera o un cubo para calcular su volumen y área superficial, y discute la importancia de la relación área-volumen para la absorción de nutrientes y la eliminación de desechos.",
+      "Worklist": [
+        "A.54. Unidades de área y volumen",
+        "A.55. Unidades de capacidad 2"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "54",
@@ -490,14 +515,17 @@
       "Proyectos": [
         "Examen de Unidad"
       ],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "",
+      "Worklist": [
+        "Repaso de Unidad",
+        "Examen de unidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase",
+        "Repaso de unidad"
       ],
       "ActPro": [
         "Repaso de Unidad",

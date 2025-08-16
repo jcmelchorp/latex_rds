@@ -24,16 +24,19 @@
         "3"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 267-268",
-        "Nuestro libro de proyectos, 187-192"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 14-19",
+      "LibroSep": "Saberes y pensamiento científico 267-268,Nuestro libro de proyectos 187-192",
+      "LibroMcMillan": "Física Imagina  14-19",
       "Vinculacion": "\\textbf{Biología: } Reconoce la importancia de los conocimientos, prácticas e innovaciones de los pueblos originarios y su aplicación para resolver problemas concretos.",
+      "Worklist": [
+        "Lección 1. Conocimiento empírico",
+        "A.1. Conocimiento empírico",
+        "A.2. Tipos de conocimientos",
+        "A.3. Otras formas de conocimiento"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 267-268",
-        "Nuestro libro de proyectos, 187-192",
-        "Física, Imagina, págs. 14-19"
+        "Saberes y pensamiento científico 267-268",
+        "Nuestro libro de proyectos 187-192",
+        "Física Imagina  14-19"
       ],
       "ActPro": [
         "1",
@@ -66,16 +69,19 @@
         "5"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 267-268",
-        "Nuestro libro de proyectos, 187-192"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 20-25",
+      "LibroSep": "Saberes y pensamiento científico 267-268,Nuestro libro de proyectos 187-192",
+      "LibroMcMillan": "Física Imagina  20-25",
       "Vinculacion": "\\textbf{Biología: } Identifica las características del conocimiento científico en la \\textbf{Biología: }",
+      "Worklist": [
+        "Lección 2. El conocimiento científico",
+        "A.4. ¿Qué es la ciencia?",
+        "A.5. Método científico",
+        "F1. Siete razones para dedicarse a la ciencia"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 267-268",
-        "Nuestro libro de proyectos, 187-192",
-        "Física, Imagina, págs. 20-25"
+        "Saberes y pensamiento científico 267-268",
+        "Nuestro libro de proyectos 187-192",
+        "Física Imagina  20-25"
       ],
       "ActPro": [
         "4",
@@ -110,14 +116,19 @@
       "Proyectos": [
         "Tecnologia"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 153-161"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 26-29",
+      "LibroSep": "Saberes y pensamiento científico 153-161",
+      "LibroMcMillan": "Física Imagina  26-29",
       "Vinculacion": "\\textbf{Biología: } Reconoce que los avances en la Biología contribuyen a mejorar la calidad de vida de las personas.",
+      "Worklist": [
+        "Lección 3. Física y sociedad",
+        "A.6. ¿Qué es la Física?",
+        "A.7. División de la Física",
+        "F2. Ciencia para todos",
+        "Tecnologia"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 153-161",
-        "Física, Imagina, págs. 26-29"
+        "Saberes y pensamiento científico 153-161",
+        "Física Imagina  26-29"
       ],
       "ActPro": [
         "6",
@@ -140,7 +151,7 @@
       "Cierre": "Puede complementar la actividad de esta sección retando a los estudiantes a que, partiendo del método de Arquímedes, propongan una manera de determinar el volumen de su propio cuerpo. Es claro que no pueden utilizar ninguna fórmula, así que una manera sería meterse a una bañera llena de agua hasta el tope, y medir de algún modo el volumen de agua desplazado cuando están completamente sumergidos.",
       "EjesArticuladores": "Interculturalidad crítica.",
       "EvaluacionFormativa": [
-        "Comprende en qué consiste la medición y cuál es su importancia.",
+        "Comprende en qué consiste la medición y cuál es su importancia. ",
         "Explica por qué es inconveniente que una unidad de medida sea variable o inaccesible."
       ],
       "Evidencias": [],
@@ -150,14 +161,17 @@
       "Proyectos": [
         "Tiempo"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 145"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 33-33",
+      "LibroSep": "Saberes y pensamiento científico 145",
+      "LibroMcMillan": "Física Imagina  33-33",
       "Vinculacion": "\\textbf{Matemáticas: } Investiga unidades de medida tradicionales y sus equivalencias con las unidades oficiales.",
+      "Worklist": [
+        "Lección 4. Mediciones",
+        "A.8. Mediciones",
+        "Tiempo"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 145",
-        "Física, Imagina, págs. 33-33"
+        "Saberes y pensamiento científico 145",
+        "Física Imagina  33-33"
       ],
       "ActPro": [
         "8",
@@ -178,7 +192,7 @@
       "Cierre": "La finalidad de la actividad de Cierre es que los alumnos revisen su comprensión de los contenidos de la lección, que sean capaces de definir e identificar las diferencias de las unidades fundamentales y derivadas.  Además, se retoma la actividad de Inicio para que establezcan la relación con los contenidos e identifiquen su utilidad en la vida cotidiana, en este caso, en las carreras de Fórmula 1.  Pida a sus alumnos que comenten en qué situaciones sería un problema que no se contara con un sistema de medidas universal, para remarcar la importancia de contar con el SI.",
       "EjesArticuladores": "Pensamiento crítico.",
       "EvaluacionFormativa": [
-        "Comprende la diferencia entre magnitudes físicas y unidades de medición.",
+        "Comprende la diferencia entre magnitudes físicas y unidades de medición. ",
         "Comprende la diferencia entre unidades de medición, fundamentales y derivadas."
       ],
       "Evidencias": [],
@@ -186,14 +200,16 @@
         "9"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 146-151"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 34-37",
+      "LibroSep": "Saberes y pensamiento científico 146-151",
+      "LibroMcMillan": "Física Imagina  34-37",
       "Vinculacion": "\\textbf{Biología: } Reconoce que las unidades de medida usadas en la Biología y otras ciencias tienen su base en las unidades de SI.",
+      "Worklist": [
+        "Lección 5. Unidades fundamentales y derivadas de medida",
+        "A.9. Unidades fundamentales"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 146-151",
-        "Física, Imagina, págs. 34-37"
+        "Saberes y pensamiento científico 146-151",
+        "Física Imagina  34-37"
       ],
       "ActPro": [
         "9"
@@ -213,7 +229,7 @@
       "Cierre": "El propósito es que los alumnos consoliden lo que aprendieron en esta secuencia y propongan un método propio para hacer conversiones entre múltiplos y submúltiplos.",
       "EjesArticuladores": "Pensamiento crítico.",
       "EvaluacionFormativa": [
-        "Resuelve problemas de conversión de unidades utilizando la multiplicación y la división para pasar de múltiplos a submúltiplos y viceversa.",
+        "Resuelve problemas de conversión de unidades utilizando la multiplicación y la división para pasar de múltiplos a submúltiplos y viceversa. ",
         "Escribe cantidades muy grandes o muy pequeñas en notación científica y viceversa."
       ],
       "Evidencias": [],
@@ -221,16 +237,17 @@
         "10"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 253-256",
-        "Nuestro libro de proyectos, 133-137"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 38-41",
+      "LibroSep": "Saberes y pensamiento científico 253-256,Nuestro libro de proyectos 133-137",
+      "LibroMcMillan": "Física Imagina  38-41",
       "Vinculacion": "\\textbf{Matemáticas: } Realiza conversiones entre múltiplos y submúltiplos y la unidad base.",
+      "Worklist": [
+        "Lección 6. Múltiplos y submúltiplos",
+        "A.10. Múltiplos"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 253-256",
-        "Nuestro libro de proyectos, 133-137",
-        "Física, Imagina, págs. 38-41"
+        "Saberes y pensamiento científico 253-256",
+        "Nuestro libro de proyectos 133-137",
+        "Física Imagina  38-41"
       ],
       "ActPro": [
         "10"
@@ -259,16 +276,19 @@
         "11"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 250-252",
-        "Nuestro librode proyectos, 96-105"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 42-45",
+      "LibroSep": "Saberes y pensamiento científico 250-252,Nuestro librode proyectos, 96-105",
+      "LibroMcMillan": "Física Imagina  42-45",
       "Vinculacion": "\\textbf{Matemáticas: } Aprende a leer cantidades en los instrumentos de medición.",
+      "Worklist": [
+        "Lección 7. Instrumentos de medición",
+        "A.11. Es momento de medir",
+        "F3. Contaminantes del aire"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 250-252",
-        "Nuestro librode proyectos, 96-105",
-        "Física, Imagina, págs. 42-45"
+        "Saberes y pensamiento científico 250-252",
+        "Nuestro librode proyectos",
+        " 96-105",
+        "Física Imagina  42-45"
       ],
       "ActPro": [
         "11",
@@ -289,7 +309,7 @@
       "Cierre": "El propósito de esta sección es que los alumnos apliquen los conocimientos adquiridos en la lección y reflexionen sobre la aplicación de las propiedades de los distintos materiales en la elaboración de diferentes productos",
       "EjesArticuladores": "Inclusión.",
       "EvaluacionFormativa": [
-        "Reconoce la diferencia entre propiedades extensivas e intensivas de la materia.",
+        "Reconoce la diferencia entre propiedades extensivas e intensivas de la materia. ",
         "Comprende e identifica las propiedades de los materiales y su aplicación en la vida cotidiana."
       ],
       "Evidencias": [
@@ -303,16 +323,20 @@
       "Proyectos": [
         "Densidad"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 241-244",
-        "Nuestro libro de proyectos, 156-162"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 46-49",
+      "LibroSep": "Saberes y pensamiento científico 241-244,Nuestro libro de proyectos 156-162",
+      "LibroMcMillan": "Física Imagina  46-49",
       "Vinculacion": "\\textbf{Biología: } Identifica que diferentes materiales usados en su entorno tienen un origen natural.",
+      "Worklist": [
+        "Lección 8. Materiales y sus propiedades",
+        "A.12. Propiedades de la materia",
+        "A.13. ¿Qué es la materia?",
+        "F4. Litio, el oro blanco del siglo XXI",
+        "Densidad"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 241-244",
-        "Nuestro libro de proyectos, 156-162",
-        "Física, Imagina, págs. 46-49"
+        "Saberes y pensamiento científico 241-244",
+        "Nuestro libro de proyectos 156-162",
+        "Física Imagina  46-49"
       ],
       "ActPro": [
         "12",
@@ -336,7 +360,7 @@
       "Cierre": "El propósito consiste en que los alumnos comparen las diferentes teorías sobre la composición de la materia que se trataron en la lección y que puedan explicar cómo se comportan las partículas en un gas.",
       "EjesArticuladores": "Pensamiento crítico.",
       "EvaluacionFormativa": [
-        "Comprende la evolución de las teorías sobre la composición de la materia.",
+        "Comprende la evolución de las teorías sobre la composición de la materia. ",
         "Conoce y entiende el modelo y los postulados del modelo cinético de partículas."
       ],
       "Evidencias": [],
@@ -344,14 +368,16 @@
         "14"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 199"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 50-53",
+      "LibroSep": "Saberes y pensamiento científico 199",
+      "LibroMcMillan": "Física Imagina  50-53",
       "Vinculacion": "\\textbf{Matemáticas: } Utiliza la notación científica para comprender las dimensiones atómicas.",
+      "Worklist": [
+        "Lección 9. Origen de las teorías sobre estructura de la materia",
+        "A.14. Un modelo para la materia"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 199",
-        "Física, Imagina, págs. 50-53"
+        "Saberes y pensamiento científico 199",
+        "Física Imagina  50-53"
       ],
       "ActPro": [
         "14"
@@ -371,7 +397,7 @@
       "Cierre": "El propósito de esta sección es que los alumnos comparen las diferentes teorías atómicas que se trataron en la lección y que puedan explicar cómo evolucionaron hasta la teoría actual. También tiene el objetivo de que reflexionen acerca de las aplicaciones de la energía nuclear. Podría proponer a sus alumnos que, en equipos, hagan una maqueta que represente los modelos del átomo de cada teoría explicada en la lección.",
       "EjesArticuladores": "Pensamiento crítico.",
       "EvaluacionFormativa": [
-        "Reconoce que las teorías sobre la estructura atómica evolucionaron con los descubrimientos científicos a lo largo de los años.",
+        "Reconoce que las teorías sobre la estructura atómica evolucionaron con los descubrimientos científicos a lo largo de los años. ",
         "Reconoce las diferencias y similitudes entre las distintas teorías atómicas."
       ],
       "Evidencias": [
@@ -383,14 +409,19 @@
         "17"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 200-203 y 209-215"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 54-59",
+      "LibroSep": "Saberes y pensamiento científico 200-203 y 209-215",
+      "LibroMcMillan": "Física Imagina  54-59",
       "Vinculacion": "\\textbf{Matemáticas: } Utiliza potencias de diez y las propiedades de los exponentes para comprender las dimensiones atómicas.",
+      "Worklist": [
+        "Lección 10. La teoría atómica",
+        "A.15. Construyendo un modelo para el átomo",
+        "A.16. ¿Thomson, Rutherford o Bohr?",
+        "A.17. La estructura interna de la materia",
+        "F6. Invierno nuclear"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 200-203 y 209-215",
-        "Física, Imagina, págs. 54-59"
+        "Saberes y pensamiento científico 200-203 y 209-215",
+        "Física Imagina  54-59"
       ],
       "ActPro": [
         "15",
@@ -413,7 +444,7 @@
       "Cierre": "El propósito es que los alumnos retomen lo aprendido en la lección y respondan las preguntas que pueden servirle como evaluación del tema.",
       "EjesArticuladores": "Pensamiento crítico.",
       "EvaluacionFormativa": [
-        "Entiende e identifica los estados de la materia y sus transformaciones.",
+        "Entiende e identifica los estados de la materia y sus transformaciones. ",
         "Explica los cambios deestado y la densidad con elmodelo de partículas."
       ],
       "Evidencias": [],
@@ -423,14 +454,18 @@
         "20"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 274-275"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 60-65",
+      "LibroSep": "Saberes y pensamiento científico 274-275",
+      "LibroMcMillan": "Física Imagina  60-65",
       "Vinculacion": "\\textbf{Biología: } Identifica los estados de la materia en los ciclos biogeoquímicos.",
+      "Worklist": [
+        "Lección 11. Estados de agregación de la materia y modelo cinético",
+        "A.18. ¿Cómo se organiza la materia?",
+        "A.19. Las facetas de la materia",
+        "A.20. La materia"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 274-275",
-        "Física, Imagina, págs. 60-65"
+        "Saberes y pensamiento científico 274-275",
+        "Física Imagina  60-65"
       ],
       "ActPro": [
         "18",
@@ -452,7 +487,7 @@
       "Cierre": "El propósito es que los alumnos retomen lo aprendido en la lección y respondan las preguntas que pueden servirle como evaluación del tema.",
       "EjesArticuladores": "Pensamiento crítico.",
       "EvaluacionFormativa": [
-        "Comprende la diferencia entre calor, temperatura y energía térmica.",
+        "Comprende la diferencia entre calor, temperatura y energía térmica. ",
         "Entiende qué es el equilibrio térmico y sus aplicaciones en situaciones cotidianas."
       ],
       "Evidencias": [],
@@ -463,18 +498,20 @@
       "Proyectos": [
         "Temperatura"
       ],
-      "LibroSep": [
-        "Saberes y pensamiento científico, 170-174",
-        "Saberes y pensamiento científico, 183-186",
-        "Saberes y pensamiento científico, 196-197"
-      ],
-      "LibroMcMillan": "Física, Imagina, págs. 66-73",
+      "LibroSep": "Saberes y pensamiento científico 170-174,Saberes y pensamiento científico 183-186,Saberes y pensamiento científico 196-197",
+      "LibroMcMillan": "Física Imagina  66-73",
       "Vinculacion": "\\textbf{Matemáticas: } Realiza conversiones entre las distintas unidades de temperatura.",
+      "Worklist": [
+        "Lección 12. Temperatura y equilibrio térmico",
+        "A.21. Conversaciones entre escalas de temperatura",
+        "A.22. ¿Cómo se mide la temperatura?",
+        "Temperatura"
+      ],
       "Libros": [
-        "Saberes y pensamiento científico, 170-174",
-        "Saberes y pensamiento científico, 183-186",
-        "Saberes y pensamiento científico, 196-197",
-        "Física, Imagina, págs. 66-73"
+        "Saberes y pensamiento científico 170-174",
+        "Saberes y pensamiento científico 183-186",
+        "Saberes y pensamiento científico 196-197",
+        "Física Imagina  66-73"
       ],
       "ActPro": [
         "21",

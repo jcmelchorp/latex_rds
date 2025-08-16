@@ -25,11 +25,18 @@
         "3"
       ],
       "Proyectos": [],
-      "LibroSep": [],
-      "LibroMcMillan": "Química, Imagina, págs. 82-87",
+      "LibroSep": "",
+      "LibroMcMillan": "Química Imagina 82-87",
       "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\\\\ \\textbf{Matemáticas:} Analiza datos en gráficas.",
+      "Worklist": [
+        "Lección 1. Sustancias elementales y compuestos",
+        "A.1 Mezclas y sustancias puras",
+        "A.2 ¿Elemento, compuesto o mezcla?",
+        "A.3 Elementos y compuestos",
+        "F7. Aire limpio, planeta sano"
+      ],
       "Libros": [
-        "Química, Imagina, págs. 82-87"
+        "Química Imagina 82-87"
       ],
       "ActPro": [
         "1",
@@ -60,14 +67,16 @@
         "4"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 217"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 88-91",
+      "LibroSep": "Saberes y Pensamiento Científico 217",
+      "LibroMcMillan": "Química Imagina 88-91",
       "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.",
+      "Worklist": [
+        "Lección 2. Modelo corpuscular",
+        "A.4 ¿Elemento, compuesto o mezcla? Parte 2"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 217",
-        "Química, Imagina, págs. 88-91"
+        "Saberes y Pensamiento Científico 217",
+        "Química Imagina 88-91"
       ],
       "ActPro": [
         "4"
@@ -95,11 +104,16 @@
         "6"
       ],
       "Proyectos": [],
-      "LibroSep": [],
-      "LibroMcMillan": "Química, Imagina, págs. 92-95",
+      "LibroSep": "",
+      "LibroMcMillan": "Química Imagina 92-95",
       "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas y gráficas.",
+      "Worklist": [
+        "Lección 3. Elementos en todos lados",
+        "A.5 Elementos y su abundancia",
+        "A.6 Modelo corpuscular"
+      ],
       "Libros": [
-        "Química, Imagina, págs. 92-95"
+        "Química Imagina 92-95"
       ],
       "ActPro": [
         "5",
@@ -131,14 +145,18 @@
       "Proyectos": [
         "Atomos"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 216-220"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 96-101",
+      "LibroSep": "Saberes y Pensamiento Científico 216-220",
+      "LibroMcMillan": "Química Imagina 96-101",
       "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\\\\ \\textbf{Matemáticas:} Resuelve operaciones.",
+      "Worklist": [
+        "Lección 4. Modelos atómicos",
+        "A.7 Estructura atómica",
+        "A.8 Cantidad de la materia",
+        "Atomos"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 216-220",
-        "Química, Imagina, págs. 96-101"
+        "Saberes y Pensamiento Científico 216-220",
+        "Química Imagina 96-101"
       ],
       "ActPro": [
         "7",
@@ -170,14 +188,17 @@
         "1"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 255-260"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 102-109",
+      "LibroSep": "Saberes y Pensamiento Científico 255-260",
+      "LibroMcMillan": "Química Imagina 102-109",
       "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas.",
+      "Worklist": [
+        "Lección 5. Tabla periódica",
+        "A.9 ¿De qué elemento se trata?",
+        "A.10 Identificación atómica"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 255-260",
-        "Química, Imagina, págs. 102-109"
+        "Saberes y Pensamiento Científico 255-260",
+        "Química Imagina 102-109"
       ],
       "ActPro": [
         "9",
@@ -209,14 +230,19 @@
       "Proyectos": [
         "Periodica"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 260-262"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 110-115",
+      "LibroSep": "Saberes y Pensamiento Científico 260-262",
+      "LibroMcMillan": "Química Imagina 110-115",
       "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia. \\\\ \\textbf{Matemáticas:} Analiza datos en tablas y gráficas.",
+      "Worklist": [
+        "Lección 6. Propiedades periódicas",
+        "A.11 ¿Cuántos electrones de valencia tiene?",
+        "A.12 Tabla periódica y propiedades de los elementos",
+        "F8. La calidad del suelo, sostén para la vida",
+        "Periodica"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 260-262",
-        "Química, Imagina, págs. 110-115"
+        "Saberes y Pensamiento Científico 260-262",
+        "Química Imagina 110-115"
       ],
       "ActPro": [
         "11",
@@ -247,14 +273,17 @@
         "14"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 204-207"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 116-119",
+      "LibroSep": "Saberes y Pensamiento Científico 204-207",
+      "LibroMcMillan": "Química Imagina 116-119",
       "Vinculacion": "\\textbf{Física:} Reconoce las interacciones de la electricidad y el magnetismo.",
+      "Worklist": [
+        "Lección 7. Enlaces químicos",
+        "A.13 Protones y electrones de valencia",
+        "A.14 Representaciones de las sustancias"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 204-207",
-        "Química, Imagina, págs. 116-119"
+        "Saberes y Pensamiento Científico 204-207",
+        "Química Imagina 116-119"
       ],
       "ActPro": [
         "13",
@@ -286,14 +315,19 @@
       "Proyectos": [
         "Disociacion"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 166-169 y 221-225"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 120-125",
+      "LibroSep": "Saberes y Pensamiento Científico 166-169 y 221-225",
+      "LibroMcMillan": "Química Imagina 120-125",
       "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.",
+      "Worklist": [
+        "Lección 8. Sustancias moleculares y compuestos iónicos",
+        "A.15 ¿Cuál catión y anión forman el compuesto?",
+        "A.16 ¿Qué tipo de enlace tiene?",
+        "A.17 Química de disoluciones acuosas",
+        "Disociacion"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 166-169 y 221-225",
-        "Química, Imagina, págs. 120-125"
+        "Saberes y Pensamiento Científico 166-169 y 221-225",
+        "Química Imagina 120-125"
       ],
       "ActPro": [
         "15",
@@ -328,14 +362,19 @@
       "Proyectos": [
         "Polimero"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 223-226"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 126-131",
+      "LibroSep": "Saberes y Pensamiento Científico 223-226",
+      "LibroMcMillan": "Química Imagina 126-131",
       "Vinculacion": "\\textbf{Física:} Identifica la estructura, propiedades y características de la materia.",
+      "Worklist": [
+        "Lección 9. Aprovechamiento de compuestos iónicos y moleculares",
+        "A.18 Química de los plásticos",
+        "A.19 ¿Natural o sintético?",
+        "F9. Un poco de sal para preparar agua dulce",
+        "Polimero"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 223-226",
-        "Química, Imagina, págs. 126-131"
+        "Saberes y Pensamiento Científico 223-226",
+        "Química Imagina 126-131"
       ],
       "ActPro": [
         "18",
@@ -371,14 +410,19 @@
       "Proyectos": [
         "Vitamina C"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 319-330"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 132-135",
+      "LibroSep": "Saberes y Pensamiento Científico 319-330",
+      "LibroMcMillan": "Química Imagina 132-135",
       "Vinculacion": "\\textbf{Biología:} Participa en la prevención de enfermedades relacionadas con la alimentación y el consumo de alimentos ultraprocesados.",
+      "Worklist": [
+        "Lección 10. Agua, vitaminas y minerales",
+        "A.20 ¿Qué elementos son más abundantes en nuestro organismo?",
+        "A.21 Agua, vitaminas y minerales",
+        "F10. Vitaminas y minerales para todos",
+        "Vitamina C"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 319-330",
-        "Química, Imagina, págs. 132-135"
+        "Saberes y Pensamiento Científico 319-330",
+        "Química Imagina 132-135"
       ],
       "ActPro": [
         "20",
@@ -413,16 +457,20 @@
       "Proyectos": [
         "Cambio Quimico"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 269-273",
-        "Nuestro libro de Proyectos, 122-131"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 136-141",
+      "LibroSep": "Saberes y Pensamiento Científico 269-273,Nuestro libro de Proyectos 122-131",
+      "LibroMcMillan": "Química Imagina 136-141",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Analiza datos en tablas.",
+      "Worklist": [
+        "Lección 11. Reacciones químicas",
+        "A.22 Cambio físico y cambio químico",
+        "A.23 Cambios en los procesos químicos",
+        "A.24 Cambios químicos y cómo identificarlos",
+        "Cambio Quimico"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 269-273",
-        "Nuestro libro de Proyectos, 122-131",
-        "Química, Imagina, págs. 136-141"
+        "Saberes y Pensamiento Científico 269-273",
+        "Nuestro libro de Proyectos 122-131",
+        "Química Imagina 136-141"
       ],
       "ActPro": [
         "22",
@@ -446,8 +494,7 @@
       "EjesArticuladores": "",
       "EvaluacionFormativa": [
         "Dibuja representaciones nanoscópicas de las reacciones químicas.",
-        "Balancea ecuaciones químicas.",
-        "Resuelve ejercicios de estequiometría (relaciones estequiométricas y conversiones)."
+        "Balancea ecuaciones químicas.,Resuelve ejercicios de estequiometría (relaciones estequiométricas y conversiones)."
       ],
       "Evidencias": [
         "F11"
@@ -463,14 +510,22 @@
       "Proyectos": [
         "Hierro"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 208-215"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 142-147",
+      "LibroSep": "Saberes y Pensamiento Científico 208-215",
+      "LibroMcMillan": "Química Imagina 142-147",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.\\\\ \\textbf{Matemáticas:} Resuelve operaciones.",
+      "Worklist": [
+        "Lección 12. Conservación de la materia",
+        "A.25 Conservación de la materia en cambios químicos",
+        "A.26 Ecuaciones y reacciones",
+        "A.27 La misma cantidad de un lado que del otro",
+        "A.28 Ecuación química",
+        "A.29 Érase una vez que",
+        "F11. Productos en la vida cotidiana",
+        "Hierro"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 208-215",
-        "Química, Imagina, págs. 142-147"
+        "Saberes y Pensamiento Científico 208-215",
+        "Química Imagina 142-147"
       ],
       "ActPro": [
         "25",
@@ -506,16 +561,19 @@
       "Proyectos": [
         "Cambio"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 315-318 ",
-        "Nuestro libro de Proyectos, 122-131"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 148-151",
+      "LibroSep": "Saberes y Pensamiento Científico 315-318 ,Nuestro libro de Proyectos 122-131",
+      "LibroMcMillan": "Química Imagina 148-151",
       "Vinculacion": "\\textbf{Física:} Reconoce el pensamiento científico, una forma de plantear y solucionar problemas y su incidencia en la transformación de la sociedad.",
+      "Worklist": [
+        "Lección 13. Reacciones químicas que solucionan problemas",
+        "A.30 Cantidad de la materia en cambios químicos",
+        "F12. La química de la vida",
+        "Cambio"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 315-318 ",
-        "Nuestro libro de Proyectos, 122-131",
-        "Química, Imagina, págs. 148-151"
+        "Saberes y Pensamiento Científico 315-318 ",
+        "Nuestro libro de Proyectos 122-131",
+        "Química Imagina 148-151"
       ],
       "ActPro": [
         "F12",
@@ -549,14 +607,21 @@
       "Proyectos": [
         "Repaso de Unidad"
       ],
-      "LibroSep": [
-        "Saberes y Pensamiento Científico, 308-310"
-      ],
-      "LibroMcMillan": "Química, Imagina, págs. 152-159",
+      "LibroSep": "Saberes y Pensamiento Científico 308-310",
+      "LibroMcMillan": "Química Imagina 152-159",
       "Vinculacion": "\\textbf{Física:} Reconoce las Interacciones en fenómenos relacionados con la fuerza y el movimiento.\\\\ \\textbf{Matemáticas:} Resuelve operaciones.",
+      "Worklist": [
+        "Lección 14. Reacciones endotérmicas y exotérmicas",
+        "A.31 Intercambios de energía en procesos",
+        "A.32 Transferencia de energía en cambios químicos",
+        "A.33 ¿Qué tipo de reacción es?",
+        "A.34 Energía química en tu entorno",
+        "A.35 Costos y riesgos de la energía química",
+        "Repaso de Unidad"
+      ],
       "Libros": [
-        "Saberes y Pensamiento Científico, 308-310",
-        "Química, Imagina, págs. 152-159"
+        "Saberes y Pensamiento Científico 308-310",
+        "Química Imagina 152-159"
       ],
       "ActPro": [
         "31",

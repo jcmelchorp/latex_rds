@@ -23,14 +23,17 @@
         "53"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Modela la distancia que recorre un objeto en caída libre en intervalos de tiempo consecutivos como una sucesión cuadrática, y encuentra la regla general.",
+      "Worklist": [
+        "A.51. Sucesión cuadrática",
+        "A.52. Completando la sucesión cuadrática",
+        "A.53. Término general"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "51",
@@ -60,14 +63,16 @@
         "55"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Utiliza productos notables como el cuadrado de un binomio para simplificar expresiones al calcular la energía cinética o potencial en sistemas mecánicos.",
+      "Worklist": [
+        "A.54. Sucesión geométrica",
+        "A.55. Razón de una sucesión geométrica"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "54",
@@ -99,14 +104,19 @@
         "60"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Usa el discriminante de una ecuación de trayectoria para determinar si un proyectil alcanzará una altura determinada (si hay 1, 2 o ninguna solución real).",
+      "Worklist": [
+        "A.56. Binomios conjugados",
+        "A.57. Binomios con término común",
+        "A.58. Binomio al cuadrado",
+        "A.59. Binomios de la forma $(mx+a)(nx+b)$",
+        "A.60. Binomio al cubo"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "56",
@@ -138,14 +148,16 @@
         "62"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Resuelve la ecuación cuadrática completa del movimiento parabólico para encontrar el tiempo de vuelo o el alcance máximo de un proyectil.",
+      "Worklist": [
+        "A.61. Clasificación de ecuaciones cuadráticas",
+        "A.62. Discriminante"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "61",
@@ -175,14 +187,17 @@
         "65"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Identifica la hipotenusa como la magnitud de un vector resultante (ej. desplazamiento) y los catetos como sus componentes rectangulares (horizontal y vertical).",
+      "Worklist": [
+        "A.63. Ecuaciones cuadráticas incompletas",
+        "A.64. Ecuaciones cuadráticas completas 1",
+        "A.65. Ecuaciones cuadráticas completas 2"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "63",
@@ -211,14 +226,15 @@
         "66"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Calcula la magnitud del desplazamiento total de un móvil que viajó primero al norte y luego al este, usando sus desplazamientos como catetos.",
+      "Worklist": [
+        "A.66. Identificación de lados"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "66"
@@ -246,14 +262,16 @@
         "68"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Biología: }  Calcula la distancia real (diagonal) que un animal recorre a través de un campo rectangular y la compara con la distancia que caminaría por el borde (perímetro).",
+      "Worklist": [
+        "A.67. Hallando la hipotenusa",
+        "A.68. Hallando el cateto"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "67",
@@ -281,14 +299,15 @@
         "69"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Encuentra la magnitud de la fuerza resultante de la suma de varios vectores, calculando primero la suma de sus componentes y aplicando después el teorema.",
+      "Worklist": [
+        "A.69. Áreas y perímetros"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "69"
@@ -315,14 +334,15 @@
         "70"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Encuentra la magnitud de la fuerza resultante de la suma de varios vectores, calculando primero la suma de sus componentes y aplicando después el teorema.",
+      "Worklist": [
+        "A.70. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "70"
@@ -350,14 +370,16 @@
         "72"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Identifica los catetos opuesto y adyacente a un ángulo para descomponer un vector de fuerza en sus componentes horizontal y vertical.",
+      "Worklist": [
+        "A.71. Identificando lados",
+        "A.72. Identificando funciones"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "71",
@@ -385,14 +407,15 @@
         "73"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Calcula las componentes $x$ e $y$ de un vector de velocidad, usando el coseno y el seno del ángulo de su dirección.",
+      "Worklist": [
+        "A.73. Encontrando lados"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "73"
@@ -420,14 +443,16 @@
         "75"
       ],
       "Proyectos": [],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "\\textbf{Física: }  Determina la dirección (ángulo) de un proyectil o una fuerza resultante, utilizando la función arcotangente con las componentes del vector.",
+      "Worklist": [
+        "A.74. Encontrando ángulos",
+        "A.75. Resolución de problemas"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "74",
@@ -458,14 +483,16 @@
       "Proyectos": [
         "Examen de Unidad"
       ],
-      "LibroSep": [
-        "MeXmáticas"
-      ],
+      "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
       "Vinculacion": "",
+      "Worklist": [
+        "Repaso de Unidad",
+        "Examen de Unidad"
+      ],
       "Libros": [
         "MeXmáticas",
-        "Apuntes de clase y ejercicios propuestos"
+        "Apuntes de clase"
       ],
       "ActPro": [
         "Repaso de Unidad",
