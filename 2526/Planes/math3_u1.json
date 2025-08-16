@@ -5,29 +5,35 @@
       "FechaDeInicio": "1 sept",
       "FechaDeCierre": "5 sept",
       "SemanaEscolar": 1,
-      "Contenido": "Operaciones básicas de suma y resta.",
-      "Aprendizaje": "Realizar sumas y restas con números enteros y decimales con precisión y aplicar estas operaciones en la resolución de problemas cotidianos.",
-      "Tema": "Cálculos numéricos.",
-      "Leccion": "Suma de números. Resta de números.",
-      "Inicio": "La clase comienza con una discusión sobre la importancia de las operaciones básicas en la vida cotidiana. Se presentan ejemplos sencillos como la suma y resta de cantidades de dinero, o de puntos en un juego, para conectar con la experiencia diaria de los alumnos. Se realizan ejercicios rápidos en la pizarra para evaluar el nivel de comprensión actual y se explican errores comunes que suelen ocurrir.",
-      "Desarrollo": "Los alumnos participan en actividades prácticas, como juegos de mesa o aplicaciones digitales que requieren la suma y resta de números. Se realizan ejercicios en grupos pequeños para resolver problemas más complejos, y los estudiantes discuten sus estrategias y métodos para llegar a la solución correcta. Se hace énfasis en la comprensión y precisión de las operaciones, y se utilizan problemas contextuales para que los alumnos vean la utilidad práctica de estas habilidades.",
-      "Cierre": "Se finaliza con una sesión de retroalimentación donde Comparten lo que aprendieron y discuten las dificultades encontradas. Se hace un resumen de las estrategias más efectivas para la suma y resta de números, y se asigna una tarea con problemas aplicados que los estudiantes deben resolver en casa, incluyendo una reflexión escrita sobre cómo la suma y resta se utilizan en su vida diaria.",
-      "EjesArticuladores": "Interculturalidad crítica. Pensamiento crítico",
+      "Contenido": "Operaciones básicas con números enteros.",
+      "Aprendizaje": "Resolver problemas que impliquen la suma, resta, la multiplicación y la división de números enteros, aplicando las reglas correspondientes.",
+      "Tema": "Cálculos numéricos",
+      "Leccion": "Suma de números\nResta de números.\nMultiplicación de números\nDivisión de números.",
+      "Inicio": "Se comienza con una actividad de reflexión en la que los alumnos recuerden las reglas básicas de la suma y resta con números enteros positivos, mediante preguntas dirigidas y ejemplos cotidianos (como calcular la diferencia entre el dinero que tienen y lo que necesitan para comprar algo). Se utilizará la pizarra para visualizar estas ideas y para conectar con el conocimiento previo. Se realizará una lluvia de ideas sobre situaciones diarias en las que usan estas operaciones. Luego, se introducen conceptos de multiplicación y división con números enteros mediante ejemplos simples, como la idea de repetición en la multiplicación y la partición en la división. Se utilizan ejemplos visuales para ilustrar los conceptos, como bloques o dibujos en la pizarra.",
+      "Desarrollo": "Se introducen los conceptos formales de la suma y resta de números enteros, usando una recta numérica para visualizar los movimientos a la derecha (suma) y a la izquierda (resta). Se realizan ejemplos guiados, y luego se invita a los estudiantes a resolver ejercicios en parejas, promoviendo la colaboración y la autoevaluación entre compañeros. Se presentan problemas contextualizados para reforzar la aplicación práctica de estos conceptos, como calcular el saldo bancario tras varias transacciones. Los alumnos trabajan con ejemplos progresivamente más complejos explicando cómo las reglas cambian dependiendo del signo de los números involucrados. Se utilizan ejercicios interactivos y retos en grupo para fomentar la participación activa y el trabajo en equipo. Se presentan problemas aplicados, como cálculos de áreas en contextos reales, y se trabaja con escenarios donde se requiere dividir objetos o cantidades en partes iguales.",
+      "Cierre": "Los alumnos presentan sus soluciones a algunos problemas en el pizarrón, explicando su razonamiento. Se hace una recapitulación conjunta de las reglas aprendidas y se clarifican dudas. Finalmente, se deja una tarea práctica para reforzar los aprendizajes, consistente en problemas de la vida diaria que impliquen suma y resta de enteros. Se da un breve adelanto de la próxima clase para mantener el interés.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
       "EvaluacionFormativa": [
-        "Resolución de problemas en clase, cuestionarios rápidos, participación activa."
+        "Observación durante la práctica, resolución de ejercicios en clase, participación en discusiones."
       ],
       "Evidencias": [],
       "Actividades": [
         "1",
-        "2"
+        "2",
+        "3",
+        "4",
+        "5"
       ],
       "Proyectos": [],
       "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Física: }  Calcula la fuerza neta o resultante sobre un objeto, sumando fuerzas en el mismo sentido y restando las de sentidos opuestos.",
+      "Vinculacion": "\\textbf{Física: }  Resuelve problemas de cinemática calculando la distancia total recorrida (suma), el desplazamiento (resta) o la rapidez promedio (división) de un objeto en movimiento.",
       "Worklist": [
-        "A.1. Suma de números",
-        "A.2. Resta de números"
+        "A.1.  Suma de números",
+        "A.2.  Resta de números",
+        "A.3.  Multiplicación de números",
+        "A.4.  División de números",
+        "A.5.  Resolución de problemas"
       ],
       "Libros": [
         "MeXmáticas",
@@ -35,7 +41,10 @@
       ],
       "ActPro": [
         "1",
-        "2"
+        "2",
+        "3",
+        "4",
+        "5"
       ]
     },
     {
@@ -43,130 +52,21 @@
       "FechaDeInicio": "8 sept",
       "FechaDeCierre": "12 sept",
       "SemanaEscolar": 2,
-      "Contenido": "Operaciones básicas de multiplicación y división.",
-      "Aprendizaje": "Multiplicar y dividir números enteros y decimales, aplicando las operaciones para resolver problemas en diferentes contextos.",
-      "Tema": "Cálculos numéricos.",
-      "Leccion": "Multiplicación de números. División de números.",
-      "Inicio": "La clase inicia con una introducción sobre la importancia de la multiplicación y la división en la resolución de problemas cotidianos, como calcular el costo total de productos o dividir una cuenta en un restaurante. Se presentan ejemplos visuales y se discuten conceptos clave como la multiplicación como suma repetida y la división como reparto equitativo.",
-      "Desarrollo": "Los alumnos realizan ejercicios en parejas y en grupos, abordando multiplicaciones y divisiones con diferentes niveles de dificultad. Se utilizan juegos interactivos y tecnología digital para reforzar el aprendizaje. Se enfoca en desarrollar la comprensión de las propiedades de la multiplicación y división, así como en el uso de estrategias para simplificar cálculos, como la descomposición de números y el uso de la calculadora para operaciones más complejas.",
-      "Cierre": "La clase concluye con una actividad de reflexión en la que los alumnos comparten sus estrategias preferidas para la multiplicación y la división. Se revisan los errores comunes y se hace un resumen de los conceptos clave. Se asigna una tarea con problemas aplicados, como cálculos de áreas y volúmenes, para reforzar lo aprendido y destacar la relevancia de estas operaciones en situaciones prácticas.",
-      "EjesArticuladores": "Inclusión, Pensamiento crítico",
-      "EvaluacionFormativa": [
-        "Pruebas prácticas, ejercicios en clase, observación del proceso de resolución de problemas."
-      ],
-      "Evidencias": [],
-      "Actividades": [
-        "3",
-        "4"
-      ],
-      "Proyectos": [],
-      "LibroSep": "MeXmáticas",
-      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Química: }  Determina la masa molar de un compuesto, multiplicando la masa atómica de cada elemento por su número de átomos y sumando los resultados.",
-      "Worklist": [
-        "A.3. Multiplicación de números",
-        "A.4. División de números"
-      ],
-      "Libros": [
-        "MeXmáticas",
-        "Apuntes de clase"
-      ],
-      "ActPro": [
-        "3",
-        "4"
-      ]
-    },
-    {
-      "PeriodosLectivos": 5,
-      "FechaDeInicio": "15 sept",
-      "FechaDeCierre": "19 sept",
-      "SemanaEscolar": 3,
-      "Contenido": "Aplicación de la suma, resta, multiplicación y división en la resolución de problemas complejos.",
-      "Aprendizaje": "Resolver problemas cotidianos que involucren varias operaciones básicas, comprendiendo la importancia de la jerarquía de operaciones.",
-      "Tema": "Cálculos numéricos.",
-      "Leccion": "Resolución de problemas.",
-      "Inicio": "Se inicia con la presentación de problemas reales que los estudiantes podrían encontrar en su vida diaria, como la gestión de un presupuesto o el cálculo de materiales necesarios para un proyecto. Se discuten las estrategias generales para abordar problemas complejos, y se revisa la jerarquía de operaciones para asegurar la correcta ejecución de cálculos.",
-      "Desarrollo": "Los estudiantes trabajan en grupos para resolver una serie de problemas complejos que requieren la combinación de sumas, restas, multiplicaciones y divisiones. Se anima a los alumnos a discutir y explicar sus procesos de pensamiento, y se les proporciona retroalimentación sobre la precisión y eficiencia de sus métodos. Se utilizan recursos visuales, como diagramas y tablas, para facilitar la comprensión y organización de los datos.",
-      "Cierre": "La clase concluye con una sesión de preguntas y respuestas donde los alumnos comparten sus soluciones y los desafíos que enfrentaron. Se hace un resumen de las estrategias efectivas y se refuerza la importancia de seguir la jerarquía de operaciones. Se asigna una tarea con problemas de la vida real que requieren la combinación de varias operaciones, con un enfoque en la explicación detallada del proceso de solución.",
-      "EjesArticuladores": "Interculturalidad crítica. Pensamiento crítico",
-      "EvaluacionFormativa": [
-        "Resolución de problemas en clase, participación en discusiones, evaluación escrita de la comprensión."
-      ],
-      "Evidencias": [],
-      "Actividades": [
-        "5"
-      ],
-      "Proyectos": [],
-      "LibroSep": "MeXmáticas",
-      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Física: }  Resuelve problemas de trabajo y potencia, calculando el trabajo realizado ($F\\\\times d$) y luego la potencia desarrollada.",
-      "Worklist": [
-        "A.5. Resolución de problemas"
-      ],
-      "Libros": [
-        "MeXmáticas",
-        "Apuntes de clase"
-      ],
-      "ActPro": [
-        "5"
-      ]
-    },
-    {
-      "PeriodosLectivos": 5,
-      "FechaDeInicio": "22 sept",
-      "FechaDeCierre": "26 sept",
-      "SemanaEscolar": 4,
-      "Contenido": "Ubicación de números negativos en la recta numérica, comparación y operaciones básicas.",
-      "Aprendizaje": "Identificar y comparar números negativos, y aplicar operaciones básicas con estos en diferentes contextos.",
+      "Contenido": "Conceptos básicos de números negativos y su representación en la recta numérica.",
+      "Aprendizaje": "Identificar y ubicar números negativos en una recta numérica, comparando su magnitud.",
       "Tema": "Números negativos.",
-      "Leccion": "Ubicación en la recta numérica. Comparación de negativos. Suma y resta con negativos.",
-      "Inicio": "La clase comienza con una actividad visual utilizando una recta numérica en la pizarra para colocar números positivos y negativos. Se discuten conceptos básicos como el valor absoluto y se practican ejercicios de comparación de números negativos. Se anima a los estudiantes a pensar en situaciones reales donde los números negativos aparecen, como temperaturas bajo cero o deudas.",
-      "Desarrollo": "Los estudiantes trabajan en ejercicios de suma y resta con números negativos, utilizando la recta numérica como herramienta visual. Se presentan problemas aplicados que requieren la interpretación de los resultados, como cambios de temperatura y cálculos de ganancias y pérdidas. Los estudiantes trabajan en parejas para resolver problemas y comparar sus métodos, discutiendo la lógica detrás de las operaciones con números negativos.",
-      "Cierre": "La clase concluye con una sesión de discusión y reflexión donde Comparten sus aprendizajes y discuten las dificultades encontradas. Se hace un resumen de las operaciones con números negativos y se asigna una tarea que incluye problemas aplicados y una breve reflexión sobre la importancia de entender los números negativos en la vida diaria y en la matemática avanzada.",
+      "Leccion": "Ubicación en la recta numérica.",
+      "Inicio": "La clase comienza con una introducción a los números negativos a través de ejemplos de la vida diaria, como temperaturas bajo cero o deudas. Se muestra una recta numérica grande en la pizarra y se pide a los alumnos que ubiquen diferentes números en ella, primero con enteros positivos y luego con negativos. Se hace hincapié en la continuidad de los números y la noción de opuestos. Se inicia la siguiente clase con un repaso de la recta numérica, enfatizando la posición relativa de los números negativos respecto a los positivos y el cero. Se presentan ejemplos de la vida real para conectar estos conceptos con situaciones prácticas. Los alumnos son invitados a pensar en otros contextos donde se aplican los números negativos y a discutir sus ideas en grupos pequeños.",
+      "Desarrollo": "Se explica formalmente cómo se ubican los números negativos en la recta numérica, destacando la importancia del cero como punto de referencia. Los estudiantes practican la ubicación de números negativos y positivos en una recta dibujada en sus cuadernos y luego resuelven ejercicios de comparación entre estos números, utilizando símbolos de mayor que, menor que e igual a. Se discuten ejemplos donde los números negativos juegan un rol importante, como en altitudes bajo el nivel del mar o en contextos financieros. Se enseñan las reglas para sumar, restar, multiplicar y dividir números negativos mediante ejemplos claros y progresivos en la pizarra. Los alumnos practican primero con ejercicios básicos y luego con problemas más complejos que combinan varias operaciones. Se utilizan recursos visuales, como bloques o fichas, para ayudar a los alumnos a entender mejor cómo los signos afectan los resultados de las operaciones.",
+      "Cierre": "Los estudiantes se involucran en una actividad lúdica donde deben ubicar números en una recta numérica gigante hecha en el piso del salón, trabajando en equipos para posicionar correctamente números dados por el profesor. Se finaliza con una discusión en clase sobre la importancia de entender los números negativos y se asigna una tarea que incluye ejercicios de ubicación y comparación. Se motivan a los alumnos a reflexionar sobre situaciones cotidianas donde encuentran números negativos. Se realiza un juego de competencia en el que los alumnos responden preguntas rápidas sobre operaciones con números negativos para reforzar su comprensión. Se concluye la clase revisando los puntos clave de las reglas operativas y resolviendo dudas. La tarea asignada incluye problemas de aplicación y una breve reflexión escrita sobre las dificultades que encontraron y cómo las superaron. Se resalta la importancia de manejar correctamente estas operaciones en situaciones cotidianas.",
       "EjesArticuladores": "Interculturalidad crítica. Pensamiento crítico",
       "EvaluacionFormativa": [
-        "Pruebas en clase, ejercicios prácticos, observación de la participación."
+        "Pruebas de ubicación en la recta, ejercicios de comparación, participación en actividades lúdicas."
       ],
       "Evidencias": [],
       "Actividades": [
         "6",
-        "7"
-      ],
-      "Proyectos": [],
-      "LibroSep": "MeXmáticas",
-      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Física: }  Compara y opera con temperaturas bajo cero o con cargas eléctricas de iones para determinar cambios energéticos o la carga neta de una molécula.",
-      "Worklist": [
-        "A.6. Ubicación en la recta numérica",
-        "A.7. Comparación de negativos"
-      ],
-      "Libros": [
-        "MeXmáticas",
-        "Apuntes de clase"
-      ],
-      "ActPro": [
-        "6",
-        "7"
-      ]
-    },
-    {
-      "PeriodosLectivos": 5,
-      "FechaDeInicio": "29 sept",
-      "FechaDeCierre": "3 oct",
-      "SemanaEscolar": 5,
-      "Contenido": "Multiplicación, división y jerarquía de operaciones con números negativos.",
-      "Aprendizaje": "Realizar multiplicaciones y divisiones con números negativos y aplicar correctamente la jerarquía de operaciones.",
-      "Tema": "Números negativos.",
-      "Leccion": "Multiplicación y división con negativos. Jerarquía de operaciones.",
-      "Inicio": "La clase comienza con un repaso de las operaciones básicas con números negativos y se introduce la multiplicación y división. Se discuten las reglas para el manejo de signos en estas operaciones y se presentan ejemplos claros y sencillos para ilustrar estos conceptos. Los estudiantes participan en una breve actividad práctica para reforzar las reglas de los signos.",
-      "Desarrollo": "Los estudiantes trabajan en ejercicios que incluyen multiplicaciones y divisiones con números negativos, aplicando también la jerarquía de operaciones para resolver problemas más complejos. Se utilizan recursos visuales y digitales para ilustrar la aplicación de estas reglas en contextos variados, como la física y la economía. Colaboran en grupos pequeños para resolver problemas y discutir la aplicación correcta de las reglas.",
-      "Cierre": "La clase concluye con una actividad de retroalimentación donde los estudiantes presentan sus soluciones y discuten los desafíos enfrentados. Se hace un resumen de las reglas clave y se asigna una tarea con problemas aplicados que requieren la combinación de varias operaciones con números negativos y la aplicación correcta de la jerarquía de operaciones.",
-      "EjesArticuladores": "Inclusión, Pensamiento crítico",
-      "EvaluacionFormativa": [
-        "Resolución de problemas en clase, pruebas escritas, evaluación continua."
-      ],
-      "Evidencias": [],
-      "Actividades": [
+        "7",
         "8",
         "9",
         "10"
@@ -174,10 +74,12 @@
       "Proyectos": [],
       "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Física: }  Calcula el trabajo realizado por o sobre un campo eléctrico al mover una carga negativa, aplicando correctamente la jerarquía y las leyes de los signos.",
+      "Vinculacion": "\\textbf{Física: }  Compara temperaturas de diversas sustancias en grados Celsius, ubicándolas en una recta numérica para determinar cuál está más fría o cuál es el punto de congelación.",
       "Worklist": [
-        "A.8. Suma y resta con negativos",
-        "A.9. Multiplicación y división con negativos",
+        "A.6.  Ubicación en la recta numérica",
+        "A.7.  Comparación de negativos",
+        "A.8.  Suma y resta con negativos",
+        "A.9.  Multiplicación y división con negativos",
         "A.10. Jerarquía de operaciones"
       ],
       "Libros": [
@@ -185,16 +87,18 @@
         "Apuntes de clase"
       ],
       "ActPro": [
+        "6",
+        "7",
         "8",
         "9",
         "10"
       ]
     },
     {
-      "PeriodosLectivos": 5,
-      "FechaDeInicio": "6 oct",
-      "FechaDeCierre": "10 oct",
-      "SemanaEscolar": 6,
+      "PeriodosLectivos": 3,
+      "FechaDeInicio": "15 sept",
+      "FechaDeCierre": "19 sept",
+      "SemanaEscolar": 3,
       "Contenido": "Introducción a la factorización, términos comunes y diferencia de cuadrados.",
       "Aprendizaje": "Identificar y factorizar expresiones algebraicas usando el término común y la diferencia de cuadrados.",
       "Tema": "Factorización.",
@@ -229,10 +133,10 @@
       ]
     },
     {
-      "PeriodosLectivos": 5,
-      "FechaDeInicio": "13 oct",
-      "FechaDeCierre": "17 oct",
-      "SemanaEscolar": 7,
+      "PeriodosLectivos": 4,
+      "FechaDeInicio": "22 sept",
+      "FechaDeCierre": "26 sept",
+      "SemanaEscolar": 4,
       "Contenido": "Factorización de trinomios cuadrados perfectos y de la forma $x^2+bx+c$.",
       "Aprendizaje": "Factorizar trinomios identificando cuadrados perfectos y aplicando métodos para trinomios simples.",
       "Tema": "Factorización.",
@@ -268,9 +172,9 @@
     },
     {
       "PeriodosLectivos": 5,
-      "FechaDeInicio": "20 oct",
-      "FechaDeCierre": "24 oct",
-      "SemanaEscolar": 8,
+      "FechaDeInicio": "29 sept",
+      "FechaDeCierre": "3 oct",
+      "SemanaEscolar": 5,
       "Contenido": "Factorización de trinomios de la forma $ax^2+bx+c$.",
       "Aprendizaje": "Aplicar métodos de factorización para trinomios con coeficientes diferentes a uno en el término cuadrático.",
       "Tema": "Factorización.",
@@ -303,9 +207,9 @@
     },
     {
       "PeriodosLectivos": 5,
-      "FechaDeInicio": "27 oct",
-      "FechaDeCierre": "31 oct",
-      "SemanaEscolar": 9,
+      "FechaDeInicio": "6 oct",
+      "FechaDeCierre": "10 oct",
+      "SemanaEscolar": 6,
       "Contenido": "Leyes de los exponentes: suma y resta de exponentes.",
       "Aprendizaje": "Aplicar las leyes de los exponentes para simplificar expresiones algebraicas y resolver problemas que involucren exponentes.",
       "Tema": "Leyes de los exponentes.",
@@ -341,9 +245,9 @@
     },
     {
       "PeriodosLectivos": 5,
-      "FechaDeInicio": "3 nov",
-      "FechaDeCierre": "7 nov",
-      "SemanaEscolar": 10,
+      "FechaDeInicio": "13 oct",
+      "FechaDeCierre": "17 oct",
+      "SemanaEscolar": 7,
       "Contenido": "Leyes de los exponentes: multiplicación y división de exponentes.",
       "Aprendizaje": "Aplicar las leyes de multiplicación y división de exponentes para resolver y simplificar expresiones algebraicas complejas.",
       "Tema": "Leyes de los exponentes.",
@@ -358,7 +262,8 @@
       "Evidencias": [],
       "Actividades": [
         "18",
-        "19"
+        "19",
+        "20"
       ],
       "Proyectos": [],
       "LibroSep": "MeXmáticas",
@@ -366,42 +271,7 @@
       "Vinculacion": "\\textbf{Física: }  Manipula las variables en la Ley de Gravitación Universal ($F=G\\\\dfrac{m\\_1 m\\_2}{r^2}$  ), aplicando las leyes de los exponentes para analizar cómo cambia la fuerza si la distancia se duplica.",
       "Worklist": [
         "A.18. Multiplicación de exponentes",
-        "A.19. División de exponentes"
-      ],
-      "Libros": [
-        "MeXmáticas",
-        "Apuntes de clase"
-      ],
-      "ActPro": [
-        "18",
-        "19"
-      ]
-    },
-    {
-      "PeriodosLectivos": 5,
-      "FechaDeInicio": "10 nov",
-      "FechaDeCierre": "14 nov",
-      "SemanaEscolar": 11,
-      "Contenido": "Exponentes negativos y notación científica.",
-      "Aprendizaje": "Aplicar las leyes de exponentes negativos para simplificar expresiones y utilizar la notación científica para expresar números grandes y pequeños.",
-      "Tema": "Leyes de los exponentes.",
-      "Leccion": "Exponentes negativos en Notación científica.",
-      "Inicio": "La clase comienza con una explicación sobre el concepto de exponentes negativos y cómo se relacionan con las fracciones. Se presentan ejemplos visuales y se conecta con situaciones prácticas, como el cálculo de pequeñas cantidades en la ciencia. Se introduce la notación científica como una herramienta para simplificar la escritura y el cálculo con números muy grandes o muy pequeños.",
-      "Desarrollo": "Los estudiantes practican la simplificación de expresiones que incluyen exponentes negativos y la conversión de números a notación científica. Se utilizan ejemplos de contextos reales, como la representación de distancias astronómicas o el tamaño de partículas microscópicas. Los estudiantes trabajan en parejas para resolver problemas y presentan sus resultados al grupo, explicando el proceso de conversión y simplificación.",
-      "Cierre": "Se realiza una recapitulación conjunta donde se refuerzan los conceptos clave y se discuten los errores comunes. Se asigna una tarea que incluye problemas de simplificación con exponentes negativos y uso de la notación científica en contextos científicos y matemáticos. Se finaliza con una breve discusión sobre la importancia de estos conceptos en la vida diaria y en diversas profesiones.",
-      "EjesArticuladores": "Interculturalidad crítica. Pensamiento crítico",
-      "EvaluacionFormativa": [
-        "Ejercicios prácticos, cuestionarios escritos, evaluación de la comprensión durante actividades en clase."
-      ],
-      "Evidencias": [],
-      "Actividades": [
-        "20"
-      ],
-      "Proyectos": [],
-      "LibroSep": "MeXmáticas",
-      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Biología: }  Expresa en notación científica el tamaño de una célula o una bacteria (ej. $2 \\\\times 10^{-6}$ m) para comparar su escala con la de otros organismos.",
-      "Worklist": [
+        "A.19. División de exponentes",
         "A.20. Exponentes negativos"
       ],
       "Libros": [
@@ -409,14 +279,16 @@
         "Apuntes de clase"
       ],
       "ActPro": [
+        "18",
+        "19",
         "20"
       ]
     },
     {
       "PeriodosLectivos": 5,
-      "FechaDeInicio": "17 nov",
-      "FechaDeCierre": "21 nov",
-      "SemanaEscolar": 12,
+      "FechaDeInicio": "20 oct",
+      "FechaDeCierre": "24 oct",
+      "SemanaEscolar": 8,
       "Contenido": "Sucesiones aritméticas: completando la sucesión, diferencia común y cálculo del término general.",
       "Aprendizaje": "Identificar y completar sucesiones aritméticas, calcular la diferencia común y formular el término general.",
       "Tema": "Sucesiones aritméticas.",
@@ -445,9 +317,7 @@
         "A.22. Diferencia de una sucesión",
         "A.23. Término general",
         "A.24. Término enésimo",
-        "A.25. Suma de una sucesión aritmética",
-        "Repaso de Unidad",
-        "Examen de Unidad"
+        "A.25. Suma de una sucesión aritmética"
       ],
       "Libros": [
         "MeXmáticas",
@@ -459,6 +329,79 @@
         "23",
         "24",
         "25"
+      ]
+    },
+    {
+      "PeriodosLectivos": 4,
+      "FechaDeInicio": "27 oct",
+      "FechaDeCierre": "31 oct",
+      "SemanaEscolar": 9,
+      "Contenido": "Recapitulación e integración de los conocimientos y aprendizajes.",
+      "Aprendizaje": "Fortalecer y verificar la comprensión de los procedimientos y conceptos matemáticos estudiados durante el trimestre, para aplicarlos en la resolución de problemas y tener éxito en la evaluación",
+      "Tema": "Preparación a la evaluación",
+      "Leccion": "Revisión grupal de los saberes acumulados en el período de evaluación",
+      "Inicio": "Se presenta el objetivo de la semana: prepararse de manera efectiva para el examen trimestral. Se explica la dinámica: se trabajará sobre un documento llamado \"Repaso de Examen\" que contiene ejercicios clave, muy similares a los que encontrarán en la prueba real. Se realiza una \"lluvia de ideas\" rápida en el pizarrón sobre los temas más importantes o los que generaron más dudas durante el trimestre. Esto activa el conocimiento previo y permite al docente identificar focos de atención.",
+      "Desarrollo": "Los alumnos comienzan a resolver el documento \"Repaso de Examen\" de forma individual. El docente monitorea activamente el trabajo en el aula, acercándose a los alumnos para resolver dudas puntuales. Este es el momento clave para ofrecer retroalimentación personalizada. Se fomenta que los alumnos marquen los ejercicios donde tengan mayor dificultad. Al final de cada sección temática del repaso (o cada cierto número de ejercicios), se detiene el trabajo individual. El docente o alumnos voluntarios pasan al pizarrón a resolver los problemas que la mayoría marcó como difíciles. Se promueve el diálogo y la comparación de resultados entre compañeros, fomentando el aprendizaje colaborativo. Se pregunta: \"¿Alguien lo resolvió de otra manera?\" para validar diferentes estrategias.",
+      "Cierre": "Se dedica un espacio final para resolver las últimas preguntas sobre cualquier ejercicio del repaso o tema del trimestre. El \"Repaso de Examen\" debe estar completamente resuelto. Se hace un resumen grupal de los errores más comunes detectados durante la semana y se enfatizan las estrategias para evitarlos. El docente comparte recomendaciones prácticas para el día del examen: leer con atención cada pregunta, administrar el tiempo, revisar las respuestas y, sobre todo, confiar en el conocimiento adquirido. Se ofrece un mensaje de aliento para reducir la ansiedad y motivar a los estudiantes a dar su mejor esfuerzo.",
+      "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
+      "EvaluacionFormativa": [
+        "Revisión diaria del avance en la preparación de los conocimientos hacia la Evaluación de la Unidad.",
+        "La participación en las puestas en común y la claridad al explicar sus dudas o soluciones."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+        "Repaso de Unidad"
+      ],
+      "Proyectos": [],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "Vinculacion": "",
+      "Worklist": [
+        "Repaso de Unidad"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "Repaso de Unidad"
+      ]
+    },
+    {
+      "PeriodosLectivos": 5,
+      "FechaDeInicio": "3 nov",
+      "FechaDeCierre": "7 nov",
+      "SemanaEscolar": 10,
+      "Contenido": "Semana de evaluación trimestral",
+      "Aprendizaje": "Fortalecer y verificar la comprensión de los procedimientos y conceptos matemáticos estudiados durante el trimestre, para aplicarlos en la resolución de problemas y tener éxito en la evaluación",
+      "Tema": "Evaluación de la unidad",
+      "Leccion": "Examen de Unidad",
+      "Inicio": "Se presenta el objetivo de la semana: prepararse de manera efectiva para el examen trimestral. Se explica la dinámica: se trabajará sobre un documento llamado \"Repaso de Examen\" que contiene ejercicios clave, muy similares a los que encontrarán en la prueba real. Se realiza una \"lluvia de ideas\" rápida en el pizarrón sobre los temas más importantes o los que generaron más dudas durante el trimestre. Esto activa el conocimiento previo y permite al docente identificar focos de atención.",
+      "Desarrollo": "Los alumnos comienzan a resolver el documento \"Repaso de Examen\" de forma individual. El docente monitorea activamente el trabajo en el aula, acercándose a los alumnos para resolver dudas puntuales. Este es el momento clave para ofrecer retroalimentación personalizada. Se fomenta que los alumnos marquen los ejercicios donde tengan mayor dificultad. Al final de cada sección temática del repaso (o cada cierto número de ejercicios), se detiene el trabajo individual. El docente o alumnos voluntarios pasan al pizarrón a resolver los problemas que la mayoría marcó como difíciles. Se promueve el diálogo y la comparación de resultados entre compañeros, fomentando el aprendizaje colaborativo. Se pregunta: \"¿Alguien lo resolvió de otra manera?\" para validar diferentes estrategias.",
+      "Cierre": "Se dedica un espacio final para resolver las últimas preguntas sobre cualquier ejercicio del repaso o tema del trimestre. El \"Repaso de Examen\" debe estar completamente resuelto. Se hace un resumen grupal de los errores más comunes detectados durante la semana y se enfatizan las estrategias para evitarlos. El docente comparte recomendaciones prácticas para el día del examen: leer con atención cada pregunta, administrar el tiempo, revisar las respuestas y, sobre todo, confiar en el conocimiento adquirido. Se ofrece un mensaje de aliento para reducir la ansiedad y motivar a los estudiantes a dar su mejor esfuerzo.",
+      "EjesArticuladores": "Pensamiento Crítico",
+      "EvaluacionFormativa": [
+        "Se realizará a través de la observación directa del desempeño del alumno al resolver los ejercicios.",
+        "La participación en las puestas en común y la claridad al explicar sus dudas o soluciones."
+      ],
+      "Evidencias": [],
+      "Actividades": [
+      ],
+      "Proyectos": [
+        "Examen de Unidad"
+      ],
+      "LibroSep": "MeXmáticas",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos en MeXmáticas",
+      "Vinculacion": "",
+      "Worklist": [
+        "Examen de Unidad"
+      ],
+      "Libros": [
+        "MeXmáticas",
+        "Apuntes de clase"
+      ],
+      "ActPro": [
+        "Examen de Unidad"
       ]
     }
   ]

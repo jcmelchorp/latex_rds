@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
@@ -76,7 +76,7 @@
 %     \end{tcolorbox}
 % }
 \tcbset{
-    titlebox/.style={
+    unitbox/.style={
         colbacktitle=white,
         colback=rdsColor!0.5!white,
         % colframe=rdsColor,
@@ -98,16 +98,16 @@
             colupper=green!30!black,
         }
     },
-    infobox/.style={
+    semanabox/.style={
         coltitle=green!30!black,
         colframe=rdsColor,
         colback=rdsColor!1!white,
         colbacktitle=rdsColor!10,
         boxrule=0.1pt,
         frame style={rdsColor},
-        top=3pt,
+        top=0pt,
         bottom=0pt,
-        left=-5pt,
+        left=-7pt,
         right=0pt
     }
 }
@@ -164,28 +164,6 @@ $\square$ & \JSONParseArrayValue  \\
     enhanced,
 }
 
-\newcommand{\rangofecha}[2]{
-    \begin{tikzpicture}[baseline]
-        \node (box) [rdsColor,
-            draw,                   % Dibuja el borde
-            fill=white,
-            anchor=base,baseline,
-            rounded corners=4pt,    % Redondea las esquinas
-            minimum width=3cm,      % Ancho total
-            minimum height=1.5em,    % Alto total
-            yshift=0.3em,
-            blur shadow={
-                shadow opacity=50,
-                shadow blur steps=5,
-                shadow blur extra rounding=5pt
-            },
-        ] {}; % El nodo no lleva texto dentro, solo define la forma.
-        \draw[rdsColor] ([xshift=-1mm]box.north) -- ([xshift=1mm]box.center) -- ([xshift=-1mm]box.south);
-        \node[black] at ([xshift=-0.8cm]box.center) {#1};
-        \node[black] at ([xshift=0.8cm]box.center) {#2};
-    \end{tikzpicture}%
-}
-
 % Comando para mostrar el string asociado y su estilo
 \newcommand{\classtitle}[1]{%
   \ifthenelse{\equal{#1}{math1}}{\textcolor{mathColor}{\textbf{Matemáticas 1}}}{}%
@@ -206,10 +184,10 @@ $\square$ & \JSONParseArrayValue  \\
 \newcommand{\planner}[3]{%
     \def\disciplina{\classtitle{#2#1}}
     \def\gradogrupo{\leveltitle{#1}}
-    \def\schoolinfo{\RaggedRight%
+    \def\schoolinfounit{\RaggedRight%
         {\color{rdsColor}\LARGE Escuela Rafael Díaz Serdán}\\[-0.5em]
         {\color{gray!40!black}\scriptsize\sffamily 30PES0329R \hspace{0.5\linewidth} turno matutino }\\[0.2em]
-        {\color{green!20!black} \fontsize{12}{12}\selectfont \sffamily Autocontrol del alumno}\\
+        {\color{green!20!black}\large\sffamily Autocontrol del alumno}\\
         {\color{black!90}{\sffamily Profesor:} Julio César Melchor Pinto}\\
         %{\sffamily   Saberes y pensamiento científico}\\
     }
@@ -223,8 +201,29 @@ $\square$ & \JSONParseArrayValue  \\
     %\QueryFiles[reverse]{*.json}{\JSONParseFromFile{\weekdata}{##1}}
 }
 
+\newcommand{\semanafecha}[1]{
+    \begin{tikzpicture}[baseline]
+        \node (box) [rdsColor,
+            draw,                   % Dibuja el borde
+            fill=white,
+            anchor=base,overlay,
+            rounded corners=2pt,    % Redondea las esquinas
+            minimum width=3cm,      % Ancho total
+            minimum height=1.4em,    % Alto total
+            yshift=0.5em,
+            blur shadow={
+                shadow opacity=50,
+                shadow blur steps=5,
+                shadow blur extra rounding=5pt
+            },
+        ] {}; % El nodo no lleva texto dentro, solo define la forma.
+        \draw[rdsColor] ([xshift=-1mm]box.north) -- ([xshift=1mm]box.center) -- ([xshift=-1mm]box.south);
+        \node[black] at ([xshift=-0.8cm]box.center) {\JSONParseValue{\weekdata}{weeks[#1].FechaDeInicio}};
+        \node[black] at ([xshift=0.8cm]box.center) {\JSONParseValue{\weekdata}{weeks[#1].FechaDeCierre}};
+    \end{tikzpicture}%
+}
 
-\newcommand{\arrayitemize}[2]{%
+\newcommand{\arrayitemizeweek}[2]{%
 \JSONParseArrayMapFunction[
     code before={\begin{itemize}[label=\large$\square$,leftmargin=30pt,itemsep=-0.8em,itemindent=0em]},
     code after={\end{itemize}}
@@ -237,13 +236,20 @@ $\square$ & \JSONParseArrayValue  \\
 ]{\weekdata}{weeks[#1].#2}{\rowitemtable}
 }
 
+\newcommand{\periodoslectivos}[1]{%
+    \tcbox[colframe=rdsColor,size=fbox,on line]{%
+        {\large\JSONParseValue{\weekdata}{weeks[#1].PeriodosLectivos}}\ %
+        \begin{minipage}[b]{0.8cm}\sffamily\tiny Períodos\\lectivos\end{minipage}%
+    }%
+}
+
 % Comando para el diseño del encabezado
 \def\studentTitle{%
     \begin{minipage}{0.1\textwidth}
         \LOGO
     \end{minipage}%
     \begin{minipage}{0.33\textwidth}
-        \schoolinfo
+        \schoolinfounit
     \end{minipage}%
     \begin{tabularx}{0.57\textwidth}{rYr}
          {\large\sffamily Disciplina:} & {\large\disciplina} &  {\large\unitinfo}  \\ 
@@ -256,19 +262,19 @@ $\square$ & \JSONParseArrayValue  \\
 
 \begin{document}
 % \planner{0}{test}{1}%%
-%\planner{1}{math}{3}%
-%\planner{2}{math}{1}%
-%\planner{3}{math}{1}%
+\planner{1}{math}{1}%
+% \planner{2}{math}{1}%
+% \planner{3}{math}{1}%
  %\planner{3}{chem}{3}%
-\planner{2}{phys}{2}%
-    \begin{tcolorbox}[titlebox,title=\studentTitle]
+% \planner{2}{phys}{2}%
+    \begin{tcolorbox}[unitbox,title=\studentTitle]
         \begin{multicols}{2}
         \begin{tcbraster}[raster columns=1,  
             %sharp corners,raster column skip= 0.5mm,raster equal height,
              nobeforeafter, raster width=0.97\linewidth]
         \JSONParseArrayMapInline{\weekdata}{weeks}{%
-        \begin{tcolorbox}[infobox,title={\rangofecha{\JSONParseValue{\weekdata}{weeks[#1].FechaDeInicio}}{\JSONParseValue{\weekdata}{weeks[#1].FechaDeCierre}} \ Semana \textbf{\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}} \JSONParseValue{\weekdata}{weeks[#1].Tema}}]
-            \arrayitemize{#1}{Worklist}
+        \begin{tcolorbox}[semanabox,title={\semanafecha{#1} \ \textbf{\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}} \JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill \periodoslectivos{#1}}]
+            \arrayitemizeweek{#1}{Worklist}
             %\arrayitemtable{#1}{Worklist}
         \end{tcolorbox}
         }

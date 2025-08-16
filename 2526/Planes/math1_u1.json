@@ -92,7 +92,7 @@
       ]
     },
     {
-      "PeriodosLectivos": 5,
+      "PeriodosLectivos": 3,
       "FechaDeInicio": "15 sept",
       "FechaDeCierre": "19 sept",
       "SemanaEscolar": 3,
@@ -130,7 +130,7 @@
       ]
     },
     {
-      "PeriodosLectivos": 5,
+      "PeriodosLectivos": 4,
       "FechaDeInicio": "22 sept",
       "FechaDeCierre": "26 sept",
       "SemanaEscolar": 4,
@@ -251,8 +251,8 @@
     },
     {
       "PeriodosLectivos": 5,
-      "FechaDeInicio": "20 oct",
-      "FechaDeCierre": "24 oct",
+      "FechaDeInicio": "13 oct",
+      "FechaDeCierre": "17 oct",
       "SemanaEscolar": 7,
       "Contenido": "Suma y resta de números negativos.",
       "Aprendizaje": "El alumno sumará y restará números negativos correctamente.",
@@ -298,16 +298,16 @@
     },
     {
       "PeriodosLectivos": 5,
-      "FechaDeInicio": "27 oct",
-      "FechaDeCierre": "31 oct",
+      "FechaDeInicio": "20 oct",
+      "FechaDeCierre": "24 oct",
       "SemanaEscolar": 8,
       "Contenido": "Multiplicación, división y potencias con números negativos.",
       "Aprendizaje": "El alumno multiplicará, dividirá y calculará potencias de números negativos siguiendo las reglas correspondientes.",
       "Tema": "Números negativos.",
       "Leccion": "Multiplicación y división",
-      "Inicio": "La clase iniciará con un repaso de la suma y resta de números negativos, seguido de una introducción a la multiplicación y división de números negativos, explicando las reglas y por qué se cumplen matemáticamente. Los estudiantes discutirán en parejas las reglas básicas y sus aplicaciones.",
-      "Desarrollo": "El docente demostrará cómo multiplicar y dividir números negativos, utilizando ejemplos concretos y ejercicios dirigidos. Se explorarán las potencias de números negativos y las reglas para calcularlas correctamente. Los alumnos realizarán ejercicios en grupos pequeños para reforzar estas habilidades, utilizando recursos visuales y manipulativos.",
-      "Cierre": "Para cerrar la unidad, los alumnos participarán en un juego interactivo de desafíos matemáticos donde aplicarán todas las operaciones vistas con números negativos. Se realizará una evaluación sumativa para medir el aprendizaje y se discutirá en grupo cómo estas habilidades se aplican en situaciones reales, cerrando con una reflexión sobre los aprendizajes alcanzados y su utilidad en la vida cotidiana.",
+      "Inicio": "La clase iniciará con un repaso de la suma y resta de números negativos, seguido de una introducción a la multiplicación y división de números negativos, explicando las reglas y por qué se cumplen matemáticamente. Los estudiantes discutirán en parejas las reglas básicas y sus aplicaciones. Continuará con un breve repaso sobre la conversión de fracciones a decimales y se introducirá la idea inversa: convertir decimales a fracciones. Compartirán sus ideas iniciales y se discutirá la utilidad de esta habilidad.",
+      "Desarrollo": "El docente demostrará cómo multiplicar y dividir números negativos, utilizando ejemplos concretos y ejercicios dirigidos. Se explorarán las potencias de números negativos y las reglas para calcularlas correctamente. Los alumnos realizarán ejercicios en grupos pequeños para reforzar estas habilidades, utilizando recursos visuales y manipulativos. El profesor demostrará cómo convertir decimales a fracciones mediante ejemplos paso a paso, y los alumnos practicarán con ejercicios dirigidos. Se mostrará la recta numérica y se explicará cómo se pueden comparar números negativos, utilizando actividades visuales y manipulativas para reforzar el concepto.",
+      "Cierre": "Para cerrar la unidad, los alumnos participarán en un juego interactivo de desafíos matemáticos donde aplicarán todas las operaciones vistas con números negativos. Se realizará una evaluación sumativa para medir el aprendizaje y se discutirá en grupo cómo estas habilidades se aplican en situaciones reales, cerrando con una reflexión sobre los aprendizajes alcanzados y su utilidad en la vida cotidiana. Los alumnos resolverán una serie de problemas que requieran tanto la conversión de decimales a fracciones como la comparación de números negativos en la recta numérica. Se realizará una discusión final para aclarar dudas y consolidar los aprendizajes, y se asignará un ejercicio de práctica para casa.",
       "EjesArticuladores": "Apropiación de las culturas. Pensamiento crítico",
       "EvaluacionFormativa": [
         "Evaluación sumativa con ejercicios de multiplicación, división y potencias."
@@ -344,20 +344,21 @@
       ]
     },
     {
-      "PeriodosLectivos": 5,
-      "FechaDeInicio": "13 oct",
-      "FechaDeCierre": "17 oct",
+      "PeriodosLectivos": 4,
+      "FechaDeInicio": "27 oct",
+      "FechaDeCierre": "31 oct",
       "SemanaEscolar": 9,
-      "Contenido": "Conversión de decimales a fracciones y comparación de números negativos.",
-      "Aprendizaje": "El alumno convertirá decimales a fracciones y comparará números negativos.",
+      "Contenido": "Recapitulación e integración de los conocimientos y aprendizajes.",
+      "Aprendizaje": "Fortalecer y verificar la comprensión de los procedimientos y conceptos matemáticos estudiados durante el trimestre, para aplicarlos en la resolución de problemas y tener éxito en la evaluación",
       "Tema": "Preparación a la evaluación",
-      "Leccion": "Conversión y comparación.",
-      "Inicio": "Se iniciará con un breve repaso sobre la conversión de fracciones a decimales y se introducirá la idea inversa: convertir decimales a fracciones. Compartirán sus ideas iniciales y se discutirá la utilidad de esta habilidad.",
-      "Desarrollo": "El profesor demostrará cómo convertir decimales a fracciones mediante ejemplos paso a paso, y los alumnos practicarán con ejercicios dirigidos. Se mostrará la recta numérica y se explicará cómo se pueden comparar números negativos, utilizando actividades visuales y manipulativas para reforzar el concepto.",
-      "Cierre": "Para cerrar, los alumnos resolverán una serie de problemas que requieran tanto la conversión de decimales a fracciones como la comparación de números negativos en la recta numérica. Se realizará una discusión final para aclarar dudas y consolidar los aprendizajes, y se asignará un ejercicio de práctica para casa.",
+      "Leccion": "Revisión grupal de los saberes acumulados en el período de evaluación",
+      "Inicio": "Se presenta el objetivo de la semana: prepararse de manera efectiva para el examen trimestral. Se explica la dinámica: se trabajará sobre un documento llamado \"Repaso de Examen\" que contiene ejercicios clave, muy similares a los que encontrarán en la prueba real. Se realiza una \"lluvia de ideas\" rápida en el pizarrón sobre los temas más importantes o los que generaron más dudas durante el trimestre. Esto activa el conocimiento previo y permite al docente identificar focos de atención.",
+      "Desarrollo": "Los alumnos comienzan a resolver el documento \"Repaso de Examen\" de forma individual. El docente monitorea activamente el trabajo en el aula, acercándose a los alumnos para resolver dudas puntuales. Este es el momento clave para ofrecer retroalimentación personalizada. Se fomenta que los alumnos marquen los ejercicios donde tengan mayor dificultad. Al final de cada sección temática del repaso (o cada cierto número de ejercicios), se detiene el trabajo individual. El docente o alumnos voluntarios pasan al pizarrón a resolver los problemas que la mayoría marcó como difíciles. Se promueve el diálogo y la comparación de resultados entre compañeros, fomentando el aprendizaje colaborativo. Se pregunta: \"¿Alguien lo resolvió de otra manera?\" para validar diferentes estrategias.",
+      "Cierre": "Se dedica un espacio final para resolver las últimas preguntas sobre cualquier ejercicio del repaso o tema del trimestre. El \"Repaso de Examen\" debe estar completamente resuelto. Se hace un resumen grupal de los errores más comunes detectados durante la semana y se enfatizan las estrategias para evitarlos. El docente comparte recomendaciones prácticas para el día del examen: leer con atención cada pregunta, administrar el tiempo, revisar las respuestas y, sobre todo, confiar en el conocimiento adquirido. Se ofrece un mensaje de aliento para reducir la ansiedad y motivar a los estudiantes a dar su mejor esfuerzo.",
       "EjesArticuladores": "Inclusión, Pensamiento crítico, Interculturalidad crítica.",
       "EvaluacionFormativa": [
-        "Actividades de comparación en recta numérica y ejercicios de conversión."
+        "Revisión diaria del avance en la preparación de los conocimientos hacia la Evaluación de la Unidad.",
+        "La participación en las puestas en común y la claridad al explicar sus dudas o soluciones."
       ],
       "Evidencias": [],
       "Actividades": [
@@ -366,7 +367,7 @@
       "Proyectos": [],
       "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Biología: }  Expresa la probabilidad de heredar rasgos genéticos en forma de porcentajesExpresa la probabilidad de heredar rasgos genéticos en forma de porcentajes.",
+      "Vinculacion": "",
       "Worklist": [
         "Repaso de Unidad"
       ],
@@ -387,22 +388,21 @@
       "Aprendizaje": "Fortalecer y verificar la comprensión de los procedimientos y conceptos matemáticos estudiados durante el trimestre, para aplicarlos en la resolución de problemas y tener éxito en la evaluación",
       "Tema": "Semana de evaluación",
       "Leccion": "Examen de Unidad",
-      "Inicio": "Se presenta el objetivo de la semana: prepararse de manera efectiva para el examen trimestral. Se explica la dinámica: se trabajará sobre un documento llamado \"Repaso de Examen\" que contiene ejercicios clave, muy similares a los que encontrarán en la prueba real. Se realiza una \"lluvia de ideas\" rápida en el pizarrón sobre los temas más importantes o los que generaron más dudas durante el trimestre. Esto activa el conocimiento previo y permite al docente identificar focos de atención.",
-      "Desarrollo": "Los alumnos comienzan a resolver el documento \"Repaso de Examen\" de forma individual. El docente monitorea activamente el trabajo en el aula, acercándose a los alumnos para resolver dudas puntuales. Este es el momento clave para ofrecer retroalimentación personalizada. Se fomenta que los alumnos marquen los ejercicios donde tengan mayor dificultad. Al final de cada sección temática del repaso (o cada cierto número de ejercicios), se detiene el trabajo individual. El docente o alumnos voluntarios pasan al pizarrón a resolver los problemas que la mayoría marcó como difíciles. Se promueve el diálogo y la comparación de resultados entre compañeros, fomentando el aprendizaje colaborativo. Se pregunta: \"¿Alguien lo resolvió de otra manera?\" para validar diferentes estrategias.",
-      "Cierre": "Se dedica un espacio final para resolver las últimas preguntas sobre cualquier ejercicio del repaso o tema del trimestre. El \"Repaso de Examen\" debe estar completamente resuelto. Se hace un resumen grupal de los errores más comunes detectados durante la semana y se enfatizan las estrategias para evitarlos. El docente comparte recomendaciones prácticas para el día del examen: leer con atención cada pregunta, administrar el tiempo, revisar las respuestas y, sobre todo, confiar en el conocimiento adquirido. Se ofrece un mensaje de aliento para reducir la ansiedad y motivar a los estudiantes a dar su mejor esfuerzo.",
+      "Inicio": "Se da la bienvenida a los estudiantes a la semana de evaluación, estableciendo como objetivo principal no solo medir el conocimiento a través de un examen, sino también reflexionar sobre el proceso de aprendizaje del trimestre. Se establece un ambiente de concentración y se fomenta una actitud proactiva, explicando que cada actividad está diseñada para consolidar sus saberes. La primera parte de la semana se dedica a un período lectivo de repaso y preparación final, donde, a través de una competencia lúdica con preguntas clave y la resolución de un examen de simulación, los alumnos identifican sus fortalezas y áreas de oportunidad antes de la prueba sumativa.",
+      "Desarrollo": "El núcleo de la semana se centra en la aplicación de la evaluación y la retroalimentación del proceso, distribuido en los siguientes períodos lectivos clave. La primera sesión se dedica a la resolución individual del examen. Se generan las condiciones óptimas de silencio y concentración, dando indicaciones claras y precisas. El docente supervisa el proceso, asegurando la equidad y el cumplimiento de las normas para una evaluación objetiva del aprendizaje alcanzado. Una vez calificados, se entregan los exámenes a los alumnos. En lugar de solo informar una nota, se realiza una revisión grupal de los reactivos con mayor índice de error. Se explica el razonamiento detrás de las respuestas correctas, convirtiendo la evaluación en una oportunidad de aprendizaje tangible y permitiendo que los alumnos comprendan el origen de sus equivocaciones. Los alumnos entregan su portafolio de evidencias junto con un formato de Autocontrol, donde verifican haber completado todos los trabajos y actividades del trimestre. Esta entrega complementa la calificación del examen, valorando también el esfuerzo, la organización y la constancia demostrada durante el período.",
+      "Cierre": "Se dedica la última sesión a cerrar formalmente el trimestre. Se da una retroalimentación general al grupo sobre su desempeño y se presenta de manera atractiva y motivadora el proyecto o los temas centrales que se abordarán en el siguiente periodo. Se puede realizar una actividad breve y creativa de arranque para generar curiosidad e interés por lo que está por venir.",
       "EjesArticuladores": "Pensamiento Crítico",
       "EvaluacionFormativa": [
-        "Se realizará a través de la observación directa del desempeño del alumno al resolver los ejercicios.",
+        "Revisión diaria del avance en la preparación de los conocimientos hacia la Evaluación de la Unidad.",
         "La participación en las puestas en común y la claridad al explicar sus dudas o soluciones."
       ],
       "Evidencias": [],
-      "Actividades": [
-      ],
+      "Actividades": [],
       "Proyectos": [
         "Examen de Unidad"
       ],
       "LibroSep": "MeXmáticas",
-      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
+      "LibroMcMillan": "Apuntes de clase y ejercicios propuestos en MeXmáticas",
       "Vinculacion": "",
       "Worklist": [
         "Examen de Unidad"
