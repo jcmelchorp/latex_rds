@@ -20,7 +20,7 @@
 \usepackage{enumitem} % for custom \item
 \usepackage{pgffor}
 \usepackage{tikz}
-\usetikzlibrary{shapes, positioning,shadows}
+\usetikzlibrary{shapes, positioning,shadows,calendar,decorations.markings}
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes.symbols}
 \usepackage{xparse} %for NewDocumentCommand
@@ -84,7 +84,7 @@
     }
 }
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-            \node[shape=circle,draw,inner sep=1pt,fill=white,drop shadow] (char) {#1};}}
+            \node[shape=circle,draw,inner sep=0.5pt,fill=white,circular glow={fill=rdsColor!40!white},thin] (char) {#1};}}
 
 \def\LOGO{%
     \begin{picture}(0,0)\unitlength=2cm
@@ -222,7 +222,7 @@ $\square$ & \JSONParseArrayValue  \\
 \JSONParseArrayMapFunction[%
     code before={%
     \begin{tcolorbox}[
-        before app={Semana \circled{\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}}\\[0.5em]},
+        before app={},
         after app={},
         enhanced,
         drop fuzzy shadow=black!75,
@@ -234,6 +234,7 @@ $\square$ & \JSONParseArrayValue  \\
         colframe=rdsColor,
         toptitle=0mm,
         bottomtitle=0mm,
+        lefttitle=1mm,
         width=0.8\linewidth,
         title={\coolTitle{#1}}]%
         {\footnotesize\sffamily\qquad Actividad} & {\footnotesize\sffamily Fecha \ \! C  \! \ L \! \ O \! Pr \! Pu Tot.} \\\hline\hline%
@@ -249,9 +250,9 @@ $\square$ & \JSONParseArrayValue  \\
 }
 
 \newcommand{\coolTitle}[1]{% %
-\tcbox[on line,size=fbox,arc=1.5pt,colback=orange!10!white,colframe=rdsColor!50,sharp corners=southwest]{\large\JSONParseValue{\weekdata}{weeks[#1].FechaDeInicio} \textbf{<} \JSONParseValue{\weekdata}{weeks[#1].FechaDeCierre}} \ %
-\JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill
-  \periodoslectivos{\JSONParseValue{\weekdata}{weeks[#1].PeriodosLectivos}}%
+{\small\circled{\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}}} \JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill
+\tcbox[on line,size=fbox,arc=1.5pt,colback=orange!10!white,colframe=rdsColor!50,sharp corners=southwest]{\large\JSONParseValue{\weekdata}{weeks[#1].FechaDeInicio} \textbf{<} \JSONParseValue{\weekdata}{weeks[#1].FechaDeCierre}}
+\periodoslectivos{\JSONParseValue{\weekdata}{weeks[#1].PeriodosLectivos}}%
 }
 
 
@@ -273,15 +274,62 @@ $\square$ & \JSONParseArrayValue  \\
     \end{tabularx}
 }
 
+
+
+\newcommand{\calrow}[1]{\node[anchor=base east](lun){L};
+\node[base right=of lun](mar){Ma}; \node[base right=of mar](mer){Mi};
+\node[base right=of mer](gio){J}; \node[base right=of gio](ven){V};
+\node[base right=of ven](sab){S}; \node[base right=of sab](dom){D};
+\node[darkgreen,above=of gio]{\textbf{#1}};}
+ 
+\newcommand{\calperiod}[1]{\calendar[dates=\the\year-#1-01 to \the\year-#1-last]
+if(Sunday,Saturday) [black!30] \holidays;%
+}
+ 
+\newcommand{\holidays}{% holidays in Italy
+if (equals=09-16) [red!100]%
+if (equals=09-26) [green!50!black]%
+if (equals=10-31) [green!50!black]%
+if (between=\year-11-17 and \year-11-last) [black!30];
+}
+ 
+\colorlet{darkgreen}{rdsColor}
+
+
 \begin{document}
 %%  \planner{grado}{materia}{unidad}
-  \plannerof{0}{test}{1}%%
-%   \plannerof{1}{math}{1}%
+%   \plannerof{0}{test}{1}%%
+  \plannerof{1}{math}{1}%
 %   \plannerof{2}{math}{1}%
 %   \plannerof{3}{math}{1}%
 %   \plannerof{3}{chem}{1}%   
 %   \plannerof{2}{phys}{1}%
 \begin{tcolorbox}[unitbox,title=\unitboxtitle,breakable,halign=center]
+    \begin{tikzpicture}[every calendar/.style={week list}]
+        \sffamily
+        \matrix[%
+        row 1/.style={darkgreen,node distance=.3ex},%
+        row 3/.style={darkgreen,node distance=.6ex},
+        column sep=2ex,%
+        draw=darkgreen,thick,rounded corners=1pt,%
+        postaction={decorate,decoration={markings,mark=at position 0.01 with
+        {\node[fill=white,text=darkgreen,font={\bfseries\Large}] (year) {\the\year};}}}
+        % append after command={ 
+        %     \pgfextra{\edef\matrixname{\tikzlastnode}}
+        %         node [year label/.try, right=1ex of \matrixname.south west] {\currentyear}}% year on frame: decorations.markings library
+        ]{%
+        % first row: week day and month
+        \calrow{Septiembre} & \calrow{Octubre} & \calrow{Noviembre}   \\
+        % second row: calendar
+        \calperiod{09} & \calperiod{10} & \calperiod{11}  \\[1ex]
+        % % third row: week day and month
+        % \calrow{Enero} & \calrow{Febrero} & \calrow{Marzo} &
+        % \calrow{Abril} & \calrow{Mayo} & \calrow{Junio} \\
+        % % forth row: calendar
+        % \calperiod{01} & \calperiod{02} & \calperiod{03} &
+        % \calperiod{04} & \calperiod{05} & \calperiod{06} \\
+        };
+        \end{tikzpicture}
     \JSONParseArrayMapInline{\weekdata}{weeks}{\tableta{#1}}
 \end{tcolorbox}
 \end{document}
