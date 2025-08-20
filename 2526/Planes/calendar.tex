@@ -1,52 +1,108 @@
-\documentclass{article}
-\usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{tikz}
-\usepackage{array}
-\usetikzlibrary {calendar}
-\newcommand{\calrow}[1]{\node[anchor=base east](lun){L};
-\node[base right=of lun](mar){Ma}; \node[base right=of mar](mer){Mi};
-\node[base right=of mer](gio){J}; \node[base right=of gio](ven){V};
-\node[base right=of ven](sab){S}; \node[base right=of sab](dom){D};
-\node[darkgreen,above=of gio]{\textbf{#1}};}
- 
-\newcommand{\calperiod}[1]{\calendar[dates=\the\year-#1-01 to \the\year-#1-last]
-if(Sunday,Saturday) [black!30] \holidays;%
-}
- 
-\newcommand{\holidays}{% holidays in Italy
-if (equals=09-16) [red!100]%
-if (equals=09-26) [green!50!black]%
-if (equals=10-31) [green!50!black]%
-if (between=\year-11-17 and \year-11-last) [black!30];
-}
- 
-\colorlet{darkgreen}{rdsColor}
-
+\documentclass{extrariticle}
+\usepackage{calendar} % Use the calendar.sty style
+\usepackage[landscape,margin=0.5in]{geometry}
 \begin{document}
- \begin{tikzpicture}[every calendar/.style={week list}]
-        \sffamily
-        \matrix[%
-        row 1/.style={darkgreen,node distance=.3ex},%
-        row 3/.style={darkgreen,node distance=.6ex},
-        column sep=2ex,%
-        draw=darkgreen,thick,rounded corners=1pt,%
-        postaction={decorate,decoration={markings,mark=at position 0.01 with
-        {\node[fill=white,text=darkgreen,font={\bfseries\Large}] (year) {\the\year};}}}
-        % append after command={ 
-        %     \pgfextra{\edef\matrixname{\tikzlastnode}}
-        %         node [year label/.try, right=1ex of \matrixname.south west] {\currentyear}}% year on frame: decorations.markings library
-        ]{%
-        % first row: week day and month
-        \calrow{Septiembre} & \calrow{Octubre} & \calrow{Noviembre}   \\
-        % second row: calendar
-        \calperiod{09} & \calperiod{10} & \calperiod{11}  \\[1ex]
-        % % third row: week day and month
-        % \calrow{Enero} & \calrow{Febrero} & \calrow{Marzo} &
-        % \calrow{Abril} & \calrow{Mayo} & \calrow{Junio} \\
-        % % forth row: calendar
-        % \calperiod{01} & \calperiod{02} & \calperiod{03} &
-        % \calperiod{04} & \calperiod{05} & \calperiod{06} \\
-        };
-        \end{tikzpicture}
-        \end{document}
+\pagestyle{empty} % Removes the page number from the bottom of the page
+\noindent
+\StartingDayNumber=1 % Calendar starting day, default of 1 means Sunday, 2 for Monday, etc
+\begin{center}
+\textsc{\LARGE Title}\\ % Title text
+\textsc{\large Subtitle} % Subtitle text
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{calendar}{\hsize}
+
+%----------------------------------------------------------------------------------------
+%   FIRST DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{\textbf{9am-5pm} \daysep Work at McDonald's} % By default all daily events are centered in the box, in order to bring them up use \vspace{2cm} after the event text; you may need to change the 2cm
+
+%----------------------------------------------------------------------------------------
+%   SECOND DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{
+\textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\[3pt]
+\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+\textbf{2pm-5pm} \daysep BIOSCI101 Laboratory \\[3pt]
+%\textbf{3pm-4pm} \daysep BIOSCI101 Laboratory \\[3pt]
+%\textbf{4pm-5pm} \daysep BIOSCI101 Laboratory
+} 
+
+%----------------------------------------------------------------------------------------
+%   THIRD DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Tuesday
+\textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\[3pt]
+\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+%\textbf{12pm-1pm} \daysep No Lecture \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+\textbf{2pm-3pm} \daysep GEO101 - HSB1 \\[3pt]
+%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
+%\textbf{4pm-5pm} \daysep No Lecture
+} 
+
+%----------------------------------------------------------------------------------------
+%   FOURTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Wednesday
+%\textbf{9am-10am} \daysep No Lecture \\[3pt]
+\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+\textbf{2pm-3pm} \daysep GEO101 - HSB1 \\[3pt]
+%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
+%\textbf{4pm-5pm} \daysep No Lecture
+} 
+
+%----------------------------------------------------------------------------------------
+%   FIFTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Thursday
+%\textbf{9am-10am} \daysep No Lecture \\[3pt]
+\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+%\textbf{12pm-1pm} \daysep No Lecture \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+\textbf{2pm-3pm} \daysep GEO101 - HSB1 \\[3pt]
+%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
+%\textbf{4pm-5pm} \daysep No Lecture
+} 
+
+%----------------------------------------------------------------------------------------
+%   SIXTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Friday
+\textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\[3pt]
+\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+%\textbf{2pm-3pm} \daysep No Lecture \\[3pt]
+\textbf{3pm-4pm} \daysep GEO101 Tutorial \\ Room A \\[3pt]
+%\textbf{4pm-5pm} \daysep No Lecture
+} 
+
+%----------------------------------------------------------------------------------------
+%   SEVENTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{} % Saturday
+
+%----------------------------------------------------------------------------------------
+
+\finishCalendar
+\end{calendar}
+\end{document}

@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[calc]{datetime2}
+\usepackage{datetime2-spanish}
+
+\begin{document}
+
+\DTMsetstyle{spanish}
+
+\DTMnewdatestyle{spanishshort}{%
+    \renewcommand{\DTMdisplaydate}[4]{%
+        \number##3 de \DTMspanishmonthname{##2} de \number##1%
+    }%
+    \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+\DTMsetdatestyle{spanishshort}
+
+La fecha de hoy es: \today.
+
+\end{document}
