@@ -1,108 +1,136 @@
-\documentclass{extrariticle}
-\usepackage{calendar} % Use the calendar.sty style
-\usepackage[landscape,margin=0.5in]{geometry}
+\documentclass[12pt,multi={tikzpicture}]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,calc, positioning,shadows,calendar,decorations.markings}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes.symbols}
+\usepackage[active,tightpage]{preview}
+% \usepackage{babel}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}%
+\usetikzlibrary{calendar,babel}
+\usetikzlibrary{positioning,calendar}
+\usetikzlibrary{decorations.markings}
+\definecolor{rdsColor}{HTML}{0060A0} % Custom colour
+\def\currentyear{2025}
+\def\nextyear{2026}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt,fill=white,circular glow={fill=rdsColor!40!white},thin] (char) {#1};}}
+
+\newcommand{\calrow}[1]{\node[anchor=base east,xshift=-0.0em](lun){L};
+\node[base right=of lun](mar){M}; \node[base right=of mar](mie){X};
+\node[base right=of mie](jue){J}; \node[base right=of jue](vie){V};
+\node[base right=of vie](sab){S}; \node[base right=of sab](dom){D};
+\node[rdsColor,above=of jue]{#1};}
+
+% \newcommand{\calperiod}[1]{\calendar[dates=\the\year-#1-01 to \the\year-#1-last]
+% if(Sunday,Saturday) [black!50] \holidays;}
+\newcounter{ABCD}
+\newcounter{spur}
+\newcommand{\calperiod}[2]{\calendar[dates=#1 to #2,
+execute at begin day scope={\ifdate{Monday}{
+\pgfmathtruncatemacro{\itest}{\pgfcalendarcurrentday}
+\pgfmathtruncatemacro{\iABCD}{\value{spur}} 
+\setcounter{ABCD}{\iABCD}
+\ifnum\itest<8
+\ifnum\itest>1
+\node at (-2em,1.3em) [anchor=base east,text=rdsColor] {\circled{\arabic{ABCD}}};
+\fi
+\fi
+\stepcounter{spur}
+% \pgfmathtruncatemacro{\iABCD}{Mod(\value{spur},12)+1} 
+\pgfmathtruncatemacro{\iABCD}{\value{spur}} 
+\setcounter{ABCD}{\iABCD}
+\node at (-2em,0em) [anchor=base east,text=rdsColor] {\circled{\arabic{ABCD}}};}}]
+    if(Sunday,Saturday) [black!30] \holidays;
+    }
+\newcommand{\holidays}{% holidays in Italy
+if (equals=01-01) [black!50]%
+if (equals=01-06) [black!50]%
+if (equals=04-04) [black!50]%
+if (equals=04-05) [black!50]%
+if (equals=04-25) [black!50]%
+if (equals=05-01) [black!50]%
+if (equals=05-01) [black!50]%
+if (equals=06-02) [black!50]%
+if (equals=08-15) [black!50]%
+if (equals=11-01) [black!50]%
+if (equals=12-08) [black!50]%
+if (equals=12-25) [black!50]%
+if (equals=12-26) [black!50]%
+}
+
+
 \begin{document}
-\pagestyle{empty} % Removes the page number from the bottom of the page
-\noindent
-\StartingDayNumber=1 % Calendar starting day, default of 1 means Sunday, 2 for Monday, etc
-\begin{center}
-\textsc{\LARGE Title}\\ % Title text
-\textsc{\large Subtitle} % Subtitle text
-\end{center}
+\begin{tikzpicture}[every calendar/.style={week list}]
+	\sffamily
+	\matrix[%
+		row 1/.style={rdsColor,node distance=.5ex},%
+		% row 3/.style={rdsColor,node distance=.5ex},
+		% row 5/.style={rdsColor,node distance=.5ex},
+		% row 7/.style={rdsColor,node distance=.5ex},
+		column sep=3ex,%
+		draw=rdsColor,thin,rounded corners=5pt,%
+		postaction={decorate,decoration={markings,mark=at position 0.01 with
+							{\node[fill=white,text=rdsColor,font={\bfseries\Large}] (year)
+								{\currentyear};}}},
+        postaction={decorate,decoration={markings,mark=at position 0.385 with
+                                {\node[fill=white,text=rdsColor,font={\bfseries\Large}] (year)
+                                    {\currentyear};}}},                        
+	]{%
+		 \calrow{Septiembre} & \calrow{Octubre} & \calrow{Noviembre} \\
+		 \calperiod{2025-09-01}{2025-09-30}    & \calperiod{2025-10-01}{2025-10-31}   & \calperiod{2025-11-01}{2025-11-16}    \\           
+	};
+\end{tikzpicture}
+\begin{tikzpicture}[every calendar/.style={week list}]
+\sffamily
+\matrix[%
+    row 1/.style={rdsColor,node distance=.5ex},%
+    row 3/.style={rdsColor,node distance=.5ex},
+    row 5/.style={rdsColor,node distance=.5ex},
+    row 7/.style={rdsColor,node distance=.5ex},
+    row 9/.style={rdsColor,node distance=.5ex},
+    column sep=3ex,%
+    draw=rdsColor,thin,rounded corners=5pt,%
+    postaction={decorate,decoration={markings,mark=at position 0.01 with
+                        {\node[fill=white,text=rdsColor,font={\bfseries\Large}] (year)
+                            {\currentyear};}}},
+    postaction={decorate,decoration={markings,mark=at position 0.61 with
+                        {\node[fill=white,text=rdsColor,font={\bfseries\Large}] (year)
+                            {\nextyear};}}}
+]{%
+     \calrow{Noviembre}  \\ \calperiod{2025-11-17}{2025-11-30}  \\ 
+     \calrow{Diciembre} \\  \calperiod{2025-12-01}{2025-12-18}\\ 
+      \calrow{Enero}  \\ \calperiod{2026-01-12}{2026-01-31}\\  
+      \calrow{Febrero} \\  \calperiod{2026-02-01}{2026-02-last} \\
+     \calrow{Marzo}  \\  \calperiod{2026-03-01}{2026-03-20} \\  
+};
+\end{tikzpicture}%
+\begin{tikzpicture}[every calendar/.style={week list}]
+\sffamily
+\matrix[%
+row 1/.style={rdsColor,node distance=.5ex},%
+row 3/.style={rdsColor,node distance=.5ex},
+row 5/.style={rdsColor,node distance=.5ex},
+row 7/.style={rdsColor,node distance=.5ex},
+row 9/.style={rdsColor,node distance=.5ex},
+column sep=3ex,%
+draw=rdsColor,thin,rounded corners=5pt,%
+postaction={decorate,decoration={markings,mark=at position 0.01 with
+                    {\node[fill=white,text=rdsColor,font={\bfseries\Large}] (year)
+                        {\nextyear};}}},
+postaction={decorate,decoration={markings,mark=at position 0.61 with
+                    {\node[fill=white,text=rdsColor,font={\bfseries\Large}] (year)
+                        {\nextyear};}}}
+]{%
+ \calrow{Marzo}  \\ \calperiod{2026-03-17}{2026-03-31}  \\ 
+ \calrow{Abril} \\  \calperiod{2026-04-01}{2026-04-18}\\ 
+ \calrow{Mayo}  \\ \calperiod{2026-05-01}{2026-05-31}\\  
+ \calrow{Junio} \\  \calperiod{2026-06-01}{2026-06-30} \\
+ \calrow{Julio}  \\  \calperiod{2026-07-01}{2026-07-07} \\  
+};
+\end{tikzpicture}
 
-%----------------------------------------------------------------------------------------
-
-\begin{calendar}{\hsize}
-
-%----------------------------------------------------------------------------------------
-%   FIRST DAY
-%----------------------------------------------------------------------------------------
-
-\day{}{\textbf{9am-5pm} \daysep Work at McDonald's} % By default all daily events are centered in the box, in order to bring them up use \vspace{2cm} after the event text; you may need to change the 2cm
-
-%----------------------------------------------------------------------------------------
-%   SECOND DAY
-%----------------------------------------------------------------------------------------
-
-\day{}{
-\textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\[3pt]
-\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
-%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
-\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
-%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
-\textbf{2pm-5pm} \daysep BIOSCI101 Laboratory \\[3pt]
-%\textbf{3pm-4pm} \daysep BIOSCI101 Laboratory \\[3pt]
-%\textbf{4pm-5pm} \daysep BIOSCI101 Laboratory
-} 
-
-%----------------------------------------------------------------------------------------
-%   THIRD DAY
-%----------------------------------------------------------------------------------------
-
-\day{}{ % Tuesday
-\textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\[3pt]
-\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
-%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
-%\textbf{12pm-1pm} \daysep No Lecture \\[3pt]
-%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
-\textbf{2pm-3pm} \daysep GEO101 - HSB1 \\[3pt]
-%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
-%\textbf{4pm-5pm} \daysep No Lecture
-} 
-
-%----------------------------------------------------------------------------------------
-%   FOURTH DAY
-%----------------------------------------------------------------------------------------
-
-\day{}{ % Wednesday
-%\textbf{9am-10am} \daysep No Lecture \\[3pt]
-\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
-%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
-\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
-%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
-\textbf{2pm-3pm} \daysep GEO101 - HSB1 \\[3pt]
-%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
-%\textbf{4pm-5pm} \daysep No Lecture
-} 
-
-%----------------------------------------------------------------------------------------
-%   FIFTH DAY
-%----------------------------------------------------------------------------------------
-
-\day{}{ % Thursday
-%\textbf{9am-10am} \daysep No Lecture \\[3pt]
-\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
-%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
-%\textbf{12pm-1pm} \daysep No Lecture \\[3pt]
-%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
-\textbf{2pm-3pm} \daysep GEO101 - HSB1 \\[3pt]
-%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
-%\textbf{4pm-5pm} \daysep No Lecture
-} 
-
-%----------------------------------------------------------------------------------------
-%   SIXTH DAY
-%----------------------------------------------------------------------------------------
-
-\day{}{ % Friday
-\textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\[3pt]
-\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
-%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
-\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
-%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
-%\textbf{2pm-3pm} \daysep No Lecture \\[3pt]
-\textbf{3pm-4pm} \daysep GEO101 Tutorial \\ Room A \\[3pt]
-%\textbf{4pm-5pm} \daysep No Lecture
-} 
-
-%----------------------------------------------------------------------------------------
-%   SEVENTH DAY
-%----------------------------------------------------------------------------------------
-
-\day{}{} % Saturday
-
-%----------------------------------------------------------------------------------------
-
-\finishCalendar
-\end{calendar}
 \end{document}

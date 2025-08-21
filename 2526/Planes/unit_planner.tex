@@ -1,7 +1,7 @@
-\documentclass[12pt]{article}
+\documentclass[12pt,multi={tikzpicture}]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+% \usepackage[spanish]{babel}
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{skins,raster,breakable} % Load the breakable library
 \usepackage{amssymb}
@@ -20,14 +20,29 @@
 \usepackage{enumitem} % for custom \item
 \usepackage{pgffor}
 \usepackage{tikz}
-\usetikzlibrary{shapes, positioning,shadows,calendar,decorations.markings}
+\usetikzlibrary{shapes,calc, positioning,shadows,calendar,decorations.markings}
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes.symbols}
 \usepackage{xparse} %for NewDocumentCommand
 \usepackage{etoolbox}
 \usepackage{l3sys-query} %for query JSON files
 \usepackage{lipsum}
-
+\usepackage[calc,es-ES,spanish]{datetime2}
+% Define short month names for Spanish
+\newcommand{\DTMspanishshortMonthname}[1]{%
+  \ifcase#1
+  \or Ene.\or Feb.\or Mar.\or Abr.\or May.\or Jun.\or Jul.\or Ago.\or Sep.\or Oct.\or Nov.\or Dic.\fi
+}
+% Redefine the month name command to use the short version
+\renewcommand{\DTMspanishmonthname}[1]{%
+  \DTMspanishshortMonthname{#1}%
+}
+\DTMnewdatestyle{dashdate}{%
+\renewcommand{\DTMdisplaydate}[4]{%
+ \DTMtwodigits{##3} \DTMspanishmonthname{##2}}%-\number##1 }%
+\renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+\DTMsetdatestyle{dashdate}
 \pagestyle{empty}
 \newcolumntype{Y}{>{\RaggedLeft\arraybackslash}X}
 \renewcommand{\arraystretch}{1.2}
@@ -46,7 +61,16 @@
 \definecolor{sec1Color}{HTML}{86608E}
 \definecolor{sec2Color}{HTML}{4C8BA7}
 \definecolor{sec3Color}{HTML}{A94939}
-
+\tikzset{
+    hyperlink node/.style={
+        alias=@hyper,
+        append after command={
+            let \p1 = (@hyper.north west),
+                \p2 = (@hyper.south east),
+                \n1 = {\x2-\x1}, \n2 = {\y1-\y2} in
+            node [inner sep=+0pt, outer sep=+0pt, anchor=center, at=(@hyper)] {\hyperlink{ref-#1}{\XeTeXLinkBox{\phantom{\rule{\n1}{\n2}}}}}
+        }
+    }}
 \tcbset{
     unitbox/.style={
         colbacktitle=white,
@@ -83,8 +107,34 @@
         right=0pt
     }
 }
+
+% \ExplSyntaxOn
+% \cs_set_eq:NN \ListMapInline \clist_map_inline:nn
+% \prop_new:N \g_marco_fadate_prop
+% \fp_new:N \l_marco_fadate_fp
+% \NewDocumentCommand { \fadate } { m m } {
+%     \prop_gput:Nnn \g_marco_fadate_prop 
+%         {#1} { \fp_val:n {#2}  } 
+%    % use as output reciently created property
+%     #2
+%    }
+% \NewDocumentCommand { \InvoiceTotal } { } {
+%     \fp_zero:N \l_marco_fdate_fp
+%     \prop_map_inline:Nn \g_marco_fdate_prop {
+%         \fp_add:Nn \l_marco_fdate_fp {##2}
+%     }
+%     \fp_use:N \l_marco_fdate_fp
+% }
+% \NewDocumentCommand { \NewlineOrRule } { m m } {
+%     \int_compare:nNnTF {#1} = {#2} { 
+%         \\ \midrule
+%     } {
+%         \\ 
+%     }
+% }
+
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-            \node[shape=circle,draw,inner sep=0.5pt,fill=white,circular glow={fill=rdsColor!40!white},thin] (char) {#1};}}
+            \node[shape=circle,draw,inner sep=2pt,fill=white,circular glow={fill=rdsColor!40!white},thin] (char) {#1};}}
 
 \def\LOGO{%
     \begin{picture}(0,0)\unitlength=2cm
@@ -171,8 +221,89 @@ $\square$ & \JSONParseArrayValue  \\
     \def\cicloescolar{%
         \tcbox[colback=red!10!white,colframe=rdsColor,size=fbox,on line]{2025-2026}
     }
-    \JSONParseFromFile{\weekdata}{#2#1_u#3.json}
+    %\JSONParseFromFile{\weekdata}{#2#1_u#3.json}
     %\QueryFiles[reverse]{*.json}{\JSONParseFromFile{\weekdata}{##1}}
+    \def\unitcalendar{
+        \unitcalendarselector{#3}
+    }
+}
+
+
+\newcommand{\unitcalendarselector}[1]{%
+  \ifthenelse{\equal{#1}{0}}{TESTING}{}%
+  \ifthenelse{\equal{#1}{1}}{%
+\adjustbox{max width=\textwidth}{%
+\tikz[every day/.style={anchor=mid}]
+  \calendar [dates=2025-09-01 to 2025-11-16,
+             week list,month label above centered,
+             month text=\texttt{\%mt \%y0}]
+             if (between=\year-11-16 and \year-11-30) [black!30]%
+             \holidays;
+             }
+% \adjustbox{max width=\textwidth}{%
+% \begin{tikzpicture}[every calendar/.style={week list},
+%         year label/.style={
+%                 fill=white,text=rdsColor,font=\bfseries\large
+%             }, current year/.store in=\currentyear,
+%         current year=2025]%
+%     \matrix[%
+%         row 1/.style={rdsColor,node distance=.3ex},%
+%         row 3/.style={rdsColor,node distance=.3ex},
+%         column sep=1ex,%
+%         draw=rdsColor,thick,rounded corners=1pt,%
+%         append after command={
+%                 \pgfextra{\edef\matrixname{\tikzlastnode}}
+%                 node [year label/.try, right=1ex of \matrixname.north west] {\currentyear}
+%                 node [year label/.try, left=1ex of \matrixname.north east] {\nextyear}
+%             }
+%     ]{%
+%         % first row: week day and month
+%         \calrow{Septiembre} & \calrow{Octubre} & \calrow{Noviembre} \\
+%         % second row: calendar
+%          \calperiod{2025-09-01}{2025-09-30} & \calperiod{2025-10-01}{2025-10-31} & \calperiod{2025-11-01}{2025-11-30} %
+%     };
+% \end{tikzpicture}
+% }
+  }{}%
+  \ifthenelse{\equal{#1}{2}}{%
+    \adjustbox{max width=\textwidth}{%
+    \begin{tikzpicture}[every calendar/.style={week list},
+        year label/.style={
+          fill=white,text=rdsColor,font=\bfseries\Large
+        }, current year/.store in=\currentyear,
+        current year=2025]
+        \matrix[%
+        row 1/.style={rdsColor,node distance=.3ex},%
+        row 3/.style={rdsColor,node distance=.3ex},
+        row 5/.style={rdsColor,node distance=.3ex},
+        row 7/.style={rdsColor,node distance=.3ex},
+        column sep=1ex,%
+        draw=rdsColor,thick,rounded corners=5pt,%
+        append after command={ 
+          \pgfextra{\edef\matrixname{\tikzlastnode}}
+          node [year label/.try, right=1ex of \matrixname.south west] {\currentyear}
+          node [year label/.try, right=1ex of \matrixname.north west] {\currentyear}
+          node [year label/.try, left=1ex of \matrixname.south east] {\currentyear}
+          node [year label/.try, left=1ex of \matrixname.north east] {\currentyear}
+        }
+        ]{%
+        % first row: week day and month
+        \calrow{January} & \calrow{February} & \calrow{March} \\
+        \calperiod{01} & \calperiod{02} & \calperiod{03} \\[1ex]
+        % second row: calendar
+        \calrow{April} & \calrow{May} & \calrow{June} \\
+        \calperiod{04} & \calperiod{05} & \calperiod{06} \\[1ex]
+        % third row: week day and month
+        \calrow{July} & \calrow{August} & \calrow{September} \\
+        \calperiod{07} & \calperiod{08} & \calperiod{09} \\[1ex]
+        % forth row: calendar
+        \calrow{October} & \calrow{November} & \calrow{December} \\
+        \calperiod{10} & \calperiod{11} & \calperiod{12} \\[1ex]\\
+        };
+        \end{tikzpicture}
+    }
+  }{}%
+  \ifthenelse{\equal{#1}{3}}{3° de Secundaria}{}
 }
 
 \newcommand{\semanafecha}[1]{
@@ -211,6 +342,10 @@ $\square$ & \JSONParseArrayValue  \\
 %         \begin{minipage}[b]{0.8cm}\sffamily\tiny Períodos\\lectivos\end{minipage}%
 %     }%
 % }
+\newcommand{\rangofechas}[2]{%
+\tcbox[fontupper=\large,on line,size=fbox,arc=1.5pt,colback=orange!10!white,colframe=rdsColor!50,sharp corners=southwest]{\DTMdate{#1} < \DTMdate{#2}}
+}
+
 \newcommand{\periodoslectivos}[1]{%
    \tcbox[,on line,size=fbox,arc=1.5pt,colback=yellow!20!white,colframe=rdsColor!50,sharp corners=southeast]{%
         {#1}\ %
@@ -219,6 +354,8 @@ $\square$ & \JSONParseArrayValue  \\
 }
 % \newtcbox{\headerbox}{}
 \newcommand{\tableta}[1]{%
+\JSONParseValue[store in=\fechainicio]{\weekdata}{weeks[#1].FechaDeInicio}
+\JSONParseValue[store in=\fechacierre]{\weekdata}{weeks[#1].FechaDeCierre}
 \JSONParseArrayMapFunction[%
     code before={%
     \begin{tcolorbox}[
@@ -235,11 +372,13 @@ $\square$ & \JSONParseArrayValue  \\
         toptitle=0mm,
         bottomtitle=0mm,
         lefttitle=1mm,
-        width=0.8\linewidth,
+        % width=0.8\linewidth,
         title={\coolTitle{#1}}]%
         {\footnotesize\sffamily\qquad Actividad} & {\footnotesize\sffamily Fecha \ \! C  \! \ L \! \ O \! Pr \! Pu Tot.} \\\hline\hline%
         },
-    code after={\end{tcolorbox}}
+    code after={%
+    \end{tcolorbox}
+    }
 ]{\weekdata}{weeks[#1].Worklist}{\listableta}
 }
 
@@ -251,8 +390,7 @@ $\square$ & \JSONParseArrayValue  \\
 
 \newcommand{\coolTitle}[1]{% %
 {\small\circled{\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}}} \JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill
-\tcbox[on line,size=fbox,arc=1.5pt,colback=orange!10!white,colframe=rdsColor!50,sharp corners=southwest]{\large\JSONParseValue{\weekdata}{weeks[#1].FechaDeInicio} \textbf{<} \JSONParseValue{\weekdata}{weeks[#1].FechaDeCierre}}
-\periodoslectivos{\JSONParseValue{\weekdata}{weeks[#1].PeriodosLectivos}}%
+\rangofechas{\fechainicio}{\fechacierre}\periodoslectivos{\JSONParseValue{\weekdata}{weeks[#1].PeriodosLectivos}}   
 }
 
 
@@ -277,64 +415,55 @@ $\square$ & \JSONParseArrayValue  \\
 
 
 \newcommand{\calrow}[1]{\node[anchor=base east](lun){L};
-\node[base right=of lun](mar){M}; \node[base right=of mar](mer){X};
-\node[base right=of mer](jue){J}; \node[base right=of jue](vie){V};
+\node[base right=of lun](mar){M}; \node[base right=of mar](mie){X};
+\node[base right=of mie](jue){J}; \node[base right=of jue](vie){V};
 \node[base right=of vie](sab){S}; \node[base right=of sab](dom){D};
 \node[rdsColor,above=of jue]{#1};}
  
-\newcommand{\calperiod}[2]{\calendar[dates=#1 to #2]
-if(weekend) [black!30] \holidays;%
+
+
+% \newcommand*{\calrow}[1]{\node[draw,black, minimum width=7*\csname tikz@lib@cal@xshift\endcsname]{\textbf{#1}};}
+\newcommand{\calperiod}[2][\currentyear]{%
+  \calendar[dates=\currentyear-#2-01 to \currentyear-#2-last]
+    if (Sunday) [yellow] \holidays;}
+\edef\currentyear{\the\year}
+\newcommand{\holidays}{% holidays in Italy
+if (equals=01-01) [yellow]%
+if (equals=01-06) [yellow]%
+if (equals=04-04) [yellow]%
+if (equals=04-05) [yellow]%
+if (equals=04-25) [yellow]%
+if (equals=05-01) [yellow]%
+if (equals=05-01) [yellow]%
+if (equals=06-02) [yellow]%
+if (equals=08-15) [yellow]%
+if (equals=11-01) [yellow]%
+if (equals=12-08) [yellow]%
+if (equals=12-25) [yellow]%
+if (equals=12-26) [yellow]%
 }
-\def\currentyear{2025}
+%\def\currentyear{2025}
 \def\nextyear{2026}
 
 
 
-\newcommand{\holidays}{% holidays in Italy
-if (equals=09-16) [red!100]%
-if (equals=09-26) [green!50!black]%
-if (equals=10-31) [green!50!black]%
-% if (between=\year-11-17 and \year-11-last) [black!30];
-if (between=\year-11-01 and \year-11-16) [black!30]%
-if (between=\nextyear-03-24 and \nextyear-03-last) [black!30];
-}
- 
+
 
 
 \begin{document}
 %%  \planner{grado}{materia}{unidad}
-\plannerof{0}{test}{1}%%
+\plannerof{0}{test}{2}%%
 %  \plannerof{1}{math}{1}%
 %   \plannerof{2}{math}{1}%
 %   \plannerof{3}{math}{1}%
 %   \plannerof{3}{chem}{1}%   
 %   \plannerof{2}{phys}{1}%
-\begin{tcolorbox}[unitbox,title=\unitboxtitle,breakable,halign=center]
-	\adjustbox{max width=\textwidth}{%
-    \begin{tikzpicture}[every calendar/.style={week list},
-			year label/.style={
-					fill=white,text=rdsColor,font=\bfseries\large
-				}, current year/.store in=\currentyear,
-			current year=2025]
-		\matrix[%
-			row 1/.style={rdsColor,node distance=.3ex},%
-			row 3/.style={rdsColor,node distance=.3ex},
-			column sep=1ex,%
-			draw=rdsColor,thick,rounded corners=1pt,%
-			append after command={
-					\pgfextra{\edef\matrixname{\tikzlastnode}}
-					node [year label/.try, right=1ex of \matrixname.north west] {\currentyear}
-					node [year label/.try, left=1ex of \matrixname.north east] {\nextyear}
-				}
-		]{%
-			% first row: week day and month
-			\calrow{Noviembre} & \calrow{Diciembre} & \calrow{Enero} & \calrow{Febrero} & \calrow{Marzo}  \\
-			% second row: calendar
-			 \calperiod{2025-11-17}{2025-11-30} & \calperiod{2025-12-01}{2025-12-21}   & \calperiod{2026-01-01}{2026-01-21} & \calperiod{2026-02-01}{2026-02-28} & \calperiod{2026-03-01}{2026-03-23}  \\
-			 \calperiod{2025-11-31} & \calperiod{2025-02-01}{2025-02-28} & \calperiod{2025-03-01}{2025-03-23}  \\
-		};
-	\end{tikzpicture}%
-    }
-	% \JSONParseArrayMapInline{\weekdata}{weeks}{\tableta{#1}}
+\begin{tcolorbox}[unitbox,title=\unitboxtitle,breakable]%,halign=center]
+    % \begin{minipage}[t]{0.3\textwidth}
+        \unitcalendar
+    % \end{minipage}%
+    % \begin{minipage}[t]{0.7\textwidth}
+   % \JSONParseArrayMapInline{\weekdata}{weeks}{\tableta{#1}}
+    % \end{minipage}
 \end{tcolorbox}
 \end{document}

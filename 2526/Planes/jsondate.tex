@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{jsonparse}
+
+\begin{document}
+
+\JSONParse{\myJSONdata}{{"event_date": "2025-08-20T15:00:00Z"}}
+
+\luaexec{
+  local json = require("json")
+  local data = json.tolua(\myJSONdata)
+  local date_string = data.event_date
+
+  -- Parse and format the date using Lua's date functions
+  local year, month, day = string.match(date_string, "(%d%d%d%d)-(%d%d)-(%d%d)")
+  local formatted_date = day .. "/" .. month .. "/" .. year
+
+  tex.print(formatted_date)
+}
+
+\end{document}
