@@ -19,6 +19,7 @@
 \usepackage{xifthen}
 \usepackage{enumitem} % for custom \item
 \usepackage{pgffor}
+\usepackage{pgf-pie}
 \usepackage{tikz}
 \usetikzlibrary{shapes,calc, positioning,shadows,calendar,decorations.markings}
 \usetikzlibrary{shadows.blur}
@@ -148,6 +149,9 @@
                         \node[shape=circle,draw,inner sep=2pt,fill=white] (char) {#1};}}
 \newcommand*\padres[1]{\tikz[baseline=(char.base)]{
                             \node[shape=rectangle,draw=black!75,fill=white] (char) {#1};}}
+\newcommand*\booknode[1]{\tikz[baseline=(char.base)]{
+                                \node[shape=rounded rectangle,draw=rdsColor,rounded rectangle east arc=concave,text=black!80,fill=white,xshift=-0.6em,yshift=-2pt,scale=1,drop shadow={opacity=0.4,shadow xshift=2.5pt,shadow yshift=-1pt}] (char) {#1};}}
+
 \def\LOGO{%
     \begin{picture}(0,0)\unitlength=2cm
         \put (0.05,-0.45) {\includegraphics[width=1.6cm]{logo_shadow.png}}
@@ -219,18 +223,24 @@
 }
 
 \newtcolorbox{subsectionbox}[1][]{%
-    size=fbox,
-    top=0pt,%boxsep=2mm,
-    bottom=0pt,
-    width=\linewidth/8,
-    grow to left by=7mm,
-    colback = rdsColor!45!white,
+    % size=small,
+    top=2pt,
+    % % boxsep=1mm,
+    bottom=1pt,
+    width=\linewidth,
+    grow to right by=5pt,
+    grow to left by=5pt,
+    colback = rdsColor!10!white,
     colframe     = rdsColor,
-    leftrule=2mm, 
+    leftrule=0.1pt, 
+    toprule=0.1pt,
+    bottomrule=0pt,
+    rightrule=2mm,
     drop fuzzy shadow=black,
-    fontupper=\color{white}\bfseries\sffamily\RaggedLeft,
+    sharp corners=south,
+    fontupper=\color{gray!50}\bfseries\sffamily,%\RaggedLeft,
     #1,
-    on line,
+    % on line,
     enhanced,
 }
 % \def\rowitemtable{$\square$ & \JSONParseArrayValue  \\}
@@ -256,14 +266,12 @@
 \JSONParseArrayMapFunction[%
     code before={%
     \begin{tcolorbox}[
-        before app={},
-        after app={},
         enhanced,
         drop fuzzy shadow=black!75,
         tabulars={@{\extracolsep{\fill}\hspace{1mm}}lr@{\hspace{2pt}}},
         arc=2pt,boxrule=0.1pt,left=0mm,right=0mm,top=0mm,bottom=2pt,
         coltitle=rdsColor!30!black,
-        colbacktitle=rdsColor!10!white,
+        colbacktitle=rdsColor!5!white,
         colback=white,
         colframe=rdsColor,
         toptitle=0mm,
@@ -274,7 +282,7 @@
         {\footnotesize\sffamily\color{gray}\qquad Actividades} & {\footnotesize\sffamily\color{gray} Fecha \ Cont. Letra \, Orto. Pres. Punt. Total } \\\hline\hline%
         },
     code after={%
-    \end{tcolorbox}\vspace{1pt}
+    \end{tcolorbox}
     }
 ]{\weekdata}{weeks[#1].Worklist}{\listableta}
 }
@@ -293,7 +301,7 @@
 \def\listableta{\adjustbox{max width=0.95\linewidth}{\JSONParseArrayValue} & {\fbox{\phantom{oooo}}\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[rdsColor]}\\\hline }
 
 \newcommand{\coolTitle}[1]{% %
-{\small\circled{\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}}}\,\rangofechas{\fechainicio}{\fechacierre}\,\JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill
+\booknode{\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}}\,\rangofechas{\fechainicio}{\fechacierre}\,\JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill
 \periodoslectivos{#1}%  
 }
 
@@ -303,15 +311,37 @@
 
 \begin{document}
 %%  \planner{grado}{materia}{unidad}
-% \plannerof{0}{test}{1}%%
-\plannerof{1}{math}{1}%
+\plannerof{0}{test}{1}%%
+% \plannerof{1}{math}{1}%
 %   \plannerof{2}{math}{1}%
 %   \plannerof{3}{math}{1}%
 %   \plannerof{3}{chem}{1}%   
 %   \plannerof{2}{phys}{1}%
 \begin{tcolorbox}[unitbox,title=\unitboxtitle,breakable,halign=center]
-    % \begin{subsectionbox}Calendario\end{subsectionbox} \\
-	\begin{minipage}{0.16\linewidth}\sffamily\small
+%   \begin{multicols}{3}
+%     \begin{subsectionbox}\shadowoffset{1pt}
+%         \shadowtext{Evaluación}
+%     \end{subsectionbox}
+%     \begin{tikzpicture}[scale=1]
+%         \pie[text=inside,radius=1.5,explode=0.1,color={white, rdsColor!20}]{60/Examen, 40/Plan de trabajo}
+%         \end{tikzpicture}
+        
+%         \columnbreak%
+    
+%         \begin{subsectionbox}\shadowoffset{1pt}
+%         \shadowtext{Evaluación}
+%     \end{subsectionbox}
+   
+%     \columnbreak%
+   
+%     \begin{subsectionbox}\shadowoffset{1pt}
+%         \shadowtext{Evaluación}
+%     \end{subsectionbox}
+% \end{multicols}
+    \begin{subsectionbox}%\shadowoffset{1pt}
+        \shadowtext{Calendario de la unidad}
+    \end{subsectionbox}
+    \begin{minipage}{0.16\linewidth}\sffamily\small
 		\exam{\color{red}X} Examen \\[0.5em]
 		\cte{\phantom{X}} C.T.E.\\[0.5em]
 		\free{\phantom{X}} Festivo \\[0.5em]
@@ -319,14 +349,15 @@
 	\end{minipage}%
 	\begin{minipage}{0.84\linewidth}
 		\setcounter{ABCD}{1}
-		\begin{tikzpicture}[every calendar/.style={week list},every day/.style={anchor=mid}]
+		\adjustbox{max width=\linewidth}{%
+        \begin{tikzpicture}[every calendar/.style={week list},every day/.style={anchor=mid}]
 			\sffamily
 			\matrix[%
 				row 1/.style={rdsColor,node distance=.6ex},%
 				% row 3/.style={rdsColor,node distance=.5ex},
 				% row 5/.style={rdsColor,node distance=.5ex},
 				% row 7/.style={rdsColor,node distance=.5ex},
-				column sep=3ex,%
+				column sep=5ex,%
 				draw=rdsColor,thin,rounded corners=5pt,%
 				postaction={decorate,decoration={markings,mark=at position 0.125 with
 									{\node[text=rdsColor,font={\Large}] (unidad) {\cicloescolar};}
@@ -338,9 +369,12 @@
 				\calrow{Septiembre}                  & \calrow{Octubre}                     & \calrow{Noviembre}                 \\
 				\calperiod{2025-09-01}{2025-09-last} & \calperiod{2025-10-01}{2025-10-last} & \calperiod{2025-11-01}{2025-11-23} \\
 			};
-		\end{tikzpicture}
+		\end{tikzpicture}%
+        }%
 	\end{minipage}
-    % \begin{subsectionbox}Actividaes por semana\end{subsectionbox} \\
+    \begin{subsectionbox}%\shadowoffset{1pt}
+        \shadowtext{Semanas escolares}
+    \end{subsectionbox}
 	\JSONParseArrayMapInline{\weekdata}{weeks}{\tableta{#1}}
 \end{tcolorbox}
 \end{document}

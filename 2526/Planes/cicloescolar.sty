@@ -36,19 +36,33 @@ execute at begin day scope={%
 % \setcounter{ABCD}{\iABCD}
 % \ifnum\itest<8
 % \ifnum\itest>1
-% \node at (-1.2em,1.2em) [anchor=base east,overlay,text=rdsColor] {\circled{\arabic{ABCD}}};
+% \node[anchor=base east,overlay,text=rdsColor,,xshift=0.5em] {\circled{\arabic{ABCD}}};
 % \fi
 % \fi
 % \stepcounter{spur}
-% % \pgfmathtruncatemacro{\iABCD}{Mod(\value{spur},12)+1} 
 % \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
 % \setcounter{ABCD}{\iABCD}
-% \node at (-1.2em,-0.2em) [anchor=base east,text=rdsColor] {\circled{\arabic{ABCD}}};
+% \node[anchor=base east,overlay,text=rdsColor,xshift=0.5em] {\circled{\arabic{ABCD}}};
 % }
 }
 ]
 %s\birthdays
-if (equals=2025-11-03) [red,draw] 
+if (equals=2025-11-03) [red] 
+if (Monday){
+    \pgfmathtruncatemacro{\itest}{\pgfcalendarcurrentday}
+    \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
+    \setcounter{ABCD}{\iABCD}
+    \ifnum\itest<8
+    \ifnum\itest>1
+    \node[anchor=base east,shape=rounded rectangle,draw=rdsColor,rounded rectangle east arc=concave,text=black!80,fill=white,xshift=-0.6em,yshift=-2pt,scale=0.8,drop shadow={opacity=0.4,shadow xshift=2.5pt,shadow yshift=-1pt}] (char) {\textsc{\arabic{ABCD}}};
+    % \node[anchor=base east,overlay,text=black,fill=whitexshift=-0.6em,scale=0.65] {\circled{\arabic{ABCD}}};
+    \fi
+    \fi
+    \stepcounter{spur}
+    \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
+    \setcounter{ABCD}{\iABCD}
+    \node[anchor=base east,shape=rounded rectangle,draw=rdsColor,rounded rectangle east arc=concave,text=black!80,fill=white,xshift=-0.6em,yshift=-2pt,scale=0.8,drop shadow={opacity=0.4,shadow xshift=2.5pt,shadow yshift=-1pt}] (char) {\textsc{\arabic{ABCD}}};
+    }
 if(Sunday,Saturday) [gray!50] \examday\holidays\ctedays;
     }
 \def\holidays{% holidays
