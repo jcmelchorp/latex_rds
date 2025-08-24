@@ -1,0 +1,38 @@
+\documentclass[tikz, border=5pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+% --- Definimos un color rojo oscuro personalizado ---
+\definecolor{darkred}{RGB}{140, 21, 21}
+
+\begin{document}
+
+\begin{tikzpicture}
+    % -----------------------------------------------------------------
+    % OPCIONAL: Fondo negro como en la imagen de ejemplo
+    % Para usarlo, descomenta la siguiente línea.
+    % \fill[black] (-1,-1) rectangle (11, 3);
+    % -----------------------------------------------------------------
+
+    % --- Bucle para dibujar los 10 cubos ---
+    % La variable \x va de 0 a 9, dibujando un cubo en cada paso.
+    \foreach \x in {0,...,9} {
+        % Usamos un 'scope' para aplicar un desplazamiento a cada cubo
+        \begin{scope}[shift={(\x,0)}]
+            % Dibujamos las 3 caras visibles del cubo
+            % Todas tienen borde negro (por defecto) y relleno blanco
+            \draw[fill=white] (0,0.5) rectangle (1,1);                                     % Cara frontal
+            \draw[fill=red] (1,0.5) -- ++(0.4,0.4) -- ++(0,0.5) -- ++(-0.4,-0.4) -- cycle; % Cara lateral derecha
+            \draw[fill=blue] (0,1) -- ++(0.4,0.4) -- ++(1,0) -- ++(-0.4,-0.4) -- cycle; % Cara superior
+        \end{scope}
+    }
+
+    % --- Texto superpuesto ---
+    % Colocamos un nodo en el centro horizontal (x=5) y por encima de los cubos (y=1.7)
+    % Usamos una fuente sans-serif (phv), en negrita (\bfseries) y tamaño grande (\Huge)
+    \node at (5, 1.5) {\fontfamily{phv}\selectfont\Huge\bfseries\color{darkred}Calendario};
+
+\end{tikzpicture}
+
+\end{document}

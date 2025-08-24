@@ -19,16 +19,16 @@
 \usepackage{xifthen}
 \usepackage{enumitem} % for custom \item
 \usepackage{pgffor}
-\usepackage{pgf-pie}
+% \usepackage{pgf-pie}
 \usepackage{tikz}
-\usetikzlibrary{shapes,calc, positioning,shadows,calendar,decorations.markings}
-\usetikzlibrary{shadows.blur}
-\usetikzlibrary{shapes.symbols}
-\usetikzlibrary{patterns.meta}
+\usetikzlibrary{backgrounds,calc, positioning,calendar,decorations.markings}
+\usetikzlibrary{shadows,shadows.blur}
+\usetikzlibrary{shapes,shapes.symbols}
+\usetikzlibrary{patterns,patterns.meta}
 \usepackage{cicloescolar}
 \usepackage{xparse} %for NewDocumentCommand
 \usepackage{etoolbox}
-\usepackage{l3sys-query} %for query JSON files
+% \usepackage{l3sys-query} %for query JSON files
 % \usepackage{lipsum}
 \usepackage{shadowtext}
 \shadowoffset{0.4pt}
@@ -114,43 +114,27 @@
     }
 }
 
-% \ExplSyntaxOn
-% \cs_set_eq:NN \ListMapInline \clist_map_inline:nn
-% \prop_new:N \g_marco_fadate_prop
-% \fp_new:N \l_marco_fadate_fp
-% \NewDocumentCommand { \fadate } { m m } {
-%     \prop_gput:Nnn \g_marco_fadate_prop 
-%         {#1} { \fp_val:n {#2}  } 
-%    % use as output reciently created property
-%     #2
-%    }
-% \NewDocumentCommand { \InvoiceTotal } { } {
-%     \fp_zero:N \l_marco_fdate_fp
-%     \prop_map_inline:Nn \g_marco_fdate_prop {
-%         \fp_add:Nn \l_marco_fdate_fp {##2}
-%     }
-%     \fp_use:N \l_marco_fdate_fp
-% }
-% \NewDocumentCommand { \NewlineOrRule } { m m } {
-%     \int_compare:nNnTF {#1} = {#2} { 
-%         \\ \midrule
-%     } {
-%         \\ 
-%     }
-% }
-
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt,fill=white,circular glow={fill=rdsColor!40!white}] (char) {#1};}}
 \newcommand*\cte[1]{\tikz[baseline=(char.base)]{
-				\node[shape=circle,inner sep=2pt,pattern={Lines[distance=2pt, angle=45, line width=0.1pt]},pattern color=green!50!black] (char) {#1};}}
+			\node[shape=circle,inner sep=2pt,pattern={Lines[distance=2pt, angle=45, line width=0.1pt]},pattern color=green!50!black] (char) {#1};}}
 \newcommand*\free[1]{\tikz[baseline=(char.base)]{
-					\node[shape=circle,inner sep=2pt,pattern={Lines[distance=2pt, angle=-45, line width=0.1pt]},pattern color=red!50!black] (char) {#1};}}
+			\node[shape=circle,inner sep=2pt,pattern={Lines[distance=2pt, angle=-45, line width=0.1pt]},pattern color=red!50!black] (char) {#1};}}
 \newcommand*\exam[1]{\tikz[baseline=(char.base)]{
-                        \node[shape=circle,draw,inner sep=2pt,fill=white] (char) {#1};}}
+            \node[shape=circle,draw,inner sep=2pt,fill=white] (char) {#1};}}
 \newcommand*\padres[1]{\tikz[baseline=(char.base)]{
-                            \node[shape=rectangle,draw=black!75,fill=white] (char) {#1};}}
+            \node[shape=rectangle,draw=black!75,fill=white] (char) {#1};}}
 \newcommand*\booknode[1]{\tikz[baseline=(char.base)]{
-                                \node[shape=rounded rectangle,draw=rdsColor,rounded rectangle east arc=concave,text=black!80,fill=white,xshift=-0.6em,yshift=-2pt,scale=1,drop shadow={opacity=0.4,shadow xshift=2.5pt,shadow yshift=-1pt}] (char) {#1};}}
+            \node[shape=rounded rectangle,line width=0.5pt,draw=rdsColor!50,
+            rounded rectangle east arc=concave,xshift=-0.35em,
+            inner xsep=0pt,inner ysep=4pt,
+            % pattern={Lines[distance=0.5pt, angle=0, line width=0.1pt]},pattern color=green!50!black,
+            fill=rdsColor!50!white,
+            scale=1,overlay] (char) {#1};
+            % \begin{scope}[on background layer]
+            %     \fill[white,hape=rounded rectangle,rounded rectangle east arc=concave,xshift=-0.4em,] (-.8,-.8) rectangle (.8,.8);
+            %   \end{scope}
+            }}
 
 \def\LOGO{%
     \begin{picture}(0,0)\unitlength=2cm
@@ -158,13 +142,6 @@
         \put (0.045,-0.44) {\includegraphics[width=1.6cm]{logo.png}}
     \end{picture}
 }
-% \def\itembox{%
-%     \tcbox[enhanced,drop fuzzy shadow=black,size=fbox,on line,colback=orange!10!white]{\JSONParseArrayValue}
-% }
-% \def\itemitemize{\item \JSONParseArrayValue}
-% \def\fboxitemize{\item \JSONParseArrayValue \dotfill \fbox{\phantom{/00/}}}
-
-
 
 % Comando para mostrar el string asociado y su estilo
 \newcommand{\classtitle}[1]{%
@@ -238,7 +215,7 @@
     rightrule=2mm,
     drop fuzzy shadow=black,
     sharp corners=south,
-    fontupper=\color{gray!50}\bfseries\sffamily,%\RaggedLeft,
+    fontupper=\color{gray!50}\bfseries\scshape,%\RaggedLeft,
     #1,
     % on line,
     enhanced,
@@ -253,8 +230,8 @@
 % }
 
 \newcommand{\rangofechas}[2]{%
-    \tcbox[fontupper=\large,on line,size=fbox,arc=1.5pt,colback=orange!10!white,colframe=rdsColor!50]{% sharp corners=southeast,
-    \textsc{\DTMdate{#1}}\textbf{< }\textsc{\DTMdate{#2}}%
+    \tcbox[on line,size=fbox,arc=1.5pt,boxrule=0.5pt,colback=orange!10!white,colframe=rdsColor!50,sharp corners,rounded corners=west]{% sharp corners=southeast,
+    \large\textsc{\DTMdate{#1}< \DTMdate{#2}}%
     }%
 }
 
@@ -269,17 +246,20 @@
         enhanced,
         drop fuzzy shadow=black!75,
         tabulars={@{\extracolsep{\fill}\hspace{1mm}}lr@{\hspace{2pt}}},
-        arc=2pt,boxrule=0.1pt,left=0mm,right=0mm,top=0mm,bottom=2pt,
-        coltitle=rdsColor!30!black,
+        arc=2pt,boxrule=0.1pt,titlerule=0.5pt,
+        left=0mm,right=0mm,top=0mm,bottom=2pt,
+        coltitle=rdsColor!50!black,
         colbacktitle=rdsColor!5!white,
         colback=white,
-        colframe=rdsColor,
-        toptitle=0mm,
-        bottomtitle=0mm,
-        lefttitle=1mm,
+        colframe=rdsColor!50,
+        toptitle=-0.6pt,
+        toprule=0.5pt,
+        bottomtitle=0pt,
+        lefttitle=2mm,
         width=\linewidth,
-        title={\coolTitle{#1}}]%
-        {\footnotesize\sffamily\color{gray}\qquad Actividades} & {\footnotesize\sffamily\color{gray} Fecha \ Cont. Letra \, Orto. Pres. Punt. Total } \\\hline\hline%
+        title={\coolTitle{#1}},
+        ]
+        {\footnotesize\scshape\color{black!70}\qquad Noción} & {\scriptsize\scshape\color{black!70} Fecha \ Cont. Letra Orto. Pres. Punt. Total} \\\hline\hline%
         },
     code after={%
     \end{tcolorbox}
@@ -288,21 +268,21 @@
 }
 
 \newcommand{\periodoslectivos}[1]{%
-   \tcbox[on line,size=fbox,arc=1.5pt,colback=yellow!20!white,colframe=rdsColor!50,sharp corners=southeast]{%
-   {\Large\JSONParseValue{\weekdata}{weeks[#1].PeriodosLectivos}}\,%
-        \begin{minipage}[b]{0.8cm}\color{black!75}\sffamily\tiny%
-            Períodos\\[-0.2em]lectivos%
-        \end{minipage}%
+   \tcbox[on line,size=fbox,arc=1.5pt,boxrule=0.5pt,colback=yellow!20!white,colframe=rdsColor!50,sharp corners,rounded corners=northeast]{%
+   \begin{minipage}[b][0.875em][c]{0.3cm}\large\scshape\JSONParseValue{\weekdata}{weeks[#1].PeriodosLectivos}\end{minipage}%\,%
+   \begin{minipage}[b][0.875em][c]{0.8cm}\color{black!75}\sffamily\tiny%
+            Períodos\\[-0.26em]lectivos%
+        \end{minipage}
     }%
 }
 
 % \def\fillingradebox{\resizebox{1cm}{1em}{\raisebox{-0.16em}{$\Box$}}}
 \newcommand{\fillingradebox}[1][]{\tikz[baseline]{\draw[black!75,thin,rounded corners=1,#1] (0,-0.125) rectangle (0.94, 0.345);}}
-\def\listableta{\adjustbox{max width=0.95\linewidth}{\JSONParseArrayValue} & {\fbox{\phantom{oooo}}\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[dotted]\thinspace\fillingradebox[rdsColor]}\\\hline }
+\def\listableta{\adjustbox{max width=0.95\linewidth}{\JSONParseArrayValue} & {\fbox{\phantom{oooo}}\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[rdsColor]}\\\hline }
 
 \newcommand{\coolTitle}[1]{% %
-\booknode{\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}}\,\rangofechas{\fechainicio}{\fechacierre}\,\JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill
-\periodoslectivos{#1}%  
+\booknode{\color{white}\large\scshape\bfseries\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}} \ \JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill
+\rangofechas{\fechainicio}{\fechacierre}\raisebox{-0.3pt}{\periodoslectivos{#1}}%  
 }
 
 
@@ -318,63 +298,63 @@
 %   \plannerof{3}{chem}{1}%   
 %   \plannerof{2}{phys}{1}%
 \begin{tcolorbox}[unitbox,title=\unitboxtitle,breakable,halign=center]
-%   \begin{multicols}{3}
-%     \begin{subsectionbox}\shadowoffset{1pt}
-%         \shadowtext{Evaluación}
-%     \end{subsectionbox}
-%     \begin{tikzpicture}[scale=1]
-%         \pie[text=inside,radius=1.5,explode=0.1,color={white, rdsColor!20}]{60/Examen, 40/Plan de trabajo}
-%         \end{tikzpicture}
-        
-%         \columnbreak%
-    
-%         \begin{subsectionbox}\shadowoffset{1pt}
-%         \shadowtext{Evaluación}
-%     \end{subsectionbox}
-   
-%     \columnbreak%
-   
-%     \begin{subsectionbox}\shadowoffset{1pt}
-%         \shadowtext{Evaluación}
-%     \end{subsectionbox}
-% \end{multicols}
-    \begin{subsectionbox}%\shadowoffset{1pt}
-        \shadowtext{Calendario de la unidad}
-    \end{subsectionbox}
-    \begin{minipage}{0.16\linewidth}\sffamily\small
-		\exam{\color{red}X} Examen \\[0.5em]
-		\cte{\phantom{X}} C.T.E.\\[0.5em]
-		\free{\phantom{X}} Festivo \\[0.5em]
-		\padres{X} Esc. Padres \\[0.5em]
-	\end{minipage}%
-	\begin{minipage}{0.84\linewidth}
-		\setcounter{ABCD}{1}
-		\adjustbox{max width=\linewidth}{%
-        \begin{tikzpicture}[every calendar/.style={week list},every day/.style={anchor=mid}]
-			\sffamily
+	%   \begin{multicols}{3}
+	%     \begin{subsectionbox}\shadowoffset{1pt}
+	%         \shadowtext{Evaluación}
+	%     \end{subsectionbox}
+	%     \begin{tikzpicture}[scale=1]
+	%         \pie[text=inside,radius=1.5,explode=0.1,color={white, rdsColor!20}]{60/Examen, 40/Plan de trabajo}
+	%         \end{tikzpicture}
+
+	%         \columnbreak%
+
+	%         \begin{subsectionbox}\shadowoffset{1pt}
+	%         \shadowtext{Evaluación}
+	%     \end{subsectionbox}
+
+	%     \columnbreak%
+
+	%     \begin{subsectionbox}\shadowoffset{1pt}
+	%         \shadowtext{Evaluación}
+	%     \end{subsectionbox}
+	% \end{multicols}
+	% \begin{subsectionbox}%\shadowoffset{1pt}
+	\begin{center}\scshape\large\color{rdsColor}
+		\shadowtext{Panorama de la unidad}
+	\end{center}
+	\setcounter{ABCD}{1}
+	\adjustbox{max width=\linewidth}{%
+		\begin{tikzpicture}[every calendar/.style={week list},every day/.style={anchor=mid}]
+			\scshape
 			\matrix[%
-				row 1/.style={rdsColor,node distance=.6ex},%
-				% row 3/.style={rdsColor,node distance=.5ex},
-				% row 5/.style={rdsColor,node distance=.5ex},
-				% row 7/.style={rdsColor,node distance=.5ex},
+				row 1/.style={rdsColor,node distance=.3ex},%
+				 row 3/.style={rdsColor,node distance=.3ex},
+				row 5/.style={rdsColor,node distance=.3ex},
+				row 7/.style={rdsColor,node distance=.3ex},
 				column sep=5ex,%
 				draw=rdsColor,thin,rounded corners=5pt,%
 				postaction={decorate,decoration={markings,mark=at position 0.125 with
 									{\node[text=rdsColor,font={\Large}] (unidad) {\cicloescolar};}
-                                        }},
+							}},
 				postaction={decorate,decoration={markings,mark=at position 0.25 with
 									{\node[text=rdsColor,font={\Large}] (title){\unitinfo};}
-                                        }},
+							}},
 			]{%
 				\calrow{Septiembre}                  & \calrow{Octubre}                     & \calrow{Noviembre}                 \\
 				\calperiod{2025-09-01}{2025-09-last} & \calperiod{2025-10-01}{2025-10-last} & \calperiod{2025-11-01}{2025-11-23} \\
-			};
+                \calrow{Noviembre y Diciembre}      & \calrow{Enero}       & \calrow{Febrero y Marzo}             \\
+                \calperiod{2025-11-24}{2025-12-18} &   \calperiod{2026-01-12}{2026-01-last} & \calperiod{2026-02-01}{2026-03-15} \\
+                \calrow{Marzo y Abril}                  & \calrow{Mayo}                     & \calrow{Junio y Julio}                 \\
+				\calperiod{2026-03-24}{2026-04-last} & \calperiod{2026-05-01}{2026-05-last} & \calperiod{2026-06-01}{2026-07-05} \\ 
+                };
 		\end{tikzpicture}%
-        }%
-	\end{minipage}
-    \begin{subsectionbox}%\shadowoffset{1pt}
-        \shadowtext{Semanas escolares}
-    \end{subsectionbox}
+	}
+	\begin{center}
+		\exam{\color{red}X} Examen\qquad \cte{\phantom{X}} C.T.E.\qquad\free{\phantom{X}} Festivo\qquad \padres{X} Esc. para Padres
+	\end{center}
+	\begin{center}\scshape\large\color{rdsColor}
+		\shadowtext{Rúbrica semanal}
+	\end{center}
 	\JSONParseArrayMapInline{\weekdata}{weeks}{\tableta{#1}}
 \end{tcolorbox}
 \end{document}

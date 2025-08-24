@@ -24,47 +24,52 @@
 \node[base right=of vie](sab){S}; \node[base right=of sab](dom){D};
 \node[rdsColor,above=of jue]{#1};}
 
-% \newcommand{\calperiod}[1]{\calendar[dates=\the\year-#1-01 to \the\year-#1-last]
-% if(Sunday,Saturday) [black!50] \holidays;}
 \newcounter{ABCD}
 \newcounter{spur}
-\newcommand{\calperiod}[2]{\calendar[dates=#1 to #2,
-execute at begin day scope={%
-% \ifdate{Monday}{
-% \pgfmathtruncatemacro{\itest}{\pgfcalendarcurrentday}
-% \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
-% \setcounter{ABCD}{\iABCD}
-% \ifnum\itest<8
-% \ifnum\itest>1
-% \node[anchor=base east,overlay,text=rdsColor,,xshift=0.5em] {\circled{\arabic{ABCD}}};
-% \fi
-% \fi
-% \stepcounter{spur}
-% \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
-% \setcounter{ABCD}{\iABCD}
-% \node[anchor=base east,overlay,text=rdsColor,xshift=0.5em] {\circled{\arabic{ABCD}}};
-% }
+\newcommand{\calperiod}[2]{\calendar[dates=#1 to #2, month yshift=0pt]
+    if (equals=2025-11-05) [red] 
+    if (Monday){
+        \pgfmathtruncatemacro{\itest}{\pgfcalendarcurrentday}
+        \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
+        \setcounter{ABCD}{\iABCD}
+        \ifnum\itest<8
+            \ifnum\itest>1
+                \node[
+                anchor=base east,
+                shape=rounded rectangle,
+                draw=white,
+                text=white,
+                rounded rectangle east arc=concave,
+                text=black!80,fill=white,
+                xshift=-0.6em,yshift=-2pt,
+                fill=rdsColor!50!white,
+                %inner xsep=0pt,
+                % inner ysep=5pt,
+                % scale=1,
+                % drop shadow={opacity=0.4,shadow xshift=2.5pt,shadow yshift=-1pt},
+                ] (char) {\color{white}\scshape\bfseries\arabic{ABCD}};
+            \fi
+        \fi
+        \stepcounter{spur}
+        \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
+        \setcounter{ABCD}{\iABCD}
+            \node[%
+            anchor=base east,
+            shape=rounded rectangle,
+            draw=white,
+            text=white,
+            rounded rectangle east arc=concave,
+            text=black!80,fill=white,
+            xshift=-0.6em,yshift=-2pt,
+            fill=rdsColor!50!white,
+            %inner xsep=0pt,
+            % inner ysep=5pt,
+            % scale=1,
+            % drop shadow={opacity=0.4,shadow xshift=2.5pt,shadow yshift=-1pt},
+            ] (char) {\color{white}\scshape\bfseries\arabic{ABCD}};    }
+    if(Sunday,Saturday) [gray!50] \examday\holidays\ctedays;
 }
-]
-%s\birthdays
-if (equals=2025-11-03) [red] 
-if (Monday){
-    \pgfmathtruncatemacro{\itest}{\pgfcalendarcurrentday}
-    \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
-    \setcounter{ABCD}{\iABCD}
-    \ifnum\itest<8
-    \ifnum\itest>1
-    \node[anchor=base east,shape=rounded rectangle,draw=rdsColor,rounded rectangle east arc=concave,text=black!80,fill=white,xshift=-0.6em,yshift=-2pt,scale=0.8,drop shadow={opacity=0.4,shadow xshift=2.5pt,shadow yshift=-1pt}] (char) {\textsc{\arabic{ABCD}}};
-    % \node[anchor=base east,overlay,text=black,fill=whitexshift=-0.6em,scale=0.65] {\circled{\arabic{ABCD}}};
-    \fi
-    \fi
-    \stepcounter{spur}
-    \pgfmathtruncatemacro{\iABCD}{\value{spur}} 
-    \setcounter{ABCD}{\iABCD}
-    \node[anchor=base east,shape=rounded rectangle,draw=rdsColor,rounded rectangle east arc=concave,text=black!80,fill=white,xshift=-0.6em,yshift=-2pt,scale=0.8,drop shadow={opacity=0.4,shadow xshift=2.5pt,shadow yshift=-1pt}] (char) {\textsc{\arabic{ABCD}}};
-    }
-if(Sunday,Saturday) [gray!50] \examday\holidays\ctedays;
-    }
+
 \def\holidays{% holidays
 if (equals=2025-09-16) {\fill[pattern={Lines[distance=2pt, angle=-45, line width=0.1pt]},pattern color=red!50!black] (0,0.04) circle (0.75em);}
 if (equals=2025-11-17) {\fill[pattern={Lines[distance=2pt, angle=-45, line width=0.1pt]},pattern color=red!50!black] (0,0.04) circle (0.75em);}
@@ -88,7 +93,7 @@ if (equals=2026-07-31) {\fill[pattern={Lines[distance=2pt, angle=45, line width=
 }
 
 \def\examday{%
-if (equals=2025-11-03) {\draw (0.0,0.04) circle (0.7em);} 
+if (equals=2025-11-05) {\draw (0.0,0.04) circle (0.7em);} 
 % if (equals=2025-09-11) {\draw[sharp corners] (-0.25,-0.25) rectangle (0.25, 0.25);}  % misa de inicio
 if (equals=2025-09-24) {\draw[black!75,thin,sharp corners] (-0.25,-0.2) rectangle (0.25, 0.3);} %Escuela para padres
 if (equals=2025-10-15) {\draw[black!75,thin,sharp corners] (-0.25,-0.2) rectangle (0.25, 0.3);} %Escuela para padres
