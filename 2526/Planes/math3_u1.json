@@ -1,4 +1,67 @@
 {
+  "general": {
+    "CampoFormativo": "Saberes y pensamiento científico",
+    "Asignatura": "Matemáticas III",
+    "Grado": "3°",
+    "Nivel": "Secundaria",
+    "Unidad": "1",
+    "NombreDeLaUnidad": "Números enteros, números negativos, factorización, leyes de los exponentes y sucesiones aritméticas",
+    "DuracionEnSemanas": 10,
+    "HorasPorSemana": 5,
+    "HorasTotales": 50,
+    "Docente": "Julio César Melchor Pinto",
+    "FechaDeCreacion": "2025-08-24",
+    "FechaDeActualizacion": "2025-08-24",
+    "FechaInicial": "2025-09-01",
+    "FechaFinal": "2025-11-07",
+    "Nociones": [
+      "A1. Suma de números",
+      "A2. Resta de números",
+      "A3. Multiplicación de números",
+      "A4. División de números",
+      "A5. Resolución de problemas",
+      "A6. Ubicación en la recta numérica",
+      "A7. Comparación de negativos",
+      "A8. Suma y resta con negativos",
+      "A9. Multiplicación y división con negativos",
+      "A10. Jerarquía de operaciones",
+      "A11. Término común",
+      "A12. Diferencia de cuadrados",
+      "A13. Trinomio cuadrado perfecto",
+      "A14. Trinomios de la forma $x^2+bx+c$",
+      "A15. Trinomios de la forma $ax^2+bx+c$",
+      "A16. Suma de exponentes",
+      "A17. Resta de exponentes",
+      "A18. Multiplicación de exponentes",
+      "A19. División de exponentes",
+      "A20. Exponentes negativos",
+      "A21. Completando la sucesión",
+      "A22. Diferencia de una sucesión",
+      "A23. Término general",
+      "A24. Término enésimo",
+      "A25. Suma de una sucesión aritmética"
+    ],
+    "Alumnos": [
+      "Altamirano Muñoz Luisa Fernanda",
+      "Corona Vásquez Ximena",
+      "Díaz Aldasoro Regina",
+      "Escobar Rivera Iker",
+      "Fadul Espejo Mariola",
+      "Hernández Alomia Dariana",
+      "Hernández Calera Eva Sofía",
+      "Hernández Morales Mario Santiago",
+      "Isleño Rivera Alexander",
+      "Muro Luna Michelle Areli",
+      "Ochoa Castañeda Rodrigo",
+      "Peri Domínguez Ricardo de Jesús",
+      "Salinas Almanza María Valeria",
+      "Treviño Uscanga Matías",
+      "Velázquez Gómez Joshua"
+    ],
+    "fechasDeExamen": [
+      "2025-11-04"
+    ]
+  },
   "weeks": [
     {
       "PeriodosLectivos": 5,
@@ -385,8 +448,7 @@
         "La participación en las puestas en común y la claridad al explicar sus dudas o soluciones."
       ],
       "Evidencias": [],
-      "Actividades": [
-      ],
+      "Actividades": [],
       "Proyectos": [
         "Examen de Unidad"
       ],

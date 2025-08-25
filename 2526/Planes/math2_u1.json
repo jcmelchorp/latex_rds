@@ -1,4 +1,68 @@
 {
+  "general": {
+    "CampoFormativo": "Saberes y pensamiento científico",
+    "Asignatura": "Matemáticas II",
+    "Grado": "2º",
+    "Nivel": "Secundaria",
+    "Unidad": "1",
+    "NombreDeLaUnidad": "Números enteros, números negativos y plano cartesiano",
+    "DuracionEnSemanas": 10,
+    "HorasPorSemana": 5,
+    "HorasTotales": 50,
+    "Docente": "Julio César Melchor Pinto",
+    "FechaDeCreacion": "2025-08-24",
+    "FechaDeActualizacion": "2025-08-24",
+    "FechaInicial": "2025-09-01",
+    "FechaFinal": "2025-11-07",
+    "Nociones": [
+      "A.1. Suma de números",
+      "A.2. Resta de números",
+      "A.3. Multiplicación de números",
+      "A.4. División de números",
+      "A.5. Resolución de problemas",
+      "A.6. Ubicación en la recta numérica",
+      "A.7. Comparación de negativos",
+      "A.8. Suma y resta con negativos",
+      "A.9. Multiplicación y división con negativos",
+      "A.10. Potencias con números negativos",
+      "A.11. Suma de exponentes",
+      "A.12. Resta de exponentes",
+      "A.13. Multiplicación de exponentes",
+      "A.14. Notación científica 1",
+      "A.15. Notación científica 2",
+      "A.16. Ubicación en el plano cartesiano",
+      "A.17. Cuadrantes en el plano cartesiano",
+      "A.18. Pendiente de una recta",
+      "A.19. Pendiente y ordenada",
+      "A.20. Ecuación de una recta",
+      "A.21. Porcentajes a decimal",
+      "A.22. Decimal a porcentaje",
+      "A.23. Porcentaje de cantidades 1",
+      "A.24. Porcentaje de cantidades 2",
+      "A.25. Resolución de problemas"
+    ],
+    "Alumnos": [
+      "Bisio Lara Bruno Aimone",
+      "Castro Bulnes Cristel",
+      "Colonna Figueroa Fabrizzio",
+      "Flores Pérez Ángel Leonel",
+      "Fuentes Navas Juan Pablo",
+      "Guerra Pitalúa Suad Alana",
+      "Mata Guzmán Layla Gabriela",
+      "Mendoza Martínez Acteón Eliud",
+      "Montiel Díaz Antonio",
+      "Murrieta Zúñiga Matías Harim",
+      "Pérez Castrejón Ehécatl",
+      "Rendón Torrez Mateo",
+      "Rivera Rojas Pedro Antonio",
+      "Rodríguez Aguilar Miguel Ángel",
+      "Sosa Álvarez Mateo",
+      "Utrera González María José"
+    ],
+    "fechasDeExamen": [
+      "2025-11-03"
+    ]
+  },
   "weeks": [
     {
       "PeriodosLectivos": 5,
@@ -385,8 +449,7 @@
         "La participación en las puestas en común y la claridad al explicar sus dudas o soluciones."
       ],
       "Evidencias": [],
-      "Actividades": [
-      ],
+      "Actividades": [],
       "Proyectos": [
         "Examen de Unidad"
       ],

@@ -1,4 +1,85 @@
 {
+  "general": {
+    "CampoFormativo": "Saberes y pensamiento científico",
+    "Asignatura": "Física",
+    "Grado": "2º",
+    "Nivel": "Secundaria",
+    "Unidad": "1",
+    "NombreDeLaUnidad": "El pensamiento científico y la materia",
+    "DuracionEnSemanas": 6,
+    "HorasPorSemana": 6,
+    "HorasTotales": 36,
+    "Docente": "Julio César Melchor Pinto",
+    "FechaDeCreacion": "2025-08-24",
+    "FechaDeActualizacion": "2025-08-24",
+    "FechaInicial": "2025-09-01",
+    "FechaFinal": "2025-10-10",
+    "Nociones": [
+      "Me preparo",
+      "L.1. Conocimiento empírico",
+      "A.1. Conocimiento empírico",
+      "A.2. Tipos de conocimientos",
+      "A.3. Otras formas de conocimiento",
+      "L.2. El conocimiento científico",
+      "A.4. ¿Qué es la ciencia?",
+      "A.5. Método científico",
+      "F.1. Siete razones para dedicarse a la ciencia",
+      "L.3. Física y sociedad",
+      "A.6. ¿Qué es la Física?",
+      "A.7. División de la Física",
+      "F.2. Ciencia para todos",
+      "L.4. Mediciones",
+      "A.8. Mediciones",
+      "L.5. Unidades fundamentales y derivadas de medida",
+      "A.9. Unidades fundamentales",
+      "L.6. Múltiplos y submúltiplos",
+      "A.10. Múltiplos",
+      "L.7. Instrumentos de medición",
+      "A.11. Es momento de medir",
+      "F.3. Contaminantes del aire",
+      "L.8. Materiales y sus propiedades",
+      "A.12. Propiedades de la materia",
+      "A.13. ¿Qué es la materia?",
+      "F.4. Litio, el oro blanco del siglo XXI",
+      "F.5. La isla de plástico",
+      "L.9. Origen de las teorías sobre la estructura de la materia",
+      "A.14. Un modelo para la materia",
+      "L.10. La teoría atómica",
+      "A.15. Construyendo un modelo para el átomo",
+      "A.16. ¿Thomson, Rutherford o Bohr?",
+      "A.17. La estructura interna de la materia",
+      "F.6. Invierno nuclear",
+      "L.11. Estados de agregación de la materia y modelo cinético",
+      "A.18. ¿Cómo se organiza la materia?",
+      "A.19. Las facetas de la materia",
+      "A.20. La materia",
+      "L.12. Temperatura y equilibrio térmico",
+      "A.21. Conversaciones entre escalas de temperatura",
+      "A.22. ¿Cómo se mide la temperatura?",
+      "¿Qué aprendí?"
+    ],
+    "Alumnos": [
+      "Bisio Lara Bruno Aimone",
+      "Castro Bulnes Cristel",
+      "Colonna Figueroa Fabrizzio",
+      "Flores Pérez Ángel Leonel",
+      "Fuentes Navas Juan Pablo",
+      "Guerra Pitalúa Suad Alana",
+      "Mata Guzmán Layla Gabriela",
+      "Mendoza Martínez Acteón Eliud",
+      "Montiel Díaz Antonio",
+      "Murrieta Zúñiga Matías Harim",
+      "Pérez Castrejón Ehécatl",
+      "Rendón Torrez Mateo",
+      "Rivera Rojas Pedro Antonio",
+      "Rodríguez Aguilar Miguel Ángel",
+      "Sosa Álvarez Mateo",
+      "Utrera González María José"
+    ],
+    "fechasDeExamen": [
+      "2025-11-05"
+    ]
+  },
   "weeks": [
     {
       "PeriodosLectivos": 6,
@@ -17,7 +98,9 @@
         "Comprende el significado del conocimiento empírico y su relación con el aprendizaje en la vida cotidiana.",
         "Identifica diferentes tipos de conocimiento empírico, así como su importancia en la vida de las personas y en la sociedad."
       ],
-      "Evidencias": [ "F1"],
+      "Evidencias": [
+        "F1"
+      ],
       "Actividades": [
         "1",
         "2",
@@ -46,7 +129,7 @@
         "Física Imagina  14-19 y 20-25"
       ],
       "ActPro": [
-      "1",
+        "1",
         "2",
         "3",
         "4",
@@ -141,7 +224,7 @@
       ],
       "ActPro": [
         "9",
-         "10"
+        "10"
       ]
     },
     {
@@ -149,7 +232,7 @@
       "FechaDeInicio": "2025-09-22",
       "FechaDeCierre": "2025-09-26",
       "SemanaEscolar": 4,
-       "Contenido": "Unidades y medidas utilizados en Física.",
+      "Contenido": "Unidades y medidas utilizados en Física.",
       "Aprendizaje": "Conoce los instrumentos de medición.",
       "Tema": "Instrumentos de medición",
       "Leccion": "L7. Instrumentos de medición",
@@ -223,7 +306,7 @@
         "A.12. Propiedades de la materia",
         "A.13. ¿Qué es la materia?",
         "F4. Litio, el oro blanco del siglo XXI",
-       "F5 La isla de plástico"
+        "F5 La isla de plástico"
       ],
       "Libros": [
         "Saberes y pensamiento científico 199 y 241-244",
