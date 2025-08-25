@@ -196,20 +196,20 @@
 }
 
 \def\itembox{%
-    \tcbox[enhanced,on line,drop fuzzy shadow=black,size=fbox,colback=orange!10!white]{\LARGE\JSONParseArrayValue}\quad\raisebox{-0.5em}{\boxesline}\\
+    \tcbox[enhanced,on line,drop fuzzy shadow=black,size=fbox,colback=orange!10!white]{\fontsize{20}{8}\selectfont\JSONParseArrayValue}\quad\raisebox{-0.75em}{\boxesline}\\
 }
 
 \def\columnbox{%
-\rotatebox{90}{\quad\tcbox[enhanced,on line,drop fuzzy shadow=black,size=fbox,colback=violet!10!white]{\fontsize{20}{8}\selectfont\JSONParseArrayValue}} \ %
+\rotatebox{90}{\quad\tcbox[enhanced,on line,drop fuzzy shadow=black,size=fbox,colback=violet!10!white]{\fontsize{20}{8}\selectfont\JSONParseArrayValue}} %
 }
 
 \begin{document}
 %%  \planner{grado}{materia}{unidad}
 % \plannerof{0}{test}{1}%%
-% \plannerof{1}{math}{1}%
+\plannerof{1}{math}{1}%
 %   \plannerof{2}{math}{1}%
 %   \plannerof{3}{math}{1}%
-  \plannerof{3}{chem}{1}%   
+%   \plannerof{3}{chem}{1}%   
 %   \plannerof{2}{phys}{1}%
 % \begin{tcolorbox}[unitbox,title=\unitboxtitle,breakable,halign=right]
 	% \begin{center}\scshape\large\color{rdsColor}
