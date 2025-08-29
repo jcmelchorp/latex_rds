@@ -14,6 +14,7 @@
     "FechaDeActualizacion": "2025-08-24",
     "FechaInicial": "2025-09-01",
     "FechaFinal": "2025-11-07",
+    "Words":"Les doy la bienvenida a este nuevo ciclo escolar 2025-2026. El sendero que iniciamos el año pasado nos ha traído hasta aquí, a un paraje más elevado en la montaña del saber. Contento estoy, ya que tendré el honor de ser su guía, no aquel que les muestra el destino, sino aquel que camina a su lado, señalando las maravillas que se ocultan a simple vista. \\\\[1em] \\qquad El año pasado aprendimos los primeros pasos, el lenguaje fundamental del universo. Aprendimos que el mundo tiene un orden, un ritmo, una lógica que podemos empezar a comprender. Ahora, en Matemáticas II, ya no sólo caminaremos por el sendero, sino que aprenderemos a leer los mapas del terreno que pisamos. \\\\[1em] \\qquad El viaje de mil millas comienza con un solo paso. Ustedes ya dieron ese primer paso. Ahora, el camino se vuelve más sinuoso, más interesante. Si el año pasado aprendimos a nombrar los elementos del universo con números, este año aprenderemos a escuchar sus conversaciones a través del álgebra. Descubriremos que una simple letra, como la x, puede contener en su vacío el potencial de todos los números. En su quietud, esconde un infinito de posibilidades, esperando ser revelado. \\\\[1em] \\qquad Nuestra aula no será un lugar de respuestas, sino un espacio para cultivar las preguntas correctas. Será un dojo para la mente, donde practicaremos el arte de la quietud. Porque la verdadera maestría matemática no reside en la velocidad para calcular, sino en la serenidad de una mente que puede observar un problema complejo y encontrar en él la simplicidad oculta. \\\\[1em] \\qquad Este año, les invito a no \"hacer\" matemáticas, sino a \"ser\" matemáticos. A mirar un edificio y ver la geometría que lo sostiene; a escuchar una canción y sentir las proporciones que la hacen bella; a resolver una ecuación y experimentar la profunda satisfacción de traer orden al caos. \\\\[1em] No busquen solo la respuesta correcta en el libro, busquen la claridad en su propia mente. El objetivo de este viaje no es acumular conocimiento como quien llena un cántaro, sino afinar su percepción hasta que puedan ver la estructura invisible que conecta todas las cosas. \\\\[1em] \\qquad Que su curiosidad sea su brújula y su paciencia sea su báculo.",
     "Nociones": [
       "A.1. Suma de números",
       "A.2. Resta de números",
@@ -40,6 +41,24 @@
       "A.23. Porcentaje de cantidades 1",
       "A.24. Porcentaje de cantidades 2",
       "A.25. Resolución de problemas"
+    ],
+    "Nombres": [
+      "Bruno",
+      "Cristel",
+      "Fabrizzio",
+      "Ángel",
+      "Juan",
+      "Alana",
+      "Layla",
+      "Acteón",
+      "Antonio",
+      "Matías",
+      "Ehécatl",
+      "Mateo",
+      "Pedro",
+      "Miguel Á",
+      "Mateo",
+      "MaJo"
     ],
     "Alumnos": [
       "Bruno Aimone Bisio Lara",
@@ -216,7 +235,7 @@
       "Proyectos": [],
       "LibroSep": "MeXmáticas",
       "LibroMcMillan": "Apuntes de clase y ejercicios propuestos",
-      "Vinculacion": "\\textbf{Química: }  Utiliza las leyes de los exponentes para simplificar operaciones con el número de Avogadro ($6.022 \\\\times 10\\ ^{23}$) al calcular la cantidad de átomos o moléculas en una muestra.",
+      "Vinculacion": "\\textbf{Química: }  Utiliza las leyes de los exponentes para simplificar operaciones con el número de Avogadro ($6.022 \\times 10\\^{23}$) al calcular la cantidad de átomos o moléculas en una muestra.",
       "Worklist": [
         "A.11. Suma de exponentes",
         "A.12. Resta de exponentes",

@@ -6,7 +6,7 @@
 \tcbuselibrary{skins,raster,breakable} % Load the breakable library
 \usepackage{amssymb}
 \usepackage{tabularx}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[landscape,margin=0.5in]{geometry}
 \usepackage{ragged2e}
 \usepackage{multicol,multirow}
 \usepackage{jsonparse} % Load the json package
@@ -40,23 +40,14 @@
 \arrayrulecolor{rdsColor}
 \setlength{\columnsep}{10pt}
 \setlength{\arrayrulewidth}{0.1pt}
-\renewcommand\fbox{\fcolorbox{white}{rdsColor!5!white}}
+\usepackage{lscape} % for landscape mode
 
-\tikzset{
-    hyperlink node/.style={
-        alias=@hyper,
-        append after command={
-            let \p1 = (@hyper.north west),
-                \p2 = (@hyper.south east),
-                \n1 = {\x2-\x1}, \n2 = {\y1-\y2} in
-            node [inner sep=+0pt, outer sep=+0pt, anchor=center, at=(@hyper)] {\hyperlink{ref-#1}{\XeTeXLinkBox{\phantom{\rule{\n1}{\n2}}}}}
-        }
-    }}
+
 \tcbset{
     unitbox/.style={
         colbacktitle=white,
         colback=rdsColor!0.5!white,
-        % colframe=rdsColor,
+         colframe=rdsColor,
         colframe=white,
         coltitle=black,
         boxrule=0.4pt,
@@ -88,7 +79,6 @@
         right=0pt
     }
 }
-
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt,fill=white,circular glow={fill=rdsColor!40!white}] (char) {#1};}}
 \newcommand*\cte[1]{\tikz[baseline=(char.base)]{
@@ -124,7 +114,7 @@
     \def\schoolinfounit{\RaggedRight%
         {\color{rdsColor}\Large Escuela Rafael Díaz Serdán}\\[-0.5em]
         {\color{gray!40!black}\scriptsize\sffamily 30PES0329R \hspace{10em} turno matutino  }\\
-        {\color{green!20!black}\large\sffamily Plan de Trabajo Escolar}\\
+        {\color{green!20!black}\large\sffamily Control de Plan de Trabajo}\\
         {\sffamily Profesor:} Julio César Melchor Pinto
         %Saberes y pensamiento científico
     }
@@ -149,11 +139,8 @@
         \schoolinfounit
     \end{minipage}%
     \begin{tabularx}{0.52\textwidth}{Yr}%
-                                     & \large\shadowtext{\disciplina}\\ 
-          {\large\sffamily Alumno:}  & \large\shadowtext{\gradogrupo} \\ 
-          \cline{1-2}
-          \multicolumn{2}{|r|}{}\\
-         \cline{1-2}
+        & \large\shadowtext{\disciplina}\\ 
+        & \large\shadowtext{\gradogrupo} \\ 
     \end{tabularx}
 }
 
@@ -201,6 +188,7 @@
 \JSONParseArrayMapFunction[%
     code before={%
     \begin{tcolorbox}[
+        before app={},
         enhanced,
         drop fuzzy shadow=black!75,
         tabulars={@{\extracolsep{\fill}\hspace{1mm}}lr@{\hspace{2pt}}},
@@ -212,17 +200,23 @@
         colframe=rdsColor!50,
         toptitle=-0.6pt,
         toprule=0.5pt,
-        bottomtitle=0pt,
+        bottomtitle=0.5pt,
         lefttitle=2mm,
         width=\linewidth,
         title={\coolTitle{#1}},
         ]
-        {\footnotesize\scshape\color{black!70}\qquad Noción} & {\scriptsize\scshape\color{black!70} Fecha \ Cont. Letra Orto. Pres. Punt. Total} \\\hline\hline%
-        },
+    },
     code after={%
     \end{tcolorbox}
     }
 ]{\weekdata}{weeks[#1].Worklist}{\listableta}
+}
+
+\newcommand{\nombres}{%
+\JSONParseArrayMapFunction[%
+    code before={},
+    code after={}
+]{\weekdata}{general.Nombres}{\rotateitem}%
 }
 
 \newcommand{\periodoslectivos}[1]{%
@@ -235,26 +229,28 @@
 }
 
 % \def\fillingradebox{\resizebox{1cm}{1em}{\raisebox{-0.16em}{$\Box$}}}
-\newcommand{\fillingradebox}[1][]{\tikz[baseline]{\draw[black!75,thin,rounded corners=1,#1] (0,-0.125) rectangle (0.94, 0.345);}}
-\def\listableta{\adjustbox{max width=0.95\linewidth}{\JSONParseArrayValue} & {\fbox{\phantom{oooo}}\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[rdsColor]}\\\hline }
+\newcommand{\fillingradebox}[1][]{\tikz[baseline]{\draw[black!75,thin,rounded corners=1,#1] (0,-0.125) rectangle (0.52, 0.345);}}
+\def\listableta{\adjustbox{max width=0.95\linewidth}{\JSONParseArrayValue} & \fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\fillingradebox[dotted]\;\\\hline }
 
 \newcommand{\coolTitle}[1]{% %
-\booknode{\color{white}\large\scshape\bfseries\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}} \ \JSONParseValue{\weekdata}{weeks[#1].Tema} \hfill
-\rangofechas{\fechainicio}{\fechacierre}\raisebox{-0.3pt}{\periodoslectivos{#1}}%  
+\booknode{\color{white}\large\scshape\bfseries\JSONParseValue{\weekdata}{weeks[#1].SemanaEscolar}} \quad \rangofechas{\fechainicio}{\fechacierre}\raisebox{-0.3pt}{\periodoslectivos{#1}} \JSONParseValue{\weekdata}{weeks[#1].Tema} {\small\color{black!30} \hfill \nombres}  \\[-2.8em] 
 }
 
-
+\newcommand{\rotateitem}{%
+\fontsize{8}{18}\selectfont\rotatebox{270}{\JSONParseArrayValue} \! \; %
+}
 
 
 
 \begin{document}
 %%  \planner{grado}{materia}{unidad}
-\plannerof{0}{test}{1}%%
+% \plannerof{0}{test}{1}%%
 % \plannerof{1}{math}{1}%
-%   \plannerof{2}{math}{1}%
+  \plannerof{2}{math}{1}%
 %   \plannerof{3}{math}{1}%
 %   \plannerof{3}{chem}{1}%   
 %   \plannerof{2}{phys}{1}%
+% \begin{landscape}
 \begin{tcolorbox}[unitbox,title=\unitboxtitle,breakable,halign=center]
 	%   \begin{multicols}{3}
 	%     \begin{subsectionbox}\shadowoffset{1pt}
@@ -277,42 +273,43 @@
 	%     \end{subsectionbox}
 	% \end{multicols}
 	% \begin{subsectionbox}%\shadowoffset{1pt}
-	\begin{center}\scshape\large\color{rdsColor}
-		\shadowtext{Panorama de la unidad}
-	\end{center}
-	\setcounter{ABCD}{1}
-	\adjustbox{max width=\linewidth}{%
-		\begin{tikzpicture}[every calendar/.style={week list},every day/.style={anchor=mid}]
-			\scshape
-			\matrix[%
-				row 1/.style={rdsColor,node distance=.3ex},%
-				 row 3/.style={rdsColor,node distance=.3ex},
-				row 5/.style={rdsColor,node distance=.3ex},
-				row 7/.style={rdsColor,node distance=.3ex},
-				column sep=5ex,%
-				draw=rdsColor,thin,rounded corners=5pt,%
-				postaction={decorate,decoration={markings,mark=at position 0.125 with
-									{\node[text=rdsColor,font={\Large}] (unidad) {\cicloescolar};}
-							}},
-				postaction={decorate,decoration={markings,mark=at position 0.25 with
-									{\node[text=rdsColor,font={\Large}] (title){\unitinfo};}
-							}},
-			]{%
-				\calrow{Septiembre}                  & \calrow{Octubre}                     & \calrow{Noviembre}                 \\
-				\calperiod{2025-09-01}{2025-09-last} & \calperiod{2025-10-01}{2025-10-last} & \calperiod{2025-11-01}{2025-11-23} \\
-                \calrow{Noviembre y Diciembre}      & \calrow{Enero}       & \calrow{Febrero y Marzo}             \\
-                \calperiod{2025-11-24}{2025-12-18} &   \calperiod{2026-01-12}{2026-01-last} & \calperiod{2026-02-01}{2026-03-15} \\
-                \calrow{Marzo y Abril}                  & \calrow{Mayo}                     & \calrow{Junio y Julio}                 \\
-				\calperiod{2026-03-24}{2026-04-last} & \calperiod{2026-05-01}{2026-05-last} & \calperiod{2026-06-01}{2026-07-05} \\ 
-                };
-		\end{tikzpicture}%
-	}
-	\begin{center}
-		\exam{\color{red}X} Examen\qquad \cte{\phantom{X}} C.T.E.\qquad\free{\phantom{X}} Festivo\qquad \padres{X} Esc. para Padres
-	\end{center}
-	\begin{center}\scshape\large\color{rdsColor}
-		\shadowtext{Rúbrica semanal}
-	\end{center}
+	% \begin{center}\scshape\large\color{rdsColor}
+	% 	\shadowtext{Panorama de la unidad}
+	% \end{center}
+	% \setcounter{ABCD}{1}
+	% \adjustbox{max width=\linewidth}{%
+	% 	\begin{tikzpicture}[every calendar/.style={week list},every day/.style={anchor=mid}]
+	% 		\scshape
+	% 		\matrix[%
+	% 			row 1/.style={rdsColor,node distance=.3ex},%
+	% 			 row 3/.style={rdsColor,node distance=.3ex},
+	% 			row 5/.style={rdsColor,node distance=.3ex},
+	% 			row 7/.style={rdsColor,node distance=.3ex},
+	% 			column sep=5ex,%
+	% 			draw=rdsColor,thin,rounded corners=5pt,%
+	% 			postaction={decorate,decoration={markings,mark=at position 0.125 with
+	% 								{\node[text=rdsColor,font={\Large}] (unidad) {\cicloescolar};}
+	% 						}},
+	% 			postaction={decorate,decoration={markings,mark=at position 0.25 with
+	% 								{\node[text=rdsColor,font={\Large}] (title){\unitinfo};}
+	% 						}},
+	% 		]{%
+	% 			\calrow{Septiembre}                  & \calrow{Octubre}                     & \calrow{Noviembre}                 \\
+	% 			\calperiod{2025-09-01}{2025-09-last} & \calperiod{2025-10-01}{2025-10-last} & \calperiod{2025-11-01}{2025-11-23} \\
+    %             % \calrow{Noviembre y Diciembre}      & \calrow{Enero}       & \calrow{Febrero y Marzo}             \\
+    %             % \calperiod{2025-11-24}{2025-12-18} &   \calperiod{2026-01-12}{2026-01-last} & \calperiod{2026-02-01}{2026-03-15} \\
+    %             % \calrow{Marzo y Abril}                  & \calrow{Mayo}                     & \calrow{Junio y Julio}                 \\
+	% 			% \calperiod{2026-03-24}{2026-04-last} & \calperiod{2026-05-01}{2026-05-last} & \calperiod{2026-06-01}{2026-07-05} \\ 
+    %             };
+	% 	\end{tikzpicture}%
+	% }
+	% \begin{center}
+	% 	\exam{\color{red}X} Examen\qquad \cte{\phantom{X}} C.T.E.\qquad\free{\phantom{X}} Festivo\qquad \padres{X} Esc. para Padres
+	% \end{center}
+	% \begin{center}\scshape\large\color{rdsColor}
+	% 	\shadowtext{Rúbrica semanal}
+	% \end{center}
 	\JSONParseArrayMapInline{\weekdata}{weeks}{\tableta{#1}}
 \end{tcolorbox}
+% \end{landscape}
 \end{document}
