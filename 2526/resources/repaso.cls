@@ -13,6 +13,7 @@
 \renewcommand{\baselinestretch}{1}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
+\setlength{\columnsep}{25pt}
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 \RequirePackage{enumitem}
 \RequirePackage{tocloft}
@@ -573,9 +574,10 @@
         \ifnum\numquestions>7%
             {
             \ifnum\numquestions>20%
-                {\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+                %{\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+                {\multirowgradetable{4}[questions]}
                 \else%
-                {\multirowgradetable{3}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+                {\multicolumngradetable{1}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
             \fi%
             }%
             \else{\gradetable[h][questions]}%
@@ -594,7 +596,7 @@
             \hspace{-1.5em}\begin{minipage}{0.87\textwidth}
                 {\textbf{\color{colorrds}\fontsize{18}{14}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an}}\\[0.1em]
                {\fontsize{14}{14}\selectfont {\color{SubjectColor}\themateria}  \hfill {\color{MainColor}\thegrado$^\circ$ de \thenivel} }\\[-0.2em]
-               {\@author \large \hfill\scshape   \thecicloescolar \ Unidad \theunidad}
+               {\@author \large \hfill\scshape   \thecicloescolar}
             \end{minipage}
         };
     \end{tikzpicture}%
