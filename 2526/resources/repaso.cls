@@ -577,7 +577,7 @@
                 %{\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
                 {\multirowgradetable{4}[questions]}
                 \else%
-                {\multicolumngradetable{1}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
+                {\multicolumngradetable{2}[questions]}%\ifthenelse{\isodd{\numquestions}}{\multirowgradetable{2}[questions]}{\multicolumngradetable{2}[questions]}}
             \fi%
             }%
             \else{\gradetable[h][questions]}%
