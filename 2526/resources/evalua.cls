@@ -1,7 +1,7 @@
 \def\fileversion{1.0}
-\def\filedate{2025/10/14}
+\def\filedate{2023/06/05}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{evalua}[2025/10/14 Plantilla Evaluación RDS]
+\ProvidesClass{evalua}[2023/01/20 Plantilla Evaluación RDS]
 \LoadClass{exam}
 \DeclareOption{addpoints}{\addpoints}
 \DeclareOption{answers}{\printanswers}
@@ -17,7 +17,7 @@
 \arrayrulecolor{rdsdark!50}
 %%%% Paquete texto %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{enumitem} % customize enumerate and item
-\RequirePackage{myboxes}
+\RequirePackage{mytcolorboxes,myboxes}
 % \RequirePackage{exam-randomizechoices}
 \RequirePackage{calc}
 \RequirePackage{calculator}
@@ -355,11 +355,4 @@
     \end{minipage}
 \end{minipage}%
 }
-\newcommand{\DrawLine}[1][\linewidth]{%
-  \begin{tikzpicture}
-    \path[use as bounding box] (0,0) -- (#1,0);
-    \draw[color=colorrds,dashed,dash phase=2pt] (0-\kvtcb@boxsep,0)--(#1-\kvtcb@rightlower+\kvtcb@boxsep,0);
-  \end{tikzpicture}%
-}
 \makeatother
-
