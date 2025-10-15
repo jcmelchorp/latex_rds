@@ -263,3 +263,8 @@
     (\textwidth+\the\mdflength{innerleftmargin}+\the\mdflength{innerrightmargin},0);
   }\par\nobreak}
 
+  \newtcbox{\wordpill}[1][]{on line,top=2pt,right=2pt,left=2pt,bottom=2pt,
+  colback=olive!5!white,colframe=olive!75!black,width=1cm,
+  boxrule=1pt,boxsep=1pt, fontupper=\sffamily, hyphenationfix,
+  fuzzy shadow={0.3mm}{-0.3mm}{0mm}{0.3mm}{black},  #1
+}
