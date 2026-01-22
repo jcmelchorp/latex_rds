@@ -642,7 +642,7 @@
 %%%% MATH
 \decimalpoint
 \RequirePackage{adjustbox}
-% \RequirePackage{myboxes}
+ \RequirePackage{myboxes}
 % \RequirePackage{card}
 %%%% EXTERNAL SOURCES
 \RequirePackage{newclude}
