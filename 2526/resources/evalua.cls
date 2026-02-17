@@ -33,10 +33,11 @@
 \RequirePackage{afterpage}
 \newcommand\blankpage{%
    \clearpage%
-    \thispagestyle{plain}%
-    % \addtocounter{page}{-1}%
+    \thispagestyle{empty}%
+   % \addtocounter{page}{-1}%
      \null%
-     \newpage}
+     \newpage%
+     }
 \RequirePackage{forest}
 % \RequirePackage{ragged2e}
 \renewcommand{\div}{\divisionsymbol}
@@ -95,13 +96,11 @@
 \RequirePackage{import}
 \RequirePackage{subfiles} % Best loaded last in the preamble
 \RequirePackage{titlesec}
-\titleformat{\section}
-{\normalfont\fontsize{10}{5}\bfseries\color{gray}}{\thesection}{0.5em}{}
-\titlespacing*{\section}{0pt}{0.5em}{0.3em}
+\titleformat{\section}{\normalfont\fontsize{10}{5}\bfseries\color{gray}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0em}{0.3em}
 \titleformat{\subsection}
 {\normalfont\fontsize{10}{5}\bfseries\color{lightgray}}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{0.5em}{0.3em}
-
 \renewcommand{\arraystretch}{1.4}
 \AtBeginEnvironment{choices}{\vspace{0.1\baselineskip}}
 \AtEndEnvironment{choices}{\vspace{0.1\baselineskip}}
@@ -280,6 +279,12 @@
     \end{picture}
 }
 \makeatletter
+\let\latexl@section\l@section
+\def\l@section#1#2{\begingroup\let\numberline\@gobble\latexl@section{#1}{#2}\endgroup}
+\let\latexl@subsection\l@subsection
+\def\l@subsection#1#2{\begingroup\let\numberline\@gobble\latexl@subsection{#1}{#2}\endgroup}
+\let\latexl@subsubsection\l@subsubsection
+\def\l@subsubsection#1#2{\begingroup\let\numberline\@gobble\latexl@subsubsection{#1}{#2}\endgroup}
 \AtBeginDocument{
 \setlength{\columnsep}{10pt}
 \setlength\linefillheight{.2in}
