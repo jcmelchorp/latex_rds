@@ -1,4 +1,4 @@
-\documentclass[12pt,addpoints]{repaso}
+\documentclass[12pt,addpoints,answers]{repaso}
 \grado{1}
 \nivel{Secundaria}
 \cicloescolar{2025-2026}
@@ -27,11 +27,21 @@
 
 		\begin{multicols}{5}
 			\begin{parts}
-				\part \opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{16.981}{15.891}\\[1em]
-				\part \opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{620.64}{515.92}\\[1em]
-				\part \opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{24.97}{19.34}\\[1em]
-				\part \opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{509.44}{338.79}\\[1em]
-				\part \opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{33.31}{19.54}\\[1em]
+				\part 
+				\ifprintanswers{\opadd[hfactor=decimal,resultstyle=\color{red},carryadd=true]{16.981}{15.891}}
+				\else{\opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{16.981}{15.891}}\fi				
+				\part 
+				\ifprintanswers{\opadd[hfactor=decimal,resultstyle=\color{red},carryadd=true]{620.64}{515.92}}
+				\else{\opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{620.64}{515.92}}\fi
+				\part 
+				\ifprintanswers{\opadd[hfactor=decimal,resultstyle=\color{red},carryadd=true]{24.97}{19.34}}
+				\else{\opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{24.97}{19.34}}\fi
+				\part 
+				\ifprintanswers{\opadd[hfactor=decimal,resultstyle=\color{red},carryadd=true]{509.44}{338.79}}
+				\else{\opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{509.44}{338.79}}\fi
+				\part 
+				\ifprintanswers{\opadd[hfactor=decimal,resultstyle=\color{red},carryadd=true]{33.31}{19.54}}
+				\else{\opadd[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{33.31}{19.54}}\fi
 			\end{parts}
 		\end{multicols}
 	}
@@ -42,7 +52,18 @@
 
 		\begin{multicols}{3}
 			\begin{parts}\large
-				\part \opsub[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{55.394}{49.093}\\[1em]
+				\part \ifprintanswers{   \opsub[hfactor=decimal,resultstyle=\color{red},carryadd=true,carrysub=true]{55.394}{49.093} }
+				\else{            \opsub[hfactor=decimal,resultstyle=\color{white},carryadd=false,carrysub=false]{55.394}{49.093}\\[0.5cm] }
+				\fi
+
+				\part \ifprintanswers{   \opsub[hfactor=decimal,resultstyle=\color{red},carryadd=true,carrysub=true]{55.394}{49.093} }
+				\else{            \opsub[hfactor=decimal,resultstyle=\color{white},carryadd=false,carrysub=false]{55.394}{49.093}\\[0.5cm] }
+				\fi
+
+				\part \ifprintanswers{   \opsub[hfactor=decimal,resultstyle=\color{red},carryadd=true,carrysub=true]{55.394}{49.093} }
+				\else{            \opsub[hfactor=decimal,resultstyle=\color{white},carryadd=false,carrysub=false]{55.394}{49.093}\\[0.5cm] }
+				\fi
+
 				\part \opsub[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{5.134}{2.347}\\[1em]
 				\part \opsub[hfactor=decimal,resultstyle=\color{white},displayintermediary=None,carryadd=false,carrysub=false]{968.31}{134.67}\\[1em]
 			\end{parts}
