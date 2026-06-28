@@ -556,7 +556,7 @@
             \end{minipage}
         };
         %%%% TITULO
-        \node[anchor= center,xshift=-1.2\textwidth, yshift=38pt,
+        \node[anchor= center,xshift=-1.2\textwidth, yshift=36pt,
             rectangle,
             rounded corners=5pt,inner xsep=10pt,inner ysep=3pt,
            % blur shadow={
