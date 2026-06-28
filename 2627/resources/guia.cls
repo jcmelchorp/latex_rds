@@ -439,6 +439,8 @@
 \newcommand{\cicloescolar}[1]{\renewcommand{\thecicloescolar}{#1}}
 \newcommand{\theunidad}{1}
 \newcommand{\unidad}[1]{\renewcommand{\theunidad}{#1}}
+\newcommand{\thesubtitle}{1}
+\newcommand{\subtitle}[1]{\renewcommand{\thesubtitle}{#1}}
 \newcommand{\theaprendizajes}{1}
 \newcommand{\aprendizajes}[1]{\renewcommand{\theaprendizajes}{
         \begin{itemize}[leftmargin=*,label=\small\color{colorrds}\faIcon{user-graduate},itemsep=0pt,itemindent=0em]%
@@ -554,24 +556,47 @@
             \end{minipage}
         };
         %%%% TITULO
-        \node[xshift=-1.3\textwidth, yshift=20pt,
+        \node[anchor= center,xshift=-1.2\textwidth, yshift=38pt,
             rectangle,
-            rounded corners=2pt,inner xsep=10pt,inner ysep=5pt,
+            rounded corners=5pt,inner xsep=10pt,inner ysep=3pt,
+           % blur shadow={
+           %         %shadow opacity=50,
+           %         shadow yshift=-1mm,
+           %         %shadow blur steps=5,
+           %        % shadow blur extra rounding=5pt
+           %     },
+                 draw=lightgray
+                 ]
+        {
+            \adjustbox{
+                stack,
+                color=MainColor,
+                min size={0.10\textwidth}{10pt},
+                max size={0.45\textwidth}{16pt}
+            }{
+                \color{rdsdark} \@title
+            }%
+        };
+        %%%% SUBTITULO
+        \node[anchor= center,xshift=-1.2\textwidth, yshift=18pt,
+            rectangle,
+            rounded corners=2pt,inner xsep=5pt,inner ysep=3pt,
             blur shadow={
                     shadow opacity=50,
                     shadow yshift=-1mm,
-                    shadow blur steps=5,
-                    shadow blur extra rounding=5pt
+                    shadow xshift=0mm,
+                    shadow blur steps=6,
+                    shadow blur extra rounding=3pt
                 }, fill=white]
         {
             \adjustbox{
                 stack,
                 color=MainColor,
-                min size={0.2\textwidth}{12pt},
-                max size={0.55\textwidth}{20pt}
+                min size={0.10\textwidth}{8pt},
+                max size={0.6\textwidth}{14pt}
             }{
-                \centering \comfortaa %\sffamily \bfseries 
-                \color{MainColor} \@title
+                %\comfortaa %\sffamily \bfseries 
+                \color{rdsdark} \thesubtitle
             }%
         };
         % \node[nombrebox] (box) {
@@ -616,9 +641,9 @@
             rounded corners=2pt,inner xsep=20pt,inner ysep=0pt]
         {
             \hspace{-1.5em}\begin{minipage}{0.78\textwidth}
-                {\textbf{\color{colorrds}\fontsize{18}{12}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an} \hfill {\fontsize{16}{12}\selectfont\color{MainColor}\thegrado$^\circ$ de \thenivel}}\\[0.1em]
-               {{\fontsize{10}{10}\selectfont \scshape\@author   } \qquad \qquad \qquad \fontsize{16}{14}\selectfont  {\bfseries\color{SubjectColor}\themateria}  \hfill Unidad \theunidad }\\[0em] %\hfill{\fontsize{12}{14}\selectfont \scshape   \thecicloescolar}
-               
+                {\textbf{\color{colorrds}\fontsize{18}{12}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an} \hfill {\fontsize{16}{12}\selectfont\color{MainColor}\thegrado$^\circ$ de \thenivel}}\\[0.2em]
+               {{\fontsize{16}{14}\selectfont  {\color{SubjectColor}\themateria}}  \hfill Unidad \theunidad }\\[0em] %\hfill{\fontsize{12}{14}\selectfont \scshape   \thecicloescolar}
+               { {\fontsize{10}{10}\selectfont \scshape\@author   } }
             \end{minipage}
         };
     \end{tikzpicture}%
