@@ -459,6 +459,21 @@
 % \renewcommand{\partlabel}{\colorbox{red} {\large{\textbf{\color{white}(\thepartno)}}}}
 %%%% STYLES
 \tikzset{
+     instructionbox/.style={%dashed,
+            draw=colorrds,fill=white, rectangle,
+            inner sep=10pt, style=rounded corners,
+            %drop shadow={fill=black, opacity=1}
+            blur shadow={
+                    shadow opacity=40,
+                    shadow yshift=-1mm,
+                    shadow xshift=-1mm,
+                    %shadow blur steps=30,
+                    %shadow blur extra rounding=5pt
+                }
+        },
+    instructiontitle/.style={
+            fill=white,
+            style=rounded corners},
     nombrebox/.style={xshift=-.7\textwidth-3pt,
             yshift=-0.5cm,
             draw=none, fill=white, rectangle,
@@ -466,13 +481,14 @@
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
     aprendizajebox/.style={anchor=north,xshift=-1.2\textwidth-3pt,
-            yshift=-0.5cm,
+            yshift=-0.2cm,
             draw=none,%=colorrds, dashed,
             fill=white, rectangle,
             inner sep=10pt, style=rounded corners,
             %drop  shadow={fill=lightgray, opacity=0.7}
         },
     aprendizajetitle/.style={
+            yshift=0cm,
             fill=white,
             inner xsep=2pt,inner ysep=2pt,
             style=rounded corners,
@@ -535,6 +551,17 @@
     \def\hiff{\calc{\giff+\const}}%
     \[ \lefteqn{\underbrace{\phantom{{#1},{#2}}}_{\diff}}{#1}, \overbrace{{#2},\lefteqn{\color{red}\underbrace{\phantom{{#3},\calc{#3+\fiff}}}_{\fiff}}{#3}}^{\siff}, \color{red}\overbrace{\calc{#3+\fiff},\lefteqn{\underbrace{\phantom{\calc{#3+\fiff}, \calc{#3+\fiff+\giff}}}_{\hiff}}\calc{#3+\fiff+\giff}}^{\giff}, \calc{#3+\fiff+\giff+\hiff}\]
 }
+ \newcommand{\instructionbox}[3][fill=white]{%
+    \begin{tikzpicture}%
+        \node [instructionbox, #1] (box)
+        {%
+            \adjustbox{minipage=.98\linewidth}{%
+                \normalfont #3
+            }%
+        };
+        \node[instructiontitle, right=10pt] at (box.north west) {\bfseries \comfortaa \color{Sepia} #2};
+    \end{tikzpicture}%
+}
 \newcommand{\INFO}{%
     \begin{tikzpicture}[remember picture]
         \draw[colorrds,thin,xshift=-1.7\textwidth-5pt ,yshift=0.5cm,
@@ -572,7 +599,7 @@
                 stack,
                 color=MainColor,
                 min size={0.10\textwidth}{10pt},
-                max size={0.45\textwidth}{16pt}
+                max size={0.38\textwidth}{16pt}
             }{
                 \color{rdsdark} \@title
             }%
@@ -604,7 +631,9 @@
             % \makebox[0.25\linewidth]{\textbf{ \comfortaa \color{Sepia} Fecha: } \ \DrawLine[3.6cm]}
         % };
         %%%% APRENDIZAJES
-        \node[aprendizajebox] (box) {\adjustbox{minipage=0.9\textwidth}{\theaprendizajes}};
+        \node[aprendizajebox] (box) {%
+        \adjustbox{minipage=0.95\textwidth}{\theaprendizajes}%
+        };
         \node[aprendizajetitle,xshift=127pt] at (box.north west) {\bfseries \comfortaa \small \color{Sepia} Procesos de Desarrollo de Aprendizaje (PDA):};
         %%%% GRADESTABLE
        % \node[gradetablebox] (box)
@@ -633,7 +662,7 @@
        % };
        % \node[gradetableboxtitle,xshift=-112pt,yshift=4pt] at (box.north east) {\bfseries \comfortaa \color{Sepia} Puntuación:};
     \end{tikzpicture}%
-    \begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
+\begin{tikzpicture}[remember picture, overlay,shift=(current page.north west)]
         %%%% LOGO
         \node[yshift=-3.5cm,xshift=-2.5cm]{\LOGO};
         %%%% SCHOOL TITLE
@@ -643,10 +672,18 @@
             \hspace{-1.5em}\begin{minipage}{0.78\textwidth}
                 {\textbf{\color{colorrds}\fontsize{18}{12}\selectfont \comfortaa Escuela Rafael D\'iaz Serd\'an} \hfill {\fontsize{16}{12}\selectfont\color{MainColor}\thegrado$^\circ$ de \thenivel}}\\[0.2em]
                {{\fontsize{16}{14}\selectfont  {\color{SubjectColor}\themateria}}  \hfill Unidad \theunidad }\\[0em] %\hfill{\fontsize{12}{14}\selectfont \scshape   \thecicloescolar}
-               { {\fontsize{10}{10}\selectfont \scshape\@author   } }
+               { {\fontsize{9}{9}\selectfont \scshape\@author   } }
             \end{minipage}
         };
-    \end{tikzpicture}%
+    \end{tikzpicture}\\[-1.5em]\centering
+     \begin{minipage}[t][][b]{.95\textwidth}
+        \instructionbox{Instrucciones:}{%\large%
+            Lee con atenci\'on cada pregunta y realiza lo que se te pide.
+            Desarrolla tus respuestas en el espacio determinado para cada solución.
+            De ser necesario, utiliza una hoja en blanco por separado, anotando en ella tu nombre
+            completo, el n\'umero del problema y la soluci\'on propuesta.
+        }%
+    \end{minipage}
     \thecontrol[yshift=-3.2cm,xshift=-0.55\textwidth,scale=1.4]
 }
 \newenvironment{mybox}[3][]{%
